@@ -1,4 +1,4 @@
-window.DATA_SEDDUR = {
+window.DATA_SEDDUR[3] = {
   pancasila: [
     {
       semester: "Semester 1 • Bab 1",
