@@ -17,19 +17,20 @@
     @keyframes popIn { 0% { transform: scale(0.95); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
     @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
     .anim-bounce { display: inline-block; animation: bounce 1.8s infinite; }
-    .input-nama, .input-form, .textarea-kode { width: 100%; padding: 11px 13px; border-radius: 14px; border: 2px solid #7dd3fc; font-size: 0.96rem; font-weight: 600; color: #0f172a; outline: none; margin: 6px 0; background: #f0f9ff; user-select: text; }
+
+        .input-nama, .input-form, .textarea-kode { width: 100%; padding: 11px 13px; border-radius: 14px; border: 2px solid #7dd3fc; font-size: 0.96rem; font-weight: 600; color: #0f172a; outline: none; margin: 6px 0; background: #f0f9ff; user-select: text; }
     .input-nama { text-align: center; font-size: 1.05rem; border-width: 3px; }
     .input-nama:focus, .input-form:focus, .textarea-kode:focus { border-color: #0284c7; background: #ffffff; }
     .textarea-kode { font-family: monospace; font-size: 0.82rem; min-height: 150px; background: #0f172a; color: #38bdf8; border-color: #334155; }
     .label-form { display: block; text-align: left; font-size: 0.84rem; font-weight: 700; color: #334155; margin-top: 8px; }
-
-        .mode-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px; }
+    .mode-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px; }
     .mode-btn { border: none; border-radius: 20px; padding: 20px 16px; color: #fff; font-size: 1.2rem; font-weight: 700; cursor: pointer; box-shadow: 0 6px 0 rgba(0,0,0,0.18); display: flex; align-items: center; justify-content: space-between; text-align: left; }
     .mode-btn:active { transform: translateY(3px); box-shadow: none; }
     .mode-kuis { background: linear-gradient(135deg, #0ea5e9, #2563eb); }
     .mode-ujian { background: linear-gradient(135deg, #f59e0b, #ea580c); }
     .mode-admin { background: linear-gradient(135deg, #334155, #0f172a); padding: 14px 16px; font-size: 1rem; margin-top: 6px; }
-    .kelas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+
+        .kelas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
     .kelas-btn { border: none; border-radius: 18px; padding: 16px 10px; color: #fff; font-size: 1.12rem; font-weight: 700; cursor: pointer; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; display: flex; flex-direction: column; align-items: center; gap: 4px; }
     .kelas-btn:active { transform: translateY(3px); box-shadow: none; }
     .kelas-sub { font-size: 0.74rem; font-weight: 600; background: rgba(255,255,255,0.25); padding: 2px 8px; border-radius: 8px; }
@@ -144,7 +145,8 @@
         osc.start(now); osc.stop(now + 0.08);
       }
     }
-    function ucapkan(teks) {
+
+        function ucapkan(teks) {
       bukaKunciAudio();
       if (!teks) return;
       try { audioCadangan.pause(); } catch (e) {}
@@ -183,7 +185,7 @@
       return salinan;
     }
 
-        let modeAplikasi = "kuis";
+    let modeAplikasi = "kuis";
     let namaSiswa = "Siswa Hebat";
     let kelasAktif = 1;
     let mapelAktif = "";
@@ -212,7 +214,7 @@
       { kode: "uas_2", judul: "UAS Semester 2", ikon: "📕", warna: "m-bing" }
     ];
 
-    function getKodeUjianKelas(kls) {
+        function getKodeUjianKelas(kls) {
       const data = JSON.parse(localStorage.getItem("seddur_kode_ujian") || "{}");
       return data[kls] || "";
     }
@@ -537,49 +539,106 @@
       mainkanEfek('benar'); alert("✅ Semua kode ujian per kelas berhasil disimpan!");
     }
 
-    function adminGeneratorSoal() {
+        function adminGeneratorSoal() {
       document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal</div></div>
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal AI</div></div>
         <div class="card" style="text-align:left;">
-          <h3 style="color:#0284c7; text-align:center;">Generator Kode Soal GitHub</h3>
-          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:8px;">Buat kode objek soal siap tempel ke file <code>kelasX.js</code> atau <code>ujianX.js</code></p>
-          <label class="label-form">Ikon Emoji Soal:</label>
-          <input type="text" id="genIkon" class="input-form" value="📝" />
-          <label class="label-form">Pertanyaan:</label>
-          <input type="text" id="genTanya" class="input-form" placeholder="Tulis pertanyaan..." />
-          <label class="label-form">Pilihan A (Indeks 0):</label>
-          <input type="text" id="genOpsi0" class="input-form" placeholder="Jawaban A..." />
-          <label class="label-form">Pilihan B (Indeks 1):</label>
-          <input type="text" id="genOpsi1" class="input-form" placeholder="Jawaban B..." />
-          <label class="label-form">Pilihan C (Indeks 2):</label>
-          <input type="text" id="genOpsi2" class="input-form" placeholder="Jawaban C..." />
-          <label class="label-form">Pilihan D (Indeks 3):</label>
-          <input type="text" id="genOpsi3" class="input-form" placeholder="Jawaban D..." />
-          <label class="label-form">Jawaban Benar:</label>
-          <select id="genKunci" class="input-form"><option value="0">Pilihan A</option><option value="1">Pilihan B</option><option value="2">Pilihan C</option><option value="3">Pilihan D</option></select>
-          <label class="label-form">Pembahasan Singkat:</label>
-          <input type="text" id="genBahas" class="input-form" placeholder="Penjelasan jawaban..." />
-          <button class="btn-aksi" style="width:100%;" onclick="buatKodeSoalGitHub()">⚡ Generate Kode GitHub</button>
-          <label class="label-form" style="margin-top:12px;">Hasil Kode Siap Salin ke GitHub:</label>
-          <textarea id="hasilKodeSoal" class="textarea-kode" readonly></textarea>
-          <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeSoal')">📋 Salin Kode</button>
+          <h3 style="color:#0284c7; text-align:center;">Generator Soal AI & Kode GitHub</h3>
+          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Atur spesifikasi soal di bawah untuk membuat Prompt AI & Kerangka Kode GitHub</p>
+
+          <label class="label-form">1. Pilih Kelas:</label>
+          <select id="genKelas" class="input-form">
+            <option value="1">Kelas 1 (ujian1.js)</option>
+            <option value="2">Kelas 2 (ujian2.js)</option>
+            <option value="3">Kelas 3 (ujian3.js)</option>
+            <option value="4">Kelas 4 (ujian4.js)</option>
+            <option value="5">Kelas 5 (ujian5.js)</option>
+            <option value="6">Kelas 6 (ujian6.js)</option>
+          </select>
+
+          <label class="label-form">2. Mata Pelajaran:</label>
+          <select id="genMapel" class="input-form">
+            <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
+            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+            <option value="Matematika">Matematika</option>
+            <option value="IPAS (Ilmu Pengetahuan Alam & Sosial)">IPAS (Alam & Sosial)</option>
+            <option value="Bahasa Inggris">Bahasa Inggris</option>
+            <option value="PAI & Budi Pekerti">PAI & Budi Pekerti</option>
+            <option value="PJOK">PJOK</option>
+            <option value="Gabungan Semua Mapel">Gabungan Semua Mapel (Tematik)</option>
+          </select>
+
+          <label class="label-form">3. Kategori Ujian:</label>
+          <select id="genKategori" class="input-form">
+            <option value="latihan_bab|Latihan Bab">Latihan Bab</option>
+            <option value="uts_1|UTS Semester 1">UTS Semester 1</option>
+            <option value="uas_1|UAS Semester 1">UAS Semester 1</option>
+            <option value="uts_2|UTS Semester 2">UTS Semester 2</option>
+            <option value="uas_2|UAS Semester 2">UAS Semester 2</option>
+          </select>
+
+          <label class="label-form">4. Topik / Pokok Materi:</label>
+          <input type="text" id="genTopik" class="input-form" placeholder="Contoh: Simbol Pancasila, Pecahan, Rantai Makanan..." />
+
+          <label class="label-form">5. Mode Gambar Soal & Jawaban:</label>
+          <select id="genModeGambar" class="input-form">
+            <option value="Soal Teks dengan Pilihan Jawaban Teks">Soal Teks + Jawaban Teks</option>
+            <option value="Soal Gambar/Emoji Visual dengan Pilihan Jawaban Teks">Soal Gambar/Emoji + Jawaban Teks</option>
+            <option value="Soal Teks dengan Pilihan Jawaban Gambar/Emoji Visual">Soal Teks + Jawaban Gambar/Emoji</option>
+            <option value="Soal Gambar/Emoji Visual dengan Pilihan Jawaban Gambar/Emoji Visual">Soal Gambar/Emoji + Jawaban Gambar/Emoji</option>
+            <option value="Campuran (Sebagian Soal & Jawaban Bergambar/Emoji dan Sebagian Teks)">Campuran (Teks & Gambar/Emoji)</option>
+          </select>
+
+          <label class="label-form">6. Jumlah Soal yang Dibuat:</label>
+          <select id="genJumlah" class="input-form">
+            <option value="5">5 Soal</option>
+            <option value="10" selected>10 Soal</option>
+            <option value="15">15 Soal</option>
+            <option value="20">20 Soal</option>
+          </select>
+
+          <button class="btn-aksi" style="width:100%; margin-top:12px;" onclick="buatKodeSoalGitHub()">⚡ Generate Prompt AI & Kode GitHub</button>
+
+          <label class="label-form" style="margin-top:14px; color:#0284c7;">📋 Hasil 1: Prompt AI (Salin & Tempel ke ChatGPT/Gemini):</label>
+          <textarea id="hasilPromptAI" class="textarea-kode" style="min-height:130px; color:#fde047;" readonly placeholder="Klik tombol Generate di atas..."></textarea>
+          <button class="btn-aksi" style="width:100%;" onclick="salinTeks('hasilPromptAI')">📋 Salin Prompt AI</button>
+
+          <label class="label-form" style="margin-top:14px; color:#059669;">💻 Hasil 2: Template Kode GitHub (Siap Tempel ke ujianX.js):</label>
+          <textarea id="hasilKodeSoal" class="textarea-kode" style="min-height:160px;" readonly placeholder="Kerangka kode JavaScript akan muncul di sini..."></textarea>
+          <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeSoal')">📋 Salin Kode GitHub</button>
         </div>`;
     }
 
-    function buatKodeSoalGitHub() {
-      const ikon = document.getElementById("genIkon").value || "📝";
-      const tanya = document.getElementById("genTanya").value.replace(/"/g, '\\"');
-      const o0 = document.getElementById("genOpsi0").value.replace(/"/g, '\\"');
-      const o1 = document.getElementById("genOpsi1").value.replace(/"/g, '\\"');
-      const o2 = document.getElementById("genOpsi2").value.replace(/"/g, '\\"');
-      const o3 = document.getElementById("genOpsi3").value.replace(/"/g, '\\"');
-      const kunci = document.getElementById("genKunci").value;
-      const bahas = document.getElementById("genBahas").value.replace(/"/g, '\\"');
-      document.getElementById("hasilKodeSoal").value = `{\n  ikon: "${ikon}",\n  tanya: "${tanya}",\n  opsi: ["${o0}", "${o1}", "${o2}", "${o3}"],\n  kunci: ${kunci},\n  bahas: "${bahas}"\n},`;
+        function buatKodeSoalGitHub() {
+      const kls = document.getElementById("genKelas").value;
+      const mapel = document.getElementById("genMapel").value;
+      const katRaw = document.getElementById("genKategori").value.split("|");
+      const katKode = katRaw;
+      const katNama = katRaw;
+      const topik = document.getElementById("genTopik").value.trim() || "Materi Kurikulum Merdeka";
+      const modeGbr = document.getElementById("genModeGambar").value;
+      const jumlah = parseInt(document.getElementById("genJumlah").value, 10);
+
+      let contohOpsi = `["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"]`;
+      if (modeGbr.includes("Jawaban Gambar")) {
+        contohOpsi = `["🍎 Apel", "🍌 Pisang", "🍇 Anggur", "🍉 Semangka"]`;
+      }
+
+      const promptAI = `Buatkan ${jumlah} soal pilihan ganda Kurikulum Merdeka Tahun Ajaran 2026/2027 untuk siswa SD Kelas ${kls}.\n- Mata Pelajaran: ${mapel}\n- Kategori Ujian: ${katNama}\n- Topik Materi: ${topik}\n- Format Tampilan: ${modeGbr}\n\nATURAN WAJIB FORMAT OUTPUT:\nTuliskan HANYA dalam bentuk kode array JavaScript berikut tanpa teks pembuka/penutup agar bisa langsung saya copy-paste ke GitHub (file ujian${kls}.js bagian ${katKode}):\n\n${katKode}: [\n  {\n    ikon: "📝",\n    tanya: "Tulis pertanyaan jelas sesuai level siswa Kelas ${kls}...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Penjelasan singkat mengapa jawaban tersebut benar."\n  }\n]\nPastikan indeks "kunci" (0=A, 1=B, 2=C, 3=D) akurat dan gunakan emoji/ilustrasi visual yang menarik pada properti "ikon" maupun "opsi" sesuai mode gambar yang diminta.`;
+
+      let daftarTemplate = [];
+      for (let i = 1; i <= jumlah; i++) {
+        daftarTemplate.push(`  {\n    ikon: "📝",\n    tanya: "Soal nomor ${i} (${mapel} - ${topik})...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Pembahasan soal nomor ${i}."\n  }`);
+      }
+
+      const kodeGitHub = `// Tempelkan kode ini ke dalam window.DATA_UJIAN[${kls}] pada file ujian${kls}.js\n${katKode}: [\n${daftarTemplate.join(",\n")}\n],`;
+
+      document.getElementById("hasilPromptAI").value = promptAI;
+      document.getElementById("hasilKodeSoal").value = kodeGitHub;
       mainkanEfek('benar');
     }
 
-        function adminGeneratorBab() {
+    function adminGeneratorBab() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">📂 Generator Bab</div></div>
         <div class="card" style="text-align:left;">
@@ -613,7 +672,7 @@
       alert("✅ Kode berhasil disalin! Silakan paste ke file di GitHub Anda.");
     }
 
-    function adminRekapNilai() {
+        function adminRekapNilai() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar no-print"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">📊 Rekap Nilai</div></div>
         <div class="card">
