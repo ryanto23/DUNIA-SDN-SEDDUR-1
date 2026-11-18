@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>DUNIA SDN SEDDUR 1 - Kurikulum Merdeka 2026/2027</title>
   <link href="https://googleapis.com" rel="stylesheet">
   <style>
@@ -112,20 +115,18 @@
       "5": "KLS5-2026",
       "6": "KLS6-2026"
     };
+    (function() {
+      const versiBaru = Date.now();
+      const daftarFile = [
+        "kode_ujian.js",
+        "kelas1.js", "kelas2.js", "kelas3.js", "kelas4.js", "kelas5.js", "kelas6.js",
+        "ujian1.js", "ujian2.js", "ujian3.js", "ujian4.js", "ujian5.js", "ujian6.js"
+      ];
+      daftarFile.forEach(namaFile => {
+        document.write(`<script src="${namaFile}?v=${versiBaru}"><\/script>`);
+      });
+    })();
   </script>
-  <script src="kode_ujian.js?v=2026"></script>
-  <script src="kelas1.js?v=2026"></script>
-  <script src="kelas2.js?v=2026"></script>
-  <script src="kelas3.js?v=2026"></script>
-  <script src="kelas4.js?v=2026"></script>
-  <script src="kelas5.js?v=2026"></script>
-  <script src="kelas6.js?v=2026"></script>
-  <script src="ujian1.js?v=2026"></script>
-  <script src="ujian2.js?v=2026"></script>
-  <script src="ujian3.js?v=2026"></script>
-  <script src="ujian4.js?v=2026"></script>
-  <script src="ujian5.js?v=2026"></script>
-  <script src="ujian6.js?v=2026"></script>
   <script>
     let audioCtx = null;
     let audioCadangan = new Audio();
@@ -288,7 +289,6 @@
       } catch (e) {}
     }
 
-    // Murni membaca daftar Bab dari ujian1.js - ujian6.js (tidak mengambil dari kelas1.js - kelas6.js)
     function getDaftarBabSinkron(kls, kodeMapel) {
       const gabungan = [];
       const dataUjianKls = getDataUjianKelasAman(kls);
@@ -571,7 +571,7 @@
 
       modeAplikasi = "ujian";
       kodeKategoriUjianAktif = kodeKat;
-      mapelUjianAktif = (daftarSoal[0] && daftarSoal[0].mapel) ? daftarSoal[0].mapel : "Umum / Tematik";
+      mapelUjianAktif = (daftarSoal && daftarSoal.mapel) ? daftarSoal.mapel : "Umum / Tematik";
       kategoriUjianAktif = judulKat;
 
       jalankanMesinCBT(daftarSoal);
@@ -1241,7 +1241,7 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       const labelKelas = fKelas === "ALL" ? "SemuaKelas" : `Kelas${fKelas}`;
-      const labelMapel = fMapelRaw === "ALL" ? "SemuaMapel" : fMapelRaw.split("|")[1].replace(/[^a-zA-Z0-9]/g, "_");
+      const labelMapel = fMapelRaw === "ALL" ? "SemuaMapel" : fMapelRaw.split("|")[0].replace(/[^a-zA-Z0-9]/g, "_");
       const labelTipe = fTipe === "ALL" ? "SemuaUjian" : fTipe.replace(/[^a-zA-Z0-9]/g, "_");
       const labelUnik = fUnik === "ALL" ? "SemuaKode" : fUnik.replace(/[^a-zA-Z0-9]/g, "_");
 
