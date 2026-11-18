@@ -86,8 +86,8 @@
     .nav-nomor-btn.aktif { border: 2px solid #0f172a; transform: scale(1.08); }
     .nav-nomor-btn.terjawab { background: #2563eb; color: #fff; border-color: #1d4ed8; }
     .table-wrap { width: 100%; overflow-x: auto; margin-top: 10px; border-radius: 12px; border: 2px solid #cbd5e1; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; text-align: left; background: #fff; }
-    th, td { padding: 8px 10px; border-bottom: 1px solid #e2e8f0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left; background: #fff; }
+    th, td { padding: 8px 9px; border-bottom: 1px solid #e2e8f0; }
     th { background: #0284c7; color: #fff; font-weight: 700; }
     tr:nth-child(even) { background: #f8fafc; }
     @media (min-width: 600px) { header h1 { font-size: 1.48rem; } .kelas-grid { grid-template-columns: 1fr 1fr 1fr; } .opsi-btn { font-size: 1.12rem; min-height: 62px; } }
@@ -212,6 +212,7 @@
 
     let modeAplikasi = "kuis";
     let namaSiswa = "Siswa Hebat";
+    let kodeUnikPeserta = "-";
     let kelasAktif = 1;
     let mapelAktif = "";
     let babAktif = 0;
@@ -454,24 +455,30 @@
         <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasUjian()">⬅️ Pilih Kelas</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">🔐 Ruang Ujian Kelas ${kls}</div></div>
         <div class="card card-cbt" style="text-align:center;">
           <h2 style="color:#0f172a; font-size:1.2rem; margin-top:4px;">Login Peserta Ujian Kelas ${kls}</h2>
-          <p style="color:#64748b; font-size:0.84rem; margin-bottom:10px;">Isi Nama Lengkap dan Token/Kode Ujian dari Guru</p>
-          <input type="text" id="inputNamaUjian" class="input-nama" placeholder="Ketik Nama Lengkap Siswa..." maxlength="30" />
-          <input type="text" id="inputKodeUjian" class="input-nama" placeholder="Ketik Kode Ujian Kelas ${kls}..." style="text-transform:uppercase; border-color:#3b82f6; background:#eff6ff;" maxlength="20" autocapitalize="characters" autocomplete="off" />
+          <p style="color:#64748b; font-size:0.84rem; margin-bottom:10px;">Lengkapi data diri, kode unik/absen, dan kode ujian kelas</p>
+          <input type="text" id="inputNamaUjian" class="input-nama" placeholder="1. Ketik Nama Lengkap Siswa..." maxlength="35" />
+          <input type="text" id="inputKodeUnik" class="input-nama" placeholder="2. Kode Unik / No. Absen / Sesi (Bebas)..." style="text-transform:uppercase; border-color:#10b981; background:#ecfdf5;" maxlength="20" autocapitalize="characters" autocomplete="off" />
+          <input type="text" id="inputKodeUjian" class="input-nama" placeholder="3. Ketik Kode Ujian Kelas ${kls}..." style="text-transform:uppercase; border-color:#3b82f6; background:#eff6ff;" maxlength="20" autocapitalize="characters" autocomplete="off" />
           <button class="btn-aksi" style="width:100%; margin-top:10px; background:#0f172a; box-shadow:none;" onclick="verifikasiMasukUjian()">Masuk Ruang Ujian ➡️</button>
         </div>`;
     }
 
     function verifikasiMasukUjian() {
       const namaInput = document.getElementById("inputNamaUjian").value.trim();
+      const unikInput = document.getElementById("inputKodeUnik").value.trim().toUpperCase();
       const kodeInput = document.getElementById("inputKodeUjian").value.replace(/\s+/g, "").toUpperCase();
       const kodeSah = getKodeUjianKelas(kelasAktif).replace(/\s+/g, "").toUpperCase();
+
       if (!namaInput) { alert("Silakan isi Nama Lengkap Siswa terlebih dahulu!"); return; }
-      if (kodeInput !== kodeSah) { alert("Kode Ujian salah! Silakan periksa kembali kode dari pengawas."); return; }
+      if (!unikInput) { alert("Silakan isi Kode Unik / No. Absen / Sesi terlebih dahulu!"); return; }
+      if (kodeInput !== kodeSah) { alert("Kode Ujian Kelas salah! Silakan periksa kembali kode dari pengawas."); return; }
+
       namaSiswa = namaInput;
+      kodeUnikPeserta = unikInput;
       tampilKategoriUjian();
     }
 
-    function tampilKategoriUjian() {
+        function tampilKategoriUjian() {
       hentikanTimer();
       const dataUjianKelas = getDataUjianKelasAman(kelasAktif);
 
@@ -487,7 +494,7 @@
       }).join("");
 
       document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasUjian()">⬅️ Keluar</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">👤 ${namaSiswa} • Kelas ${kelasAktif}</div></div>
+        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasUjian()">⬅️ Keluar</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">👤 ${namaSiswa} [${kodeUnikPeserta}]</div></div>
         <div class="card card-cbt" style="text-align:center;">
           <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Jenis Ujian Kelas ${kelasAktif}</h2>
           <p style="color:#64748b; font-size:0.84rem;">Pilih Ujian Per Bab (sesuai Mapel) atau Ujian Semester (UTS/UAS)</p>
@@ -515,7 +522,7 @@
       }).join("");
 
       document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilKategoriUjian()">⬅️ Jenis Ujian</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">Ujian Bab • Kelas ${kelasAktif}</div></div>
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilKategoriUjian()">⬅️ Jenis Ujian</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">Kelas ${kelasAktif} [${kodeUnikPeserta}]</div></div>
         <div class="card card-cbt" style="text-align:center;">
           <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Mata Pelajaran (Ujian Bab)</h2>
           <p style="color:#64748b; font-size:0.84rem;">Kelas ${kelasAktif} • Pilih mata pelajaran untuk melihat daftar Bab</p>
@@ -556,7 +563,7 @@
         return;
       }
 
-      if (!confirm(`Mulai Ujian Bab sekarang?\n• Peserta: ${namaSiswa}\n• Mapel: ${infoMapel.judul}\n• Materi: ${targetBab.bab}\n• Jumlah Soal: ${targetBab.soalUjian.length} soal\n• Batas Waktu: 5 menit per soal`)) return;
+      if (!confirm(`Mulai Ujian Bab sekarang?\n• Peserta: ${namaSiswa} (${kodeUnikPeserta})\n• Mapel: ${infoMapel.judul}\n• Materi: ${targetBab.bab}\n• Jumlah Soal: ${targetBab.soalUjian.length} soal\n• Batas Waktu: 5 menit per soal`)) return;
 
       modeAplikasi = "ujian";
       kodeKategoriUjianAktif = "latihan_bab";
@@ -574,7 +581,7 @@
         return;
       }
 
-      if (!confirm(`Mulai ${judulKat} sekarang?\n• Peserta: ${namaSiswa}\n• Jumlah Soal: ${daftarSoal.length} soal\n• Batas Waktu: 90 menit total`)) return;
+      if (!confirm(`Mulai ${judulKat} sekarang?\n• Peserta: ${namaSiswa} (${kodeUnikPeserta})\n• Jumlah Soal: ${daftarSoal.length} soal\n• Batas Waktu: 90 menit total`)) return;
 
       modeAplikasi = "ujian";
       kodeKategoriUjianAktif = kodeKat;
@@ -674,7 +681,7 @@
         <div class="cbt-header-info">
           <div>
             <div style="font-weight:700;">${mapelUjianAktif} • ${kategoriUjianAktif}</div>
-            <div style="font-size:0.75rem; opacity:0.85;">Peserta: ${namaSiswa} (Kelas ${kelasAktif})</div>
+            <div style="font-size:0.75rem; opacity:0.85;">${namaSiswa} • Kode: ${kodeUnikPeserta} (Kls ${kelasAktif})</div>
           </div>
           <div class="timer-box" id="tampilanTimer">${formatWaktu(sisaDetik)}</div>
         </div>
@@ -742,13 +749,16 @@
 
       const totalSoal = soalPermainan.length;
       const nilaiAkhir = Math.round((jumlahBenar / totalSoal) * 100);
+      const tipeUjianSimpan = (kodeKategoriUjianAktif === "latihan_bab") ? "BAB" : "UTS_UAS";
 
       simpanRekapNilai({
         id: Date.now(),
         tanggal: new Date().toLocaleDateString('id-ID', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
         nama: namaSiswa,
+        kodeUnik: kodeUnikPeserta,
         kelas: String(kelasAktif),
         mapel: mapelUjianAktif,
+        tipeUjian: tipeUjianSimpan,
         kategori: kategoriUjianAktif,
         benar: `${jumlahBenar}/${totalSoal}`,
         nilai: nilaiAkhir
@@ -763,6 +773,7 @@
           <div style="background:#f8fafc; border-radius:12px; padding:14px; border:1px solid #cbd5e1; font-size:0.92rem; color:#1e293b; text-align:left; line-height:1.7;">
             <div><strong>Sekolah:</strong> SDN Seddur 1</div>
             <div><strong>Nama Peserta:</strong> ${namaSiswa}</div>
+            <div><strong>Kode Unik / Sesi:</strong> <span style="background:#dcfce7; color:#15803d; padding:2px 8px; border-radius:6px; font-weight:700;">${kodeUnikPeserta}</span></div>
             <div><strong>Kelas:</strong> Kelas ${kelasAktif}</div>
             <div><strong>Mata Pelajaran:</strong> ${mapelUjianAktif}</div>
             <div><strong>Jenis / Materi Ujian:</strong> ${kategoriUjianAktif}</div>
@@ -1023,11 +1034,11 @@
         <div class="top-bar no-print"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">📊 Rekap Nilai</div></div>
         <div class="card">
           <h2 style="color:#0284c7; font-size:1.18rem;">Rekap Nilai Ujian SDN Seddur 1</h2>
-          <p style="font-size:0.8rem; color:#64748b;">Filter data sebelum mencetak atau mengunduh Excel agar tidak tercampur</p>
+          <p style="font-size:0.8rem; color:#64748b;">Filter data per Kelas, Mapel, Ujian/Bab & Kode Unik sebelum mengunduh</p>
 
           <div class="no-print" style="display:grid; grid-template-columns:1fr; gap:6px; margin-top:10px; text-align:left;">
             <label class="label-form" style="margin-top:2px;">1. Filter Kelas:</label>
-            <select id="filterKelas" class="input-form" style="margin:0;" onchange="renderTabelNilai()">
+            <select id="filterKelas" class="input-form" style="margin:0;" onchange="perbaruiOpsiBabRekap(); renderTabelNilai();">
               <option value="ALL">Semua Kelas (1 - 6)</option>
               <option value="1">Kelas 1</option>
               <option value="2">Kelas 2</option>
@@ -1038,24 +1049,36 @@
             </select>
 
             <label class="label-form" style="margin-top:4px;">2. Filter Mata Pelajaran:</label>
-            <select id="filterMapel" class="input-form" style="margin:0;" onchange="renderTabelNilai()">
+            <select id="filterMapel" class="input-form" style="margin:0;" onchange="perbaruiOpsiBabRekap(); renderTabelNilai();">
               <option value="ALL">Semua Mata Pelajaran</option>
-              <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
-              <option value="Bahasa Indonesia">Bahasa Indonesia</option>
-              <option value="Matematika">Matematika</option>
-              <option value="IPAS (Alam & Sosial)">IPAS (Alam & Sosial)</option>
-              <option value="Bahasa Inggris">Bahasa Inggris</option>
-              <option value="Umum / Tematik">Umum / Tematik</option>
+              <option value="pancasila|Pendidikan Pancasila">Pendidikan Pancasila</option>
+              <option value="bindo|Bahasa Indonesia">Bahasa Indonesia</option>
+              <option value="mtk|Matematika">Matematika</option>
+              <option value="ipas|IPAS (Alam & Sosial)">IPAS (Alam & Sosial)</option>
+              <option value="bing|Bahasa Inggris">Bahasa Inggris</option>
+              <option value="umum|Umum / Tematik">Umum / Tematik</option>
             </select>
 
-            <label class="label-form" style="margin-top:4px;">3. Filter Jenis / Bab Ujian:</label>
-            <select id="filterKategori" class="input-form" style="margin:0;" onchange="renderTabelNilai()">
-              <option value="ALL">Semua Jenis / Bab Ujian</option>
-              <option value="HANYA_BAB">Semua Ujian Per Bab</option>
+            <label class="label-form" style="margin-top:4px;">3. Filter Ujian (Bab / UTS / UAS):</label>
+            <select id="filterTipeUjian" class="input-form" style="margin:0;" onchange="toggleFilterBabSpesifik(); renderTabelNilai();">
+              <option value="ALL">Semua Ujian (Bab, UTS & UAS)</option>
+              <option value="BAB">Ujian Per Bab (Pilih Bab di Bawah)</option>
               <option value="UTS Semester 1">UTS Semester 1</option>
               <option value="UAS Semester 1">UAS Semester 1</option>
               <option value="UTS Semester 2">UTS Semester 2</option>
               <option value="UAS Semester 2">UAS Semester 2</option>
+            </select>
+
+            <div id="wadahFilterBabRekap" style="display:none;">
+              <label class="label-form" style="margin-top:4px; color:#0284c7;">3b. Pilih Bab Spesifik (Sesuai Mapel):</label>
+              <select id="filterBabSpesifik" class="input-form" style="margin:0; border-color:#0284c7;" onchange="renderTabelNilai()">
+                <option value="ALL">Semua Bab pada Mapel Ini</option>
+              </select>
+            </div>
+
+            <label class="label-form" style="margin-top:4px;">4. Filter Kode Unik Peserta:</label>
+            <select id="filterKodeUnik" class="input-form" style="margin:0;" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Kode Unik</option>
             </select>
           </div>
 
@@ -1068,27 +1091,92 @@
           <div id="infoRingkasanFilter" style="margin-top:10px; font-size:0.82rem; font-weight:700; color:#0f172a; background:#e0f2fe; padding:6px 10px; border-radius:10px;"></div>
           <div id="wadahTabelNilai"></div>
         </div>`;
+      perbaruiOpsiKodeUnikRekap();
+      perbaruiOpsiBabRekap();
       renderTabelNilai();
     }
 
-    function getDataTersaring() {
+        function toggleFilterBabSpesifik() {
+      const tipe = document.getElementById("filterTipeUjian").value;
+      const wadah = document.getElementById("wadahFilterBabRekap");
+      wadah.style.display = (tipe === "BAB") ? "block" : "none";
+      if (tipe === "BAB") perbaruiOpsiBabRekap();
+    }
+
+    function perbaruiOpsiBabRekap() {
+      const selectBab = document.getElementById("filterBabSpesifik");
+      if (!selectBab) return;
+      const fKelas = document.getElementById("filterKelas").value;
+      const fMapelRaw = document.getElementById("filterMapel").value;
+
+      let daftarOpsiBab = [];
+      if (fKelas !== "ALL" && fMapelRaw !== "ALL") {
+        const kodeMapel = fMapelRaw.split("|");
+        const sinkron = getDaftarBabSinkron(Number(fKelas), kodeMapel);
+        daftarOpsiBab = sinkron.map(b => b.bab);
+      } else {
+        let semua = [];
+        try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
+        const namaMapelFilter = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|");
+        semua.forEach(item => {
+          const isUTS_UAS = ["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(item.kategori);
+          if (!isUTS_UAS) {
+            const cocokKls = (fKelas === "ALL") || (String(item.kelas) === fKelas);
+            const cocokMpl = (namaMapelFilter === "ALL") || ((item.mapel || "Umum / Tematik") === namaMapelFilter);
+            if (cocokKls && cocokMpl && !daftarOpsiBab.includes(item.kategori)) {
+              daftarOpsiBab.push(item.kategori);
+            }
+          }
+        });
+      }
+
+      selectBab.innerHTML = `<option value="ALL">Semua Bab pada Mapel Ini</option>` +
+        daftarOpsiBab.map(judul => `<option value="${judul}">${judul}</option>`).join("");
+    }
+
+    function perbaruiOpsiKodeUnikRekap() {
+      const selectUnik = document.getElementById("filterKodeUnik");
+      if (!selectUnik) return;
+      let semua = [];
+      try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
+      const unikSet = new Set();
+      semua.forEach(item => {
+        if (item.kodeUnik && item.kodeUnik !== "-") unikSet.add(item.kodeUnik.toUpperCase());
+      });
+      selectUnik.innerHTML = `<option value="ALL">Semua Kode Unik Peserta</option>` +
+        Array.from(unikSet).sort().map(k => `<option value="${k}">${k}</option>`).join("");
+    }
+
+        function getDataTersaring() {
       let semua = [];
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapel = document.getElementById("filterMapel").value;
-      const fKat = document.getElementById("filterKategori").value;
+      const fMapelRaw = document.getElementById("filterMapel").value;
+      const fMapelNama = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|");
+      const fTipe = document.getElementById("filterTipeUjian").value;
+      const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "ALL";
+      const fUnik = document.getElementById("filterKodeUnik").value;
 
       return semua.filter(item => {
         const mapelItem = item.mapel || "Umum / Tematik";
+        const unikItem = (item.kodeUnik || "-").toUpperCase();
+        const isUTS_UAS = ["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(item.kategori);
+
         const cocokKelas = (fKelas === "ALL") || (String(item.kelas) === fKelas);
-        const cocokMapel = (fMapel === "ALL") || (mapelItem === fMapel);
-        let cocokKat = true;
-        if (fKat === "HANYA_BAB") {
-          cocokKat = !["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(item.kategori);
-        } else if (fKat !== "ALL") {
-          cocokKat = (item.kategori === fKat);
+        const cocokMapel = (fMapelNama === "ALL") || (mapelItem === fMapelNama);
+        const cocokUnik = (fUnik === "ALL") || (unikItem === fUnik);
+
+        let cocokUjian = true;
+        if (fTipe === "BAB") {
+          cocokUjian = !isUTS_UAS;
+          if (cocokUjian && fBab !== "ALL") {
+            cocokUjian = (item.kategori === fBab);
+          }
+        } else if (fTipe !== "ALL") {
+          cocokUjian = (item.kategori === fTipe);
         }
-        return cocokKelas && cocokMapel && cocokKat;
+
+        return cocokKelas && cocokMapel && cocokUjian && cocokUnik;
       });
     }
 
@@ -1097,10 +1185,12 @@
       const wadah = document.getElementById("wadahTabelNilai");
       const infoBox = document.getElementById("infoRingkasanFilter");
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapel = document.getElementById("filterMapel").value;
-      const fKat = document.getElementById("filterKategori").value;
+      const fMapelRaw = document.getElementById("filterMapel").value;
+      const fMapelNama = fMapelRaw === "ALL" ? "Semua Mapel" : fMapelRaw.split("|");
+      const fTipe = document.getElementById("filterTipeUjian").value;
+      const fUnik = document.getElementById("filterKodeUnik").value;
 
-      infoBox.textContent = `Menampilkan ${data.length} data • Kelas: ${fKelas === 'ALL' ? 'Semua' : 'Kelas ' + fKelas} • Mapel: ${fMapel === 'ALL' ? 'Semua' : fMapel} • Ujian: ${fKat === 'ALL' ? 'Semua' : (fKat === 'HANYA_BAB' ? 'Ujian Bab' : fKat)}`;
+      infoBox.textContent = `Menampilkan ${data.length} data • ${fKelas === 'ALL' ? 'Semua Kls' : 'Kls ' + fKelas} • ${fMapelNama} • ${fTipe === 'ALL' ? 'Semua Ujian' : fTipe} • Kode: ${fUnik}`;
 
       if (data.length === 0) {
         wadah.innerHTML = `<p style="margin-top:14px; color:#64748b; font-size:0.88rem;">Tidak ada data nilai yang cocok dengan kombinasi filter di atas.</p>`;
@@ -1110,9 +1200,10 @@
       let rows = data.map((d, i) => `
         <tr>
           <td>${i + 1}</td>
-          <td><strong>${d.nama}</strong><br><span style="font-size:0.72rem; color:#64748b;">${d.tanggal}</span></td>
+          <td><strong>${d.nama}</strong><br><span style="font-size:0.7rem; color:#64748b;">${d.tanggal}</span></td>
+          <td><span style="background:#dcfce7; color:#15803d; padding:2px 6px; border-radius:6px; font-weight:700;">${d.kodeUnik || '-'}</span></td>
           <td>Kls ${d.kelas}</td>
-          <td>${d.mapel || 'Umum / Tematik'}</td>
+          <td>${d.mapel || 'Umum'}</td>
           <td>${d.kategori}</td>
           <td>${d.benar}</td>
           <td><strong style="color:#0284c7;">${d.nilai}</strong></td>
@@ -1122,7 +1213,7 @@
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th>No</th><th>Nama Siswa</th><th>Kelas</th><th>Mata Pelajaran</th><th>Materi / Jenis</th><th>Benar</th><th>Nilai</th></tr>
+              <tr><th>No</th><th>Nama Siswa</th><th>Kode Unik</th><th>Kls</th><th>Mapel</th><th>Materi / Ujian</th><th>Benar</th><th>Nilai</th></tr>
             </thead>
             <tbody>${rows}</tbody>
           </table>
@@ -1134,28 +1225,31 @@
       if (data.length === 0) { alert("Tidak ada data pada filter yang dipilih untuk diunduh!"); return; }
 
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapel = document.getElementById("filterMapel").value;
-      const fKat = document.getElementById("filterKategori").value;
+      const fMapelRaw = document.getElementById("filterMapel").value;
+      const fTipe = document.getElementById("filterTipeUjian").value;
+      const fUnik = document.getElementById("filterKodeUnik").value;
 
-      let csvContent = "No,Tanggal,Nama Siswa,Kelas,Mata Pelajaran,Materi / Jenis Ujian,Jawaban Benar,Nilai Akhir\n";
+      let csvContent = "No,Tanggal,Nama Siswa,Kode Unik,Kelas,Mata Pelajaran,Materi / Jenis Ujian,Jawaban Benar,Nilai Akhir\n";
       data.forEach((d, idx) => {
         const namaAman = `"${String(d.nama).replace(/"/g, '""')}"`;
+        const unikAman = `"${String(d.kodeUnik || '-').replace(/"/g, '""')}"`;
         const tglAman = `"${String(d.tanggal).replace(/"/g, '""')}"`;
         const mapelAman = `"${String(d.mapel || 'Umum / Tematik').replace(/"/g, '""')}"`;
         const katAman = `"${String(d.kategori).replace(/"/g, '""')}"`;
         const benarAman = `"${String(d.benar)}"`;
-        csvContent += `${idx + 1},${tglAman},${namaAman},Kelas ${d.kelas},${mapelAman},${katAman},${benarAman},${d.nilai}\n`;
+        csvContent += `${idx + 1},${tglAman},${namaAman},${unikAman},Kelas ${d.kelas},${mapelAman},${katAman},${benarAman},${d.nilai}\n`;
       });
 
       const blob = new Blob(["\uFEFF" + csvContent], { type: "text/csv;charset=utf-8;" });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       const labelKelas = fKelas === "ALL" ? "SemuaKelas" : `Kelas${fKelas}`;
-      const labelMapel = fMapel === "ALL" ? "SemuaMapel" : fMapel.replace(/[^a-zA-Z0-9]/g, "_");
-      const labelKat = fKat === "ALL" ? "SemuaUjian" : fKat.replace(/[^a-zA-Z0-9]/g, "_");
+      const labelMapel = fMapelRaw === "ALL" ? "SemuaMapel" : fMapelRaw.split("|").replace(/[^a-zA-Z0-9]/g, "_");
+      const labelTipe = fTipe === "ALL" ? "SemuaUjian" : fTipe.replace(/[^a-zA-Z0-9]/g, "_");
+      const labelUnik = fUnik === "ALL" ? "SemuaKode" : fUnik.replace(/[^a-zA-Z0-9]/g, "_");
 
       link.setAttribute("href", url);
-      link.setAttribute("download", `Rekap_Nilai_${labelKelas}_${labelMapel}_${labelKat}.csv`);
+      link.setAttribute("download", `Rekap_${labelKelas}_${labelMapel}_${labelTipe}_${labelUnik}.csv`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -1170,10 +1264,13 @@
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const idDihapus = new Set(tersaring.map(item => item.id));
       try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua.filter(item => !idDihapus.has(item.id)))); } catch (e) {}
-      mainkanEfek('salah'); renderTabelNilai(); alert("✅ Data hasil filter berhasil dihapus!");
+      mainkanEfek('salah');
+      perbaruiOpsiKodeUnikRekap();
+      renderTabelNilai();
+      alert("✅ Data hasil filter berhasil dihapus!");
     }
 
-        function adminUbahPassword() {
+    function adminUbahPassword() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🔑 Ubah Password</div></div>
         <div class="card">
