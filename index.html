@@ -105,27 +105,27 @@
     window.DATA_SEDDUR = {};
     window.DATA_UJIAN = {};
     window.KODE_UJIAN_DEFAULT = {
-      1: "KLS1-2026",
-      2: "KLS2-2026",
-      3: "KLS3-2026",
-      4: "KLS4-2026",
-      5: "KLS5-2026",
-      6: "KLS6-2026"
+      "1": "KLS1-2026",
+      "2": "KLS2-2026",
+      "3": "KLS3-2026",
+      "4": "KLS4-2026",
+      "5": "KLS5-2026",
+      "6": "KLS6-2026"
     };
   </script>
-  <script src="kode_ujian.js"></script>
-  <script src="kelas1.js"></script>
-  <script src="kelas2.js"></script>
-  <script src="kelas3.js"></script>
-  <script src="kelas4.js"></script>
-  <script src="kelas5.js"></script>
-  <script src="kelas6.js"></script>
-  <script src="ujian1.js"></script>
-  <script src="ujian2.js"></script>
-  <script src="ujian3.js"></script>
-  <script src="ujian4.js"></script>
-  <script src="ujian5.js"></script>
-  <script src="ujian6.js"></script>
+  <script src="kode_ujian.js?v=2026"></script>
+  <script src="kelas1.js?v=2026"></script>
+  <script src="kelas2.js?v=2026"></script>
+  <script src="kelas3.js?v=2026"></script>
+  <script src="kelas4.js?v=2026"></script>
+  <script src="kelas5.js?v=2026"></script>
+  <script src="kelas6.js?v=2026"></script>
+  <script src="ujian1.js?v=2026"></script>
+  <script src="ujian2.js?v=2026"></script>
+  <script src="ujian3.js?v=2026"></script>
+  <script src="ujian4.js?v=2026"></script>
+  <script src="ujian5.js?v=2026"></script>
+  <script src="ujian6.js?v=2026"></script>
   <script>
     let audioCtx = null;
     let audioCadangan = new Audio();
@@ -257,10 +257,22 @@
     }
 
     function getKodeUjianKelas(kls) {
+      const key = String(kls);
+      if (window.KODE_UJIAN_DEFAULT && window.KODE_UJIAN_DEFAULT[key]) {
+        return String(window.KODE_UJIAN_DEFAULT[key]).trim().toUpperCase();
+      }
       if (window.KODE_UJIAN_DEFAULT && window.KODE_UJIAN_DEFAULT[kls]) {
         return String(window.KODE_UJIAN_DEFAULT[kls]).trim().toUpperCase();
       }
       return `KLS${kls}-2026`;
+    }
+
+    function getDataUjianKelasAman(kls) {
+      const key = String(kls);
+      if (!window.DATA_UJIAN[key] && !window.DATA_UJIAN[kls]) {
+        window.DATA_UJIAN[key] = { bab: { pancasila: [], bindo: [], mtk: [], ipas: [], bing: [] }, uts_1: [], uas_1: [], uts_2: [], uas_2: [] };
+      }
+      return window.DATA_UJIAN[key] || window.DATA_UJIAN[kls];
     }
 
     function getPasswordAdmin() {
@@ -275,11 +287,11 @@
       } catch (e) {}
     }
 
-    // Fungsi Penggabung Otomatis: Menggabungkan semua soal jika judul Bab sama
     function getDaftarBabSinkron(kls, kodeMapel) {
       const gabungan = [];
       const dariKuis = (window.DATA_SEDDUR[kls] && window.DATA_SEDDUR[kls][kodeMapel]) || [];
-      const dariUjian = (window.DATA_UJIAN[kls] && window.DATA_UJIAN[kls].bab && window.DATA_UJIAN[kls].bab[kodeMapel]) || [];
+      const dataUjianKls = getDataUjianKelasAman(kls);
+      const dariUjian = (dataUjianKls.bab && dataUjianKls.bab[kodeMapel]) || [];
 
       dariKuis.forEach(b => {
         const kunciBab = b.bab.trim().toLowerCase();
@@ -300,10 +312,15 @@
         const kunciBab = u.bab.trim().toLowerCase();
         const indexSudahAda = gabungan.findIndex(g => g.bab.trim().toLowerCase() === kunciBab);
         if (indexSudahAda === -1) {
+          const semuaPaketBaru = dariUjian.filter(item => item.bab && item.bab.trim().toLowerCase() === kunciBab);
+          let soalTergabung = [];
+          semuaPaketBaru.forEach(pkt => {
+            if (Array.isArray(pkt.soal)) soalTergabung = soalTergabung.concat(pkt.soal);
+          });
           gabungan.push({
             semester: u.semester || "Ujian Bab",
             bab: u.bab,
-            soalUjian: Array.isArray(u.soal) ? [...u.soal] : []
+            soalUjian: soalTergabung
           });
         }
       });
@@ -456,8 +473,7 @@
 
     function tampilKategoriUjian() {
       hentikanTimer();
-      const dataUjianKelas = window.DATA_UJIAN[kelasAktif];
-      if (!dataUjianKelas) { alert(`File wadah ujian${kelasAktif}.js belum ditemukan atau belum diisi!`); return; }
+      const dataUjianKelas = getDataUjianKelasAman(kelasAktif);
 
       let tombolUTS_UAS = daftarKategoriUjian.map(kat => {
         const daftarSoal = dataUjianKelas[kat.kode] || [];
@@ -551,7 +567,7 @@
     }
 
     function mulaiUjianUTS_UAS(kodeKat, judulKat) {
-      const dataUjianKelas = window.DATA_UJIAN[kelasAktif] || {};
+      const dataUjianKelas = getDataUjianKelasAman(kelasAktif);
       const daftarSoal = dataUjianKelas[kodeKat] || [];
       if (daftarSoal.length === 0) {
         alert(`Belum ada soal di paket "${judulKat}" pada file ujian${kelasAktif}.js!`);
@@ -973,9 +989,9 @@
 
       let kodePembungkus = "";
       if (katKode === "bab") {
-        kodePembungkus = `window.DATA_UJIAN[${kls}].bab.${kodeMapel}.push({\n  semester: "Semester 1",\n  bab: "${judulBab}",\n  soal: [\n    {\n      ikon: "📝",\n      tanya: "Pertanyaan...",\n      opsi: ${contohOpsi},\n      kunci: 0,\n      bahas: "Pembahasan."\n    }\n  ]\n});`;
+        kodePembungkus = `window.DATA_UJIAN["${kls}"].bab.${kodeMapel}.push({\n  semester: "Semester 1",\n  bab: "${judulBab}",\n  soal: [\n    {\n      ikon: "📝",\n      tanya: "Pertanyaan...",\n      opsi: ${contohOpsi},\n      kunci: 0,\n      bahas: "Pembahasan."\n    }\n  ]\n});`;
       } else {
-        kodePembungkus = `window.DATA_UJIAN[${kls}].${katKode}.push(\n  {\n    mapel: "${namaMapel}",\n    ikon: "📝",\n    tanya: "Pertanyaan...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Pembahasan."\n  }\n);`;
+        kodePembungkus = `window.DATA_UJIAN["${kls}"].${katKode}.push(\n  {\n    mapel: "${namaMapel}",\n    ikon: "📝",\n    tanya: "Pertanyaan...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Pembahasan."\n  }\n);`;
       }
 
       const promptAI = `Buatkan ${jumlah} soal pilihan ganda Kurikulum Merdeka Tahun Ajaran 2026/2027 untuk siswa SD Kelas ${kls}.\n- Mata Pelajaran: ${namaMapel}\n- Kategori: ${katKode === "bab" ? judulBab : katNama}\n- Topik Materi: ${topik}\n- Format Tampilan: ${modeGbr}\n\nATURAN WAJIB FORMAT OUTPUT:\nTuliskan HANYA dalam bentuk kode JavaScript berikut tanpa teks pembuka/penutup agar bisa langsung saya tempel di BARIS PALING BAWAH file ujian${kls}.js:\n\n${kodePembungkus}\n\nPastikan seluruh ${jumlah} soal dimasukkan ke dalam blok tersebut, indeks "kunci" (0=A, 1=B, 2=C, 3=D) akurat, dan gunakan emoji visual sesuai mode gambar.`;
@@ -987,8 +1003,8 @@
       }
 
       const kodeGitHub = katKode === "bab"
-        ? `// Tempelkan di BARIS PALING BAWAH file ujian${kls}.js\nwindow.DATA_UJIAN[${kls}].bab.${kodeMapel}.push({\n  semester: "Semester 1",\n  bab: "${judulBab}",\n  soal: [\n${daftarTemplate.join(",\n")}\n  ]\n});`
-        : `// Tempelkan di BARIS PALING BAWAH file ujian${kls}.js\nwindow.DATA_UJIAN[${kls}].${katKode}.push(\n${daftarTemplate.join(",\n")}\n);`;
+        ? `// Tempelkan di BARIS PALING BAWAH file ujian${kls}.js\nwindow.DATA_UJIAN["${kls}"].bab.${kodeMapel}.push({\n  semester: "Semester 1",\n  bab: "${judulBab}",\n  soal: [\n${daftarTemplate.join(",\n")}\n  ]\n});`
+        : `// Tempelkan di BARIS PALING BAWAH file ujian${kls}.js\nwindow.DATA_UJIAN["${kls}"].${katKode}.push(\n${daftarTemplate.join(",\n")}\n);`;
 
       document.getElementById("hasilPromptAI").value = promptAI;
       document.getElementById("hasilKodeSoal").value = kodeGitHub;
@@ -1157,7 +1173,7 @@
       mainkanEfek('salah'); renderTabelNilai(); alert("✅ Data hasil filter berhasil dihapus!");
     }
 
-    function adminUbahPassword() {
+        function adminUbahPassword() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🔑 Ubah Password</div></div>
         <div class="card">
