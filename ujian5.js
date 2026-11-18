@@ -1,4 +1,4 @@
-window.DATA_UJIAN[5] = {
+window.DATA_UJIAN["5"] = {
   bab: {
     pancasila: [
       {
