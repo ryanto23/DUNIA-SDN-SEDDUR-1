@@ -64,3 +64,87 @@ window.DATA_UJIAN[4] = {
 };
 
 // Tempelkan kode tambahan dari Generator AI di bawah baris ini
+// Tempelkan di BARIS PALING BAWAH file ujian4.js
+window.DATA_UJIAN[4].bab,Ujian Bab.push(
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 1 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 1."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 2 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 2."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 3 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 3."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 4 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 4."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 5 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 5."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 6 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 6."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 7 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 7."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 8 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 8."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 9 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 9."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 10 (mtk,Matematika - • Membaca dan Menulis: Siswa mampu membaca dan menuliskan lambang bilangan cacah hingga 10.000 dengan tepat. • Nilai Tempat: Siswa mampu menentukan dan menggunakan nilai tempat (ribuan, ratusan, puluhan, satuan) pada bilangan sampai 10.000.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 10."
+  }
+);
+
