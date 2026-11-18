@@ -288,34 +288,20 @@
       } catch (e) {}
     }
 
+    // Murni membaca daftar Bab dari ujian1.js - ujian6.js (tidak mengambil dari kelas1.js - kelas6.js)
     function getDaftarBabSinkron(kls, kodeMapel) {
       const gabungan = [];
-      const dariKuis = (window.DATA_SEDDUR[kls] && window.DATA_SEDDUR[kls][kodeMapel]) || [];
       const dataUjianKls = getDataUjianKelasAman(kls);
       const dariUjian = (dataUjianKls.bab && dataUjianKls.bab[kodeMapel]) || [];
-
-      dariKuis.forEach(b => {
-        const kunciBab = b.bab.trim().toLowerCase();
-        const semuaPaketCocok = dariUjian.filter(u => u.bab && u.bab.trim().toLowerCase() === kunciBab);
-        let soalTergabung = [];
-        semuaPaketCocok.forEach(pkt => {
-          if (Array.isArray(pkt.soal)) soalTergabung = soalTergabung.concat(pkt.soal);
-        });
-        gabungan.push({
-          semester: b.semester || "Semester 1/2",
-          bab: b.bab,
-          soalUjian: soalTergabung
-        });
-      });
 
       dariUjian.forEach(u => {
         if (!u.bab) return;
         const kunciBab = u.bab.trim().toLowerCase();
         const indexSudahAda = gabungan.findIndex(g => g.bab.trim().toLowerCase() === kunciBab);
         if (indexSudahAda === -1) {
-          const semuaPaketBaru = dariUjian.filter(item => item.bab && item.bab.trim().toLowerCase() === kunciBab);
+          const semuaPaketCocok = dariUjian.filter(item => item.bab && item.bab.trim().toLowerCase() === kunciBab);
           let soalTergabung = [];
-          semuaPaketBaru.forEach(pkt => {
+          semuaPaketCocok.forEach(pkt => {
             if (Array.isArray(pkt.soal)) soalTergabung = soalTergabung.concat(pkt.soal);
           });
           gabungan.push({
@@ -502,7 +488,7 @@
         <button class="menu-btn m-ipas" onclick="tampilMapelUjianBab()">
           <div>
             <div>📚 Ujian Bab (Pilih Mata Pelajaran)</div>
-            <div style="font-size:0.75rem; font-weight:400; opacity:0.95;">⏱️ Waktu: 5 Menit / Soal • Tersinkron Per Mapel & Bab</div>
+            <div style="font-size:0.75rem; font-weight:400; opacity:0.95;">⏱️ Waktu: 5 Menit / Soal • Khusus Soal Ujian</div>
           </div>
           <span class="badge-jumlah">Pilih Mapel ▶️</span>
         </button>
@@ -525,9 +511,9 @@
         <div class="top-bar"><button class="bg-kembali" onclick="tampilKategoriUjian()">⬅️ Jenis Ujian</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">Kelas ${kelasAktif} [${kodeUnikPeserta}]</div></div>
         <div class="card card-cbt" style="text-align:center;">
           <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Mata Pelajaran (Ujian Bab)</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Kelas ${kelasAktif} • Pilih mata pelajaran untuk melihat daftar Bab</p>
+          <p style="color:#64748b; font-size:0.84rem;">Kelas ${kelasAktif} • Menampilkan mapel yang sudah diisi di <code>ujian${kelasAktif}.js</code></p>
         </div>
-        ${tombolMapel || '<div class="card">Belum ada daftar Bab untuk kelas ini.</div>'}`;
+        ${tombolMapel || `<div class="card card-cbt" style="text-align:center;">Belum ada soal Ujian Bab yang diisi pada file <code>ujian${kelasAktif}.js</code>.</div>`}`;
     }
 
     function tampilBabUjian(kodeMapel) {
@@ -585,7 +571,7 @@
 
       modeAplikasi = "ujian";
       kodeKategoriUjianAktif = kodeKat;
-      mapelUjianAktif = (daftarSoal && daftarSoal.mapel) ? daftarSoal.mapel : "Umum / Tematik";
+      mapelUjianAktif = (daftarSoal[0] && daftarSoal[0].mapel) ? daftarSoal[0].mapel : "Umum / Tematik";
       kategoriUjianAktif = judulKat;
 
       jalankanMesinCBT(daftarSoal);
@@ -924,8 +910,9 @@
           </select>
 
           <div id="wadahPilihBabGen">
-            <label class="label-form">3b. Pilih Bab (Sesuai Kelas & Mapel):</label>
-            <select id="genDaftarBab" class="input-form"></select>
+            <label class="label-form">3b. Pilih Bab dari <code>ujianX.js</code> atau Ketik Judul Bab Baru:</label>
+            <select id="genDaftarBab" class="input-form" onchange="cekBabBaruInput()"></select>
+            <input type="text" id="genBabBaruInput" class="input-form" style="display:none; border-color:#10b981; background:#ecfdf5;" placeholder="Ketik Nama Bab Baru (Contoh: Bab 2 • Penjumlahan)..." />
           </div>
 
           <label class="label-form">4. Topik / Pokok Materi:</label>
@@ -963,32 +950,42 @@
     }
 
     function togglePilihanBabGenerator() {
-      const kat = document.getElementById("genKategori").value.split("|");
+      const kat = document.getElementById("genKategori").value.split("|")[0];
       document.getElementById("wadahPilihBabGen").style.display = (kat === "bab") ? "block" : "none";
     }
 
     function perbaruiOpsiBabGenerator() {
       const kls = Number(document.getElementById("genKelas").value);
-      const kodeMapel = document.getElementById("genMapel").value.split("|");
+      const kodeMapel = document.getElementById("genMapel").value.split("|")[0];
       const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
       const selectBab = document.getElementById("genDaftarBab");
 
-      if (daftarBab.length === 0) {
-        selectBab.innerHTML = `<option value="Bab 1 • Materi Baru">Bab 1 • Materi Baru</option>`;
-      } else {
-        selectBab.innerHTML = daftarBab.map(b => `<option value="${b.bab}">${b.semester} - ${b.bab}</option>`).join("");
-      }
+      let opsiHTML = daftarBab.map(b => `<option value="${b.bab}">${b.semester} - ${b.bab}</option>`).join("");
+      opsiHTML += `<option value="__BARU__">➕ Buat Judul Bab Baru...</option>`;
+      selectBab.innerHTML = opsiHTML;
+      cekBabBaruInput();
+    }
+
+    function cekBabBaruInput() {
+      const val = document.getElementById("genDaftarBab").value;
+      const inputBaru = document.getElementById("genBabBaruInput");
+      inputBaru.style.display = (val === "__BARU__") ? "block" : "none";
     }
 
         function buatKodeSoalGitHub() {
       const kls = document.getElementById("genKelas").value;
       const mapelRaw = document.getElementById("genMapel").value.split("|");
-      const kodeMapel = mapelRaw;
-      const namaMapel = mapelRaw;
+      const kodeMapel = mapelRaw[0];
+      const namaMapel = mapelRaw[1];
       const katRaw = document.getElementById("genKategori").value.split("|");
-      const katKode = katRaw;
-      const katNama = katRaw;
-      const judulBab = document.getElementById("genDaftarBab").value;
+      const katKode = katRaw[0];
+      const katNama = katRaw[1];
+
+      let judulBab = document.getElementById("genDaftarBab").value;
+      if (judulBab === "__BARU__") {
+        judulBab = document.getElementById("genBabBaruInput").value.trim() || "Bab Baru";
+      }
+
       const topik = document.getElementById("genTopik").value.trim() || judulBab;
       const modeGbr = document.getElementById("genModeGambar").value;
       const jumlah = parseInt(document.getElementById("genJumlah").value, 10);
@@ -1070,7 +1067,7 @@
             </select>
 
             <div id="wadahFilterBabRekap" style="display:none;">
-              <label class="label-form" style="margin-top:4px; color:#0284c7;">3b. Pilih Bab Spesifik (Sesuai Mapel):</label>
+              <label class="label-form" style="margin-top:4px; color:#0284c7;">3b. Pilih Bab Spesifik (Sesuai Mapel di <code>ujianX.js</code>):</label>
               <select id="filterBabSpesifik" class="input-form" style="margin:0; border-color:#0284c7;" onchange="renderTabelNilai()">
                 <option value="ALL">Semua Bab pada Mapel Ini</option>
               </select>
@@ -1111,13 +1108,13 @@
 
       let daftarOpsiBab = [];
       if (fKelas !== "ALL" && fMapelRaw !== "ALL") {
-        const kodeMapel = fMapelRaw.split("|");
+        const kodeMapel = fMapelRaw.split("|")[0];
         const sinkron = getDaftarBabSinkron(Number(fKelas), kodeMapel);
         daftarOpsiBab = sinkron.map(b => b.bab);
       } else {
         let semua = [];
         try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-        const namaMapelFilter = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|");
+        const namaMapelFilter = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|")[1];
         semua.forEach(item => {
           const isUTS_UAS = ["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(item.kategori);
           if (!isUTS_UAS) {
@@ -1152,7 +1149,7 @@
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const fKelas = document.getElementById("filterKelas").value;
       const fMapelRaw = document.getElementById("filterMapel").value;
-      const fMapelNama = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|");
+      const fMapelNama = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|")[1];
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "ALL";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1186,7 +1183,7 @@
       const infoBox = document.getElementById("infoRingkasanFilter");
       const fKelas = document.getElementById("filterKelas").value;
       const fMapelRaw = document.getElementById("filterMapel").value;
-      const fMapelNama = fMapelRaw === "ALL" ? "Semua Mapel" : fMapelRaw.split("|");
+      const fMapelNama = fMapelRaw === "ALL" ? "Semua Mapel" : fMapelRaw.split("|")[1];
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fUnik = document.getElementById("filterKodeUnik").value;
 
@@ -1244,7 +1241,7 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       const labelKelas = fKelas === "ALL" ? "SemuaKelas" : `Kelas${fKelas}`;
-      const labelMapel = fMapelRaw === "ALL" ? "SemuaMapel" : fMapelRaw.split("|").replace(/[^a-zA-Z0-9]/g, "_");
+      const labelMapel = fMapelRaw === "ALL" ? "SemuaMapel" : fMapelRaw.split("|")[1].replace(/[^a-zA-Z0-9]/g, "_");
       const labelTipe = fTipe === "ALL" ? "SemuaUjian" : fTipe.replace(/[^a-zA-Z0-9]/g, "_");
       const labelUnik = fUnik === "ALL" ? "SemuaKode" : fUnik.replace(/[^a-zA-Z0-9]/g, "_");
 
