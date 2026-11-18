@@ -147,4 +147,86 @@ window.DATA_UJIAN[4].bab,Ujian Bab.push(
     bahas: "Pembahasan soal nomor 10."
   }
 );
-
+// Tempelkan di BARIS PALING BAWAH file ujian4.js
+window.DATA_UJIAN[4].bab,Ujian Bab.push(
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 1 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 1."
+  },
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 2 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 2."
+  },
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 3 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 3."
+  },
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 4 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 4."
+  },
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 5 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 5."
+  },
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 6 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 6."
+  },
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 7 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 7."
+  },
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 8 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 8."
+  },
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 9 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 9."
+  },
+  {
+    mapel: "bindo,Bahasa Indonesia",
+    ikon: "📝",
+    tanya: "Soal nomor 10 (bindo,Bahasa Indonesia - Menyimak & Memaknai Teks: Siswa mampu memahami isi dan memaknai pesan dari teks narasi yang dibacakan.)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 10."
+  }
+);
