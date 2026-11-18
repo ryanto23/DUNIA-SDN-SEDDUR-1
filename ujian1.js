@@ -64,3 +64,45 @@ window.DATA_UJIAN["1"] = {
 };
 
 // Tempelkan kode tambahan dari Generator AI di bawah baris ini
+// Tempelkan di BARIS PALING BAWAH file ujian1.js
+window.DATA_UJIAN["1"].bab.mtk.push({
+  semester: "Semester 1",
+  bab: "Bab 1 • Ayo Membilang sampai dengan 10",
+  soal: [
+  {
+    ikon: "📝",
+    tanya: "Soal nomor 1 (Matematika - penjumlahan sampai 10)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 1."
+  },
+  {
+    ikon: "📝",
+    tanya: "Soal nomor 2 (Matematika - penjumlahan sampai 10)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 2."
+  },
+  {
+    ikon: "📝",
+    tanya: "Soal nomor 3 (Matematika - penjumlahan sampai 10)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 3."
+  },
+  {
+    ikon: "📝",
+    tanya: "Soal nomor 4 (Matematika - penjumlahan sampai 10)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 4."
+  },
+  {
+    ikon: "📝",
+    tanya: "Soal nomor 5 (Matematika - penjumlahan sampai 10)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 5."
+  }
+  ]
+});
