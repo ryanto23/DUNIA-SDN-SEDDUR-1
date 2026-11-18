@@ -259,21 +259,10 @@
     }
 
     function getKodeUjianKelas(kls) {
-      let lokal = {};
-      try { lokal = JSON.parse(localStorage.getItem("seddur_kode_ujian") || "{}"); } catch (e) {}
-      if (lokal[kls] && lokal[kls].trim() !== "") return lokal[kls].trim().toUpperCase();
       if (window.KODE_UJIAN_DEFAULT && window.KODE_UJIAN_DEFAULT[kls]) {
         return String(window.KODE_UJIAN_DEFAULT[kls]).trim().toUpperCase();
       }
       return `KLS${kls}-2026`;
-    }
-
-    function setKodeUjianKelas(kls, kode) {
-      let data = {};
-      try { data = JSON.parse(localStorage.getItem("seddur_kode_ujian") || "{}"); } catch (e) {}
-      data[kls] = kode.trim().toUpperCase();
-      try { localStorage.setItem("seddur_kode_ujian", JSON.stringify(data)); } catch (e) {}
-      if (window.KODE_UJIAN_DEFAULT) window.KODE_UJIAN_DEFAULT[kls] = kode.trim().toUpperCase();
     }
 
     function getPasswordAdmin() {
@@ -316,7 +305,7 @@
           <button class="mode-btn mode-admin" onclick="tampilLoginAdmin()">
             <div>
               <div>⚙️ MENU ADMIN</div>
-              <div style="font-size:0.75rem; font-weight:400; opacity:0.8;">Kode Ujian, Generator AI & Rekap Nilai</div>
+              <div style="font-size:0.75rem; font-weight:400; opacity:0.8;">Generator AI, Rekap Nilai & Pengaturan</div>
             </div>
             <span>🔑</span>
           </button>
@@ -743,68 +732,18 @@
     }
 
     function prosesLoginAdmin() {
-      if (document.getElementById("inputPassAdmin").value === getPasswordAdmin()) {
-        mainkanEfek('benar');
-        tampilDashboardAdmin();
-      } else {
-        mainkanEfek('salah');
-        alert("Password Admin salah!");
-      }
+      if (document.getElementById("inputPassAdmin").value === getPasswordAdmin()) { mainkanEfek('benar'); tampilDashboardAdmin(); }
+      else { mainkanEfek('salah'); alert("Password Admin salah!"); }
     }
 
     function tampilDashboardAdmin() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Keluar Admin</button><div class="star-bar">⚙️ Panel Admin</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Kelola kode ujian, generator kode GitHub, & nilai siswa</p></div>
-        <button class="menu-btn m-bindo" onclick="adminKodeUjian()"><span>1. 🔐 Buat Kode Ujian Per Kelas</span><span>▶️</span></button>
-        <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>2. 🤖 Generator Soal AI (Kode GitHub)</span><span>▶️</span></button>
-        <button class="menu-btn m-mtk" onclick="adminGeneratorBab()"><span>3. 📂 Generator Daftar Bab (Kode GitHub)</span><span>▶️</span></button>
-        <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>4. 📊 Lihat & Filter Rekap Nilai Siswa</span><span>▶️</span></button>
-        <button class="menu-btn m-pancasila" onclick="adminUbahPassword()"><span>5. 🔑 Ubah Password Admin</span><span>▶️</span></button>`;
-    }
-
-        function adminKodeUjian() {
-      let barisKelas = "";
-      for (let k = 1; k <= 6; k++) {
-        barisKelas += `
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; padding:8px 0; border-bottom:1px solid #e2e8f0;">
-            <strong style="min-width:75px; text-align:left;">Kelas ${k}:</strong>
-            <input type="text" id="kode-kls-${k}" class="input-form" style="margin:0; text-transform:uppercase;" value="${getKodeUjianKelas(k)}" />
-            <button class="btn-aksi" style="margin:0; padding:8px 12px; font-size:0.82rem;" onclick="acakKodeOtomatis(${k})">🎲 Acak</button>
-          </div>`;
-      }
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🔐 Kode Ujian</div></div>
-        <div class="card" style="text-align:left;">
-          <h3 style="color:#0284c7; margin-bottom:4px; text-align:center;">Pengaturan Kode Ujian Per Kelas</h3>
-          <p style="font-size:0.82rem; color:#64748b; margin-bottom:10px; text-align:center;">Kode aktif otomatis terbaca di semua HP siswa. Jika diubah, salin kode ke file <code>kode_ujian.js</code> di GitHub.</p>
-          ${barisKelas}
-          <button class="btn-aksi btn-sukses" style="width:100%; margin-top:14px;" onclick="simpanSemuaKodeUjian()">💾 Simpan & Generate Kode GitHub</button>
-          <label class="label-form" style="margin-top:12px;">Kode untuk file <code>kode_ujian.js</code> (Agar berlaku di semua HP):</label>
-          <textarea id="hasilKodeUjianGitHub" class="textarea-kode" style="min-height:110px;" readonly></textarea>
-          <button class="btn-aksi" style="width:100%;" onclick="salinTeks('hasilKodeUjianGitHub')">📋 Salin kode_ujian.js</button>
-        </div>`;
-      tampilkanTeksKodeUjianGitHub();
-    }
-
-    function acakKodeOtomatis(kls) {
-      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-      let hasil = `K${kls}-`;
-      for (let i = 0; i < 4; i++) hasil += chars.charAt(Math.floor(Math.random() * chars.length));
-      document.getElementById(`kode-kls-${kls}`).value = hasil;
-    }
-
-    function simpanSemuaKodeUjian() {
-      for (let k = 1; k <= 6; k++) setKodeUjianKelas(k, document.getElementById(`kode-kls-${k}`).value);
-      tampilkanTeksKodeUjianGitHub();
-      mainkanEfek('benar');
-      alert("✅ Kode tersimpan! Untuk memberlakukannya di semua HP siswa, salin kode di kotak bawah ke file kode_ujian.js di GitHub.");
-    }
-
-    function tampilkanTeksKodeUjianGitHub() {
-      const el = document.getElementById("hasilKodeUjianGitHub");
-      if (!el) return;
-      el.value = `window.KODE_UJIAN_DEFAULT = {\n  1: "${getKodeUjianKelas(1)}",\n  2: "${getKodeUjianKelas(2)}",\n  3: "${getKodeUjianKelas(3)}",\n  4: "${getKodeUjianKelas(4)}",\n  5: "${getKodeUjianKelas(5)}",\n  6: "${getKodeUjianKelas(6)}"\n};`;
+        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator kode GitHub, rekap nilai siswa & pengaturan admin</p></div>
+        <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI (Kode GitHub)</span><span>▶️</span></button>
+        <button class="menu-btn m-mtk" onclick="adminGeneratorBab()"><span>2. 📂 Generator Daftar Bab (Kode GitHub)</span><span>▶️</span></button>
+        <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>3. 📊 Lihat & Filter Rekap Nilai Siswa</span><span>▶️</span></button>
+        <button class="menu-btn m-pancasila" onclick="adminUbahPassword()"><span>4. 🔑 Ubah Password Admin</span><span>▶️</span></button>`;
     }
 
         function adminGeneratorSoal() {
