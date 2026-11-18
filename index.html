@@ -96,8 +96,7 @@
     @media print { body { background: #fff !important; } header, .no-print { display: none !important; } .container { max-width: 100%; margin: 0; padding: 0; } .card { border: none; box-shadow: none; } }
   </style>
 </head>
-
-  <body>
+<body>
   <header>
     <h1>🏫 DUNIA SDN SEDDUR 1</h1>
     <p>Kurikulum Merdeka • Tahun Ajaran 2026/2027</p>
@@ -219,6 +218,7 @@
     let babAktif = 0;
     let kodeKategoriUjianAktif = "";
     let kategoriUjianAktif = "";
+    let mapelUjianAktif = "";
     let soalPermainan = [];
     let jawabanSiswaUjian = [];
     let indeksSoal = 0;
@@ -238,7 +238,6 @@
     };
 
     const daftarKategoriUjian = [
-      { kode: "latihan_bab", judul: "Latihan Bab", waktuInfo: "5 Menit / Soal", ikon: "📝", warna: "m-ipas" },
       { kode: "uts_1", judul: "UTS Semester 1", waktuInfo: "90 Menit Total", ikon: "📘", warna: "m-bindo" },
       { kode: "uas_1", judul: "UAS Semester 1", waktuInfo: "90 Menit Total", ikon: "📙", warna: "m-pancasila" },
       { kode: "uts_2", judul: "UTS Semester 2", waktuInfo: "90 Menit Total", ikon: "📗", warna: "m-mtk" },
@@ -277,6 +276,34 @@
       } catch (e) {}
     }
 
+    function getDaftarBabSinkron(kls, kodeMapel) {
+      const gabungan = [];
+      const dariKuis = (window.DATA_SEDDUR[kls] && window.DATA_SEDDUR[kls][kodeMapel]) || [];
+      const dariUjian = (window.DATA_UJIAN[kls] && window.DATA_UJIAN[kls].bab && window.DATA_UJIAN[kls].bab[kodeMapel]) || [];
+
+      dariKuis.forEach(b => {
+        const cocokUjian = dariUjian.find(u => u.bab.trim().toLowerCase() === b.bab.trim().toLowerCase());
+        gabungan.push({
+          semester: b.semester || "Semester 1/2",
+          bab: b.bab,
+          soalUjian: cocokUjian ? cocokUjian.soal : []
+        });
+      });
+
+      dariUjian.forEach(u => {
+        const sudahAda = gabungan.some(g => g.bab.trim().toLowerCase() === u.bab.trim().toLowerCase());
+        if (!sudahAda) {
+          gabungan.push({
+            semester: u.semester || "Ujian Bab",
+            bab: u.bab,
+            soalUjian: u.soal || []
+          });
+        }
+      });
+
+      return gabungan;
+    }
+
     function tampilBeranda() {
       hentikanTimer();
       document.body.classList.remove("mode-cbt");
@@ -298,7 +325,7 @@
           <button class="mode-btn mode-ujian" onclick="bukaMenuKelasUjian()">
             <div>
               <div>📝 MENU UJIAN (CBT)</div>
-              <div style="font-size:0.78rem; font-weight:400; opacity:0.9;">Ujian Resmi Berwaktu & Kode Akses</div>
+              <div style="font-size:0.78rem; font-weight:400; opacity:0.9;">Ujian Per Bab, UTS & UAS Berwaktu</div>
             </div>
             <span style="font-size:1.6rem;">🔐</span>
           </button>
@@ -424,9 +451,10 @@
       hentikanTimer();
       const dataUjianKelas = window.DATA_UJIAN[kelasAktif];
       if (!dataUjianKelas) { alert(`File wadah ujian${kelasAktif}.js belum ditemukan atau belum diisi!`); return; }
-      let tombolKategori = daftarKategoriUjian.map(kat => {
+
+      let tombolUTS_UAS = daftarKategoriUjian.map(kat => {
         const daftarSoal = dataUjianKelas[kat.kode] || [];
-        return `<button class="menu-btn ${kat.warna}" onclick="mulaiUjianCBT('${kat.kode}', '${kat.judul}')">
+        return `<button class="menu-btn ${kat.warna}" onclick="mulaiUjianUTS_UAS('${kat.kode}', '${kat.judul}')">
           <div>
             <div>${kat.ikon} ${kat.judul}</div>
             <div style="font-size:0.75rem; font-weight:400; opacity:0.95;">⏱️ Waktu: ${kat.waktuInfo}</div>
@@ -434,28 +462,107 @@
           <span class="badge-jumlah">${daftarSoal.length} Soal ▶️</span>
         </button>`;
       }).join("");
+
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasUjian()">⬅️ Keluar</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">👤 ${namaSiswa} • Kelas ${kelasAktif}</div></div>
         <div class="card card-cbt" style="text-align:center;">
-          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Paket Ujian Kelas ${kelasAktif}</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Perhatikan aturan waktu sebelum memulai ujian</p>
+          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Jenis Ujian Kelas ${kelasAktif}</h2>
+          <p style="color:#64748b; font-size:0.84rem;">Pilih Ujian Per Bab (sesuai Mapel) atau Ujian Semester (UTS/UAS)</p>
         </div>
-        ${tombolKategori}`;
+        <button class="menu-btn m-ipas" onclick="tampilMapelUjianBab()">
+          <div>
+            <div>📚 Ujian Bab (Pilih Mata Pelajaran)</div>
+            <div style="font-size:0.75rem; font-weight:400; opacity:0.95;">⏱️ Waktu: 5 Menit / Soal • Tersinkron Per Mapel & Bab</div>
+          </div>
+          <span class="badge-jumlah">Pilih Mapel ▶️</span>
+        </button>
+        ${tombolUTS_UAS}`;
     }
 
-        function mulaiUjianCBT(kodeKat, judulKat) {
+    function tampilMapelUjianBab() {
+      const daftarKodeMapel = Object.keys(daftarNamaMapel);
+      let tombolMapel = daftarKodeMapel.map(kode => {
+        const info = daftarNamaMapel[kode];
+        const daftarBab = getDaftarBabSinkron(kelasAktif, kode);
+        if (daftarBab.length === 0) return "";
+        return `<button class="menu-btn ${info.kelasCss}" onclick="tampilBabUjian('${kode}')">
+          <span>${info.ikon} ${info.judul}</span>
+          <span class="badge-jumlah">${daftarBab.length} Bab ▶️</span>
+        </button>`;
+      }).join("");
+
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilKategoriUjian()">⬅️ Jenis Ujian</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">Ujian Bab • Kelas ${kelasAktif}</div></div>
+        <div class="card card-cbt" style="text-align:center;">
+          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Mata Pelajaran (Ujian Bab)</h2>
+          <p style="color:#64748b; font-size:0.84rem;">Kelas ${kelasAktif} • Pilih mata pelajaran untuk melihat daftar Bab</p>
+        </div>
+        ${tombolMapel || '<div class="card">Belum ada daftar Bab untuk kelas ini.</div>'}`;
+    }
+
+    function tampilBabUjian(kodeMapel) {
+      mapelAktif = kodeMapel;
+      const infoMapel = daftarNamaMapel[kodeMapel];
+      const daftarBab = getDaftarBabSinkron(kelasAktif, kodeMapel);
+
+      let tombolBabHTML = daftarBab.map((b, idx) => `
+        <button class="menu-btn bab-btn" onclick="mulaiUjianBabSpesifik('${kodeMapel}', ${idx})">
+          <div>
+            <div style="font-size:0.75rem; color:#0284c7;">${b.semester}</div>
+            <div>${b.bab}</div>
+          </div>
+          <span class="bab-badge">${b.soalUjian.length} Soal Ujian ▶️</span>
+        </button>`).join("");
+
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilMapelUjianBab()">⬅️ Ganti Mapel</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">${infoMapel.judul}</div></div>
+        <div class="card card-cbt" style="text-align:center;">
+          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Bab Ujian • ${infoMapel.judul}</h2>
+          <p style="color:#64748b; font-size:0.84rem;">Kelas ${kelasAktif} • Waktu pengerjaan 5 menit per soal</p>
+        </div>
+        ${tombolBabHTML}`;
+    }
+
+        function mulaiUjianBabSpesifik(kodeMapel, idxBab) {
+      const infoMapel = daftarNamaMapel[kodeMapel];
+      const daftarBab = getDaftarBabSinkron(kelasAktif, kodeMapel);
+      const targetBab = daftarBab[idxBab];
+
+      if (!targetBab || !targetBab.soalUjian || targetBab.soalUjian.length === 0) {
+        alert(`Belum ada soal ujian untuk "${targetBab ? targetBab.bab : 'Bab ini'}" pada file ujian${kelasAktif}.js!`);
+        return;
+      }
+
+      if (!confirm(`Mulai Ujian Bab sekarang?\n• Peserta: ${namaSiswa}\n• Mapel: ${infoMapel.judul}\n• Materi: ${targetBab.bab}\n• Jumlah Soal: ${targetBab.soalUjian.length} soal\n• Batas Waktu: 5 menit per soal`)) return;
+
+      modeAplikasi = "ujian";
+      kodeKategoriUjianAktif = "latihan_bab";
+      mapelUjianAktif = infoMapel.judul;
+      kategoriUjianAktif = targetBab.bab;
+
+      jalankanMesinCBT(targetBab.soalUjian);
+    }
+
+    function mulaiUjianUTS_UAS(kodeKat, judulKat) {
       const dataUjianKelas = window.DATA_UJIAN[kelasAktif] || {};
       const daftarSoal = dataUjianKelas[kodeKat] || [];
-      if (daftarSoal.length === 0) { alert(`Belum ada soal di paket "${judulKat}" pada file ujian${kelasAktif}.js!`); return; }
+      if (daftarSoal.length === 0) {
+        alert(`Belum ada soal di paket "${judulKat}" pada file ujian${kelasAktif}.js!`);
+        return;
+      }
 
-      const aturanWaktu = kodeKat === "latihan_bab" ? "5 menit untuk setiap soal" : "90 menit untuk seluruh soal";
-      if (!confirm(`Mulai ${judulKat} sekarang?\n• Peserta: ${namaSiswa}\n• Jumlah Soal: ${daftarSoal.length} soal\n• Batas Waktu: ${aturanWaktu}`)) return;
+      if (!confirm(`Mulai ${judulKat} sekarang?\n• Peserta: ${namaSiswa}\n• Jumlah Soal: ${daftarSoal.length} soal\n• Batas Waktu: 90 menit total`)) return;
 
       modeAplikasi = "ujian";
       kodeKategoriUjianAktif = kodeKat;
+      mapelUjianAktif = (daftarSoal && daftarSoal.mapel) ? daftarSoal.mapel : "Umum / Tematik";
       kategoriUjianAktif = judulKat;
 
-      soalPermainan = acakArray(daftarSoal).map(item => {
+      jalankanMesinCBT(daftarSoal);
+    }
+
+    function jalankanMesinCBT(daftarSoalMentah) {
+      soalPermainan = acakArray(daftarSoalMentah).map(item => {
         const jawabanBenar = item.opsi[item.kunci];
         const opsiAcak = acakArray(item.opsi);
         return {
@@ -543,8 +650,8 @@
       document.getElementById("app").innerHTML = `
         <div class="cbt-header-info">
           <div>
-            <div style="font-weight:700;">${kategoriUjianAktif} • Kelas ${kelasAktif}</div>
-            <div style="font-size:0.75rem; opacity:0.85;">Peserta: ${namaSiswa} ${isBab ? '(Waktu per soal)' : '(Waktu total)'}</div>
+            <div style="font-weight:700;">${mapelUjianAktif} • ${kategoriUjianAktif}</div>
+            <div style="font-size:0.75rem; opacity:0.85;">Peserta: ${namaSiswa} (Kelas ${kelasAktif})</div>
           </div>
           <div class="timer-box" id="tampilanTimer">${formatWaktu(sisaDetik)}</div>
         </div>
@@ -617,7 +724,8 @@
         id: Date.now(),
         tanggal: new Date().toLocaleDateString('id-ID', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
         nama: namaSiswa,
-        kelas: kelasAktif,
+        kelas: String(kelasAktif),
+        mapel: mapelUjianAktif,
         kategori: kategoriUjianAktif,
         benar: `${jumlahBenar}/${totalSoal}`,
         nilai: nilaiAkhir
@@ -633,7 +741,8 @@
             <div><strong>Sekolah:</strong> SDN Seddur 1</div>
             <div><strong>Nama Peserta:</strong> ${namaSiswa}</div>
             <div><strong>Kelas:</strong> Kelas ${kelasAktif}</div>
-            <div><strong>Jenis Ujian:</strong> ${kategoriUjianAktif}</div>
+            <div><strong>Mata Pelajaran:</strong> ${mapelUjianAktif}</div>
+            <div><strong>Jenis / Materi Ujian:</strong> ${kategoriUjianAktif}</div>
             <div><strong>Jumlah Benar:</strong> ${jumlahBenar} dari ${totalSoal} Soal</div>
             <div style="font-size:1.3rem; font-weight:700; color:#2563eb; margin-top:8px; padding-top:8px; border-top:1px dashed #cbd5e1; text-align:center;">
               NILAI UJIAN: ${nilaiAkhir}
@@ -739,11 +848,10 @@
     function tampilDashboardAdmin() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Keluar Admin</button><div class="star-bar">⚙️ Panel Admin</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator kode GitHub, rekap nilai siswa & pengaturan admin</p></div>
-        <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI (Kode GitHub)</span><span>▶️</span></button>
-        <button class="menu-btn m-mtk" onclick="adminGeneratorBab()"><span>2. 📂 Generator Daftar Bab (Kode GitHub)</span><span>▶️</span></button>
-        <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>3. 📊 Lihat & Filter Rekap Nilai Siswa</span><span>▶️</span></button>
-        <button class="menu-btn m-pancasila" onclick="adminUbahPassword()"><span>4. 🔑 Ubah Password Admin</span><span>▶️</span></button>`;
+        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI, rekap nilai terfilter & pengaturan admin</p></div>
+        <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI & Kode GitHub</span><span>▶️</span></button>
+        <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>2. 📊 Lihat & Filter Rekap Nilai Siswa</span><span>▶️</span></button>
+        <button class="menu-btn m-pancasila" onclick="adminUbahPassword()"><span>3. 🔑 Ubah Password Admin</span><span>▶️</span></button>`;
     }
 
         function adminGeneratorSoal() {
@@ -751,10 +859,10 @@
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal AI</div></div>
         <div class="card" style="text-align:left;">
           <h3 style="color:#0284c7; text-align:center;">Generator Soal AI & Kode GitHub</h3>
-          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Atur spesifikasi soal di bawah untuk membuat Prompt AI & Kerangka Kode GitHub</p>
+          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Tersinkron otomatis dengan daftar Bab per Mapel & Kelas di file <code>ujianX.js</code></p>
 
           <label class="label-form">1. Pilih Kelas:</label>
-          <select id="genKelas" class="input-form">
+          <select id="genKelas" class="input-form" onchange="perbaruiOpsiBabGenerator()">
             <option value="1">Kelas 1 (ujian1.js)</option>
             <option value="2">Kelas 2 (ujian2.js)</option>
             <option value="3">Kelas 3 (ujian3.js)</option>
@@ -764,25 +872,27 @@
           </select>
 
           <label class="label-form">2. Mata Pelajaran:</label>
-          <select id="genMapel" class="input-form">
-            <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
-            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
-            <option value="Matematika">Matematika</option>
-            <option value="IPAS (Ilmu Pengetahuan Alam & Sosial)">IPAS (Alam & Sosial)</option>
-            <option value="Bahasa Inggris">Bahasa Inggris</option>
-            <option value="PAI & Budi Pekerti">PAI & Budi Pekerti</option>
-            <option value="PJOK">PJOK</option>
-            <option value="Gabungan Semua Mapel">Gabungan Semua Mapel (Tematik)</option>
+          <select id="genMapel" class="input-form" onchange="perbaruiOpsiBabGenerator()">
+            <option value="pancasila|Pendidikan Pancasila">Pendidikan Pancasila</option>
+            <option value="bindo|Bahasa Indonesia">Bahasa Indonesia</option>
+            <option value="mtk|Matematika">Matematika</option>
+            <option value="ipas|IPAS (Alam & Sosial)">IPAS (Alam & Sosial)</option>
+            <option value="bing|Bahasa Inggris">Bahasa Inggris</option>
           </select>
 
           <label class="label-form">3. Kategori Ujian:</label>
-          <select id="genKategori" class="input-form">
-            <option value="latihan_bab|Latihan Bab">Latihan Bab (5 Menit / Soal)</option>
+          <select id="genKategori" class="input-form" onchange="togglePilihanBabGenerator()">
+            <option value="bab|Ujian Bab">Ujian Per Bab (5 Menit / Soal)</option>
             <option value="uts_1|UTS Semester 1">UTS Semester 1 (90 Menit Total)</option>
             <option value="uas_1|UAS Semester 1">UAS Semester 1 (90 Menit Total)</option>
             <option value="uts_2|UTS Semester 2">UTS Semester 2 (90 Menit Total)</option>
             <option value="uas_2|UAS Semester 2">UAS Semester 2 (90 Menit Total)</option>
           </select>
+
+          <div id="wadahPilihBabGen">
+            <label class="label-form">3b. Pilih Bab (Sesuai Kelas & Mapel):</label>
+            <select id="genDaftarBab" class="input-form"></select>
+          </div>
 
           <label class="label-form">4. Topik / Pokok Materi:</label>
           <input type="text" id="genTopik" class="input-form" placeholder="Contoh: Simbol Pancasila, Pecahan, Rantai Makanan..." />
@@ -814,15 +924,38 @@
           <textarea id="hasilKodeSoal" class="textarea-kode" style="min-height:160px;" readonly placeholder="Kerangka kode JavaScript akan muncul di sini..."></textarea>
           <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeSoal')">📋 Salin Kode GitHub</button>
         </div>`;
+      perbaruiOpsiBabGenerator();
+      togglePilihanBabGenerator();
+    }
+
+    function togglePilihanBabGenerator() {
+      const kat = document.getElementById("genKategori").value.split("|");
+      document.getElementById("wadahPilihBabGen").style.display = (kat === "bab") ? "block" : "none";
+    }
+
+    function perbaruiOpsiBabGenerator() {
+      const kls = Number(document.getElementById("genKelas").value);
+      const kodeMapel = document.getElementById("genMapel").value.split("|");
+      const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
+      const selectBab = document.getElementById("genDaftarBab");
+
+      if (daftarBab.length === 0) {
+        selectBab.innerHTML = `<option value="Bab 1 • Materi Baru">Bab 1 • Materi Baru (Belum ada di kelas${kls}.js)</option>`;
+      } else {
+        selectBab.innerHTML = daftarBab.map(b => `<option value="${b.bab}">${b.semester} - ${b.bab}</option>`).join("");
+      }
     }
 
         function buatKodeSoalGitHub() {
       const kls = document.getElementById("genKelas").value;
-      const mapel = document.getElementById("genMapel").value;
+      const mapelRaw = document.getElementById("genMapel").value.split("|");
+      const kodeMapel = mapelRaw;
+      const namaMapel = mapelRaw;
       const katRaw = document.getElementById("genKategori").value.split("|");
-      const katKode = katRaw[0];
-      const katNama = katRaw[1];
-      const topik = document.getElementById("genTopik").value.trim() || "Materi Kurikulum Merdeka";
+      const katKode = katRaw;
+      const katNama = katRaw;
+      const judulBab = document.getElementById("genDaftarBab").value;
+      const topik = document.getElementById("genTopik").value.trim() || judulBab;
       const modeGbr = document.getElementById("genModeGambar").value;
       const jumlah = parseInt(document.getElementById("genJumlah").value, 10);
 
@@ -831,46 +964,28 @@
         contohOpsi = `["🍎 Apel", "🍌 Pisang", "🍇 Anggur", "🍉 Semangka"]`;
       }
 
-      const promptAI = `Buatkan ${jumlah} soal pilihan ganda Kurikulum Merdeka Tahun Ajaran 2026/2027 untuk siswa SD Kelas ${kls}.\n- Mata Pelajaran: ${mapel}\n- Kategori Ujian: ${katNama}\n- Topik Materi: ${topik}\n- Format Tampilan: ${modeGbr}\n\nATURAN WAJIB FORMAT OUTPUT:\nTuliskan HANYA dalam bentuk kode array JavaScript berikut tanpa teks pembuka/penutup agar bisa langsung saya copy-paste ke GitHub (file ujian${kls}.js bagian ${katKode}):\n\n${katKode}: [\n  {\n    ikon: "📝",\n    tanya: "Tulis pertanyaan jelas sesuai level siswa Kelas ${kls}...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Penjelasan singkat mengapa jawaban tersebut benar."\n  }\n]\nPastikan indeks "kunci" (0=A, 1=B, 2=C, 3=D) akurat dan gunakan emoji/ilustrasi visual yang menarik pada properti "ikon" maupun "opsi" sesuai mode gambar yang diminta.`;
+      let targetLokasi = `window.DATA_UJIAN[${kls}].${katKode}`;
+      let formatStruktur = `${katKode}: [\n  {\n    mapel: "${namaMapel}",\n    ikon: "📝",\n    tanya: "Pertanyaan...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Pembahasan."\n  }\n]`;
+
+      if (katKode === "bab") {
+        targetLokasi = `window.DATA_UJIAN[${kls}].bab.${kodeMapel}`;
+        formatStruktur = `{\n  bab: "${judulBab}",\n  soal: [\n    {\n      ikon: "📝",\n      tanya: "Pertanyaan...",\n      opsi: ${contohOpsi},\n      kunci: 0,\n      bahas: "Pembahasan."\n    }\n  ]\n}`;
+      }
+
+      const promptAI = `Buatkan ${jumlah} soal pilihan ganda Kurikulum Merdeka Tahun Ajaran 2026/2027 untuk siswa SD Kelas ${kls}.\n- Mata Pelajaran: ${namaMapel}\n- Kategori: ${katKode === "bab" ? judulBab : katNama}\n- Topik Materi: ${topik}\n- Format Tampilan: ${modeGbr}\n\nATURAN WAJIB FORMAT OUTPUT:\nTuliskan HANYA dalam bentuk kode JavaScript berikut tanpa teks pembuka/penutup agar bisa langsung ditempel ke GitHub (file ujian${kls}.js pada ${targetLokasi}):\n\n${formatStruktur}\n\nPastikan indeks "kunci" (0=A, 1=B, 2=C, 3=D) akurat dan gunakan emoji visual pada properti "ikon" maupun "opsi" sesuai mode gambar.`;
 
       let daftarTemplate = [];
       for (let i = 1; i <= jumlah; i++) {
-        daftarTemplate.push(`  {\n    ikon: "📝",\n    tanya: "Soal nomor ${i} (${mapel} - ${topik})...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Pembahasan soal nomor ${i}."\n  }`);
+        const barisMapel = katKode === "bab" ? "" : `\n    mapel: "${namaMapel}",`;
+        daftarTemplate.push(`  {${barisMapel}\n    ikon: "📝",\n    tanya: "Soal nomor ${i} (${namaMapel} - ${topik})...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Pembahasan soal nomor ${i}."\n  }`);
       }
 
-      const kodeGitHub = `// Tempelkan kode ini ke dalam window.DATA_UJIAN[${kls}] pada file ujian${kls}.js\n${katKode}: [\n${daftarTemplate.join(",\n")}\n],`;
+      const kodeGitHub = katKode === "bab"
+        ? `// Tempelkan ke dalam window.DATA_UJIAN[${kls}].bab.${kodeMapel} di file ujian${kls}.js\n{\n  bab: "${judulBab}",\n  soal: [\n${daftarTemplate.join(",\n")}\n  ]\n},`
+        : `// Tempelkan ke dalam window.DATA_UJIAN[${kls}] di file ujian${kls}.js\n${katKode}: [\n${daftarTemplate.join(",\n")}\n],`;
 
       document.getElementById("hasilPromptAI").value = promptAI;
       document.getElementById("hasilKodeSoal").value = kodeGitHub;
-      mainkanEfek('benar');
-    }
-
-        function adminGeneratorBab() {
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">📂 Generator Bab</div></div>
-        <div class="card" style="text-align:left;">
-          <h3 style="color:#0284c7; text-align:center;">Generator Daftar Bab (GitHub)</h3>
-          <label class="label-form">Pilih Kelas:</label>
-          <select id="babKelas" class="input-form"><option value="1">Kelas 1</option><option value="2">Kelas 2</option><option value="3">Kelas 3</option><option value="4">Kelas 4</option><option value="5">Kelas 5</option><option value="6">Kelas 6</option></select>
-          <label class="label-form">Mata Pelajaran:</label>
-          <select id="babMapel" class="input-form"><option value="pancasila">Pendidikan Pancasila</option><option value="bindo">Bahasa Indonesia</option><option value="mtk">Matematika</option><option value="ipas">IPAS</option><option value="bing">Bahasa Inggris</option></select>
-          <label class="label-form">Semester:</label>
-          <select id="babSemester" class="input-form"><option value="Semester 1">Semester 1</option><option value="Semester 2">Semester 2</option></select>
-          <label class="label-form">Judul Bab:</label>
-          <input type="text" id="babJudul" class="input-form" placeholder="Contoh: Bab 1 • Aku Cinta Pancasila" />
-          <button class="btn-aksi" style="width:100%;" onclick="buatKodeBabGitHub()">⚡ Generate Struktur Bab GitHub</button>
-          <label class="label-form" style="margin-top:12px;">Hasil Kode Struktur Bab (Tempel ke GitHub):</label>
-          <textarea id="hasilKodeBab" class="textarea-kode" readonly></textarea>
-          <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeBab')">📋 Salin Kode Bab</button>
-        </div>`;
-    }
-
-    function buatKodeBabGitHub() {
-      const kls = document.getElementById("babKelas").value;
-      const mapel = document.getElementById("babMapel").value;
-      const sem = document.getElementById("babSemester").value;
-      const judul = document.getElementById("babJudul").value.replace(/"/g, '\\"') || "Bab Baru";
-      document.getElementById("hasilKodeBab").value = `// Tambahkan ke dalam window.DATA_SEDDUR[${kls}].${mapel} di file kelas${kls}.js\n{\n  semester: "${sem}",\n  bab: "${judul}",\n  soal: [\n    {\n      ikon: "🌟",\n      tanya: "Contoh pertanyaan pertama untuk ${judul}?",\n      opsi: ["Jawaban A", "Jawaban B", "Jawaban C", "Jawaban D"],\n      kunci: 0,\n      bahas: "Pembahasan jawaban benar."\n    }\n  ]\n},`;
       mainkanEfek('benar');
     }
 
@@ -886,19 +1001,49 @@
         <div class="top-bar no-print"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">📊 Rekap Nilai</div></div>
         <div class="card">
           <h2 style="color:#0284c7; font-size:1.18rem;">Rekap Nilai Ujian SDN Seddur 1</h2>
-          <p style="font-size:0.8rem; color:#64748b;">Tahun Ajaran 2026/2027</p>
-          <div class="no-print" style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px;">
-            <select id="filterKelas" class="input-form" onchange="renderTabelNilai()">
-              <option value="ALL">Semua Kelas</option><option value="1">Kelas 1</option><option value="2">Kelas 2</option><option value="3">Kelas 3</option><option value="4">Kelas 4</option><option value="5">Kelas 5</option><option value="6">Kelas 6</option>
+          <p style="font-size:0.8rem; color:#64748b;">Filter data sebelum mencetak atau mengunduh Excel agar tidak tercampur</p>
+
+          <div class="no-print" style="display:grid; grid-template-columns:1fr; gap:6px; margin-top:10px; text-align:left;">
+            <label class="label-form" style="margin-top:2px;">1. Filter Kelas:</label>
+            <select id="filterKelas" class="input-form" style="margin:0;" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Kelas (1 - 6)</option>
+              <option value="1">Kelas 1</option>
+              <option value="2">Kelas 2</option>
+              <option value="3">Kelas 3</option>
+              <option value="4">Kelas 4</option>
+              <option value="5">Kelas 5</option>
+              <option value="6">Kelas 6</option>
             </select>
-            <select id="filterKategori" class="input-form" onchange="renderTabelNilai()">
-              <option value="ALL">Semua Kategori</option><option value="Latihan Bab">Latihan Bab</option><option value="UTS Semester 1">UTS Semester 1</option><option value="UAS Semester 1">UAS Semester 1</option><option value="UTS Semester 2">UTS Semester 2</option><option value="UAS Semester 2">UAS Semester 2</option>
+
+            <label class="label-form" style="margin-top:4px;">2. Filter Mata Pelajaran:</label>
+            <select id="filterMapel" class="input-form" style="margin:0;" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Mata Pelajaran</option>
+              <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
+              <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+              <option value="Matematika">Matematika</option>
+              <option value="IPAS (Alam & Sosial)">IPAS (Alam & Sosial)</option>
+              <option value="Bahasa Inggris">Bahasa Inggris</option>
+              <option value="Umum / Tematik">Umum / Tematik</option>
+            </select>
+
+            <label class="label-form" style="margin-top:4px;">3. Filter Jenis / Bab Ujian:</label>
+            <select id="filterKategori" class="input-form" style="margin:0;" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Jenis / Bab Ujian</option>
+              <option value="HANYA_BAB">Semua Ujian Per Bab</option>
+              <option value="UTS Semester 1">UTS Semester 1</option>
+              <option value="UAS Semester 1">UAS Semester 1</option>
+              <option value="UTS Semester 2">UTS Semester 2</option>
+              <option value="UAS Semester 2">UAS Semester 2</option>
             </select>
           </div>
-          <div class="no-print" style="display:flex; gap:8px; justify-content:center; margin-top:6px;">
-            <button class="btn-aksi" style="font-size:0.84rem; padding:10px 14px;" onclick="window.print()">🖨️ Cetak Hasil Filter</button>
-            <button class="btn-aksi btn-bahaya" style="font-size:0.84rem; padding:10px 14px;" onclick="hapusDataHasilFilter()">🗑️ Hapus Data Filter</button>
+
+          <div class="no-print" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:12px;">
+            <button class="btn-aksi btn-sukses" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="downloadExcelTerfilter()">📥 Download Excel (.csv)</button>
+            <button class="btn-aksi" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="window.print()">🖨️ Cetak PDF / Print</button>
+            <button class="btn-aksi btn-bahaya" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="hapusDataHasilFilter()">🗑️ Hapus Data Filter</button>
           </div>
+
+          <div id="infoRingkasanFilter" style="margin-top:10px; font-size:0.82rem; font-weight:700; color:#0f172a; background:#e0f2fe; padding:6px 10px; border-radius:10px;"></div>
           <div id="wadahTabelNilai"></div>
         </div>`;
       renderTabelNilai();
@@ -908,16 +1053,91 @@
       let semua = [];
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const fKelas = document.getElementById("filterKelas").value;
+      const fMapel = document.getElementById("filterMapel").value;
       const fKat = document.getElementById("filterKategori").value;
-      return semua.filter(item => ((fKelas === "ALL") || (String(item.kelas) === fKelas)) && ((fKat === "ALL") || (item.kategori === fKat)));
+
+      return semua.filter(item => {
+        const mapelItem = item.mapel || "Umum / Tematik";
+        const cocokKelas = (fKelas === "ALL") || (String(item.kelas) === fKelas);
+        const cocokMapel = (fMapel === "ALL") || (mapelItem === fMapel);
+        let cocokKat = true;
+        if (fKat === "HANYA_BAB") {
+          cocokKat = !["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(item.kategori);
+        } else if (fKat !== "ALL") {
+          cocokKat = (item.kategori === fKat);
+        }
+        return cocokKelas && cocokMapel && cocokKat;
+      });
     }
 
     function renderTabelNilai() {
       const data = getDataTersaring();
       const wadah = document.getElementById("wadahTabelNilai");
-      if (data.length === 0) { wadah.innerHTML = `<p style="margin-top:14px; color:#64748b; font-size:0.88rem;">Belum ada data nilai untuk filter yang dipilih.</p>`; return; }
-      let rows = data.map((d, i) => `<tr><td>${i + 1}</td><td><strong>${d.nama}</strong><br><span style="font-size:0.72rem; color:#64748b;">${d.tanggal}</span></td><td>Kls ${d.kelas}</td><td>${d.kategori}</td><td>${d.benar}</td><td><strong style="color:#0284c7;">${d.nilai}</strong></td></tr>`).join("");
-      wadah.innerHTML = `<div class="table-wrap"><table><thead><tr><th>No</th><th>Nama Siswa</th><th>Kelas</th><th>Ujian</th><th>Benar</th><th>Nilai</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+      const infoBox = document.getElementById("infoRingkasanFilter");
+      const fKelas = document.getElementById("filterKelas").value;
+      const fMapel = document.getElementById("filterMapel").value;
+      const fKat = document.getElementById("filterKategori").value;
+
+      infoBox.textContent = `Menampilkan ${data.length} data • Kelas: ${fKelas === 'ALL' ? 'Semua' : 'Kelas ' + fKelas} • Mapel: ${fMapel === 'ALL' ? 'Semua' : fMapel} • Ujian: ${fKat === 'ALL' ? 'Semua' : (fKat === 'HANYA_BAB' ? 'Ujian Bab' : fKat)}`;
+
+      if (data.length === 0) {
+        wadah.innerHTML = `<p style="margin-top:14px; color:#64748b; font-size:0.88rem;">Tidak ada data nilai yang cocok dengan kombinasi filter di atas.</p>`;
+        return;
+      }
+
+      let rows = data.map((d, i) => `
+        <tr>
+          <td>${i + 1}</td>
+          <td><strong>${d.nama}</strong><br><span style="font-size:0.72rem; color:#64748b;">${d.tanggal}</span></td>
+          <td>Kls ${d.kelas}</td>
+          <td>${d.mapel || 'Umum / Tematik'}</td>
+          <td>${d.kategori}</td>
+          <td>${d.benar}</td>
+          <td><strong style="color:#0284c7;">${d.nilai}</strong></td>
+        </tr>`).join("");
+
+      wadah.innerHTML = `
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>No</th><th>Nama Siswa</th><th>Kelas</th><th>Mata Pelajaran</th><th>Materi / Jenis</th><th>Benar</th><th>Nilai</th></tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
+    }
+
+        function downloadExcelTerfilter() {
+      const data = getDataTersaring();
+      if (data.length === 0) { alert("Tidak ada data pada filter yang dipilih untuk diunduh!"); return; }
+
+      const fKelas = document.getElementById("filterKelas").value;
+      const fMapel = document.getElementById("filterMapel").value;
+      const fKat = document.getElementById("filterKategori").value;
+
+      let csvContent = "No,Tanggal,Nama Siswa,Kelas,Mata Pelajaran,Materi / Jenis Ujian,Jawaban Benar,Nilai Akhir\n";
+      data.forEach((d, idx) => {
+        const namaAman = `"${String(d.nama).replace(/"/g, '""')}"`;
+        const tglAman = `"${String(d.tanggal).replace(/"/g, '""')}"`;
+        const mapelAman = `"${String(d.mapel || 'Umum / Tematik').replace(/"/g, '""')}"`;
+        const katAman = `"${String(d.kategori).replace(/"/g, '""')}"`;
+        const benarAman = `"${String(d.benar)}"`;
+        csvContent += `${idx + 1},${tglAman},${namaAman},Kelas ${d.kelas},${mapelAman},${katAman},${benarAman},${d.nilai}\n`;
+      });
+
+      const blob = new Blob(["\uFEFF" + csvContent], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      const labelKelas = fKelas === "ALL" ? "SemuaKelas" : `Kelas${fKelas}`;
+      const labelMapel = fMapel === "ALL" ? "SemuaMapel" : fMapel.replace(/[^a-zA-Z0-9]/g, "_");
+      const labelKat = fKat === "ALL" ? "SemuaUjian" : fKat.replace(/[^a-zA-Z0-9]/g, "_");
+
+      link.setAttribute("href", url);
+      link.setAttribute("download", `Rekap_Nilai_${labelKelas}_${labelMapel}_${labelKat}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
     }
 
     function hapusDataHasilFilter() {
