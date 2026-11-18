@@ -12,14 +12,24 @@
     header { width: 100%; background: linear-gradient(90deg, #0284c7, #0ea5e9); padding: 12px 14px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.12); border-bottom: 4px solid #facc15; position: sticky; top: 0; z-index: 20; color: #fff; }
     header h1 { font-size: 1.22rem; letter-spacing: 0.5px; text-shadow: 1px 2px 0 rgba(0,0,0,0.2); }
     header p { font-size: 0.76rem; opacity: 0.95; margin-top: 2px; }
-    .container { width: 100%; max-width: 560px; margin: 12px auto; padding: 0 12px; }
+    .container { width: 100%; max-width: 600px; margin: 12px auto; padding: 0 12px; }
     .card { width: 100%; background: #ffffff; border-radius: 22px; padding: 16px 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); border: 3px solid #e2e8f0; margin-bottom: 12px; text-align: center; animation: popIn 0.25s ease; }
     @keyframes popIn { 0% { transform: scale(0.95); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
     @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
     .anim-bounce { display: inline-block; animation: bounce 1.8s infinite; }
-    .input-nama { width: 100%; padding: 12px 14px; border-radius: 16px; border: 3px solid #7dd3fc; font-size: 1.05rem; font-weight: 600; text-align: center; color: #0f172a; outline: none; margin: 10px 0 6px; background: #f0f9ff; user-select: text; }
-    .input-nama:focus { border-color: #0284c7; background: #ffffff; }
-    .kelas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+    .input-nama, .input-form, .textarea-kode { width: 100%; padding: 11px 13px; border-radius: 14px; border: 2px solid #7dd3fc; font-size: 0.96rem; font-weight: 600; color: #0f172a; outline: none; margin: 6px 0; background: #f0f9ff; user-select: text; }
+    .input-nama { text-align: center; font-size: 1.05rem; border-width: 3px; }
+    .input-nama:focus, .input-form:focus, .textarea-kode:focus { border-color: #0284c7; background: #ffffff; }
+    .textarea-kode { font-family: monospace; font-size: 0.82rem; min-height: 150px; background: #0f172a; color: #38bdf8; border-color: #334155; }
+    .label-form { display: block; text-align: left; font-size: 0.84rem; font-weight: 700; color: #334155; margin-top: 8px; }
+    .mode-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px; }
+    .mode-btn { border: none; border-radius: 20px; padding: 20px 16px; color: #fff; font-size: 1.2rem; font-weight: 700; cursor: pointer; box-shadow: 0 6px 0 rgba(0,0,0,0.18); display: flex; align-items: center; justify-content: space-between; text-align: left; }
+    .mode-btn:active { transform: translateY(3px); box-shadow: none; }
+    .mode-kuis { background: linear-gradient(135deg, #0ea5e9, #2563eb); }
+    .mode-ujian { background: linear-gradient(135deg, #f59e0b, #ea580c); }
+    .mode-admin { background: linear-gradient(135deg, #334155, #0f172a); padding: 14px 16px; font-size: 1rem; margin-top: 6px; }
+
+        .kelas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
     .kelas-btn { border: none; border-radius: 18px; padding: 16px 10px; color: #fff; font-size: 1.12rem; font-weight: 700; cursor: pointer; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; display: flex; flex-direction: column; align-items: center; gap: 4px; }
     .kelas-btn:active { transform: translateY(3px); box-shadow: none; }
     .kelas-sub { font-size: 0.74rem; font-weight: 600; background: rgba(255,255,255,0.25); padding: 2px 8px; border-radius: 8px; }
@@ -29,8 +39,7 @@
     .k4 { background: linear-gradient(135deg, #10b981, #34d399); }
     .k5 { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
     .k6 { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
-
-        .menu-btn { width: 100%; border: none; border-radius: 18px; padding: 14px 15px; margin-bottom: 10px; color: #fff; font-size: 1.02rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; text-align: left; }
+    .menu-btn { width: 100%; border: none; border-radius: 18px; padding: 14px 15px; margin-bottom: 10px; color: #fff; font-size: 1.02rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; text-align: left; }
     .menu-btn:active { transform: translateY(3px); box-shadow: none; }
     .badge-jumlah { background: rgba(255,255,255,0.28); padding: 4px 10px; border-radius: 10px; font-size: 0.76rem; white-space: nowrap; flex-shrink: 0; }
     .m-pancasila { background: linear-gradient(135deg, #e11d48, #fb7185); }
@@ -46,7 +55,7 @@
     .progress-wrap { background: #e2e8f0; height: 9px; border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
     .progress-fill { background: linear-gradient(90deg, #38bdf8, #22c55e); height: 100%; width: 0%; transition: width 0.3s ease; }
     .btn-suara { background: #fef08a; color: #854d0e; border: 2px solid #facc15; padding: 8px 15px; border-radius: 50px; font-size: 0.88rem; font-weight: 700; cursor: pointer; margin: 6px 0 10px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 3px 0 #eab308; touch-action: manipulation; }
-    .visual-box { width: 100%; background: #f8fafc; border: 2px dashed #7dd3fc; border-radius: 18px; padding: 14px 10px; margin: 6px 0 12px; font-size: 1.2rem; font-weight: 700; line-height: 1.45; color: #0f172a; }
+    .visual-box { width: 100%; background: #f8fafc; border: 2px dashed #7dd3fc; border-radius: 18px; padding: 14px 10px; margin: 6px 0 12px; font-size: 1.15rem; font-weight: 700; line-height: 1.45; color: #0f172a; }
     .visual-ikon { font-size: 2.5rem; display: block; margin-bottom: 6px; }
     .opsi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 8px; width: 100%; }
     .opsi-btn { width: 100%; background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 12px 8px; font-size: 1rem; font-weight: 700; color: #1e293b; cursor: pointer; box-shadow: 0 4px 0 #cbd5e1; touch-action: manipulation; min-height: 56px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.25; }
@@ -57,34 +66,45 @@
     .combo-badge { display: inline-block; background: #ffedd5; color: #c2410c; border: 2px solid #fdba74; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; }
     .info-bahas { background: #eff6ff; border: 2px solid #93c5fd; color: #1e40af; border-radius: 14px; padding: 10px; margin-top: 10px; font-size: 0.88rem; font-weight: 600; text-align: left; }
     .sertifikat { background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 4px solid #f59e0b; border-radius: 22px; padding: 18px 14px; margin: 10px 0; }
-    .btn-aksi { background: linear-gradient(135deg, #0ea5e9, #0284c7); color: #fff; border: none; padding: 13px 22px; border-radius: 16px; font-size: 1.02rem; font-weight: 700; cursor: pointer; margin-top: 10px; box-shadow: 0 4px 0 #0369a1; touch-action: manipulation; }
-    @media (min-width: 600px) {
-      header h1 { font-size: 1.48rem; }
-      .kelas-grid { grid-template-columns: 1fr 1fr 1fr; }
-      .opsi-btn { font-size: 1.12rem; min-height: 62px; }
-    }
+    .btn-aksi { background: linear-gradient(135deg, #0ea5e9, #0284c7); color: #fff; border: none; padding: 12px 18px; border-radius: 14px; font-size: 0.96rem; font-weight: 700; cursor: pointer; margin-top: 8px; box-shadow: 0 4px 0 #0369a1; touch-action: manipulation; }
+    .btn-sukses { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 0 #047857; }
+    .btn-bahaya { background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 4px 0 #b91c1c; }
+    .table-wrap { width: 100%; overflow-x: auto; margin-top: 10px; border-radius: 12px; border: 2px solid #cbd5e1; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; text-align: left; background: #fff; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid #e2e8f0; }
+    th { background: #0284c7; color: #fff; font-weight: 700; }
+    tr:nth-child(even) { background: #f8fafc; }
+    @media (min-width: 600px) { header h1 { font-size: 1.48rem; } .kelas-grid { grid-template-columns: 1fr 1fr 1fr; } .opsi-btn { font-size: 1.12rem; min-height: 62px; } }
+    @media print { body { background: #fff !important; } header, .no-print { display: none !important; } .container { max-width: 100%; margin: 0; padding: 0; } .card { border: none; box-shadow: none; } }
   </style>
 </head>
-<body>
+
+  <body>
   <header>
     <h1>🏫 DUNIA SDN SEDDUR 1</h1>
     <p>Kurikulum Merdeka • Tahun Ajaran 2026/2027</p>
   </header>
   <div class="container" id="app"></div>
-
-  <script>window.DATA_SEDDUR = {};</script>
+  <script>
+    window.DATA_SEDDUR = {};
+    window.DATA_UJIAN = {};
+  </script>
   <script src="kelas1.js"></script>
   <script src="kelas2.js"></script>
   <script src="kelas3.js"></script>
   <script src="kelas4.js"></script>
   <script src="kelas5.js"></script>
   <script src="kelas6.js"></script>
+  <script src="ujian1.js"></script>
+  <script src="ujian2.js"></script>
+  <script src="ujian3.js"></script>
+  <script src="ujian4.js"></script>
+  <script src="ujian5.js"></script>
+  <script src="ujian6.js"></script>
   <script>
-
-        let audioCtx = null;
+    let audioCtx = null;
     let audioCadangan = new Audio();
     audioCadangan.preload = "auto";
-
     function bukaKunciAudio() {
       if (!audioCtx) {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -92,16 +112,13 @@
       }
       if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
     }
-
     function mainkanEfek(jenis) {
       bukaKunciAudio();
       if (!audioCtx) return;
       const now = audioCtx.currentTime;
       const osc = audioCtx.createOscillator();
       const gain = audioCtx.createGain();
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-
+      osc.connect(gain); gain.connect(audioCtx.destination);
       if (jenis === 'benar') {
         osc.type = 'triangle';
         osc.frequency.setValueAtTime(523.25, now);
@@ -126,7 +143,6 @@
         osc.start(now); osc.stop(now + 0.08);
       }
     }
-
     function ucapkan(teks) {
       bukaKunciAudio();
       if (!teks) return;
@@ -136,9 +152,7 @@
         try {
           window.speechSynthesis.cancel();
           const daftarSuara = window.speechSynthesis.getVoices();
-          const suaraIndo =
-            daftarSuara.find(v => v.lang.toLowerCase().includes('id') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Gadis'))) ||
-            daftarSuara.find(v => v.lang.toLowerCase().includes('id'));
+          const suaraIndo = daftarSuara.find(v => v.lang.toLowerCase().includes('id') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Gadis'))) || daftarSuara.find(v => v.lang.toLowerCase().includes('id'));
           if (!isMobile || suaraIndo) {
             const u = new SpeechSynthesisUtterance(teks);
             u.lang = "id-ID";
@@ -152,15 +166,13 @@
       }
       putarSuaraOnline(teks);
     }
-
     function putarSuaraOnline(teks) {
       try {
         const bersih = teks.replace(/[^\w\s.,?!-]/gi, '').slice(0, 180);
-        audioCadangan.src = `https://googleapis.com{encodeURIComponent(bersih)}`;
+        audioCadangan.src = `https://google.com{encodeURIComponent(bersih)}`;
         audioCadangan.play().catch(() => {});
       } catch (e) {}
     }
-
     function acakArray(arr) {
       const salinan = [...arr];
       for (let i = salinan.length - 1; i > 0; i--) {
@@ -170,10 +182,12 @@
       return salinan;
     }
 
+        let modeAplikasi = "kuis";
     let namaSiswa = "Siswa Hebat";
     let kelasAktif = 1;
     let mapelAktif = "";
     let babAktif = 0;
+    let kategoriUjianAktif = "";
     let soalPermainan = [];
     let indeksSoal = 0;
     let skorTotal = 0;
@@ -189,12 +203,30 @@
       bing: { judul: "Bahasa Inggris", ikon: "🔤", kelasCss: "m-bing" }
     };
 
-    function simpanNamaDanPilihKelas(kls) {
-      const inputEl = document.getElementById("inputNamaSiswa");
-      if (inputEl && inputEl.value.trim() !== "") namaSiswa = inputEl.value.trim();
-      mainkanEfek('klik');
-      kelasAktif = kls;
-      tampilMenuMapel();
+    const daftarKategoriUjian = [
+      { kode: "latihan_bab", judul: "Latihan Bab", ikon: "📝", warna: "m-ipas" },
+      { kode: "uts_1", judul: "UTS Semester 1", ikon: "📘", warna: "m-bindo" },
+      { kode: "uas_1", judul: "UAS Semester 1", ikon: "📙", warna: "m-pancasila" },
+      { kode: "uts_2", judul: "UTS Semester 2", ikon: "📗", warna: "m-mtk" },
+      { kode: "uas_2", judul: "UAS Semester 2", ikon: "📕", warna: "m-bing" }
+    ];
+
+    function getKodeUjianKelas(kls) {
+      const data = JSON.parse(localStorage.getItem("seddur_kode_ujian") || "{}");
+      return data[kls] || "";
+    }
+    function setKodeUjianKelas(kls, kode) {
+      const data = JSON.parse(localStorage.getItem("seddur_kode_ujian") || "{}");
+      data[kls] = kode.trim().toUpperCase();
+      localStorage.setItem("seddur_kode_ujian", JSON.stringify(data));
+    }
+    function getPasswordAdmin() {
+      return localStorage.getItem("seddur_admin_pass") || "admin123";
+    }
+    function simpanRekapNilai(record) {
+      const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
+      list.push(record);
+      localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
     }
 
     function tampilBeranda() {
@@ -202,134 +234,187 @@
       document.getElementById("app").innerHTML = `
         <div class="card">
           <div style="font-size:2.8rem; margin-bottom:4px;" class="anim-bounce">🏫🎓🌟</div>
-          <h2 style="color:#0284c7; font-size:1.22rem;">Selamat Datang di Dunia SDN Seddur 1!</h2>
-          <p style="color:#64748b; font-size:0.86rem; margin-top:2px;">Materi Per Bab • Tahun Ajaran 2026/2027</p>
-          <input type="text" id="inputNamaSiswa" class="input-nama" placeholder="Ketik Nama Siswa di sini..." value="${namaSiswa === 'Siswa Hebat' ? '' : namaSiswa}" maxlength="25" />
+          <h2 style="color:#0284c7; font-size:1.25rem;">Selamat Datang di Dunia SDN Seddur 1!</h2>
+          <p style="color:#64748b; font-size:0.86rem; margin-top:4px;">Silakan pilih menu belajar atau evaluasi di bawah ini</p>
         </div>
-        <div class="kelas-grid">
-          <button class="kelas-btn k1" onclick="simpanNamaDanPilihKelas(1)"><span>🎈 Kelas 1</span><span class="kelas-sub">Fase A</span></button>
-          <button class="kelas-btn k2" onclick="simpanNamaDanPilihKelas(2)"><span>🚀 Kelas 2</span><span class="kelas-sub">Fase A</span></button>
-          <button class="kelas-btn k3" onclick="simpanNamaDanPilihKelas(3)"><span>🌟 Kelas 3</span><span class="kelas-sub">Fase B</span></button>
-          <button class="kelas-btn k4" onclick="simpanNamaDanPilihKelas(4)"><span>🧭 Kelas 4</span><span class="kelas-sub">Fase B</span></button>
-          <button class="kelas-btn k5" onclick="simpanNamaDanPilihKelas(5)"><span>⚡ Kelas 5</span><span class="kelas-sub">Fase C</span></button>
-          <button class="kelas-btn k6" onclick="simpanNamaDanPilihKelas(6)"><span>🏆 Kelas 6</span><span class="kelas-sub">Fase C</span></button>
+        <div class="mode-grid">
+          <button class="mode-btn mode-kuis" onclick="bukaMenuKelasKuis()">
+            <div>
+              <div>🎮 MENU KUIS</div>
+              <div style="font-size:0.78rem; font-weight:400; opacity:0.9;">Latihan interaktif Kelas 1 - 6</div>
+            </div>
+            <span style="font-size:1.6rem;">▶️</span>
+          </button>
+          <button class="mode-btn mode-ujian" onclick="bukaMenuKelasUjian()">
+            <div>
+              <div>📝 MENU UJIAN</div>
+              <div style="font-size:0.78rem; font-weight:400; opacity:0.9;">Latihan Bab, UTS & UAS (Pakai Kode)</div>
+            </div>
+            <span style="font-size:1.6rem;">🔐</span>
+          </button>
+          <button class="mode-btn mode-admin" onclick="tampilLoginAdmin()">
+            <div>
+              <div>⚙️ MENU ADMIN</div>
+              <div style="font-size:0.75rem; font-weight:400; opacity:0.8;">Kode Ujian, Generator AI & Rekap Nilai</div>
+            </div>
+            <span>🔑</span>
+          </button>
         </div>`;
     }
 
+        function bukaMenuKelasKuis() {
+      mainkanEfek('klik');
+      modeAplikasi = "kuis";
+      namaSiswa = "Siswa Hebat";
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar">
+          <button class="bg-kembali" onclick="tampilBeranda()">⬅️ Menu Awal</button>
+          <div class="star-bar">🎮 Mode Kuis</div>
+        </div>
+        <div class="card">
+          <h2 style="color:#0284c7; font-size:1.2rem;">Pilih Kelas (Menu Kuis)</h2>
+          <p style="color:#64748b; font-size:0.84rem;">Materi Per Bab • Tahun Ajaran 2026/2027</p>
+        </div>
+        <div class="kelas-grid">
+          <button class="kelas-btn k1" onclick="pilihKelasKuis(1)"><span>🎈 Kelas 1</span><span class="kelas-sub">Fase A</span></button>
+          <button class="kelas-btn k2" onclick="pilihKelasKuis(2)"><span>🚀 Kelas 2</span><span class="kelas-sub">Fase A</span></button>
+          <button class="kelas-btn k3" onclick="pilihKelasKuis(3)"><span>🌟 Kelas 3</span><span class="kelas-sub">Fase B</span></button>
+          <button class="kelas-btn k4" onclick="pilihKelasKuis(4)"><span>🧭 Kelas 4</span><span class="kelas-sub">Fase B</span></button>
+          <button class="kelas-btn k5" onclick="pilihKelasKuis(5)"><span>⚡ Kelas 5</span><span class="kelas-sub">Fase C</span></button>
+          <button class="kelas-btn k6" onclick="pilihKelasKuis(6)"><span>🏆 Kelas 6</span><span class="kelas-sub">Fase C</span></button>
+        </div>`;
+    }
+
+    function pilihKelasKuis(kls) { mainkanEfek('klik'); kelasAktif = kls; tampilMenuMapel(); }
+
     function tampilMenuMapel() {
       const dataKelas = window.DATA_SEDDUR[kelasAktif];
-      if (!dataKelas) {
-        alert(`File materi kelas${kelasAktif}.js belum ditemukan di folder yang sama!`);
-        return;
-      }
+      if (!dataKelas) { alert(`File materi kelas${kelasAktif}.js belum ditemukan di folder yang sama!`); return; }
       const kodeMapelTersedia = Object.keys(dataKelas);
-      ucapkan(`Halo ${namaSiswa}, pilih mata pelajaran Kelas ${kelasAktif}!`);
-
+      ucapkan(`Pilih mata pelajaran Kelas ${kelasAktif}!`);
       let tombolMapelHTML = kodeMapelTersedia.map(kode => {
         const info = daftarNamaMapel[kode];
         const jmlBab = dataKelas[kode].length;
-        return `
-          <button class="menu-btn ${info.kelasCss}" onclick="tampilMenuBab('${kode}')">
-            <span>${info.ikon} ${info.judul}</span>
-            <span class="badge-jumlah">${jmlBab} Bab ▶️</span>
-          </button>`;
+        return `<button class="menu-btn ${info.kelasCss}" onclick="tampilMenuBab('${kode}')"><span>${info.ikon} ${info.judul}</span><span class="badge-jumlah">${jmlBab} Bab ▶️</span></button>`;
       }).join("");
-
       document.getElementById("app").innerHTML = `
-        <div class="top-bar">
-          <button class="bg-kembali" onclick="tampilBeranda()">⬅️ Ganti Kelas</button>
-          <div class="star-bar">👤 ${namaSiswa} • Kelas ${kelasAktif}</div>
-        </div>
-        <div class="card">
-          <h2 style="color:#0284c7; font-size:1.22rem; margin-bottom:4px;">Mata Pelajaran Kelas ${kelasAktif}</h2>
-          <p style="color:#64748b; font-size:0.85rem;">Pilih mata pelajaran untuk melihat daftar Bab</p>
-        </div>
+        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasKuis()">⬅️ Ganti Kelas</button><div class="star-bar">🎮 Kuis • Kelas ${kelasAktif}</div></div>
+        <div class="card"><h2 style="color:#0284c7; font-size:1.22rem; margin-bottom:4px;">Mata Pelajaran Kelas ${kelasAktif}</h2><p style="color:#64748b; font-size:0.85rem;">Pilih mata pelajaran untuk melihat daftar Bab</p></div>
         ${tombolMapelHTML}`;
     }
 
-        function tampilMenuBab(kodeMapel) {
-      mainkanEfek('klik');
-      mapelAktif = kodeMapel;
+    function tampilMenuBab(kodeMapel) {
+      mainkanEfek('klik'); mapelAktif = kodeMapel;
       const daftarBab = window.DATA_SEDDUR[kelasAktif][kodeMapel];
       const infoMapel = daftarNamaMapel[kodeMapel];
-
       ucapkan(`Pilih Bab pada pelajaran ${infoMapel.judul}`);
-
       let tombolBabHTML = daftarBab.map((babObj, idx) => `
         <button class="menu-btn bab-btn" onclick="mulaiBab(${idx})">
-          <div>
-            <div style="font-size:0.75rem; color:#0284c7;">${babObj.semester}</div>
-            <div>${babObj.bab}</div>
-          </div>
+          <div><div style="font-size:0.75rem; color:#0284c7;">${babObj.semester}</div><div>${babObj.bab}</div></div>
           <span class="bab-badge">${babObj.soal.length} Soal ▶️</span>
         </button>`).join("");
-
       document.getElementById("app").innerHTML = `
-        <div class="top-bar">
-          <button class="bg-kembali" onclick="tampilMenuMapel()">⬅️ Mapel</button>
-          <div class="star-bar">Kelas ${kelasAktif} • ${infoMapel.judul}</div>
-        </div>
-        <div class="card">
-          <div style="font-size:2.4rem; margin-bottom:4px;">${infoMapel.ikon}</div>
-          <h2 style="color:#0284c7; font-size:1.18rem;">Daftar Bab ${infoMapel.judul}</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Kurikulum Merdeka Tahun Ajaran 2026/2027</p>
-        </div>
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilMenuMapel()">⬅️ Mapel</button><div class="star-bar">Kelas ${kelasAktif} • ${infoMapel.judul}</div></div>
+        <div class="card"><div style="font-size:2.4rem; margin-bottom:4px;">${infoMapel.ikon}</div><h2 style="color:#0284c7; font-size:1.18rem;">Daftar Bab ${infoMapel.judul}</h2><p style="color:#64748b; font-size:0.84rem;">Kurikulum Merdeka Tahun Ajaran 2026/2027</p></div>
         ${tombolBabHTML}`;
     }
 
     function mulaiBab(idxBab) {
-      mainkanEfek('klik');
-      babAktif = idxBab;
+      mainkanEfek('klik'); modeAplikasi = "kuis"; babAktif = idxBab;
       const babObj = window.DATA_SEDDUR[kelasAktif][mapelAktif][idxBab];
-
       soalPermainan = acakArray(babObj.soal).map(item => {
         const jawabanBenar = item.opsi[item.kunci];
         const opsiAcak = acakArray(item.opsi);
-        return {
-          ikon: item.ikon,
-          tanya: item.tanya,
-          opsi: opsiAcak,
-          kunci: opsiAcak.indexOf(jawabanBenar),
-          bahas: item.bahas
-        };
+        return { ikon: item.ikon, tanya: item.tanya, opsi: opsiAcak, kunci: opsiAcak.indexOf(jawabanBenar), bahas: item.bahas };
       });
-
       indeksSoal = 0; skorTotal = 0; jumlahBenar = 0; comboBenar = 0;
       tampilPertanyaan();
     }
 
-    function tampilPertanyaan() {
-      if (indeksSoal >= soalPermainan.length) {
-        tampilSertifikat();
-        return;
-      }
+        function bukaMenuKelasUjian() {
+      mainkanEfek('klik'); modeAplikasi = "ujian";
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Menu Awal</button><div class="star-bar">📝 Mode Ujian</div></div>
+        <div class="card"><h2 style="color:#ea580c; font-size:1.2rem;">Pilih Kelas Ujian</h2><p style="color:#64748b; font-size:0.84rem;">Memerlukan Kode Akses Ujian dari Guru / Admin</p></div>
+        <div class="kelas-grid">
+          <button class="kelas-btn k1" onclick="tampilGerbangKodeUjian(1)"><span>🎈 Kelas 1</span><span class="kelas-sub">Ujian Fase A</span></button>
+          <button class="kelas-btn k2" onclick="tampilGerbangKodeUjian(2)"><span>🚀 Kelas 2</span><span class="kelas-sub">Ujian Fase A</span></button>
+          <button class="kelas-btn k3" onclick="tampilGerbangKodeUjian(3)"><span>🌟 Kelas 3</span><span class="kelas-sub">Ujian Fase B</span></button>
+          <button class="kelas-btn k4" onclick="tampilGerbangKodeUjian(4)"><span>🧭 Kelas 4</span><span class="kelas-sub">Ujian Fase B</span></button>
+          <button class="kelas-btn k5" onclick="tampilGerbangKodeUjian(5)"><span>⚡ Kelas 5</span><span class="kelas-sub">Ujian Fase C</span></button>
+          <button class="kelas-btn k6" onclick="tampilGerbangKodeUjian(6)"><span>🏆 Kelas 6</span><span class="kelas-sub">Ujian Fase C</span></button>
+        </div>`;
+    }
 
+    function tampilGerbangKodeUjian(kls) {
+      mainkanEfek('klik'); kelasAktif = kls;
+      const kodeTerdaftar = getKodeUjianKelas(kls);
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasUjian()">⬅️ Pilih Kelas</button><div class="star-bar">🔐 Ujian Kelas ${kls}</div></div>
+        <div class="card">
+          <div style="font-size:2.5rem;">🔐</div>
+          <h2 style="color:#0284c7; font-size:1.2rem; margin-top:4px;">Verifikasi Peserta Ujian Kelas ${kls}</h2>
+          <p style="color:#64748b; font-size:0.84rem; margin-bottom:10px;">Masukkan Nama Lengkap dan Kode Ujian dari Guru</p>
+          ${!kodeTerdaftar ? `<div style="background:#fee2e2; color:#b91c1c; padding:10px; border-radius:12px; font-size:0.84rem; font-weight:700; margin-bottom:10px;">⚠️ Kode Ujian Kelas ${kls} belum dibuat oleh Admin. Silakan hubungi Guru/Admin terlebih dahulu.</div>` : ''}
+          <input type="text" id="inputNamaUjian" class="input-nama" placeholder="Ketik Nama Lengkap Siswa..." maxlength="30" />
+          <input type="text" id="inputKodeUjian" class="input-nama" placeholder="Ketik Kode Ujian Kelas ${kls}..." style="text-transform:uppercase; border-color:#f59e0b; background:#fffbeb;" maxlength="15" />
+          <button class="btn-aksi" style="width:100%; margin-top:10px;" onclick="verifikasiMasukUjian()">Masuk Ruang Ujian ➡️</button>
+        </div>`;
+    }
+
+    function verifikasiMasukUjian() {
+      const namaInput = document.getElementById("inputNamaUjian").value.trim();
+      const kodeInput = document.getElementById("inputKodeUjian").value.trim().toUpperCase();
+      const kodeSah = getKodeUjianKelas(kelasAktif);
+      if (!kodeSah) { alert(`Kode ujian untuk Kelas ${kelasAktif} belum diatur di Menu Admin!`); return; }
+      if (!namaInput) { alert("Silakan isi Nama Lengkap Siswa terlebih dahulu!"); return; }
+      if (kodeInput !== kodeSah) { mainkanEfek('salah'); alert("Kode Ujian salah! Silakan periksa kembali kode dari guru."); return; }
+      mainkanEfek('benar'); namaSiswa = namaInput; tampilKategoriUjian();
+    }
+
+    function tampilKategoriUjian() {
+      const dataUjianKelas = window.DATA_UJIAN[kelasAktif];
+      if (!dataUjianKelas) { alert(`File wadah ujian${kelasAktif}.js belum ditemukan atau belum diisi!`); return; }
+      let tombolKategori = daftarKategoriUjian.map(kat => {
+        const daftarSoal = dataUjianKelas[kat.kode] || [];
+        return `<button class="menu-btn ${kat.warna}" onclick="mulaiUjianKategori('${kat.kode}', '${kat.judul}')"><span>${kat.ikon} ${kat.judul}</span><span class="badge-jumlah">${daftarSoal.length} Soal ▶️</span></button>`;
+      }).join("");
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasUjian()">⬅️ Keluar Ujian</button><div class="star-bar">👤 ${namaSiswa} • Kelas ${kelasAktif}</div></div>
+        <div class="card"><h2 style="color:#ea580c; font-size:1.2rem;">Pilih Jenis Ujian Kelas ${kelasAktif}</h2><p style="color:#64748b; font-size:0.84rem;">Pilih paket ujian yang diinstruksikan oleh guru</p></div>
+        ${tombolKategori}`;
+    }
+
+    function mulaiUjianKategori(kodeKat, judulKat) {
+      const dataUjianKelas = window.DATA_UJIAN[kelasAktif] || {};
+      const daftarSoal = dataUjianKelas[kodeKat] || [];
+      if (daftarSoal.length === 0) { alert(`Belum ada soal di paket "${judulKat}" pada file ujian${kelasAktif}.js!`); return; }
+      mainkanEfek('klik'); modeAplikasi = "ujian"; kategoriUjianAktif = judulKat;
+      soalPermainan = acakArray(daftarSoal).map(item => {
+        const jawabanBenar = item.opsi[item.kunci];
+        const opsiAcak = acakArray(item.opsi);
+        return { ikon: item.ikon || "📝", tanya: item.tanya, opsi: opsiAcak, kunci: opsiAcak.indexOf(jawabanBenar), bahas: item.bahas || "Perhatikan kembali materi pelajaran terkait." };
+      });
+      indeksSoal = 0; skorTotal = 0; jumlahBenar = 0; comboBenar = 0;
+      tampilPertanyaan();
+    }
+
+        function tampilPertanyaan() {
+      if (indeksSoal >= soalPermainan.length) { tampilSertifikat(); return; }
       sudahMenjawab = false;
       const s = soalPermainan[indeksSoal];
-      const babObj = window.DATA_SEDDUR[kelasAktif][mapelAktif][babAktif];
       const persen = Math.round((indeksSoal / soalPermainan.length) * 100);
-
+      let judulHeaderSoal = modeAplikasi === "kuis" ? `Kelas ${kelasAktif} • ${window.DATA_SEDDUR[kelasAktif][mapelAktif][babAktif].bab}` : `Ujian Kelas ${kelasAktif} • ${kategoriUjianAktif}`;
+      let tombolKembali = modeAplikasi === "kuis" ? `tampilMenuBab('${mapelAktif}')` : `tampilKategoriUjian()`;
       if (kelasAktif <= 3) ucapkan(s.tanya);
-
-      let opsiHTML = s.opsi.map((teks, idx) =>
-        `<button class="opsi-btn" id="pilihan-${idx}" onclick="periksaJawaban(${idx})">${teks}</button>`
-      ).join("");
-
+      let opsiHTML = s.opsi.map((teks, idx) => `<button class="opsi-btn" id="pilihan-${idx}" onclick="periksaJawaban(${idx})">${teks}</button>`).join("");
       document.getElementById("app").innerHTML = `
-        <div class="top-bar">
-          <button class="bg-kembali" onclick="tampilMenuBab('${mapelAktif}')">⬅️ Bab</button>
-          <div class="star-bar">⭐ ${skorTotal} | ${indeksSoal + 1}/${soalPermainan.length}</div>
-        </div>
+        <div class="top-bar"><button class="bg-kembali" onclick="${tombolKembali}">⬅️ Batal</button><div class="star-bar">⭐ ${skorTotal} | ${indeksSoal + 1}/${soalPermainan.length}</div></div>
         <div class="progress-wrap"><div class="progress-fill" style="width:${persen}%"></div></div>
         <div class="card">
-          <div style="font-size:0.8rem; font-weight:700; color:#0284c7; margin-bottom:4px;">
-            Kelas ${kelasAktif} • ${babObj.bab}
-          </div>
+          <div style="font-size:0.8rem; font-weight:700; color:#0284c7; margin-bottom:4px;">${judulHeaderSoal}</div>
           ${comboBenar >= 2 ? `<div class="combo-badge">🔥 Combo Benar ${comboBenar}x! (+Bonus)</div>` : ''}
-          <div class="visual-box">
-            <span class="visual-ikon anim-bounce">${s.ikon}</span>
-            ${s.tanya}
-          </div>
+          <div class="visual-box"><span class="visual-ikon anim-bounce">${s.ikon}</span>${s.tanya}</div>
           <button class="btn-suara" onclick="ucapkan('${s.tanya.replace(/'/g, "")}')">🔊 Dengarkan Soal</button>
           <div class="opsi-grid">${opsiHTML}</div>
           <div id="areaPembahasan"></div>
@@ -339,60 +424,44 @@
     function periksaJawaban(pilihan) {
       if (sudahMenjawab) return;
       sudahMenjawab = true;
-
       const s = soalPermainan[indeksSoal];
       const btnPilih = document.getElementById("pilihan-" + pilihan);
       const btnBenar = document.getElementById("pilihan-" + s.kunci);
-
       if (pilihan === s.kunci) {
-        btnPilih.classList.add("benar");
-        jumlahBenar++; comboBenar++;
+        btnPilih.classList.add("benar"); jumlahBenar++; comboBenar++;
         const bonus = comboBenar >= 3 ? 20 : (comboBenar === 2 ? 10 : 0);
-        skorTotal += (100 + bonus);
-        mainkanEfek('benar');
-        ucapkan(`Hebat ${namaSiswa}! Jawabanmu benar!`);
+        skorTotal += (100 + bonus); mainkanEfek('benar'); ucapkan(`Hebat! Jawabanmu benar!`);
         setTimeout(() => { indeksSoal++; tampilPertanyaan(); }, 1250);
       } else {
-        btnPilih.classList.add("salah");
-        btnBenar.classList.add("benar");
-        comboBenar = 0;
-        mainkanEfek('salah');
+        btnPilih.classList.add("salah"); btnBenar.classList.add("benar"); comboBenar = 0; mainkanEfek('salah');
         ucapkan("Kurang tepat, yuk baca pembahasannya!");
-        document.getElementById("areaPembahasan").innerHTML = `
-          <div class="info-bahas">💡 <strong>Pembahasan:</strong> ${s.bahas}</div>
-          <button class="btn-aksi" onclick="lanjutSoalBerikutnya()">Soal Berikutnya ➡️</button>`;
+        document.getElementById("areaPembahasan").innerHTML = `<div class="info-bahas">💡 <strong>Pembahasan:</strong> ${s.bahas}</div><button class="btn-aksi" onclick="lanjutSoalBerikutnya()">Soal Berikutnya ➡️</button>`;
       }
     }
 
-    function lanjutSoalBerikutnya() {
-      mainkanEfek('klik');
-      indeksSoal++;
-      tampilPertanyaan();
-    }
+    function lanjutSoalBerikutnya() { mainkanEfek('klik'); indeksSoal++; tampilPertanyaan(); }
 
     function tampilSertifikat() {
       mainkanEfek('benar');
       const totalSoal = soalPermainan.length;
       const nilaiAkhir = Math.round((jumlahBenar / totalSoal) * 100);
-      const infoMapel = daftarNamaMapel[mapelAktif];
-      const babObj = window.DATA_SEDDUR[kelasAktif][mapelAktif][babAktif];
-
-      let gelar = "Pejuang Tangguh SDN Seddur 1";
-      let ikonGelar = "💪😊";
-      let ucapanSkor = `Semangat terus ${namaSiswa}! Nilai kamu ${nilaiAkhir}. Yuk coba ulangi lagi agar semakin mahir!`;
-
-      if (nilaiAkhir >= 85) {
-        gelar = "Profesor Cilik SDN Seddur 1";
-        ikonGelar = "🏆👑";
-        ucapanSkor = `Luar biasa ${namaSiswa}! Kamu meraih nilai ${nilaiAkhir} dan mendapatkan gelar Profesor Cilik SDN Seddur 1!`;
-      } else if (nilaiAkhir >= 65) {
-        gelar = "Jagoan Hebat SDN Seddur 1";
-        ikonGelar = "🌟🎖️";
-        ucapanSkor = `Mantap sekali ${namaSiswa}! Nilai kamu ${nilaiAkhir}. Sedikit lagi menuju nilai sempurna!`;
+      let labelMateri = "", infoMapelStr = "", tombolUlang = "", tombolLain = "";
+      if (modeAplikasi === "kuis") {
+        const infoMapel = daftarNamaMapel[mapelAktif];
+        const babObj = window.DATA_SEDDUR[kelasAktif][mapelAktif][babAktif];
+        infoMapelStr = `Kelas ${kelasAktif} • ${infoMapel.judul}`; labelMateri = babObj.bab;
+        tombolUlang = `<button class="btn-aksi" onclick="mulaiBab(${babAktif})">🔄 Ulangi Bab Ini (Acak Soal)</button>`;
+        tombolLain = `<button class="bg-kembali" onclick="tampilMenuBab('${mapelAktif}')">📖 Pilih Bab Lain</button> <button class="bg-kembali" onclick="tampilMenuMapel()">📚 Ganti Mapel</button>`;
+      } else {
+        infoMapelStr = `Ujian Kelas ${kelasAktif}`; labelMateri = kategoriUjianAktif;
+        simpanRekapNilai({ id: Date.now(), tanggal: new Date().toLocaleDateString('id-ID', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }), nama: namaSiswa, kelas: kelasAktif, kategori: kategoriUjianAktif, benar: `${jumlahBenar}/${totalSoal}`, nilai: nilaiAkhir });
+        tombolUlang = `<button class="btn-aksi" onclick="tampilKategoriUjian()">📋 Kembali ke Daftar Ujian</button>`;
+        tombolLain = `<button class="bg-kembali" onclick="tampilBeranda()">🏠 Menu Awal</button>`;
       }
-
+      let gelar = "Pejuang Tangguh SDN Seddur 1", ikonGelar = "💪😊", ucapanSkor = `Semangat terus ${namaSiswa}! Nilai kamu ${nilaiAkhir}.`;
+      if (nilaiAkhir >= 85) { gelar = "Profesor Cilik SDN Seddur 1"; ikonGelar = "🏆👑"; ucapanSkor = `Luar biasa ${namaSiswa}! Kamu meraih nilai ${nilaiAkhir} dan mendapatkan gelar Profesor Cilik SDN Seddur 1!`; }
+      else if (nilaiAkhir >= 65) { gelar = "Jagoan Hebat SDN Seddur 1"; ikonGelar = "🌟🎖️"; ucapanSkor = `Mantap sekali ${namaSiswa}! Nilai kamu ${nilaiAkhir}. Sedikit lagi menuju nilai sempurna!`; }
       ucapkan(ucapanSkor);
-
       document.getElementById("app").innerHTML = `
         <div class="card">
           <div class="sertifikat">
@@ -402,17 +471,235 @@
             <p style="font-size:0.95rem; font-weight:700; color:#15803d; margin-bottom:8px;">🏅 ${gelar}</p>
             <div style="background:#ffffff; border-radius:14px; padding:10px; border:2px solid #fde68a; font-size:0.9rem; color:#334155; text-align:left;">
               <div><strong>Sekolah:</strong> SDN Seddur 1</div>
-              <div><strong>Kelas / Mapel:</strong> Kelas ${kelasAktif} • ${infoMapel.judul}</div>
-              <div><strong>Materi:</strong> ${babObj.bab}</div>
+              <div><strong>Kelas / Jenis:</strong> ${infoMapelStr}</div>
+              <div><strong>Materi:</strong> ${labelMateri}</div>
               <div><strong>Jawaban Benar:</strong> ${jumlahBenar} dari ${totalSoal} Soal</div>
               <div style="font-size:1.25rem; font-weight:700; color:#d97706; margin-top:6px; text-align:center;">Nilai Akhir: ${nilaiAkhir} (Skor: ${skorTotal})</div>
             </div>
           </div>
-          <button class="btn-aksi" onclick="mulaiBab(${babAktif})">🔄 Ulangi Bab Ini (Acak Soal)</button>
-          <br><br>
-          <button class="bg-kembali" onclick="tampilMenuBab('${mapelAktif}')">📖 Pilih Bab Lain</button>
-          <button class="bg-kembali" onclick="tampilMenuMapel()">📚 Ganti Mapel</button>
+          ${tombolUlang}<br><br>${tombolLain}
         </div>`;
+    }
+
+        function tampilLoginAdmin() {
+      mainkanEfek('klik');
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Menu Awal</button><div class="star-bar">🔑 Area Admin</div></div>
+        <div class="card">
+          <div style="font-size:2.5rem;">🛡️</div>
+          <h2 style="color:#0f172a; font-size:1.2rem; margin-top:4px;">Login Administrator</h2>
+          <p style="color:#64748b; font-size:0.82rem; margin-bottom:10px;">Masukkan password admin (Default: <strong>admin123</strong>)</p>
+          <input type="password" id="inputPassAdmin" class="input-nama" placeholder="Masukkan Password Admin..." />
+          <button class="btn-aksi" style="width:100%;" onclick="prosesLoginAdmin()">Masuk Dashboard Admin 🔓</button>
+        </div>`;
+    }
+
+    function prosesLoginAdmin() {
+      if (document.getElementById("inputPassAdmin").value === getPasswordAdmin()) {
+        mainkanEfek('benar');
+        tampilDashboardAdmin();
+      } else {
+        mainkanEfek('salah');
+        alert("Password Admin salah!");
+      }
+    }
+
+    function tampilDashboardAdmin() {
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Keluar Admin</button><div class="star-bar">⚙️ Panel Admin</div></div>
+        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Kelola kode ujian, generator kode GitHub, & nilai siswa</p></div>
+        <button class="menu-btn m-bindo" onclick="adminKodeUjian()"><span>1. 🔐 Buat Kode Ujian Per Kelas</span><span>▶️</span></button>
+        <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>2. 🤖 Generator Soal AI (Kode GitHub)</span><span>▶️</span></button>
+        <button class="menu-btn m-mtk" onclick="adminGeneratorBab()"><span>3. 📂 Generator Daftar Bab (Kode GitHub)</span><span>▶️</span></button>
+        <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>4. 📊 Lihat & Filter Rekap Nilai Siswa</span><span>▶️</span></button>
+        <button class="menu-btn m-pancasila" onclick="adminUbahPassword()"><span>5. 🔑 Ubah Password Admin</span><span>▶️</span></button>`;
+    }
+
+    function adminKodeUjian() {
+      let barisKelas =.map(k => `
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; padding:8px 0; border-bottom:1px solid #e2e8f0;">
+          <strong style="min-width:75px; text-align:left;">Kelas ${k}:</strong>
+          <input type="text" id="kode-kls-${k}" class="input-form" style="margin:0; text-transform:uppercase;" placeholder="Belum ada kode" value="${getKodeUjianKelas(k)}" />
+          <button class="btn-aksi" style="margin:0; padding:8px 12px; font-size:0.82rem;" onclick="acakKodeOtomatis(${k})">🎲 Acak</button>
+        </div>`).join("");
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🔐 Kode Ujian</div></div>
+        <div class="card">
+          <h3 style="color:#0284c7; margin-bottom:4px;">Pengaturan Kode Ujian Per Kelas</h3>
+          <p style="font-size:0.82rem; color:#64748b; margin-bottom:10px;">Siswa wajib memasukkan kode ini untuk masuk ke ruang ujian kelasnya.</p>
+          ${barisKelas}
+          <button class="btn-aksi btn-sukses" style="width:100%; margin-top:14px;" onclick="simpanSemuaKodeUjian()">💾 Simpan Semua Kode Ujian</button>
+        </div>`;
+    }
+
+    function acakKodeOtomatis(kls) {
+      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      let hasil = `K${kls}-`;
+      for (let i = 0; i < 4; i++) hasil += chars.charAt(Math.floor(Math.random() * chars.length));
+      document.getElementById(`kode-kls-${kls}`).value = hasil;
+    }
+
+    function simpanSemuaKodeUjian() {
+      for (let k = 1; k <= 6; k++) setKodeUjianKelas(k, document.getElementById(`kode-kls-${k}`).value);
+      mainkanEfek('benar');
+      alert("✅ Semua kode ujian per kelas berhasil disimpan!");
+    }
+
+        function adminGeneratorSoal() {
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal</div></div>
+        <div class="card" style="text-align:left;">
+          <h3 style="color:#0284c7; text-align:center;">Generator Kode Soal GitHub</h3>
+          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:8px;">Buat kode objek soal siap tempel ke file <code>kelasX.js</code> atau <code>ujianX.js</code></p>
+          <label class="label-form">Ikon Emoji Soal:</label>
+          <input type="text" id="genIkon" class="input-form" value="📝" />
+          <label class="label-form">Pertanyaan:</label>
+          <input type="text" id="genTanya" class="input-form" placeholder="Tulis pertanyaan..." />
+          <label class="label-form">Pilihan A (Indeks 0):</label>
+          <input type="text" id="genOpsi0" class="input-form" placeholder="Jawaban A..." />
+          <label class="label-form">Pilihan B (Indeks 1):</label>
+          <input type="text" id="genOpsi1" class="input-form" placeholder="Jawaban B..." />
+          <label class="label-form">Pilihan C (Indeks 2):</label>
+          <input type="text" id="genOpsi2" class="input-form" placeholder="Jawaban C..." />
+          <label class="label-form">Pilihan D (Indeks 3):</label>
+          <input type="text" id="genOpsi3" class="input-form" placeholder="Jawaban D..." />
+          <label class="label-form">Jawaban Benar:</label>
+          <select id="genKunci" class="input-form"><option value="0">Pilihan A</option><option value="1">Pilihan B</option><option value="2">Pilihan C</option><option value="3">Pilihan D</option></select>
+          <label class="label-form">Pembahasan Singkat:</label>
+          <input type="text" id="genBahas" class="input-form" placeholder="Penjelasan jawaban..." />
+          <button class="btn-aksi" style="width:100%;" onclick="buatKodeSoalGitHub()">⚡ Generate Kode GitHub</button>
+          <label class="label-form" style="margin-top:12px;">Hasil Kode Siap Salin ke GitHub:</label>
+          <textarea id="hasilKodeSoal" class="textarea-kode" readonly></textarea>
+          <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeSoal')">📋 Salin Kode</button>
+        </div>`;
+    }
+
+    function buatKodeSoalGitHub() {
+      const ikon = document.getElementById("genIkon").value || "📝";
+      const tanya = document.getElementById("genTanya").value.replace(/"/g, '\\"');
+      const o0 = document.getElementById("genOpsi0").value.replace(/"/g, '\\"');
+      const o1 = document.getElementById("genOpsi1").value.replace(/"/g, '\\"');
+      const o2 = document.getElementById("genOpsi2").value.replace(/"/g, '\\"');
+      const o3 = document.getElementById("genOpsi3").value.replace(/"/g, '\\"');
+      const kunci = document.getElementById("genKunci").value;
+      const bahas = document.getElementById("genBahas").value.replace(/"/g, '\\"');
+      document.getElementById("hasilKodeSoal").value = `{\n  ikon: "${ikon}",\n  tanya: "${tanya}",\n  opsi: ["${o0}", "${o1}", "${o2}", "${o3}"],\n  kunci: ${kunci},\n  bahas: "${bahas}"\n},`;
+      mainkanEfek('benar');
+    }
+
+    function adminGeneratorBab() {
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">📂 Generator Bab</div></div>
+        <div class="card" style="text-align:left;">
+          <h3 style="color:#0284c7; text-align:center;">Generator Daftar Bab (GitHub)</h3>
+          <label class="label-form">Pilih Kelas:</label>
+          <select id="babKelas" class="input-form"><option value="1">Kelas 1</option><option value="2">Kelas 2</option><option value="3">Kelas 3</option><option value="4">Kelas 4</option><option value="5">Kelas 5</option><option value="6">Kelas 6</option></select>
+          <label class="label-form">Mata Pelajaran:</label>
+          <select id="babMapel" class="input-form"><option value="pancasila">Pendidikan Pancasila</option><option value="bindo">Bahasa Indonesia</option><option value="mtk">Matematika</option><option value="ipas">IPAS</option><option value="bing">Bahasa Inggris</option></select>
+          <label class="label-form">Semester:</label>
+          <select id="babSemester" class="input-form"><option value="Semester 1">Semester 1</option><option value="Semester 2">Semester 2</option></select>
+          <label class="label-form">Judul Bab:</label>
+          <input type="text" id="babJudul" class="input-form" placeholder="Contoh: Bab 1 • Aku Cinta Pancasila" />
+          <button class="btn-aksi" style="width:100%;" onclick="buatKodeBabGitHub()">⚡ Generate Struktur Bab GitHub</button>
+          <label class="label-form" style="margin-top:12px;">Hasil Kode Struktur Bab (Tempel ke GitHub):</label>
+          <textarea id="hasilKodeBab" class="textarea-kode" readonly></textarea>
+          <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeBab')">📋 Salin Kode Bab</button>
+        </div>`;
+    }
+
+    function buatKodeBabGitHub() {
+      const kls = document.getElementById("babKelas").value;
+      const mapel = document.getElementById("babMapel").value;
+      const sem = document.getElementById("babSemester").value;
+      const judul = document.getElementById("babJudul").value.replace(/"/g, '\\"') || "Bab Baru";
+      document.getElementById("hasilKodeBab").value = `// Tambahkan ke dalam window.DATA_SEDDUR[${kls}].${mapel} di file kelas${kls}.js\n{\n  semester: "${sem}",\n  bab: "${judul}",\n  soal: [\n    {\n      ikon: "🌟",\n      tanya: "Contoh pertanyaan pertama untuk ${judul}?",\n      opsi: ["Jawaban A", "Jawaban B", "Jawaban C", "Jawaban D"],\n      kunci: 0,\n      bahas: "Pembahasan jawaban benar."\n    }\n  ]\n},`;
+      mainkanEfek('benar');
+    }
+
+    function salinTeks(idEl) {
+      const el = document.getElementById(idEl);
+      el.select();
+      document.execCommand("copy");
+      alert("✅ Kode berhasil disalin! Silakan paste ke file di GitHub Anda.");
+    }
+
+        function adminRekapNilai() {
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar no-print"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">📊 Rekap Nilai</div></div>
+        <div class="card">
+          <h2 style="color:#0284c7; font-size:1.18rem;">Rekap Nilai Ujian SDN Seddur 1</h2>
+          <p style="font-size:0.8rem; color:#64748b;">Tahun Ajaran 2026/2027</p>
+          <div class="no-print" style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px;">
+            <select id="filterKelas" class="input-form" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Kelas</option><option value="1">Kelas 1</option><option value="2">Kelas 2</option><option value="3">Kelas 3</option><option value="4">Kelas 4</option><option value="5">Kelas 5</option><option value="6">Kelas 6</option>
+            </select>
+            <select id="filterKategori" class="input-form" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Kategori</option><option value="Latihan Bab">Latihan Bab</option><option value="UTS Semester 1">UTS Semester 1</option><option value="UAS Semester 1">UAS Semester 1</option><option value="UTS Semester 2">UTS Semester 2</option><option value="UAS Semester 2">UAS Semester 2</option>
+            </select>
+          </div>
+          <div class="no-print" style="display:flex; gap:8px; justify-content:center; margin-top:6px;">
+            <button class="btn-aksi" style="font-size:0.84rem; padding:10px 14px;" onclick="window.print()">🖨️ Cetak Hasil Filter</button>
+            <button class="btn-aksi btn-bahaya" style="font-size:0.84rem; padding:10px 14px;" onclick="hapusDataHasilFilter()">🗑️ Hapus Data Filter</button>
+          </div>
+          <div id="wadahTabelNilai"></div>
+        </div>`;
+      renderTabelNilai();
+    }
+
+    function getDataTersaring() {
+      const semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
+      const fKelas = document.getElementById("filterKelas").value;
+      const fKat = document.getElementById("filterKategori").value;
+      return semua.filter(item => ((fKelas === "ALL") || (String(item.kelas) === fKelas)) && ((fKat === "ALL") || (item.kategori === fKat)));
+    }
+
+    function renderTabelNilai() {
+      const data = getDataTersaring();
+      const wadah = document.getElementById("wadahTabelNilai");
+      if (data.length === 0) {
+        wadah.innerHTML = `<p style="margin-top:14px; color:#64748b; font-size:0.88rem;">Belum ada data nilai untuk filter yang dipilih.</p>`;
+        return;
+      }
+      let rows = data.map((d, i) => `<tr><td>${i + 1}</td><td><strong>${d.nama}</strong><br><span style="font-size:0.72rem; color:#64748b;">${d.tanggal}</span></td><td>Kls ${d.kelas}</td><td>${d.kategori}</td><td>${d.benar}</td><td><strong style="color:#0284c7;">${d.nilai}</strong></td></tr>`).join("");
+      wadah.innerHTML = `<div class="table-wrap"><table><thead><tr><th>No</th><th>Nama Siswa</th><th>Kelas</th><th>Ujian</th><th>Benar</th><th>Nilai</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    }
+
+    function hapusDataHasilFilter() {
+      const tersaring = getDataTersaring();
+      if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
+      if (!confirm(`Yakin ingin menghapus ${tersaring.length} data nilai yang tampil pada filter ini?`)) return;
+      const semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
+      const idDihapus = new Set(tersaring.map(item => item.id));
+      localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua.filter(item => !idDihapus.has(item.id))));
+      mainkanEfek('salah');
+      renderTabelNilai();
+      alert("✅ Data hasil filter berhasil dihapus!");
+    }
+
+    function adminUbahPassword() {
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🔑 Ubah Password</div></div>
+        <div class="card">
+          <h3 style="color:#0284c7;">Ubah Password Admin</h3>
+          <p style="font-size:0.82rem; color:#64748b; margin-bottom:10px;">Gunakan password yang mudah diingat oleh guru/admin</p>
+          <input type="password" id="passLama" class="input-nama" placeholder="Password Lama..." />
+          <input type="password" id="passBaru" class="input-nama" placeholder="Password Baru..." />
+          <input type="password" id="passKonfirm" class="input-nama" placeholder="Ulangi Password Baru..." />
+          <button class="btn-aksi btn-sukses" style="width:100%; margin-top:10px;" onclick="simpanPasswordBaru()">💾 Simpan Password Baru</button>
+        </div>`;
+    }
+
+    function simpanPasswordBaru() {
+      const lama = document.getElementById("passLama").value;
+      const baru = document.getElementById("passBaru").value.trim();
+      const konfirm = document.getElementById("passKonfirm").value.trim();
+      if (lama !== getPasswordAdmin()) { alert("Password lama tidak sesuai!"); return; }
+      if (baru.length < 4) { alert("Password baru minimal 4 karakter!"); return; }
+      if (baru !== konfirm) { alert("Konfirmasi password baru tidak cocok!"); return; }
+      localStorage.setItem("seddur_admin_pass", baru);
+      mainkanEfek('benar');
+      alert("✅ Password Admin berhasil diubah!");
+      tampilDashboardAdmin();
     }
 
     tampilBeranda();
