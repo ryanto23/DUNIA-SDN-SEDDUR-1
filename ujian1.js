@@ -189,4 +189,48 @@ window.DATA_UJIAN["1"].uas_1.push(
     bahas: "Pembahasan soal nomor 10."
   }
 );
+javascript
+window.DATA_UJIAN["1"].uts_1.push(
+  {
+    mapel: "Pendidikan Pancasila",
+    ikon: "🗣️",
+    tanya: "👦👧🧒💬 Perhatikan gambar berikut! Anak-anak sedang berkumpul dan berdiskusi untuk menentukan ketua kelas. Kegiatan yang mereka lakukan disebut...",
+    opsi: ["Bermain bersama", "Musyawarah", "Upacara bendera", "Kerja bakti"],
+    kunci: 1,
+    bahas: "Musyawarah adalah kegiatan berdiskusi bersama untuk mencapai kesepakatan atau keputusan bersama."
+  },
+  {
+    mapel: "Pendidikan Pancasila",
+    ikon: "🙋‍♂️",
+    tanya: "🙋‍♀️💬 Saat teman sedang menyampaikan pendapat dalam musyawarah, sikap kita sebaiknya...",
+    opsi: ["Memotong pembicaraannya", "Bermain sendiri", "Mendengarkan dengan tenang", "Berteriak dengan keras"],
+    kunci: 2,
+    bahas: "Dalam bermusyawarah, kita harus menghargai orang lain dengan cara mendengarkan pendapat teman secara tenang dan sopan."
+  },
+  {
+    mapel: "Pendidikan Pancasila",
+    ikon: "✋",
+    tanya: "✋😊 Jika kita ingin menyampaikan pendapat saat berdiskusi di kelas, hal pertama yang harus dilakukan adalah...",
+    opsi: ["Langsung berbicara keras", "Mengangkat tangan terlebih dahulu", "Berdiri di atas kursi", "Keluar dari ruang kelas"],
+    kunci: 1,
+    bahas: "Mengangkat tangan sebelum berbicara menunjukkan sikap sopan dan tertib saat bermusyawarah."
+  },
+  {
+    mapel: "Pendidikan Pancasila",
+    ikon: "🤝",
+    tanya: "👨‍👩‍👧‍👦🏠 Keluarga Rani bermusyawarah menentukan tempat liburan. Ayah memilih pantai 🏖️, sedangkan Rani memilih kebun binatang 🦁. Hasil musyawarah memutuskan pergi ke kebun binatang. Sikap Ayah sebaiknya...",
+    opsi: ["Marah dan tidak ikut", "Menerima keputusan dengan lapang dada", "Memaksa pergi ke pantai", "Menangis di kamar"],
+    kunci: 1,
+    bahas: "Setiap peserta musyawarah harus menerima dan melaksanakan hasil keputusan bersama dengan lapang dada dan ikhlas."
+  },
+  {
+    mapel: "Pendidikan Pancasila",
+    ikon: "🐃",
+    tanya: "🐃✨ Kegiatan bermusyawarah untuk mencapai mufakat sesuai dengan pengamalan Pancasila, terutama sila ke...",
+    opsi: ["Satu", "Dua", "Tiga", "Empat"],
+    kunci: 3,
+    bahas: "Musyawarah merupakan pengamalan sila keempat Pancasila yang dilambangkan dengan kepala banteng."
+  }
+);
+Use code with caution.
 
