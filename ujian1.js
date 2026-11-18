@@ -106,3 +106,87 @@ window.DATA_UJIAN["1"].bab.mtk.push({
   }
   ]
 });
+// Tempelkan di BARIS PALING BAWAH file ujian1.js
+window.DATA_UJIAN["1"].uas_1.push(
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 1 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 1."
+  },
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 2 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 2."
+  },
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 3 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 3."
+  },
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 4 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 4."
+  },
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 5 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 5."
+  },
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 6 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 6."
+  },
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 7 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 7."
+  },
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 8 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 8."
+  },
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 9 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 9."
+  },
+  {
+    mapel: "Matematika",
+    ikon: "📝",
+    tanya: "Soal nomor 10 (Matematika - penjumlahan pengurangan perkalian)...",
+    opsi: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    kunci: 0,
+    bahas: "Pembahasan soal nomor 10."
+  }
+);
+
