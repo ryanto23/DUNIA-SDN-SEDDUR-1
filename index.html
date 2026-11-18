@@ -72,7 +72,6 @@
     .btn-aksi { background: linear-gradient(135deg, #0ea5e9, #0284c7); color: #fff; border: none; padding: 12px 18px; border-radius: 14px; font-size: 0.96rem; font-weight: 700; cursor: pointer; margin-top: 8px; box-shadow: 0 4px 0 #0369a1; }
     .btn-sukses { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 0 #047857; }
     .btn-bahaya { background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 4px 0 #b91c1c; }
-
     .cbt-header-info { background: #0f172a; color: #fff; padding: 10px 14px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.86rem; }
     .timer-box { background: #dc2626; color: #fff; padding: 5px 12px; border-radius: 8px; font-family: monospace; font-size: 1.05rem; font-weight: 700; letter-spacing: 1px; }
     .cbt-soal-teks { font-size: 1.05rem; line-height: 1.55; color: #0f172a; margin: 12px 0 16px; padding: 14px; background: #f8fafc; border-left: 4px solid #2563eb; border-radius: 8px; }
@@ -86,7 +85,6 @@
     .nav-nomor-btn { width: 34px; height: 34px; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; font-weight: 700; font-size: 0.84rem; cursor: pointer; color: #334155; }
     .nav-nomor-btn.aktif { border: 2px solid #0f172a; transform: scale(1.08); }
     .nav-nomor-btn.terjawab { background: #2563eb; color: #fff; border-color: #1d4ed8; }
-
     .table-wrap { width: 100%; overflow-x: auto; margin-top: 10px; border-radius: 12px; border: 2px solid #cbd5e1; }
     table { width: 100%; border-collapse: collapse; font-size: 0.82rem; text-align: left; background: #fff; }
     th, td { padding: 8px 10px; border-bottom: 1px solid #e2e8f0; }
@@ -96,7 +94,8 @@
     @media print { body { background: #fff !important; } header, .no-print { display: none !important; } .container { max-width: 100%; margin: 0; padding: 0; } .card { border: none; box-shadow: none; } }
   </style>
 </head>
-<body>
+
+  <body>
   <header>
     <h1>🏫 DUNIA SDN SEDDUR 1</h1>
     <p>Kurikulum Merdeka • Tahun Ajaran 2026/2027</p>
@@ -276,27 +275,35 @@
       } catch (e) {}
     }
 
+    // Fungsi Penggabung Otomatis: Menggabungkan semua soal jika judul Bab sama
     function getDaftarBabSinkron(kls, kodeMapel) {
       const gabungan = [];
       const dariKuis = (window.DATA_SEDDUR[kls] && window.DATA_SEDDUR[kls][kodeMapel]) || [];
       const dariUjian = (window.DATA_UJIAN[kls] && window.DATA_UJIAN[kls].bab && window.DATA_UJIAN[kls].bab[kodeMapel]) || [];
 
       dariKuis.forEach(b => {
-        const cocokUjian = dariUjian.find(u => u.bab.trim().toLowerCase() === b.bab.trim().toLowerCase());
+        const kunciBab = b.bab.trim().toLowerCase();
+        const semuaPaketCocok = dariUjian.filter(u => u.bab && u.bab.trim().toLowerCase() === kunciBab);
+        let soalTergabung = [];
+        semuaPaketCocok.forEach(pkt => {
+          if (Array.isArray(pkt.soal)) soalTergabung = soalTergabung.concat(pkt.soal);
+        });
         gabungan.push({
           semester: b.semester || "Semester 1/2",
           bab: b.bab,
-          soalUjian: cocokUjian ? cocokUjian.soal : []
+          soalUjian: soalTergabung
         });
       });
 
       dariUjian.forEach(u => {
-        const sudahAda = gabungan.some(g => g.bab.trim().toLowerCase() === u.bab.trim().toLowerCase());
-        if (!sudahAda) {
+        if (!u.bab) return;
+        const kunciBab = u.bab.trim().toLowerCase();
+        const indexSudahAda = gabungan.findIndex(g => g.bab.trim().toLowerCase() === kunciBab);
+        if (indexSudahAda === -1) {
           gabungan.push({
             semester: u.semester || "Ujian Bab",
             bab: u.bab,
-            soalUjian: u.soal || []
+            soalUjian: Array.isArray(u.soal) ? [...u.soal] : []
           });
         }
       });
@@ -304,7 +311,7 @@
       return gabungan;
     }
 
-    function tampilBeranda() {
+        function tampilBeranda() {
       hentikanTimer();
       document.body.classList.remove("mode-cbt");
       try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
@@ -339,7 +346,7 @@
         </div>`;
     }
 
-        function bukaMenuKelasKuis() {
+    function bukaMenuKelasKuis() {
       hentikanTimer();
       document.body.classList.remove("mode-cbt");
       mainkanEfek('klik');
@@ -678,7 +685,7 @@
         </div>`;
     }
 
-    function pilihJawabanUjian(idxOpsi) {
+        function pilihJawabanUjian(idxOpsi) {
       jawabanSiswaUjian[indeksSoal] = idxOpsi;
       renderSoalUjianCBT();
     }
@@ -859,7 +866,7 @@
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal AI</div></div>
         <div class="card" style="text-align:left;">
           <h3 style="color:#0284c7; text-align:center;">Generator Soal AI & Kode GitHub</h3>
-          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Tersinkron otomatis dengan daftar Bab per Mapel & Kelas di file <code>ujianX.js</code></p>
+          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Hasil kode langsung ditempel di <strong>baris paling bawah</strong> file <code>ujianX.js</code></p>
 
           <label class="label-form">1. Pilih Kelas:</label>
           <select id="genKelas" class="input-form" onchange="perbaruiOpsiBabGenerator()">
@@ -920,7 +927,7 @@
           <textarea id="hasilPromptAI" class="textarea-kode" style="min-height:130px; color:#fde047;" readonly placeholder="Klik tombol Generate di atas..."></textarea>
           <button class="btn-aksi" style="width:100%;" onclick="salinTeks('hasilPromptAI')">📋 Salin Prompt AI</button>
 
-          <label class="label-form" style="margin-top:14px; color:#059669;">💻 Hasil 2: Template Kode GitHub (Siap Tempel ke ujianX.js):</label>
+          <label class="label-form" style="margin-top:14px; color:#059669;">💻 Hasil 2: Template Kode GitHub (Tempel di Baris Paling Bawah ujianX.js):</label>
           <textarea id="hasilKodeSoal" class="textarea-kode" style="min-height:160px;" readonly placeholder="Kerangka kode JavaScript akan muncul di sini..."></textarea>
           <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeSoal')">📋 Salin Kode GitHub</button>
         </div>`;
@@ -940,7 +947,7 @@
       const selectBab = document.getElementById("genDaftarBab");
 
       if (daftarBab.length === 0) {
-        selectBab.innerHTML = `<option value="Bab 1 • Materi Baru">Bab 1 • Materi Baru (Belum ada di kelas${kls}.js)</option>`;
+        selectBab.innerHTML = `<option value="Bab 1 • Materi Baru">Bab 1 • Materi Baru</option>`;
       } else {
         selectBab.innerHTML = daftarBab.map(b => `<option value="${b.bab}">${b.semester} - ${b.bab}</option>`).join("");
       }
@@ -964,15 +971,14 @@
         contohOpsi = `["🍎 Apel", "🍌 Pisang", "🍇 Anggur", "🍉 Semangka"]`;
       }
 
-      let targetLokasi = `window.DATA_UJIAN[${kls}].${katKode}`;
-      let formatStruktur = `${katKode}: [\n  {\n    mapel: "${namaMapel}",\n    ikon: "📝",\n    tanya: "Pertanyaan...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Pembahasan."\n  }\n]`;
-
+      let kodePembungkus = "";
       if (katKode === "bab") {
-        targetLokasi = `window.DATA_UJIAN[${kls}].bab.${kodeMapel}`;
-        formatStruktur = `{\n  bab: "${judulBab}",\n  soal: [\n    {\n      ikon: "📝",\n      tanya: "Pertanyaan...",\n      opsi: ${contohOpsi},\n      kunci: 0,\n      bahas: "Pembahasan."\n    }\n  ]\n}`;
+        kodePembungkus = `window.DATA_UJIAN[${kls}].bab.${kodeMapel}.push({\n  semester: "Semester 1",\n  bab: "${judulBab}",\n  soal: [\n    {\n      ikon: "📝",\n      tanya: "Pertanyaan...",\n      opsi: ${contohOpsi},\n      kunci: 0,\n      bahas: "Pembahasan."\n    }\n  ]\n});`;
+      } else {
+        kodePembungkus = `window.DATA_UJIAN[${kls}].${katKode}.push(\n  {\n    mapel: "${namaMapel}",\n    ikon: "📝",\n    tanya: "Pertanyaan...",\n    opsi: ${contohOpsi},\n    kunci: 0,\n    bahas: "Pembahasan."\n  }\n);`;
       }
 
-      const promptAI = `Buatkan ${jumlah} soal pilihan ganda Kurikulum Merdeka Tahun Ajaran 2026/2027 untuk siswa SD Kelas ${kls}.\n- Mata Pelajaran: ${namaMapel}\n- Kategori: ${katKode === "bab" ? judulBab : katNama}\n- Topik Materi: ${topik}\n- Format Tampilan: ${modeGbr}\n\nATURAN WAJIB FORMAT OUTPUT:\nTuliskan HANYA dalam bentuk kode JavaScript berikut tanpa teks pembuka/penutup agar bisa langsung ditempel ke GitHub (file ujian${kls}.js pada ${targetLokasi}):\n\n${formatStruktur}\n\nPastikan indeks "kunci" (0=A, 1=B, 2=C, 3=D) akurat dan gunakan emoji visual pada properti "ikon" maupun "opsi" sesuai mode gambar.`;
+      const promptAI = `Buatkan ${jumlah} soal pilihan ganda Kurikulum Merdeka Tahun Ajaran 2026/2027 untuk siswa SD Kelas ${kls}.\n- Mata Pelajaran: ${namaMapel}\n- Kategori: ${katKode === "bab" ? judulBab : katNama}\n- Topik Materi: ${topik}\n- Format Tampilan: ${modeGbr}\n\nATURAN WAJIB FORMAT OUTPUT:\nTuliskan HANYA dalam bentuk kode JavaScript berikut tanpa teks pembuka/penutup agar bisa langsung saya tempel di BARIS PALING BAWAH file ujian${kls}.js:\n\n${kodePembungkus}\n\nPastikan seluruh ${jumlah} soal dimasukkan ke dalam blok tersebut, indeks "kunci" (0=A, 1=B, 2=C, 3=D) akurat, dan gunakan emoji visual sesuai mode gambar.`;
 
       let daftarTemplate = [];
       for (let i = 1; i <= jumlah; i++) {
@@ -981,8 +987,8 @@
       }
 
       const kodeGitHub = katKode === "bab"
-        ? `// Tempelkan ke dalam window.DATA_UJIAN[${kls}].bab.${kodeMapel} di file ujian${kls}.js\n{\n  bab: "${judulBab}",\n  soal: [\n${daftarTemplate.join(",\n")}\n  ]\n},`
-        : `// Tempelkan ke dalam window.DATA_UJIAN[${kls}] di file ujian${kls}.js\n${katKode}: [\n${daftarTemplate.join(",\n")}\n],`;
+        ? `// Tempelkan di BARIS PALING BAWAH file ujian${kls}.js\nwindow.DATA_UJIAN[${kls}].bab.${kodeMapel}.push({\n  semester: "Semester 1",\n  bab: "${judulBab}",\n  soal: [\n${daftarTemplate.join(",\n")}\n  ]\n});`
+        : `// Tempelkan di BARIS PALING BAWAH file ujian${kls}.js\nwindow.DATA_UJIAN[${kls}].${katKode}.push(\n${daftarTemplate.join(",\n")}\n);`;
 
       document.getElementById("hasilPromptAI").value = promptAI;
       document.getElementById("hasilKodeSoal").value = kodeGitHub;
@@ -993,7 +999,7 @@
       const el = document.getElementById(idEl);
       el.select();
       document.execCommand("copy");
-      alert("✅ Kode berhasil disalin! Silakan paste ke file di GitHub Anda.");
+      alert("✅ Kode berhasil disalin! Silakan paste di baris paling bawah file GitHub Anda.");
     }
 
         function adminRekapNilai() {
