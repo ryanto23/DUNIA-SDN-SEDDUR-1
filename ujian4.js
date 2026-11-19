@@ -64,3 +64,56 @@ window.DATA_UJIAN["4"] = {
 };
 
 // Tempelkan kode tambahan dari Generator AI di bawah baris ini
+window.DATA_UJIAN["4"]["bab,Ujian Bab"].push(
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Gunung Semeru memiliki ketinggian sekitar tiga ribu enam ratus tujuh puluh enam meter di atas permukaan laut. Lambang bilangan yang tepat untuk menyatakan ketinggian gunung tersebut adalah ...",
+    opsi: ["3.667", "3.676", "3.766", "3.776"],
+    kunci: 1,
+    bahas: "Tiga ribu (3.000) + enam ratus (600) + tujuh puluh (70) + enam (6) ditulis dengan lambang bilangan 3.676."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Pada papan informasi perpustakaan sekolah tertulis bahwa koleksi buku saat ini berjumlah 7.408 eksemplar. Bilangan 7.408 dibaca ...",
+    opsi: [
+      "Tujuh ribu empat ratus delapan puluh",
+      "Tujuh ribu empat puluh delapan",
+      "Tujuh ribu empat ratus delapan",
+      "Tujuh ribu empat ratus kosong delapan"
+    ],
+    kunci: 2,
+    bahas: "Angka 7 menempati ribuan (tujuh ribu), angka 4 menempati ratusan (empat ratus), angka 0 menempati puluhan (tidak dibaca), dan angka 8 menempati satuan (delapan). Jadi dibaca tujuh ribu empat ratus delapan."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Ibu membeli peralatan dapur seharga sembilan ribu lima puluh rupiah. Penulisan lambang bilangan yang tepat untuk harga tersebut adalah ...",
+    opsi: ["9.005", "9.050", "9.500", "9.505"],
+    kunci: 1,
+    bahas: "Sembilan ribu (9.000) dan lima puluh (50) tanpa nilai ratusan ditulis dengan menempatkan angka 0 pada nilai tempat ratusan, sehingga menjadi 9.050."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Jarak rumah Dito ke stadion kota adalah 8.912 meter. Nama bilangan yang tepat untuk jarak tersebut adalah ...",
+    opsi: [
+      "Delapan ribu sembilan ratus dua belas",
+      "Delapan ribu sembilan ratus dua puluh satu",
+      "Delapan ribu sembilan puluh dua",
+      "Delapan ribu dua ratus sembilan belas"
+    ],
+    kunci: 0,
+    bahas: "Bilangan 8.912 terdiri dari 8 ribuan, 9 ratusan, 1 puluhan, dan 2 satuan (dua belas), sehingga dibaca delapan ribu sembilan ratus dua belas."
+  },
+  {
+    mapel: "mtk,Matematika",
+    ikon: "📝",
+    tanya: "Sebuah toko roti berhasil menjual sepuluh ribu potong roti selama satu bulan penuh. Lambang bilangan dari sepuluh ribu adalah ...",
+    opsi: ["1.000", "10.000", "100.000", "10.00"],
+    kunci: 1,
+    bahas: "Bilangan sepuluh ribu memiliki 5 digit angka dengan angka 1 di depan diikuti empat angka nol, ditulis 10.000."
+  }
+);
+
