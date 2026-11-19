@@ -23,16 +23,24 @@
     .card-cbt { border-radius: 14px; border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; }
     @keyframes popIn { 0% { transform: scale(0.95); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
     @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes gerakJudul { 0%, 100% { transform: translateY(0) scale(1); color: #0284c7; } 50% { transform: translateY(-4px) scale(1.03); color: #ea580c; } }
     .anim-bounce { display: inline-block; animation: bounce 1.8s infinite; }
+    .judul-bergerak { display: inline-block; font-size: 1.26rem; font-weight: 700; animation: gerakJudul 2.4s ease-in-out infinite; margin-top: 4px; }
 
-        .input-nama, .input-form, .textarea-kode { width: 100%; padding: 11px 13px; border-radius: 14px; border: 2px solid #7dd3fc; font-size: 0.96rem; font-weight: 600; color: #0f172a; outline: none; margin: 6px 0; background: #f0f9ff; user-select: text; }
+        .slider-wadah { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 8px; }
+    .slider-img { max-width: 100%; width: auto; height: auto; max-height: 190px; object-fit: contain; border-radius: 14px; transition: opacity 0.45s ease, transform 0.45s ease; }
+    .slider-ket { font-size: 0.76rem; font-weight: 600; color: #475569; margin-top: 6px; background: #f1f5f9; padding: 3px 10px; border-radius: 20px; }
+    .slider-dots { display: flex; gap: 6px; justify-content: center; margin-top: 7px; }
+    .dot-item { width: 8px; height: 8px; border-radius: 50%; background: #cbd5e1; transition: all 0.25s; cursor: pointer; }
+    .dot-item.aktif { width: 20px; border-radius: 6px; background: #0284c7; }
+    .input-nama, .input-form, .textarea-kode { width: 100%; padding: 11px 13px; border-radius: 14px; border: 2px solid #7dd3fc; font-size: 0.96rem; font-weight: 600; color: #0f172a; outline: none; margin: 6px 0; background: #f0f9ff; user-select: text; }
     .input-nama { text-align: center; font-size: 1.05rem; border-width: 3px; }
     .input-nama:focus, .input-form:focus, .textarea-kode:focus { border-color: #0284c7; background: #ffffff; }
     .textarea-kode { font-family: monospace; font-size: 0.82rem; min-height: 150px; background: #0f172a; color: #38bdf8; border-color: #334155; }
     .label-form { display: block; text-align: left; font-size: 0.84rem; font-weight: 700; color: #334155; margin-top: 8px; }
-    .motivasi-card { background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); border: 3px solid #38bdf8; border-radius: 24px; padding: 26px 18px; margin-top: 8px; text-align: center; box-shadow: 0 10px 24px rgba(2, 132, 199, 0.14); }
-    .motivasi-teks { font-size: 1.16rem; font-weight: 700; color: #0f172a; line-height: 1.55; margin: 12px 0; font-style: italic; }
-    .motivasi-penulis { display: inline-block; background: #fef08a; color: #854d0e; border: 2px solid #facc15; padding: 5px 14px; border-radius: 50px; font-size: 0.86rem; font-weight: 700; }
+    .motivasi-card { background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); border: 3px solid #38bdf8; border-radius: 24px; padding: 22px 16px; margin-top: 8px; text-align: center; box-shadow: 0 10px 24px rgba(2, 132, 199, 0.14); }
+    .motivasi-teks { font-size: 1.12rem; font-weight: 700; color: #0f172a; line-height: 1.55; margin: 10px 0; font-style: italic; }
+    .motivasi-penulis { display: inline-block; background: #fef08a; color: #854d0e; border: 2px solid #facc15; padding: 5px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; }
     .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; width: 100%; background: #ffffff; border-top: 3px solid #cbd5e1; box-shadow: 0 -4px 16px rgba(0,0,0,0.1); display: flex; justify-content: space-around; align-items: center; padding: 6px 4px; z-index: 50; }
     body.sedang-ujian .bottom-nav { display: none !important; }
     .nav-item { flex: 1; background: transparent; border: none; padding: 6px 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; cursor: pointer; color: #64748b; font-size: 0.72rem; font-weight: 700; border-radius: 12px; transition: all 0.15s; }
@@ -130,6 +138,7 @@
   <script>
     window.DATA_SEDDUR = {};
     window.DATA_UJIAN = {};
+    window.GAMBAR_BERANDA = [];
     window.KODE_UJIAN_DEFAULT = {
       "1": "KLS1-2026",
       "2": "KLS2-2026",
@@ -141,6 +150,7 @@
     (function() {
       const versiBaru = Date.now();
       const daftarFile = [
+        "gambar_beranda.js",
         "kode_ujian.js",
         "kelas1.js", "kelas2.js", "kelas3.js", "kelas4.js", "kelas5.js", "kelas6.js",
         "ujian1.js", "ujian2.js", "ujian3.js", "ujian4.js", "ujian5.js", "ujian6.js"
@@ -252,6 +262,8 @@
     let sudahMenjawab = false;
     let timerInterval = null;
     let sisaDetik = 0;
+    let sliderInterval = null;
+    let indeksSlide = 0;
 
     const daftarNamaMapel = {
       pancasila: { judul: "Pendidikan Pancasila", ikon: "🦅", kelasCss: "m-pancasila" },
@@ -281,6 +293,26 @@
         clearInterval(timerInterval);
         timerInterval = null;
       }
+    }
+
+    function hentikanSlider() {
+      if (sliderInterval) {
+        clearInterval(sliderInterval);
+        sliderInterval = null;
+      }
+    }
+
+    function getDaftarGambarBeranda() {
+      if (Array.isArray(window.GAMBAR_BERANDA) && window.GAMBAR_BERANDA.length > 0) {
+        return window.GAMBAR_BERANDA;
+      }
+      return [
+        { url: "https://flaticon.com", keterangan: "Sekolah Dasar Negeri Seddur 1" },
+        { url: "https://flaticon.com", keterangan: "Gemar Membaca & Menulis" },
+        { url: "https://flaticon.com", keterangan: "Semangat Belajar Setiap Hari" },
+        { url: "https://flaticon.com", keterangan: "Raih Prestasi Gemilang" },
+        { url: "https://flaticon.com", keterangan: "Jujur & Percaya Diri Saat Ujian" }
+      ];
     }
 
     function formatWaktu(detik) {
@@ -348,14 +380,25 @@
 
         function tampilBeranda() {
       hentikanTimer();
+      hentikanSlider();
       document.body.classList.remove("mode-cbt");
       setNavAktif("nav-home");
       try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
+
+      const daftarGambar = getDaftarGambarBeranda();
+      indeksSlide = 0;
+      const slideAwal = daftarGambar;
+      const dotsHTML = daftarGambar.map((_, i) => `<span class="dot-item ${i === 0 ? 'aktif' : ''}" id="dot-${i}" onclick="gantiSlideManual(${i})"></span>`).join("");
+
       document.getElementById("app").innerHTML = `
         <div class="card">
-          <div style="font-size:2.8rem; margin-bottom:4px;" class="anim-bounce">🏫🎓🌟</div>
-          <h2 style="color:#0284c7; font-size:1.25rem;">Selamat Datang di Dunia SDN Seddur 1!</h2>
-          <p style="color:#64748b; font-size:0.86rem; margin-top:4px;">Gunakan menu navigasi di bawah layar untuk memulai</p>
+          <div class="slider-wadah">
+            <img id="imgSliderBeranda" class="slider-img" src="${slideAwal.url}" alt="Gambar SDN Seddur 1" />
+            <div id="ketSliderBeranda" class="slider-ket">${slideAwal.keterangan || ''}</div>
+            <div class="slider-dots">${dotsHTML}</div>
+          </div>
+          <h2 class="judul-bergerak">Selamat Datang di Dunia SDN Seddur 1!</h2>
+          <p style="color:#64748b; font-size:0.84rem; margin-top:4px;">Gunakan menu navigasi di bawah layar untuk memulai</p>
         </div>
 
         <div class="motivasi-card">
@@ -365,10 +408,57 @@
           </div>
           <div class="motivasi-penulis">— Motivasi Belajar</div>
         </div>`;
+
+      mulaiSliderOtomatis();
+    }
+
+    function perbaruiTampilanSlide() {
+      const daftarGambar = getDaftarGambarBeranda();
+      const imgEl = document.getElementById("imgSliderBeranda");
+      const ketEl = document.getElementById("ketSliderBeranda");
+      if (!imgEl || daftarGambar.length === 0) return;
+
+      const item = daftarGambar[indeksSlide % daftarGambar.length];
+      imgEl.style.opacity = "0.25";
+      setTimeout(() => {
+        if (!document.getElementById("imgSliderBeranda")) return;
+        imgEl.src = item.url;
+        if (ketEl) {
+          ketEl.textContent = item.keterangan || "";
+          ketEl.style.display = item.keterangan ? "inline-block" : "none";
+        }
+        imgEl.style.opacity = "1";
+      }, 180);
+
+      daftarGambar.forEach((_, i) => {
+        const dot = document.getElementById("dot-" + i);
+        if (dot) dot.classList.toggle("aktif", i === (indeksSlide % daftarGambar.length));
+      });
+    }
+
+    function mulaiSliderOtomatis() {
+      hentikanSlider();
+      const daftarGambar = getDaftarGambarBeranda();
+      if (daftarGambar.length <= 1) return;
+      sliderInterval = setInterval(() => {
+        if (!document.getElementById("imgSliderBeranda")) {
+          hentikanSlider();
+          return;
+        }
+        indeksSlide = (indeksSlide + 1) % daftarGambar.length;
+        perbaruiTampilanSlide();
+      }, 3200);
+    }
+
+    function gantiSlideManual(idx) {
+      indeksSlide = idx;
+      perbaruiTampilanSlide();
+      mulaiSliderOtomatis();
     }
 
     function bukaMenuKelasKuis() {
       hentikanTimer();
+      hentikanSlider();
       document.body.classList.remove("mode-cbt");
       setNavAktif("nav-kuis");
       mainkanEfek('klik');
@@ -435,6 +525,7 @@
 
         function bukaMenuKelasUjian() {
       hentikanTimer();
+      hentikanSlider();
       document.body.classList.add("mode-cbt");
       setNavAktif("nav-ujian");
       modeAplikasi = "ujian";
@@ -869,6 +960,7 @@
 
         function tampilLoginAdmin() {
       hentikanTimer();
+      hentikanSlider();
       document.body.classList.remove("mode-cbt");
       setNavAktif("nav-admin");
       mainkanEfek('klik');
