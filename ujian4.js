@@ -55,11 +55,6 @@ Object.assign(window.DATABASE_SOAL, {
   "4-bindo-Bab 1. Sudah Besar": [
     { "q": "Kalimat yang tidak memerlukan objek disebut kalimat ....", "p": ["Transitif", "Intransitif", "Tanya", "Perintah"], "b": 1, "bahas": "Kalimat intransitif terdiri dari subjek dan predikat tanpa objek." }
   ],
-  "4-mtk-Bab 1. Bilangan Cacah sampai 10.000": [
-    { "q": "Gunung Semeru memiliki ketinggian tiga ribu enam ratus tujuh puluh enam meter. Lambang bilangan yang tepat adalah ....", "p": ["3.667", "3.676", "3.766", "3.776"], "b": 1, "bahas": "Tiga ribu enam ratus tujuh puluh enam ditulis 3.676." },
-    { "q": "Bilangan 7.408 dibaca ....", "p": ["Tujuh ribu empat ratus delapan puluh", "Tujuh ribu empat puluh delapan", "Tujuh ribu empat ratus delapan", "Tujuh ribu empat ratus kosong delapan"], "b": 2, "bahas": "7.408 dibaca tujuh ribu empat ratus delapan." },
-    { "q": "Pada bilangan 6.842, angka yang menempati nilai tempat ratusan adalah ....", "p": ["6", "8", "4", "2"], "b": 1, "bahas": "Angka 8 menempati nilai tempat ratusan." }
-  ],
   "4-ipas-Bab 1. Tumbuhan, Sumber Kehidupan di Bumi": [
     { "q": "Bagian tumbuhan yang berfungsi menyerap air dan zat hara dari dalam tanah adalah ....", "p": ["Daun", "Batang", "Akar", "Bunga"], "b": 2, "bahas": "Akar berfungsi menyerap air dan mineral dari tanah." }
   ],
@@ -69,3 +64,46 @@ Object.assign(window.DATABASE_SOAL, {
 });
 
 // Tempelkan kode tambahan dari Generator AI di bawah baris ini
+
+window.tambahPaketUjian("4", "mtk", "Bab 1. Bilangan Cacah sampai 10.000", [
+  {
+    "q": "⛰️ Ketinggian Gunung Merapi tercatat mencapai dua ribu sembilan ratus enam puluh delapan meter di atas permukaan laut. Lambang bilangan yang tepat untuk menyatakan ketinggian tersebut adalah ...",
+    "p": ["2.986", "2.968", "2.698", "2.689"],
+    "b": 1,
+    "bahas": "Dua ribu (2.000) + sembilan ratus (900) + enam puluh (60) + delapan (8) ditulis dengan lambang bilangan 2.968."
+  },
+  {
+    "q": "📚 Perpustakaan kota baru saja menerima sumbangan sebanyak 5.042 buku cerita anak. Nama bilangan yang tepat untuk 5.042 adalah ...",
+    "p": [
+      "Lima ribu empat ratus dua",
+      "Lima ribu empat ratus dua puluh",
+      "Lima ribu empat puluh dua",
+      "Lima ribu kosong empat puluh dua"
+    ],
+    "b": 2,
+    "bahas": "Angka 5 menempati ribuan (lima ribu), angka 0 menempati ratusan (tidak dibaca), angka 4 menempati puluhan (empat puluh), dan angka 2 menempati satuan (dua). Jadi dibaca lima ribu empat puluh dua."
+  },
+  {
+    "q": "🎟️ Pada acara bazar sekolah, panitia berhasil menjual tiket masuk dengan nomor urut terakhir delapan ribu tujuh ratus lima. Penulisan lambang bilangan yang sesuai adalah ...",
+    "p": ["8.075", "8.750", "8.705", "8.507"],
+    "b": 2,
+    "bahas": "Delapan ribu (8.000) + tujuh ratus (700) + lima (5) tanpa nilai puluhan ditulis dengan menyisipkan angka 0 di tempat puluhan, sehingga menjadi 8.705."
+  },
+  {
+    "q": "🏃‍♂️ Jarak yang ditempuh Bima saat mengikuti lomba lari maraton adalah 6.319 meter. Bilangan 6.319 dibaca ...",
+    "p": [
+      "Enam ribu tiga ratus sembilan belas",
+      "Enam ribu tiga ratus sembilan puluh satu",
+      "Enam ribu tiga puluh sembilan",
+      "Enam ribu sembilan ratus tiga belas"
+    ],
+    "b": 0,
+    "bahas": "Bilangan 6.319 terdiri dari 6 ribuan, 3 ratusan, 1 puluhan, dan 9 satuan (sembilan belas), sehingga dibaca enam ribu tiga ratus sembilan belas."
+  },
+  {
+    "q": "💰 Ayah menabung di bank sebesar sepuluh ribu rupiah setiap hari untuk dana darurat. Lambang bilangan dari sepuluh ribu adalah ...",
+    "p": ["1.000", "10.000", "100.000", "10.00"],
+    "b": 1,
+    "bahas": "Bilangan sepuluh ribu terdiri dari 5 digit angka, yaitu angka 1 diikuti oleh empat angka nol di belakangnya (10.000)."
+  }
+]);
