@@ -1,7 +1,7 @@
 window.GAMBAR_BERANDA = [
-  { url: "https://flaticon.com" },
-  { url: "https://flaticon.com" },
-  { url: "https://flaticon.com" },
-  { url: "https://flaticon.com" },
-  { url: "https://flaticon.com" }
+  { url: "foto1.jpeg" },
+  { url: "foto2.jpeg" },
+  { url: "foto3.jpeg" },
+  { url: "foto4.jpeg" },
+  { url: "foto5.jpeg" }
 ];
