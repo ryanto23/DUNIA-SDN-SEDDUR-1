@@ -358,7 +358,7 @@
       document.getElementById("app").innerHTML = `
         <div class="card">
           <img class="banner-beranda" src="foto1.jpeg" alt="SDN Seddur 1" onerror="this.style.display='none'" />
-          <h2 class="judul-bergerak">Selamat Datang di Dunia SDN Seddur 1</h2>
+          <h2 class="judul-bergerak">Selamat Datang di Dunia SDN Seddur 1!</h2>
           <p style="color:#64748b; font-size:0.84rem; margin-top:4px;">Gunakan menu navigasi di bawah layar untuk memulai</p>
         </div>
 
@@ -367,6 +367,7 @@
           <div class="motivasi-teks">
             "Jangan pernah berhenti belajar, karena hidup tak pernah berhenti mengajarkan hal baru."
           </div>
+          <div class="motivasi-penulis">— Motivasi Belajar</div>
         </div>`;
     }
 
@@ -976,13 +977,13 @@
     }
 
     function togglePilihanBabGenerator() {
-      const kat = document.getElementById("genKategori").value.split("|");
+      const kat = document.getElementById("genKategori").value.split("|")[0];
       document.getElementById("wadahPilihBabGen").style.display = (kat === "bab") ? "block" : "none";
     }
 
     function perbaruiOpsiBabGenerator() {
       const kls = Number(document.getElementById("genKelas").value);
-      const kodeMapel = document.getElementById("genMapel").value.split("|");
+      const kodeMapel = document.getElementById("genMapel").value.split("|")[0];
       const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
       const selectBab = document.getElementById("genDaftarBab");
 
@@ -1001,11 +1002,11 @@
         function buatKodeSoalGitHub() {
       const kls = document.getElementById("genKelas").value;
       const mapelRaw = document.getElementById("genMapel").value.split("|");
-      const kodeMapel = mapelRaw;
-      const namaMapel = mapelRaw;
+      const kodeMapel = mapelRaw[0];
+      const namaMapel = mapelRaw[1];
       const katRaw = document.getElementById("genKategori").value.split("|");
-      const katKode = katRaw;
-      const katNama = katRaw;
+      const katKode = katRaw[0];
+      const katNama = katRaw[1];
 
       let judulBab = document.getElementById("genDaftarBab").value;
       if (judulBab === "__BARU__") {
@@ -1134,13 +1135,13 @@
 
       let daftarOpsiBab = [];
       if (fKelas !== "ALL" && fMapelRaw !== "ALL") {
-        const kodeMapel = fMapelRaw.split("|");
+        const kodeMapel = fMapelRaw.split("|")[0];
         const sinkron = getDaftarBabSinkron(Number(fKelas), kodeMapel);
         daftarOpsiBab = sinkron.map(b => b.bab);
       } else {
         let semua = [];
         try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-        const namaMapelFilter = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|");
+        const namaMapelFilter = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|")[1];
         semua.forEach(item => {
           const isUTS_UAS = ["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(item.kategori);
           if (!isUTS_UAS) {
@@ -1175,7 +1176,7 @@
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const fKelas = document.getElementById("filterKelas").value;
       const fMapelRaw = document.getElementById("filterMapel").value;
-      const fMapelNama = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|");
+      const fMapelNama = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|")[1];
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "ALL";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1209,7 +1210,7 @@
       const infoBox = document.getElementById("infoRingkasanFilter");
       const fKelas = document.getElementById("filterKelas").value;
       const fMapelRaw = document.getElementById("filterMapel").value;
-      const fMapelNama = fMapelRaw === "ALL" ? "Semua Mapel" : fMapelRaw.split("|");
+      const fMapelNama = fMapelRaw === "ALL" ? "Semua Mapel" : fMapelRaw.split("|")[1];
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fUnik = document.getElementById("filterKodeUnik").value;
 
@@ -1267,7 +1268,7 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       const labelKelas = fKelas === "ALL" ? "SemuaKelas" : `Kelas${fKelas}`;
-      const labelMapel = fMapelRaw === "ALL" ? "SemuaMapel" : fMapelRaw.split("|").replace(/[^a-zA-Z0-9]/g, "_");
+      const labelMapel = fMapelRaw === "ALL" ? "SemuaMapel" : fMapelRaw.split("|")[1].replace(/[^a-zA-Z0-9]/g, "_");
       const labelTipe = fTipe === "ALL" ? "SemuaUjian" : fTipe.replace(/[^a-zA-Z0-9]/g, "_");
       const labelUnik = fUnik === "ALL" ? "SemuaKode" : fUnik.replace(/[^a-zA-Z0-9]/g, "_");
 
@@ -1293,7 +1294,7 @@
       alert("✅ Data hasil filter berhasil dihapus!");
     }
 
-    function adminUbahPassword() {
+        function adminUbahPassword() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🔑 Ubah Password</div></div>
         <div class="card">
