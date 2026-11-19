@@ -12,7 +12,8 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Fredoka', sans-serif; -webkit-tap-highlight-color: transparent; user-select: none; }
     html, body { width: 100%; max-width: 100%; overflow-x: hidden; background: linear-gradient(180deg, #bae6fd 0%, #fef08a 55%, #fed7aa 100%); min-height: 100dvh; color: #1e293b; }
     body.mode-cbt { background: #f1f5f9 !important; }
-    body { padding-bottom: 30px; display: flex; flex-direction: column; align-items: center; }
+    body { padding-bottom: 92px; display: flex; flex-direction: column; align-items: center; }
+    body.sedang-ujian { padding-bottom: 24px; }
     header { width: 100%; background: linear-gradient(90deg, #0284c7, #0ea5e9); padding: 12px 14px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.12); border-bottom: 4px solid #facc15; position: sticky; top: 0; z-index: 20; color: #fff; }
     body.mode-cbt header { background: #0f172a; border-bottom: 4px solid #3b82f6; }
     header h1 { font-size: 1.22rem; letter-spacing: 0.5px; text-shadow: 1px 2px 0 rgba(0,0,0,0.2); }
@@ -29,12 +30,14 @@
     .input-nama:focus, .input-form:focus, .textarea-kode:focus { border-color: #0284c7; background: #ffffff; }
     .textarea-kode { font-family: monospace; font-size: 0.82rem; min-height: 150px; background: #0f172a; color: #38bdf8; border-color: #334155; }
     .label-form { display: block; text-align: left; font-size: 0.84rem; font-weight: 700; color: #334155; margin-top: 8px; }
-    .mode-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px; }
-    .mode-btn { border: none; border-radius: 20px; padding: 20px 16px; color: #fff; font-size: 1.2rem; font-weight: 700; cursor: pointer; box-shadow: 0 6px 0 rgba(0,0,0,0.18); display: flex; align-items: center; justify-content: space-between; text-align: left; }
-    .mode-btn:active { transform: translateY(3px); box-shadow: none; }
-    .mode-kuis { background: linear-gradient(135deg, #0ea5e9, #2563eb); }
-    .mode-ujian { background: linear-gradient(135deg, #f59e0b, #ea580c); }
-    .mode-admin { background: linear-gradient(135deg, #334155, #0f172a); padding: 14px 16px; font-size: 1rem; margin-top: 6px; }
+    .motivasi-card { background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); border: 3px solid #38bdf8; border-radius: 24px; padding: 26px 18px; margin-top: 8px; text-align: center; box-shadow: 0 10px 24px rgba(2, 132, 199, 0.14); }
+    .motivasi-teks { font-size: 1.16rem; font-weight: 700; color: #0f172a; line-height: 1.55; margin: 12px 0; font-style: italic; }
+    .motivasi-penulis { display: inline-block; background: #fef08a; color: #854d0e; border: 2px solid #facc15; padding: 5px 14px; border-radius: 50px; font-size: 0.86rem; font-weight: 700; }
+    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; width: 100%; background: #ffffff; border-top: 3px solid #cbd5e1; box-shadow: 0 -4px 16px rgba(0,0,0,0.1); display: flex; justify-content: space-around; align-items: center; padding: 6px 4px; z-index: 50; }
+    body.sedang-ujian .bottom-nav { display: none !important; }
+    .nav-item { flex: 1; background: transparent; border: none; padding: 6px 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; cursor: pointer; color: #64748b; font-size: 0.72rem; font-weight: 700; border-radius: 12px; transition: all 0.15s; }
+    .nav-item .nav-ikon { font-size: 1.35rem; line-height: 1; }
+    .nav-item.aktif { color: #0284c7; background: #e0f2fe; }
 
         .kelas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
     .kelas-btn { border: none; border-radius: 18px; padding: 16px 10px; color: #fff; font-size: 1.12rem; font-weight: 700; cursor: pointer; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; display: flex; flex-direction: column; align-items: center; gap: 4px; }
@@ -94,7 +97,7 @@
     th { background: #0284c7; color: #fff; font-weight: 700; }
     tr:nth-child(even) { background: #f8fafc; }
     @media (min-width: 600px) { header h1 { font-size: 1.48rem; } .kelas-grid { grid-template-columns: 1fr 1fr 1fr; } .opsi-btn { font-size: 1.12rem; min-height: 62px; } }
-    @media print { body { background: #fff !important; } header, .no-print { display: none !important; } .container { max-width: 100%; margin: 0; padding: 0; } .card { border: none; box-shadow: none; } }
+    @media print { body { background: #fff !important; padding-bottom: 0; } header, .no-print, .bottom-nav { display: none !important; } .container { max-width: 100%; margin: 0; padding: 0; } .card { border: none; box-shadow: none; } }
   </style>
 </head>
 
@@ -104,6 +107,26 @@
     <p>Kurikulum Merdeka • Tahun Ajaran 2026/2027</p>
   </header>
   <div class="container" id="app"></div>
+
+  <nav class="bottom-nav no-print" id="bottomNav">
+    <button class="nav-item aktif" id="nav-home" onclick="tampilBeranda()">
+      <span class="nav-ikon">🏠</span>
+      <span>Home</span>
+    </button>
+    <button class="nav-item" id="nav-kuis" onclick="bukaMenuKelasKuis()">
+      <span class="nav-ikon">🎮</span>
+      <span>Menu Kuis</span>
+    </button>
+    <button class="nav-item" id="nav-ujian" onclick="bukaMenuKelasUjian()">
+      <span class="nav-ikon">📝</span>
+      <span>Ujian (CBT)</span>
+    </button>
+    <button class="nav-item" id="nav-admin" onclick="tampilLoginAdmin()">
+      <span class="nav-ikon">⚙️</span>
+      <span>Admin</span>
+    </button>
+  </nav>
+
   <script>
     window.DATA_SEDDUR = {};
     window.DATA_UJIAN = {};
@@ -245,7 +268,15 @@
       { kode: "uas_2", judul: "UAS Semester 2", waktuInfo: "90 Menit Total", ikon: "📕", warna: "m-bing" }
     ];
 
-        function hentikanTimer() {
+        function setNavAktif(idMenu) {
+      document.body.classList.remove("sedang-ujian");
+      ["nav-home", "nav-kuis", "nav-ujian", "nav-admin"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.toggle("aktif", id === idMenu);
+      });
+    }
+
+    function hentikanTimer() {
       if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
@@ -318,46 +349,33 @@
         function tampilBeranda() {
       hentikanTimer();
       document.body.classList.remove("mode-cbt");
+      setNavAktif("nav-home");
       try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
       document.getElementById("app").innerHTML = `
         <div class="card">
           <div style="font-size:2.8rem; margin-bottom:4px;" class="anim-bounce">🏫🎓🌟</div>
           <h2 style="color:#0284c7; font-size:1.25rem;">Selamat Datang di Dunia SDN Seddur 1!</h2>
-          <p style="color:#64748b; font-size:0.86rem; margin-top:4px;">Silakan pilih menu belajar atau ujian resmi di bawah ini</p>
+          <p style="color:#64748b; font-size:0.86rem; margin-top:4px;">Gunakan menu navigasi di bawah layar untuk memulai</p>
         </div>
-        <div class="mode-grid">
-          <button class="mode-btn mode-kuis" onclick="bukaMenuKelasKuis()">
-            <div>
-              <div>🎮 MENU KUIS</div>
-              <div style="font-size:0.78rem; font-weight:400; opacity:0.9;">Latihan interaktif Kelas 1 - 6</div>
-            </div>
-            <span style="font-size:1.6rem;">▶️</span>
-          </button>
-          <button class="mode-btn mode-ujian" onclick="bukaMenuKelasUjian()">
-            <div>
-              <div>📝 MENU UJIAN (CBT)</div>
-              <div style="font-size:0.78rem; font-weight:400; opacity:0.9;">Ujian Per Bab, UTS & UAS Berwaktu</div>
-            </div>
-            <span style="font-size:1.6rem;">🔐</span>
-          </button>
-          <button class="mode-btn mode-admin" onclick="tampilLoginAdmin()">
-            <div>
-              <div>⚙️ MENU ADMIN</div>
-              <div style="font-size:0.75rem; font-weight:400; opacity:0.8;">Generator AI, Rekap Nilai & Pengaturan</div>
-            </div>
-            <span>🔑</span>
-          </button>
+
+        <div class="motivasi-card">
+          <div style="font-size:2.3rem;">💡✨📖</div>
+          <div class="motivasi-teks">
+            "Jangan pernah berhenti belajar, karena hidup tak pernah berhenti mengajarkan hal baru."
+          </div>
+          <div class="motivasi-penulis">— Motivasi Belajar</div>
         </div>`;
     }
 
     function bukaMenuKelasKuis() {
       hentikanTimer();
       document.body.classList.remove("mode-cbt");
+      setNavAktif("nav-kuis");
       mainkanEfek('klik');
       modeAplikasi = "kuis";
       namaSiswa = "Siswa Hebat";
       document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Menu Awal</button><div class="star-bar">🎮 Mode Kuis</div></div>
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Home</button><div class="star-bar">🎮 Mode Kuis</div></div>
         <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Pilih Kelas (Menu Kuis)</h2><p style="color:#64748b; font-size:0.84rem;">Materi Per Bab • Tahun Ajaran 2026/2027</p></div>
         <div class="kelas-grid">
           <button class="kelas-btn k1" onclick="pilihKelasKuis(1)"><span>🎈 Kelas 1</span><span class="kelas-sub">Fase A</span></button>
@@ -418,9 +436,10 @@
         function bukaMenuKelasUjian() {
       hentikanTimer();
       document.body.classList.add("mode-cbt");
+      setNavAktif("nav-ujian");
       modeAplikasi = "ujian";
       document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Menu Awal</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">📝 Ujian Resmi CBT</div></div>
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Home</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">📝 Ujian Resmi CBT</div></div>
         <div class="card card-cbt" style="text-align:center;">
           <h2 style="color:#0f172a; font-size:1.2rem;">Pilih Kelas Peserta Ujian</h2>
           <p style="color:#64748b; font-size:0.84rem;">Ujian menggunakan timer otomatis & kode akses dari pengawas</p>
@@ -466,6 +485,7 @@
 
         function tampilKategoriUjian() {
       hentikanTimer();
+      document.body.classList.remove("sedang-ujian");
       const dataUjianKelas = getDataUjianKelasAman(kelasAktif);
 
       let tombolUTS_UAS = daftarKategoriUjian.map(kat => {
@@ -578,6 +598,7 @@
     }
 
     function jalankanMesinCBT(daftarSoalMentah) {
+      document.body.classList.add("sedang-ujian");
       soalPermainan = acakArray(daftarSoalMentah).map(item => {
         const jawabanBenar = item.opsi[item.kunci];
         const opsiAcak = acakArray(item.opsi);
@@ -728,6 +749,7 @@
       }
 
       hentikanTimer();
+      document.body.classList.remove("sedang-ujian");
       jumlahBenar = 0;
       soalPermainan.forEach((soal, idx) => {
         if (jawabanSiswaUjian[idx] === soal.kunci) jumlahBenar++;
@@ -769,7 +791,7 @@
             </div>
           </div>
 
-          <button class="btn-aksi" style="width:100%; margin-top:14px; background:#0f172a; box-shadow:none;" onclick="tampilBeranda()">🏠 Kembali ke Halaman Utama</button>
+          <button class="btn-aksi" style="width:100%; margin-top:14px; background:#0f172a; box-shadow:none;" onclick="tampilBeranda()">🏠 Kembali ke Home</button>
         </div>`;
     }
 
@@ -848,9 +870,10 @@
         function tampilLoginAdmin() {
       hentikanTimer();
       document.body.classList.remove("mode-cbt");
+      setNavAktif("nav-admin");
       mainkanEfek('klik');
       document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Menu Awal</button><div class="star-bar">🔑 Area Admin</div></div>
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Home</button><div class="star-bar">🔑 Area Admin</div></div>
         <div class="card">
           <div style="font-size:2.5rem;">🛡️</div>
           <h2 style="color:#0f172a; font-size:1.2rem; margin-top:4px;">Login Administrator</h2>
@@ -950,13 +973,13 @@
     }
 
     function togglePilihanBabGenerator() {
-      const kat = document.getElementById("genKategori").value.split("|")[0];
+      const kat = document.getElementById("genKategori").value.split("|");
       document.getElementById("wadahPilihBabGen").style.display = (kat === "bab") ? "block" : "none";
     }
 
     function perbaruiOpsiBabGenerator() {
       const kls = Number(document.getElementById("genKelas").value);
-      const kodeMapel = document.getElementById("genMapel").value.split("|")[0];
+      const kodeMapel = document.getElementById("genMapel").value.split("|");
       const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
       const selectBab = document.getElementById("genDaftarBab");
 
@@ -975,11 +998,11 @@
         function buatKodeSoalGitHub() {
       const kls = document.getElementById("genKelas").value;
       const mapelRaw = document.getElementById("genMapel").value.split("|");
-      const kodeMapel = mapelRaw[0];
-      const namaMapel = mapelRaw[1];
+      const kodeMapel = mapelRaw;
+      const namaMapel = mapelRaw;
       const katRaw = document.getElementById("genKategori").value.split("|");
-      const katKode = katRaw[0];
-      const katNama = katRaw[1];
+      const katKode = katRaw;
+      const katNama = katRaw;
 
       let judulBab = document.getElementById("genDaftarBab").value;
       if (judulBab === "__BARU__") {
@@ -1108,13 +1131,13 @@
 
       let daftarOpsiBab = [];
       if (fKelas !== "ALL" && fMapelRaw !== "ALL") {
-        const kodeMapel = fMapelRaw.split("|")[0];
+        const kodeMapel = fMapelRaw.split("|");
         const sinkron = getDaftarBabSinkron(Number(fKelas), kodeMapel);
         daftarOpsiBab = sinkron.map(b => b.bab);
       } else {
         let semua = [];
         try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-        const namaMapelFilter = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|")[1];
+        const namaMapelFilter = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|");
         semua.forEach(item => {
           const isUTS_UAS = ["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(item.kategori);
           if (!isUTS_UAS) {
@@ -1149,7 +1172,7 @@
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const fKelas = document.getElementById("filterKelas").value;
       const fMapelRaw = document.getElementById("filterMapel").value;
-      const fMapelNama = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|")[1];
+      const fMapelNama = fMapelRaw === "ALL" ? "ALL" : fMapelRaw.split("|");
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "ALL";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1183,7 +1206,7 @@
       const infoBox = document.getElementById("infoRingkasanFilter");
       const fKelas = document.getElementById("filterKelas").value;
       const fMapelRaw = document.getElementById("filterMapel").value;
-      const fMapelNama = fMapelRaw === "ALL" ? "Semua Mapel" : fMapelRaw.split("|")[1];
+      const fMapelNama = fMapelRaw === "ALL" ? "Semua Mapel" : fMapelRaw.split("|");
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fUnik = document.getElementById("filterKodeUnik").value;
 
@@ -1241,7 +1264,7 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       const labelKelas = fKelas === "ALL" ? "SemuaKelas" : `Kelas${fKelas}`;
-      const labelMapel = fMapelRaw === "ALL" ? "SemuaMapel" : fMapelRaw.split("|")[0].replace(/[^a-zA-Z0-9]/g, "_");
+      const labelMapel = fMapelRaw === "ALL" ? "SemuaMapel" : fMapelRaw.split("|").replace(/[^a-zA-Z0-9]/g, "_");
       const labelTipe = fTipe === "ALL" ? "SemuaUjian" : fTipe.replace(/[^a-zA-Z0-9]/g, "_");
       const labelUnik = fUnik === "ALL" ? "SemuaKode" : fUnik.replace(/[^a-zA-Z0-9]/g, "_");
 
