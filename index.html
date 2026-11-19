@@ -27,7 +27,7 @@
     .anim-bounce { display: inline-block; animation: bounce 1.8s infinite; }
     .judul-bergerak { display: inline-block; font-size: 1.24rem; font-weight: 700; animation: gerakJudul 2.4s ease-in-out infinite; margin-top: 4px; }
 
-        .banner-beranda { width: 100%; height: 95px; object-fit: cover; object-position: center; border-radius: 14px; border: 2px solid #bae6fd; margin-bottom: 10px; display: block; box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
+        .banner-beranda { width: 100%; height: auto; max-height: 75px; object-fit: contain; background: #f8fafc; border-radius: 12px; border: 2px solid #bae6fd; margin: 0 auto 10px; display: block; box-shadow: 0 3px 8px rgba(0,0,0,0.06); }
     .input-nama, .input-form, .textarea-kode { width: 100%; padding: 11px 13px; border-radius: 14px; border: 2px solid #7dd3fc; font-size: 0.96rem; font-weight: 600; color: #0f172a; outline: none; margin: 6px 0; background: #f0f9ff; user-select: text; }
     .input-nama { text-align: center; font-size: 1.05rem; border-width: 3px; }
     .input-nama:focus, .input-form:focus, .textarea-kode:focus { border-color: #0284c7; background: #ffffff; }
@@ -99,7 +99,7 @@
     th, td { padding: 8px 9px; border-bottom: 1px solid #e2e8f0; }
     th { background: #0284c7; color: #fff; font-weight: 700; }
     tr:nth-child(even) { background: #f8fafc; }
-    @media (min-width: 600px) { header h1 { font-size: 1.48rem; } .banner-beranda { height: 125px; } .kelas-grid { grid-template-columns: 1fr 1fr 1fr; } .opsi-btn { font-size: 1.12rem; min-height: 62px; } }
+    @media (min-width: 600px) { header h1 { font-size: 1.48rem; } .banner-beranda { max-height: 90px; } .kelas-grid { grid-template-columns: 1fr 1fr 1fr; } .opsi-btn { font-size: 1.12rem; min-height: 62px; } }
     @media print { body { background: #fff !important; padding-bottom: 0; } header, .no-print, .bottom-nav { display: none !important; } .container { max-width: 100%; margin: 0; padding: 0; } .card { border: none; box-shadow: none; } }
   </style>
 </head>
