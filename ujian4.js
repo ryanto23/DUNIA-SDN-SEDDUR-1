@@ -2,6 +2,24 @@ window.DATABASE_BAB = window.DATABASE_BAB || {};
 window.DATABASE_SOAL = window.DATABASE_SOAL || {};
 
 Object.assign(window.DATABASE_BAB, {
+  "4-Seni & Budaya": [
+    "Bab 1. a",
+    "Bab 2. b",
+    "Bab 3. c",
+    "Bab 4. d"
+  ],
+  "4-Bahasa Madura": [
+    "Bab 1. a",
+    "Bab 2. b",
+    "Bab 3. c",
+    "Bab 4. d"
+  ],
+  "4-PAI & Budi pekerti": [
+    "Bab 1. a",
+    "Bab 2. b",
+    "Bab 3. c",
+    "Bab 4. d"
+  ],
   "4-pancasila": [
     "Bab 1. Pancasila sebagai Nilai Kehidupan",
     "Bab 2. Konstitusi dan Norma di Masyarakat",
@@ -561,29 +579,5 @@ window.tambahPaketUjian("4", "madura", "UAS Semester 1", [
     "p": ["Pamitan", "Ngocap salam", "Jalok tolong"],
     "b": 1,
     "bahas": "Pembahasan soal nomor 1."
-  },
-  {
-    "q": "Soal nomor 2 (UAS Semester 1)...",
-    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
-    "b": 0,
-    "bahas": "Pembahasan soal nomor 2."
-  },
-  {
-    "q": "Soal nomor 3 (UAS Semester 1)...",
-    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
-    "b": 0,
-    "bahas": "Pembahasan soal nomor 3."
-  },
-  {
-    "q": "Soal nomor 4 (UAS Semester 1)...",
-    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
-    "b": 0,
-    "bahas": "Pembahasan soal nomor 4."
-  },
-  {
-    "q": "Soal nomor 5 (UAS Semester 1)...",
-    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
-    "b": 0,
-    "bahas": "Pembahasan soal nomor 5."
   }
 ]);
