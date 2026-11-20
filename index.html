@@ -1243,8 +1243,7 @@
         return;
       }
 
-      const bagianMapel = mapelVal.split("|");
-      const kodeMapel = bagianMapel;
+      const kodeMapel = mapelVal.split("|").shift();
       const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
       let opsiHTML = daftarBab.map(b => `<option value="${b.bab}">${b.bab}</option>`).join("");
       opsiHTML += `<option value="__BARU__">➕ Buat Judul Bab Baru...</option>`;
@@ -1270,8 +1269,8 @@
 
       if (target === "TKA") {
         const mapelTKAParts = document.getElementById("genMapelTKA").value.split("|");
-        const kodeTKA = mapelTKAParts;
-        const namaTKA = mapelTKAParts;
+        const kodeTKA = mapelTKAParts.shift();
+        const namaTKA = mapelTKAParts.pop();
         const sesiTKA = document.getElementById("genSesiTKA").value;
         topik = topik || `Simulasi TKA ${namaTKA} ${sesiTKA}`;
         fileTujuan = "tka.js";
@@ -1290,8 +1289,8 @@
           barisDaftarMapel = `window.daftarMapelBaru("${kodeMapel}", "${namaMapel}");\n`;
         } else {
           const mapelRaw = mapelVal.split("|");
-          kodeMapel = mapelRaw;
-          namaMapel = mapelRaw;
+          kodeMapel = mapelRaw.shift();
+          namaMapel = mapelRaw.pop();
         }
 
         const kat = document.getElementById("genKategori").value;
@@ -1415,8 +1414,8 @@
       if (!selectBab) return;
       const fKelas = Number(document.getElementById("filterKelas").value);
       const mapelParts = document.getElementById("filterMapel").value.split("|");
-      const kodeMapel = mapelParts;
-      const namaMapel = mapelParts;
+      const kodeMapel = mapelParts.shift();
+      const namaMapel = mapelParts.pop();
 
       const sinkron = getDaftarBabSinkron(fKelas, kodeMapel);
       const daftarOpsiBab = sinkron.map(b => b.bab);
@@ -1456,8 +1455,7 @@
       let semua = [];
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const fKelas = String(document.getElementById("filterKelas").value);
-      const mapelParts = document.getElementById("filterMapel").value.split("|");
-      const fMapelNama = mapelParts || "";
+      const fMapelNama = document.getElementById("filterMapel").value.split("|").pop() || "";
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1479,12 +1477,12 @@
       });
     }
 
-    function renderTabelNilai() {
+        function renderTabelNilai() {
       const data = getDataTersaring();
       const wadah = document.getElementById("wadahTabelNilai");
       const infoBox = document.getElementById("infoRingkasanFilter");
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|") || "";
+      const fMapelNama = document.getElementById("filterMapel").value.split("|").pop() || "";
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1525,7 +1523,7 @@
       if (data.length === 0) { alert("Tidak ada data pada filter yang dipilih untuk diunduh!"); return; }
 
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|") || "Mapel";
+      const fMapelNama = document.getElementById("filterMapel").value.split("|").pop() || "Mapel";
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
