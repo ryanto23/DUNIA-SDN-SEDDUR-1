@@ -317,12 +317,13 @@
         function getInfoMapel(kode) {
       if (daftarNamaMapel[kode]) return daftarNamaMapel[kode];
       if (window.MAPEL_KUSTOM && window.MAPEL_KUSTOM[kode]) return window.MAPEL_KUSTOM[kode];
-      const judulRapi = kode.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const judulRapi = String(kode).replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
       return { judul: judulRapi, ikon: "📘", kelasCss: "m-ipas" };
     }
 
     function getSemuaKodeMapelKelas(kls) {
       const setKode = new Set(Object.keys(daftarNamaMapel));
+      Object.keys(window.MAPEL_KUSTOM || {}).forEach(k => setKode.add(k));
       const prefix = `${kls}-`;
       Object.keys(window.DATABASE_BAB || {}).forEach(k => {
         if (k.startsWith(prefix)) setKode.add(k.slice(prefix.length));
@@ -330,8 +331,8 @@
       Object.keys(window.DATABASE_SOAL || {}).forEach(k => {
         if (k.startsWith(prefix)) {
           const sisa = k.slice(prefix.length);
-          const kode = sisa.split("-");
-          if (kode) setKode.add(kode);
+          const idxStrip = sisa.indexOf("-");
+          if (idxStrip > 0) setKode.add(sisa.slice(0, idxStrip));
         }
       });
       return Array.from(setKode);
@@ -422,15 +423,16 @@
       document.getElementById("app").innerHTML = `
         <div class="card">
           <img class="banner-beranda" src="foto1.jpeg" alt="SDN Seddur 1" onerror="this.style.display='none'" />
-          <h2 class="judul-bergerak">Selamat Datang di Dunia SDN Seddur 1</h2>
+          <h2 class="judul-bergerak">Selamat Datang di Dunia SDN Seddur 1!</h2>
           <p style="color:#64748b; font-size:0.84rem; margin-top:4px;">Gunakan menu navigasi di bawah layar untuk memulai</p>
         </div>
 
         <div class="motivasi-card">
-          <div style="font-size:2.3rem;">💡📖</div>
+          <div style="font-size:2.3rem;">💡✨📖</div>
           <div class="motivasi-teks">
             "Jangan pernah berhenti belajar, karena hidup tak pernah berhenti mengajarkan hal baru."
           </div>
+          <div class="motivasi-penulis">— Motivasi Belajar</div>
         </div>`;
     }
 
@@ -1241,7 +1243,8 @@
         return;
       }
 
-      const kodeMapel = mapelVal.split("|");
+      const bagianMapel = mapelVal.split("|");
+      const kodeMapel = bagianMapel;
       const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
       let opsiHTML = daftarBab.map(b => `<option value="${b.bab}">${b.bab}</option>`).join("");
       opsiHTML += `<option value="__BARU__">➕ Buat Judul Bab Baru...</option>`;
@@ -1454,7 +1457,7 @@
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const fKelas = String(document.getElementById("filterKelas").value);
       const mapelParts = document.getElementById("filterMapel").value.split("|");
-      const fMapelNama = mapelParts;
+      const fMapelNama = mapelParts || "";
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1481,7 +1484,7 @@
       const wadah = document.getElementById("wadahTabelNilai");
       const infoBox = document.getElementById("infoRingkasanFilter");
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|");
+      const fMapelNama = document.getElementById("filterMapel").value.split("|") || "";
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1522,7 +1525,7 @@
       if (data.length === 0) { alert("Tidak ada data pada filter yang dipilih untuk diunduh!"); return; }
 
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|");
+      const fMapelNama = document.getElementById("filterMapel").value.split("|") || "Mapel";
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
