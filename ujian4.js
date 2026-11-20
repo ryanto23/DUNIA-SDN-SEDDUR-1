@@ -575,9 +575,10 @@ window.tambahPaketUjian("4", "mtk", "Bab 2. Pecahan", [
 // Tempelkan di BARIS PALING BAWAH file ujian4.js
 window.tambahPaketUjian("4", "madura", "UAS Semester 1", [
   {
-    "q": "Assalamualaikum" lamon bâ'na ketemu guru è sakola'an, artèna bâ'na...",
-    "p": ["Pamitan", "Ngocap salam", "Jalok tolong"],
+    "q": "'Assalamualaikum' lamon bâ'na ketemu guru è sakola'an, artèna bâ'na...",
+    "p": ["Pamitan", "Ngocap salam", "Jalok tolong", "Mènta sapora"],
     "b": 1,
     "bahas": "Pembahasan soal nomor 1."
   }
 ]);
+
