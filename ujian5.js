@@ -1925,3 +1925,1620 @@ window.tambahPaketUjian("5", "kesenian", "UAS Semester 1", [
   }
 ]);
 
+window.tambahPaketUjian("5", "mtk", "UTS Semester 1", [
+  {
+    "q": "Bilangan 74.805 dibaca ....",
+    "p": [
+      "Tujuh puluh empat ribu delapan ratus lima puluh",
+      "Tujuh puluh empat ribu delapan ratus lima",
+      "Tujuh puluh empat ribu delapan puluh lima",
+      "Tujuh ribu empat ratus delapan puluh lima"
+    ],
+    "b": 1,
+    "bahas": "74.000 (tujuh puluh empat ribu) + 800 (delapan ratus) + 5 (lima) = tujuh puluh empat ribu delapan ratus lima."
+  },
+  {
+    "q": "Lambang bilangan dari 'sembilan puluh dua ribu tiga ratus empat belas' adalah ....",
+    "p": ["92.341", "92.314", "92.034", "90.234"],
+    "b": 1,
+    "bahas": "92.000 + 300 + 14 = 92.314."
+  },
+  {
+    "q": "Pada bilangan 68.491, angka yang menempati nilai tempat ratusan adalah ....",
+    "p": ["6", "8", "4", "9"],
+    "b": 2,
+    "bahas": "6 = puluhan ribu, 8 = ribuan, 4 = ratusan, 9 = puluhan, 1 = satuan."
+  },
+  {
+    "q": "Selisih nilai angka 7 dan angka 3 pada bilangan 75.320 adalah ....",
+    "p": ["69.700", "69.970", "67.000", "40.000"],
+    "b": 0,
+    "bahas": "Nilai angka 7 = 70.000 dan nilai angka 3 = 300. Selisih = 70.000 - 300 = 69.700."
+  },
+  {
+    "svg": "<svg width='180' height='65' xmlns='http://w3.org'><rect x='12' y='14' width='58' height='36' rx='6' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='41' y='37' font-size='11' font-weight='bold' text-anchor='middle'>54.890</text><circle cx='90' cy='32' r='12' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><text x='90' y='37' font-size='12' font-weight='bold' text-anchor='middle'>?</text><rect x='110' y='14' width='58' height='36' rx='6' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='139' y='37' font-size='11' font-weight='bold' text-anchor='middle'>54.980</text></svg>",
+    "q": "Tanda perbandingan yang tepat untuk mengganti tanda tanya (?) pada gambar di atas adalah ....",
+    "p": ["<", ">", "=", "+"],
+    "b": 0,
+    "bahas": "54.890 lebih kecil daripada 54.980, sehingga tanda perbandingan yang benar adalah '<'."
+  },
+  {
+    "q": "Urutan bilangan berikut dari yang terbesar ke terkecil yang benar adalah ....",
+    "p": [
+      "45.670; 45.760; 46.570; 46.750",
+      "46.750; 46.570; 45.760; 45.670",
+      "46.570; 46.750; 45.760; 45.670",
+      "45.760; 45.670; 46.750; 46.570"
+    ],
+    "b": 1,
+    "bahas": "Urutan dari nilai terbesar ke terkecil adalah 46.750; 46.570; 45.760; 45.670."
+  },
+  {
+    "q": "Dekomposisi (uraian nilai tempat) yang benar dari bilangan 83.506 adalah ....",
+    "p": [
+      "80.000 + 3.000 + 500 + 6",
+      "80.000 + 3.000 + 50 + 6",
+      "80.000 + 300 + 50 + 6",
+      "8.000 + 300 + 50 + 6"
+    ],
+    "b": 0,
+    "bahas": "83.506 = 80.000 + 3.000 + 500 + 0 + 6."
+  },
+  {
+    "q": "Hasil penjumlahan dari 47.850 + 26.475 adalah ....",
+    "p": ["73.325", "74.225", "74.325", "75.325"],
+    "b": 2,
+    "bahas": "47.850 + 26.475 = 74.325."
+  },
+  {
+    "q": "Hasil pengurangan dari 80.000 - 34.625 adalah ....",
+    "p": ["45.375", "45.475", "46.375", "55.375"],
+    "b": 0,
+    "bahas": "80.000 - 34.625 = 45.375."
+  },
+  {
+    "q": "Ayah memiliki uang Rp95.000,00. Uang tersebut dibelikan beras seharga Rp58.500,00 dan gula pasir seharga Rp17.500,00. Sisa uang Ayah sekarang adalah ....",
+    "p": ["Rp18.000,00", "Rp19.000,00", "Rp20.000,00", "Rp21.000,00"],
+    "b": 1,
+    "bahas": "Total belanja = 58.500 + 17.500 = Rp76.000,00. Sisa uang = 95.000 - 76.000 = Rp19.000,00."
+  },
+  {
+    "q": "Sebuah koperasi sekolah membeli 35 dus buku tulis. Setiap dus berisi 40 buku tulis. Jumlah seluruh buku tulis yang dibeli koperasi adalah ....",
+    "p": ["1.200 buku", "1.300 buku", "1.400 buku", "1.500 buku"],
+    "b": 2,
+    "bahas": "35 × 40 = 1.400 buku tulis."
+  },
+  {
+    "q": "Hasil pembagian dari 3.648 : 12 adalah ....",
+    "p": ["34", "304", "340", "403"],
+    "b": 1,
+    "bahas": "3.648 : 12 = 304."
+  },
+  {
+    "q": "Kelipatan persekutuan pertama (terkecil) dari bilangan 8 dan 12 adalah ....",
+    "p": ["16", "24", "36", "48"],
+    "b": 1,
+    "bahas": "Kelipatan 8: 8, 16, 24... Kelipatan 12: 12, 24... Jadi KPK = 24."
+  },
+  {
+    "q": "Semua faktor dari bilangan 28 adalah ....",
+    "p": [
+      "1, 2, 4, 7, 14, 28",
+      "1, 2, 4, 6, 14, 28",
+      "1, 2, 7, 14, 28",
+      "2, 4, 7, 14, 28"
+    ],
+    "b": 0,
+    "bahas": "28 = 1 × 28, 2 × 14, 4 × 7. Jadi faktornya adalah 1, 2, 4, 7, 14, 28."
+  },
+  {
+    "q": "Bilangan prima yang terletak di antara 20 dan 30 adalah ....",
+    "p": ["21 dan 27", "23 dan 29", "23 dan 27", "25 dan 29"],
+    "b": 1,
+    "bahas": "Bilangan prima di antara 20 dan 30 hanyalah 23 dan 29."
+  },
+  {
+    "svg": "<svg width='150' height='85' xmlns='http://w3.org'><circle cx='75' cy='18' r='12' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='75' y='22' font-size='10' font-weight='bold' text-anchor='middle'>36</text><line x1='67' y1='28' x2='45' y2='45' stroke='#0f172a' stroke-width='1.5'/><line x1='83' y1='28' x2='105' y2='45' stroke='#0f172a' stroke-width='1.5'/><circle cx='45' cy='52' r='10' fill='#bae6fd' stroke='#0284c7'/><text x='45' y='55' font-size='9' text-anchor='middle'>2</text><circle cx='105' cy='52' r='10' fill='#bae6fd' stroke='#0284c7'/><text x='105' y='55' font-size='9' text-anchor='middle'>18</text></svg>",
+    "q": "Perhatikan awal pohon faktor bilangan 36 pada gambar di atas! Faktorisasi prima lengkap dari bilangan 36 adalah ....",
+    "p": ["2 × 3²", "2² × 3", "2² × 3²", "2³ × 3"],
+    "b": 2,
+    "bahas": "36 = 4 × 9 = 2² × 3²."
+  },
+  {
+    "q": "Faktor Persekutuan Terbesar (FPB) dari 32 dan 48 adalah ....",
+    "p": ["8", "12", "16", "24"],
+    "b": 2,
+    "bahas": "32 = 2⁵ dan 48 = 2⁴ × 3. FPB = 2⁴ = 16."
+  },
+  {
+    "q": "Kelipatan Persekutuan Terkecil (KPK) dari 15 dan 20 adalah ....",
+    "p": ["30", "45", "60", "90"],
+    "b": 2,
+    "bahas": "15 = 3 × 5 dan 20 = 2² × 5. KPK = 2² × 3 × 5 = 60."
+  },
+  {
+    "q": "Pak Hasan ronda malam setiap 6 hari sekali, sedangkan Pak Rudi ronda malam setiap 8 hari sekali. Jika pada tanggal 2 September mereka ronda bersama, pada tanggal berapa mereka akan ronda bersama lagi?",
+    "p": ["16 September", "24 September", "26 September", "30 September"],
+    "b": 2,
+    "bahas": "KPK dari 6 dan 8 adalah 24 hari. Tanggal bertemu lagi = 2 + 24 = 26 September."
+  },
+  {
+    "q": "Siti memiliki 42 permen rasa jeruk dan 56 permen rasa stroberi. Permen tersebut akan dimasukkan ke dalam kantong plastik dengan isi setiap rasa sama banyak. Kantong plastik terbanyak yang dibutuhkan Siti adalah ....",
+    "p": ["7 kantong", "14 kantong", "21 kantong", "28 kantong"],
+    "b": 1,
+    "bahas": "FPB dari 42 dan 56 adalah 14 kantong."
+  },
+  {
+    "q": "Berdasarkan soal sebelumnya (42 permen jeruk dan 56 permen stroberi dibagi ke dalam 14 kantong), banyak permen rasa stroberi pada setiap kantong adalah ....",
+    "p": ["3 permen", "4 permen", "6 permen", "7 permen"],
+    "b": 1,
+    "bahas": "56 permen stroberi : 14 kantong = 4 permen stroberi per kantong."
+  },
+  {
+    "q": "Hasil dari 12.500 + 4.500 × 4 adalah ....",
+    "p": ["30.500", "68.000", "28.500", "32.500"],
+    "b": 0,
+    "bahas": "Perkalian dikerjakan terlebih dahulu: 4.500 × 4 = 18.000. Lalu 12.500 + 18.000 = 30.500."
+  },
+  {
+    "q": "Bilangan kelipatan 7 yang terletak di antara 30 dan 50 adalah ....",
+    "p": ["35, 42, 49", "35, 40, 45", "32, 39, 46", "34, 41, 48"],
+    "b": 0,
+    "bahas": "7 × 5 = 35, 7 × 6 = 42, 7 × 7 = 49."
+  },
+  {
+    "q": "FPB dari tiga bilangan sekaligus yaitu 18, 24, dan 30 adalah ....",
+    "p": ["3", "6", "9", "12"],
+    "b": 1,
+    "bahas": "18 = 2 × 3², 24 = 2³ × 3, 30 = 2 × 3 × 5. FPB = 2 × 3 = 6."
+  },
+  {
+    "q": "Seorang pedagang buah memiliki 1.250 buah apel. Sebanyak 475 buah terjual pada pagi hari dan 525 buah terjual pada sore hari. Sisa buah apel pedagang tersebut adalah ....",
+    "p": ["200 buah", "250 buah", "300 buah", "350 buah"],
+    "b": 1,
+    "bahas": "Total terjual = 475 + 525 = 1.000 buah. Sisa = 1.250 - 1.000 = 250 buah."
+  }
+]);
+
+window.tambahPaketUjian("5", "ipas", "UTS Semester 1", [
+  {
+    "q": "Sifat cahaya yang memungkinkan kita dapat melihat bayangan wajah kita sendiri saat berdiri di depan cermin adalah cahaya dapat ....",
+    "p": ["Dibiaskan", "Dipantulkan", "Diuraikan", "Menembus benda gelap"],
+    "b": 1,
+    "bahas": "Cermin datar memantulkan cahaya secara teratur sehingga menghasilkan bayangan yang sama persis dengan bendanya."
+  },
+  {
+    "q": "Benda-benda di bawah ini yang termasuk benda buram (translusen) yaitu hanya meneruskan sebagian cahaya dan menyebarkan sebagian lainnya adalah ....",
+    "p": ["Kaca bening dan air jernih", "Kaca es (kaca buram) dan kertas kalkir", "Papan kayu dan tembok bata", "Besi dan buku tebal"],
+    "b": 1,
+    "bahas": "Kaca es dan kertas kalkir meneruskan cahaya secara baur/sebagian sehingga objek di baliknya tampak samar."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><polygon points='55,55 85,15 115,55' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><line x1='20' y1='38' x2='70' y2='38' stroke='#f8fafc' stroke-width='3'/><line x1='100' y1='32' x2='155' y2='22' stroke='#ef4444' stroke-width='2'/><line x1='102' y1='38' x2='155' y2='38' stroke='#22c55e' stroke-width='2'/><line x1='104' y1='44' x2='155' y2='54' stroke='#3b82f6' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar seberkas cahaya putih yang melewati prisma kaca di atas! Peristiwa terurainya cahaya putih menjadi berbagai warna spektrum cahaya disebut ....",
+    "p": ["Refleksi", "Refraksi", "Dispersi cahaya", "Absorpsi"],
+    "b": 2,
+    "bahas": "Dispersi cahaya adalah penguraian cahaya polikromatik (putih) menjadi cahaya monokromatik (mejikuhibiniu)."
+  },
+  {
+    "q": "Bagian mata bagian luar yang bening dan berfungsi melindungi bagian depan mata serta memfokuskan cahaya yang masuk pertama kali adalah ....",
+    "p": ["Kornea", "Retina", "Lensa mata", "Saraf mata"],
+    "b": 0,
+    "bahas": "Kornea adalah selaput bening di bagian paling depan bola mata yang meneruskan cahaya menuju pupil."
+  },
+  {
+    "q": "Layar tempat jatuhnya bayangan benda di bagian belakang dalam bola mata yang peka terhadap cahaya disebut ....",
+    "p": ["Iris", "Pupil", "Retina (selaput jala)", "Sklera"],
+    "b": 2,
+    "bahas": "Retina menangkap bayangan benda dan mengubahnya menjadi sinyal saraf menuju otak."
+  },
+  {
+    "q": "Gangguan kesehatan mata pada lansia yang tidak dapat melihat dengan jelas pada jarak dekat maupun jarak jauh akibat melemahnya daya akomodasi lensa mata disebut ....",
+    "p": ["Miopi", "Hipermetropi", "Presbiopi (mata tua)", "Buta warna"],
+    "b": 2,
+    "bahas": "Presbiopi atau mata tua dibantu dengan kacamata berlensa rangkap (bifokal)."
+  },
+  {
+    "q": "Bunyi yang memiliki frekuensi lebih dari 20.000 Hz sehingga tidak dapat didengar oleh telinga manusia namun dapat didengar oleh kelelawar dan lumba-lumba disebut bunyi ....",
+    "p": ["Infrasonik", "Audiosonik", "Ultrasonik", "Supersonik"],
+    "b": 2,
+    "bahas": "Ultrasonik (>20.000 Hz) didengar kelelawar dan lumba-lumba; audiosonik (20–20.000 Hz) didengar manusia."
+  },
+  {
+    "q": "Perambatan bunyi berlangsung paling cepat melalui medium zat ....",
+    "p": ["Padat (seperti besi dan kayu)", "Cair (seperti air laut)", "Gas (seperti udara)", "Hampa udara"],
+    "b": 0,
+    "bahas": "Partikel zat padat tersusun sangat rapat sehingga gelombang bunyi merambat paling cepat melalui zat padat."
+  },
+  {
+    "q": "Bahan-bahan lunak dan berpori yang dipasang pada dinding studio musik atau gedung bioskop untuk mencegah terjadinya gaung disebut bahan ....",
+    "p": ["Pemantul bunyi", "Peredam bunyi (seperti karpet, busa, dan gabus)", "Penghantar listrik", "Pembias cahaya"],
+    "b": 1,
+    "bahas": "Karpet, busa, wol, dan gabus menyerap gelombang bunyi sehingga mencegah gaung."
+  },
+  {
+    "q": "Tiga tulang pendengaran di telinga tengah yang berfungsi meneruskan getaran dari gendang telinga ke rumah siput (koklea) adalah ....",
+    "p": [
+      "Tulang martil, tulang landasan, dan tulang sanggurdi",
+      "Tulang hasta, tulang pengumpil, dan tulang kering",
+      "Tulang rusuk, tulang dada, dan tulang belikat",
+      "Tulang dahi, tulang pipi, dan tulang rahang"
+    ],
+    "b": 0,
+    "bahas": "Tulang martil, landasan, dan sanggurdi memperkuat serta meneruskan getaran suara ke telinga dalam."
+  },
+  {
+    "q": "Saluran di telinga tengah yang menghubungkan rongga telinga dengan rongga mulut untuk menjaga keseimbangan tekanan udara pada gendang telinga disebut saluran ....",
+    "p": ["Eustachius", "Setengah lingkaran", "Koklea", "Saraf pendengaran"],
+    "b": 0,
+    "bahas": "Saluran Eustachius menyeimbangkan tekanan udara di dalam dan di luar gendang telinga."
+  },
+  {
+    "q": "Peristiwa makan dan dimakan antar-makhluk hidup dengan urutan tertentu di dalam suatu ekosistem disebut ....",
+    "p": ["Rantai makanan", "Simbiosis", "Metamorfosis", "Fotosintesis"],
+    "b": 0,
+    "bahas": "Rantai makanan adalah perjalanan memakan dan dimakan dengan urutan tertentu antarmakhluk hidup."
+  },
+  {
+    "svg": "<svg width='190' height='65' xmlns='http://w3.org'><rect x='5' y='18' width='38' height='28' rx='5' fill='#dcfce7' stroke='#16a34a'/><text x='24' y='35' font-size='8' text-anchor='middle'>Rumput</text><text x='49' y='35' font-size='10'>→</text><rect x='56' y='18' width='40' height='28' rx='5' fill='#fef08a' stroke='#ca8a04'/><text x='76' y='35' font-size='8' text-anchor='middle'>Belalang</text><text x='101' y='35' font-size='10'>→</text><rect x='108' y='18' width='34' height='28' rx='5' fill='#fed7aa' stroke='#ea580c'/><text x='125' y='35' font-size='8' text-anchor='middle'>Katak</text><text x='147' y='35' font-size='10'>→</text><rect x='154' y='18' width='32' height='28' rx='5' fill='#fecaca' stroke='#dc2626'/><text x='170' y='35' font-size='8' text-anchor='middle'>Ular</text></svg>",
+    "q": "Perhatikan rantai makanan di ekosistem padang rumput pada gambar di atas! Makhluk hidup yang berperan sebagai konsumen tingkat I (konsumen primer) adalah ....",
+    "p": ["Rumput", "Belalang", "Katak", "Ular"],
+    "b": 1,
+    "bahas": "Rumput adalah produsen, sedangkan belalang (pemakan tumbuhan langsung) adalah konsumen tingkat I."
+  },
+  {
+    "q": "Kumpulan dari beberapa rantai makanan yang saling berhubungan dan tumpang tindih di dalam suatu ekosistem disebut ....",
+    "p": ["Jaring-jaring makanan", "Piramida energi", "Populasi", "Habitat"],
+    "b": 0,
+    "bahas": "Jaring-jaring makanan adalah gabungan banyak rantai makanan yang saling terhubung dalam ekosistem."
+  },
+  {
+    "q": "Dalam piramida makanan, kelompok makhluk hidup yang memiliki jumlah populasi dan energi paling besar sehingga berada di bagian paling dasar adalah ....",
+    "p": ["Produsen (tumbuhan hijau)", "Konsumen tingkat I", "Konsumen tingkat II", "Konsumen puncak"],
+    "b": 0,
+    "bahas": "Produsen berada di dasar piramida makanan karena menangkap energi matahari secara langsung untuk menyokong kehidupan di atasnya."
+  },
+  {
+    "q": "Aliran energi yang terjadi di dalam sebuah rantai makanan berpindah dari ....",
+    "p": [
+      "Matahari → produsen → konsumen → pengurai",
+      "Konsumen puncak → produsen → matahari",
+      "Pengurai → konsumen → produsen",
+      "Batu dan air → konsumen tingkat II"
+    ],
+    "b": 0,
+    "bahas": "Energi cahaya matahari diubah tumbuhan menjadi energi kimia lalu mengalir ke konsumen dan berakhir di pengurai."
+  },
+  {
+    "q": "Di ekosistem kebun terdapat tanaman sawi, ulat, burung pipit, dan kucing. Jika petani menyemprotkan pestisida secara berlebihan hingga semua ulat mati, maka akibat yang langsung terjadi adalah ....",
+    "p": [
+      "Burung pipit kekurangan sumber makanan sehingga populasinya menurun",
+      "Tanaman sawi ikut mati karena tidak ada ulat",
+      "Populasi burung pipit bertambah sangat banyak",
+      "Kucing berubah menjadi pemakan daun sawi"
+    ],
+    "b": 0,
+    "bahas": "Karena ulat merupakan makanan burung pipit, hilangnya ulat menyebabkan burung pipit kehilangan makanannya."
+  },
+  {
+    "q": "Benda di bawah ini yang dapat memantulkan cahaya paling baik untuk membuat alat periskop pada kapal selam adalah ....",
+    "p": ["Cermin datar", "Kertas karton hitam", "Kain wol", "Kaca buram"],
+    "b": 0,
+    "bahas": "Periskop menggunakan dua buah cermin datar yang dipasang miring 45 derajat untuk memantulkan cahaya."
+  },
+  {
+    "q": "Bayangan benda gelap akan terbentuk di belakang benda tersebut apabila cahaya mengenai benda yang bersifat ....",
+    "p": ["Tidak tembus cahaya (opak)", "Bening dan transparan", "Tipis seperti plastik bening", "Cair seperti air jernih"],
+    "b": 0,
+    "bahas": "Cahaya merambat lurus dan tidak dapat menembus benda gelap (opak), sehingga terbentuk bayangan di belakangnya."
+  },
+  {
+    "q": "Bunyi pantul yang terdengar jelas setelah bunyi asli selesai diucapkan, misalnya saat kita berteriak di tebing gunung yang tinggi, disebut ....",
+    "p": ["Gema", "Gaung", "Desah", "Nada"],
+    "b": 0,
+    "bahas": "Gema terjadi bila jarak dinding pemantul sangat jauh sehingga bunyi pantul terdengar utuh sesudah bunyi asli."
+  },
+  {
+    "q": "Hewan herbivora di bawah ini yang berperan sebagai konsumen tingkat I di ekosistem padang rumput adalah ....",
+    "p": ["Zebra dan rusa", "Singa dan cheetah", "Burung elang dan ular", "Buaya dan ikan hiu"],
+    "b": 0,
+    "bahas": "Zebra dan rusa memakan rumput secara langsung sehingga berperan sebagai konsumen tingkat I."
+  },
+  {
+    "q": "Faktor alam yang dapat menyebabkan perubahan dan kerusakan keseimbangan ekosistem secara tiba-tiba adalah ....",
+    "p": [
+      "Letusan gunung berapi, gempa bumi, dan tsunami",
+      "Reboisasi hutan gundul",
+      "Pembuatan taman kota",
+      "Penanaman terumbu karang"
+    ],
+    "b": 0,
+    "bahas": "Bencana alam seperti gunung meletus dan tsunami dapat merusak habitat makhluk hidup secara alami."
+  },
+  {
+    "q": "Contoh tindakan manusia yang membantu menjaga keharmonisan dan keseimbangan ekosistem hutan adalah ....",
+    "p": [
+      "Melakukan sistem tebang pilih dan reboisasi (penanaman kembali)",
+      "Membakar hutan untuk membuka lahan perkebunan",
+      "Menangkap semua burung langka untuk dijual",
+      "Membuang sampah beracun di pinggir hutan"
+    ],
+    "b": 0,
+    "bahas": "Tebang pilih dan reboisasi menjaga kelestarian pohon dan habitat satwa di hutan."
+  },
+  {
+    "q": "Cara merawat kesehatan indra pendengaran (telinga) agar tidak mengalami gangguan pendengaran adalah ....",
+    "p": [
+      "Menghindari mendengarkan musik dengan volume terlalu keras dan membersihkan daun telinga secara lembut",
+      "Mengorek bagian dalam telinga menggunakan benda tajam atau peniti",
+      "Mendengarkan earphone dengan suara maksimal sepanjang malam",
+      "Membiarkan air kotor masuk ke dalam telinga"
+    ],
+    "b": 0,
+    "bahas": "Suara terlalu keras dapat merusak gendang telinga, sedangkan benda tajam berisiko melukai saluran telinga."
+  },
+  {
+    "q": "Mengapa kelestarian dekomposer (pengurai) seperti bakteri dan jamur tanah sangat penting bagi kesuburan tumbuhan?",
+    "p": [
+      "Karena pengurai mengembalikan zat hara dan mineral dari sisa makhluk hidup mati ke dalam tanah",
+      "Karena pengurai memakan daun-daun tumbuhan yang masih hijau",
+      "Karena pengurai menghalangi sinar matahari masuk ke bumi",
+      "Karena pengurai membuat tanah menjadi keras seperti batu"
+    ],
+    "b": 0,
+    "bahas": "Dekomposer mendaur ulang materi organik menjadi nutrisi mineral yang diserap kembali oleh akar tumbuhan."
+  }
+]);
+
+window.tambahPaketUjian("5", "bindo", "UTS Semester 1", [
+  {
+    "q": "Kata sifat yang paling tepat untuk menggambarkan seseorang yang suka memberi bantuan dan berbagi kepada orang yang membutuhkan adalah ....",
+    "p": ["Kikir", "Dermawan", "Angkuh", "Ceroboh"],
+    "b": 1,
+    "bahas": "Dermawan adalah kata sifat yang berarti pemurah hati dan suka beramal/berbagi kepada sesama."
+  },
+  {
+    "q": "Kata dasar 'tolong' apabila diberi awalan 'pe-' akan berubah bentuk menjadi ....",
+    "p": ["Petolong", "Penolong", "Pentolong", "Pengtolong"],
+    "b": 1,
+    "bahas": "Huruf awal 't' pada kata dasar 'tolong' luluh menjadi 'n-' saat bertemu awalan 'pe-', sehingga menjadi 'penolong'."
+  },
+  {
+    "q": "Kata dasar 'bohong' jika mendapat imbuhan 'pe-' yang benar adalah ....",
+    "p": ["Pebohong", "Pembohong", "Penbohong", "Pengbohong"],
+    "b": 1,
+    "bahas": "Kata dasar berawalan huruf 'b' yang mendapat awalan 'pe-' menjadi 'pem-', sehingga terbentuk kata 'pembohong'."
+  },
+  {
+    "q": "Imbuhan 'pe-' pada kalimat 'Budi dikenal sebagai anak yang pendiam di kelasnya' menyatakan makna ....",
+    "p": ["Alat untuk melakukan pekerjaan", "Sifat atau watak seseorang", "Pekerjaan atau profesi", "Penyebab sesuatu"],
+    "b": 1,
+    "bahas": "Kata 'pendiam' menunjukkan sifat atau karakter seseorang yang tidak banyak bicara."
+  },
+  {
+    "q": "Sinonim (persamaan kata) dari kata 'cerdik' adalah ....",
+    "p": ["Bodoh", "Pintar dan banyak akal", "Pemalas", "Penakut"],
+    "b": 1,
+    "bahas": "Cerdik bersinonim dengan pintar, pandai, dan cepat mengerti serta banyak akal."
+  },
+  {
+    "q": "Antonim (lawan kata) dari kata 'dermawan' adalah ....",
+    "p": ["Pemurah", "Kikir (pelit)", "Santun", "Ramah"],
+    "b": 1,
+    "bahas": "Lawan kata dari 'dermawan' (suka memberi) adalah 'kikir' atau 'pelit'."
+  },
+  {
+    "q": "Perhatikan dua kalimat tunggal berikut:\nKalimat 1: Rina gemar membaca buku cerita.\nKalimat 2: Adiknya gemar menggambar pemandangan.\n\nPenggabungan kedua kalimat tersebut menjadi kalimat majemuk setara yang tepat adalah ....",
+    "p": [
+      "Rina gemar membaca buku cerita, sedangkan adiknya gemar menggambar pemandangan.",
+      "Rina gemar membaca buku cerita karena adiknya gemar menggambar pemandangan.",
+      "Rina gemar membaca buku cerita sehingga adiknya gemar menggambar pemandangan.",
+      "Rina gemar membaca buku cerita agar adiknya gemar menggambar pemandangan."
+    ],
+    "b": 0,
+    "bahas": "Konjungsi 'sedangkan' menggabungkan dua kalimat setara yang menyatakan perbedaan kegiatan."
+  },
+  {
+    "q": "Kalimat berikut yang merupakan kalimat majemuk setara sebab-akibat adalah ....",
+    "p": [
+      "Dina belajar dengan tekun sehingga ia berhasil meraih juara kelas.",
+      "Ayah membaca koran dan Ibu menyiram tanaman di halaman.",
+      "Kamu ingin minum teh hangat atau jus jeruk dingin?",
+      "Kakak rajin berolahraga, tetapi adiknya lebih suka bermain catur."
+    ],
+    "b": 0,
+    "bahas": "Kata penghubung 'sehingga' menyatakan hubungan sebab-akibat."
+  },
+  {
+    "q": "Keterangan waktu, tempat, dan suasana terjadinya peristiwa dalam sebuah cerita fiksi disebut ....",
+    "p": ["Alur", "Latar (setting)", "Tema", "Amanat"],
+    "b": 1,
+    "bahas": "Latar meliputi tempat kejadian, waktu berlangsungnya peristiwa, dan suasana cerita."
+  },
+  {
+    "q": "Pesan kebaikan atau nasihat yang ingin disampaikan pengarang kepada pembaca melalui sebuah cerita disebut ....",
+    "p": ["Tokoh", "Amanat", "Watak", "Judul"],
+    "b": 1,
+    "bahas": "Amanat adalah pesan moral yang dapat dipetik dari cerita."
+  },
+  {
+    "q": "Kalimat di bawah ini yang menggunakan majas PERSONIFIKASI adalah ....",
+    "p": [
+      "Suaranya menggelegar membelah angkasa saat bernyanyi.",
+      "Pohon-pohon kelapa di tepi pantai menari-nari tertiup angin.",
+      "Ia dikenal sebagai bintang kelas di sekolahnya.",
+      "Tas sekolah ini beratnya berton-ton."
+    ],
+    "b": 1,
+    "bahas": "Kata 'menari-nari' memberikan sifat manusia kepada benda mati (pohon kelapa)."
+  },
+  {
+    "q": "Perhatikan kalimat berikut: 'Rani adalah bunga desa yang ramah kepada semua warga.' Kata 'bunga desa' dalam kalimat tersebut menggunakan majas ....",
+    "p": ["Metafora", "Personifikasi", "Hiperbola", "Litotes"],
+    "b": 0,
+    "bahas": "Majas metafora membandingkan seseorang secara langsung dengan sesuatu yang memiliki sifat serupa ('bunga desa' = gadis cantik/kebanggaan desa)."
+  },
+  {
+    "q": "Penulisan kalimat langsung yang benar sesuai aturan tanda baca bahasa Indonesia adalah ....",
+    "p": [
+      "Ibu bertanya, 'Apakah kamu sudah mengerjakan PR?'",
+      "Ibu bertanya 'Apakah kamu sudah mengerjakan PR?'",
+      "Ibu bertanya, Apakah kamu sudah mengerjakan PR?",
+      "'Ibu bertanya', Apakah kamu sudah mengerjakan PR?"
+    ],
+    "b": 0,
+    "bahas": "Kalimat langsung dipisahkan tanda koma (,) setelah pengiring dan diapit tanda petik dengan huruf kapital di awal kutipan."
+  },
+  {
+    "q": "Ubahlah kalimat tidak langsung berikut menjadi kalimat langsung yang tepat!\nKalimat tidak langsung: Ayah mengatakan bahwa besok pagi kami akan berkunjung ke rumah nenek.",
+    "p": [
+      "Ayah berkata, 'Besok pagi kita akan berkunjung ke rumah nenek.'",
+      "Ayah berkata, 'Besok pagi mereka akan berkunjung ke rumah nenek.'",
+      "Saya berkata kepada Ayah, 'Besok pagi kita ke rumah nenek.'",
+      "Ayah bertanya, 'Kapan kita berkunjung ke rumah nenek?'"
+    ],
+    "b": 0,
+    "bahas": "Kata ganti 'kami' pada kalimat tidak langsung berubah menjadi 'kita' pada kalimat langsung yang diucapkan Ayah."
+  },
+  {
+    "svg": "<svg width='175' height='75' xmlns='http://w3.org'><rect x='25' y='12' width='125' height='50' rx='6' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/><line x1='45' y1='12' x2='45' y2='62' stroke='#1d4ed8' stroke-width='3'/><text x='95' y='34' font-size='9' font-weight='bold' text-anchor='middle' fill='#1e3a8a'>ENSIKLOPEDIA</text><text x='95' y='48' font-size='8' text-anchor='middle' fill='#0f172a'>Sains &amp; Alam Semesta</text></svg>",
+    "q": "Perhatikan sampul buku pada gambar di atas! Buku ensiklopedia yang berisi fakta dan ilmu pengetahuan termasuk jenis buku ....",
+    "p": ["Fiksi", "Nonfiksi", "Komik fantasi", "Dongeng rakyat"],
+    "b": 1,
+    "bahas": "Buku nonfiksi disusun berdasarkan data, fakta nyata, dan ilmu pengetahuan, seperti ensiklopedia dan buku pelajaran."
+  },
+  {
+    "q": "Bagian depan sebuah buku yang berisi judul buku, nama penulis, nama penerbit, dan gambar ilustrasi utama disebut ....",
+    "p": ["Sampul depan (kover)", "Daftar pustaka", "Indeks", "Glosarium"],
+    "b": 0,
+    "bahas": "Sampul depan memuat judul, penulis, ilustrasi menarik, dan identitas penerbit."
+  },
+  {
+    "q": "Orang yang bertugas menggambar ilustrasi untuk memperindah isi sebuah buku cerita disebut ....",
+    "p": ["Ilustrator", "Editor", "Penerbit", "Pencetak"],
+    "b": 0,
+    "bahas": "Ilustrator adalah seniman yang membuat gambar ilustrasi pada buku."
+  },
+  {
+    "q": "Bacalah paragraf berikut!\nSetiap anak memiliki bakat dan keunikan yang berbeda-beda. Ada anak yang pandai berhitung, ada yang mahir melukis, dan ada pula yang berbakat di bidang olahraga. Semua keunikan tersebut harus disyukuri dan dikembangkan dengan latihan yang tekun.\n\nIde pokok paragraf di atas adalah ....",
+    "p": [
+      "Cara melatih kemampuan berhitung cepat",
+      "Setiap anak memiliki bakat dan keunikan berbeda yang perlu dikembangkan",
+      "Olahraga lebih penting daripada melukis",
+      "Semua anak harus memiliki hobi yang sama"
+    ],
+    "b": 1,
+    "bahas": "Kalimat utama di awal paragraf menjelaskan bahwa setiap anak memiliki bakat dan keunikan berbeda."
+  },
+  {
+    "q": "Berdasarkan paragraf tentang keunikan anak di atas, bagaimana cara mengembangkan bakat yang kita miliki?",
+    "p": [
+      "Dengan bersyukur dan berlatih secara tekun",
+      "Dengan membandingkan diri untuk merendahkan teman",
+      "Dengan berdiam diri tanpa mencoba hal baru",
+      "Dengan meniru semua hobi teman"
+    ],
+    "b": 0,
+    "bahas": "Pada kalimat terakhir dijelaskan keunikan tersebut harus disyukuri dan dikembangkan dengan latihan yang tekun."
+  },
+  {
+    "q": "Kata dasar 'pilih' apabila diberi awalan 'pe-' akan menjadi kata ....",
+    "p": ["Pepilih", "Pemilih", "Penpilih", "Pengpilih"],
+    "b": 1,
+    "bahas": "Huruf awal 'p' luluh menjadi 'm-' saat bertemu awalan 'pe-', menjadi 'pemilih'."
+  },
+  {
+    "q": "Sinonim dari kata 'mahir' dalam kalimat 'Rani sangat mahir memainkan alat musik biola' adalah ....",
+    "p": ["Terampil / pandai", "Kaku", "Lambat", "Ragu-ragu"],
+    "b": 0,
+    "bahas": "Mahir berarti sangat terlatih, cakap, dan terampil mengerjakan sesuatu."
+  },
+  {
+    "q": "Antonim (lawan kata) dari kata 'ramah' adalah ....",
+    "p": ["Sopan", "Judas / ketus", "Santun", "Akrab"],
+    "b": 1,
+    "bahas": "Lawan kata dari 'ramah' (manis tutur kata dan sikapnya) adalah 'ketus' atau 'judes'."
+  },
+  {
+    "q": "Urutan proses pembuatan sebuah buku cerita hingga sampai ke tangan pembaca yang benar adalah ....",
+    "p": [
+      "Penulis menulis naskah → editor menyunting naskah → ilustrator menggambar → penerbit mencetak buku",
+      "Penerbit mencetak buku → penulis menulis naskah → toko menjual buku",
+      "Toko menjual buku → ilustrator menggambar → editor menyunting",
+      "Editor menyunting → pembaca membeli → penulis menulis naskah"
+    ],
+    "b": 0,
+    "bahas": "Alur penerbitan buku dimulai dari penulisan naskah, penyuntingan oleh editor, pembuatan ilustrasi, pencetakan, lalu distribusi."
+  },
+  {
+    "q": "Halaman pada bagian akhir buku nonfiksi yang memuat daftar sumber buku rujukan yang digunakan oleh penulis disebut ....",
+    "p": ["Daftar pustaka", "Daftar isi", "Kata pengantar", "Biografi penulis"],
+    "b": 0,
+    "bahas": "Daftar pustaka mencantumkan sumber referensi yang dipakai penulis dalam menyusun buku."
+  },
+  {
+    "q": "Sikap yang tepat terhadap perbedaan sifat dan hobi antarteman di kelas adalah ....",
+    "p": [
+      "Saling menghargai, mendukung bakat masing-masing, dan berteman dengan rukun",
+      "Mengejek teman yang memiliki hobi berbeda",
+      "Memaksa teman menyukai permainan yang kita sukai",
+      "Hanya mau berteman dengan anak yang sama hobinya"
+    ],
+    "b": 0,
+    "bahas": "Menghargai keunikan dan perbedaan setiap teman menciptakan persahabatan yang indah di kelas."
+  }
+]);
+
+window.tambahPaketUjian("5", "pai", "UTS Semester 1", [
+  {
+    "q": "Surah Al-Ma'un merupakan surah ke-107 di dalam Al-Qur'an dan terdiri atas .... ayat.",
+    "p": ["5", "6", "7", "8"],
+    "b": 2,
+    "bahas": "Surah Al-Ma'un berjumlah 7 ayat dan tergolong surah Makkiyah."
+  },
+  {
+    "q": "Lafaz ayat pertama Surah Al-Ma'un berbunyi 'Ara'aital-lazi yukazzibu bid-din' yang memiliki arti ....",
+    "p": [
+      "Tahukah kamu (orang) yang mendustakan agama?",
+      "Maka itulah orang yang menghardik anak yatim",
+      "Maka celakalah orang yang salat",
+      "Yang berbuat ria"
+    ],
+    "b": 0,
+    "bahas": "'Ara'aital-lazi yukazzibu bid-din' artinya Tahukah kamu (orang) yang mendustakan agama?"
+  },
+  {
+    "q": "Dalam Q.S. Al-Ma'un ayat 2 dijelaskan bahwa salah satu ciri orang yang mendustakan agama adalah orang yang .... anak yatim.",
+    "p": ["Menyayangi", "Menghardik (membentak dan menyakiti)", "Memberi makan", "Mendoakan"],
+    "b": 1,
+    "bahas": "'Fazalikal-lazi yadu''ul-yatim' artinya Maka itulah orang yang menghardik anak yatim."
+  },
+  {
+    "q": "Anak yang ditinggal wafat oleh ayah kandungnya sebelum ia mencapai usia balig disebut ....",
+    "p": ["Anak yatim", "Anak piatu", "Ibnu sabil", "Mualaf"],
+    "b": 0,
+    "bahas": "Anak yatim adalah anak yang ayahnya telah meninggal dunia sebelum anak tersebut dewasa (balig)."
+  },
+  {
+    "q": "Dalam Q.S. Al-Ma'un ayat 7 disebutkan bahwa orang-orang yang enggan memberikan bantuan berupa barang-barang yang berguna kepada sesama disebut ....",
+    "p": ["Wayamna'unal-ma'un", "Allazina hum yura'un", "Fawailul lil-musallin", "Allazina hum 'an salatihim sahun"],
+    "b": 0,
+    "bahas": "'Wayamna'unal-ma'un' artinya dan enggan (memberikan) bantuan (barang-barang yang berguna)."
+  },
+  {
+    "q": "Hukum bacaan mim sukun (مْ) apabila bertemu dengan huruf ba (ب) dibaca samar di bibir disertai dengung disebut ....",
+    "p": ["Ikhfa syafawi", "Idgham mimi", "Izhar syafawi", "Iqlab"],
+    "b": 0,
+    "bahas": "Mim sukun bertemu huruf ba (ب) hukum bacaannya adalah Ikhfa Syafawi."
+  },
+  {
+    "q": "Hukum bacaan mim sukun (مْ) apabila bertemu dengan huruf hijaiyah selain huruf mim (م) dan ba (ب) dibaca jelas di bibir tanpa dengung disebut ....",
+    "p": ["Izhar syafawi", "Ikhfa syafawi", "Idgham mimi", "Gunnah"],
+    "b": 0,
+    "bahas": "Izhar syafawi berarti membaca mim sukun secara jelas tanpa dengung ketika bertemu huruf selain mim dan ba."
+  },
+  {
+    "q": "Pada lafaz 'Allazina hum yura'un' (Q.S. Al-Ma'un ayat 6), terdapat mim sukun (مْ) bertemu huruf ya (ي). Hukum bacaan tajwidnya adalah ....",
+    "p": ["Izhar syafawi", "Ikhfa syafawi", "Idgham mimi", "Qalqalah"],
+    "b": 0,
+    "bahas": "Mim sukun bertemu ya (bukan mim dan bukan ba) dibaca jelas tanpa dengung, yaitu Izhar Syafawi."
+  },
+  {
+    "q": "Menurut hadis Nabi Muhammad saw., kedudukan orang yang menyayangi dan memelihara anak yatim dengan tulus di surga kelak adalah ....",
+    "p": [
+      "Sangat dekat dengan Nabi Muhammad saw. bagaikan jari telunjuk dan jari tengah",
+      "Berada di luar pintu surga",
+      "Sama seperti orang yang kikir",
+      "Jauh dari para nabi"
+    ],
+    "b": 0,
+    "bahas": "Rasulullah saw. bersabda bahwa beliau dan orang yang menanggung anak yatim di surga bagaikan dua jari (telunjuk dan jari tengah) yang berdekatan."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='11' font-weight='bold' text-anchor='middle' fill='#0369a1'>AL-QAWIYYU &amp; AL-QAYYUM</text><text x='87' y='48' font-size='9' text-anchor='middle' fill='#0f172a'>Maha Kuat &amp; Maha Berdiri Sendiri</text></svg>",
+    "q": "Perhatikan kartu Asmaulhusna pada gambar di atas! Iman kepada Asmaulhusna 'Al-Qawiyyu' menyadarkan kita bahwa kekuatan yang dimiliki manusia bersifat ....",
+    "p": [
+      "Terbatas dan merupakan titipan dari Allah Swt.",
+      "Kekal abadi selamanya",
+      "Tidak membutuhkan pertolongan Allah Swt.",
+      "Lebih besar daripada kekuatan alam semesta"
+    ],
+    "b": 0,
+    "bahas": "Hanya Allah Swt. Yang Maha Kuat (Al-Qawiyyu) secara mutlak; kekuatan manusia terbatas sehingga tidak boleh sombong."
+  },
+  {
+    "q": "Perilaku meneladani Asmaulhusna 'Al-Qawiyyu' yang terpuji di lingkungan sekolah adalah ....",
+    "p": [
+      "Menggunakan kekuatan fisik untuk melindungi teman yang lemah dan membantu kerja bakti",
+      "Menindas dan memalak adik kelas yang bertubuh kecil",
+      "Memamerkan otot untuk menakut-nakuti teman",
+      "Menolak membantu guru mengangkat buku"
+    ],
+    "b": 0,
+    "bahas": "Kekuatan yang Allah berikan wajib digunakan untuk menolong kebaikan, bukan untuk menindas."
+  },
+  {
+    "q": "Asmaulhusna 'Al-Qayyum' memiliki arti bahwa Allah Swt. Maha ....",
+    "p": [
+      "Berdiri Sendiri dan mengurus seluruh makhluk-Nya tanpa bantuan siapa pun",
+      "Mematikan setiap makhluk bernyawa",
+      "Menghidupkan tanah yang tandus",
+      "Membangkitkan manusia di hari akhir"
+    ],
+    "b": 0,
+    "bahas": "Al-Qayyum berarti Allah Maha Berdiri Sendiri dan terus-menerus mengurus ciptaan-Nya."
+  },
+  {
+    "q": "Contoh sikap mandiri yang mencerminkan meneladani Asmaulhusna 'Al-Qayyum' di rumah adalah ....",
+    "p": [
+      "Merapikan kamar tidur, mencuci sepatu sendiri, dan menyiapkan jadwal pelajaran",
+      "Menyuruh ibu mengerjakan seluruh tugas sekolah kita",
+      "Meminta kakak merapikan mainan yang kita pakai",
+      "Menangis jika tidak disuapi saat makan"
+    ],
+    "b": 0,
+    "bahas": "Membiasakan mandiri tidak bergantung pada orang lain adalah wujud meneladani Al-Qayyum."
+  },
+  {
+    "q": "Turunnya air hujan yang menyuburkan kembali tanah kering dan menumbuhkan biji-bijian menjadi tanaman hijau merupakan bukti nyata dari Asmaulhusna Allah yaitu ....",
+    "p": ["Al-Muhyi (Maha Menghidupkan)", "Al-Mumit (Maha Mematikan)", "Al-Gaffar", "Al-Hasib"],
+    "b": 0,
+    "bahas": "Al-Muhyi artinya Allah Maha Menghidupkan makhluk hidup maupun menyuburkan kembali bumi yang mati."
+  },
+  {
+    "q": "Setiap makhluk yang bernyawa pasti akan merasakan kematian sesuai waktu yang telah ditetapkan Allah Swt. karena Allah memiliki Asmaulhusna ....",
+    "p": ["Al-Muhyi", "Al-Mumit", "Al-Ba'is", "Al-Wahhab"],
+    "b": 1,
+    "bahas": "Al-Mumit berarti Allah Maha Mematikan seluruh makhluk hidup apabila ajalnya tiba."
+  },
+  {
+    "q": "Keimanan kepada Asmaulhusna 'Al-Mumit' mendorong seorang muslim untuk selalu mempersiapkan bekal sebelum kematian dengan cara ....",
+    "p": [
+      "Rajin beribadah, berbakti kepada orang tua, dan memperbanyak amal saleh",
+      "Menumpuk harta kekayaan tanpa mau bersedekah",
+      "Menunda-nunda salat wajib hingga habis waktunya",
+      "Bersenang-senang melupakan kewajiban agama"
+    ],
+    "b": 0,
+    "bahas": "Mengingat kematian (Al-Mumit) memotivasi kita memperbanyak amal kebaikan sebagai bekal akhirat."
+  },
+  {
+    "q": "Peristiwa dibangkitkannya seluruh umat manusia dari alam kubur pada hari kiamat untuk mempertanggungjawabkan amal perbuatannya membuktikan bahwa Allah memiliki Asmaulhusna ....",
+    "p": ["Al-Ba'is", "Al-Qawiyyu", "Al-Qayyum", "As-Salam"],
+    "b": 0,
+    "bahas": "Al-Ba'is artinya Allah Maha Membangkitkan manusia dari kubur pada hari kebangkitan (Yaumul Ba'as)."
+  },
+  {
+    "q": "Lawan dari sifat ria (pamer amal ibadah) yang harus dimiliki setiap muslim dalam beribadah dan bersedekah adalah ....",
+    "p": ["Ikhlas", "Takabur", "Hasad", "Bakhil"],
+    "b": 0,
+    "bahas": "Ikhlas berarti mengerjakan ibadah dan kebaikan semata-mata mengharap rida Allah Swt."
+  },
+  {
+    "q": "Orang yang lalai dalam salatnya sebagaimana diperingatkan dalam Q.S. Al-Ma'un ayat 5 adalah orang yang ....",
+    "p": [
+      "Sengaja menunda-nunda waktu salat dan tidak khusyuk saat mengerjakannya",
+      "Selalu datang ke masjid sebelum azan berkumandang",
+      "Mengerjakan salat sunah rawatib",
+      "Membaca doa setelah selesai salat"
+    ],
+    "b": 0,
+    "bahas": "Lalai terhadap salat mencakup melalaikan waktunya, tidak khusyuk, dan tidak menghayati bacaannya."
+  },
+  {
+    "q": "Bentuk kepedulian sosial yang dapat dilakukan siswa kelas 5 SD terhadap fakir miskin di sekitar lingkungan tempat tinggal adalah ....",
+    "p": [
+      "Menyisihkan sebagian uang saku untuk kotak infak dan berbagi makanan kepada tetangga yang membutuhkan",
+      "Mengejek pakaian tetangga yang sudah lusuh",
+      "Membuang makanan sisa yang masih layak makan",
+      "Menolak ikut kegiatan bakti sosial di sekolah"
+    ],
+    "b": 0,
+    "bahas": "Berinfak dan berbagi makanan merupakan wujud nyata kepedulian kepada fakir miskin sesuai ajaran Q.S. Al-Ma'un."
+  },
+  {
+    "q": "Lafaz 'Fawailul lil-musallin' dalam Surah Al-Ma'un ayat 4 memiliki arti ....",
+    "p": [
+      "Maka celakalah orang yang salat",
+      "Yang berbuat ria",
+      "Dan tidak menganjurkan memberi makan orang miskin",
+      "Tahukah kamu orang yang mendustakan agama"
+    ],
+    "b": 0,
+    "bahas": "'Fawailul lil-musallin' artinya Maka celakalah orang yang salat (yaitu yang lalai dan ria dalam salatnya)."
+  },
+  {
+    "q": "Perbuatan meminjamkan alat tulis seperti penghapus atau penggaris kepada teman sekelas yang lupa membawa merupakan contoh pengamalan Q.S. Al-Ma'un ayat ke-7 tentang ....",
+    "p": [
+      "Memberikan bantuan barang-barang yang berguna (al-ma'un)",
+      "Menghardik anak yatim",
+      "Melalaikan waktu salat",
+      "Berbuat ria di depan guru"
+    ],
+    "b": 0,
+    "bahas": "Al-Ma'un mencakup segala barang bermanfaat sehari-hari yang dipinjamkan atau diberikan kepada orang yang membutuhkan."
+  },
+  {
+    "q": "Cara meneladani Asmaulhusna 'Al-Muhyi' dalam menjaga kelestarian lingkungan sekitar sekolah adalah ....",
+    "p": [
+      "Menanam dan menyiram tanaman hijau serta merawat hewan peliharaan dengan kasih sayang",
+      "Memetik daun dan bunga di taman sekolah hingga layu",
+      "Membuang sampah plastik di pot tanaman",
+      "Menginjak-injak rumput taman sekolah"
+    ],
+    "b": 0,
+    "bahas": "Merawat tanaman dan menyayangi makhluk hidup mencerminkan meneladani sifat Allah Yang Maha Menghidupkan."
+  },
+  {
+    "q": "Ketika seorang teman bersedih karena kehilangan salah satu orang tuanya, sikap empati yang paling tepat kita lakukan adalah ....",
+    "p": [
+      "Menghiburnya dengan lembut, mendoakan almarhum, dan terus menjadi sahabat yang baik baginya",
+      "Menjauhinya agar tidak ikut merasa sedih",
+      "Membicarakan kesedihannya sebagai bahan candaan",
+      "Memintanya segera melupakan orang tuanya dengan nada kasar"
+    ],
+    "b": 0,
+    "bahas": "Menghibur, mendoakan, dan menyayangi anak yatim adalah perintah utama dalam Islam."
+  },
+  {
+    "q": "Hikmah utama mengimani dan menghafal Asmaulhusna dalam kehidupan sehari-hari adalah ....",
+    "p": [
+      "Menambah keimanan kepada Allah Swt. dan mendorong kita meneladani sifat-sifat mulia-Nya",
+      "Membuat kita merasa lebih hebat dari teman lain",
+      "Mengurangi kewajiban belajar pelajaran umum",
+      "Membuat kita sombong atas hafalan kita"
+    ],
+    "b": 0,
+    "bahas": "Mengimani Asmaulhusna memperkuat tauhid dan membentuk akhlak mulia dalam kehidupan sehari-hari."
+  }
+]);
+
+window.tambahPaketUjian("5", "pancasila", "UTS Semester 1", [
+  {
+    "q": "Nama lain dalam bahasa Jepang untuk Badan Penyelidik Usaha-Usaha Persiapan Kemerdekaan Indonesia (BPUPKI) adalah ....",
+    "p": [
+      "Dokuritsu Junbi Cosakai",
+      "Dokuritsu Junbi Inkai",
+      "Seinendan",
+      "Keibodan"
+    ],
+    "b": 0,
+    "bahas": "BPUPKI dalam bahasa Jepang disebut Dokuritsu Junbi Cosakai, sedangkan PPKI disebut Dokuritsu Junbi Inkai."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#fee2e2' stroke='#dc2626' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#991b1b'>SIDANG PERTAMA BPUPKI</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>29 Mei – 1 Juni 1945</text></svg>",
+    "q": "Perhatikan informasi peristiwa sejarah pada gambar di atas! Tiga tokoh nasional yang menyampaikan usulan rumusan dasar negara secara berurutan pada sidang pertama BPUPKI adalah ....",
+    "p": [
+      "Mr. Moh. Yamin, Mr. Soepomo, dan Ir. Soekarno",
+      "Ir. Soekarno, Drs. Moh. Hatta, dan Ki Hajar Dewantara",
+      "Mr. Ahmad Soebardjo, Sayuti Melik, dan Sukarni",
+      "dr. Radjiman Wedyodiningrat, Bung Tomo, dan Sudirman"
+    ],
+    "b": 0,
+    "bahas": "Pada sidang pertama BPUPKI, Mr. Moh. Yamin berpidato 29 Mei, Mr. Soepomo 31 Mei, dan Ir. Soekarno 1 Juni 1945."
+  },
+  {
+    "q": "Dalam pidatonya pada tanggal 1 Juni 1945, Ir. Soekarno mengusulkan nama 'Pancasila' untuk lima asas dasar negara atas saran seorang ahli bahasa yang bernama ....",
+    "p": ["Mr. Moh. Yamin", "Drs. Moh. Hatta", "Mr. Soepomo", "H. Agus Salim"],
+    "b": 0,
+    "bahas": "Ir. Soekarno menyampaikan bahwa nama Pancasila diperolehnya atas petunjuk seorang teman ahli bahasa, yaitu Mr. Moh. Yamin."
+  },
+  {
+    "q": "Lima asas dasar negara yang diusulkan oleh Mr. Soepomo pada tanggal 31 Mei 1945 antara lain meliputi ....",
+    "p": [
+      "Persatuan, Kekeluargaan, Keseimbangan lahir dan batin, Musyawarah, dan Keadilan rakyat",
+      "Ketuhanan, Internasionalisme, Mufakat, Kesejahteraan sosial, dan Kebangsaan",
+      "Peri Kebangsaan, Peri Kemanusiaan, Peri Ketuhanan, Peri Kerakyatan, dan Kesejahteraan Rakyat",
+      "Bhinneka Tunggal Ika, Gotong royong, dan Kemerdekaan"
+    ],
+    "b": 0,
+    "bahas": "Usulan Mr. Soepomo menekankan paham negara integralistik: Persatuan, Kekeluargaan, Keseimbangan lahir batin, Musyawarah, dan Keadilan rakyat."
+  },
+  {
+    "q": "Setelah sidang pertama BPUPKI berakhir, dibentuk panitia kecil beranggotakan 9 tokoh untuk merumuskan dasar negara yang diketuai oleh ....",
+    "p": [
+      "Ir. Soekarno",
+      "dr. K.R.T. Radjiman Wedyodiningrat",
+      "Mr. Soepomo",
+      "R.P. Soeroso"
+    ],
+    "b": 0,
+    "bahas": "Panitia Sembilan diketuai oleh Ir. Soekarno dengan wakil ketua Drs. Moh. Hatta."
+  },
+  {
+    "q": "Rancangan Pembukaan Hukum Dasar yang berhasil disepakati oleh Panitia Sembilan pada tanggal 22 Juni 1945 diberi nama ....",
+    "p": [
+      "Piagam Jakarta (Jakarta Charter)",
+      "Piagam Madinah",
+      "Teks Proklamasi",
+      "Sumpah Pemuda"
+    ],
+    "b": 0,
+    "bahas": "Piagam Jakarta disusun Panitia Sembilan pada 22 Juni 1945 yang memuat rumusan awal Pancasila."
+  },
+  {
+    "q": "Tokoh wakil ketua Panitia Sembilan sekaligus Wakil Presiden pertama RI yang berperan besar mengajak tokoh Islam menyepakati perubahan sila pertama demi persatuan bangsa pada 18 Agustus 1945 adalah ....",
+    "p": ["Drs. Moh. Hatta", "Mr. Ahmad Soebardjo", "Abikoesno Tjokrosoejoso", "A.A. Maramis"],
+    "b": 0,
+    "bahas": "Drs. Moh. Hatta bermusyawarah dengan tokoh-tokoh Islam sehingga sila pertama disepakati menjadi 'Ketuhanan Yang Maha Esa'."
+  },
+  {
+    "q": "Nilai keteladanan utama yang dapat kita pelajari dari para tokoh perumus Pancasila dalam sidang BPUPKI dan PPKI adalah ....",
+    "p": [
+      "Mengutamakan persatuan bangsa di atas kepentingan pribadi maupun golongan",
+      "Memaksakan pendapat sendiri agar diterima semua anggota sidang",
+      "Menolak bermusyawarah dengan kelompok yang berbeda pandangan",
+      "Mengutamakan kepentingan daerah asal masing-masing"
+    ],
+    "b": 0,
+    "bahas": "Para pendiri bangsa menunjukkan jiwa besar, toleransi, musyawarah, dan mengutamakan persatuan Indonesia."
+  },
+  {
+    "q": "Kedudukan Pancasila sebagai pandangan hidup bangsa Indonesia mengandung makna bahwa nilai-nilai Pancasila dijadikan sebagai ....",
+    "p": [
+      "Pedoman dan petunjuk arah dalam bersikap serta bertingkah laku sehari-hari",
+      "Hiasan dinding di ruang kelas dan kantor",
+      "Hafalan saat upacara hari Senin saja",
+      "Aturan khusus bagi pegawai negeri"
+    ],
+    "b": 0,
+    "bahas": "Sebagai pandangan hidup bangsa, Pancasila diamalkan dalam sikap dan perilaku sehari-hari setiap warga negara."
+  },
+  {
+    "q": "Contoh perilaku yang mencerminkan pengamalan sila pertama Pancasila di lingkungan tempat tinggal adalah ....",
+    "p": [
+      "Menjaga ketenangan saat tetangga yang berbeda agama sedang merayakan hari raya keagamaannya",
+      "Ikut kerja bakti memperbaiki jembatan desa",
+      "Membantu korban banjir di kabupaten tetangga",
+      "Mengikuti rapat pemilihan ketua karang taruna"
+    ],
+    "b": 0,
+    "bahas": "Menghormati tetangga yang berbeda keyakinan menjalankan ibadahnya adalah wujud nyata sila pertama."
+  },
+  {
+    "q": "Sikap menghargai harkat dan martabat sesama manusia, gemar melakukan kegiatan kemanusiaan, dan berani membela kebenaran merupakan pengamalan sila ke-....",
+    "p": ["Satu", "Dua", "Tiga", "Empat"],
+    "b": 1,
+    "bahas": "Nilai kemanusiaan dan keadilan antarsesama manusia terkandung dalam sila kedua Pancasila."
+  },
+  {
+    "q": "Perilaku di sekolah yang dapat merusak nilai persatuan dan kesatuan (sila ketiga Pancasila) adalah ....",
+    "p": [
+      "Mengejek teman yang memiliki warna kulit atau logat bahasa daerah berbeda",
+      "Bekerja sama membersihkan ruang kelas bersama regu piket",
+      "Menyanyikan lagu-lagu daerah Nusantara dengan penuh semangat",
+      "Berteman akrab dengan seluruh siswa tanpa pilih-pilih"
+    ],
+    "b": 0,
+    "bahas": "Mengejek perbedaan suku, fisik, atau bahasa daerah memicu perpecahan dan bertentangan dengan sila ketiga."
+  },
+  {
+    "q": "Apabila dalam musyawarah kelas untuk memilih ketua kelas tidak tercapai kata mufakat melalui diskusi, maka cara pengambilan keputusan demokratis yang dapat ditempuh adalah ....",
+    "p": [
+      "Pemungutan suara terbanyak (voting)",
+      "Menyerahkan keputusan kepada siswa yang paling kuat",
+      "Membubarkan kelas tanpa memilih ketua",
+      "Mengundi menggunakan koin"
+    ],
+    "b": 0,
+    "bahas": "Sesuai nilai demokrasi Pancasila (sila keempat), jika mufakat belum tercapai maka keputusan diambil melalui suara terbanyak (voting)."
+  },
+  {
+    "q": "Contoh pengamalan sila kelima Pancasila dalam lingkungan keluarga adalah ....",
+    "p": [
+      "Orang tua membagi tugas rumah dan perhatian secara adil kepada semua anak serta membiasakan hidup hemat",
+      "Anak menghabiskan seluruh uang tabungan untuk membeli mainan setiap hari",
+      "Kakak menyuruh adik mengerjakan semua pekerjaan rumah sendirian",
+      "Anggota keluarga membuang makanan yang tidak habis"
+    ],
+    "b": 0,
+    "bahas": "Bersikap adil kepada anggota keluarga, menghargai hak masing-masing, dan hidup hemat sesuai sila kelima."
+  },
+  {
+    "q": "Tradisi gotong royong membantu tetangga membangun rumah atau membersihkan saluran air desa mencerminkan pengamalan Pancasila terutama sila ke-....",
+    "p": ["Kesatu", "Ketiga", "Keempat", "Kesatu dan kedua saja"],
+    "b": 1,
+    "bahas": "Gotong royong mempererat kebersamaan, kekompakan, dan persatuan warga sesuai sila ketiga Pancasila."
+  },
+  {
+    "q": "Di daerah Madura dan Jawa Timur dikenal tradisi kerja sama saling membantu warga desa saat ada hajatan atau perbaikan jalan kampung yang disebut ....",
+    "p": ["Gugur gunung / song-osong lombhung", "Subak", "Ngayah", "Mapalus"],
+    "b": 0,
+    "bahas": "Song-osong lombhung di Madura dan gugur gunung di Jawa merupakan wujud kearifan lokal gotong royong masyarakat."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>MUSYAWARAH MUFAKAT</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Sila Keempat Pancasila</text></svg>",
+    "q": "Perhatikan gambar di atas! Sikap yang harus dihindari saat mengikuti kegiatan musyawarah di sekolah adalah ....",
+    "p": [
+      "Memaksakan kehendak pribadi dan memotong pembicaraan teman",
+      "Menyampaikan pendapat dengan bahasa yang santun",
+      "Mendengarkan usulan teman dengan tenang",
+      "Menerima hasil keputusan musyawarah dengan ikhlas"
+    ],
+    "b": 0,
+    "bahas": "Memaksakan kehendak dan tidak menghargai pembicara bertentangan dengan semangat musyawarah sila keempat."
+  },
+  {
+    "q": "Pancasila menjadi pemersatu bangsa Indonesia yang majemuk. Arti kata 'majemuk' adalah ....",
+    "p": [
+      "Terdiri atas berbagai ragam suku, agama, bahasa, dan budaya yang berbeda-beda",
+      "Hanya memiliki satu jenis kebudayaan",
+      "Tinggal di satu pulau kecil yang sama",
+      "Memiliki bahasa daerah yang seragam"
+    ],
+    "b": 0,
+    "bahas": "Masyarakat majemuk berarti masyarakat yang beragam latar belakang suku, agama, adat, dan budayanya."
+  },
+  {
+    "q": "Ketika seorang siswa melihat teman sekelasnya kesulitan memahami materi pelajaran Matematika, sikap terpuji yang sesuai nilai kemanusiaan dan gotong royong adalah ....",
+    "p": [
+      "Membantu menjelaskan cara mengerjakannya dengan sabar saat jam istirahat",
+      "Mengejeknya karena dianggap lambat belajar",
+      "Menyembunyikan buku catatan agar tidak dipinjam",
+      "Membiarkannya kebingungan sendirian"
+    ],
+    "b": 0,
+    "bahas": "Saling membantu dalam kebaikan mempererat persahabatan dan mengamalkan nilai Pancasila."
+  },
+  {
+    "q": "Simbol rantai emas pada perisai Garuda Pancasila memiliki mata rantai berbentuk persegi dan lingkaran yang saling berkaitan. Mata rantai berbentuk persegi melambangkan ....",
+    "p": ["Laki-laki", "Perempuan", "Anak-anak", "Orang tua"],
+    "b": 0,
+    "bahas": "Mata rantai persegi melambangkan laki-laki dan mata rantai lingkaran melambangkan perempuan yang saling bahu-membahu."
+  },
+  {
+    "q": "Simbol pohon beringin pada sila ketiga Pancasila memiliki akar tunjang yang menghujam dalam ke tanah dan akar gantung yang menjulur. Akar-akar tersebut melambangkan ....",
+    "p": [
+      "Keberagaman suku bangsa Indonesia yang menyatu di bawah naungan Negara Indonesia",
+      "Kekayaan hasil hutan kayu jati",
+      "Keindahan taman kota di ibu kota",
+      "Persaingan antardaerah di Indonesia"
+    ],
+    "b": 0,
+    "bahas": "Akar gantung pohon beringin melambangkan berbagai suku, budaya, dan agama yang bersatu padu dalam NKRI."
+  },
+  {
+    "q": "Contoh perilaku hidup hemat sebagai pengamalan sila kelima Pancasila di sekolah adalah ....",
+    "p": [
+      "Mematikan lampu dan kipas angin kelas saat jam istirahat atau setelah pelajaran selesai",
+      "Menghabiskan seluruh uang jajan untuk membeli mainan",
+      "Membuang kertas buku tulis yang masih kosong",
+      "Menyalakan keran air tempat cuci tangan terus-menerus"
+    ],
+    "b": 0,
+    "bahas": "Menghemat energi listrik dan air serta tidak boros adalah wujud pengamalan sila kelima."
+  },
+  {
+    "q": "Tokoh anggota Panitia Sembilan yang juga dikenal sebagai Bapak Koperasi Indonesia adalah ....",
+    "p": ["Drs. Moh. Hatta", "Mr. Ahmad Soebardjo", "K.H. Wahid Hasyim", "H. Agus Salim"],
+    "b": 0,
+    "bahas": "Drs. Moh. Hatta merupakan Wakil Presiden pertama RI, anggota Panitia Sembilan, dan Bapak Koperasi Indonesia."
+  },
+  {
+    "q": "Sikap yang mencerminkan cinta tanah air dan bangga sebagai bangsa Indonesia di lingkungan sekolah adalah ....",
+    "p": [
+      "Mengikuti upacara bendera hari Senin dengan tertib dan memakai seragam batik pada hari yang ditentukan",
+      "Mengobrol saat lagu kebangsaan Indonesia Raya dinyanyikan",
+      "Mencoret-coret dinding bangunan sekolah",
+      "Malas mempelajari sejarah perjuangan bangsa"
+    ],
+    "b": 0,
+    "bahas": "Khidmat saat upacara bendera dan bangga mengenakan batik merupakan wujud cinta tanah air."
+  },
+  {
+    "q": "Apabila setiap warga negara Indonesia mengamalkan nilai-nilai Pancasila dalam kehidupan sehari-hari, maka dampak positif yang tercipta bagi negara adalah ....",
+    "p": [
+      "Terwujudnya kehidupan berbangsa dan bernegara yang aman, rukun, adil, dan sejahtera",
+      "Meningkatnya perselisihan antarkelompok masyarakat",
+      "Hilangnya tradisi gotong royong di desa",
+      "Melemahnya persatuan dan kesatuan bangsa"
+    ],
+    "b": 0,
+    "bahas": "Pengamalan Pancasila menciptakan keharmonisan, persatuan, dan keadilan sosial bagi seluruh rakyat Indonesia."
+  }
+]);
+
+window.tambahPaketUjian("5", "bing", "UTS Semester 1", [
+  {
+    "q": "The taste of pure honey and ripe mango is ....",
+    "p": ["sour", "sweet", "bitter", "salty"],
+    "b": 1,
+    "bahas": "Madu murni (pure honey) dan mangga matang (ripe mango) rasanya manis (sweet)."
+  },
+  {
+    "q": "A lime (jeruk nipis) and tamarind (asam jawa) taste ....",
+    "p": ["sour", "sweet", "spicy", "salty"],
+    "b": 0,
+    "bahas": "Jeruk nipis dan asam jawa rasanya asam (sour)."
+  },
+  {
+    "q": "Salted fish (ikan asin) and sea water taste ....",
+    "p": ["sweet", "bitter", "salty", "sour"],
+    "b": 2,
+    "bahas": "Ikan asin dan air laut rasanya asin (salty)."
+  },
+  {
+    "q": "Mother puts too much chili in the soup. Now the soup tastes very ....",
+    "p": ["sweet", "spicy", "sour", "bitter"],
+    "b": 1,
+    "bahas": "Terlalu banyak cabai (chili) membuat sup terasa sangat pedas (spicy)."
+  },
+  {
+    "q": "Dark chocolate without sugar and pare (bitter melon) taste ....",
+    "p": ["salty", "bitter", "sweet", "spicy"],
+    "b": 1,
+    "bahas": "Cokelat hitam tanpa gula dan pare rasanya pahit (bitter)."
+  },
+  {
+    "svg": "<svg width='160' height='75' xmlns='http://w3.org'><path d='M40,35 Q40,60 80,60 Q120,60 120,35 Z' fill='#38bdf8' stroke='#0284c7' stroke-width='2'/><ellipse cx='80' cy='35' rx='40' ry='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><circle cx='70' cy='35' r='5' fill='#92400e'/><circle cx='90' cy='35' r='5' fill='#92400e'/></svg>",
+    "q": "Look at the picture above! Made is eating a ... of bakso in the canteen.",
+    "p": ["glass", "bowl", "plate", "bottle"],
+    "b": 1,
+    "bahas": "Bakso disajikan dalam mangkuk: 'a bowl of bakso'."
+  },
+  {
+    "q": "Aisyah is very thirsty. She wants to drink a ... of orange juice.",
+    "p": ["plate", "bowl", "glass", "slice"],
+    "b": 2,
+    "bahas": "Jus jeruk disajikan dalam gelas: 'a glass of orange juice'."
+  },
+  {
+    "q": "Cici wants to eat a ... of pizza for lunch.",
+    "p": ["slice", "cup", "bottle", "bowl"],
+    "b": 0,
+    "bahas": "Potongan pizza menggunakan satuan 'a slice of pizza' (sepotong pizza)."
+  },
+  {
+    "q": "My grandfather drinks a ... of hot tea every afternoon.",
+    "p": ["plate", "cup", "bowl", "slice"],
+    "b": 1,
+    "bahas": "Teh panas disajikan dalam cangkir: 'a cup of hot tea'."
+  },
+  {
+    "q": "Udin brings a ... of mineral water in his bag when going to school.",
+    "p": ["bottle", "plate", "bowl", "slice"],
+    "b": 0,
+    "bahas": "Air mineral kemasan dibawa dalam botol: 'a bottle of mineral water'."
+  },
+  {
+    "q": "Mother serves a ... of fried noodles on the dining table.",
+    "p": ["plate", "cup", "glass", "bottle"],
+    "b": 0,
+    "bahas": "Mie goreng disajikan di atas piring: 'a plate of fried noodles'."
+  },
+  {
+    "q": "Joshua likes eating a ... of bread with chocolate jam for breakfast.",
+    "p": ["slice", "glass", "bottle", "cup"],
+    "b": 0,
+    "bahas": "Selembar/sepotong roti tawar disebut 'a slice of bread'."
+  },
+  {
+    "q": "What does an ice cream cone taste like? It tastes ....",
+    "p": ["sweet and cold", "spicy and hot", "salty and bitter", "sour and spicy"],
+    "b": 0,
+    "bahas": "Es krim rasanya manis dan dingin (sweet and cold)."
+  },
+  {
+    "q": "Does Siti like sour mango? Yes, she ....",
+    "p": ["do", "does", "is", "am"],
+    "b": 1,
+    "bahas": "Pertanyaan yang diawali 'Does Siti...?' dijawab singkat dengan 'Yes, she does.'"
+  },
+  {
+    "q": "Do Budi and Edo like spicy food? No, they ....",
+    "p": ["do not", "does not", "are not", "is not"],
+    "b": 0,
+    "bahas": "Pertanyaan dengan subjek jamak 'Budi and Edo' (they) yang diawali 'Do' dijawab negatif dengan 'No, they do not.'"
+  },
+  {
+    "q": "Rani ... want a bowl of soto because she is full.",
+    "p": ["do not", "does not", "is not", "are not"],
+    "b": 1,
+    "bahas": "Subjek tunggal orang ketiga 'Rani' (she) dalam kalimat negatif Simple Present menggunakan 'does not'."
+  },
+  {
+    "q": "I ... two glasses of water every morning after waking up.",
+    "p": ["drink", "drinks", "drinking", "drank"],
+    "b": 0,
+    "bahas": "Subjek 'I' pada kebiasaan sehari-hari (Simple Present) menggunakan kata kerja dasar 'drink'."
+  },
+  {
+    "svg": "<svg width='150' height='75' xmlns='http://w3.org'><polygon points='62,40 88,40 75,68' fill='#d97706' stroke='#92400e' stroke-width='2'/><circle cx='75' cy='30' r='14' fill='#f43f5e' stroke='#be123c' stroke-width='2'/></svg>",
+    "q": "Look at the picture above! Lina wants an ... cone.",
+    "p": ["ice cream", "orange juice", "iced tea", "apple pie"],
+    "b": 0,
+    "bahas": "Gambar menunjukkan es krim cone (ice cream cone)."
+  },
+  {
+    "q": "What is 'semangkuk bubur ayam' in English?",
+    "p": [
+      "A plate of fried rice",
+      "A bowl of chicken porridge",
+      "A glass of milk",
+      "A cup of coffee"
+    ],
+    "b": 1,
+    "bahas": "Semangkuk = a bowl of, bubur ayam = chicken porridge."
+  },
+  {
+    "q": "What is 'sepiring nasi goreng' in English?",
+    "p": [
+      "A plate of fried rice",
+      "A bowl of meatballs",
+      "A slice of cake",
+      "A bottle of water"
+    ],
+    "b": 0,
+    "bahas": "Sepiring = a plate of, nasi goreng = fried rice."
+  },
+  {
+    "q": "Sugar makes tea taste ....",
+    "p": ["bitter", "salty", "sweet", "sour"],
+    "b": 2,
+    "bahas": "Gula (sugar) membuat teh terasa manis (sweet)."
+  },
+  {
+    "q": "Salt makes soup taste ....",
+    "p": ["sweet", "salty", "sour", "bitter"],
+    "b": 1,
+    "bahas": "Garam (salt) membuat sup terasa gurih/asin (salty)."
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'wants - Made - a - of - glass - milk'",
+    "p": [
+      "Made wants a glass of milk.",
+      "A glass of milk wants Made.",
+      "Made a glass wants of milk.",
+      "Wants Made a milk of glass."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat yang benar adalah 'Made wants a glass of milk.'"
+  },
+  {
+    "q": "Which food tastes sour?",
+    "p": ["Green mango and lemon", "Cake and candy", "Fried chicken and chips", "Chili and pepper"],
+    "b": 0,
+    "bahas": "Mangga muda (green mango) dan lemon rasanya asam (sour)."
+  },
+  {
+    "q": "'Ayah minum secangkir kopi pahit setiap pagi.' The English translation is ....",
+    "p": [
+      "Father drinks a cup of bitter coffee every morning.",
+      "Father drinks a glass of sweet tea every morning.",
+      "Father eats a bowl of soup every morning.",
+      "Father drinks a bottle of cold water every morning."
+    ],
+    "b": 0,
+    "bahas": "Secangkir kopi pahit = a cup of bitter coffee."
+  }
+]);
+
+window.tambahPaketUjian("5", "madura", "UTS Semester 1", [
+  {
+    "q": "Dâlem ondhâgghâ bhâsa Madhurâ, bhâsa èngghi-bhunten (alos) dâri oca' 'molè' (pulang) ka'angghuy Bapak otabâ Ibu Guru èngghi panèka ....",
+    "p": ["Kondhur / Palèman", "Mèyos", "Rabhu", "Sare"],
+    "b": 0,
+    "bahas": "Molè (pulang) bhâsa alosna 'kondhur' otabâ 'palèman'."
+  },
+  {
+    "q": "Bhâsa èngghi-bhuntenna oca' 'soko' (kaki) ka'angghuy orèng towa èngghi panèka ....",
+    "p": ["Asta", "Padâ", "Soca", "Mustaka"],
+    "b": 1,
+    "bahas": "Soko bhâsa alosna 'padâ', tanang = 'asta', mata = 'soca'."
+  },
+  {
+    "q": "Bhâsa èngghi-bhuntenna oca' 'acaca / ngoca'' (berbicara) ka'angghuy orèng sè èhormadhi èngghi panèka ....",
+    "p": ["Adhâbu", "Mèyarsa'aghi", "Ngoladhi", "Dhâ'âr"],
+    "b": 0,
+    "bahas": "Acaca / ngoca' bhâsa alosna 'adhâbu'."
+  },
+  {
+    "q": "Okara è bâbâ panèka sè aghuna'aghi bhâsa èngghi-bhunten sè teppa' èngghi panèka ....",
+    "p": [
+      "Kaki ghi' adhâbu sareng tamoy è roma.",
+      "Sèngko' ghi' adhâbu sareng adhi'.",
+      "Bapak Guru ampon tèdung è kantor.",
+      "Embu' ampon ngakan nasè' ghuring."
+    ],
+    "b": 0,
+    "bahas": "Ka'angghuy Kaki (kakek) èghuna'aghi oca' alos 'adhâbu' (berbicara)."
+  },
+  {
+    "q": "Oca' asal 'pèkkèr' lamon èberri' ter-ater (awalan) tanduk bhâkal dhâddhi ....",
+    "p": ["Nèkkèr", "Mèkkèr", "Ngèkkèr", "Nyèkkèr"],
+    "b": 1,
+    "bahas": "Horop awal 'p' luluh dhâddhi 'm-' bilâ olle ter-ater tanduk, dhâddhi 'mèkkèr'."
+  },
+  {
+    "q": "Oca' asal 'jhuwâl' lamon èberri' ter-ater tanduk 'a-' dhâddhi ....",
+    "p": ["Ajhuwâl", "Njhuwâl", "Majhuwâl", "Ngajhuwâl"],
+    "b": 0,
+    "bahas": "Ter-ater 'a-' + 'jhuwâl' dhâddhi 'ajhuwâl' (menjual)."
+  },
+  {
+    "q": "Obâ'ân okara tanduk 'Hasan maca buku carèta è perpustakaan' dhâddhi okara tanggap (pasif) sè teppa' èngghi panèka ....",
+    "p": [
+      "Buku carèta èbâca bi' Hasan è perpustakaan.",
+      "Hasan èbâca buku carèta è perpustakaan.",
+      "Buku carèta maca Hasan è perpustakaan.",
+      "È perpustakaan èbâca Hasan."
+    ],
+    "b": 0,
+    "bahas": "Dâlem okara tanggap, objek 'buku carèta' dhâddhi subjek bân ngangghuy ter-ater 'è-' ('èbâca')."
+  },
+  {
+    "q": "Parèbhâsan Madhurâ 'Nangghâ' bârâ è attas cèthak' artèna ....",
+    "p": [
+      "Ngalakonè lalakon sè berrâ' bân bânnya' rèsikona",
+      "Orèng sè senneng amaèn apoy",
+      "Orèng sè soghi arta",
+      "Lalakon sè cè' ghâmpangnga"
+    ],
+    "b": 0,
+    "bahas": "Nangghâ' bârâ (menyangga bara api) è attas cèthak ngaghâmbhâraghi tangghungan sè sanget berrâ'."
+  },
+  {
+    "q": "Parèbhâsan 'Abhântal ombâ' asapo' angèn' ngaghâmbhâraghi kaoḍi'ânna orèng Madhurâ sè alako dhâddhi ....",
+    "p": ["Majâng / Nalayan (pelaut)", "Ghuru sakola'an", "Sodhâghâr èmas", "Tokang kaju"],
+    "b": 0,
+    "bahas": "Abhântal ombâ' asapo' angèn (berbantal ombak berselimut angin) panèka semboyan kabângalan para nalayan Madhurâ è tasè'."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>KARAPAN SAPÈ</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Kabhudhâjân Khas Polo Madhurâ</text></svg>",
+    "q": "Abâs informasi kabhudhâjân khas Madhurâ è ghâmbhâr attas! Orèng sè nompa'è kalèlèng ka'angghuy ngendhâliyâghi sapè dâlem lomba Karapan Sapè èsebbhut ....",
+    "p": ["Tokang tongko'", "Dâlâng", "Sèndhèn", "Nayaga"],
+    "b": 0,
+    "bahas": "Joki otabâ pengendali pasangan sapè dâlem Karapan Sapè èsebbhut 'tokang tongko''."
+  },
+  {
+    "q": "Tokoh bangsawan Madhurâ dâri Sumenep sè abhânto Radèn Wijaya maddek Karaja'an Majapahit èngghi panèka ....",
+    "p": ["Arya Wiraraja", "Kè' Lesap", "Joko Tole", "Trunojoyo"],
+    "b": 0,
+    "bahas": "Arya Wiraraja panèka Adipati Songennep (Sumenep) sè abhânto Radèn Wijaya maddek Majapahit."
+  },
+  {
+    "q": "Kakanan khas Madhurâ sè èghâbây dâri dhâghing ajâm otabâ embik sè èsundukè bân èobbhâr kalabân bumbu kacang èngghi panèka ....",
+    "p": ["Satè Madhurâ", "Soto Lamongan", "Rawon", "Gudeg"],
+    "b": 0,
+    "bahas": "Satè Madhurâ kasohor è sabbhân Nusantara polana bumbu kacangga sè seddhâ'."
+  },
+  {
+    "q": "Okara è bâbâ panèka sè tamaso' okara pètanya (kalimat tanya) èngghi panèka ....",
+    "p": [
+      "Bila bâ'na sè èntara ka Songennep?",
+      "Tolong tutup labângnga jârèya!",
+      "Maloghâna bâ'na lekkas bârâs!",
+      "Embu' mellè jhuko' è pasar."
+    ],
+    "b": 0,
+    "bahas": "Okara pètanya ngangghuy oca' tanya 'bila' (kapan) bân èakhiri tandhâ tanya (?)."
+  },
+  {
+    "q": "Okara è bâbâ panèka sè tamaso' okara parènta (kalimat perintah) èngghi panèka ....",
+    "p": [
+      "Sapoè tanèyan jârèya sopajâ bhersè!",
+      "Sapa nyamana kancana bâ'na?",
+      "Adhi' ghi' ajhâr è kamar.",
+      "Arèya roma sè bhâghus."
+    ],
+    "b": 0,
+    "bahas": "Oca' 'Sapoè' (sapulah) nodhuwâghi okara parènta."
+  },
+  {
+    "q": "Tabhâligghâ (antonim) dâri oca' 'bângal' (berani) èngghi panèka ....",
+    "p": ["Takok / Kèco'", "Kowat", "Pènter", "Rajin"],
+    "b": 0,
+    "bahas": "Bângal (berani) tabhâligghâ takok (penakut)."
+  },
+  {
+    "q": "Padhâna artè (sinonim) dâri oca' 'lekkas' (cepat) èngghi panèka ....",
+    "p": ["Ceppet / Dhuli", "Laon", "Bit-abit", "Suwè"],
+    "b": 0,
+    "bahas": "Lekkas andi' artè sè padâ sareng ceppet otabâ dhuli."
+  },
+  {
+    "q": "Bilângan '45' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Empa' polo lèma'", "Lèma polo empa'", "Tello polo lèma'", "Sèket lèma'"],
+    "b": 0,
+    "bahas": "45 dâlem bhâsa Madhurâ èbâca 'empa' polo lèma''."
+  },
+  {
+    "q": "Bilângan '60' dâlem bhâsa Madhurâ andi' sebbhutân khusus èngghi panèka ....",
+    "p": ["Sèlaè'", "Sèket", "Sabidhâk", "Satos"],
+    "b": 2,
+    "bahas": "60 dâlem bhâsa Madhurâ èsebbhut 'sabidhâk'."
+  },
+  {
+    "q": "Oca' 'kasèhadhân' asalla dâri oca' asal 'sèhat' sè olle rangkè'an (imbuhan) ....",
+    "p": ["ka- bân -an", "pa- bân -an", "sa- bân -na", "è- bân -aghi"],
+    "b": 0,
+    "bahas": "ka- + sèhat + -an dhâddhi 'kasèhadhân'."
+  },
+  {
+    "q": "Oca' 'ajhâr' lamon èberri' ter-ater 'pang-' dhâddhi oca' bhârâng (kata benda) sè artèna ilmu pengetahuan, èngghi panèka ....",
+    "p": ["Pangajhârân", "Ngajhâr", "Èajhâr", "Ajhârân"],
+    "b": 0,
+    "bahas": "Pangajhârân artèna pelajaran / ilmu."
+  },
+  {
+    "q": "Bâca teks è bâbâ panèka!\n'Polo Madhurâ èkennal mènangka Polo Buja polana sabâgiyân masyarakat pèngghir tasè' alako aghâbây buja. Buja èghâbây dâri aèng tasè' sè èpèjher è bâbâna panassa mata'arè.'\n\nArapa Polo Madhurâ èsebbhut Polo Buja?",
+    "p": [
+      "Polana bânnya' ngasèllaghi buja dâri aèng tasè'",
+      "Polana bânnya' ghunong apoy",
+      "Polana ta' andi' tasè'",
+      "Polana sabbhân arè toron ojhân"
+    ],
+    "b": 0,
+    "bahas": "Teks ajellasaghi Polo Madhurâ kasohor ngasèllaghi buja (garam) dâri aèng tasè'."
+  },
+  {
+    "q": "Tatakrama sè bhâghus bilâ tamoy dateng ka roma èngghi panèka ....",
+    "p": [
+      "Nyambhut kalabân raddhin, ngocap salam, bân nyoro toju' kalabân sopan",
+      "Notop labâng roma ceppet-ceppet",
+      "Neng-neng è dhâlem kamar ta' kalowar",
+      "Acaca kalabân sowara kasar"
+    ],
+    "b": 0,
+    "bahas": "Nyambhut tamoy kalabân ramah bân sopan panèka tatakrama moljâ masyarakat Madhurâ."
+  },
+  {
+    "q": "Pakakas musik tradisional Madhurâ sè ètèyop bân monyèna melengking ngèrèngè Karapan Sapè èngghi panèka ....",
+    "p": ["Saronèn", "Kendhâng", "Gong", "Gambang"],
+    "b": 0,
+    "bahas": "Saronèn panèka alat musik tiup khas Madhurâ."
+  },
+  {
+    "q": "Oca' 'andhap asor' kodhu èbiasa'aghi na'-kana' è sakola'an sopajâ ....",
+    "p": [
+      "Èkasennengngè ghuru sareng kanca sarta ngormadhi sasama",
+      "Dhâddhi orèng sè sombong",
+      "Ta' usa ajhâr",
+      "Ghâmpang atokar sareng kanca"
+    ],
+    "b": 0,
+    "bahas": "Sikap andhap asor (rendah hati) mabâdâ karokonan sareng sasama."
+  },
+  {
+    "q": "Oca' 'sakalangkong' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Terima kasih", "Permisi", "Maaf", "Selamat pagi"],
+    "b": 0,
+    "bahas": "Mator sakalangkong artèna terima kasih."
+  }
+]);
+
+window.tambahPaketUjian("5", "kesenian", "UTS Semester 1", [
+  {
+    "q": "Unsur seni rupa yang paling dasar dan menjadi awal mula terbentuknya garis maupun bidang disebut ....",
+    "p": ["Titik (bintik)", "Ruang", "Tekstur", "Proporsi"],
+    "b": 0,
+    "bahas": "Titik adalah unsur seni rupa paling sederhana yang jika dijajarkan memanjang akan membentuk garis."
+  },
+  {
+    "q": "Gabungan beberapa garis yang ujungnya saling bertemu sehingga membentuk area datar tertutup seperti lingkaran, segitiga, dan trapesium disebut ....",
+    "p": ["Bidang", "Titik", "Gelap terang", "Volume"],
+    "b": 0,
+    "bahas": "Bidang merupakan area dua dimensi yang dibatasi oleh garis."
+  },
+  {
+    "q": "Bentuk-bentuk bebas yang menyerupai objek di alam seperti bentuk daun, awan, batu sungai, dan kelopak bunga termasuk kelompok bentuk ....",
+    "p": ["Organis / nongeometris", "Geometris kaku", "Kubistis", "Silindris"],
+    "b": 0,
+    "bahas": "Bentuk organis memiliki garis lengkung bebas yang banyak dijumpai pada alam."
+  },
+  {
+    "q": "Warna sekunder yang dihasilkan apabila warna primer kuning dicampur dengan warna primer biru dalam perbandingan seimbang adalah ....",
+    "p": ["Oranye", "Hijau", "Ungu", "Cokelat"],
+    "b": 1,
+    "bahas": "Campuran warna kuning dan biru menghasilkan warna sekunder hijau."
+  },
+  {
+    "q": "Warna-warna yang tidak termasuk kelompok warna pelangi dan sering dipakai untuk mengatur tingkat kecerahan atau bayangan (yaitu hitam dan putih) disebut warna ....",
+    "p": ["Netral", "Primer", "Sekunder", "Tersier"],
+    "b": 0,
+    "bahas": "Hitam dan putih termasuk warna netral yang berguna menciptakan gradasi terang dan gelap."
+  },
+  {
+    "q": "Unsur seni rupa yang menunjukkan kualitas permukaan suatu benda apakah terasa halus, licin, kasar, atau berbulu disebut ....",
+    "p": ["Tekstur", "Garis", "Bidang", "Ritme"],
+    "b": 0,
+    "bahas": "Tekstur adalah sifat permukaan benda yang dapat dirasakan melalui indra peraba maupun penglihatan."
+  },
+  {
+    "q": "Benda di sekitar lingkungan sekolah berikut yang memiliki tekstur nyata terasa kasar apabila diraba adalah ....",
+    "p": [
+      "Kulit batang pohon mangga dan dinding batako",
+      "Kaca jendela kelas",
+      "Permukaan papan tulis putih (whiteboard)",
+      "Sampul plastik buku tulis"
+    ],
+    "b": 0,
+    "bahas": "Kulit batang pohon dan batako memiliki permukaan tidak rata yang terasa kasar saat diraba."
+  },
+  {
+    "svg": "<svg width='180' height='60' xmlns='http://w3.org'><polygon points='25,45 15,20 35,20' fill='#0284c7'/><polygon points='60,45 50,20 70,20' fill='#0284c7'/><polygon points='95,45 85,20 105,20' fill='#0284c7'/><polygon points='130,45 120,20 140,20' fill='#0284c7'/></svg>",
+    "q": "Perhatikan deretan bentuk segitiga terbalik yang berulang dengan ukuran dan jarak sama pada gambar di atas! Prinsip seni rupa yang ditunjukkan pada susunan tersebut adalah ....",
+    "p": ["Ritme (irama) repetisi", "Perspektif", "Kontras acak", "Tekstur semu"],
+    "b": 0,
+    "bahas": "Pengulangan bentuk yang sama secara teratur dan berjarak sama menghasilkan ritme repetisi."
+  },
+  {
+    "q": "Prinsip seni rupa yang mengatur susunan unsur gambar agar tidak berat sebelah antara sisi kiri dan sisi kanan disebut ....",
+    "p": ["Keseimbangan (balance)", "Penekanan", "Gradasi", "Proporsi"],
+    "b": 0,
+    "bahas": "Keseimbangan (balance) membuat susunan objek gambar tampak stabil dan nyaman dipandang."
+  },
+  {
+    "q": "Keseimbangan di mana objek di bagian kiri dan kanan memiliki bentuk, ukuran, dan jarak yang sama persis seperti bayangan cermin disebut keseimbangan ....",
+    "p": ["Simetris", "Asimetris", "Bebas", "Acak"],
+    "b": 0,
+    "bahas": "Keseimbangan simetris membagi bidang menjadi dua bagian yang identik sama."
+  },
+  {
+    "q": "Cara menggambar ritme dengan teknik transisi (perubahan bertahap) dapat dilakukan dengan membuat objek lingkaran yang ....",
+    "p": [
+      "Ukurannya berubah secara bertahap dari sangat kecil hingga besar",
+      "Letaknya bertumpuk berantakan di satu sudut kertas",
+      "Dihapus setengah bagiannya",
+      "Hanya digambar satu buah di tengah kertas"
+    ],
+    "b": 0,
+    "bahas": "Perubahan ukuran atau warna secara bertahap menciptakan ritme transisi yang dinamis."
+  },
+  {
+    "q": "Garis lengkung yang berputar melingkar secara terus-menerus dari titik pusat ke arah luar seperti cangkang keong disebut garis ....",
+    "p": ["Spiral", "Horizontal", "Vertikal", "Zig-zag"],
+    "b": 0,
+    "bahas": "Garis spiral berputar melingkar menyerupai obat nyamuk bakar atau cangkang siput."
+  },
+  {
+    "q": "Kesan yang ditimbulkan oleh garis mendatar (horizontal) seperti garis cakrawala air laut yang tenang adalah kesan ....",
+    "p": ["Tenang, damai, dan luas", "Kacau dan berbahaya", "Bergerak cepat", "Tinggi menjulang"],
+    "b": 0,
+    "bahas": "Garis horizontal memberikan kesan ketenangan, kestabilan, dan keluasan."
+  },
+  {
+    "q": "Teknik menggambar dengan cara membuat titik-titik kecil secara rapat pada bagian gelap dan titik-titik renggang pada bagian terang disebut teknik ....",
+    "p": ["Pointilis", "Dussel", "Blok", "Aquarel"],
+    "b": 0,
+    "bahas": "Pointilis adalah teknik menggambar atau melukis menggunakan susunan titik-titik."
+  },
+  {
+    "q": "Teknik melukis menggunakan cat air dengan sapuan warna yang tipis dan transparan sehingga serat kertas masih sedikit terlihat disebut teknik ....",
+    "p": ["Aquarel", "Plakat", "Arsir", "Kolase"],
+    "b": 0,
+    "bahas": "Aquarel menggunakan banyak air sehingga menghasilkan sapuan warna tipis transparan, sedangkan plakat menghasilkan sapuan tebal menutup."
+  },
+  {
+    "q": "Contoh objek di lingkungan sekitar rumah atau sekolah yang menunjukkan penerapan prinsip ritme secara alami adalah ....",
+    "p": [
+      "Susunan daun kelapa pada pelepahnya dan deretan genteng di atap rumah",
+      "Tumpukan sampah plastik di sudut halaman",
+      "Air yang tumpah di lantai kelas",
+      "Coretan acak di papan tulis"
+    ],
+    "b": 0,
+    "bahas": "Susunan anak daun kelapa dan barisan genteng atap rumah memperlihatkan pengulangan teratur (ritme)."
+  },
+  {
+    "svg": "<svg width='165' height='65' xmlns='http://w3.org'><rect x='20' y='15' width='125' height='35' rx='6' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><text x='82' y='37' font-size='10' font-weight='bold' text-anchor='middle' fill='#92400e'>PRINSIP PROPORSI</text></svg>",
+    "q": "Perhatikan label prinsip seni rupa pada gambar di atas! Penerapan prinsip proporsi yang benar saat menggambar wajah manusia adalah ....",
+    "p": [
+      "Ukuran mata, hidung, dan mulut digambar sebanding dengan ukuran kepala",
+      "Ukuran hidung digambar lebih besar daripada seluruh wajah",
+      "Satu mata digambar sangat besar dan mata lainnya sangat kecil",
+      "Telinga digambar di atas ubun-ubun kepala"
+    ],
+    "b": 0,
+    "bahas": "Proporsi mengatur perbandingan ukuran antarbagian objek agar terlihat wajar dan harmonis."
+  },
+  {
+    "q": "Pusat perhatian (center of interest) dalam sebuah gambar pemandangan dapat diciptakan dengan cara ....",
+    "p": [
+      "Memberikan warna paling cerah atau detail paling menonjol pada objek utama",
+      "Mewarnai seluruh bagian gambar dengan warna abu-abu yang sama",
+      "Menyembunyikan objek utama di balik garis tepi",
+      "Mengosongkan bagian tengah kertas gambar"
+    ],
+    "b": 0,
+    "bahas": "Warna kontras yang cerah dan detail tajam menarik pandangan mata pengamat langsung ke objek utama."
+  },
+  {
+    "q": "Pensil gambar yang memiliki kode huruf 'H' (seperti 2H) memiliki sifat goresan yang ....",
+    "p": [
+      "Keras dan tipis sehingga cocok untuk membuat sketsa garis bantu awal",
+      "Sangat hitam pekat dan lunak",
+      "Berwarna merah dan biru",
+      "Mudah patah saat diraut"
+    ],
+    "b": 0,
+    "bahas": "Kode H (Hard) berarti keras dan menghasilkan garis tipis, sedangkan B (Black) berarti lunak dan hitam pekat."
+  },
+  {
+    "q": "Karya seni rupa terapan yang dibuat untuk memenuhi fungsi pakai dalam kehidupan sehari-hari sekaligus memiliki nilai keindahan adalah ....",
+    "p": [
+      "Guci keramik hias, tas anyaman pandan, dan kain batik tulis",
+      "Lukisan pemandangan di museum saja",
+      "Patung monumen di taman kota",
+      "Sketsa pensil di buku gambar"
+    ],
+    "b": 0,
+    "bahas": "Seni rupa terapan memadukan kegunaan praktis sehari-hari dengan estetika keindahan."
+  },
+  {
+    "q": "Warna oranye, merah, dan kuning dalam seni rupa digolongkan ke dalam kelompok warna panas karena memberikan kesan ....",
+    "p": [
+      "Hangat, bersemangat, ceria, dan penuh energi",
+      "Dingin, sejuk, dan sedih",
+      "Gelap dan suram",
+      "Kaku dan membosankan"
+    ],
+    "b": 0,
+    "bahas": "Warna panas (merah, jingga, kuning) membangkitkan suasana hangat, cerah, dan penuh semangat."
+  },
+  {
+    "q": "Kelompok warna dingin yang memberikan kesan sejuk, tenang, dan damai seperti suasana pegunungan atau lautan adalah ....",
+    "p": [
+      "Biru, hijau, dan ungu",
+      "Merah, oranye, dan kuning",
+      "Merah tua dan cokelat",
+      "Hitam dan merah menyala"
+    ],
+    "b": 0,
+    "bahas": "Biru, hijau, dan ungu termasuk spektrum warna dingin yang menyejukkan mata."
+  },
+  {
+    "q": "Agar hasil gambar pola ritme pada kertas gambar tampak rapi dan bersih, sikap yang perlu diterapkan siswa saat menggambar adalah ....",
+    "p": [
+      "Mengukur jarak pola dengan teliti, tidak menekan pensil terlalu keras saat membuat sketsa, dan menjaga kebersihan tangan",
+      "Menggambar dengan terburu-buru tanpa garis bantu",
+      "Menghapus berkali-kali dengan tangan yang kotor",
+      "Mencoret bagian yang salah dengan spidol hitam"
+    ],
+    "b": 0,
+    "bahas": "Sketsa tipis dan ketelitian mengukur jarak membuat hasil akhir gambar ritme bersih dan presisi."
+  },
+  {
+    "q": "Setelah selesai berkarya seni rupa di dalam kelas, hal yang wajib dilakukan oleh seluruh siswa adalah ....",
+    "p": [
+      "Membersihkan meja dari sisa serutan pensil atau potongan kertas serta merapikan alat gambar",
+      "Meninggalkan sampah kertas di bawah bangku",
+      "Membiarkan tutup spidol terbuka hingga kering",
+      "Mengotori baju teman dengan sisa pewarna"
+    ],
+    "b": 0,
+    "bahas": "Menjaga kebersihan ruang kelas setelah berkarya melatih kedisiplinan dan tanggung jawab."
+  },
+  {
+    "q": "Manfaat mengamati unsur dan prinsip seni rupa pada benda-benda di lingkungan sekitar bagi siswa kelas 5 SD adalah ....",
+    "p": [
+      "Menumbuhkan rasa syukur atas keindahan ciptaan Tuhan dan mengasah kepekaan estetika",
+      "Membuat siswa lupa mengerjakan tugas rumah",
+      "Menjadikan siswa suka merusak tanaman hias",
+      "Mengurangi kreativitas dalam menggambar"
+    ],
+    "b": 0,
+    "bahas": "Pengamatan visual terhadap lingkungan melatih kepekaan seni dan rasa syukur."
+  }
+]);
+
