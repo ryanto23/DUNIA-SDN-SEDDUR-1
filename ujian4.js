@@ -2,24 +2,6 @@ window.DATABASE_BAB = window.DATABASE_BAB || {};
 window.DATABASE_SOAL = window.DATABASE_SOAL || {};
 
 Object.assign(window.DATABASE_BAB, {
-  "4-Seni & Budaya": [
-    "Bab 1. a",
-    "Bab 2. b",
-    "Bab 3. c",
-    "Bab 4. d"
-  ],
-  "4-Bahasa Madura": [
-    "Bab 1. a",
-    "Bab 2. b",
-    "Bab 3. c",
-    "Bab 4. d"
-  ],
-  "4-PAI & Budi pekerti": [
-    "Bab 1. a",
-    "Bab 2. b",
-    "Bab 3. c",
-    "Bab 4. d"
-  ],
   "4-pancasila": [
     "Bab 1. Pancasila sebagai Nilai Kehidupan",
     "Bab 2. Konstitusi dan Norma di Masyarakat",
