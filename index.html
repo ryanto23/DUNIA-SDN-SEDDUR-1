@@ -62,6 +62,9 @@
     .m-mtk { background: linear-gradient(135deg, #059669, #34d399); }
     .m-ipas { background: linear-gradient(135deg, #0284c7, #38bdf8); }
     .m-bing { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
+    .m-pai { background: linear-gradient(135deg, #16a34a, #4ade80); }
+    .m-madura { background: linear-gradient(135deg, #dc2626, #f87171); }
+    .m-kesenian { background: linear-gradient(135deg, #db2777, #f472b6); }
     .bab-btn { background: #ffffff; color: #1e293b; border: 3px solid #7dd3fc; box-shadow: 0 4px 0 #7dd3fc; }
     .bab-badge { background: #e0f2fe; color: #0369a1; padding: 4px 9px; border-radius: 10px; font-size: 0.76rem; white-space: nowrap; flex-shrink: 0; }
 
@@ -136,6 +139,7 @@
     window.DATA_SEDDUR = {};
     window.DATABASE_BAB = {};
     window.DATABASE_SOAL = {};
+    window.MAPEL_KUSTOM = {};
     window.DATA_TKA = {
       bindo: { "Sesi 1": [], "Sesi 2": [], "Sesi 3": [] },
       mtk: { "Sesi 1": [], "Sesi 2": [], "Sesi 3": [] }
@@ -147,6 +151,11 @@
       "4": "KLS4-2026",
       "5": "KLS5-2026",
       "6": "KLS6-2026"
+    };
+
+    window.daftarMapelBaru = function(kode, judul) {
+      if (!kode || !judul) return;
+      window.MAPEL_KUSTOM[kode] = { judul: judul, ikon: "📘", kelasCss: "m-ipas" };
     };
 
     window.tambahPaketUjian = function(kelas, mapel, namaPaketAtauBab, daftarSoalBaru) {
@@ -288,11 +297,14 @@
     let sisaDetik = 0;
 
     const daftarNamaMapel = {
+      pai: { judul: "PAI & Budi Pekerti", ikon: "🕌", kelasCss: "m-pai" },
       pancasila: { judul: "Pendidikan Pancasila", ikon: "🦅", kelasCss: "m-pancasila" },
       bindo: { judul: "Bahasa Indonesia", ikon: "📚", kelasCss: "m-bindo" },
       mtk: { judul: "Matematika", ikon: "🔢", kelasCss: "m-mtk" },
       ipas: { judul: "IPAS (Alam & Sosial)", ikon: "🌍", kelasCss: "m-ipas" },
-      bing: { judul: "Bahasa Inggris", ikon: "🔤", kelasCss: "m-bing" }
+      bing: { judul: "Bahasa Inggris", ikon: "🔤", kelasCss: "m-bing" },
+      madura: { judul: "Bahasa Madura", ikon: "🏝️", kelasCss: "m-madura" },
+      kesenian: { judul: "Seni & Budaya (Kesenian)", ikon: "🎨", kelasCss: "m-kesenian" }
     };
 
     const daftarKategoriUjian = [
@@ -302,7 +314,30 @@
       { kode: "UAS Semester 2", judul: "UAS Semester 2", waktuInfo: "90 Menit Total", ikon: "📕", warna: "m-bing" }
     ];
 
-        function setNavAktif(idMenu) {
+        function getInfoMapel(kode) {
+      if (daftarNamaMapel[kode]) return daftarNamaMapel[kode];
+      if (window.MAPEL_KUSTOM && window.MAPEL_KUSTOM[kode]) return window.MAPEL_KUSTOM[kode];
+      const judulRapi = kode.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      return { judul: judulRapi, ikon: "📘", kelasCss: "m-ipas" };
+    }
+
+    function getSemuaKodeMapelKelas(kls) {
+      const setKode = new Set(Object.keys(daftarNamaMapel));
+      const prefix = `${kls}-`;
+      Object.keys(window.DATABASE_BAB || {}).forEach(k => {
+        if (k.startsWith(prefix)) setKode.add(k.slice(prefix.length));
+      });
+      Object.keys(window.DATABASE_SOAL || {}).forEach(k => {
+        if (k.startsWith(prefix)) {
+          const sisa = k.slice(prefix.length);
+          const kode = sisa.split("-");
+          if (kode) setKode.add(kode);
+        }
+      });
+      return Array.from(setKode);
+    }
+
+    function setNavAktif(idMenu) {
       document.body.classList.remove("sedang-ujian");
       ["nav-home", "nav-kuis", "nav-ujian", "nav-admin"].forEach(id => {
         const el = document.getElementById(id);
@@ -345,7 +380,7 @@
 
     function cariSoalDariDatabase(kls, kodeMapel, namaPaketAtauBab) {
       const dbSoal = window.DATABASE_SOAL || {};
-      const infoMapel = daftarNamaMapel[kodeMapel];
+      const infoMapel = getInfoMapel(kodeMapel);
       const namaMapel = infoMapel ? infoMapel.judul : kodeMapel;
       const kandidatKunci = [
         `${kls}-${kodeMapel}-${namaPaketAtauBab}`,
@@ -360,7 +395,7 @@
 
     function getDaftarBabSinkron(kls, kodeMapel) {
       const dbBab = window.DATABASE_BAB || {};
-      const infoMapel = daftarNamaMapel[kodeMapel];
+      const infoMapel = getInfoMapel(kodeMapel);
       const namaMapel = infoMapel ? infoMapel.judul : kodeMapel;
 
       const listBabMentah = dbBab[`${kls}-${kodeMapel}`] || dbBab[`sd-Kelas ${kls}-${namaMapel}`] || [];
@@ -435,7 +470,7 @@
       const kodeMapelTersedia = Object.keys(dataKelas);
       ucapkan(`Pilih mata pelajaran Kelas ${kelasAktif}!`);
       let tombolMapelHTML = kodeMapelTersedia.map(kode => {
-        const info = daftarNamaMapel[kode];
+        const info = getInfoMapel(kode);
         const jmlBab = dataKelas[kode].length;
         return `<button class="menu-btn ${info.kelasCss}" onclick="tampilMenuBab('${kode}')"><span>${info.ikon} ${info.judul}</span><span class="badge-jumlah">${jmlBab} Bab ▶️</span></button>`;
       }).join("");
@@ -448,7 +483,7 @@
     function tampilMenuBab(kodeMapel) {
       mainkanEfek('klik'); mapelAktif = kodeMapel;
       const daftarBab = window.DATA_SEDDUR[kelasAktif][kodeMapel];
-      const infoMapel = daftarNamaMapel[kodeMapel];
+      const infoMapel = getInfoMapel(kodeMapel);
       ucapkan(`Pilih Bab pada pelajaran ${infoMapel.judul}`);
       let tombolBabHTML = daftarBab.map((babObj, idx) => `
         <button class="menu-btn bab-btn" onclick="mulaiBab(${idx})">
@@ -623,9 +658,9 @@
     }
 
     function tampilMapelUjianBab() {
-      const daftarKodeMapel = Object.keys(daftarNamaMapel);
+      const daftarKodeMapel = getSemuaKodeMapelKelas(kelasAktif);
       let tombolMapel = daftarKodeMapel.map(kode => {
-        const info = daftarNamaMapel[kode];
+        const info = getInfoMapel(kode);
         const daftarBab = getDaftarBabSinkron(kelasAktif, kode);
         if (daftarBab.length === 0) return "";
         return `<button class="menu-btn ${info.kelasCss}" onclick="tampilBabUjian('${kode}')">
@@ -645,7 +680,7 @@
 
     function tampilBabUjian(kodeMapel) {
       mapelAktif = kodeMapel;
-      const infoMapel = daftarNamaMapel[kodeMapel];
+      const infoMapel = getInfoMapel(kodeMapel);
       const daftarBab = getDaftarBabSinkron(kelasAktif, kodeMapel);
 
       let tombolBabHTML = daftarBab.map((b, idx) => `
@@ -666,11 +701,13 @@
     function tampilMapelUTS_UAS(kodeKat, judulKat) {
       kodeKategoriUjianAktif = kodeKat;
       kategoriUjianAktif = judulKat;
-      const daftarKodeMapel = Object.keys(daftarNamaMapel);
+      const daftarKodeMapel = getSemuaKodeMapelKelas(kelasAktif);
 
       let tombolMapel = daftarKodeMapel.map(kode => {
-        const info = daftarNamaMapel[kode];
+        const info = getInfoMapel(kode);
+        const daftarBab = getDaftarBabSinkron(kelasAktif, kode);
         const daftarSoal = cariSoalDariDatabase(kelasAktif, kode, kodeKat);
+        if (daftarBab.length === 0 && daftarSoal.length === 0) return "";
         return `<button class="menu-btn ${info.kelasCss}" onclick="mulaiUjianUTS_UAS_Mapel('${kode}')">
           <span>${info.ikon} ${info.judul}</span>
           <span class="badge-jumlah">${daftarSoal.length} Soal ▶️</span>
@@ -687,7 +724,7 @@
     }
 
         function mulaiUjianBabSpesifik(kodeMapel, idxBab) {
-      const infoMapel = daftarNamaMapel[kodeMapel];
+      const infoMapel = getInfoMapel(kodeMapel);
       const daftarBab = getDaftarBabSinkron(kelasAktif, kodeMapel);
       const targetBab = daftarBab[idxBab];
 
@@ -708,7 +745,7 @@
     }
 
     function mulaiUjianUTS_UAS_Mapel(kodeMapel) {
-      const infoMapel = daftarNamaMapel[kodeMapel];
+      const infoMapel = getInfoMapel(kodeMapel);
       const daftarSoal = cariSoalDariDatabase(kelasAktif, kodeMapel, kodeKategoriUjianAktif);
 
       if (!daftarSoal || daftarSoal.length === 0) {
@@ -1011,7 +1048,7 @@
       mainkanEfek('benar');
       const totalSoal = soalPermainan.length;
       const nilaiAkhir = Math.round((jumlahBenar / totalSoal) * 100);
-      const infoMapel = daftarNamaMapel[mapelAktif];
+      const infoMapel = getInfoMapel(mapelAktif);
       const babObj = window.DATA_SEDDUR[kelasAktif][mapelAktif][babAktif];
       let gelar = "Pejuang Tangguh SDN Seddur 1", ikonGelar = "💪😊", ucapanSkor = `Semangat terus! Nilai kamu ${nilaiAkhir}.`;
       if (nilaiAkhir >= 85) { gelar = "Profesor Cilik SDN Seddur 1"; ikonGelar = "🏆👑"; ucapanSkor = `Luar biasa! Kamu meraih nilai ${nilaiAkhir} dan mendapatkan gelar Profesor Cilik SDN Seddur 1!`; }
@@ -1063,7 +1100,7 @@
     function tampilDashboardAdmin() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Keluar Admin</button><div class="star-bar">⚙️ Panel Admin</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI (Ujian & TKA), rekap nilai spesifik & pengaturan</p></div>
+        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI (8 Mapel + Mapel Baru + TKA) & rekap nilai</p></div>
         <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI & Kode GitHub</span><span>▶️</span></button>
         <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>2. 📊 Lihat & Filter Rekap Nilai Siswa</span><span>▶️</span></button>
         <button class="menu-btn m-pancasila" onclick="adminUbahPassword()"><span>3. 🔑 Ubah Password Admin</span><span>▶️</span></button>`;
@@ -1074,7 +1111,7 @@
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal AI</div></div>
         <div class="card" style="text-align:left;">
           <h3 style="color:#0284c7; text-align:center;">Generator Soal AI & Kode GitHub</h3>
-          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Mendukung soal Ujian Kelas (<code>ujianX.js</code>) maupun Simulasi Tes TKA (<code>tka.js</code>)</p>
+          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Mendukung PAI, B. Madura, Kesenian, Mapel Umum, Tambah Mapel Baru & Tes TKA</p>
 
           <label class="label-form">1. Pilih Target File:</label>
           <select id="genTargetMode" class="input-form" onchange="ubahModeTargetGenerator()">
@@ -1084,7 +1121,7 @@
 
           <div id="blokTargetUjian">
             <label class="label-form">2. Pilih Kelas:</label>
-            <select id="genKelas" class="input-form" onchange="perbaruiOpsiBabGenerator()">
+            <select id="genKelas" class="input-form" onchange="perbaruiOpsiMapelGenerator()">
               <option value="1">Kelas 1 (ujian1.js)</option>
               <option value="2">Kelas 2 (ujian2.js)</option>
               <option value="3">Kelas 3 (ujian3.js)</option>
@@ -1094,13 +1131,8 @@
             </select>
 
             <label class="label-form">3. Mata Pelajaran:</label>
-            <select id="genMapel" class="input-form" onchange="perbaruiOpsiBabGenerator()">
-              <option value="pancasila|Pendidikan Pancasila">Pendidikan Pancasila</option>
-              <option value="bindo|Bahasa Indonesia">Bahasa Indonesia</option>
-              <option value="mtk|Matematika">Matematika</option>
-              <option value="ipas|IPAS (Alam & Sosial)">IPAS (Alam & Sosial)</option>
-              <option value="bing|Bahasa Inggris">Bahasa Inggris</option>
-            </select>
+            <select id="genMapel" class="input-form" onchange="cekMapelBaruInput(); perbaruiOpsiBabGenerator();"></select>
+            <input type="text" id="genMapelBaruInput" class="input-form" style="display:none; border-color:#f59e0b; background:#fffbeb;" placeholder="Ketik Nama Mata Pelajaran Baru (Contoh: PJOK, Informatika)..." oninput="perbaruiOpsiBabGenerator()" />
 
             <label class="label-form">4. Jenis Ujian:</label>
             <select id="genKategori" class="input-form" onchange="togglePilihanBabGenerator()">
@@ -1134,7 +1166,7 @@
           </div>
 
           <label class="label-form">5. Topik / Pokok Materi:</label>
-          <input type="text" id="genTopik" class="input-form" placeholder="Contoh: Teks Informasi, Bilangan Cacah, Pecahan..." />
+          <input type="text" id="genTopik" class="input-form" placeholder="Contoh: Rukun Iman, Basa Enja'-Iya, Seni Rupa, Pecahan..." />
 
           <label class="label-form">6. Mode Gambar Soal & Jawaban:</label>
           <select id="genModeGambar" class="input-form">
@@ -1163,7 +1195,7 @@
           <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeSoal')">📋 Salin Kode GitHub</button>
         </div>`;
       ubahModeTargetGenerator();
-      perbaruiOpsiBabGenerator();
+      perbaruiOpsiMapelGenerator();
       togglePilihanBabGenerator();
     }
 
@@ -1173,6 +1205,26 @@
       document.getElementById("blokTargetTKA").style.display = (target === "TKA") ? "block" : "none";
     }
 
+    function perbaruiOpsiMapelGenerator() {
+      const kls = Number(document.getElementById("genKelas").value);
+      const daftarKode = getSemuaKodeMapelKelas(kls);
+      const selectMapel = document.getElementById("genMapel");
+      let opsiHTML = daftarKode.map(kode => {
+        const info = getInfoMapel(kode);
+        return `<option value="${kode}|${info.judul}">${info.judul}</option>`;
+      }).join("");
+      opsiHTML += `<option value="__MAPEL_BARU__">➕ Buat Mata Pelajaran Baru...</option>`;
+      selectMapel.innerHTML = opsiHTML;
+      cekMapelBaruInput();
+      perbaruiOpsiBabGenerator();
+    }
+
+    function cekMapelBaruInput() {
+      const val = document.getElementById("genMapel").value;
+      const inputBaru = document.getElementById("genMapelBaruInput");
+      inputBaru.style.display = (val === "__MAPEL_BARU__") ? "block" : "none";
+    }
+
     function togglePilihanBabGenerator() {
       const kat = document.getElementById("genKategori").value;
       document.getElementById("wadahPilihBabGen").style.display = (kat === "BAB") ? "block" : "none";
@@ -1180,10 +1232,17 @@
 
     function perbaruiOpsiBabGenerator() {
       const kls = Number(document.getElementById("genKelas").value);
-      const kodeMapel = document.getElementById("genMapel").value.split("|");
-      const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
+      const mapelVal = document.getElementById("genMapel").value;
       const selectBab = document.getElementById("genDaftarBab");
 
+      if (mapelVal === "__MAPEL_BARU__") {
+        selectBab.innerHTML = `<option value="__BARU__">➕ Buat Judul Bab Baru...</option>`;
+        cekBabBaruInput();
+        return;
+      }
+
+      const kodeMapel = mapelVal.split("|");
+      const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
       let opsiHTML = daftarBab.map(b => `<option value="${b.bab}">${b.bab}</option>`).join("");
       opsiHTML += `<option value="__BARU__">➕ Buat Judul Bab Baru...</option>`;
       selectBab.innerHTML = opsiHTML;
@@ -1196,7 +1255,7 @@
       inputBaru.style.display = (val === "__BARU__") ? "block" : "none";
     }
 
-    function buatKodeSoalGitHub() {
+        function buatKodeSoalGitHub() {
       const target = document.getElementById("genTargetMode").value;
       const modeGbr = document.getElementById("genModeGambar").value;
       const jumlah = parseInt(document.getElementById("genJumlah").value, 10);
@@ -1217,11 +1276,22 @@
         ketTarget = `Simulasi Tes TKA SD • Mata Pelajaran: ${namaTKA} • ${sesiTKA}`;
       } else {
         const kls = document.getElementById("genKelas").value;
-        const mapelRaw = document.getElementById("genMapel").value.split("|");
-        const kodeMapel = mapelRaw;
-        const namaMapel = mapelRaw;
-        const kat = document.getElementById("genKategori").value;
+        const mapelVal = document.getElementById("genMapel").value;
+        let kodeMapel = "";
+        let namaMapel = "";
+        let barisDaftarMapel = "";
 
+        if (mapelVal === "__MAPEL_BARU__") {
+          namaMapel = document.getElementById("genMapelBaruInput").value.trim() || "Mapel Baru";
+          kodeMapel = namaMapel.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "") || "mapel_baru";
+          barisDaftarMapel = `window.daftarMapelBaru("${kodeMapel}", "${namaMapel}");\n`;
+        } else {
+          const mapelRaw = mapelVal.split("|");
+          kodeMapel = mapelRaw;
+          namaMapel = mapelRaw;
+        }
+
+        const kat = document.getElementById("genKategori").value;
         let namaPaketAtauBab = kat;
         if (kat === "BAB") {
           namaPaketAtauBab = document.getElementById("genDaftarBab").value;
@@ -1231,7 +1301,7 @@
         }
         topik = topik || namaPaketAtauBab;
         fileTujuan = `ujian${kls}.js`;
-        pembuka = `window.tambahPaketUjian("${kls}", "${kodeMapel}", "${namaPaketAtauBab}", [`;
+        pembuka = `${barisDaftarMapel}window.tambahPaketUjian("${kls}", "${kodeMapel}", "${namaPaketAtauBab}", [`;
         ketTarget = `SD Kelas ${kls} • Mata Pelajaran: ${namaMapel} • ${namaPaketAtauBab}`;
       }
 
@@ -1273,7 +1343,7 @@
 
           <div class="no-print" style="display:grid; grid-template-columns:1fr; gap:6px; margin-top:10px; text-align:left;">
             <label class="label-form" style="margin-top:2px;">1. Pilih Kelas (Wajib):</label>
-            <select id="filterKelas" class="input-form" style="margin:0;" onchange="perbaruiOpsiBabRekap(); renderTabelNilai();">
+            <select id="filterKelas" class="input-form" style="margin:0;" onchange="perbaruiOpsiMapelRekap(); renderTabelNilai();">
               <option value="1">Kelas 1</option>
               <option value="2">Kelas 2</option>
               <option value="3">Kelas 3</option>
@@ -1283,13 +1353,7 @@
             </select>
 
             <label class="label-form" style="margin-top:4px;">2. Pilih Mata Pelajaran (Wajib):</label>
-            <select id="filterMapel" class="input-form" style="margin:0;" onchange="perbaruiOpsiBabRekap(); renderTabelNilai();">
-              <option value="pancasila|Pendidikan Pancasila">Pendidikan Pancasila</option>
-              <option value="bindo|Bahasa Indonesia">Bahasa Indonesia</option>
-              <option value="mtk|Matematika" selected>Matematika</option>
-              <option value="ipas|IPAS (Alam & Sosial)">IPAS (Alam & Sosial)</option>
-              <option value="bing|Bahasa Inggris">Bahasa Inggris</option>
-            </select>
+            <select id="filterMapel" class="input-form" style="margin:0;" onchange="perbaruiOpsiBabRekap(); renderTabelNilai();"></select>
 
             <label class="label-form" style="margin-top:4px;">3. Pilih Jenis Ujian:</label>
             <select id="filterTipeUjian" class="input-form" style="margin:0;" onchange="toggleFilterBabSpesifik(); perbaruiOpsiBabRekap(); renderTabelNilai();">
@@ -1321,12 +1385,23 @@
           <div id="wadahTabelNilai"></div>
         </div>`;
       perbaruiOpsiKodeUnikRekap();
+      perbaruiOpsiMapelRekap();
       toggleFilterBabSpesifik();
-      perbaruiOpsiBabRekap();
       renderTabelNilai();
     }
 
-        function toggleFilterBabSpesifik() {
+        function perbaruiOpsiMapelRekap() {
+      const fKelas = Number(document.getElementById("filterKelas").value);
+      const selectMapel = document.getElementById("filterMapel");
+      const daftarKode = getSemuaKodeMapelKelas(fKelas);
+      selectMapel.innerHTML = daftarKode.map(kode => {
+        const info = getInfoMapel(kode);
+        return `<option value="${kode}|${info.judul}">${info.judul}</option>`;
+      }).join("");
+      perbaruiOpsiBabRekap();
+    }
+
+    function toggleFilterBabSpesifik() {
       const tipe = document.getElementById("filterTipeUjian").value;
       const wadah = document.getElementById("wadahFilterBabRekap");
       if (wadah) wadah.style.display = (tipe === "BAB") ? "block" : "none";
