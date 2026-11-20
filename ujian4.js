@@ -554,3 +554,36 @@ window.tambahPaketUjian("4", "mtk", "Bab 2. Pecahan", [
   }
 ]);
 
+// Tempelkan di BARIS PALING BAWAH file ujian4.js
+window.tambahPaketUjian("4", "madura,Bahasa Madura", "UAS Semester 1", [
+  {
+    "q": ""Assalamualaikum" lamon bâ'na ketemu guru è sakola'an, artèna bâ'na...",
+    "p": ["Pamitan", "Ngocap salam", "Jalok tolong"],
+    "b": 1,
+    "bahas": "Pembahasan soal nomor 1."
+  },
+  {
+    "q": "Soal nomor 2 (UAS Semester 1)...",
+    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    "b": 0,
+    "bahas": "Pembahasan soal nomor 2."
+  },
+  {
+    "q": "Soal nomor 3 (UAS Semester 1)...",
+    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    "b": 0,
+    "bahas": "Pembahasan soal nomor 3."
+  },
+  {
+    "q": "Soal nomor 4 (UAS Semester 1)...",
+    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    "b": 0,
+    "bahas": "Pembahasan soal nomor 4."
+  },
+  {
+    "q": "Soal nomor 5 (UAS Semester 1)...",
+    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+    "b": 0,
+    "bahas": "Pembahasan soal nomor 5."
+  }
+]);
