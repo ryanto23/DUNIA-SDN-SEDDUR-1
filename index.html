@@ -85,7 +85,7 @@
     .btn-bahaya { background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 4px 0 #b91c1c; }
     .cbt-header-info { background: #0f172a; color: #fff; padding: 10px 14px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.86rem; }
     .timer-box { background: #dc2626; color: #fff; padding: 5px 12px; border-radius: 8px; font-family: monospace; font-size: 1.05rem; font-weight: 700; letter-spacing: 1px; }
-    .cbt-soal-teks { font-size: 1.05rem; line-height: 1.55; color: #0f172a; margin: 12px 0 16px; padding: 14px; background: #f8fafc; border-left: 4px solid #2563eb; border-radius: 8px; }
+    .cbt-soal-teks { font-size: 1.05rem; line-height: 1.55; color: #0f172a; margin: 12px 0 16px; padding: 14px; background: #f8fafc; border-left: 4px solid #2563eb; border-radius: 8px; white-space: pre-line; }
     .cbt-opsi-list { display: flex; flex-direction: column; gap: 10px; }
     .cbt-opsi-item { width: 100%; background: #ffffff; border: 2px solid #cbd5e1; border-radius: 10px; padding: 12px 14px; text-align: left; font-size: 0.96rem; font-weight: 600; color: #1e293b; cursor: pointer; display: flex; align-items: center; gap: 12px; transition: all 0.15s; flex-wrap: wrap; }
     .cbt-opsi-item:hover { border-color: #3b82f6; background: #eff6ff; }
@@ -136,6 +136,10 @@
     window.DATA_SEDDUR = {};
     window.DATABASE_BAB = {};
     window.DATABASE_SOAL = {};
+    window.DATA_TKA = {
+      bindo: { "Sesi 1": [], "Sesi 2": [], "Sesi 3": [] },
+      mtk: { "Sesi 1": [], "Sesi 2": [], "Sesi 3": [] }
+    };
     window.KODE_UJIAN_DEFAULT = {
       "1": "KLS1-2026",
       "2": "KLS2-2026",
@@ -161,10 +165,16 @@
       window.DATABASE_SOAL[keySoal] = window.DATABASE_SOAL[keySoal].concat(daftarSoalBaru);
     };
 
-    (function() {
+    window.tambahSoalTKA = function(mapel, sesi, daftarSoalBaru) {
+      if (!window.DATA_TKA[mapel]) window.DATA_TKA[mapel] = {};
+      if (!window.DATA_TKA[mapel][sesi]) window.DATA_TKA[mapel][sesi] = [];
+      window.DATA_TKA[mapel][sesi] = window.DATA_TKA[mapel][sesi].concat(daftarSoalBaru);
+    };
+
+        (function() {
       const versiBaru = Date.now();
       const daftarFile = [
-        "kode_ujian.js",
+        "kode_ujian.js", "tka.js",
         "kelas1.js", "kelas2.js", "kelas3.js", "kelas4.js", "kelas5.js", "kelas6.js",
         "ujian1.js", "ujian2.js", "ujian3.js", "ujian4.js", "ujian5.js", "ujian6.js"
       ];
@@ -258,6 +268,7 @@
     }
 
     let modeAplikasi = "kuis";
+    let sedangModeTKA = false;
     let namaSiswa = "Siswa Hebat";
     let kodeUnikPeserta = "-";
     let kelasAktif = 1;
@@ -368,6 +379,7 @@
 
         function tampilBeranda() {
       hentikanTimer();
+      sedangModeTKA = false;
       document.body.classList.remove("mode-cbt");
       setNavAktif("nav-home");
       try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
@@ -375,7 +387,7 @@
       document.getElementById("app").innerHTML = `
         <div class="card">
           <img class="banner-beranda" src="foto1.jpeg" alt="SDN Seddur 1" onerror="this.style.display='none'" />
-          <h2 class="judul-bergerak">Selamat Datang di Dunia SDN Seddur 1</h2>
+          <h2 class="judul-bergerak">Selamat Datang di Dunia SDN Seddur 1!</h2>
           <p style="color:#64748b; font-size:0.84rem; margin-top:4px;">Gunakan menu navigasi di bawah layar untuk memulai</p>
         </div>
 
@@ -384,11 +396,13 @@
           <div class="motivasi-teks">
             "Jangan pernah berhenti belajar, karena hidup tak pernah berhenti mengajarkan hal baru."
           </div>
+          <div class="motivasi-penulis">— Motivasi Belajar</div>
         </div>`;
     }
 
     function bukaMenuKelasKuis() {
       hentikanTimer();
+      sedangModeTKA = false;
       document.body.classList.remove("mode-cbt");
       setNavAktif("nav-kuis");
       mainkanEfek('klik');
@@ -396,7 +410,7 @@
       namaSiswa = "Siswa Hebat";
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Home</button><div class="star-bar">🎮 Mode Kuis</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Pilih Kelas (Menu Kuis)</h2><p style="color:#64748b; font-size:0.84rem;">Materi Per Bab • Tahun Ajaran 2026/2027</p></div>
+        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Pilih Kelas (Menu Kuis)</h2><p style="color:#64748b; font-size:0.84rem;">Materi Per Bab & Simulasi Tes TKA</p></div>
         <div class="kelas-grid">
           <button class="kelas-btn k1" onclick="pilihKelasKuis(1)"><span>🎈 Kelas 1</span><span class="kelas-sub">Fase A</span></button>
           <button class="kelas-btn k2" onclick="pilihKelasKuis(2)"><span>🚀 Kelas 2</span><span class="kelas-sub">Fase A</span></button>
@@ -404,7 +418,14 @@
           <button class="kelas-btn k4" onclick="pilihKelasKuis(4)"><span>🧭 Kelas 4</span><span class="kelas-sub">Fase B</span></button>
           <button class="kelas-btn k5" onclick="pilihKelasKuis(5)"><span>⚡ Kelas 5</span><span class="kelas-sub">Fase C</span></button>
           <button class="kelas-btn k6" onclick="pilihKelasKuis(6)"><span>🏆 Kelas 6</span><span class="kelas-sub">Fase C</span></button>
-        </div>`;
+        </div>
+        <button class="menu-btn m-bing" style="margin-top:12px;" onclick="tampilMenuMapelTKA()">
+          <div>
+            <div>🎯 Tes TKA (Simulasi Literasi & Numerasi)</div>
+            <div style="font-size:0.75rem; font-weight:400; opacity:0.95;">Bahasa Indonesia & Matematika • Sesi 1, 2, 3 (90 Menit)</div>
+          </div>
+          <span class="badge-jumlah">Mulai ▶️</span>
+        </button>`;
     }
 
     function pilihKelasKuis(kls) { mainkanEfek('klik'); kelasAktif = kls; tampilMenuMapel(); }
@@ -453,8 +474,77 @@
       tampilPertanyaanKuis();
     }
 
+        function tampilMenuMapelTKA() {
+      hentikanTimer();
+      document.body.classList.add("mode-cbt");
+      setNavAktif("nav-kuis");
+      const jmlBindo = Object.values((window.DATA_TKA && window.DATA_TKA.bindo) || {}).reduce((a, b) => a + b.length, 0);
+      const jmlMtk = Object.values((window.DATA_TKA && window.DATA_TKA.mtk) || {}).reduce((a, b) => a + b.length, 0);
+
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasKuis()">⬅️ Menu Kuis</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">🎯 Simulasi Tes TKA</div></div>
+        <div class="card card-cbt" style="text-align:center;">
+          <h2 style="color:#0f172a; font-size:1.2rem;">Pilih Mata Pelajaran Tes TKA</h2>
+          <p style="color:#64748b; font-size:0.84rem;">Waktu pengerjaan 90 menit per sesi • Nilai langsung tampil di akhir</p>
+        </div>
+        <button class="menu-btn m-bindo" onclick="tampilSesiTKA('bindo')">
+          <span>📚 Bahasa Indonesia (Literasi)</span>
+          <span class="badge-jumlah">${jmlBindo} Soal ▶️</span>
+        </button>
+        <button class="menu-btn m-mtk" onclick="tampilSesiTKA('mtk')">
+          <span>🔢 Matematika (Numerasi)</span>
+          <span class="badge-jumlah">${jmlMtk} Soal ▶️</span>
+        </button>`;
+    }
+
+    function tampilSesiTKA(kodeMapel) {
+      const namaMapel = kodeMapel === "bindo" ? "Bahasa Indonesia" : "Matematika";
+      const dataMapel = (window.DATA_TKA && window.DATA_TKA[kodeMapel]) || {};
+      const daftarSesi = ["Sesi 1", "Sesi 2", "Sesi 3"];
+
+      let tombolSesi = daftarSesi.map(sesi => {
+        const soalSesi = dataMapel[sesi] || [];
+        return `<button class="menu-btn bab-btn" onclick="mulaiTesTKA('${kodeMapel}', '${sesi}')">
+          <div>
+            <div style="font-size:0.75rem; color:#0284c7;">Simulasi TKA • ${namaMapel}</div>
+            <div>📝 ${sesi} (Target 30 Soal • 90 Menit)</div>
+          </div>
+          <span class="bab-badge">${soalSesi.length} Soal ▶️</span>
+        </button>`;
+      }).join("");
+
+      document.getElementById("app").innerHTML = `
+        <div class="top-bar"><button class="bg-kembali" onclick="tampilMenuMapelTKA()">⬅️ Ganti Mapel</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">${namaMapel}</div></div>
+        <div class="card card-cbt" style="text-align:center;">
+          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Sesi Tes TKA • ${namaMapel}</h2>
+          <p style="color:#64748b; font-size:0.84rem;">Setiap sesi berdurasi 90 menit</p>
+        </div>
+        ${tombolSesi}`;
+    }
+
+    function mulaiTesTKA(kodeMapel, sesi) {
+      const namaMapel = kodeMapel === "bindo" ? "Bahasa Indonesia" : "Matematika";
+      const daftarSoal = (window.DATA_TKA && window.DATA_TKA[kodeMapel] && window.DATA_TKA[kodeMapel][sesi]) || [];
+      if (daftarSoal.length === 0) {
+        alert(`Belum ada soal pada ${namaMapel} - ${sesi} di file tka.js!`);
+        return;
+      }
+      if (!confirm(`Mulai Simulasi Tes TKA sekarang?\n• Mata Pelajaran: ${namaMapel}\n• Sesi: ${sesi}\n• Jumlah Soal: ${daftarSoal.length} soal\n• Waktu: 90 Menit`)) return;
+
+      sedangModeTKA = true;
+      modeAplikasi = "ujian";
+      namaSiswa = "Peserta TKA";
+      kodeUnikPeserta = "TKA";
+      kodeKategoriUjianAktif = "TKA";
+      mapelUjianAktif = `Tes TKA • ${namaMapel}`;
+      kategoriUjianAktif = sesi;
+
+      jalankanMesinCBT(daftarSoal);
+    }
+
         function bukaMenuKelasUjian() {
       hentikanTimer();
+      sedangModeTKA = false;
       document.body.classList.add("mode-cbt");
       setNavAktif("nav-ujian");
       modeAplikasi = "ujian";
@@ -581,8 +671,6 @@
 
       let tombolMapel = daftarKodeMapel.map(kode => {
         const info = daftarNamaMapel[kode];
-        const daftarBab = getDaftarBabSinkron(kelasAktif, kode);
-        if (daftarBab.length === 0) return "";
         const daftarSoal = cariSoalDariDatabase(kelasAktif, kode, kodeKat);
         return `<button class="menu-btn ${info.kelasCss}" onclick="mulaiUjianUTS_UAS_Mapel('${kode}')">
           <span>${info.ikon} ${info.judul}</span>
@@ -611,6 +699,7 @@
 
       if (!confirm(`Mulai Ujian Bab sekarang?\n• Peserta: ${namaSiswa} (${kodeUnikPeserta})\n• Mapel: ${infoMapel.judul}\n• Materi: ${targetBab.bab}\n• Jumlah Soal: ${targetBab.soalUjian.length} soal\n• Batas Waktu: 5 menit per soal`)) return;
 
+      sedangModeTKA = false;
       modeAplikasi = "ujian";
       kodeKategoriUjianAktif = "latihan_bab";
       mapelUjianAktif = infoMapel.judul;
@@ -630,6 +719,7 @@
 
       if (!confirm(`Mulai ${kategoriUjianAktif} sekarang?\n• Peserta: ${namaSiswa} (${kodeUnikPeserta})\n• Mapel: ${infoMapel.judul}\n• Jumlah Soal: ${daftarSoal.length} soal\n• Batas Waktu: 90 menit total`)) return;
 
+      sedangModeTKA = false;
       modeAplikasi = "ujian";
       mapelUjianAktif = infoMapel.judul;
 
@@ -675,7 +765,7 @@
           if (elTimer) elTimer.textContent = formatWaktu(sisaDetik);
           if (sisaDetik <= 0) {
             hentikanTimer();
-            alert("⏰ Waktu ujian 90 menit telah habis! Jawaban Anda otomatis dikumpulkan.");
+            alert("⏰ Waktu 90 menit telah habis! Jawaban Anda otomatis dikumpulkan.");
             selesaiDanKumpulkanUjian(true);
           }
         }, 1000);
@@ -705,7 +795,7 @@
       }, 1000);
     }
 
-    function renderSoalUjianCBT() {
+        function renderSoalUjianCBT() {
       const s = soalPermainan[indeksSoal];
       const hurufOpsi = ["A", "B", "C", "D"];
       const isBab = kodeKategoriUjianAktif === "latihan_bab";
@@ -737,11 +827,15 @@
         ? `<button class="btn-aksi" style="margin:0; background:#2563eb; box-shadow:none;" onclick="lanjutNomorUjian()">Soal Berikutnya ➡️</button>`
         : `<button class="btn-aksi btn-sukses" style="margin:0; box-shadow:none;" onclick="selesaiDanKumpulkanUjian(false)">✅ Selesai & Kumpulkan</button>`;
 
+      const subHeaderInfo = sedangModeTKA
+        ? `Simulasi Tes TKA • SDN Seddur 1`
+        : `${namaSiswa} • Kode: ${kodeUnikPeserta} (Kls ${kelasAktif})`;
+
       document.getElementById("app").innerHTML = `
         <div class="cbt-header-info">
           <div>
             <div style="font-weight:700;">${mapelUjianAktif} • ${kategoriUjianAktif}</div>
-            <div style="font-size:0.75rem; opacity:0.85;">${namaSiswa} • Kode: ${kodeUnikPeserta} (Kls ${kelasAktif})</div>
+            <div style="font-size:0.75rem; opacity:0.85;">${subHeaderInfo}</div>
           </div>
           <div class="timer-box" id="tampilanTimer">${formatWaktu(sisaDetik)}</div>
         </div>
@@ -769,7 +863,7 @@
         </div>`;
     }
 
-        function pilihJawabanUjian(idxOpsi) {
+    function pilihJawabanUjian(idxOpsi) {
       jawabanSiswaUjian[indeksSoal] = idxOpsi;
       renderSoalUjianCBT();
     }
@@ -793,12 +887,12 @@
       renderSoalUjianCBT();
     }
 
-    function selesaiDanKumpulkanUjian(otomatis) {
+        function selesaiDanKumpulkanUjian(otomatis) {
       const belumDijawab = jawabanSiswaUjian.filter(j => j === null).length;
       if (!otomatis) {
         const pesanKonfirm = belumDijawab > 0
-          ? `Masih ada ${belumDijawab} soal yang belum dijawab.\nYakin ingin mengumpulkan ujian sekarang?`
-          : `Semua soal sudah dijawab.\nKumpulkan hasil ujian sekarang?`;
+          ? `Masih ada ${belumDijawab} soal yang belum dijawab.\nYakin ingin mengumpulkan sekarang?`
+          : `Semua soal sudah dijawab.\nKumpulkan hasil sekarang?`;
         if (!confirm(pesanKonfirm)) return;
       }
 
@@ -811,8 +905,32 @@
 
       const totalSoal = soalPermainan.length;
       const nilaiAkhir = Math.round((jumlahBenar / totalSoal) * 100);
-      const tipeUjianSimpan = (kodeKategoriUjianAktif === "latihan_bab") ? "BAB" : "UTS_UAS";
 
+      if (sedangModeTKA) {
+        document.getElementById("app").innerHTML = `
+          <div class="card card-cbt" style="text-align:center;">
+            <div style="font-size:2.6rem;">🎯</div>
+            <h2 style="color:#0f172a; font-size:1.3rem; margin:6px 0;">Hasil Simulasi Tes TKA</h2>
+            <p style="color:#64748b; font-size:0.86rem; margin-bottom:14px;">Latihan simulasi selesai (skor ini tidak disimpan ke rekap ujian)</p>
+
+            <div style="background:#f8fafc; border-radius:12px; padding:14px; border:1px solid #cbd5e1; font-size:0.92rem; color:#1e293b; text-align:left; line-height:1.7;">
+              <div><strong>Sekolah:</strong> SDN Seddur 1</div>
+              <div><strong>Mata Pelajaran:</strong> ${mapelUjianAktif}</div>
+              <div><strong>Sesi Latihan:</strong> ${kategoriUjianAktif}</div>
+              <div><strong>Jumlah Benar:</strong> ${jumlahBenar} dari ${totalSoal} Soal</div>
+              <div style="font-size:1.35rem; font-weight:700; color:#059669; margin-top:8px; padding-top:8px; border-top:1px dashed #cbd5e1; text-align:center;">
+                NILAI SIMULASI TKA: ${nilaiAkhir}
+              </div>
+            </div>
+
+            <button class="btn-aksi btn-sukses" style="width:100%; margin-top:14px; box-shadow:none;" onclick="tampilMenuMapelTKA()">🔄 Pilih Sesi / Mapel TKA Lain</button>
+            <button class="btn-aksi" style="width:100%; margin-top:8px; background:#0f172a; box-shadow:none;" onclick="tampilBeranda()">🏠 Kembali ke Home</button>
+          </div>`;
+        sedangModeTKA = false;
+        return;
+      }
+
+      const tipeUjianSimpan = (kodeKategoriUjianAktif === "latihan_bab") ? "BAB" : "UTS_UAS";
       simpanRekapNilai({
         id: Date.now(),
         tanggal: new Date().toLocaleDateString('id-ID', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
@@ -923,6 +1041,7 @@
 
         function tampilLoginAdmin() {
       hentikanTimer();
+      sedangModeTKA = false;
       document.body.classList.remove("mode-cbt");
       setNavAktif("nav-admin");
       mainkanEfek('klik');
@@ -945,7 +1064,7 @@
     function tampilDashboardAdmin() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Keluar Admin</button><div class="star-bar">⚙️ Panel Admin</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI, rekap nilai spesifik & pengaturan admin</p></div>
+        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI (Ujian & TKA), rekap nilai spesifik & pengaturan</p></div>
         <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI & Kode GitHub</span><span>▶️</span></button>
         <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>2. 📊 Lihat & Filter Rekap Nilai Siswa</span><span>▶️</span></button>
         <button class="menu-btn m-pancasila" onclick="adminUbahPassword()"><span>3. 🔑 Ubah Password Admin</span><span>▶️</span></button>`;
@@ -956,46 +1075,69 @@
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal AI</div></div>
         <div class="card" style="text-align:left;">
           <h3 style="color:#0284c7; text-align:center;">Generator Soal AI & Kode GitHub</h3>
-          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Format <code>tambahPaketUjian(...)</code> lengkap dengan penutup <code>]);</code> untuk ditempel di <strong>baris paling bawah</strong> <code>ujianX.js</code></p>
+          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Mendukung soal Ujian Kelas (<code>ujianX.js</code>) maupun Simulasi Tes TKA (<code>tka.js</code>)</p>
 
-          <label class="label-form">1. Pilih Kelas:</label>
-          <select id="genKelas" class="input-form" onchange="perbaruiOpsiBabGenerator()">
-            <option value="1">Kelas 1 (ujian1.js)</option>
-            <option value="2">Kelas 2 (ujian2.js)</option>
-            <option value="3">Kelas 3 (ujian3.js)</option>
-            <option value="4">Kelas 4 (ujian4.js)</option>
-            <option value="5">Kelas 5 (ujian5.js)</option>
-            <option value="6">Kelas 6 (ujian6.js)</option>
+          <label class="label-form">1. Pilih Target File:</label>
+          <select id="genTargetMode" class="input-form" onchange="ubahModeTargetGenerator()">
+            <option value="UJIAN">Ujian Kelas (ujian1.js – ujian6.js)</option>
+            <option value="TKA">Simulasi Tes TKA (tka.js)</option>
           </select>
 
-          <label class="label-form">2. Mata Pelajaran:</label>
-          <select id="genMapel" class="input-form" onchange="perbaruiOpsiBabGenerator()">
-            <option value="pancasila|Pendidikan Pancasila">Pendidikan Pancasila</option>
-            <option value="bindo|Bahasa Indonesia">Bahasa Indonesia</option>
-            <option value="mtk|Matematika">Matematika</option>
-            <option value="ipas|IPAS (Alam & Sosial)">IPAS (Alam & Sosial)</option>
-            <option value="bing|Bahasa Inggris">Bahasa Inggris</option>
-          </select>
+          <div id="blokTargetUjian">
+            <label class="label-form">2. Pilih Kelas:</label>
+            <select id="genKelas" class="input-form" onchange="perbaruiOpsiBabGenerator()">
+              <option value="1">Kelas 1 (ujian1.js)</option>
+              <option value="2">Kelas 2 (ujian2.js)</option>
+              <option value="3">Kelas 3 (ujian3.js)</option>
+              <option value="4" selected>Kelas 4 (ujian4.js)</option>
+              <option value="5">Kelas 5 (ujian5.js)</option>
+              <option value="6">Kelas 6 (ujian6.js)</option>
+            </select>
 
-          <label class="label-form">3. Jenis Ujian:</label>
-          <select id="genKategori" class="input-form" onchange="togglePilihanBabGenerator()">
-            <option value="BAB">Ujian Per Bab (5 Menit / Soal)</option>
-            <option value="UTS Semester 1">UTS Semester 1 (90 Menit Total)</option>
-            <option value="UAS Semester 1">UAS Semester 1 (90 Menit Total)</option>
-            <option value="UTS Semester 2">UTS Semester 2 (90 Menit Total)</option>
-            <option value="UAS Semester 2">UAS Semester 2 (90 Menit Total)</option>
-          </select>
+            <label class="label-form">3. Mata Pelajaran:</label>
+            <select id="genMapel" class="input-form" onchange="perbaruiOpsiBabGenerator()">
+              <option value="pancasila|Pendidikan Pancasila">Pendidikan Pancasila</option>
+              <option value="bindo|Bahasa Indonesia">Bahasa Indonesia</option>
+              <option value="mtk|Matematika">Matematika</option>
+              <option value="ipas|IPAS (Alam & Sosial)">IPAS (Alam & Sosial)</option>
+              <option value="bing|Bahasa Inggris">Bahasa Inggris</option>
+            </select>
 
-          <div id="wadahPilihBabGen">
-            <label class="label-form">3b. Pilih Bab dari <code>ujianX.js</code> atau Buat Judul Bab Baru:</label>
-            <select id="genDaftarBab" class="input-form" onchange="cekBabBaruInput()"></select>
-            <input type="text" id="genBabBaruInput" class="input-form" style="display:none; border-color:#10b981; background:#ecfdf5;" placeholder="Ketik Nama Bab Baru (Contoh: Bab 2. Penjumlahan)..." />
+            <label class="label-form">4. Jenis Ujian:</label>
+            <select id="genKategori" class="input-form" onchange="togglePilihanBabGenerator()">
+              <option value="BAB">Ujian Per Bab (5 Menit / Soal)</option>
+              <option value="UTS Semester 1">UTS Semester 1 (90 Menit Total)</option>
+              <option value="UAS Semester 1">UAS Semester 1 (90 Menit Total)</option>
+              <option value="UTS Semester 2">UTS Semester 2 (90 Menit Total)</option>
+              <option value="UAS Semester 2">UAS Semester 2 (90 Menit Total)</option>
+            </select>
+
+            <div id="wadahPilihBabGen">
+              <label class="label-form">4b. Pilih Bab dari <code>ujianX.js</code> atau Buat Judul Bab Baru:</label>
+              <select id="genDaftarBab" class="input-form" onchange="cekBabBaruInput()"></select>
+              <input type="text" id="genBabBaruInput" class="input-form" style="display:none; border-color:#10b981; background:#ecfdf5;" placeholder="Ketik Nama Bab Baru..." />
+            </div>
           </div>
 
-          <label class="label-form">4. Topik / Pokok Materi:</label>
-          <input type="text" id="genTopik" class="input-form" placeholder="Contoh: Bilangan Cacah, Pecahan, Rantai Makanan..." />
+          <div id="blokTargetTKA" style="display:none;">
+            <label class="label-form">2. Mata Pelajaran TKA:</label>
+            <select id="genMapelTKA" class="input-form">
+              <option value="bindo|Bahasa Indonesia">Bahasa Indonesia (Literasi)</option>
+              <option value="mtk|Matematika">Matematika (Numerasi)</option>
+            </select>
 
-          <label class="label-form">5. Mode Gambar Soal & Jawaban:</label>
+            <label class="label-form">3. Pilih Sesi TKA:</label>
+            <select id="genSesiTKA" class="input-form">
+              <option value="Sesi 1">Sesi 1</option>
+              <option value="Sesi 2">Sesi 2</option>
+              <option value="Sesi 3">Sesi 3</option>
+            </select>
+          </div>
+
+          <label class="label-form">5. Topik / Pokok Materi:</label>
+          <input type="text" id="genTopik" class="input-form" placeholder="Contoh: Teks Informasi, Bilangan Cacah, Pecahan..." />
+
+          <label class="label-form">6. Mode Gambar Soal & Jawaban:</label>
           <select id="genModeGambar" class="input-form">
             <option value="Teks Biasa dengan Emoji">Teks Biasa dengan Emoji</option>
             <option value="Soal Bergambar SVG (properti 'svg') dengan Pilihan Teks">Soal Bergambar SVG + Jawaban Teks</option>
@@ -1003,12 +1145,12 @@
             <option value="Campuran Soal & Jawaban Bergambar SVG (properti 'svg' & 'pSvg')">Campuran Soal & Jawaban SVG</option>
           </select>
 
-          <label class="label-form">6. Jumlah Soal yang Dibuat:</label>
+          <label class="label-form">7. Jumlah Soal yang Dibuat:</label>
           <select id="genJumlah" class="input-form">
             <option value="5">5 Soal</option>
             <option value="10" selected>10 Soal</option>
             <option value="15">15 Soal</option>
-            <option value="20">20 Soal</option>
+            <option value="30">30 Soal</option>
           </select>
 
           <button class="btn-aksi" style="width:100%; margin-top:12px;" onclick="buatKodeSoalGitHub()">⚡ Generate Prompt AI & Kode GitHub</button>
@@ -1017,12 +1159,19 @@
           <textarea id="hasilPromptAI" class="textarea-kode" style="min-height:140px; color:#fde047;" readonly placeholder="Klik tombol Generate di atas..."></textarea>
           <button class="btn-aksi" style="width:100%;" onclick="salinTeks('hasilPromptAI')">📋 Salin Prompt AI</button>
 
-          <label class="label-form" style="margin-top:14px; color:#059669;">💻 Hasil 2: Template Kode GitHub (Tempel di Baris Paling Bawah ujianX.js):</label>
+          <label class="label-form" style="margin-top:14px; color:#059669;">💻 Hasil 2: Template Kode GitHub (Tempel di Baris Paling Bawah File):</label>
           <textarea id="hasilKodeSoal" class="textarea-kode" style="min-height:170px;" readonly placeholder="Kerangka kode lengkap dengan penutup akan muncul di sini..."></textarea>
           <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeSoal')">📋 Salin Kode GitHub</button>
         </div>`;
+      ubahModeTargetGenerator();
       perbaruiOpsiBabGenerator();
       togglePilihanBabGenerator();
+    }
+
+        function ubahModeTargetGenerator() {
+      const target = document.getElementById("genTargetMode").value;
+      document.getElementById("blokTargetUjian").style.display = (target === "UJIAN") ? "block" : "none";
+      document.getElementById("blokTargetTKA").style.display = (target === "TKA") ? "block" : "none";
     }
 
     function togglePilihanBabGenerator() {
@@ -1032,7 +1181,7 @@
 
     function perbaruiOpsiBabGenerator() {
       const kls = Number(document.getElementById("genKelas").value);
-      const kodeMapel = document.getElementById("genMapel").value.split("|")[0];
+      const kodeMapel = document.getElementById("genMapel").value.split("|");
       const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
       const selectBab = document.getElementById("genDaftarBab");
 
@@ -1048,28 +1197,46 @@
       inputBaru.style.display = (val === "__BARU__") ? "block" : "none";
     }
 
-        function buatKodeSoalGitHub() {
-      const kls = document.getElementById("genKelas").value;
-      const mapelRaw = document.getElementById("genMapel").value.split("|");
-      const kodeMapel = mapelRaw[0];
-      const namaMapel = mapelRaw[1];
-      const kat = document.getElementById("genKategori").value;
-
-      let namaPaketAtauBab = kat;
-      if (kat === "BAB") {
-        namaPaketAtauBab = document.getElementById("genDaftarBab").value;
-        if (namaPaketAtauBab === "__BARU__") {
-          namaPaketAtauBab = document.getElementById("genBabBaruInput").value.trim() || "Bab Baru";
-        }
-      }
-
-      const topik = document.getElementById("genTopik").value.trim() || namaPaketAtauBab;
+    function buatKodeSoalGitHub() {
+      const target = document.getElementById("genTargetMode").value;
       const modeGbr = document.getElementById("genModeGambar").value;
       const jumlah = parseInt(document.getElementById("genJumlah").value, 10);
 
-      const pembuka = `window.tambahPaketUjian("${kls}", "${kodeMapel}", "${namaPaketAtauBab}", [`;
-      const penutup = `]);`;
+      let fileTujuan = "";
+      let pembuka = "";
+      let ketTarget = "";
+      let topik = document.getElementById("genTopik").value.trim();
 
+      if (target === "TKA") {
+        const mapelTKAParts = document.getElementById("genMapelTKA").value.split("|");
+        const kodeTKA = mapelTKAParts;
+        const namaTKA = mapelTKAParts;
+        const sesiTKA = document.getElementById("genSesiTKA").value;
+        topik = topik || `Simulasi TKA ${namaTKA} ${sesiTKA}`;
+        fileTujuan = "tka.js";
+        pembuka = `window.tambahSoalTKA("${kodeTKA}", "${sesiTKA}", [`;
+        ketTarget = `Simulasi Tes TKA SD • Mata Pelajaran: ${namaTKA} • ${sesiTKA}`;
+      } else {
+        const kls = document.getElementById("genKelas").value;
+        const mapelRaw = document.getElementById("genMapel").value.split("|");
+        const kodeMapel = mapelRaw;
+        const namaMapel = mapelRaw;
+        const kat = document.getElementById("genKategori").value;
+
+        let namaPaketAtauBab = kat;
+        if (kat === "BAB") {
+          namaPaketAtauBab = document.getElementById("genDaftarBab").value;
+          if (namaPaketAtauBab === "__BARU__") {
+            namaPaketAtauBab = document.getElementById("genBabBaruInput").value.trim() || "Bab Baru";
+          }
+        }
+        topik = topik || namaPaketAtauBab;
+        fileTujuan = `ujian${kls}.js`;
+        pembuka = `window.tambahPaketUjian("${kls}", "${kodeMapel}", "${namaPaketAtauBab}", [`;
+        ketTarget = `SD Kelas ${kls} • Mata Pelajaran: ${namaMapel} • ${namaPaketAtauBab}`;
+      }
+
+      const penutup = `]);`;
       let contohItem = `  {\n    "q": "Pertanyaan...",\n    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],\n    "b": 0,\n    "bahas": "Pembahasan."\n  }`;
       if (modeGbr.includes("pSvg")) {
         contohItem = `  {\n    "q": "Pertanyaan...",\n    "p": ["Gambar A", "Gambar B", "Gambar C", "Gambar D"],\n    "pSvg": ["<svg width='80' height='40' xmlns='http://w3.org'><rect width='80' height='40' fill='#dcfce7'/></svg>", "<svg width='80' height='40' xmlns='http://w3.org'><rect width='80' height='40' fill='#fee2e2'/></svg>", "<svg width='80' height='40' xmlns='http://w3.org'><rect width='80' height='40' fill='#fef3c7'/></svg>", "<svg width='80' height='40' xmlns='http://w3.org'><rect width='80' height='40' fill='#e0e7ff'/></svg>"],\n    "b": 0,\n    "bahas": "Pembahasan."\n  }`;
@@ -1077,14 +1244,14 @@
         contohItem = `  {\n    "svg": "<svg width='160' height='60' xmlns='http://w3.org'><rect x='10' y='10' width='140' height='40' rx='8' fill='#e0f2fe' stroke='#0284c7'/></svg>",\n    "q": "Perhatikan gambar di atas! ...",\n    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],\n    "b": 0,\n    "bahas": "Pembahasan."\n  }`;
       }
 
-      const promptAI = `Buatkan ${jumlah} soal pilihan ganda Kurikulum Merdeka Tahun Ajaran 2026/2027 untuk siswa SD Kelas ${kls}.\n- Mata Pelajaran: ${namaMapel}\n- Jenis / Bab: ${namaPaketAtauBab}\n- Topik Materi: ${topik}\n- Format Visual: ${modeGbr}\n\nATURAN WAJIB FORMAT OUTPUT:\nTuliskan HANYA dalam bentuk kode JavaScript utuh lengkap dengan pembuka dan penutup "]);" di bagian akhir agar bisa langsung ditempel di BARIS PALING BAWAH file ujian${kls}.js:\n\n${pembuka}\n${contohItem}\n${penutup}\n\nPastikan seluruh ${jumlah} soal berada di dalam array tersebut, indeks "b" (0=A, 1=B, 2=C, 3=D) akurat, gunakan kutip tunggal (') di dalam kode SVG jika memakai SVG, dan akhiri dengan penutup ]);`;
+      const promptAI = `Buatkan ${jumlah} soal pilihan ganda Kurikulum Merdeka Tahun Ajaran 2026/2027.\n- Target: ${ketTarget}\n- Topik Materi: ${topik}\n- Format Visual: ${modeGbr}\n\nATURAN WAJIB FORMAT OUTPUT:\nTuliskan HANYA dalam bentuk kode JavaScript utuh lengkap dengan pembuka dan penutup "]);" di bagian akhir agar bisa langsung ditempel di BARIS PALING BAWAH file ${fileTujuan}:\n\n${pembuka}\n${contohItem}\n${penutup}\n\nPastikan seluruh ${jumlah} soal berada di dalam array tersebut, indeks "b" (0=A, 1=B, 2=C, 3=D) akurat, gunakan kutip tunggal (') di dalam kode SVG jika memakai SVG, dan akhiri dengan penutup ]);`;
 
       let daftarTemplate = [];
       for (let i = 1; i <= jumlah; i++) {
-        daftarTemplate.push(`  {\n    "q": "Soal nomor ${i} (${namaMapel} - ${topik})...",\n    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],\n    "b": 0,\n    "bahas": "Pembahasan soal nomor ${i}."\n  }`);
+        daftarTemplate.push(`  {\n    "q": "Soal nomor ${i} (${topik})...",\n    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],\n    "b": 0,\n    "bahas": "Pembahasan soal nomor ${i}."\n  }`);
       }
 
-      const kodeGitHub = `// Tempelkan di BARIS PALING BAWAH file ujian${kls}.js\n${pembuka}\n${daftarTemplate.join(",\n")}\n${penutup}`;
+      const kodeGitHub = `// Tempelkan di BARIS PALING BAWAH file ${fileTujuan}\n${pembuka}\n${daftarTemplate.join(",\n")}\n${penutup}`;
 
       document.getElementById("hasilPromptAI").value = promptAI;
       document.getElementById("hasilKodeSoal").value = kodeGitHub;
@@ -1171,8 +1338,8 @@
       if (!selectBab) return;
       const fKelas = Number(document.getElementById("filterKelas").value);
       const mapelParts = document.getElementById("filterMapel").value.split("|");
-      const kodeMapel = mapelParts[0];
-      const namaMapel = mapelParts[1];
+      const kodeMapel = mapelParts;
+      const namaMapel = mapelParts;
 
       const sinkron = getDaftarBabSinkron(fKelas, kodeMapel);
       const daftarOpsiBab = sinkron.map(b => b.bab);
@@ -1213,7 +1380,7 @@
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const fKelas = String(document.getElementById("filterKelas").value);
       const mapelParts = document.getElementById("filterMapel").value.split("|");
-      const fMapelNama = mapelParts[1];
+      const fMapelNama = mapelParts;
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1235,12 +1402,12 @@
       });
     }
 
-        function renderTabelNilai() {
+    function renderTabelNilai() {
       const data = getDataTersaring();
       const wadah = document.getElementById("wadahTabelNilai");
       const infoBox = document.getElementById("infoRingkasanFilter");
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|")[1];
+      const fMapelNama = document.getElementById("filterMapel").value.split("|");
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1281,7 +1448,7 @@
       if (data.length === 0) { alert("Tidak ada data pada filter yang dipilih untuk diunduh!"); return; }
 
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|")[1];
+      const fMapelNama = document.getElementById("filterMapel").value.split("|");
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
