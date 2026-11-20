@@ -2275,3 +2275,1542 @@ window.tambahPaketUjian("4", "bing", "UAS Semester 1", [
   }
 ]);
 
+window.tambahPaketUjian("4", "mtk", "UTS Semester 1", [
+  {
+    "q": "Bilangan 6.409 dibaca ....",
+    "p": [
+      "Enam ribu empat ratus sembilan puluh",
+      "Enam ribu empat ratus sembilan",
+      "Enam ribu empat puluh sembilan",
+      "Enam ratus empat puluh sembilan"
+    ],
+    "b": 1,
+    "bahas": "6 ribuan (6.000) + 4 ratusan (400) + 0 puluhan + 9 satuan (9) dibaca enam ribu empat ratus sembilan."
+  },
+  {
+    "q": "Lambang bilangan dari 'delapan ribu tujuh ratus lima puluh dua' adalah ....",
+    "p": ["8.725", "8.752", "8.572", "8.075"],
+    "b": 1,
+    "bahas": "8.000 + 700 + 50 + 2 = 8.752."
+  },
+  {
+    "q": "Pada bilangan 9.347, angka 3 menempati nilai tempat ....",
+    "p": ["Ribuan", "Ratusan", "Puluhan", "Satuan"],
+    "b": 1,
+    "bahas": "9 = ribuan, 3 = ratusan, 4 = puluhan, 7 = satuan."
+  },
+  {
+    "q": "Nilai angka 6 pada bilangan 6.825 adalah ....",
+    "p": ["6", "60", "600", "6.000"],
+    "b": 3,
+    "bahas": "Angka 6 menempati tempat ribuan sehingga nilainya 6.000."
+  },
+  {
+    "svg": "<svg width='180' height='65' xmlns='http://w3.org'><rect x='12' y='14' width='58' height='36' rx='6' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='41' y='37' font-size='12' font-weight='bold' text-anchor='middle'>4.560</text><circle cx='90' cy='32' r='12' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><text x='90' y='37' font-size='12' font-weight='bold' text-anchor='middle'>?</text><rect x='110' y='14' width='58' height='36' rx='6' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='139' y='37' font-size='12' font-weight='bold' text-anchor='middle'>4.506</text></svg>",
+    "q": "Tanda perbandingan yang tepat untuk mengganti tanda tanya (?) pada gambar di atas adalah ....",
+    "p": ["<", ">", "=", "+"],
+    "b": 1,
+    "bahas": "4.560 lebih besar daripada 4.506, sehingga tandanya adalah '>'."
+  },
+  {
+    "q": "Urutan bilangan berikut dari yang terkecil ke terbesar yang benar adalah ....",
+    "p": [
+      "3.450; 3.405; 3.540; 3.504",
+      "3.405; 3.450; 3.504; 3.540",
+      "3.540; 3.504; 3.450; 3.405",
+      "3.405; 3.504; 3.450; 3.540"
+    ],
+    "b": 1,
+    "bahas": "Urutan dari paling kecil ke paling besar adalah 3.405; 3.450; 3.504; 3.540."
+  },
+  {
+    "q": "Dekomposisi (uraian nilai tempat) yang benar dari bilangan 7.284 adalah ....",
+    "p": [
+      "7.000 + 200 + 80 + 4",
+      "7.000 + 800 + 20 + 4",
+      "700 + 200 + 80 + 4",
+      "7.000 + 20 + 80 + 4"
+    ],
+    "b": 0,
+    "bahas": "7.284 = 7.000 + 200 + 80 + 4."
+  },
+  {
+    "q": "Hasil penjumlahan dari 4.375 + 2.845 adalah ....",
+    "p": ["7.120", "7.210", "7.220", "6.220"],
+    "b": 2,
+    "bahas": "4.375 + 2.845 = 7.220."
+  },
+  {
+    "q": "Perpustakaan desa memiliki koleksi 3.450 buku. Bulan ini mendapat sumbangan sebanyak 1.275 buku baru. Jumlah seluruh buku di perpustakaan sekarang adalah ....",
+    "p": ["4.625 buku", "4.725 buku", "4.825 buku", "5.725 buku"],
+    "b": 1,
+    "bahas": "3.450 + 1.275 = 4.725 buku."
+  },
+  {
+    "q": "Hasil pengurangan dari 6.500 - 2.745 adalah ....",
+    "p": ["3.755", "3.855", "4.245", "4.755"],
+    "b": 0,
+    "bahas": "6.500 - 2.745 = 3.755."
+  },
+  {
+    "q": "Pak Hasan memanen 5.200 butir telur ayam. Sebanyak 3.450 butir dijual ke pasar. Sisa telur ayam Pak Hasan adalah ....",
+    "p": ["1.650 butir", "1.750 butir", "1.850 butir", "2.750 butir"],
+    "b": 1,
+    "bahas": "5.200 - 3.450 = 1.750 butir telur."
+  },
+  {
+    "q": "Hasil perkalian dari 46 × 8 adalah ....",
+    "p": ["328", "348", "368", "388"],
+    "b": 2,
+    "bahas": "46 × 8 = (40 × 8) + (6 × 8) = 320 + 48 = 368."
+  },
+  {
+    "q": "Di sebuah kebun terdapat 14 baris pohon mangga. Setiap baris terdiri atas 15 pohon mangga. Jumlah seluruh pohon mangga di kebun tersebut adalah ....",
+    "p": ["190 pohon", "200 pohon", "210 pohon", "225 pohon"],
+    "b": 2,
+    "bahas": "14 × 15 = 210 pohon mangga."
+  },
+  {
+    "q": "Hasil pembagian dari 96 : 6 adalah ....",
+    "p": ["14", "15", "16", "18"],
+    "b": 2,
+    "bahas": "96 : 6 = 16."
+  },
+  {
+    "q": "Ibu membuat 144 potong kue bolu yang akan dikemas ke dalam 8 kotak sama banyak. Banyak potongan kue pada setiap kotak adalah ....",
+    "p": ["16 potong", "17 potong", "18 potong", "19 potong"],
+    "b": 2,
+    "bahas": "144 : 8 = 18 potong kue."
+  },
+  {
+    "q": "Semua faktor (pembagi habis) dari bilangan 18 adalah ....",
+    "p": [
+      "1, 2, 3, 6, 9, 18",
+      "1, 2, 3, 6, 18",
+      "1, 3, 6, 9, 18",
+      "2, 3, 6, 9, 18"
+    ],
+    "b": 0,
+    "bahas": "18 = 1 × 18, 2 × 9, 3 × 6. Jadi faktornya adalah 1, 2, 3, 6, 9, 18."
+  },
+  {
+    "q": "Bilangan berikut yang merupakan faktor dari 24 adalah ....",
+    "p": ["5", "7", "8", "9"],
+    "b": 2,
+    "bahas": "24 habis dibagi 8 (24 : 8 = 3), sehingga 8 merupakan faktor dari 24."
+  },
+  {
+    "q": "Empat kelipatan pertama dari bilangan 6 adalah ....",
+    "p": [
+      "6, 12, 18, 24",
+      "6, 12, 16, 24",
+      "1, 6, 12, 18",
+      "6, 8, 10, 12"
+    ],
+    "b": 0,
+    "bahas": "6 × 1 = 6, 6 × 2 = 12, 6 × 3 = 18, 6 × 4 = 24."
+  },
+  {
+    "q": "Kelipatan bilangan 9 yang terletak di antara 20 dan 40 adalah ....",
+    "p": ["27 dan 36", "24 dan 32", "25 dan 35", "27 dan 38"],
+    "b": 0,
+    "bahas": "9 × 3 = 27 dan 9 × 4 = 36."
+  },
+  {
+    "svg": "<svg width='175' height='65' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='42' rx='8' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='38' font-size='12' font-weight='bold' text-anchor='middle' fill='#15803d'>3/4  ...  2/4</text></svg>",
+    "q": "Perhatikan dua pecahan berpenyebut sama pada gambar di atas! Tanda perbandingan yang tepat untuk melengkapi titik-titik tersebut adalah ....",
+    "p": ["<", ">", "=", "+"],
+    "b": 1,
+    "bahas": "Karena penyebutnya sama (4), bandingkan pembilangnya: 3 lebih besar dari 2, sehingga 3/4 > 2/4."
+  },
+  {
+    "q": "Tanda perbandingan yang tepat untuk pecahan pembilang sama 1/3 ... 1/5 adalah ....",
+    "p": ["<", ">", "=", "+"],
+    "b": 1,
+    "bahas": "Untuk pembilang sama (1), semakin kecil penyebutnya maka nilainya semakin besar: 1/3 > 1/5."
+  },
+  {
+    "q": "Pecahan yang senilai dengan 1/2 adalah ....",
+    "p": ["2/3", "2/4", "3/5", "1/4"],
+    "b": 1,
+    "bahas": "1/2 pembilang dan penyebutnya dikali 2 menghasilkan 2/4."
+  },
+  {
+    "q": "Bentuk pecahan paling sederhana dari 6/8 adalah ....",
+    "p": ["1/2", "2/3", "3/4", "4/6"],
+    "b": 2,
+    "bahas": "6/8 pembilang dan penyebutnya dibagi 2 menjadi 3/4."
+  },
+  {
+    "q": "Bentuk pecahan biasa dari 25% adalah ....",
+    "p": ["1/2", "1/4", "1/5", "2/5"],
+    "b": 1,
+    "bahas": "25% = 25/100 = 1/4."
+  },
+  {
+    "q": "Bentuk desimal dari pecahan 7/10 adalah ....",
+    "p": ["0,07", "0,7", "7,0", "7,1"],
+    "b": 1,
+    "bahas": "7 persepuluhan ditulis dalam bentuk desimal menjadi 0,7."
+  }
+]);
+
+window.tambahPaketUjian("4", "ipas", "UTS Semester 1", [
+  {
+    "q": "Bagian tumbuhan yang berada di dalam tanah dan berfungsi menyerap air serta unsur hara dari dalam tanah adalah ....",
+    "p": ["Batang", "Akar", "Daun", "Bunga"],
+    "b": 1,
+    "bahas": "Akar berfungsi menyerap air dan zat hara dari tanah serta memperkokoh berdirinya tumbuhan."
+  },
+  {
+    "q": "Tanaman padi, jagung, dan rumput memiliki akar berukuran kecil-kecil yang banyak dan menyebar seperti serabut. Jenis akar pada tanaman tersebut adalah akar ....",
+    "p": ["Tunggang", "Serabut", "Gantung", "Napas"],
+    "b": 1,
+    "bahas": "Tumbuhan monokotil seperti padi, jagung, dan kelapa memiliki akar serabut."
+  },
+  {
+    "q": "Bagian tumbuhan yang berfungsi mengangkut air dan mineral dari akar menuju daun serta menopang berdirinya tumbuhan adalah ....",
+    "p": ["Akar", "Batang", "Bunga", "Buah"],
+    "b": 1,
+    "bahas": "Batang berperan sebagai saluran pengangkut air dari akar ke daun dan hasil fotosintesis ke seluruh tubuh tumbuhan."
+  },
+  {
+    "q": "Zat hijau daun yang sangat penting bagi tumbuhan hijau untuk menangkap energi cahaya matahari saat proses fotosintesis disebut ....",
+    "p": ["Stomata", "Klorofil", "Xilem", "Floem"],
+    "b": 1,
+    "bahas": "Klorofil (zat hijau daun) menyerap cahaya matahari untuk mengolah air dan karbon dioksida menjadi makanan."
+  },
+  {
+    "svg": "<svg width='185' height='75' xmlns='http://w3.org'><ellipse cx='92' cy='40' rx='42' ry='18' fill='#22c55e' stroke='#15803d' stroke-width='2'/><line x1='50' y1='40' x2='134' y2='40' stroke='#15803d' stroke-width='1.5'/><text x='32' y='25' font-size='8' fill='#0284c7'>Air + CO₂</text><text x='152' y='25' font-size='8' fill='#dc2626'>O₂ + Karbohidrat</text></svg>",
+    "q": "Perhatikan bagan proses fotosintesis pada daun di atas! Gas yang dilepaskan oleh tumbuhan hijau ke udara sebagai hasil fotosintesis dan dibutuhkan manusia untuk bernapas adalah ....",
+    "p": ["Karbon dioksida", "Oksigen", "Nitrogen", "Uap air panas"],
+    "b": 1,
+    "bahas": "Fotosintesis menghasilkan karbohidrat (glukosa) sebagai cadangan makanan dan gas oksigen (O₂) untuk bernapas."
+  },
+  {
+    "q": "Mulut daun berukuran sangat kecil pada permukaan daun yang berfungsi sebagai tempat keluar masuknya udara (karbon dioksida dan oksigen) disebut ....",
+    "p": ["Klorofil", "Stomata", "Lentisel", "Putik"],
+    "b": 1,
+    "bahas": "Stomata adalah pori-pori kecil pada daun tempat pertukaran gas."
+  },
+  {
+    "q": "Bagian bunga yang berfungsi sebagai alat perkembangbiakan jantan karena menghasilkan serbuk sari adalah ....",
+    "p": ["Putik", "Benang sari", "Mahkota bunga", "Kelopak bunga"],
+    "b": 1,
+    "bahas": "Benang sari adalah alat kelamin jantan pada bunga, sedangkan putik adalah alat kelamin betina."
+  },
+  {
+    "q": "Peristiwa jatuhnya serbuk sari ke atas kepala putik pada bunga sehingga terjadi pembuahan disebut ....",
+    "p": ["Fotosintesis", "Penyerbukan", "Perkembangan akar", "Penguapan"],
+    "b": 1,
+    "bahas": "Penyerbukan (polinasi) adalah proses menempelnya serbuk sari pada kepala putik."
+  },
+  {
+    "q": "Tumbuhan yang berkembang biak secara vegetatif alami menggunakan tunas yang tumbuh di sekitar induknya adalah ....",
+    "p": ["Pisang dan bambu", "Mangga dan jeruk", "Jagung dan kacang tanah", "Tomat dan cabai"],
+    "b": 0,
+    "bahas": "Pohon pisang dan bambu berkembang biak dengan tunas baru di pangkal batang induknya."
+  },
+  {
+    "q": "Tanaman singkong dan mawar dapat dikembangbiakkan secara vegetatif buatan oleh manusia dengan cara memotong bagian batangnya lalu menancapkannya ke tanah, yang disebut ....",
+    "p": ["Cangkok", "Setek batang", "Okulasi", "Merunduk"],
+    "b": 1,
+    "bahas": "Setek batang dilakukan dengan menanam potongan batang tumbuhan secara langsung ke tanah."
+  },
+  {
+    "q": "Segala sesuatu yang menempati ruang dan memiliki massa (berat) disebut ....",
+    "p": ["Energi", "Materi / Zat", "Cahaya", "Bayangan"],
+    "b": 1,
+    "bahas": "Materi adalah segala sesuatu yang memiliki massa dan menempati ruang."
+  },
+  {
+    "q": "Benda yang memiliki bentuk dan volume tetap meskipun dipindahkan ke wadah yang berbeda-beda termasuk benda berwujud ....",
+    "p": ["Padat (seperti batu, pensil, dan kayu)", "Cair (seperti air dan sirup)", "Gas (seperti udara dan asap)", "Uap"],
+    "b": 0,
+    "bahas": "Zat padat memiliki bentuk dan volume yang selalu tetap."
+  },
+  {
+    "q": "Air sirup yang dituangkan dari botol ke dalam gelas akan berubah bentuk menyerupai gelas, tetapi volumenya tetap. Hal ini menunjukkan sifat benda ....",
+    "p": ["Padat", "Cair", "Gas", "Keras"],
+    "b": 1,
+    "bahas": "Zat cair memiliki sifat bentuk berubah mengikuti wadahnya, namun volumenya tetap."
+  },
+  {
+    "q": "Udara yang dipompakan ke dalam ban sepeda akan mengisi seluruh ruang di dalam ban. Hal ini membuktikan bahwa benda gas memiliki sifat ....",
+    "p": [
+      "Bentuk dan volumenya selalu berubah mengisi seluruh ruang",
+      "Bentuknya selalu tetap seperti kotak",
+      "Tidak memiliki massa sama sekali",
+      "Hanya mengalir ke tempat yang rendah"
+    ],
+    "b": 0,
+    "bahas": "Zat gas memiliki bentuk dan volume berubah-ubah memenuhi ruangan tempatnya berada."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='25' y='20' width='35' height='30' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='42' y='39' font-size='8' text-anchor='middle'>Es Batu</text><line x1='68' y1='35' x2='105' y2='35' stroke='#ef4444' stroke-width='2'/><polygon points='105,35 98,31 98,39' fill='#ef4444'/><text x='86' y='28' font-size='8' text-anchor='middle' fill='#dc2626'>Kalor</text><path d='M115,45 Q130,30 145,45 Z' fill='#38bdf8'/></svg>",
+    "q": "Perhatikan perubahan wujud es batu menjadi air ketika terkena panas seperti pada gambar di atas! Perubahan wujud benda padat menjadi cair disebut ....",
+    "p": ["Membeku", "Mencair (melebur)", "Menguap", "Mengembun"],
+    "b": 1,
+    "bahas": "Mencair adalah perubahan wujud dari padat menjadi cair karena menyerap kalor (panas)."
+  },
+  {
+    "q": "Ibu memasukkan air putih ke dalam plastik lalu menyimpannya di dalam freezer kulkas. Beberapa jam kemudian air berubah menjadi es batu. Perubahan wujud tersebut disebut ....",
+    "p": ["Membeku", "Mencair", "Menyublim", "Mengkristal"],
+    "b": 0,
+    "bahas": "Membeku adalah perubahan wujud dari cair menjadi padat karena melepaskan kalor (didinginkan)."
+  },
+  {
+    "q": "Pakaian basah yang dijemur di bawah terik sinar matahari lama-kelamaan menjadi kering karena air di dalam pakaian mengalami peristiwa ....",
+    "p": ["Menguap", "Mengembun", "Membeku", "Menyublim"],
+    "b": 0,
+    "bahas": "Menguap adalah perubahan wujud dari cair menjadi gas akibat pemanasan."
+  },
+  {
+    "q": "Pada pagi hari yang dingin, sering tampak titik-titik air menempel pada permukaan daun rumput di halaman. Peristiwa perubahan wujud gas menjadi cair tersebut disebut ....",
+    "p": ["Menguap", "Mengembun", "Mencair", "Menyublim"],
+    "b": 1,
+    "bahas": "Mengembun adalah perubahan wujud dari gas (uap air) menjadi titik-titik air cair saat suhu dingin."
+  },
+  {
+    "q": "Kapur barus (kamper) yang diletakkan di dalam lemari pakaian lama-kelamaan habis mengecil dan mengeluarkan bau harum. Perubahan wujud padat langsung menjadi gas tersebut disebut ....",
+    "p": ["Menyublim", "Mengkristal", "Membeku", "Menguap"],
+    "b": 0,
+    "bahas": "Menyublim adalah perubahan wujud benda padat langsung menjadi gas tanpa mencair terlebih dahulu."
+  },
+  {
+    "q": "Perubahan wujud dari gas langsung menjadi padat, seperti terbentuknya butiran salju di awan atau bunga es di dinding freezer, disebut ....",
+    "p": ["Mengkristal (deposisi)", "Mencair", "Menguap", "Menyublim"],
+    "b": 0,
+    "bahas": "Mengkristal (deposisi) adalah kebalikan dari menyublim, yaitu gas berubah menjadi padat."
+  },
+  {
+    "q": "Perubahan wujud benda yang terjadi karena benda MENERIMA atau MENYERAP kalor (panas) adalah ....",
+    "p": [
+      "Mencair, menguap, dan menyublim",
+      "Membeku, mengembun, dan mengkristal",
+      "Membeku dan mencair saja",
+      "Mengembun dan menguap saja"
+    ],
+    "b": 0,
+    "bahas": "Mencair, menguap, dan menyublim memerlukan panas (kalor) untuk berlangsung."
+  },
+  {
+    "q": "Umbi yang menyimpan cadangan makanan pada bagian akar (umbi akar) tumbuhan berikut adalah ....",
+    "p": ["Singkong dan wortel", "Kentang dan ubi jalar", "Bawang merah dan bawang putih", "Tebu dan sagu"],
+    "b": 0,
+    "bahas": "Singkong dan wortel menyimpan cadangan makanan pada akar yang membesar (umbi akar), sedangkan kentang pada batang."
+  },
+  {
+    "q": "Mengapa tumbuhan hijau disebut sebagai produsen dan sumber kehidupan utama bagi makhluk hidup di Bumi?",
+    "p": [
+      "Karena mampu membuat makanannya sendiri melalui fotosintesis dan menghasilkan oksigen bagi makhluk hidup lain",
+      "Karena tumbuhan dapat berpindah tempat mencari mangsa",
+      "Karena tumbuhan memakan hewan-hewan kecil di hutan",
+      "Karena tumbuhan tidak membutuhkan air dan cahaya matahari"
+    ],
+    "b": 0,
+    "bahas": "Tumbuhan hijau satu-satunya makhluk hidup yang dapat menghasilkan makanan sendiri dan oksigen melalui fotosintesis."
+  },
+  {
+    "q": "Contoh pemanfaatan perubahan wujud menguap dalam kegiatan masyarakat pesisir Pulau Madura adalah ....",
+    "p": [
+      "Pembuatan garam dengan menjemur air laut di petak tambak di bawah sinar matahari",
+      "Pembuatan es lilin di dalam lemari pendingin",
+      "Peleburan besi tua di pabrik baja",
+      "Pembuatan agar-agar yang didinginkan di cetakan"
+    ],
+    "b": 0,
+    "bahas": "Air laut di tambak garam menguap terkena panas matahari sehingga menyisakan kristal garam."
+  },
+  {
+    "q": "Alat yang digunakan untuk mengukur besarnya massa suatu benda secara baku (dalam satuan gram atau kilogram) adalah ....",
+    "p": ["Timbangan / neraca", "Gelas ukur", "Penggaris", "Termometer"],
+    "b": 0,
+    "bahas": "Timbangan atau neraca digunakan untuk mengukur massa benda."
+  }
+]);
+
+window.tambahPaketUjian("4", "bindo", "UTS Semester 1", [
+  {
+    "q": "Kalimat yang predikatnya memerlukan objek agar maknanya lengkap disebut kalimat ....",
+    "p": ["Transitif", "Intransitif", "Tanya", "Majemuk"],
+    "b": 0,
+    "bahas": "Kalimat transitif berpola S-P-O (memerlukan objek), contohnya: Ibu memasak sayur."
+  },
+  {
+    "q": "Kalimat berikut yang termasuk kalimat TRANSITIF (memiliki objek) adalah ....",
+    "p": [
+      "Adik menangis di kamar.",
+      "Rani membaca buku cerita di perpustakaan.",
+      "Ayah berangkat ke kantor pagi-pagi.",
+      "Burung-burung terbang tinggi di angkasa."
+    ],
+    "b": 1,
+    "bahas": "Pada kalimat 'Rani membaca buku cerita', kata 'buku cerita' berkedudukan sebagai objek."
+  },
+  {
+    "q": "Kalimat berikut yang termasuk kalimat INTRANSITIF (tidak memerlukan objek) adalah ....",
+    "p": [
+      "Budi menendang bola di lapangan.",
+      "Kucing itu tidur nyenyak di atas sofa.",
+      "Ibu menyiram bunga mawar setiap sore.",
+      "Kakak menulis surat untuk nenek."
+    ],
+    "b": 1,
+    "bahas": "Kata kerja 'tidur' tidak membutuhkan objek sehingga kalimat tersebut adalah kalimat intransitif."
+  },
+  {
+    "q": "Perhatikan kalimat berikut: 'Edo menyapu halaman rumah.' Unsur kalimat yang berkedudukan sebagai objek adalah ....",
+    "p": ["Edo", "menyapu", "halaman rumah", "rumah"],
+    "b": 2,
+    "bahas": "Edo (Subjek), menyapu (Predikat), halaman rumah (Objek)."
+  },
+  {
+    "q": "Perasaan takut atau cemas yang berlebihan terhadap sesuatu (seperti takut berada di tempat gelap atau ketinggian) disebut ....",
+    "p": ["Fobia", "Alergi", "Empati", "Simpati"],
+    "b": 0,
+    "bahas": "Fobia adalah ketakutan yang sangat berlebihan terhadap benda atau keadaan tertentu."
+  },
+  {
+    "q": "Kata dasar 'tulis' apabila diberi awalan 'me-' akan berubah menjadi kata berimbuhan ....",
+    "p": ["Mentulis", "Menulis", "Metulis", "Mengtulis"],
+    "b": 1,
+    "bahas": "Huruf awal 't' pada kata dasar 'tulis' luluh menjadi 'n-' saat bertemu awalan 'me-', menjadi 'menulis'."
+  },
+  {
+    "q": "Kata dasar 'sapu' apabila diberi awalan 'me-' akan menjadi kata ....",
+    "p": ["Mensapu", "Menyapu", "Mesapu", "Mengsapu"],
+    "b": 1,
+    "bahas": "Huruf awal 's' pada kata dasar 'sapu' luluh menjadi 'ny-' saat mendapat awalan 'me-', menjadi 'menyapu'."
+  },
+  {
+    "q": "Kata dasar 'gambar' apabila diberi awalan 'me-' yang benar adalah ....",
+    "p": ["Megambar", "Menggambar", "Mengambar", "Menggambarin"],
+    "b": 1,
+    "bahas": "Kata dasar berawalan 'g' mendapat awalan 'meng-', sehingga menjadi 'menggambar'."
+  },
+  {
+    "q": "Kata dasar 'kupas' jika diberi imbuhan 'me-' akan menjadi kata ....",
+    "p": ["Mekupas", "Mengupas", "Mengkupas", "Menkupas"],
+    "b": 1,
+    "bahas": "Huruf awal 'k' pada kata dasar 'kupas' luluh menjadi 'ng-' saat bertemu awalan 'me-', menjadi 'mengupas'."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='11' font-weight='bold' text-anchor='middle' fill='#854d0e'>KATA HOMONIM</text><text x='87' y='48' font-size='9' text-anchor='middle' fill='#0f172a'>Sama Ejaan &amp; Bunyi, Beda Arti</text></svg>",
+    "q": "Perhatikan pengertian kata homonim pada gambar di atas! Pasangan kalimat berikut yang menggunakan kata homonim 'bisa' dengan dua arti berbeda adalah ....",
+    "p": [
+      "Ular kobra memiliki bisa mematikan, sedangkan Andi bisa berenang dengan cepat.",
+      "Ibu membeli apel merah dan apel hijau di pasar buah.",
+      "Adik makan nasi goreng dan kakak makan mi goreng.",
+      "Ayah pergi ke kantor naik sepeda motor."
+    ],
+    "b": 0,
+    "bahas": "Kata 'bisa' pada kalimat pertama berarti racun ular, sedangkan pada kalimat kedua berarti mampu/dapat."
+  },
+  {
+    "q": "Perhatikan kalimat berikut: 'Rapat pengurus kelas dilaksanakan di ruang guru, sedangkan rapat barisan upacara diatur oleh pemimpin upacara.' Kata 'rapat' pada kalimat kedua memiliki arti ....",
+    "p": ["Pertemuan diskusi", "Berdekatan dan tidak renggang", "Ruang pertemuan", "Suara yang keras"],
+    "b": 1,
+    "bahas": "Kata 'rapat' merupakan homonim yang berarti pertemuan musyawarah serta berarti berdekatan/tidak bercelah."
+  },
+  {
+    "q": "Dua kalimat tunggal yang digabungkan menggunakan kata penghubung setara seperti 'dan, tetapi, atau, sedangkan' disebut kalimat ....",
+    "p": ["Majemuk setara", "Tunggal intransitif", "Tanya retoris", "Perintah larangan"],
+    "b": 0,
+    "bahas": "Kalimat majemuk setara menggabungkan dua klausa yang kedudukannya sederajat."
+  },
+  {
+    "q": "Kata penghubung yang tepat untuk melengkapi kalimat majemuk berikut adalah ....\n'Siti ingin ikut kerja bakti membersihkan taman, ... ia sedang sakit demam.'",
+    "p": ["dan", "tetapi", "atau", "sehingga"],
+    "b": 1,
+    "bahas": "Konjungsi 'tetapi' digunakan untuk menghubungkan dua hal yang berlawanan."
+  },
+  {
+    "q": "Bacalah cerita singkat berikut!\nLala merasa bajunya sudah terasa sempit dan lengannya menjadi pendek. Ibu tersenyum dan menjelaskan bahwa Lala sudah tumbuh semakin tinggi dan besar. Lala pun memberikan baju lamanya yang masih bagus kepada sepupunya yang masih kecil.\n\nMengapa baju milik Lala terasa sempit?",
+    "p": [
+      "Karena bajunya menyusut setelah dicuci",
+      "Karena tubuh Lala sudah bertambah tinggi dan besar",
+      "Karena baju itu milik sepupunya",
+      "Karena Lala memakai dua lapis baju"
+    ],
+    "b": 1,
+    "bahas": "Pada bacaan dijelaskan bahwa Lala sudah tumbuh semakin tinggi dan besar sehingga bajunya terasa sempit."
+  },
+  {
+    "q": "Sifat terpuji yang ditunjukkan Lala pada bacaan di atas adalah ....",
+    "p": ["Dermawan dan suka berbagi", "Sombong", "Kikir", "Ceroboh"],
+    "b": 0,
+    "bahas": "Lala memberikan bajunya yang sudah tidak muat namun masih layak pakai kepada sepupunya."
+  },
+  {
+    "q": "Urutan mencari arti kata 'hemat' di dalam Kamus Besar Bahasa Indonesia (KBBI) yang tepat adalah membuka bagian huruf ....",
+    "p": ["A", "E", "H", "M"],
+    "b": 2,
+    "bahas": "Kata 'hemat' diawali huruf H sehingga dicari pada bagian abjad huruf H."
+  },
+  {
+    "q": "Arti kata 'hemat' di dalam kamus adalah ....",
+    "p": [
+      "Berhati-hati dalam membelanjakan uang atau menggunakan barang secara tidak boros",
+      "Menghabiskan semua uang saku dalam satu hari",
+      "Menyimpan barang rusak di gudang",
+      "Membeli semua mainan yang dilihat di toko"
+    ],
+    "b": 0,
+    "bahas": "Hemat berarti cermat dan tidak boros dalam memakai uang, air, listrik, maupun barang."
+  },
+  {
+    "q": "Perhatikan kalimat berikut: 'Ayah mencuci sepeda motor di halaman.' Apabila diubah menjadi bentuk pasif, maka predikat 'mencuci' berubah menjadi ....",
+    "p": ["dicuci", "tercuci", "pencuci", "cucian"],
+    "b": 0,
+    "bahas": "Kalimat pasifnya berbunyi: 'Sepeda motor dicuci Ayah di halaman.'"
+  },
+  {
+    "q": "Imbuhan 'me-' pada kalimat 'Wajah Rina memerah karena malu dipuji Ibu Guru' memiliki arti ....",
+    "p": ["Menjadi merah", "Membuat rumah", "Memakai baju merah", "Mencari warna merah"],
+    "b": 0,
+    "bahas": "Imbuhan 'me-' yang melekat pada kata sifat 'merah' bermakna menjadi merah."
+  },
+  {
+    "q": "Sinonim (persamaan kata) dari kata 'tugas' dalam kalimat 'Setiap anggota keluarga memiliki tugas masing-masing di rumah' adalah ....",
+    "p": ["Kewajiban / pekerjaan", "Hadiah", "Liburan", "Permainan"],
+    "b": 0,
+    "bahas": "Tugas bersinonim dengan kewajiban atau pekerjaan yang harus dilaksanakan."
+  },
+  {
+    "q": "Antonim (lawan kata) dari kata 'sempit' adalah ....",
+    "p": ["Kecil", "Luas / longgar", "Pendek", "Tipis"],
+    "b": 1,
+    "bahas": "Lawan kata dari 'sempit' adalah 'luas' atau 'longgar'."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#15803d'>MATIKAN LAMPU</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Saat Tidak Digunakan!</text></svg>",
+    "q": "Perhatikan poster hemat energi pada gambar di atas! Kalimat tersebut bertujuan mengajak anggota keluarga agar ....",
+    "p": [
+      "Menghemat penggunaan listrik di rumah",
+      "Membeli lampu yang lebih banyak",
+      "Menyalakan lampu sepanjang siang hari",
+      "Bermain sakelar lampu di kamar"
+    ],
+    "b": 0,
+    "bahas": "Mematikan lampu saat tidak digunakan menghemat energi listrik."
+  },
+  {
+    "q": "Penulisan huruf kapital dan tanda baca yang tepat pada kalimat di bawah ini adalah ....",
+    "p": [
+      "Pada hari Minggu, keluarga Budi kerja bakti membersihkan rumah.",
+      "pada hari minggu, keluarga budi kerja bakti membersihkan rumah.",
+      "Pada Hari Minggu keluarga Budi kerja bakti membersihkan rumah?",
+      "Pada hari Minggu keluarga budi kerja bakti membersihkan rumah!"
+    ],
+    "b": 0,
+    "bahas": "Awal kalimat (Pada), nama hari (Minggu), dan nama orang (Budi) diawali huruf kapital serta diakhiri tanda titik (.)."
+  },
+  {
+    "q": "Perhatikan kalimat berikut: 'Dina ... air putih setelah selesai berolahraga.' Kata kerja berimbuhan 'me-' yang tepat untuk melengkapi kalimat tersebut adalah ....",
+    "p": ["meminum", "menminum", "mengminum", "meminumi"],
+    "b": 0,
+    "bahas": "Awalan 'me-' + kata dasar 'minum' menjadi 'meminum'."
+  },
+  {
+    "q": "Manfaat pembagian tugas membersihkan rumah bersama seluruh anggota keluarga adalah ....",
+    "p": [
+      "Pekerjaan rumah menjadi lebih ringan, cepat selesai, dan mempererat kerukunan keluarga",
+      "Ibu menjadi lelah mengerjakan semuanya sendirian",
+      "Rumah menjadi semakin kotor dan berantakan",
+      "Waktu bermain anak menjadi hilang seluruhnya"
+    ],
+    "b": 0,
+    "bahas": "Kerja sama anggota keluarga meringankan pekerjaan dan menciptakan suasana rumah yang harmonis."
+  }
+]);
+
+window.tambahPaketUjian("4", "pai", "UTS Semester 1", [
+  {
+    "q": "Surah Al-Hujurat merupakan surah ke-49 dalam Al-Qur'an dan tergolong surah Madaniyah karena diturunkan sesudah Nabi Muhammad saw. hijrah ke ....",
+    "p": ["Makkah", "Madinah", "Thaif", "Mesir"],
+    "b": 1,
+    "bahas": "Surah Madaniyah adalah surah-surah yang diturunkan setelah Nabi Muhammad saw. hijrah ke Madinah."
+  },
+  {
+    "q": "Kata 'Al-Hujurat' yang menjadi nama surah ke-49 dalam Al-Qur'an memiliki arti ....",
+    "p": ["Kamar-kamar", "Manusia", "Pertolongan", "Gajah"],
+    "b": 0,
+    "bahas": "Al-Hujurat secara bahasa berarti kamar-kamar."
+  },
+  {
+    "q": "Dalam Q.S. Al-Hujurat ayat 13, Allah Swt. menjelaskan bahwa manusia diciptakan dari seorang laki-laki dan seorang perempuan, lalu dijadikan berbangsa-bangsa dan bersuku-suku agar saling ....",
+    "p": [
+      "Mengenal (lita'arafu)",
+      "Membanggakan suku masing-masing",
+      "Bersaing mencari kekayaan",
+      "Menjauhi kelompok yang berbeda"
+    ],
+    "b": 0,
+    "bahas": "'Lita'arafu' artinya agar kamu saling mengenal, menghargai, dan hidup rukun dalam keberagaman."
+  },
+  {
+    "q": "Menurut Q.S. Al-Hujurat ayat 13, orang yang paling mulia di sisi Allah Swt. di antara seluruh manusia adalah orang yang paling ....",
+    "p": ["Bertakwa", "Kaya raya", "Tampan dan kuat", "Tinggi jabatannya"],
+    "b": 0,
+    "bahas": "'Inna akramakum 'indallahi atqakum' artinya sesungguhnya yang paling mulia di antara kamu di sisi Allah ialah orang yang paling bertakwa."
+  },
+  {
+    "q": "Hukum bacaan nun sukun (نْ) atau tanwin apabila bertemu dengan huruf mim (م) dibaca melebur disertai dengung disebut ....",
+    "p": ["Idgham bigunnah", "Idgham bilagunnah", "Izhar halqi", "Iqlab"],
+    "b": 0,
+    "bahas": "Huruf idgham bigunnah ada 4 (ya, nun, mim, wawu) yang dibaca masuk dengan dengung."
+  },
+  {
+    "q": "Pada potongan ayat 'Min zakarin wa unsa' (Q.S. Al-Hujurat ayat 13), terdapat hukum bacaan tanwin kasratain (ــٍ) bertemu huruf wawu (و). Cara membacanya adalah ....",
+    "p": [
+      "Dimasukkan ke huruf wawu disertai dengung (idgham bigunnah)",
+      "Dibaca jelas tanpa dengung",
+      "Dibaca memantul kuat",
+      "Diubah menjadi bunyi mim"
+    ],
+    "b": 0,
+    "bahas": "Kasratain bertemu huruf wawu termasuk hukum bacaan idgham bigunnah."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='11' font-weight='bold' text-anchor='middle' fill='#0369a1'>ASMAULHUSNA</text><text x='87' y='48' font-size='9' text-anchor='middle' fill='#0f172a'>Al-Malik • Al-Aziz • Al-Quddus</text></svg>",
+    "q": "Perhatikan kartu Asmaulhusna pada gambar di atas! Arti dari Asmaulhusna 'Al-Malik' adalah Allah Swt. Maha ....",
+    "p": ["Merajai / Penguasa seluruh alam", "Mulia / Perkasa", "Suci", "Pemberi Keamanan"],
+    "b": 0,
+    "bahas": "Al-Malik artinya Allah Maha Merajai dan menguasai seluruh langit dan bumi."
+  },
+  {
+    "q": "Asmaulhusna 'Al-Aziz' memiliki arti bahwa Allah Swt. Maha ....",
+    "p": ["Mulia dan Perkasa", "Sejahtera", "Suci", "Melihat"],
+    "b": 0,
+    "bahas": "Al-Aziz artinya Allah Maha Mulia dan Maha Perkasa atas segala sesuatu."
+  },
+  {
+    "q": "Allah Swt. tersucikan dari segala macam kekurangan, cacat, dan sifat buruk karena Allah memiliki Asmaulhusna ....",
+    "p": ["Al-Quddus", "As-Salam", "Al-Mu'min", "Al-Malik"],
+    "b": 0,
+    "bahas": "Al-Quddus artinya Allah Maha Suci dari segala sifat kekurangan."
+  },
+  {
+    "q": "Arti dari Asmaulhusna 'As-Salam' adalah Allah Swt. Maha ....",
+    "p": ["Sejahtera / Pemberi Keselamatan", "Merajai", "Perkasa", "Mengetahui"],
+    "b": 0,
+    "bahas": "As-Salam artinya Allah Maha Sejahtera dan melimpahkan keselamatan kepada hamba-Nya."
+  },
+  {
+    "q": "Asmaulhusna 'Al-Mu'min' memiliki arti bahwa Allah Swt. Maha ....",
+    "p": ["Pemberi Keamanan", "Pemberi Karunia", "Pengampun", "Mendengar"],
+    "b": 0,
+    "bahas": "Al-Mu'min artinya Allah Maha Pemberi Keamanan sehingga makhluk-Nya merasa tenteram."
+  },
+  {
+    "q": "Perilaku meneladani Asmaulhusna 'Al-Quddus' yang dapat dilakukan siswa setiap hari di rumah dan sekolah adalah ....",
+    "p": [
+      "Menjaga kebersihan badan, pakaian, hati, dan lingkungan sekitar",
+      "Mengotori dinding kelas dengan coretan",
+      "Membuang sampah di selokan sekolah",
+      "Menyimpan dendam kepada teman"
+    ],
+    "b": 0,
+    "bahas": "Menjaga kesucian lahir (kebersihan) dan kesucian batin (hati yang bersih dari iri/dengki) merupakan wujud meneladani Al-Quddus."
+  },
+  {
+    "q": "Contoh perilaku meneladani Asmaulhusna 'As-Salam' dalam pergaulan sehari-hari dengan teman adalah ....",
+    "p": [
+      "Menebarkan salam, bersikap ramah, dan selalu mendamaikan teman yang berselisih",
+      "Mengajak teman bertengkar di halaman sekolah",
+      "Mengejek nama orang tua teman",
+      "Membuat kegaduhan di dalam kelas"
+    ],
+    "b": 0,
+    "bahas": "Meneladani As-Salam berarti menjadi pembawa kedamaian dan keselamatan bagi orang-orang di sekitar kita."
+  },
+  {
+    "q": "Perilaku meneladani Asmaulhusna 'Al-Mu'min' di lingkungan sekolah ditunjukkan dengan cara ....",
+    "p": [
+      "Tidak mengganggu teman, tidak menakut-nakuti adik kelas, dan menjaga ketertiban bersama",
+      "Menyembunyikan tas milik teman agar panik",
+      "Berteriak mengagetkan teman yang sedang belajar",
+      "Merusak kunci pintu kelas"
+    ],
+    "b": 0,
+    "bahas": "Memberikan rasa aman dan nyaman bagi teman di sekolah mencerminkan meneladani sifat Al-Mu'min."
+  },
+  {
+    "q": "Sikap mengendalikan hawa nafsu, tidak sombong meskipun menjadi ketua kelas, dan adil dalam memimpin teman merupakan teladan dari Asmaulhusna ....",
+    "p": ["Al-Malik", "Al-Gaffar", "Al-Mumit", "Al-Hasib"],
+    "b": 0,
+    "bahas": "Al-Malik mengajarkan agar kita mampu menguasai diri (menahan amarah/nafsu) dan memimpin dengan adil."
+  },
+  {
+    "q": "Menjaga kehormatan diri dengan berkata jujur, tidak menyontek saat ulangan, dan teguh pendirian dalam kebaikan adalah wujud meneladani Asmaulhusna ....",
+    "p": ["Al-Aziz", "Al-Mumit", "Al-Ba'is", "Al-Khabir"],
+    "b": 0,
+    "bahas": "Al-Aziz (Maha Mulia) mendorong kita menjaga kemuliaan akhlak dengan perilaku terpuji."
+  },
+  {
+    "q": "Sikap saling menghargai dan menghormati perbedaan suku, adat istiadat, maupun keyakinan antarwarga negara disebut ....",
+    "p": ["Toleransi (tasamuh)", "Takabur", "Riya", "Hasad"],
+    "b": 0,
+    "bahas": "Toleransi (tasamuh) adalah sikap lapang dada menghormati perbedaan tanpa mengorbankan keyakinan agama."
+  },
+  {
+    "q": "Dalam Q.S. Al-Hujurat ayat 13 disebutkan 'Ya ayyuhan-nasu inna khalaqnakum min zakarin wa unsa'. Arti dari 'min zakarin wa unsa' adalah ....",
+    "p": [
+      "Dari seorang laki-laki dan seorang perempuan",
+      "Berbangsa-bangsa dan bersuku-suku",
+      "Agar kamu saling mengenal",
+      "Sesungguhnya Allah Maha Mengetahui"
+    ],
+    "b": 0,
+    "bahas": "'Min zakarin wa unsa' artinya dari seorang laki-laki (Nabi Adam a.s.) dan seorang perempuan (Hawa)."
+  },
+  {
+    "q": "Mengapa Allah Swt. menciptakan manusia dengan wajah, bahasa, warna kulit, dan suku bangsa yang berbeda-beda?",
+    "p": [
+      "Agar manusia saling mengenal, bekerja sama, dan saling melengkapi dalam kebaikan",
+      "Agar manusia saling membanggakan sukunya sendiri",
+      "Agar manusia terpecah belah dan bermusuhan",
+      "Agar satu suku menguasai suku lainnya"
+    ],
+    "b": 0,
+    "bahas": "Keberagaman adalah sunnatullah agar manusia saling mengenal (lita'arafu) dan berbuat baik."
+  },
+  {
+    "q": "Takwa kepada Allah Swt. yang menjadi ukuran kemuliaan manusia di sisi Allah memiliki arti ....",
+    "p": [
+      "Menjalankan segala perintah Allah Swt. dan menjauhi segala larangan-Nya",
+      "Memiliki harta dan rumah yang paling besar",
+      "Mempunyai banyak pengikut di media sosial",
+      "Berasal dari keturunan bangsawan"
+    ],
+    "b": 0,
+    "bahas": "Takwa adalah melaksanakan perintah Allah Swt. dan meninggalkan larangan-Nya dengan penuh keikhlasan."
+  },
+  {
+    "q": "Ketika ada teman baru di kelas yang berasal dari luar pulau dengan logat bahasa daerah yang berbeda, sikap kita sesuai pesan Q.S. Al-Hujurat ayat 13 adalah ....",
+    "p": [
+      "Menyambutnya dengan senyum ramah, berkenalan, dan mengajaknya bermain bersama",
+      "Menertawakan cara bicaranya di depan kelas",
+      "Melarangnya duduk di barisan depan",
+      "Menjauhinya karena berbeda asal daerah"
+    ],
+    "b": 0,
+    "bahas": "Menyambut dan berkenalan dengan ramah adalah pengamalan langsung perintah 'lita'arafu' (saling mengenal)."
+  },
+  {
+    "q": "Akhir dari Q.S. Al-Hujurat ayat 13 berbunyi 'Innallaha 'alimun khabir' yang menegaskan bahwa Allah Swt. Maha ....",
+    "p": [
+      "Mengetahui lagi Maha Teliti",
+      "Pengasih lagi Maha Penyayang",
+      "Pengampun lagi Maha Penerima Tobat",
+      "Besar lagi Maha Tinggi"
+    ],
+    "b": 0,
+    "bahas": "'Alimun khabir artinya Allah Maha Mengetahui dan Maha Teliti atas ketakwaan setiap hamba-Nya."
+  },
+  {
+    "q": "Salah satu sunah yang dianjurkan saat bertemu dengan sesama muslim adalah mengucapkan salam 'Assalamualaikum warahmatullahi wabarakatuh'. Ucapan salam tersebut merupakan doa yang berkaitan erat dengan Asmaulhusna ....",
+    "p": ["As-Salam", "Al-Mumit", "Al-Qahhar", "Al-Jabbar"],
+    "b": 0,
+    "bahas": "Kata 'salam' dalam ucapan salam berarti keselamatan dan kesejahteraan yang bersumber dari Asmaulhusna As-Salam."
+  },
+  {
+    "q": "Kebiasaan berzikir menyebut Asmaulhusna setiap selesai salat fardu memberikan manfaat bagi hati seorang muslim berupa ....",
+    "p": [
+      "Hati menjadi tenang, tenteram, dan selalu merasa dekat dengan Allah Swt.",
+      "Membuat kita lupa waktu belajar",
+      "Menumbuhkan rasa sombong di dalam hati",
+      "Membuat badan menjadi cepat lelah"
+    ],
+    "b": 0,
+    "bahas": "Mengingat Allah (zikrullah) dengan menyebut Asmaulhusna menenangkan jiwa dan menguatkan iman."
+  },
+  {
+    "q": "Kesimpulan utama yang dapat kita amalkan dari mempelajari Q.S. Al-Hujurat ayat 13 dan Asmaulhusna adalah ....",
+    "p": [
+      "Hidup rukun dalam keberagaman, meningkatkan ketakwaan, serta meneladani sifat mulia Allah",
+      "Memilih-milih teman berdasarkan suku dan kekayaan",
+      "Merasa diri paling suci dan paling pintar",
+      "Mengabaikan kebersihan lingkungan sekolah"
+    ],
+    "b": 0,
+    "bahas": "Ajaran Islam membimbing kita menjaga persaudaraan dalam perbedaan, bertakwa, dan berakhlak mulia."
+  }
+]);
+
+window.tambahPaketUjian("4", "bing", "UTS Semester 1", [
+  {
+    "q": "What is Aisyah doing in the library? She is ... a story book.",
+    "p": ["read", "reads", "reading", "readed"],
+    "b": 2,
+    "bahas": "Present Continuous Tense (sedang berlangsung) menggunakan pola 'is + Verb-ing', yaitu 'is reading'."
+  },
+  {
+    "q": "Made and Joshua ... playing football in the school yard right now.",
+    "p": ["is", "am", "are", "was"],
+    "b": 2,
+    "bahas": "Subjek jamak 'Made and Joshua' (they) menggunakan to be 'are'."
+  },
+  {
+    "q": "I ... studying English in the classroom at the moment.",
+    "p": ["am", "is", "are", "do"],
+    "b": 0,
+    "bahas": "Subjek 'I' berpasangan dengan to be 'am' dalam Present Continuous Tense."
+  },
+  {
+    "svg": "<svg width='160' height='75' xmlns='http://w3.org'><ellipse cx='80' cy='50' rx='42' ry='12' fill='#ffffff' stroke='#0284c7' stroke-width='2'/><path d='M50,47 Q80,25 110,47 Z' fill='#facc15' stroke='#ca8a04' stroke-width='2'/></svg>",
+    "q": "Look at the picture above! Udin is hungry. He is ... fried rice in the dining room.",
+    "p": ["drinking", "eating", "sleeping", "writing"],
+    "b": 1,
+    "bahas": "Udin sedang makan nasi goreng: 'eating fried rice'."
+  },
+  {
+    "q": "Mother is ... delicious soup in the kitchen.",
+    "p": ["cooking", "swimming", "singing", "dancing"],
+    "b": 0,
+    "bahas": "Ibu sedang memasak sup di dapur: 'cooking delicious soup'."
+  },
+  {
+    "q": "What are the students doing? They are ... the classroom together.",
+    "p": ["cleaning", "clean", "cleans", "cleaned"],
+    "b": 0,
+    "bahas": "Mereka sedang membersihkan kelas bersama: 'are cleaning'."
+  },
+  {
+    "svg": "<svg width='165' height='65' xmlns='http://w3.org'><rect x='25' y='12' width='115' height='42' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='82' y='39' font-size='16' font-weight='bold' text-anchor='middle' fill='#0f172a'>75</text></svg>",
+    "q": "Look at the number card above! How do you say '75' in English?",
+    "p": ["Fifty-seven", "Seventy-five", "Seventeen", "Seventy"],
+    "b": 1,
+    "bahas": "75 dalam bahasa Inggris ditulis dan dibaca 'seventy-five'."
+  },
+  {
+    "q": "What is fifty plus thirty? (50 + 30 = ...)",
+    "p": ["Sixty", "Seventy", "Eighty", "Ninety"],
+    "b": 2,
+    "bahas": "50 + 30 = 80 (eighty)."
+  },
+  {
+    "q": "The number before one hundred (100) is ....",
+    "p": ["ninety-eight", "ninety-nine", "eighty-nine", "seventy-nine"],
+    "b": 1,
+    "bahas": "Angka tepat sebelum 100 adalah 99 (ninety-nine)."
+  },
+  {
+    "q": "There are ... books on the shelf. (64)",
+    "p": ["forty-six", "sixty-four", "sixteen", "sixty"],
+    "b": 1,
+    "bahas": "64 dalam bahasa Inggris adalah 'sixty-four'."
+  },
+  {
+    "q": "One hundred minus forty-five equals .... (100 - 45 = ...)",
+    "p": ["fifty", "fifty-five", "sixty-five", "forty-five"],
+    "b": 1,
+    "bahas": "100 - 45 = 55 (fifty-five)."
+  },
+  {
+    "q": "Where does your mother cook food? She cooks in the ....",
+    "p": ["bedroom", "kitchen", "bathroom", "garage"],
+    "b": 1,
+    "bahas": "Tempat memasak di rumah adalah dapur (kitchen)."
+  },
+  {
+    "q": "We take a bath and brush our teeth in the ....",
+    "p": ["living room", "dining room", "bathroom", "garden"],
+    "b": 2,
+    "bahas": "Mandi dan menggosok gigi dilakukan di kamar mandi (bathroom)."
+  },
+  {
+    "q": "My family watches television and welcomes guests in the ....",
+    "p": ["living room", "kitchen", "garage", "bathroom"],
+    "b": 0,
+    "bahas": "Ruang tamu atau ruang keluarga dalam bahasa Inggris adalah 'living room'."
+  },
+  {
+    "q": "Father parks his car and motorcycle in the ....",
+    "p": ["bedroom", "garage", "kitchen", "dining room"],
+    "b": 1,
+    "bahas": "Tempat memarkir mobil dan motor di rumah adalah garasi (garage)."
+  },
+  {
+    "q": "We sleep and rest at night in the ....",
+    "p": ["dining room", "bedroom", "bathroom", "kitchen"],
+    "b": 1,
+    "bahas": "Kamar tidur dalam bahasa Inggris adalah 'bedroom'."
+  },
+  {
+    "svg": "<svg width='180' height='70' xmlns='http://w3.org'><rect x='20' y='15' width='65' height='40' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='52' y='38' font-size='8' font-weight='bold' text-anchor='middle'>Living Room</text><rect x='85' y='15' width='65' height='40' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='117' y='38' font-size='8' font-weight='bold' text-anchor='middle'>Kitchen</text></svg>",
+    "q": "Look at the house plan above! The living room is ... the kitchen.",
+    "p": ["beside", "under", "in", "above"],
+    "b": 0,
+    "bahas": "Pada denah terlihat ruang tamu berada tepat di samping dapur (beside the kitchen)."
+  },
+  {
+    "q": "The bathroom is ... the bedroom and the kitchen.",
+    "p": ["between", "on", "under", "in"],
+    "b": 0,
+    "bahas": "Preposisi 'between' digunakan untuk menyatakan letak di antara dua ruangan."
+  },
+  {
+    "q": "My bedroom is clean and tidy. The antonym (opposite) of 'clean' is ....",
+    "p": ["big", "dirty", "small", "nice"],
+    "b": 1,
+    "bahas": "Lawan kata dari 'clean' (bersih) adalah 'dirty' (kotor)."
+  },
+  {
+    "q": "What is 'di depan rumah' in English?",
+    "p": ["Behind the house", "In front of the house", "Beside the house", "Under the house"],
+    "b": 1,
+    "bahas": "'In front of' artinya di depan, sedangkan 'behind' artinya di belakang."
+  },
+  {
+    "q": "Is Cici writing a letter? Yes, she ....",
+    "p": ["is", "am", "are", "does"],
+    "b": 0,
+    "bahas": "Pertanyaan yang diawali 'Is Cici...?' dijawab singkat dengan 'Yes, she is.'"
+  },
+  {
+    "q": "Are they swimming in the pool? No, they ....",
+    "p": ["is not", "am not", "are not", "do not"],
+    "b": 2,
+    "bahas": "Pertanyaan 'Are they...?' dijawab negatif dengan 'No, they are not.'"
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'is - reading - Budi - newspaper - a'",
+    "p": [
+      "Budi is reading a newspaper.",
+      "Reading is Budi a newspaper.",
+      "A newspaper is Budi reading.",
+      "Budi reading is a newspaper."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat Present Continuous Tense yang benar adalah 'Budi is reading a newspaper.'"
+  },
+  {
+    "q": "How many chairs are there in the dining room? There ... six chairs.",
+    "p": ["is", "are", "am", "was"],
+    "b": 1,
+    "bahas": "Untuk benda jamak berjumlah enam (six chairs), digunakan 'There are'."
+  },
+  {
+    "q": "'Kamar tidurku berada di belakang ruang tamu.' The English translation is ....",
+    "p": [
+      "My bedroom is behind the living room.",
+      "My bedroom is in front of the living room.",
+      "My kitchen is beside the living room.",
+      "My bathroom is between the living room."
+    ],
+    "b": 0,
+    "bahas": "Kamar tidurku = my bedroom, di belakang = behind, ruang tamu = the living room."
+  }
+]);
+
+window.tambahPaketUjian("4", "madura", "UTS Semester 1", [
+  {
+    "q": "Dâlem ondhâgghâ bhâsa Madhurâ, bhâsa èngghi-bhunten (alos) dâri oca' 'ngakan' (makan) ka'angghuy orèng towa èngghi panèka ....",
+    "p": ["Dhâ'âr", "Ngombhi", "Sare", "Mèyos"],
+    "b": 0,
+    "bahas": "Ngakan bhâsa alosna 'dhâ'âr', dhinèng ngombhi (minum) bhâsa alosna 'ngobhi' otabâ 'ngombhi' (ka'angghuy orèng towa 'ngunjuk')."
+  },
+  {
+    "q": "Bhâsa èngghi-bhuntenna oca' 'èlong' (hidung) èngghi panèka ....",
+    "p": ["Soca", "Grana", "Asta", "Mustaka"],
+    "b": 1,
+    "bahas": "Èlong bhâsa alosna 'grana', mata = 'soca', cèthak = 'mustaka'."
+  },
+  {
+    "q": "Okara è bâbâ panèka sè aghuna'aghi bhâsa èngghi-bhunten sè teppa' ka'angghuy Nèni' (nenek) èngghi panèka ....",
+    "p": [
+      "Nèni' ampon dhâ'âr jhâjhân lagghu ghellâ'.",
+      "Sèngko' ampon dhâ'âr nasè' ghuring.",
+      "Adhi' ghi' sare è kamar.",
+      "Kocèngnga ampon mèyos ka lowar."
+    ],
+    "b": 0,
+    "bahas": "Oca' 'dhâ'âr' èghuna'aghi ka'angghuy orèng sè èhormadhi akadhi Nèni' sareng Kaki'."
+  },
+  {
+    "q": "Lamon bâ'na lèbât è adâ'na orèng towa sè ghi' toju', okara pamètan sè sopan èngghi panèka ....",
+    "p": ["Nyoon sèwu", "Mator sakalangkong", "Sèngko' lèbât", "Minggir bhâi"],
+    "b": 0,
+    "bahas": "Nyoon sèwu artèna permisi."
+  },
+  {
+    "q": "Oca' asal 'tolès' lamon èberri' ter-ater (awalan) tanduk bhâkal dhâddhi ....",
+    "p": ["Nolès", "Molès", "Ngolès", "Nyolès"],
+    "b": 0,
+    "bahas": "Horop awal 't' luluh dhâddhi 'n-' bilâ olle ter-ater tanduk, dhâddhi 'nolès'."
+  },
+  {
+    "q": "Oca' asal 'sapo' lamon èberri' ter-ater tanduk bhâkal dhâddhi ....",
+    "p": ["Ngapo", "Nyapo", "Mapo", "Napo"],
+    "b": 1,
+    "bahas": "Horop awal 's' luluh dhâddhi 'ny-' bilâ olle ter-ater tanduk, dhâddhi 'nyapo'."
+  },
+  {
+    "q": "Obâ'ân okara tanduk 'Embu' nyapo tanèyan lagghu ghellâ'' dhâddhi okara tanggap (pasif) sè teppa' èngghi panèka ....",
+    "p": [
+      "Tanèyan èsapo bi' Embu' lagghu ghellâ'.",
+      "Embu' èsapo tanèyan lagghu ghellâ'.",
+      "Tanèyan nyapo Embu' lagghu ghellâ'.",
+      "Lagghu ghellâ' èsapo Embu'."
+    ],
+    "b": 0,
+    "bahas": "Objek 'tanèyan' dhâddhi subjek bân oca' lakona ngangghuy ter-ater 'è-' ('èsapo')."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>CARAKAN MADHURÂ</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>ha na ca ra ka • da ta sa wa la</text></svg>",
+    "q": "Abâs informasi Carakan Madhurâ è ghâmbhâr attas! Bânnya'na aksara legena (aksara ghâjâng) dâlem Carakan Madhurâ bâdâ .... aksara.",
+    "p": ["15 aksara", "20 aksara", "25 aksara", "26 aksara"],
+    "b": 1,
+    "bahas": "Carakan Madhurâ andi' 20 aksara legena: ha-na-ca-ra-ka, da-ta-sa-wa-la, pa-dha-ja-ya-nya, ma-ga-ba-tha-nga."
+  },
+  {
+    "q": "Baris kapèng tello' dâlem urutan Carakan Madhurâ saamponna 'da ta sa wa la' èngghi panèka ....",
+    "p": [
+      "pa dha ja ya nya",
+      "ma ga ba tha nga",
+      "ha na ca ra ka",
+      "ka ga nga ca ja"
+    ],
+    "b": 0,
+    "bahas": "Urutan Carakan Madhurâ: (1) ha na ca ra ka, (2) da ta sa wa la, (3) pa dha ja ya nya, (4) ma ga ba tha nga."
+  },
+  {
+    "q": "Sandhângan sowara dâlem Carakan Madhurâ sè ngobâ monyèna aksara 'a' dhâddhi 'i' (ètolès è attassa aksara) èsebbhut ....",
+    "p": ["Cèthak (wulu)", "Soko (suku)", "Talèng", "Layar"],
+    "b": 0,
+    "bahas": "Cèthak (wulu) ngobâ monyè 'a' dhâddhi 'i', dhinèng soko (suku) ngobâ monyè 'a' dhâddhi 'u'."
+  },
+  {
+    "q": "Bilângan '35' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Tello polo lèma'", "Lèma polo tello'", "Du polo lèma'", "Sèlaè'"],
+    "b": 0,
+    "bahas": "35 dâlem bhâsa Madhurâ èbâca 'tello polo lèma''."
+  },
+  {
+    "q": "Bilângan '100' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Sapolo", "Sèket", "Sabidhâk", "Satos"],
+    "b": 3,
+    "bahas": "100 dâlem bhâsa Madhurâ èbâca 'satos'."
+  },
+  {
+    "q": "Tabhâligghâ (antonim) dâri oca' 'bhersè' (bersih) èngghi panèka ....",
+    "p": ["Kotor / Raddhin", "Kotor / Kumuh", "Sèhat", "Bhâghus"],
+    "b": 1,
+    "bahas": "Bhersè tabhâligghâ kotor."
+  },
+  {
+    "q": "Padhâna artè (sinonim) dâri oca' 'pènter' èngghi panèka ....",
+    "p": ["Cerdik / Pandhâi", "Bhudhu", "Malas", "Lamba'"],
+    "b": 0,
+    "bahas": "Pènter andi' artè sè padâ sareng cerdik otabâ pandhâi."
+  },
+  {
+    "q": "Okara è bâbâ panèka sè tamaso' okara ajhâghân (kalimat ajakan) èngghi panèka ....",
+    "p": [
+      "Matorè abhâreng ajâgâ kabersèyanna sakola'an!",
+      "Sapa sè nyapo kelas arèya?",
+      "Hasan mangkat ka sakola'an lagghu.",
+      "Buku tolès bâdâ è attas mèjâ."
+    ],
+    "b": 0,
+    "bahas": "Oca' 'Matorè' (mari/silakan) nodhuwâghi okara ajhâghân."
+  },
+  {
+    "q": "Bâca teks è bâbâ panèka!\n'Sabbhân arè Jum'at lagghu, sadhâjâ morèd SD Negeri Seddur 1 ngalakonè Jum'at Bhersè. Bâdâ sè nyapo tanèyan, bâdâ sè ngèssè'è kembhâng, bân bâdâ sè mèlè ronto plastik ka'angghuy èbuwâng ka tempat ronto.'\n\nBila morèd SD Negeri Seddur 1 ngalakonè Jum'at Bhersè?",
+    "p": ["Sabbhân arè Jum'at lagghu", "Sabbhân arè Ahad malem", "Sabbhân arè Sennin sèyang", "Sabbhân arè Rebbu sore"],
+    "b": 0,
+    "bahas": "Dâlem teks èsebbhutaghi sabbhân arè Jum'at lagghu."
+  },
+  {
+    "q": "Manfaat ajâgâ kabersèyan lingkungan sakola'an akadhi è teks attas èngghi panèka ....",
+    "p": [
+      "Sakola'an dhâddhi bhersè, asrè, bân nyaman ka'angghuy ajhâr",
+      "Ronto plastik atambâ bânnya'",
+      "Kelas dhâddhi petteng bân bâu",
+      "Morèd dhâddhi malas ajhâr"
+    ],
+    "b": 0,
+    "bahas": "Lingkungan sè bhersè mabâdâ suasana ajhâr sè nyaman bân sèhat."
+  },
+  {
+    "q": "Kesenian tari tradisional dâri Sumenep Madhurâ sè ngaghâmbhâraghi kabângalan bân kagagahan para prajurit èngghi panèka tari ....",
+    "p": ["Muang Sangkal", "Remo", "Saman", "Kecak"],
+    "b": 0,
+    "bahas": "Tari Muang Sangkal panèka tarian khas Sumenep Madhurâ."
+  },
+  {
+    "q": "Kakanan khas Pamekasan Madhurâ sè èghâbây dâri lorjuk (kerang bambu) sè èghuring kerrèng bân gurih èngghi panèka ....",
+    "p": ["Rengginang lorjuk", "Kerupuk udang", "Emping melinjo", "Kripik singkong"],
+    "b": 0,
+    "bahas": "Rengginang lorjuk panèka jajanan khas Pamekasan Madhurâ."
+  },
+  {
+    "q": "Oca' 'pakakas' artèna bârâng-bârâng sè èghuna'aghi ka'angghuy abhânto kalakoan. Pakakas sè èghuna'aghi Eppa' ka'angghuy macol tana è sabâ èngghi panèka ....",
+    "p": ["Landhu' / Pacol", "Arè'", "Sapo", "Pèso"],
+    "b": 0,
+    "bahas": "Landhu' / pacol (cangkul) èghuna'aghi macol tana è sabâ."
+  },
+  {
+    "q": "Oca' asal 'bhersè' lamon èberri' ter-ater 'ma-' dhâddhi ....",
+    "p": ["Mabhersè", "Nabhersè", "Ngabhersè", "Nyabhersè"],
+    "b": 0,
+    "bahas": "Ter-ater 'ma-' + 'bhersè' dhâddhi 'mabhersè' (membersihkan)."
+  },
+  {
+    "q": "Sareng tatangghâ è kampong, kita kodhu odi' ....",
+    "p": ["Rokon, salèng nolongè, bân ghutong royong", "Atokar sabbhân arè", "Ta' usa sapa-sapa'an", "Sombong dâ' tatangghâ"],
+    "b": 0,
+    "bahas": "Odi' rokon sareng tatangghâ mabâdâ kampong sè aman bân nyaman."
+  },
+  {
+    "q": "Oca' 'ghutong royong' artèna ....",
+    "p": [
+      "Alako abhâreng ka'angghuy kapentingan abhâreng sopajâ lekkas marè",
+      "Alako dhibi'èn ta' ghellem èbhânto",
+      "Tèdung sèyang è roma",
+      "Amaèn bal è lapangan"
+    ],
+    "b": 0,
+    "bahas": "Ghutong royong artèna bekerja sama secara bersama-sama."
+  },
+  {
+    "q": "Bârnana tasè' è pèngghir Polo Madhurâ bilâ sèyang sè cerrah èngghi panèka ....",
+    "p": ["Bhiru", "Mèra", "Konèng", "Celleng"],
+    "b": 0,
+    "bahas": "Bhiru artèna biru."
+  },
+  {
+    "q": "Oca' 'pènter' tabhâligghâ ....",
+    "p": ["Bhudhu (bodoh)", "Rajin", "Senneng", "Kowat"],
+    "b": 0,
+    "bahas": "Pènter (pandai) tabhâligghâ bhudhu (bodoh)."
+  }
+]);
+
+window.tambahPaketUjian("4", "pancasila", "UTS Semester 1", [
+  {
+    "q": "Badan yang dibentuk untuk merancang dasar negara Indonesia menjelang kemerdekaan pada tanggal 29 April 1945 adalah ....",
+    "p": ["BPUPKI", "PPKI", "KNIP", "BKR"],
+    "b": 0,
+    "bahas": "BPUPKI (Badan Penyelidik Usaha-Usaha Persiapan Kemerdekaan Indonesia) bertugas menyelidiki dan merancang dasar negara."
+  },
+  {
+    "q": "Ketua BPUPKI yang memimpin jalannya persidangan perumusan dasar negara Indonesia adalah ....",
+    "p": [
+      "dr. K.R.T. Radjiman Wedyodiningrat",
+      "Ir. Soekarno",
+      "Drs. Moh. Hatta",
+      "Mr. Moh. Yamin"
+    ],
+    "b": 0,
+    "bahas": "dr. Radjiman Wedyodiningrat menjabat sebagai Ketua BPUPKI."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>HARI LAHIR PANCASILA</text><text x='87' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>1 Juni 1945</text></svg>",
+    "q": "Perhatikan informasi peristiwa sejarah pada gambar di atas! Tokoh yang menyampaikan pidato tentang lima asas dasar negara dan menamainya 'Pancasila' pada tanggal 1 Juni 1945 adalah ....",
+    "p": ["Ir. Soekarno", "Mr. Soepomo", "Drs. Moh. Hatta", "H. Agus Salim"],
+    "b": 0,
+    "bahas": "Ir. Soekarno mengusulkan nama Pancasila pada sidang pertama BPUPKI tanggal 1 Juni 1945."
+  },
+  {
+    "q": "Rumusan dasar negara yang disepakati oleh Panitia Sembilan pada tanggal 22 Juni 1945 tercantum di dalam naskah ....",
+    "p": ["Piagam Jakarta", "Teks Proklamasi", "Sumpah Pemuda", "Dekrit Presiden"],
+    "b": 0,
+    "bahas": "Piagam Jakarta (Jakarta Charter) disusun oleh Panitia Sembilan pada 22 Juni 1945."
+  },
+  {
+    "q": "Sikap terpuji yang ditunjukkan oleh para tokoh pendiri bangsa ketika menyepakati perubahan rumusan sila pertama Pancasila demi menjaga persatuan bangsa adalah ....",
+    "p": [
+      "Lapang dada, toleransi tinggi, dan mengutamakan kepentingan bangsa",
+      "Keras kepala mempertahankan pendapat pribadi",
+      "Menolak pendapat tokoh dari daerah lain",
+      "Meninggalkan ruang sidang sebelum keputusan diambil"
+    ],
+    "b": 0,
+    "bahas": "Para pendiri bangsa mengutamakan keutuhan Negara Kesatuan Republik Indonesia di atas kepentingan golongan."
+  },
+  {
+    "q": "Kedudukan Pancasila bagi bangsa Indonesia yang berfungsi sebagai landasan utama penyelenggaraan pemerintahan negara disebut Pancasila sebagai ....",
+    "p": ["Dasar negara", "Hiasan dinding", "Semboyan daerah", "Lagu perjuangan"],
+    "b": 0,
+    "bahas": "Pancasila merupakan dasar negara Republik Indonesia sebagaimana tercantum dalam Pembukaan UUD 1945 alinea keempat."
+  },
+  {
+    "q": "Contoh pengamalan sila pertama Pancasila dalam kehidupan sehari-hari di lingkungan sekolah adalah ....",
+    "p": [
+      "Berdoa dengan khusyuk sebelum dan sesudah belajar serta menghormati teman yang berbeda agama",
+      "Menyapu halaman kelas bersama regu piket",
+      "Memilih ketua kelas melalui musyawarah",
+      "Membantu teman yang terjatuh di lapangan"
+    ],
+    "b": 0,
+    "bahas": "Berdoa dan menghormati kebebasan beribadah teman sesuai sila pertama Pancasila."
+  },
+  {
+    "q": "Ketika terjadi bencana banjir di daerah tetangga, siswa SD Negeri Seddur 1 mengumpulkan sumbangan pakaian layak pakai dan makanan. Perilaku tersebut sesuai dengan sila ke-....",
+    "p": ["Satu", "Dua", "Empat", "Lima"],
+    "b": 1,
+    "bahas": "Membantu sesama manusia yang terkena musibah merupakan pengamalan sila kedua, Kemanusiaan yang adil dan beradab."
+  },
+  {
+    "q": "Sikap cinta tanah air dan menjaga persatuan bangsa Indonesia (sila ketiga Pancasila) di sekolah dapat diwujudkan dengan cara ....",
+    "p": [
+      "Mengikuti upacara bendera hari Senin dengan khidmat dan berteman dengan siapa saja tanpa membedakan suku",
+      "Hanya mau berteman dengan siswa yang berasal dari satu kampung",
+      "Mengobrol saat lagu Indonesia Raya dinyanyikan",
+      "Mengejek kesenian tradisional dari daerah lain"
+    ],
+    "b": 0,
+    "bahas": "Khidmat saat upacara dan rukun berteman tanpa membeda-bedakan suku mencerminkan sila ketiga."
+  },
+  {
+    "q": "Musyawarah di kelas dilakukan dengan tujuan untuk mencapai ....",
+    "p": ["Kata mufakat (kesepakatan bersama)", "Kemenangan satu orang saja", "Pertengkaran antar-siswa", "Keuntungan pribadi"],
+    "b": 0,
+    "bahas": "Musyawarah bertujuan mencapai mufakat yang dapat diterima bersama."
+  },
+  {
+    "q": "Sikap bersikap adil kepada semua teman, menghargai hasil karya orang lain, dan gemar menabung mencerminkan pengamalan sila ke-....",
+    "p": ["Dua", "Tiga", "Empat", "Lima"],
+    "b": 3,
+    "bahas": "Keadilan, menghargai hak dan karya orang lain, serta hidup hemat sesuai sila kelima Pancasila."
+  },
+  {
+    "q": "Aturan yang berlaku dalam kehidupan bermasyarakat yang bersumber dari hati nurani manusia untuk membedakan perbuatan baik dan buruk disebut norma ....",
+    "p": ["Kesusilaan", "Kesopanan", "Agama", "Hukum"],
+    "b": 0,
+    "bahas": "Norma kesusilaan bersumber dari hati nurani manusia, seperti berkata jujur dan tidak menyakiti orang lain."
+  },
+  {
+    "q": "Norma yang bersumber dari pergaulan masyarakat sehari-hari seperti mengucapkan permisi saat lewat di depan orang tua dan makan menggunakan tangan kanan disebut norma ....",
+    "p": ["Kesopanan", "Hukum", "Agama", "Kesusilaan"],
+    "b": 0,
+    "bahas": "Norma kesopanan mengatur tata krama dan sopan santun dalam pergaulan masyarakat."
+  },
+  {
+    "q": "Norma yang dibuat secara tertulis oleh lembaga negara yang berwenang dan memiliki sanksi tegas seperti denda atau penjara bagi pelanggarnya adalah norma ....",
+    "p": ["Hukum", "Kesopanan", "Kesusilaan", "Adat istiadat"],
+    "b": 0,
+    "bahas": "Norma hukum bersifat mengikat dan memaksa dengan sanksi tegas dari aparat negara."
+  },
+  {
+    "q": "Contoh pelaksanaan norma hukum di jalan raya bagi pengendara sepeda motor adalah ....",
+    "p": [
+      "Memakai helm standar SNI dan mematuhi rambu lampu lalu lintas",
+      "Menerobos lampu merah saat jalan sepi",
+      "Mengendarai motor di atas trotoar pejalan kaki",
+      "Membunyikan klakson terus-menerus di depan rumah sakit"
+    ],
+    "b": 0,
+    "bahas": "Memakai helm dan mematuhi lampu lalu lintas merupakan kewajiban hukum bagi pengendara."
+  },
+  {
+    "q": "Aturan tidak tertulis yang berlaku dan ditaati oleh seluruh siswa di dalam lingkungan sekolah disebut ....",
+    "p": ["Tata tertib sekolah", "Undang-undang negara", "Peraturan lalu lintas", "Adat desa"],
+    "b": 0,
+    "bahas": "Tata tertib sekolah mengatur kedisiplinan dan perilaku seluruh warga sekolah."
+  },
+  {
+    "q": "Segala sesuatu yang harus kita laksanakan terlebih dahulu dengan penuh tanggung jawab disebut ....",
+    "p": ["Kewajiban", "Hak", "Hadiah", "Keinginan"],
+    "b": 0,
+    "bahas": "Kewajiban adalah sesuatu yang wajib dikerjakan."
+  },
+  {
+    "q": "Segala sesuatu yang pantas dan layak kita terima setelah melaksanakan kewajiban disebut ....",
+    "p": ["Hak", "Kewajiban", "Tugas", "Hukuman"],
+    "b": 0,
+    "bahas": "Hak adalah sesuatu yang berhak diterima oleh seseorang."
+  },
+  {
+    "q": "Contoh kewajiban seorang anak di lingkungan rumah adalah ....",
+    "p": [
+      "Menghormati orang tua, belajar dengan rajin, dan membantu menjaga kebersihan rumah",
+      "Mendapatkan kasih sayang dan makanan bergizi",
+      "Mendapatkan waktu bermain yang cukup",
+      "Mendapatkan perlindungan dari bahaya"
+    ],
+    "b": 0,
+    "bahas": "Menghormati orang tua dan membantu pekerjaan rumah ringan merupakan kewajiban anak."
+  },
+  {
+    "q": "Contoh hak seorang siswa di lingkungan sekolah adalah ....",
+    "p": [
+      "Mendapatkan bimbingan ilmu pelajaran dari guru dan menggunakan fasilitas perpustakaan",
+      "Datang ke sekolah tepat waktu",
+      "Memakai seragam sekolah sesuai jadwal",
+      "Melaksanakan piket kebersihan kelas"
+    ],
+    "b": 0,
+    "bahas": "Mendapat pengajaran dan memanfaatkan fasilitas sekolah adalah hak siswa."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>HAK &amp; KEWAJIBAN</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Dilaksanakan Secara Seimbang</text></svg>",
+    "q": "Perhatikan gambar di atas! Pelaksanaan hak dan kewajiban dalam kehidupan sehari-hari sebaiknya dilakukan secara ....",
+    "p": [
+      "Seimbang dengan mendahulukan kewajiban sebelum menuntut hak",
+      "Menuntut hak terus-menerus tanpa melaksanakan kewajiban",
+      "Melaksanakan kewajiban saja tanpa pernah menerima hak",
+      "Sesuka hati tanpa mempedulikan orang lain"
+    ],
+    "b": 0,
+    "bahas": "Hak dan kewajiban harus berjalan seimbang; dahulukan kewajiban baru menerima hak."
+  },
+  {
+    "q": "Sanksi yang diterima seseorang apabila melanggar norma kesopanan di masyarakat biasanya berupa ....",
+    "p": [
+      "Teguran, cemoohan, atau dikucilkan dari pergaulan masyarakat",
+      "Hukuman penjara dari pengadilan",
+      "Denda uang jutaan rupiah",
+      "Hadiah penghargaan dari ketua RT"
+    ],
+    "b": 0,
+    "bahas": "Pelanggar norma kesopanan mendapat sanksi sosial berupa teguran atau rasa malu di masyarakat."
+  },
+  {
+    "q": "Apabila kita melihat sampah plastik berserakan di halaman sekolah padahal hari itu bukan jadwal piket kita, sikap yang mencerminkan tanggung jawab adalah ....",
+    "p": [
+      "Segera mengambil sampah tersebut dan membuangnya ke tempat sampah",
+      "Membiarkannya karena bukan tugas regu piket kita",
+      "Menendang sampah ke depan kelas lain",
+      "Menyuruh adik kelas mengambilnya dengan nada bentakan"
+    ],
+    "b": 0,
+    "bahas": "Menjaga kebersihan sekolah adalah tanggung jawab bersama seluruh warga sekolah."
+  },
+  {
+    "q": "Manfaat mematuhi norma dan aturan yang berlaku di masyarakat adalah ....",
+    "p": [
+      "Terciptanya kehidupan yang aman, tertib, damai, dan saling menghormati",
+      "Meningkatnya pelanggaran di jalan raya",
+      "Membuat warga masyarakat menjadi takut keluar rumah",
+      "Menimbulkan perselisihan antarwarga"
+    ],
+    "b": 0,
+    "bahas": "Kepatuhan terhadap norma menjaga ketertiban dan keharmonisan hidup bermasyarakat."
+  },
+  {
+    "q": "Semboyan 'Bhinneka Tunggal Ika' yang tertulis pada pita Garuda Pancasila berasal dari kitab Sutasoma karangan ....",
+    "p": ["Mpu Tantular", "Mpu Prapanca", "Mpu Sedah", "Mpu Gandring"],
+    "b": 0,
+    "bahas": "Semboyan Bhinneka Tunggal Ika ditulis oleh Mpu Tantular pada masa Kerajaan Majapahit."
+  }
+]);
+
+window.tambahPaketUjian("4", "kesenian", "UTS Semester 1", [
+  {
+    "q": "Kegiatan menggambar bentuk rumah-rumah tetangga di sekitar tempat tinggal kita dengan memperhatikan tata letak jalan, pepohonan, dan bangunan disebut menggambar ....",
+    "p": ["Lingkungan sekitar / sketsa perspektif sederhana", "Karikatur", "Komik hewan", "Kaligrafi"],
+    "b": 0,
+    "bahas": "Menggambar lingkungan sekitar melatih pengamatan terhadap bentuk bangunan, jalan, dan suasana sekitar."
+  },
+  {
+    "q": "Prinsip menggambar di mana benda yang letaknya dekat dengan mata digambar lebih besar, sedangkan benda yang letaknya jauh digambar lebih kecil disebut prinsip ....",
+    "p": ["Perspektif", "Tekstur", "Gradasi", "Simetri"],
+    "b": 0,
+    "bahas": "Perspektif menciptakan kesan kedalaman ruang dan jarak pandang pada gambar dua dimensi."
+  },
+  {
+    "q": "Garis mendatar yang memisahkan bidang langit dan bidang daratan atau laut pada gambar pemandangan alam disebut garis ....",
+    "p": ["Cakrawala (horizon)", "Vertikal", "Diagonal", "Spiral"],
+    "b": 0,
+    "bahas": "Garis cakrawala (horizon) menjadi batas pandangan mata antara langit dan permukaan bumi."
+  },
+  {
+    "q": "Tahap pertama yang dilakukan sebelum mewarnai gambar sketsa rumah dan lingkungan sekitar adalah membuat ....",
+    "p": [
+      "Sketsa garis tipis menggunakan pensil",
+      "Bingkai kayu dari papan",
+      "Campuran cat minyak tebal",
+      "Potongan kertas lipat"
+    ],
+    "b": 0,
+    "bahas": "Sketsa tipis memudahkan perbaikan bentuk gambar sebelum ditebalkan dan diwarnai."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#15803d'>DAUR ULANG PLASTIK</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Botol Bekas → Karya Seni Kreatif</text></svg>",
+    "q": "Perhatikan informasi pada gambar di atas! Memanfaatkan botol plastik bekas menjadi pot bunga hias atau tempat pensil merupakan contoh karya seni rupa dari bahan ....",
+    "p": ["Limbah / barang bekas", "Logam mulia", "Batu marmer", "Kaca kristal"],
+    "b": 0,
+    "bahas": "Pemanfaatan sampah plastik menjadi kerajinan tangan mengurangi pencemaran lingkungan sekaligus melatih kreativitas."
+  },
+  {
+    "q": "Selain melatih kreativitas, manfaat utama membuat kerajinan tangan dari sampah plastik bekas di sekolah adalah ....",
+    "p": [
+      "Membantu mengurangi timbunan sampah plastik yang sulit terurai di lingkungan",
+      "Menambah jumlah sampah di halaman sekolah",
+      "Membuat ruang kelas menjadi kotor",
+      "Menghabiskan banyak uang jajan"
+    ],
+    "b": 0,
+    "bahas": "Daur ulang (recycle) sampah plastik menjadi barang berguna menjaga kebersihan dan kelestarian alam."
+  },
+  {
+    "q": "Sifat permukaan suatu benda yang dapat dirasakan dengan jari tangan seperti halus, licin, kasar, atau bergelombang disebut ....",
+    "p": ["Tekstur", "Warna", "Garis", "Titik"],
+    "b": 0,
+    "bahas": "Tekstur adalah nilai raba permukaan suatu benda."
+  },
+  {
+    "q": "Teknik membuat tekstur nyata pada permukaan kertas gambar dengan cara menempelkan bahan-bahan bertekstur seperti pasir, serbuk gergaji, atau biji-bijian disebut teknik ....",
+    "p": ["Tempel (kolase / impasto tekstur)", "Aquarel tipis", "Arsir pensil", "Tiup cat"],
+    "b": 0,
+    "bahas": "Menempelkan bahan bertekstur menghasilkan permukaan timbul yang terasa kasar saat diraba."
+  },
+  {
+    "q": "Teknik menggosokkan pensil atau krayon di atas kertas yang di bawahnya diletakkan benda berpermukaan kasar (seperti uang koin atau daun bertulang menonjol) sehingga muncul pola teksturnya disebut teknik ....",
+    "p": ["Frottage (gosok)", "Mozaik", "Anyam", "Pahat"],
+    "b": 0,
+    "bahas": "Teknik frottage memindahkan jejak tekstur permukaan benda ke atas kertas dengan cara menggosokkan pensil/krayon."
+  },
+  {
+    "q": "Bendera hias berwarna-warni berbentuk segitiga atau persegi panjang yang dipasang berderet pada tali untuk memeriahkan acara perayaan disebut ....",
+    "p": ["Bendera hias (umbul-umbul / bunting flag)", "Lukisan dinding", "Patung tanah liat", "Topeng kayu"],
+    "b": 0,
+    "bahas": "Bendera hias dibuat berderet dengan kombinasi warna dan motif menarik untuk menghias ruangan atau halaman."
+  },
+  {
+    "q": "Kombinasi warna-warna cerah yang sering digunakan untuk membuat bendera hias agar suasana acara tampak meriah adalah ....",
+    "p": [
+      "Merah, kuning, biru, hijau, dan oranye",
+      "Hitam dan abu-abu gelap saja",
+      "Cokelat tua seluruhnya",
+      "Putih polos tanpa hiasan"
+    ],
+    "b": 0,
+    "bahas": "Warna-warna cerah kontras memberikan kesan gembira, meriah, dan penuh semangat."
+  },
+  {
+    "q": "Seni dekorasi tulisan indah yang memadukan keindahan bentuk huruf dan ornamen hias disebut ....",
+    "p": ["Seni dekorasi huruf / tipografi hias", "Seni patung", "Seni tari", "Seni musik"],
+    "b": 0,
+    "bahas": "Dekorasi tulisan menghias bentuk huruf dengan garis, pola, dan warna agar menarik dipandang."
+  },
+  {
+    "q": "Bentuk rumah adat tradisional dari Pulau Madura yang memiliki atap menjulang tinggi menyerupai tanduk atau perahu disebut rumah adat ....",
+    "p": ["Tanean Lanjhang (Bangsal / Pegon)", "Honai", "Gadang", "Bolon"],
+    "b": 0,
+    "bahas": "Tanean Lanjhang merupakan kompleks rumah adat tradisional masyarakat Madura."
+  },
+  {
+    "q": "Karya seni rupa yang memiliki ukuran panjang, lebar, dan tinggi (volume) sehingga dapat dilihat dari berbagai arah disebut karya seni rupa ....",
+    "p": ["Tiga dimensi", "Dua dimensi", "Satu dimensi", "Datar"],
+    "b": 0,
+    "bahas": "Kerajinan pot botol bekas, patung, dan vas bunga termasuk karya seni rupa tiga dimensi."
+  },
+  {
+    "q": "Alat yang paling tepat digunakan untuk memotong bagian tengah botol plastik bekas saat membuat kerajinan tempat pensil adalah ....",
+    "p": [
+      "Gunting atau pisau cutter dengan pengawasan guru/orang tua",
+      "Penggaris plastik",
+      "Penghapus karet",
+      "Kuas cat air"
+    ],
+    "b": 0,
+    "bahas": "Gunting atau cutter digunakan untuk memotong botol plastik dengan hati-hati dan didampingi guru/orang tua."
+  },
+  {
+    "q": "Jenis cat yang cocok digunakan untuk mewarnai permukaan botol plastik agar warna menempel kuat dan tidak mudah luntur terkena air adalah ....",
+    "p": ["Cat akrilik / cat minyak", "Cat air biasa", "Pensil warna kayu", "Kapur tulis"],
+    "b": 0,
+    "bahas": "Cat akrilik memiliki daya rekat kuat pada permukaan plastik, kayu, maupun batu."
+  },
+  {
+    "svg": "<svg width='165' height='65' xmlns='http://w3.org'><polygon points='20,15 55,15 37,50' fill='#ef4444'/><polygon points='65,15 100,15 82,50' fill='#facc15'/><polygon points='110,15 145,15 127,50' fill='#38bdf8'/></svg>",
+    "q": "Perhatikan rangkaian bendera hias segitiga pada gambar di atas! Susunan warna bendera tersebut mengulang tiga warna dasar yaitu ....",
+    "p": [
+      "Merah, kuning, dan biru",
+      "Hijau, ungu, dan cokelat",
+      "Hitam, putih, dan abu-abu",
+      "Oranye, merah muda, dan ungu"
+    ],
+    "b": 0,
+    "bahas": "Merah, kuning, dan biru merupakan tiga warna dasar (primer)."
+  },
+  {
+    "q": "Bahan alami di sekitar rumah yang memiliki tekstur kasar dan dapat ditempelkan sebagai hiasan bingkai foto adalah ....",
+    "p": [
+      "Cangkang kerang, biji jagung, dan pasir pantai",
+      "Kertas tisu lembut",
+      "Plastik bening",
+      "Air mineral"
+    ],
+    "b": 0,
+    "bahas": "Cangkang kerang dan biji-bijian memiliki tekstur nyata yang indah untuk kerajinan tempel."
+  },
+  {
+    "q": "Campuran warna merah dan biru dengan takaran seimbang akan menghasilkan warna sekunder yaitu ....",
+    "p": ["Ungu", "Hijau", "Oranye", "Kuning"],
+    "b": 0,
+    "bahas": "Merah + biru menghasilkan warna ungu."
+  },
+  {
+    "q": "Garis tepi pada sebuah gambar berfungsi untuk ....",
+    "p": [
+      "Memperjelas batas bentuk objek gambar agar tampak tegas dan rapi",
+      "Menghapus seluruh isi gambar",
+      "Membuat kertas gambar menjadi robek",
+      "Menutupi warna dasar gambar"
+    ],
+    "b": 0,
+    "bahas": "Garis tepi (outline) mempertegas bentuk objek dalam gambar ilustrasi maupun dekoratif."
+  },
+  {
+    "q": "Ketika menyusun gambar rumah dan pohon di atas kertas gambar, pohon yang berada di belakang rumah sebaiknya digambar ....",
+    "p": [
+      "Sebagian tertutup oleh bangunan rumah sehingga tampak alami",
+      "Melayang di atas awan",
+      "Terbalik akarnya di atas",
+      "Menembus dinding depan rumah"
+    ],
+    "b": 0,
+    "bahas": "Teknik tumpang tindih (overlapping) membuat objek depan menutupi sebagian objek belakang sehingga tampak nyata."
+  },
+  {
+    "q": "Kebersihan dan keselamatan kerja saat membuat kerajinan dari barang bekas di kelas harus dijaga dengan cara ....",
+    "p": [
+      "Menggunakan alat tajam dengan hati-hati dan membuang sisa potongan ke tempat sampah",
+      "Meletakkan gunting terbuka di atas kursi teman",
+      "Membiarkan sisa potongan plastik berserakan di lantai",
+      "Bermain lem dengan mengoleskannya ke meja"
+    ],
+    "b": 0,
+    "bahas": "Tertib menggunakan alat kerja dan menjaga kebersihan kelas menciptakan suasana belajar yang aman."
+  },
+  {
+    "q": "Karya kerajinan yang sudah selesai dibuat oleh siswa dapat dipamerkan dalam pameran kelas dengan tujuan untuk ....",
+    "p": [
+      "Menumbuhkan rasa percaya diri dan saling mengapresiasi kreativitas antarteman",
+      "Mencari-cari kekurangan karya teman",
+      "Menjual karya secara paksa kepada guru",
+      "Membuang karya setelah dinilai"
+    ],
+    "b": 0,
+    "bahas": "Pameran kelas melatih siswa menghargai hasil karya sendiri maupun karya teman."
+  },
+  {
+    "q": "Bentuk bangunan rumah pada gambar lingkungan sekitar umumnya tersusun dari gabungan bentuk-bentuk geometris seperti ....",
+    "p": [
+      "Persegi, persegi panjang, segitiga, dan trapesium",
+      "Lingkaran penuh seluruhnya",
+      "Garis spiral tak beraturan",
+      "Titik-titik acak"
+    ],
+    "b": 0,
+    "bahas": "Dinding, pintu, jendela, dan atap rumah tersusun dari bentuk dasar persegi, persegi panjang, segitiga, dan trapesium."
+  },
+  {
+    "q": "Sikap terpuji yang ditunjukkan seorang seniman cilik saat hasil karyanya mendapat saran perbaikan dari guru adalah ....",
+    "p": [
+      "Menerima saran dengan senang hati dan berusaha memperbaikinya agar lebih bagus",
+      "Marah dan merobek kertas gambarnya",
+      "Menyalahkan pensil warna yang dipakai",
+      "Berhenti menggambar selamanya"
+    ],
+    "b": 0,
+    "bahas": "Sikap terbuka terhadap masukan membantu kemampuan berkarya seni berkembang semakin baik."
+  }
+]);
+
