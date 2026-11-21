@@ -3542,3 +3542,1678 @@ window.tambahPaketUjian("5", "kesenian", "UTS Semester 1", [
   }
 ]);
 
+window.tambahPaketUjian("5", "mtk", "UTS Semester 2", [
+  {
+    "svg": "<svg width='160' height='70' xmlns='http://w3.org'><polyline points='55,15 55,55 105,55' fill='none' stroke='#dc2626' stroke-width='3'/><rect x='55' y='43' width='12' height='12' fill='none' stroke='#0284c7' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar sudut siku-siku di atas! Besar sudut siku-siku adalah ....",
+    "p": ["45°", "90°", "180°", "360°"],
+    "b": 1,
+    "bahas": "Sudut siku-siku memiliki besar tepat 90°."
+  },
+  {
+    "q": "Sudut yang besarnya antara 0° dan 90° (lebih kecil dari 90°) disebut sudut ....",
+    "p": ["Lancip", "Siku-siku", "Tumpul", "Lurus"],
+    "b": 0,
+    "bahas": "Sudut lancip besarnya kurang dari 90° (0° < x < 90°)."
+  },
+  {
+    "q": "Sudut yang besarnya antara 90° dan 180° (lebih besar dari 90° tetapi kurang dari 180°) disebut sudut ....",
+    "p": ["Lancip", "Siku-siku", "Tumpul", "Refleks"],
+    "b": 2,
+    "bahas": "Sudut tumpul besarnya lebih dari 90° dan kurang dari 180° (90° < x < 180°)."
+  },
+  {
+    "q": "Sebuah sudut memiliki besar 135°. Sudut tersebut termasuk jenis sudut ....",
+    "p": ["Lancip", "Siku-siku", "Tumpul", "Lurus"],
+    "b": 2,
+    "bahas": "Karena 135° berada di antara 90° dan 180°, sudut tersebut adalah sudut tumpul."
+  },
+  {
+    "q": "Alat ukur baku yang digunakan untuk mengukur besar suatu sudut dalam satuan derajat adalah ....",
+    "p": ["Busur derajat", "Penggaris lurus", "Jangka", "Timbangan neraca"],
+    "b": 0,
+    "bahas": "Busur derajat adalah alat baku untuk mengukur dan menggambar besar sudut."
+  },
+  {
+    "svg": "<svg width='150' height='75' xmlns='http://w3.org'><circle cx='75' cy='38' r='26' fill='#ffffff' stroke='#0f172a' stroke-width='2.5'/><line x1='75' y1='38' x2='75' y2='18' stroke='#0284c7' stroke-width='2.5'/><line x1='75' y1='38' x2='93' y2='38' stroke='#dc2626' stroke-width='3'/><circle cx='75' cy='38' r='3' fill='#0f172a'/></svg>",
+    "q": "Perhatikan gambar jam dinding yang menunjukkan pukul 03.00 di atas! Besar sudut terkecil yang dibentuk oleh jarum pendek dan jarum panjang pada pukul 03.00 adalah ....",
+    "p": ["60°", "90°", "120°", "180°"],
+    "b": 1,
+    "bahas": "Setiap selisih 1 jam pada jam dinding bernilai 30° (360° : 12). Pukul 03.00 = 3 × 30° = 90° (siku-siku)."
+  },
+  {
+    "q": "Besar sudut terkecil yang dibentuk oleh kedua jarum jam pada pukul 04.00 tepat adalah ....",
+    "p": ["90°", "120°", "150°", "180°"],
+    "b": 1,
+    "bahas": "Pukul 04.00 jaraknya 4 angka jam = 4 × 30° = 120°."
+  },
+  {
+    "q": "Pada pukul 06.00 tepat, jarum pendek menunjuk angka 6 dan jarum panjang menunjuk angka 12. Sudut yang terbentuk pada pukul 06.00 adalah sudut lurus yang besarnya ....",
+    "p": ["90°", "120°", "150°", "180°"],
+    "b": 3,
+    "bahas": "6 × 30° = 180° (sudut lurus)."
+  },
+  {
+    "q": "Besar sudut satu putaran penuh pada lingkaran adalah ....",
+    "p": ["90°", "180°", "270°", "360°"],
+    "b": 3,
+    "bahas": "Satu putaran penuh lingkaran besarnya 360°."
+  },
+  {
+    "q": "Jumlah besar ketiga sudut dalam pada setiap bangun segitiga adalah ....",
+    "p": ["90°", "180°", "270°", "360°"],
+    "b": 1,
+    "bahas": "Jumlah seluruh sudut dalam pada segitiga selalu 180°."
+  },
+  {
+    "q": "Besar masing-masing sudut pada bangun segitiga sama sisi adalah ....",
+    "p": ["45°", "60°", "90°", "120°"],
+    "b": 1,
+    "bahas": "180° : 3 = 60° untuk setiap sudut pada segitiga sama sisi."
+  },
+  {
+    "q": "Sebuah segitiga siku-siku memiliki salah satu sudut lancip sebesar 35°. Besar sudut lancip lainnya pada segitiga tersebut adalah ....",
+    "p": ["45°", "55°", "65°", "145°"],
+    "b": 1,
+    "bahas": "180° - (90° + 35°) = 180° - 125° = 55°."
+  },
+  {
+    "q": "Sebuah segitiga sama kaki memiliki besar sudut puncak 40°. Besar masing-masing sudut alasnya adalah ....",
+    "p": ["50°", "60°", "70°", "80°"],
+    "b": 2,
+    "bahas": "(180° - 40°) : 2 = 140° : 2 = 70°."
+  },
+  {
+    "q": "Jumlah besar keempat sudut dalam pada setiap bangun segi empat adalah ....",
+    "p": ["180°", "270°", "360°", "540°"],
+    "b": 2,
+    "bahas": "Jumlah keempat sudut dalam segi empat selalu 360°."
+  },
+  {
+    "q": "Sebuah trapesium siku-siku memiliki dua sudut siku-siku (masing-masing 90°) dan satu sudut tumpul sebesar 125°. Besar sudut lancip keempat pada trapesium tersebut adalah ....",
+    "p": ["45°", "55°", "65°", "75°"],
+    "b": 1,
+    "bahas": "360° - (90° + 90° + 125°) = 360° - 305° = 55°."
+  },
+  {
+    "q": "Perhatikan ciri-ciri bangun datar berikut:\n(1) Memiliki empat sisi sama panjang.\n(2) Sudut-sudut yang berhadapan sama besar (bukan 90°).\n(3) Kedua diagonalnya berpotongan tegak lurus dan saling membagi dua sama panjang.\nBangun datar yang dimaksud adalah ....",
+    "p": ["Belah ketupat", "Persegi panjang", "Trapesium sama kaki", "Layang-layang"],
+    "b": 0,
+    "bahas": "Belah ketupat memiliki 4 sisi sama panjang, sudut berhadapan sama besar, dan diagonal berpotongan tegak lurus."
+  },
+  {
+    "q": "Bangun segi empat yang memiliki dua pasang sisi berdekatan sama panjang dan kedua diagonalnya berpotongan tegak lurus (salah satu diagonalnya membagi dua diagonal lainnya sama panjang) adalah ....",
+    "p": ["Layang-layang", "Jajargenjang", "Persegi", "Trapesium siku-siku"],
+    "b": 0,
+    "bahas": "Layang-layang memiliki dua pasang sisi yang berdekatan sama panjang dan diagonal saling tegak lurus."
+  },
+  {
+    "q": "Perbedaan utama antara persegi dan belah ketupat terletak pada ....",
+    "p": [
+      "Besar keempat sudutnya (persegi keempat sudutnya 90°, sedangkan belah ketupat tidak harus 90°)",
+      "Jumlah sisinya",
+      "Ketegaklurusan kedua diagonalnya",
+      "Kesamaan panjang keempat sisinya"
+    ],
+    "b": 0,
+    "bahas": "Persegi dan belah ketupat sama-sama memiliki 4 sisi sama panjang dan diagonal tegak lurus, namun keempat sudut persegi wajib 90°."
+  },
+  {
+    "svg": "<svg width='165' height='70' xmlns='http://w3.org'><polygon points='45,18 115,18 135,54 25,54' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar bangun datar di atas! Bangun segi empat yang memiliki sepasang sisi sejajar sama panjang dan sepasang sisi miring sama panjang disebut ....",
+    "p": ["Trapesium sama kaki", "Trapesium siku-siku", "Jajargenjang", "Belah ketupat"],
+    "b": 0,
+    "bahas": "Trapesium sama kaki memiliki sepasang sisi sejajar dan dua kaki miring yang sama panjang."
+  },
+  {
+    "q": "Bangun segi empat yang memiliki dua pasang sisi berhadapan sejajar dan sama panjang, serta sudut-sudut yang berhadapan sama besar (bukan 90°) adalah ....",
+    "p": ["Jajargenjang", "Trapesium sembarang", "Persegi panjang", "Layang-layang"],
+    "b": 0,
+    "bahas": "Jajargenjang memiliki dua pasang sisi sejajar sama panjang dan sudut berhadapan sama besar."
+  },
+  {
+    "q": "Banyak sumbu simetri pada bangun datar persegi adalah ....",
+    "p": ["2 sumbu simetri", "3 sumbu simetri", "4 sumbu simetri", "Tak terhingga"],
+    "b": 2,
+    "bahas": "Persegi memiliki 4 sumbu simetri lipat."
+  },
+  {
+    "q": "Banyak sumbu simetri lipat pada bangun persegi panjang (bukan persegi) adalah ....",
+    "p": ["1 sumbu simetri", "2 sumbu simetri", "4 sumbu simetri", "0 sumbu simetri"],
+    "b": 1,
+    "bahas": "Persegi panjang memiliki 2 sumbu simetri lipat (vertikal dan horizontal)."
+  },
+  {
+    "q": "Segitiga yang ketiga sisinya berbeda panjang dan ketiga sudutnya juga berbeda besar disebut segitiga ....",
+    "p": ["Sembarang", "Sama kaki", "Sama sisi", "Siku-siku sama kaki"],
+    "b": 0,
+    "bahas": "Segitiga sembarang memiliki tiga sisi dengan panjang yang berbeda-beda."
+  },
+  {
+    "q": "Arah mata angin Utara dan Timur membentuk sudut sebesar ....",
+    "p": ["45°", "90°", "135°", "180°"],
+    "b": 1,
+    "bahas": "Arah Utara dan Timur saling tegak lurus membentuk sudut siku-siku 90°."
+  },
+  {
+    "q": "Jika Andi menghadap ke arah Barat lalu berputar searah jarum jam sebesar 180°, maka Andi sekarang menghadap ke arah ....",
+    "p": ["Timur", "Utara", "Selatan", "Barat Laut"],
+    "b": 0,
+    "bahas": "Berputar 180° berbalik arah lurus ke arah berlawanan; lawan dari Barat adalah Timur."
+  }
+]);
+
+window.tambahPaketUjian("5", "ipas", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>SISTEM PERNAPASAN</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Hidung ➔ Tenggorokan ➔ Paru-Paru</text></svg>",
+    "q": "Perhatikan bagan saluran pernapasan pada gambar di atas! Urutan jalannya udara pernapasan dari luar masuk ke dalam tubuh manusia yang benar adalah ....",
+    "p": [
+      "Rongga hidung → faring → laring → trakea → bronkus → bronkiolus → alveolus",
+      "Rongga hidung → kerongkongan → lambung → usus halus → paru-paru",
+      "Mulut → trakea → alveolus → bronkus → rongga hidung",
+      "Rongga hidung → bronkus → trakea → faring → alveolus"
+    ],
+    "b": 0,
+    "bahas": "Udara masuk melalui hidung, melewati tenggorokan (faring, laring, trakea), bronkus, bronkiolus, dan berakhir di alveolus."
+  },
+  {
+    "q": "Bagian di dalam paru-paru yang berbentuk gelembung-gelembung halus berdinding tipis sebagai tempat terjadinya pertukaran gas oksigen (O₂) dan karbon dioksida (CO₂) disebut ....",
+    "p": ["Alveolus", "Bronkus", "Trakea", "Diafragma"],
+    "b": 0,
+    "bahas": "Alveolus dikelilingi pembuluh kapiler darah sebagai tempat difusi pertukaran O₂ dan CO₂."
+  },
+  {
+    "q": "Sekat otot yang membatasi rongga dada dan rongga perut serta berperan penting membantu proses pernapasan perut manusia disebut ....",
+    "p": ["Diafragma", "Epiglotis", "Kerongkongan", "Usus buntu"],
+    "b": 0,
+    "bahas": "Kontraksi dan relaksasi otot diafragma mengatur volume rongga dada saat bernapas."
+  },
+  {
+    "q": "Gangguan sistem pernapasan berupa penyempitan saluran pernapasan akibat alergi debu, udara dingin, atau bulu hewan yang menyebabkan penderitanya sesak napas adalah ....",
+    "p": ["Asma", "Influenza", "Tuberkulosis (TBC)", "Pneumonia"],
+    "b": 0,
+    "bahas": "Asma dipicu reaksi alergi yang menyebabkan penyempitan saluran bronkus."
+  },
+  {
+    "q": "Urutan saluran pencernaan makanan pada manusia yang benar dari awal hingga akhir adalah ....",
+    "p": [
+      "Mulut → kerongkongan → lambung → usus halus → usus besar → anus",
+      "Mulut → tenggorokan → lambung → usus besar → usus halus → anus",
+      "Mulut → lambung → kerongkongan → usus halus → anus",
+      "Mulut → kerongkongan → usus halus → lambung → usus besar → anus"
+    ],
+    "b": 0,
+    "bahas": "Makanan dicerna melalui mulut, kerongkongan (esofagus), lambung, usus halus, usus besar, dan dikeluarkan lewat anus."
+  },
+  {
+    "q": "Gerakan meremas-remas dan mendorong makanan oleh dinding kerongkongan menuju ke lambung disebut gerak ....",
+    "p": ["Peristaltik", "Refleks", "Rotasi", "Respirasi"],
+    "b": 0,
+    "bahas": "Gerak peristaltik mendorong gumpalan makanan (bolus) dari kerongkongan masuk ke lambung."
+  },
+  {
+    "q": "Organ pencernaan yang berfungsi menyerap sari-sari makanan (nutrisi) untuk diedarkan oleh darah ke seluruh tubuh adalah ....",
+    "p": ["Usus halus", "Usus besar", "Kerongkongan", "Lambung"],
+    "b": 0,
+    "bahas": "Usus halus (terdiri atas usus dua belas jari, usus kosong, dan usus penyerapan) menyerap sari makanan."
+  },
+  {
+    "q": "Fungsi utama usus besar dalam sistem pencernaan manusia adalah ....",
+    "p": [
+      "Menyerap kembali air dan garam mineral dari sisa makanan serta membusukkan sisa makanan dengan bantuan bakteri E. coli",
+      "Menghancurkan makanan menggunakan gigi geraham",
+      "Menghasilkan enzim amilase untuk mengubah zat tepung menjadi gula",
+      "Menukar oksigen dengan karbon dioksida"
+    ],
+    "b": 0,
+    "bahas": "Usus besar mengatur kadar air pada feses sebelum dikeluarkan melalui rektum dan anus."
+  },
+  {
+    "q": "Zat gizi makanan yang berfungsi utama sebagai sumber tenaga (energi) utama bagi tubuh manusia dan banyak terdapat pada nasi, jagung, dan roti adalah ....",
+    "p": ["Karbohidrat", "Protein", "Vitamin", "Mineral"],
+    "b": 0,
+    "bahas": "Karbohidrat merupakan sumber energi utama untuk beraktivitas."
+  },
+  {
+    "q": "Zat gizi yang berfungsi sebagai zat pembangun untuk pertumbuhan sel dan mengganti sel-sel tubuh yang rusak (terdapat pada ikan, telur, tempe, dan tahu) adalah ....",
+    "p": ["Protein", "Karbohidrat", "Lemak jenuh", "Serat"],
+    "b": 0,
+    "bahas": "Protein hewani dan nabati sangat dibutuhkan pada masa pertumbuhan anak-anak."
+  },
+  {
+    "q": "Tahap perkembangan manusia di mana terjadi perubahan fisik yang pesat menuju kedewasaan (seperti suara memberat pada laki-laki dan menstruasi pada perempuan) disebut masa ....",
+    "p": ["Pubertas (remaja)", "Balita", "Lansia", "Bayi"],
+    "b": 0,
+    "bahas": "Masa pubertas merupakan masa peralihan dari anak-anak menuju remaja dewasa."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>LETAK GEOGRAFIS</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>2 Benua &amp; 2 Samudra</text></svg>",
+    "q": "Perhatikan kartu geografi pada gambar di atas! Secara geografis, wilayah negara Indonesia terletak di posisi silang yang sangat strategis, yaitu di antara dua benua dan dua samudra yaitu ....",
+    "p": [
+      "Benua Asia dan Benua Australia serta Samudra Hindia dan Samudra Pasifik",
+      "Benua Eropa dan Benua Afrika serta Samudra Atlantik dan Samudra Arktik",
+      "Benua Amerika dan Benua Asia serta Samudra Pasifik dan Samudra Atlantik",
+      "Benua Australia dan Benua Antartika serta Samudra Hindia dan Samudra Arktik"
+    ],
+    "b": 0,
+    "bahas": "Indonesia diapit Benua Asia dan Benua Australia, serta Samudra Hindia dan Samudra Pasifik."
+  },
+  {
+    "q": "Indonesia disebut sebagai negara MARITIM karena sebagian besar wilayahnya berupa ....",
+    "p": [
+      "Perairan laut yang luas dengan ribuan pulau yang saling terhubung",
+      "Padang pasir yang sangat kering",
+      "Pegunungan es abadi",
+      "Daratan tertutup tanpa pantai"
+    ],
+    "b": 0,
+    "bahas": "Dua pertiga wilayah Indonesia berupa lautan yang kaya akan sumber daya perikanan dan jalur pelayaran."
+  },
+  {
+    "q": "Indonesia juga dijuluki sebagai negara AGRARIS karena sebagian besar penduduknya bermata pencaharian di bidang ....",
+    "p": [
+      "Pertanian dan perkebunan dengan tanah yang subur",
+      "Pertambangan emas dan perak",
+      "Perakitan pesawat terbang",
+      "Perbankan internasional"
+    ],
+    "b": 0,
+    "bahas": "Tanah vulkanik yang subur dan iklim tropis menjadikan sektor pertanian sebagai tulang punggung pangan Indonesia."
+  },
+  {
+    "q": "Garis khayal di permukaan bumi yang membelah bumi menjadi belahan utara dan selatan serta melintasi Kota Pontianak (Kalimantan Barat) adalah garis ....",
+    "p": ["Khatulistiwa (Ekuator / 0° Lintang)", "Bujur Timur", "Bujur Barat", "Lingkar Kutub"],
+    "b": 0,
+    "bahas": "Indonesia dilalui garis khatulistiwa sehingga beriklim tropis dengan dua musim (hujan dan kemarau)."
+  },
+  {
+    "q": "Garis khayal yang membagi wilayah persebaran fauna Indonesia menjadi tipe Asiatis (Indonesia Barat) dan tipe Peralihan (Indonesia Tengah) adalah garis ....",
+    "p": ["Wallace", "Weber", "Khatulistiwa", "Meridian"],
+    "b": 0,
+    "bahas": "Garis Wallace memisahkan fauna tipe Asiatis dan Peralihan, sedangkan Garis Weber memisahkan tipe Peralihan dan Australis."
+  },
+  {
+    "q": "Contoh hewan endemik khas Indonesia bagian timur (tipe Australis) yang memiliki bulu sangat indah sehingga dijuluki 'Burung Surga' dari Papua adalah ....",
+    "p": ["Burung Cenderawasih", "Orangutan", "Harimau Sumatera", "Badak Bercula Satu"],
+    "b": 0,
+    "bahas": "Burung Cenderawasih adalah fauna khas Papua (tipe Australis)."
+  },
+  {
+    "q": "Komodo merupakan kadal purba terbesar di dunia yang menjadi hewan endemik tipe Peralihan yang hidup alami di Pulau ....",
+    "p": ["Komodo, Nusa Tenggara Timur", "Sumatera", "Kalimantan", "Madura"],
+    "b": 0,
+    "bahas": "Komodo merupakan satwa langka endemik di Taman Nasional Komodo, NTT."
+  },
+  {
+    "q": "Sumber daya alam yang dapat diperbarui (tidak akan habis jika dikelola dengan bijaksana) di bawah ini adalah ....",
+    "p": [
+      "Air, tanah, sinar matahari, tumbuhan, dan hewan",
+      "Minyak bumi, batu bara, dan gas alam",
+      "Emas, perak, dan tembaga",
+      "Nikel, timah, dan bauksit"
+    ],
+    "b": 0,
+    "bahas": "Air, matahari, tumbuhan, dan hewan dapat pulih atau berkembang biak kembali secara alami."
+  },
+  {
+    "q": "Bahan bakar fosil yang terbentuk dari sisa-sisa tumbuhan dan hewan purba selama jutaan tahun sehingga termasuk sumber daya alam yang TIDAK dapat diperbarui adalah ....",
+    "p": ["Minyak bumi dan batu bara", "Air sungai dan angin", "Hutan bakau dan terumbu karang", "Ikan laut dan rumput laut"],
+    "b": 0,
+    "bahas": "Minyak bumi dan batu bara membutuhkan waktu jutaan tahun untuk terbentuk sehingga penggunaannya harus dihemat."
+  },
+  {
+    "q": "Hutan bakau (mangrove) yang tumbuh di pesisir pantai memiliki fungsi ekologis yang sangat penting bagi lingkungan yaitu ....",
+    "p": [
+      "Mencegah abrasi (pengikisan pantai oleh ombak) dan menjadi tempat berlindung biota laut",
+      "Menghasilkan kayu jati untuk bahan mebel",
+      "Mengeringkan air laut menjadi garam",
+      "Menghalangi perahu nelayan melaut"
+    ],
+    "b": 0,
+    "bahas": "Akar pohon mangrove menahan gelombang laut sehingga mencegah abrasi pantai."
+  },
+  {
+    "q": "Upaya pelestarian satwa langka di habitat aslinya (pelestarian in situ) dilakukan pemerintah dengan cara mendirikan ....",
+    "p": [
+      "Taman Nasional, Cagar Alam, dan Suaka Margasatwa",
+      "Kebun binatang di tengah kota besar",
+      "Pasar hewan peliharaan",
+      "Museum sejarah perjuangan"
+    ],
+    "b": 0,
+    "bahas": "Taman Nasional dan Suaka Margasatwa melindungi tumbuhan dan hewan langka langsung di habitat alaminya."
+  },
+  {
+    "q": "Cara menjaga kesehatan organ pernapasan dan pencernaan dalam kehidupan sehari-hari adalah ....",
+    "p": [
+      "Makan makanan bergizi seimbang, minum air putih cukup, berolahraga teratur, dan menghindari asap rokok",
+      "Sering jajan makanan pedas sembarangan dan jarang mencuci tangan",
+      "Membakar sampah plastik di halaman rumah",
+      "Begadang setiap malam tanpa berolahraga"
+    ],
+    "b": 0,
+    "bahas": "Pola hidup bersih dan sehat menjaga fungsi paru-paru dan saluran pencernaan tetap optimal."
+  },
+  {
+    "q": "Dampak negatif penangkapan ikan di laut menggunakan bahan peledak (bom ikan) atau pukat harimau adalah ....",
+    "p": [
+      "Merusak terumbu karang dan membunuh benih-benih ikan kecil sehingga mengancam kelestarian laut",
+      "Membuat ikan berkembang biak lebih cepat",
+      "Menyuburkan terumbu karang di dasar laut",
+      "Menambah jumlah nelayan tradisional"
+    ],
+    "b": 0,
+    "bahas": "Bom ikan dan pukat harimau menghancurkan ekosistem terumbu karang yang menjadi rumah ikan."
+  },
+  {
+    "q": "Kesimpulan yang tepat tentang kekayaan alam dan posisi geografis Indonesia adalah ....",
+    "p": [
+      "Letak strategis dan kekayaan alam Indonesia merupakan anugerah Tuhan yang wajib dikelola secara bijak dan lestari",
+      "Kekayaan alam Indonesia boleh dieksploitasi habis-habisan tanpa reboisasi",
+      "Indonesia hanya memiliki kekayaan di daratan saja tanpa potensi laut",
+      "Pelestarian alam hanya menjadi tugas pemerintah tanpa peran masyarakat"
+    ],
+    "b": 0,
+    "bahas": "Seluruh warga negara bertanggung jawab menjaga kelestarian kekayaan alam maritim dan agraris Indonesia."
+  }
+]);
+
+window.tambahPaketUjian("5", "bindo", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>SINGKATAN &amp; AKRONIM</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>NKRI • SD • Puskesmas • Daring</text></svg>",
+    "q": "Perhatikan kartu kebahasaan pada gambar di atas! Kepanjangan yang tepat dari singkatan 'NKRI' adalah ....",
+    "p": [
+      "Negara Kesatuan Republik Indonesia",
+      "Nasional Kesatuan Rakyat Indonesia",
+      "Negara Keadilan Republik Indonesia",
+      "Nusantara Kesatuan Republik Indonesia"
+    ],
+    "b": 0,
+    "bahas": "NKRI adalah singkatan dari Negara Kesatuan Republik Indonesia."
+  },
+  {
+    "q": "Gabungan huruf awal atau suku kata dari beberapa kata yang ditulis dan dilafalkan seperti kata biasa (contohnya 'Puskesmas' dan 'Posyandu') disebut ....",
+    "p": ["Akronim", "Singkatan gelar", "Kalimat majemuk", "Sinonim"],
+    "b": 0,
+    "bahas": "Akronim adalah kependekan yang berupa gabungan huruf atau suku kata yang dilafalkan sebagai kata wajar (Puskesmas = Pusat Kesehatan Masyarakat)."
+  },
+  {
+    "q": "Akronim 'daring' yang sering digunakan dalam pembelajaran berbasis internet memiliki kepanjangan ....",
+    "p": ["Dalam jaringan", "Dari rumah", "Data internet", "Daftar ringkasan"],
+    "b": 0,
+    "bahas": "Daring = dalam jaringan (online), sedangkan luring = luar jaringan (offline)."
+  },
+  {
+    "q": "Penulisan singkatan gelar akademik di belakang nama orang yang paling tepat sesuai EYD V adalah ....",
+    "p": [
+      "Ahmad Fauzi, S.Pd.",
+      "Ahmad Fauzi S.pd",
+      "Ahmad Fauzi, SPd",
+      "Ahmad Fauzi. S.Pd,"
+    ],
+    "b": 0,
+    "bahas": "Gelar di belakang nama dipisahkan tanda koma (,) dan setiap huruf singkatan gelar diikuti tanda titik (S.Pd.)."
+  },
+  {
+    "q": "Kalimat di bawah ini yang merupakan FAKTA (pernyataan yang terbukti kebenarannya) adalah ....",
+    "p": [
+      "Jembatan Suramadu menghubungkan Pulau Jawa dan Pulau Madura melintasi Selat Madura.",
+      "Menurut saya, berwisata ke museum jauh lebih menyenangkan daripada ke pantai.",
+      "Sebaiknya seluruh siswa membaca tiga buku cerita setiap minggu.",
+      "Kue tradisional itu rasanya paling lezat di seluruh dunia."
+    ],
+    "b": 0,
+    "bahas": "Keberadaan Jembatan Suramadu yang menghubungkan Jawa dan Madura adalah fakta geografis yang nyata."
+  },
+  {
+    "q": "Kalimat di bawah ini yang merupakan OPINI (pendapat atau penilaian subjektif) adalah ....",
+    "p": [
+      "Pemandangan matahari terbenam di pantai itu tampak sangat memukau menurutku.",
+      "Indonesia memproklamasikan kemerdekaannya pada tanggal 17 Agustus 1945.",
+      "Satu tahun terdiri atas dua belas bulan.",
+      "Air membeku pada suhu nol derajat Celsius."
+    ],
+    "b": 0,
+    "bahas": "Kata 'sangat memukau menurutku' adalah penilaian subjektif pembicara (opini)."
+  },
+  {
+    "q": "Pesan surat elektronik yang dikirimkan secara cepat melalui jaringan internet dari satu alamat email ke alamat email lainnya disebut ....",
+    "p": ["Surel (surat elektronik)", "Wesel pos", "Telegram", "Prangko"],
+    "b": 0,
+    "bahas": "Surel (surat elektronik / email) dikirimkan secara digital melalui internet."
+  },
+  {
+    "q": "Bagian dalam surat elektronik (surel) yang berfungsi untuk menuliskan judul singkat isi pesan sebelum surat dibuka oleh penerima adalah kolom ....",
+    "p": ["Subjek (Subject)", "Lampiran (Attachment)", "Penerima (To)", "Salam penutup"],
+    "b": 0,
+    "bahas": "Kolom Subjek diisi judul/inti surat agar penerima langsung mengetahui topik pesan."
+  },
+  {
+    "q": "Teknik membaca cepat untuk menemukan informasi tertentu secara langsung (seperti mencari jadwal keberangkatan kereta api atau nomor telepon pada daftar) tanpa membaca seluruh kata disebut membaca ....",
+    "p": ["Memindai (scanning)", "Nyaring", "Indah puisi", "Mengeja huruf"],
+    "b": 0,
+    "bahas": "Membaca memindai (scanning) digunakan untuk menemukan data spesifik secara cepat."
+  },
+  {
+    "q": "Sikap bijak dan aman saat menggunakan internet bagi siswa kelas 5 SD adalah ....",
+    "p": [
+      "Menggunakan internet di bawah bimbingan orang tua dan tidak membagikan data pribadi kepada orang asing",
+      "Membagikan alamat rumah dan nomor telepon orang tua di media sosial umum",
+      "Membuka situs sembarangan tanpa izin orang tua",
+      "Menulis komentar kasar kepada teman di internet"
+    ],
+    "b": 0,
+    "bahas": "Literasi digital yang aman melindungi data pribadi anak dari kejahatan siber."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>HURUF KAPITAL</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Nama Geografis &amp; Peristiwa Sejarah</text></svg>",
+    "q": "Perhatikan kartu ejaan pada gambar di atas! Penulisan huruf kapital untuk nama geografis yang benar terdapat pada kalimat ....",
+    "p": [
+      "Kapal feri itu berlayar menyeberangi Selat Madura menuju Pelabuhan Kamal.",
+      "Kapal feri itu berlayar menyeberangi selat Madura menuju pelabuhan Kamal.",
+      "Kapal feri itu berlayar menyeberangi Selat madura menuju Pelabuhan kamal.",
+      "Kapal feri itu berlayar menyeberangi selat madura menuju pelabuhan kamal."
+    ],
+    "b": 0,
+    "bahas": "Nama jenis geografis yang diikuti nama diri ditulis kapital di setiap awal unsurnya (Selat Madura, Pelabuhan Kamal)."
+  },
+  {
+    "q": "Penulisan kata 'gula jawa' atau 'garam madura' yang menyatakan jenis produk (bukan letak geografis) yang benar sesuai EYD V adalah ....",
+    "p": [
+      "Ibu membeli garam madura dan gula jawa di pasar tradisional.",
+      "Ibu membeli Garam Madura dan Gula Jawa di pasar tradisional.",
+      "Ibu membeli garam Madura dan gula Jawa di pasar tradisional.",
+      "Ibu membeli Garam madura dan Gula jawa di pasar tradisional."
+    ],
+    "b": 0,
+    "bahas": "Nama geografis yang dipakai sebagai nama jenis produk ditulis dengan huruf kecil (garam madura, gula jawa)."
+  },
+  {
+    "q": "Penulisan nama peristiwa sejarah yang tepat dengan huruf kapital terdapat pada kalimat ....",
+    "p": [
+      "Peristiwa Proklamasi Kemerdekaan Indonesia terjadi pada tanggal 17 Agustus 1945.",
+      "Peristiwa proklamasi kemerdekaan Indonesia terjadi pada tanggal 17 Agustus 1945.",
+      "Peristiwa Proklamasi kemerdekaan indonesia terjadi pada tanggal 17 agustus 1945.",
+      "Peristiwa proklamasi Kemerdekaan indonesia terjadi pada tanggal 17 Agustus 1945."
+    ],
+    "b": 0,
+    "bahas": "Setiap awal kata pada nama peristiwa sejarah resmi ditulis dengan huruf kapital (Proklamasi Kemerdekaan Indonesia)."
+  },
+  {
+    "q": "Penulisan angka dan bilangan dalam kalimat yang benar sesuai aturan ejaan bahasa Indonesia adalah ....",
+    "p": [
+      "Sebanyak 25 siswa kelas lima berkunjung ke Museum Sumenep.",
+      "Sebanyak dua puluh lima siswa kelas 5 berkunjung ke Museum Sumenep.",
+      "25 siswa kelas lima berkunjung ke Museum Sumenep.",
+      "Sebanyak 2 siswa kelas lima berkunjung ke Museum Sumenep."
+    ],
+    "b": 0,
+    "bahas": "Bilangan yang dapat dinyatakan dengan satu atau dua kata ditulis dengan huruf (lima), sedangkan bilangan lebih dari dua kata ditulis dengan angka (25), dan angka tidak boleh diletakkan di awal kalimat."
+  },
+  {
+    "q": "Perbaikan penulisan angka di awal kalimat '15 orang peserta lomba telah hadir di aula sekolah' yang benar adalah ....",
+    "p": [
+      "Lima belas orang peserta lomba telah hadir di aula sekolah.",
+      "15 (lima belas) orang peserta lomba telah hadir di aula sekolah.",
+      "Sebanyak lima belas orang peserta lomba telah hadir di aula sekolah.",
+      "Telah hadir 15 orang peserta lomba di aula sekolah."
+    ],
+    "b": 0,
+    "bahas": "Bilangan pada awal kalimat harus ditulis dengan huruf (Lima belas)."
+  },
+  {
+    "q": "Kalimat di bawah ini yang merupakan kalimat LARANGAN yang sering dipasang di ruang museum atau perpustakaan adalah ....",
+    "p": [
+      "Dilarang menyentuh benda-benda koleksi bersejarah di dalam lemari kaca!",
+      "Silakan mengisi buku tamu sebelum memasuki ruang pameran!",
+      "Museum dibuka mulai pukul 08.00 hingga 15.00 WIB.",
+      "Apakah Anda sudah membeli tiket masuk museum?"
+    ],
+    "b": 0,
+    "bahas": "Kata 'Dilarang' menyatakan larangan atau aturan agar pengunjung tidak merusak koleksi museum."
+  },
+  {
+    "q": "Kalimat perintah berikut yang disampaikan secara halus dan santun (kalimat permintaan/persilakan) adalah ....",
+    "p": [
+      "Mohon matikan nada dering ponsel Anda selama berada di dalam ruang pameran.",
+      "Cepat matikan ponselmu sekarang juga!",
+      "Jangan berisik di sini!",
+      "Tutup pintu itu keras-keras!"
+    ],
+    "b": 0,
+    "bahas": "Kata 'Mohon' atau 'Silakan' menjadikan kalimat perintah terasa sopan dan menghargai pengunjung."
+  },
+  {
+    "q": "Teks pengumuman yang dipasang di papan informasi sekolah bertujuan untuk ....",
+    "p": [
+      "Menyampaikan informasi penting secara resmi kepada banyak orang agar diketahui bersama",
+      "Menceritakan dongeng sebelum tidur",
+      "Menjual barang dagangan secara paksa",
+      "Menyembunyikan jadwal kegiatan sekolah"
+    ],
+    "b": 0,
+    "bahas": "Pengumuman berisi pemberitahuan resmi yang ditujukan kepada khalayak ramai."
+  },
+  {
+    "q": "Unsur penting yang wajib tercantum di dalam sebuah surat pengumuman kegiatan wisata edukasi sekolah adalah ....",
+    "p": [
+      "Judul pengumuman, ditujukan kepada siapa, isi informasi (hari, tanggal, waktu, tempat), dan pembuat pengumuman",
+      "Daftar nilai ulangan seluruh siswa",
+      "Resep cara memasak nasi goreng",
+      "Pantun jenaka empat bait"
+    ],
+    "b": 0,
+    "bahas": "Pengumuman yang lengkap memuat tujuan, waktu, tempat, isi kegiatan, dan penanggung jawab."
+  },
+  {
+    "q": "Bacalah kutipan pengumuman berikut!\n'Diberitahukan kepada seluruh siswa kelas V SD Negeri Seddur 1 bahwa kegiatan kunjungan edukasi ke Museum Keraton Sumenep akan dilaksanakan pada hari Sabtu, 14 Maret 2026, pukul 07.30 WIB. Siswa diharapkan memakai seragam batik sekolah dengan rapi.'\n\nSiapakah sasaran pembaca pengumuman di atas?",
+    "p": [
+      "Seluruh siswa kelas V SD Negeri Seddur 1",
+      "Seluruh wali murid kelas I",
+      "Masyarakat umum di sekitar pasar",
+      "Pengurus perpustakaan daerah"
+    ],
+    "b": 0,
+    "bahas": "Pada kalimat pertama jelas tertulis ditujukan kepada seluruh siswa kelas V SD Negeri Seddur 1."
+  },
+  {
+    "q": "Pakaian yang wajib dikenakan siswa saat mengikuti kegiatan kunjungan edukasi berdasarkan pengumuman di atas adalah ....",
+    "p": ["Seragam batik sekolah", "Pakaian olahraga", "Seragam pramuka", "Pakaian bebas sehari-hari"],
+    "b": 0,
+    "bahas": "Pada kalimat terakhir disebutkan siswa diharapkan memakai seragam batik sekolah."
+  },
+  {
+    "q": "Sinonim (persamaan kata) dari kata 'edukasi' pada frasa 'kunjungan edukasi' adalah ....",
+    "p": ["Pendidikan / pembelajaran", "Permainan", "Perdagangan", "Olahraga"],
+    "b": 0,
+    "bahas": "Edukasi bermakna pendidikan atau kegiatan belajar."
+  },
+  {
+    "q": "Antonim (lawan kata) dari kata 'modern' pada kalimat 'Teknologi komunikasi modern memudahkan manusia bertukar kabar' adalah ....",
+    "p": ["Tradisional / kuno", "Canggih", "Maju", "Baru"],
+    "b": 0,
+    "bahas": "Lawan kata dari modern adalah tradisional atau kuno."
+  },
+  {
+    "q": "Imbuhan 'ter-' pada kalimat 'Pintu gerbang museum itu terbuka lebar sejak pukul delapan pagi' bermakna ....",
+    "p": [
+      "Menyatakan keadaan yang sudah terjadi",
+      "Menyatakan paling atau superlatif",
+      "Menyatakan perbuatan tidak sengaja",
+      "Menyatakan kemampuan"
+    ],
+    "b": 0,
+    "bahas": "Kata 'terbuka' menyatakan keadaan pintu yang sudah dalam kondisi buka."
+  },
+  {
+    "q": "Manfaat mempelajari cara membaca iklan, pengumuman, dan informasi digital secara kritis bagi siswa kelas 5 SD adalah ....",
+    "p": [
+      "Agar dapat membedakan informasi fakta yang benar dengan berita bohong (hoaks) serta tidak mudah tertipu",
+      "Agar selalu membeli semua barang yang diiklankan di internet",
+      "Agar bisa menyebarkan berita tanpa memeriksa kebenarannya",
+      "Agar menghabiskan waktu bermain ponsel sepanjang hari"
+    ],
+    "b": 0,
+    "bahas": "Kemampuan literasi informasi melindungi pembaca dari hoaks dan iklan menyesatkan."
+  }
+]);
+
+window.tambahPaketUjian("5", "pai", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#15803d'>TOLERANSI DALAM ISLAM</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Q.S. Ali Imran: 64 &amp; Al-Baqarah: 256</text></svg>",
+    "q": "Perhatikan kartu ayat Al-Qur'an pada gambar di atas! Makna utama ungkapan 'kalimatun sawa' dalam Surah Ali Imran ayat 64 adalah mengajak umat manusia untuk mencari ....",
+    "p": [
+      "Titik temu (kalimat kesepakatan bersama) dalam menyembah Allah Yang Maha Esa tanpa menyekutukan-Nya",
+      "Perbedaan pendapat agar diperdebatkan terus-menerus",
+      "Keuntungan perdagangan antarnegara",
+      "Pemenang dalam perlombaan"
+    ],
+    "b": 0,
+    "bahas": "Kalimatun sawa berarti kalimat kesepakatan atau titik temu untuk hidup rukun dan bertauhid hanya kepada Allah Swt."
+  },
+  {
+    "q": "Dalam Surah Al-Baqarah ayat 256 terdapat potongan ayat terkenal 'La ikraha fid-din' yang memiliki arti ....",
+    "p": [
+      "Tidak ada paksaan dalam (menganut) agama",
+      "Bagi kalian agama kalian dan bagiku agamaku",
+      "Sesungguhnya orang-orang mukmin itu bersaudara",
+      "Bertolong-tolonganlah kamu dalam kebaikan"
+    ],
+    "b": 0,
+    "bahas": "'La ikraha fid-din' menegaskan bahwa Islam menjunjung tinggi kebebasan beragama tanpa paksaan."
+  },
+  {
+    "q": "Menurut Q.S. Al-Baqarah ayat 256, barang siapa yang ingkar kepada tagut (sesembahan selain Allah) dan beriman kepada Allah Swt., maka sesungguhnya ia telah berpegang pada ....",
+    "p": [
+      "Buhul tali yang amat kuat yang tidak akan putus (al-'urwatil-wusqa)",
+      "Harta benda yang melimpah ruah",
+      "Jabatan tinggi di dunia",
+      "Kekuatan fisik semata"
+    ],
+    "b": 0,
+    "bahas": "Keimanan kepada Allah Swt. diibaratkan berpegang pada tali yang sangat kokoh dan tidak akan putus."
+  },
+  {
+    "q": "Hukum bacaan tajwid pada lafaz 'fid-din' atau 'ar-rusydu' di mana huruf alif lam (ال) bertemu huruf syamsiah sehingga dibaca melebur ke dalam huruf berikutnya disebut ....",
+    "p": ["Alif lam syamsiah (idgham syamsi)", "Alif lam qamariah (izhar qamari)", "Iqlab", "Izhar halqi"],
+    "b": 0,
+    "bahas": "Alif lam syamsiah meleburkan bunyi lam ke dalam 14 huruf syamsiah seperti dal (د) dan ra (ر)."
+  },
+  {
+    "q": "Contoh penerapan ajaran Surah Ali Imran ayat 64 dan Surah Al-Baqarah ayat 256 dalam kehidupan bermasyarakat di Indonesia adalah ....",
+    "p": [
+      "Bekerja sama dalam kerja bakti sosial kemasyarakatan bersama tetangga berbeda agama tanpa mencampuri urusan ibadah masing-masing",
+      "Memaksa teman berbeda agama mengikuti ibadah kita",
+      "Menolak membantu tetangga yang terkena musibah karena berbeda keyakinan",
+      "Mengejek tata cara ibadah pemeluk agama lain"
+    ],
+    "b": 0,
+    "bahas": "Toleransi berarti bekerja sama dalam urusan sosial kemanusiaan serta saling menghormati kebebasan beribadah."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>IMAN KEPADA HARI AKHIR</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Rukun Iman ke-5 • Kiamat Sugra &amp; Kubra</text></svg>",
+    "q": "Perhatikan kartu rukun iman pada gambar di atas! Meyakini dengan sepenuh hati bahwa seluruh alam semesta beserta isinya akan hancur binasa dan berganti dengan kehidupan akhirat yang kekal merupakan rukun iman ke-....",
+    "p": ["Empat", "Lima", "Enam", "Tiga"],
+    "b": 1,
+    "bahas": "Iman kepada Hari Akhir (Hari Kiamat) adalah rukun iman yang kelima."
+  },
+  {
+    "q": "Peristiwa berakhirnya kehidupan sebagian makhluk di bumi yang sering terjadi di sekitar kita seperti meninggalnya seseorang, gempa bumi, banjir bandang, dan gunung meletus disebut ....",
+    "p": ["Kiamat sugra (kiamat kecil)", "Kiamat kubra (kiamat besar)", "Yaumul Ba'ats", "Yaumul Mizan"],
+    "b": 0,
+    "bahas": "Kiamat sugra adalah kehancuran kecil yang terjadi setiap saat sebagai peringatan agar manusia selalu ingat kepada Allah Swt."
+  },
+  {
+    "q": "Peristiwa hancurnya seluruh alam semesta secara total setelah Malaikat Israfil meniup sangkakala yang pertama disebut ....",
+    "p": ["Kiamat kubra (kiamat besar)", "Kiamat sugra (kiamat kecil)", "Alam barzakh", "Nuzulul Qur'an"],
+    "b": 0,
+    "bahas": "Kiamat kubra adalah kehancuran menyeluruh seluruh jagat raya yang waktunya hanya diketahui oleh Allah Swt."
+  },
+  {
+    "q": "Alam penantian yang membatasi antara kehidupan dunia dan kehidupan akhirat setelah manusia meninggal dunia disebut alam ....",
+    "p": ["Barzakh (alam kubur)", "Mahsyar", "Arham", "Dunia"],
+    "b": 0,
+    "bahas": "Alam barzakh adalah alam kubur tempat manusia menanti datangnya hari kebangkitan."
+  },
+  {
+    "q": "Hari dibangkitkannya seluruh manusia dari alam kubur setelah Malaikat Israfil meniup sangkakala yang kedua disebut ....",
+    "p": ["Yaumul Ba'ats", "Yaumul Mahsyar", "Yaumul Hisab", "Yaumul Mizan"],
+    "b": 0,
+    "bahas": "Yaumul Ba'ats artinya hari kebangkitan seluruh manusia dari kubur."
+  },
+  {
+    "q": "Padang luas tempat dikumpulkannya seluruh umat manusia sejak zaman Nabi Adam a.s. hingga manusia terakhir setelah dibangkitkan dari kubur disebut ....",
+    "p": ["Padang Mahsyar (Yaumul Mahsyar)", "Bukit Sinai", "Gua Hira", "Lembah Mina"],
+    "b": 0,
+    "bahas": "Yaumul Mahsyar adalah hari berkumpulnya seluruh manusia di Padang Mahsyar untuk menerima catatan amal."
+  },
+  {
+    "q": "Hari diperhitungkannya seluruh amal perbuatan manusia selama hidup di dunia secara teliti dan adil oleh Allah Swt. disebut ....",
+    "p": ["Yaumul Hisab", "Yaumul Ba'ats", "Yaumul Qiyamah", "Yaumul Milad"],
+    "b": 0,
+    "bahas": "Yaumul Hisab adalah hari perhitungan amal baik dan buruk manusia."
+  },
+  {
+    "q": "Hari ditimbangnya seluruh amal kebaikan dan amal keburukan manusia dengan timbangan keadilan Allah Swt. disebut ....",
+    "p": ["Yaumul Mizan", "Yaumul Mahsyar", "Yaumul Ba'ats", "Yaumul Fath"],
+    "b": 0,
+    "bahas": "Yaumul Mizan adalah hari penimbangan amal; barang siapa berat timbangan kebaikannya maka ia akan masuk surga."
+  },
+  {
+    "q": "Surah dalam Al-Qur'an yang secara khusus menggambarkan dahsyatnya peristiwa hari kiamat ketika bumi diguncangkan dengan guncangan yang dahsyat adalah Surah ....",
+    "p": ["Az-Zalzalah", "Al-Kautsar", "Al-Ikhlas", "Al-Fil"],
+    "b": 0,
+    "bahas": "Surah Az-Zalzalah (artinya Keguncangan) menjelaskan peristiwa guncangan bumi pada hari kiamat serta balasan amal sekecil apa pun."
+  },
+  {
+    "q": "Dalam Q.S. Az-Zalzalah ayat 7–8 dijelaskan bahwa barang siapa mengerjakan kebaikan seberat zarrah (biji sawi yang sangat kecil) niscaya dia akan melihat balasannya, dan barang siapa mengerjakan kejahatan seberat zarrah pun niscaya dia akan ....",
+    "p": [
+      "Melihat balasannya pula",
+      "Diabaikan begitu saja",
+      "Tidak dicatat oleh malaikat",
+      "Langsung dihapus tanpa hisab"
+    ],
+    "b": 0,
+    "bahas": "Setiap amal perbuatan sekecil apa pun akan mendapatkan balasan yang setimpal dari Allah Swt."
+  },
+  {
+    "q": "Gambaran keadaan gunung-gunung pada hari kiamat menurut Surah Al-Qari'ah ayat 5 adalah seperti ....",
+    "p": [
+      "Bulu-bulu yang dihambur-hamburkan (kal-'ihnil-manfusy)",
+      "Batu karang yang kokoh berdiri",
+      "Pohon-pohon yang rimbun berbuah",
+      "Air laut yang tenang membeku"
+    ],
+    "b": 0,
+    "bahas": "'Wa takunul-jibalu kal-'ihnil-manfusy' artinya dan gunung-gunung adalah seperti bulu yang dihambur-hamburkan."
+  },
+  {
+    "q": "Siapakah yang mengetahui secara pasti kapan terjadinya Hari Kiamat Kubra?",
+    "p": [
+      "Hanya Allah Swt. semata yang mengetahuinya",
+      "Para ilmuwan dan ahli astronomi",
+      "Malaikat Jibril dan Israfil",
+      "Para nabi dan rasul"
+    ],
+    "b": 0,
+    "bahas": "Kapan datangnya hari kiamat adalah rahasia mutlak Allah Swt. yang tidak diberitahukan kepada malaikat maupun nabi."
+  },
+  {
+    "q": "Salah satu tanda kecil semakin dekatnya hari kiamat yang dapat kita saksikan dalam kehidupan manusia adalah ....",
+    "p": [
+      "Ilmu agama banyak diabaikan, banyak terjadi bencana alam, dan amanah sering disia-siakan",
+      "Terbitnya matahari dari arah barat",
+      "Turunnya Nabi Isa a.s. ke bumi",
+      "Munculnya Dajjal"
+    ],
+    "b": 0,
+    "bahas": "Tanda-tanda kecil kiamat antara lain berkurangnya ilmu agama, merebaknya kemaksiatan, dan banyaknya bencana."
+  },
+  {
+    "q": "Perilaku sehari-hari yang mencerminkan keimanan kepada Hari Akhir bagi siswa kelas 5 SD adalah ....",
+    "p": [
+      "Rajin mengerjakan salat lima waktu, berbakti kepada orang tua, jujur, dan gemar bersedekah",
+      "Menunda-nunda salat hingga habis waktunya",
+      "Hanya memikirkan kesenangan bermain tanpa belajar dan beribadah",
+      "Suka menyakiti perasaan teman di sekolah"
+    ],
+    "b": 0,
+    "bahas": "Iman kepada hari akhir memotivasi seorang muslim untuk mengumpulkan bekal amal saleh sebanyak mungkin."
+  },
+  {
+    "q": "Ketika mendengar berita duka ada tetangga atau kerabat yang meninggal dunia (kiamat sugra), ucapan istirja yang disunahkan untuk dibaca umat Islam adalah ....",
+    "p": [
+      "Inna lillahi wa inna ilaihi raji'un",
+      "Alhamdulillahi rabbil 'alamin",
+      "Subhanallah walhamdulillah",
+      "Allahu akbar kabira"
+    ],
+    "b": 0,
+    "bahas": "'Inna lillahi wa inna ilaihi raji'un' artinya Sesungguhnya kami milik Allah dan kepada-Nyalah kami kembali."
+  },
+  {
+    "q": "Amal perbuatan manusia yang pahalanya terus mengalir meskipun orang tersebut sudah meninggal dunia disebut ....",
+    "p": [
+      "Amal jariyah (sedekah jariyah, ilmu yang bermanfaat, dan doa anak saleh)",
+      "Amal musiman",
+      "Amal rahasia",
+      "Amal harian saja"
+    ],
+    "b": 0,
+    "bahas": "Sedekah jariyah, ilmu yang bermanfaat, dan anak saleh yang mendoakan orang tuanya tidak terputus pahalanya."
+  },
+  {
+    "q": "Tempat pembalasan terakhir di akhirat yang penuh kenikmatan abadi bagi orang-orang yang beriman dan bertakwa kepada Allah Swt. adalah ....",
+    "p": ["Surga (Jannah)", "Neraka (Jahannam)", "Alam Barzakh", "Padang Mahsyar"],
+    "b": 0,
+    "bahas": "Surga disediakan Allah Swt. sebagai balasan bagi hamba-Nya yang beriman dan beramal saleh."
+  },
+  {
+    "q": "Dalam Q.S. Ali Imran ayat 64, umat Islam diperintahkan untuk mengajak Ahli Kitab agar tidak menjadikan sesama manusia sebagai ....",
+    "p": [
+      "Tuhan selain Allah Swt.",
+      "Tetangga yang saling membantu",
+      "Teman dalam berdagang",
+      "Saudara sebangsa"
+    ],
+    "b": 0,
+    "bahas": "'Wa la yattakhiza ba'duna ba'dan arbabam min dunillah' (dan tidak pula sebagian kita menjadikan sebagian yang lain sebagai tuhan selain Allah)."
+  },
+  {
+    "q": "Sikap yang paling tepat ketika kita melihat berita bencana alam (seperti banjir atau gempa bumi) menimpa saudara kita di daerah lain adalah ....",
+    "p": [
+      "Mendoakan keselamatan mereka dan menyisihkan sebagian uang jajan untuk membantu korban bencana",
+      "Menjadikan berita musibah sebagai bahan bercandaan",
+      "Bersikap acuh tak acuh karena jauh dari rumah kita",
+      "Menyebarkan berita bohong yang menakut-nakuti warga"
+    ],
+    "b": 0,
+    "bahas": "Kepedulian sosial dan membantu korban bencana merupakan wujud iman dan kasih sayang sesama manusia."
+  },
+  {
+    "q": "Hikmah terbesar beriman kepada Hari Akhir bagi kehidupan manusia di dunia adalah ....",
+    "p": [
+      "Menumbuhkan rasa tanggung jawab atas setiap perbuatan sehingga hati-hati agar tidak berbuat dosa",
+      "Membuat manusia takut bekerja dan belajar",
+      "Menjadikan manusia malas menolong sesama",
+      "Membuat hidup menjadi putus asa"
+    ],
+    "b": 0,
+    "bahas": "Keyakinan akan adanya pembalasan di akhirat mendorong manusia disiplin beribadah, jujur, dan berbuat baik."
+  }
+]);
+
+window.tambahPaketUjian("5", "pancasila", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>KERAGAMAN BUDAYA</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Kekayaan Bangsa Indonesia</text></svg>",
+    "q": "Perhatikan kartu informasi pada gambar di atas! Indonesia memiliki ribuan suku bangsa dan ratusan bahasa daerah yang tersebar dari Sabang sampai Merauke. Semboyan pemersatu bangsa Indonesia di tengah keberagaman tersebut adalah ....",
+    "p": [
+      "Bhinneka Tunggal Ika",
+      "Tut Wuri Handayani",
+      "Ing Madya Mangun Karsa",
+      "Satyaku Kudarmakan"
+    ],
+    "b": 0,
+    "bahas": "Bhinneka Tunggal Ika berarti berbeda-beda tetapi tetap satu jua."
+  },
+  {
+    "q": "Faktor utama yang menyebabkan terjadinya keberagaman suku bangsa dan budaya di Indonesia adalah ....",
+    "p": [
+      "Kondisi geografis negara kepulauan, perbedaan kondisi alam (pesisir dan pegunungan), serta sejarah perkembangan masyarakat",
+      "Seluruh penduduk tinggal di satu dataran yang sama persis",
+      "Indonesia tidak memiliki wilayah lautan",
+      "Semua daerah memiliki mata pencaharian yang seragam"
+    ],
+    "b": 0,
+    "bahas": "Wilayah Indonesia yang berbentuk kepulauan dengan kondisi alam beragam melahirkan adaptasi budaya yang unik di tiap daerah."
+  },
+  {
+    "q": "Tradisi perlombaan pacuan sapi khas Pulau Madura yang diiringi musik saronèn dan digelar setiap tahun sebagai ungkapan syukur serta hiburan rakyat disebut ....",
+    "p": ["Karapan Sapi", "Kasada Bromo", "Ngaben", "Sekaten"],
+    "b": 0,
+    "bahas": "Karapan Sapi adalah tradisi pacuan sapi ikonik masyarakat Pulau Madura."
+  },
+  {
+    "q": "Upacara adat masyarakat Suku Tengger di kawasan Gunung Bromo, Jawa Timur, dengan melarung hasil bumi ke kawah gunung sebagai wujud syukur kepada Tuhan disebut upacara ....",
+    "p": ["Yadnya Kasada", "Rambu Solo", "Tabuik", "Lompat Batu"],
+    "b": 0,
+    "bahas": "Yadnya Kasada adalah upacara adat tahunan masyarakat Tengger di Gunung Bromo."
+  },
+  {
+    "q": "Tradisi Lompat Batu (Fahombo) yang menguji ketangkasan dan kedewasaan pemuda dengan melompati susunan batu setinggi dua meter berasal dari Pulau ....",
+    "p": ["Nias, Sumatera Utara", "Bali", "Lombok", "Madura"],
+    "b": 0,
+    "bahas": "Tradisi Lompat Batu (Fahombo) berasal dari Pulau Nias, Sumatera Utara."
+  },
+  {
+    "q": "Kesenian pertunjukan rakyat khas Jawa Timur yang menampilkan cerita sejarah atau legenda dengan iringan gamelan dan diawali tarian Remo serta lawakan jenaka disebut ....",
+    "p": ["Ludruk", "Lenong", "Wayang Golek", "Mamanda"],
+    "b": 0,
+    "bahas": "Ludruk adalah seni teater tradisional khas Jawa Timur, sedangkan Lenong berasal dari Betawi (DKI Jakarta)."
+  },
+  {
+    "q": "Kesenian Reog yang terkenal dengan topeng kepala singa berhiaskan bulu merak raksasa (Dadak Merak) berasal dari kabupaten di Jawa Timur yaitu ....",
+    "p": ["Ponorogo", "Banyuwangi", "Pamekasan", "Malang"],
+    "b": 0,
+    "bahas": "Reog Ponorogo berasal dari Kabupaten Ponorogo, Jawa Timur."
+  },
+  {
+    "q": "Rumah adat tradisional khas Suku Banjar di Kalimantan Selatan yang memiliki atap menjulang tinggi menyerupai tanduk atau perahu disebut Rumah ....",
+    "p": ["Bubungan Tinggi", "Gadang", "Honai", "Joglo"],
+    "b": 0,
+    "bahas": "Rumah Bubungan Tinggi adalah rumah adat tradisional masyarakat Banjar, Kalimantan Selatan."
+  },
+  {
+    "q": "Pakaian adat tradisional dari Provinsi Sumatera Utara yang berupa kain tenun khas dengan motif garis-garis dan memiliki makna kasih sayang serta doa restu disebut kain ....",
+    "p": ["Ulos", "Songket", "Batik", "Tenun Ikat"],
+    "b": 0,
+    "bahas": "Kain Ulos merupakan kain tenun adat khas masyarakat Batak, Sumatera Utara."
+  },
+  {
+    "q": "Alat musik tradisional dari Provinsi Papua dan Maluku yang berbentuk tabung kayu berukir dengan salah satu ujung tertutup kulit hewan dan dimainkan dengan cara dipukul adalah ....",
+    "p": ["Tifa", "Angklung", "Sasando", "Gamelan"],
+    "b": 0,
+    "bahas": "Tifa adalah alat musik pukul tradisional khas Papua dan Maluku."
+  },
+  {
+    "q": "Makanan pokok tradisional masyarakat Maluku dan Papua yang terbuat dari olahan tepung sagu berbentuk bubur kental dan disajikan bersama ikan kuah kuning adalah ....",
+    "p": ["Papeda", "Rendang", "Gudeg", "Kerak Telor"],
+    "b": 0,
+    "bahas": "Papeda adalah makanan khas Papua dan Maluku yang berbahan dasar sagu."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>WARISAN BUDAYA DUNIA</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Batik • Wayang • Angklung • Gamelan</text></svg>",
+    "q": "Perhatikan kartu informasi pada gambar di atas! Salah satu warisan budaya asli Indonesia yang telah diakui oleh UNESCO sebagai Warisan Budaya Takbenda Dunia dan diperingati setiap tanggal 2 Oktober adalah ....",
+    "p": ["Batik Indonesia", "Sepatu kulit", "Kertas koran", "Jaket jeans"],
+    "b": 0,
+    "bahas": "Batik Indonesia ditetapkan UNESCO sebagai Warisan Budaya Takbenda pada 2 Oktober 2009 sehingga diperingati sebagai Hari Batik Nasional."
+  },
+  {
+    "q": "Sikap yang paling tepat untuk melestarikan budaya daerah di tengah arus globalisasi dan masuknya budaya asing saat ini adalah ....",
+    "p": [
+      "Mempelajari budaya lokal, menyaring budaya asing yang masuk sesuai nilai Pancasila, dan bangga terhadap karya anak bangsa",
+      "Menolak semua kemajuan ilmu pengetahuan dan teknologi modern",
+      "Meninggalkan kesenian daerah karena dianggap kuno",
+      "Meniru seluruh gaya hidup asing tanpa menyaringnya"
+    ],
+    "b": 0,
+    "bahas": "Kita harus terbuka terhadap kemajuan ilmu pengetahuan namun tetap teguh melestarikan jati diri budaya Nusantara."
+  },
+  {
+    "q": "Ketika di kelas terdapat siswa yang berasal dari berbagai suku bangsa dan agama, perilaku yang mencerminkan sila ketiga Pancasila (Persatuan Indonesia) adalah ....",
+    "p": [
+      "Menjalin persahabatan tanpa membeda-bedakan latar belakang suku maupun daerah asal",
+      "Membentuk kelompok bermain khusus satu suku saja",
+      "Mengejek logat bahasa daerah teman yang baru pindah",
+      "Merendahkan makanan khas daerah teman"
+    ],
+    "b": 0,
+    "bahas": "Mengutamakan persatuan dan persahabatan di atas perbedaan suku merupakan pengamalan sila ketiga Pancasila."
+  },
+  {
+    "q": "Contoh tindakan nyata siswa kelas 5 SD dalam melestarikan bahasa daerah agar tidak mengalami kepunahan adalah ....",
+    "p": [
+      "Menggunakan bahasa daerah dengan tata krama (ondhâgghâ bhâsa) yang baik di lingkungan keluarga dan mengikuti pelajaran muatan lokal di sekolah",
+      "Hanya mau berbicara menggunakan bahasa asing di rumah",
+      "Malu mengucapkan sapaan sopan dalam bahasa daerah",
+      "Mengejek teman yang fasih berbahasa daerah"
+    ],
+    "b": 0,
+    "bahas": "Membiasakan penggunaan bahasa daerah yang santun menjaga kelestarian bahasa ibu."
+  },
+  {
+    "q": "Keragaman mata pencaharian penduduk di Indonesia (seperti petani di dataran rendah, nelayan di pesisir, dan pekebun teh di pegunungan) menunjukkan bahwa antardaerah saling ....",
+    "p": [
+      "Membutuhkan dan melengkapi kebutuhan hidup satu sama lain",
+      "Bersaing untuk saling menjatuhkan",
+      "Dapat hidup sendiri tanpa bantuan daerah lain",
+      "Memiliki hasil bumi yang sama persis"
+    ],
+    "b": 0,
+    "bahas": "Perbedaan hasil sumber daya alam membuat masyarakat pesisir dan pegunungan saling bekerja sama memenuhi kebutuhan pangan."
+  },
+  {
+    "q": "Tradisi gotong royong masyarakat Indonesia yang masih lestari di berbagai daerah (seperti sambatan di Jawa, mapalus di Minahasa, dan ngayah di Bali) memiliki nilai luhur berupa ....",
+    "p": [
+      "Kebersamaan, tolong-menolong tanpa pamrih, dan kepedulian sosial",
+      "Mengharapkan imbalan uang yang besar",
+      "Persaingan antarwarga kampung",
+      "Sikap mementingkan diri sendiri"
+    ],
+    "b": 0,
+    "bahas": "Gotong royong adalah kepribadian asli bangsa Indonesia yang mengutamakan kepentingan bersama."
+  },
+  {
+    "q": "Apabila sekolah mengadakan kegiatan Festival Budaya Nusantara, sikap yang sebaiknya ditunjukkan oleh seluruh siswa adalah ....",
+    "p": [
+      "Berpartisipasi aktif dengan gembira, saling mendukung penampilan antarkelas, dan menjaga ketertiban acara",
+      "Menolak tampil jika tidak mendapatkan kostum paling mahal",
+      "Mengejek penampilan tarian daerah kelas lain",
+      "Membuat kegaduhan saat teman sedang tampil di panggung"
+    ],
+    "b": 0,
+    "bahas": "Antusiasme dan saling menghargai menyukseskan pelestarian budaya di sekolah."
+  },
+  {
+    "q": "Dampak negatif apabila masyarakat tidak memiliki sikap toleransi terhadap keberagaman budaya dan agama di Indonesia adalah ....",
+    "p": [
+      "Munculnya prasangka, perselisihan, dan perpecahan yang mengancam keutuhan NKRI",
+      "Terciptanya kedamaian dan kerukunan nasional",
+      "Pembangunan negara berjalan semakin cepat",
+      "Persatuan bangsa menjadi semakin kokoh"
+    ],
+    "b": 0,
+    "bahas": "Intoleransi memicu konflik sosial dan melemahkan persatuan bangsa."
+  },
+  {
+    "q": "Salah satu cara mengenalkan kekayaan budaya Indonesia kepada wisatawan atau teman dari luar negeri adalah ....",
+    "p": [
+      "Mempromosikan keindahan batik, kuliner tradisional, dan keramahan masyarakat Indonesia dengan bangga",
+      "Menyembunyikan kesenian daerah agar tidak dilihat orang lain",
+      "Mengakui budaya negara lain sebagai budaya Indonesia",
+      "Bersikap tidak ramah terhadap pengunjung museum"
+    ],
+    "b": 0,
+    "bahas": "Memperkenalkan budaya asli Nusantara dengan santun meningkatkan kebanggaan nasional."
+  },
+  {
+    "q": "Dalam musyawarah kelas untuk memilih tarian daerah yang akan ditampilkan pada acara perpisahan sekolah, keputusan akhir diambil berdasarkan ....",
+    "p": [
+      "Mufakat bersama seluruh anggota kelas dengan lapang dada",
+      "Keinginan satu anak yang paling keras suaranya",
+      "Keputusan sepihak tanpa diskusi",
+      "Pertengkaran antarkelompok"
+    ],
+    "b": 0,
+    "bahas": "Musyawarah mufakat (sila keempat) menjamin keputusan diterima dengan ikhlas oleh semua pihak."
+  },
+  {
+    "q": "Semboyan 'Bhinneka Tunggal Ika' berasal dari kutipan kitab Sutasoma yang ditulis pada masa Kerajaan Majapahit oleh ....",
+    "p": ["Mpu Tantular", "Mpu Prapanca", "Mpu Gandring", "Mpu Sedah"],
+    "b": 0,
+    "bahas": "Mpu Tantular menuliskan kalimat 'Bhinneka Tunggal Ika Tan Hana Dharma Mangrwa' dalam kitab Sutasoma."
+  },
+  {
+    "q": "Perilaku adil terhadap teman di sekolah tanpa memandang latar belakang suku, agama, maupun status ekonomi sesuai dengan pengamalan Pancasila sila ke-....",
+    "p": ["Kelima", "Kesatu", "Ketiga", "Keempat"],
+    "b": 0,
+    "bahas": "Bersikap adil dan menghormati hak setiap orang merupakan pengamalan sila kelima Pancasila."
+  },
+  {
+    "q": "Kesimpulan yang tepat mengenai posisi keragaman budaya bagi Negara Kesatuan Republik Indonesia adalah ....",
+    "p": [
+      "Keragaman budaya daerah merupakan modal sosial dan identitas luhur bangsa yang harus dijaga bersama",
+      "Keragaman budaya harus diseragamkan menjadi satu budaya tunggal",
+      "Budaya daerah hanya penting bagi masyarakat desa",
+      "Pelestarian budaya hanya menjadi tugas seniman saja"
+    ],
+    "b": 0,
+    "bahas": "Seluruh warga negara Indonesia berkewajiban menjaga dan melestarikan keberagaman budaya Nusantara."
+  },
+  {
+    "q": "Wujud rasa syukur kepada Tuhan Yang Maha Esa atas keberagaman bangsa Indonesia yang rukun dan damai adalah ....",
+    "p": [
+      "Menjaga persaudaraan antarsesama anak bangsa dan rajin belajar untuk memajukan Indonesia",
+      "Merusak fasilitas umum di taman kota",
+      "Menyebarkan ujaran kebencian terhadap suku lain",
+      "Malas mengikuti upacara bendera di sekolah"
+    ],
+    "b": 0,
+    "bahas": "Menjaga persatuan dan berkontribusi positif bagi bangsa adalah wujud syukur atas nikmat kemerdekaan dan keberagaman."
+  }
+]);
+
+window.tambahPaketUjian("5", "bing", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>PARTS OF OUR BODY</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Eyes • Ears • Nose • Hands • Legs</text></svg>",
+    "q": "Look at the body parts card above! We use our ... to see beautiful scenery and read books.",
+    "p": ["eyes", "ears", "nose", "mouth"],
+    "b": 0,
+    "bahas": "Mata (eyes) berfungsi untuk melihat (to see)."
+  },
+  {
+    "q": "Aisyah uses her ... to listen to the teacher's explanation in the classroom.",
+    "p": ["ears", "eyes", "legs", "fingers"],
+    "b": 0,
+    "bahas": "Telinga (ears) digunakan untuk mendengarkan (to listen)."
+  },
+  {
+    "q": "We use our ... to smell the fragrant flowers in the garden.",
+    "p": ["nose", "mouth", "hair", "knee"],
+    "b": 0,
+    "bahas": "Hidung (nose) berfungsi untuk mencium bau (to smell)."
+  },
+  {
+    "q": "Made uses his ... to kick the ball and run fast on the field.",
+    "p": ["legs and feet", "hands and fingers", "ears and eyes", "neck and shoulders"],
+    "b": 0,
+    "bahas": "Kaki (legs and feet) digunakan untuk menendang bola dan berlari."
+  },
+  {
+    "q": "What do we use to hold a pencil and write in our notebook?",
+    "p": ["Our hand and fingers", "Our knees", "Our elbows", "Our toes"],
+    "b": 0,
+    "bahas": "Tangan dan jari-jari (hand and fingers) digunakan untuk memegang pensil dan menulis."
+  },
+  {
+    "q": "We chew (mengunyah) our food using our ... before swallowing it.",
+    "p": ["teeth", "nose", "ears", "eyebrows"],
+    "b": 0,
+    "bahas": "Gigi (teeth) berfungsi untuk mengunyah makanan."
+  },
+  {
+    "q": "What is 'lutut dan siku' in English?",
+    "p": [
+      "Knee and elbow",
+      "Shoulder and neck",
+      "Cheek and chin",
+      "Forehead and hair"
+    ],
+    "b": 0,
+    "bahas": "Lutut = knee, siku = elbow."
+  },
+  {
+    "q": "What is 'bahu dan leher' in English?",
+    "p": [
+      "Shoulder and neck",
+      "Stomach and chest",
+      "Finger and thumb",
+      "Foot and toe"
+    ],
+    "b": 0,
+    "bahas": "Bahu = shoulder, leher = neck."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>COMPARATIVE DEGREE</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Adjective + -er + than (Lebih ... daripada)</text></svg>",
+    "q": "Look at the grammar rule above! Joshua is 145 cm tall, and Udin is 138 cm tall. Joshua is ... than Udin.",
+    "p": ["taller", "shorter", "smaller", "younger"],
+    "b": 0,
+    "bahas": "145 cm lebih tinggi daripada 138 cm, sehingga menggunakan bentuk komparatif 'taller than'."
+  },
+  {
+    "q": "An elephant is ... than a rabbit.",
+    "p": ["bigger", "smaller", "thinner", "shorter"],
+    "b": 0,
+    "bahas": "Gajah lebih besar daripada kelinci: 'bigger than'."
+  },
+  {
+    "q": "A turtle walks ... than a horse.",
+    "p": ["slower", "faster", "taller", "longer"],
+    "b": 0,
+    "bahas": "Kura-kura berjalan lebih lambat daripada kuda: 'slower than'."
+  },
+  {
+    "q": "A train is ... than a bicycle.",
+    "p": ["longer and faster", "shorter and slower", "smaller", "lighter"],
+    "b": 0,
+    "bahas": "Kereta api lebih panjang dan lebih cepat daripada sepeda: 'longer and faster'."
+  },
+  {
+    "q": "My grandmother is 70 years old, and my mother is 38 years old. My grandmother is ... than my mother.",
+    "p": ["older", "younger", "newer", "smaller"],
+    "b": 0,
+    "bahas": "Nenek lebih tua daripada ibu: 'older than'."
+  },
+  {
+    "q": "Cici is 10 years old, and her little brother is 4 years old. Her little brother is ... than Cici.",
+    "p": ["younger", "older", "taller", "bigger"],
+    "b": 0,
+    "bahas": "Adik laki-laki berusia 4 tahun lebih muda daripada Cici (10 tahun): 'younger than'."
+  },
+  {
+    "q": "A ruler (30 cm) is ... than a pencil (15 cm).",
+    "p": ["longer", "shorter", "fatter", "older"],
+    "b": 0,
+    "bahas": "30 cm lebih panjang daripada 15 cm: 'longer than'."
+  },
+  {
+    "q": "The giraffe is the ... animal in the zoo. It has a very long neck.",
+    "p": ["tallest", "taller", "shortest", "smallest"],
+    "b": 0,
+    "bahas": "Bentuk superlatif (paling tinggi) diawali 'the' dan diakhiri '-est': 'the tallest'."
+  },
+  {
+    "q": "The blue whale is the ... animal in the ocean.",
+    "p": ["biggest", "bigger", "smallest", "thinnest"],
+    "b": 0,
+    "bahas": "Paus biru adalah hewan paling besar di lautan: 'the biggest'."
+  },
+  {
+    "q": "A cheetah can run up to 110 km/hour. It is the ... land animal in the world.",
+    "p": ["fastest", "faster", "slowest", "heaviest"],
+    "b": 0,
+    "bahas": "Cheetah adalah hewan darat tercepat di dunia: 'the fastest'."
+  },
+  {
+    "q": "What is the comparative form of 'heavy' (berat)?",
+    "p": ["Heavier", "Heavyer", "More heavy", "Heaviest"],
+    "b": 0,
+    "bahas": "Kata sifat berakhiran huruf konsonan + y (heavy) berubah menjadi '-ier' (heavier)."
+  },
+  {
+    "q": "A stone (5 kg) is ... than a feather (5 grams).",
+    "p": ["heavier", "lighter", "softer", "smaller"],
+    "b": 0,
+    "bahas": "Batu lebih berat daripada bulu ayam: 'heavier than'."
+  },
+  {
+    "q": "How tall is Budi? He is 140 centimeters ....",
+    "p": ["tall", "long", "heavy", "old"],
+    "b": 0,
+    "bahas": "Untuk menyatakan tinggi badan seseorang digunakan '140 centimeters tall'."
+  },
+  {
+    "q": "Which sentence is grammatically CORRECT?",
+    "p": [
+      "A horse is faster than a goat.",
+      "A horse is fast than a goat.",
+      "A horse is fastest than a goat.",
+      "A horse is more fast than a goat."
+    ],
+    "b": 0,
+    "bahas": "Perbandingan dua hal menggunakan bentuk comparative '-er + than' (faster than)."
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'than - is - A - bigger - cat - mouse - a'",
+    "p": [
+      "A cat is bigger than a mouse.",
+      "A mouse is bigger than a cat.",
+      "Bigger than a mouse is a cat.",
+      "Is a cat bigger than a mouse."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat perbandingan yang logis dan tepat adalah 'A cat is bigger than a mouse.'"
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'nose - smell - our - We - with'",
+    "p": [
+      "We smell with our nose.",
+      "Our nose smell with we.",
+      "Smell we with our nose.",
+      "With our nose smell we."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat yang tepat adalah 'We smell with our nose.'"
+  },
+  {
+    "q": "'Jerapah lebih tinggi daripada kuda.' The English translation is ....",
+    "p": [
+      "A giraffe is taller than a horse.",
+      "A horse is taller than a giraffe.",
+      "A giraffe is shorter than a horse.",
+      "A giraffe is smaller than a horse."
+    ],
+    "b": 0,
+    "bahas": "Jerapah lebih tinggi daripada kuda = A giraffe is taller than a horse."
+  }
+]);
+
+window.tambahPaketUjian("5", "madura", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>CARAKAN MADHURÂ</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Aksara Ghâjâng &amp; Sandhângan</text></svg>",
+    "q": "Abâs informasi aksara daerah è ghâmbhâr attas! Bânnya'na aksara legena (aksara ghâjâng) pokok dâlem Carakan Madhurâ (ha na ca ra ka ... nga) bâdâ .... aksara.",
+    "p": ["18 aksara", "20 aksara", "22 aksara", "26 aksara"],
+    "b": 1,
+    "bahas": "Aksara ghâjâng pokok dâlem Carakan Madhurâ bâdâ 20 aksara."
+  },
+  {
+    "q": "Sandhângan sowara dâlem Carakan Madhurâ sè ngobâ monyè vokal 'a' dhâddhi 'i' (èbâdâ'aghi è attas aksara) èsebbhut ....",
+    "p": ["Cèthak / Wulu", "Soko", "Talèng", "Pèpèt"],
+    "b": 0,
+    "bahas": "Cèthak ngobâ monyè 'a' dhâddhi 'i', soko ngobâ dhâddhi 'u', talèng ngobâ dhâddhi 'è'."
+  },
+  {
+    "q": "Sandhângan sowara dâlem Carakan Madhurâ sè ngobâ monyè vokal 'a' dhâddhi 'u' (èbâdâ'aghi è bâbâna aksara) èsebbhut ....",
+    "p": ["Soko", "Layar", "Cecak", "Wignyan"],
+    "b": 0,
+    "bahas": "Soko ètolès è bâbâna aksara ka'angghuy ngobâ monyè dhâddhi 'u'."
+  },
+  {
+    "q": "Parèbhâsan Madhurâ 'Kèngèng bhâi ngakan nangkana, tapè jhâ' kèngèng ghettana' ngandung nasèhat sopajâ kita ....",
+    "p": [
+      "Tanggung jawab dâ' akibat dâri sabbhân kalakoan bân jhâ' ngalakonè parkara sè marogi dhibi'",
+      "Senneng ngakan buwâ nangka sabbhân arè",
+      "Ta' ollè nyèram buwâ è kebbhun",
+      "Senneng akompol sareng tatangghâ"
+    ],
+    "b": 0,
+    "bahas": "Parèbhâsan panèka ngèmodhi sopajâ ngastètè è dâlem ngalakonè kalakoan."
+  },
+  {
+    "q": "Parèbhâsan Madhurâ 'Abhântal ombâ' asapo' angèn' nodhuwâghi bâtek orèng Madhurâ sè ....",
+    "p": [
+      "Gagah bângal, tekun, bân pantang nyerah ngadhebbhi rintangan è tasè' maupun è perantauan",
+      "Senneng tèdung è pèngghir pantai",
+      "Takok ka ombâ' tasè'",
+      "Malas alako è sabâ"
+    ],
+    "b": 0,
+    "bahas": "Parèbhâsan panèka ngaghâmbhâraghi kabângalan nelayan sareng perantau Madhurâ."
+  },
+  {
+    "q": "Saloka Madhurâ 'Jhâ' ngokor bâjhâna orèng laèn ngangghuy bhâjâna dhibi'' artèna ....",
+    "p": [
+      "Jhâ' ghâmpang nyala'aghi otabâ abhândhingaghi kabâdâ'ânna orèng laèn kalabân okoran dhibi'",
+      "Kodhu mellè kalambhi anyar sabbhân bulan",
+      "Ngokor lanjhângnga mèjâ ngangghuy pangghâris",
+      "Senneng abhânto tatangghâ sè sossa"
+    ],
+    "b": 0,
+    "bahas": "Saloka panèka ngajhâri sikap bijaksana bân ngormadhi kabâdâ'ânna orèng laèn."
+  },
+  {
+    "q": "Bhâsa èngghi-bhunten (alos) dâri oca' 'nyaman / ènak' ka'angghuy orèng sè èhormadhi èngghi panèka ....",
+    "p": ["Sèdâ / Èca", "Dhâ'âr", "Ngunjuk", "Mèyos"],
+    "b": 0,
+    "bahas": "Nyaman/ènak bhâsa èngghi-bhuntenna 'èca' (akadhi: Dhâ'âranna cè' ècana)."
+  },
+  {
+    "q": "Bhâsa èngghi-bhuntenna oca' 'sakè'' (sakit) ka'angghuy Bapak/Ibu Guru otabâ orèng towa èngghi panèka ....",
+    "p": ["Songkan", "Sare", "Rabhu", "Kondhur"],
+    "b": 0,
+    "bahas": "Sakè' bhâsa èngghi-bhuntenna 'songkan' (akadhi: Kaki' ampon tello arè songkan)."
+  },
+  {
+    "q": "Okara è bâbâ panèka sè aghuna'aghi ondhâgghâ bhâsa èngghi-bhunten sè teppa' èngghi panèka ....",
+    "p": [
+      "Embu' ghi' ngunjuk èrèngan tèh anga' è teras.",
+      "Sèngko' ghi' ngunjuk ès jeruk è kantin.",
+      "Kocèngnga ampon songkan tello arè.",
+      "Adhi' ampon kondhur dâri lapangan."
+    ],
+    "b": 0,
+    "bahas": "Oca' 'ngunjuk' (minum) teppa' èghuna'aghi ka'angghuy Embu' (orèng towa)."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>PANTUN MADHURÂ</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Sampiran (1-2) &amp; Èssè (3-4)</text></svg>",
+    "q": "Abâs strukturna pantun Madhurâ è ghâmbhâr attas! Bâris kapèng 3 bân kapèng 4 dâlem pantun èsebbhut ....",
+    "p": ["Èssè (isi / maksud pantun)", "Sampiran", "Judul pantun", "Oca' tanya"],
+    "b": 0,
+    "bahas": "Bâris 1–2 pantun èsebbhut sampiran, dhinèng bâris 3–4 èsebbhut èssè (isi)."
+  },
+  {
+    "q": "Bâca pantun Madhurâ è bâbâ panèka!\nMellè jhuko' ka Pasar Kolpajung,\nJhuko' tongkol èghuring kerrèng.\nDhâddhi morèd kodhu sregep ajhâr,\nSopajâ pènter bân èkasennengngè orèng.\n\nApa nasèhat sè bâdâ è dâlem èssèna pantun attas?",
+    "p": [
+      "Dhâddhi morèd kodhu sregep ajhâr sopajâ pènter bân èkasennengngè orèng",
+      "Sabbhân arè kodhu mellè jhuko' ka pasar",
+      "Jhuko' tongkol cè' nyamanna èghuring kerrèng",
+      "Morèd kodhu senneng amaèn è pasar"
+    ],
+    "b": 0,
+    "bahas": "Èssè pantun bâdâ è bâris kapèng 3 bân 4, ngajhâri sopajâ morèd sregep ajhâr."
+  },
+  {
+    "q": "Sastra lisan Madhurâ sè aropa'aghi syi'ir otabâ puisi tradisional sè èbâca kalabân lagu tembhâng (akadhi Artatè, Pucung, Kasmaran) èsebbhut ....",
+    "p": ["Mamaca / Tembhâng Macapat", "Karapan Sapè", "Ludruk", "Topèng Dâlâng"],
+    "b": 0,
+    "bahas": "Mamaca panèka tradisi maca naskah tembhâng Macapat Madhurâ kalabân irama lagu."
+  },
+  {
+    "q": "Kesenian teater tradisional khas Madhurâ sè para pemaènna ngangghuy topèng kaju bân acarèta kisah Mahabarata otabâ Ramayana èsebbhut ....",
+    "p": ["Topèng Dâlâng", "Saronèn", "Tari Muang Sangkal", "Ojhung"],
+    "b": 0,
+    "bahas": "Topèng Dâlâng panèka kesenian drama tari topèng klasik khas Madhurâ (khusussa Sumenep sareng Pamekasan)."
+  },
+  {
+    "q": "Oca' rangkep (kata ulang) dâlem bhâsa Madhurâ 'bârna-bârna' andi' artè ....",
+    "p": ["Bermacam-macam warna", "Sèttong bârna", "Ta' andi' bârna", "Bârna celleng"],
+    "b": 0,
+    "bahas": "Oca' rangkep 'bârna-bârna' nodhuwâghi bânnya' macemma bârna."
+  },
+  {
+    "q": "Oca' asal 'bhersè' lamon èberri' ter-ater 'a-' sareng panotèng '-an' dhâddhi 'abhersèyan' sè artèna ....",
+    "p": [
+      "Ngalakonè kalakoan abhersè'è kennengngan",
+      "Ngotorè lantai",
+      "Mellè pakakas bhersè",
+      "Nèngghu orèng nyapo"
+    ],
+    "b": 0,
+    "bahas": "Abhersèyan artèna membersihkan atau bergotong royong bersih-bersih."
+  },
+  {
+    "q": "Tabhâligghâ (antonim) dâri oca' 'jujur' èngghi panèka ....",
+    "p": ["Lècèk (bohong / curang)", "Bhâghus", "Pènter", "Bângal"],
+    "b": 0,
+    "bahas": "Jujur tabhâligghâ lècèk (bohong/curang)."
+  },
+  {
+    "q": "Padhâna artè (sinonim) dâri oca' 'sregep' (rajin) èngghi panèka ....",
+    "p": ["Tekun / bhâjheng", "Malas", "Loppah", "Kendor"],
+    "b": 0,
+    "bahas": "Sregep andi' artè padâ sareng bhâjheng otabâ tekun."
+  },
+  {
+    "q": "Bâca teks è bâbâ panèka!\n'Bhâthèk toles Madhurâ (akadhi dâri Tanjung Bumi Bhângkalan sareng Pamekasan) kasohor polana motifna sè unik bân bârnana sè cerrah akadhi mèra, konèng, bhiru, bân bhuru. Prosès aghâbây bhâthèk toles ngangghuy canting bân malem.'\n\nPakakas utama sè èghuna'aghi ka'angghuy nolès motif bhâthèk è kaèn miturut teks attas èngghi panèka ....",
+    "p": ["Canting bân malem", "Potlot bân setip", "Gunting bân lem", "Sapo bân èmbèr"],
+    "b": 0,
+    "bahas": "Dâlem teks èsebbhutaghi aghâbây bhâthèk toles ngangghuy canting sareng malem."
+  },
+  {
+    "q": "Bârna-bârna khas bhâthèk toles Madhurâ miturut teks attas èngghi panèka ....",
+    "p": [
+      "Mèra, konèng, bhiru, bân bhuru",
+      "Potè polos sadhâjâ",
+      "Celleng bân abu-abu",
+      "Cokelat petteng sadhâjâ"
+    ],
+    "b": 0,
+    "bahas": "Bhâthèk Madhurâ kasohor ngangghuy bârna cerrah mèra, konèng, bhiru, bân bhuru."
+  },
+  {
+    "q": "Oca' 'jhâjhân' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Kue / jajanan", "Nasi putih", "Sayur bayam", "Air mineral"],
+    "b": 0,
+    "bahas": "Jhâjhân artèna kue atau makanan ringan."
+  },
+  {
+    "q": "Oca' 'tanèyan' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Halaman rumah", "Atap rumah", "Dapur", "Kamar tidur"],
+    "b": 0,
+    "bahas": "Tanèyan artèna halaman rumah (akadhi Tanèyan Lanjhâng)."
+  },
+  {
+    "q": "Okara pètanya (kalimat tanya) è bâbâ panèka sè nanya'aghi sabâb otabâ alasan èngghi panèka ....",
+    "p": [
+      "Arapa bâ'na ma' ta' maso' sakola'an bâri'?",
+      "Sapa nyamana kancana bâ'na?",
+      "È dimma kennengnganna Museum Sumenep?",
+      "Bârâmpa arghâna buku toles rèya?"
+    ],
+    "b": 0,
+    "bahas": "Oca' tanya 'arapa' artèna mengapa (nanya'aghi sabâb)."
+  },
+  {
+    "q": "Oca' tanya 'bârâmpa' èghuna'aghi ka'angghuy nanya'aghi ....",
+    "p": ["Bânnya'na otabâ arghâ (jumlah / harga)", "Kennengngan (tempat)", "Bâkto (waktu)", "Nyama orèng"],
+    "b": 0,
+    "bahas": "Bârâmpa artèna berapa."
+  },
+  {
+    "q": "Lamon kita nyambhângè (menjenguk) tatangghâ sè songkan, tatakrama sè bhâghus èngghi panèka ....",
+    "p": [
+      "Acaca kalabân sowara alos, ma'èmodhi sopajâ sabbhâr, bân adu'a'aghi sopajâ lekkas bârâs",
+      "Acaca rammè bân aghellâ' keras è kamar orèng sakè'",
+      "Ngabâsaghi rupa sè sossa",
+      "Mènta kakanan bânnya'"
+    ],
+    "b": 0,
+    "bahas": "Nyambhângè orèng songkan kodhu ajâgâ katenangan bân adu'a'aghi kasèhatanna."
+  },
+  {
+    "q": "Falsafah odhi' masyarakat Madhurâ sè ngajhâri sopajâ salèng abhânto bân rukun è dâlem kalowarga maupun tatangghâ èngghi panèka ....",
+    "p": [
+      "Rokon, ghutong royong, bân salèng ngormadhi",
+      "Atokar bân salèng nyala'aghi",
+      "Sombong dâ' kanca",
+      "Malas alako bân ajhâr"
+    ],
+    "b": 0,
+    "bahas": "Karokonan sareng ghutong royong panèka nilai luhur masyarakat Madhurâ."
+  }
+]);
+
+window.tambahPaketUjian("5", "kesenian", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>PRINSIP SENI RUPA</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Keseimbangan • Proporsi • Kesatuan</text></svg>",
+    "q": "Perhatikan kartu prinsip seni rupa pada gambar di atas! Perbandingan ukuran yang serasi dan masuk akal antara bagian satu dengan bagian lainnya dalam sebuah gambar (misalnya ukuran kepala manusia dibandingkan badannya) disebut prinsip ....",
+    "p": ["Proporsi", "Tekstur", "Ritme", "Gradasi"],
+    "b": 0,
+    "bahas": "Proporsi mengatur kesebandingan ukuran antarbagian objek gambar agar tampak wajar dan harmonis."
+  },
+  {
+    "q": "Susunan objek gambar yang bagian kiri dan bagian kanannya memiliki bentuk, ukuran, serta letak yang sama persis seperti bayangan cermin disebut keseimbangan ....",
+    "p": ["Simetris", "Asimetris", "Radial", "Acak"],
+    "b": 0,
+    "bahas": "Keseimbangan simetris menempatkan unsur yang sama secara seimbang di sisi kiri dan kanan sumbu tengah."
+  },
+  {
+    "q": "Karya seni rupa yang menonjolkan kebebasan pengungkapan perasaan, emosi, dan imajinasi pembuatnya melalui goresan garis dan warna disebut menggambar ....",
+    "p": ["Ekspresif", "Teknik arsitektur", "Peta topografi", "Grafik batang"],
+    "b": 0,
+    "bahas": "Gambar ekspresif menekankan curahan perasaan dan kreativitas pribadi seniman."
+  },
+  {
+    "q": "Teknik mewarnai gambar dengan cara menyapukan warna dari tua ke muda secara halus sehingga menciptakan kesan kedalaman dan cahaya disebut teknik ....",
+    "p": ["Gradasi warna", "Blok polos", "Pointilis titik", "Cetak saring"],
+    "b": 0,
+    "bahas": "Gradasi adalah peralihan tingkat warna secara bertahap dari gelap ke terang atau sebaliknya."
+  },
+  {
+    "q": "Objek gambar yang letaknya paling dekat dengan pandangan mata pengamat pada gambar pemandangan alam sebaiknya digambar dengan ukuran yang ....",
+    "p": [
+      "Lebih besar dan detailnya lebih jelas dibandingkan objek yang jauh",
+      "Sangat kecil dan samar",
+      "Sama persis ukurannya dengan gunung di kejauhan",
+      "Terbalik posisinya"
+    ],
+    "b": 0,
+    "bahas": "Dalam hukum perspektif, benda yang dekat tampak lebih besar dan jelas, sedangkan benda jauh tampak lebih kecil."
+  },
+  {
+    "svg": "<svg width='165' height='70' xmlns='http://w3.org'><rect x='25' y='12' width='115' height='46' rx='6' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><line x1='53' y1='12' x2='53' y2='58' stroke='#ca8a04' stroke-width='2'/><line x1='82' y1='12' x2='82' y2='58' stroke='#ca8a04' stroke-width='2'/><line x1='111' y1='12' x2='111' y2='58' stroke='#ca8a04' stroke-width='2'/><line x1='25' y1='27' x2='140' y2='27' stroke='#92400e' stroke-width='2'/><line x1='25' y1='43' x2='140' y2='43' stroke='#92400e' stroke-width='2'/></svg>",
+    "q": "Perhatikan pola silang-menyilang pada gambar di atas! Kerajinan tradisional Nusantara yang dibuat dengan cara menyilangkan bahan pipih secara teratur antara lungsi dan pakan disebut ....",
+    "p": ["Anyaman", "Ukiran kayu", "Batik cap", "Patung pahat"],
+    "b": 0,
+    "bahas": "Anyaman adalah seni menyilangkan bilah bahan secara tumpang-tindih beraturan."
+  },
+  {
+    "q": "Dalam seni kerajinan menganyam, helaian bahan anyaman yang disusun membujur memanjang (tegak) sebagai dasar anyaman disebut ....",
+    "p": ["Lungsi", "Pakan", "Canting", "Palet"],
+    "b": 0,
+    "bahas": "Lungsi adalah helaian dasar arah membujur, sedangkan pakan adalah helaian yang diselipkan melintang."
+  },
+  {
+    "q": "Helaian bahan anyaman yang disusupkan atau diselipkan secara melintang di antara helaian lungsi disebut ....",
+    "p": ["Pakan", "Lungsi", "Bingkai", "Sketsa"],
+    "b": 0,
+    "bahas": "Pakan diselipkan secara bergantian di atas dan di bawah helaian lungsi."
+  },
+  {
+    "q": "Bahan alam di lingkungan sekitar yang sering dimanfaatkan pengrajin tradisional untuk membuat tikar, kipas, dan keranjang anyaman adalah ....",
+    "p": [
+      "Bambu, rotan, daun pandan duri, dan pelepah pisang kering",
+      "Kaca jendela dan besi baja",
+      "Batu granit dan semen",
+      "Kawat tembaga tebal"
+    ],
+    "b": 0,
+    "bahas": "Bambu, rotan, daun pandan, dan mendong memiliki serat lentur dan kuat untuk dianyam."
+  },
+  {
+    "q": "Motif anyaman dasar yang dibuat dengan pola menyilangkan satu lungsi dan satu pakan secara bergantian (1-1) disebut anyaman ....",
+    "p": ["Tunggal (sasag / kepang sederhana)", "Ganda tiga", "Bintang segi delapan", "Lingkaran spiral"],
+    "b": 0,
+    "bahas": "Anyaman tunggal (bilik/sasag) menyilangkan satu helai pakan di atas satu lungsi dan di bawah satu lungsi berikutnya."
+  },
+  {
+    "q": "Hasil kerajinan anyaman tradisional dari daun pandan atau bambu yang sering digunakan dalam kehidupan sehari-hari di rumah adalah ....",
+    "p": [
+      "Tikar pandan, bakul nasi, tampah, dan kipas sate",
+      "Panci aluminium dan wajan besi",
+      "Gelas kaca dan piring keramik",
+      "Televisi dan radio"
+    ],
+    "b": 0,
+    "bahas": "Tikar, bakul, tampah, dan kipas tradisional adalah produk anyaman fungsional Nusantara."
+  },
+  {
+    "q": "Bahan buatan yang sangat mudah dan aman digunakan siswa kelas 5 SD untuk berlatih membuat karya anyaman di sekolah adalah ....",
+    "p": [
+      "Kertas bufalo / kertas origami warna-warni yang dipotong memanjang sama lebar",
+      "Seng atap rumah yang tajam",
+      "Pecahan keramik lantai",
+      "Kawat berduri"
+    ],
+    "b": 0,
+    "bahas": "Potongan kertas warna melatih ketelitian pola lungsi dan pakan dengan aman dan menarik."
+  },
+  {
+    "q": "Prinsip '3R' dalam pembuatan karya seni rupa daur ulang ramah lingkungan merupakan singkatan dari ....",
+    "p": [
+      "Reduce (mengurangi), Reuse (menggunakan kembali), dan Recycle (mendaur ulang)",
+      "Read, Run, and Rest",
+      "Red, Royal, and Rose",
+      "Ringkas, Rapi, dan Resik"
+    ],
+    "b": 0,
+    "bahas": "Reduce, Reuse, dan Recycle adalah gerakan peduli lingkungan melalui pengelolaan sampah menjadi karya berguna."
+  },
+  {
+    "q": "Contoh pemanfaatan limbah plastik sedotan minuman atau botol plastik bekas menjadi karya seni rupa terapan adalah ....",
+    "p": [
+      "Merangkai bunga hias dari sedotan plastik bekas dan membuat pot tanaman gantung dari botol plastik",
+      "Membakar sampah plastik di halaman sekolah",
+      "Membuang botol plastik ke sungai agar hanyut ke laut",
+      "Menimbun plastik di dalam tanah kebun"
+    ],
+    "b": 0,
+    "bahas": "Mendaur ulang botol dan sedotan plastik mengurangi pencemaran sampah plastik sekaligus menghasilkan hiasan indah."
+  },
+  {
+    "q": "Karya seni rupa yang dibuat tidak hanya untuk dinikmati keindahannya saja, tetapi juga memiliki fungsi kegunaan praktis dalam kehidupan sehari-hari (seperti tempat pensil, tas anyaman, dan pot bunga) disebut seni rupa ....",
+    "p": ["Terapan", "Murni", "Abstrak", "Kaligrafi"],
+    "b": 0,
+    "bahas": "Seni rupa terapan mengutamakan fungsi pakai di samping nilai estetika (keindahan)."
+  },
+  {
+    "q": "Karya seni rupa yang diciptakan semata-mata untuk dinikmati nilai keindahannya sebagai hiasan (seperti lukisan pemandangan di dinding dan patung hias) disebut seni rupa ....",
+    "p": ["Murni", "Terapan", "Industri", "Arsitektur"],
+    "b": 0,
+    "bahas": "Seni rupa murni berfokus pada ekspresi keindahan tanpa fungsi pakai praktis."
+  },
+  {
+    "q": "Langkah pertama yang harus dilakukan sebelum mengolah botol plastik atau kaleng bekas menjadi karya kerajinan adalah ....",
+    "p": [
+      "Mencuci bersih wadah bekas tersebut dan mengeringkannya agar higienis serta mudah ditempeli hiasan",
+      "Langsung mengecat bagian yang masih kotor dan basah",
+      "Meremas botol hingga hancur tak berbentuk",
+      "Membuang tutup botol ke selokan"
+    ],
+    "b": 0,
+    "bahas": "Membersihkan dan mengeringkan bahan bekas membuat lem dan cat menempel sempurna serta bebas bau."
+  },
+  {
+    "q": "Untuk memotong helaian kertas anyaman agar memiliki lebar yang sama rata dan rapi, alat bantu ukur yang sebaiknya digunakan sebelum menggunting adalah ....",
+    "p": ["Penggaris dan pensil", "Kuas cat air", "Jangka sorong", "Palet warna"],
+    "b": 0,
+    "bahas": "Mengukur dengan penggaris dan memberi garis tipis pensil menghasilkan potongan pita kertas yang seragam."
+  },
+  {
+    "q": "Kesan visual yang ditimbulkan oleh karya anyaman kertas yang memadukan dua warna kontras (misalnya kuning cerah dan biru tua) adalah ....",
+    "p": [
+      "Motif silang anyaman terlihat sangat jelas, hidup, dan menarik perhatian",
+      "Motif anyaman tampak kabur dan tidak terlihat",
+      "Kertas anyaman menjadi mudah robek",
+      "Warna tampak pucat dan membosankan"
+    ],
+    "b": 0,
+    "bahas": "Perpaduan warna kontras menonjolkan pola geometris anyaman."
+  },
+  {
+    "q": "Sentra kerajinan anyaman bambu dan daun pandan di Indonesia banyak dilestarikan oleh para pengrajin lokal sebagai bagian dari ....",
+    "p": [
+      "Warisan budaya kriya Nusantara dan sumber ekonomi kreatif masyarakat",
+      "Mainan sekali pakai yang langsung dibuang",
+      "Limbah pabrik berbahaya",
+      "Barang impor dari luar negeri"
+    ],
+    "b": 0,
+    "bahas": "Seni kriya anyaman merupakan warisan budaya yang bernilai ekonomi tinggi."
+  },
+  {
+    "q": "Ketika menggunakan pisau cutter atau gunting untuk melubangi botol plastik dalam proyek daur ulang di kelas, sikap keselamatan kerja yang wajib dipatuhi siswa adalah ....",
+    "p": [
+      "Menggunakan alat tajam secara hati-hati, mengarahkan mata pisau menjauhi tubuh, dan meminta bimbingan guru",
+      "Menggunakan cutter sambil bercanda dengan teman sebangku",
+      "Meletakkan cutter terbuka di tepi meja",
+      "Memotong botol di atas pangkuan paha"
+    ],
+    "b": 0,
+    "bahas": "Prosedur keselamatan kerja mencegah cedera saat menggunakan alat pemotong."
+  },
+  {
+    "q": "Agar karya anyaman kertas tidak mudah terlepas di bagian pinggirnya setelah selesai dianyam, langkah penyelesaian akhir (finishing) yang tepat adalah ....",
+    "p": [
+      "Menempelkan lem pada ujung-ujung helaian kertas dan memberi bingkai kertas di sekeliling tepinya",
+      "Menarik kuat-kuat semua ujung kertas hingga sobek",
+      "Merendam anyaman di dalam air",
+      "Melipat anyaman menjadi bola kecil"
+    ],
+    "b": 0,
+    "bahas": "Pengeleman bagian tepi dan pemasangan bingkai mengunci susunan anyaman agar kuat dan rapi."
+  },
+  {
+    "q": "Nilai karakter positif yang dilatih saat siswa mengerjakan proyek menganyam dan mendaur ulang limbah di sekolah adalah ....",
+    "p": [
+      "Ketelitian, kesabaran, kreativitas, dan kepedulian terhadap kelestarian lingkungan",
+      "Sikap terburu-buru dan ceroboh",
+      "Kebiasaan membuang sampah sembarangan",
+      "Sikap menyerah saat menemui kesulitan"
+    ],
+    "b": 0,
+    "bahas": "Menganyam membutuhkan kesabaran dan ketelitian tinggi, sedangkan daur ulang menumbuhkan cinta lingkungan."
+  },
+  {
+    "q": "Pameran karya seni siswa di ruang kelas pada akhir tema pembelajaran bertujuan untuk ....",
+    "p": [
+      "Menampilkan hasil karya siswa agar saling mengapresiasi, bertukar ide kreatif, dan menumbuhkan rasa percaya diri",
+      "Mencari-cari kekurangan karya teman untuk diejek",
+      "Membandingkan siapa yang membeli bahan paling mahal",
+      "Mengotori dinding ruang kelas"
+    ],
+    "b": 0,
+    "bahas": "Pameran kelas melatih budaya apresiasi seni yang sehat dan positif antarsiswa."
+  },
+  {
+    "q": "Setelah seluruh kegiatan praktik seni rupa selesai dilaksanakan, tanggung jawab bersama seluruh siswa di kelas adalah ....",
+    "p": [
+      "Membersihkan meja, menyapu sisa potongan kertas, mengembalikan alat pinjaman, dan mencuci tangan hingga bersih",
+      "Meninggalkan sampah potongan kertas di lantai untuk petugas kebersihan",
+      "Membawa pulang gunting dan penggaris milik sekolah tanpa izin",
+      "Mencoret meja kelas dengan sisa cat"
+    ],
+    "b": 0,
+    "bahas": "Tanggung jawab menjaga kebersihan ruang kelas adalah bagian penting dari pendidikan karakter."
+  }
+]);
