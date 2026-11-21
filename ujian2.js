@@ -2750,3 +2750,1104 @@ window.tambahPaketUjian("2", "kesenian", "UTS Semester 1", [
   }
 ]);
 
+window.tambahPaketUjian("2", "mtk", "UTS Semester 2", [
+  {
+    "svg": "<svg width='160' height='70' xmlns='http://w3.org'><circle cx='80' cy='35' r='22' fill='#ffffff' stroke='#0284c7' stroke-width='2'/><path d='M80,13 A22,22 0 0,0 80,57 Z' fill='#38bdf8'/><line x1='80' y1='13' x2='80' y2='57' stroke='#0284c7' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar lingkaran di atas! Bagian yang diwarnai biru menunjukkan pecahan ....",
+    "p": ["1/2 (setengah)", "1/3 (sepertiga)", "1/4 (seperempat)", "2/3"],
+    "b": 0,
+    "bahas": "Lingkaran dibagi menjadi 2 bagian sama besar dan 1 bagian diarsir, sehingga nilainya 1/2."
+  },
+  {
+    "svg": "<svg width='160' height='70' xmlns='http://w3.org'><rect x='55' y='12' width='50' height='46' fill='#ffffff' stroke='#16a34a' stroke-width='2'/><rect x='55' y='12' width='25' height='23' fill='#22c55e'/><line x1='80' y1='12' x2='80' y2='58' stroke='#16a34a' stroke-width='2'/><line x1='55' y1='35' x2='105' y2='35' stroke='#16a34a' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar persegi yang dibagi menjadi 4 bagian sama besar di atas! Bagian berwarna hijau menunjukkan pecahan ....",
+    "p": ["1/2", "1/3", "1/4 (seperempat)", "3/4"],
+    "b": 2,
+    "bahas": "1 dari 4 bagian sama besar yang diwarnai menunjukkan pecahan 1/4."
+  },
+  {
+    "q": "Pecahan 1/2 dibaca ....",
+    "p": ["Satu per dua atau setengah", "Satu per empat", "Dua per satu", "Satu per tiga"],
+    "b": 0,
+    "bahas": "1/2 dibaca satu per dua atau setengah."
+  },
+  {
+    "q": "Ibu memotong sebuah kue bolu menjadi 4 bagian sama besar. Siti mengambil 1 potong kue. Bagian kue yang diambil Siti adalah ....",
+    "p": ["1/2 bagian", "1/3 bagian", "1/4 bagian", "4/1 bagian"],
+    "b": 2,
+    "bahas": "1 potong dari 4 potongan sama besar bernilai 1/4 bagian."
+  },
+  {
+    "q": "Setengah dari 10 buah apel adalah ....",
+    "p": ["2 buah", "4 buah", "5 buah", "6 buah"],
+    "b": 2,
+    "bahas": "10 dibagi 2 sama dengan 5 buah apel."
+  },
+  {
+    "q": "Seperempat dari 8 buah jeruk adalah ....",
+    "p": ["2 buah", "3 buah", "4 buah", "6 buah"],
+    "b": 0,
+    "bahas": "8 dibagi 4 sama dengan 2 buah jeruk."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='25' y='15' width='125' height='40' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='40' font-size='12' font-weight='bold' text-anchor='middle' fill='#854d0e'>1 meter = ... cm</text></svg>",
+    "q": "Perhatikan kartu satuan panjang di atas! Panjang 1 meter sama dengan .... sentimeter (cm).",
+    "p": ["10 cm", "50 cm", "100 cm", "1.000 cm"],
+    "b": 2,
+    "bahas": "1 meter (m) = 100 sentimeter (cm)."
+  },
+  {
+    "q": "Alat ukur panjang baku yang biasa digunakan siswa untuk mengukur panjang buku tulis dan pensil adalah ....",
+    "p": ["Penggaris", "Timbangan", "Jam dinding", "Termometer"],
+    "b": 0,
+    "bahas": "Penggaris mengukur panjang benda dalam satuan sentimeter (cm)."
+  },
+  {
+    "q": "Panjang pita merah 200 cm. Panjang pita merah tersebut sama dengan .... meter.",
+    "p": ["2 meter", "20 meter", "200 meter", "1 meter"],
+    "b": 0,
+    "bahas": "200 cm : 100 = 2 meter."
+  },
+  {
+    "q": "Panjang meja belajar 120 cm, sedangkan panjang kursi 45 cm. Selisih panjang meja belajar dan kursi adalah ....",
+    "p": ["65 cm", "75 cm", "85 cm", "165 cm"],
+    "b": 1,
+    "bahas": "120 cm - 45 cm = 75 cm."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='25' y='15' width='125' height='40' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='40' font-size='12' font-weight='bold' text-anchor='middle' fill='#0369a1'>1 kg = ... gram</text></svg>",
+    "q": "Perhatikan kartu satuan berat di atas! Berat 1 kilogram (kg) sama dengan .... gram.",
+    "p": ["10 gram", "100 gram", "500 gram", "1.000 gram"],
+    "b": 3,
+    "bahas": "1 kg = 1.000 gram."
+  },
+  {
+    "q": "Alat yang digunakan pedagang di pasar untuk menimbang berat beras, gula, dan buah-buahan adalah ....",
+    "p": ["Timbangan", "Penggaris", "Meteran pita", "Kompas"],
+    "b": 0,
+    "bahas": "Timbangan digunakan untuk mengukur berat benda."
+  },
+  {
+    "q": "Ibu membeli 2 kg mangga dan 3 kg apel. Berat seluruh buah yang dibeli Ibu adalah ....",
+    "p": ["4 kg", "5 kg", "6 kg", "1 kg"],
+    "b": 1,
+    "bahas": "2 kg + 3 kg = 5 kg."
+  },
+  {
+    "q": "Berat 3.000 gram gula pasir sama dengan .... kg.",
+    "p": ["3 kg", "30 kg", "300 kg", "13 kg"],
+    "b": 0,
+    "bahas": "3.000 gram : 1.000 = 3 kg."
+  },
+  {
+    "svg": "<svg width='150' height='75' xmlns='http://w3.org'><circle cx='75' cy='38' r='26' fill='#ffffff' stroke='#0f172a' stroke-width='2.5'/><line x1='75' y1='38' x2='75' y2='18' stroke='#0284c7' stroke-width='2.5'/><line x1='75' y1='38' x2='92' y2='38' stroke='#dc2626' stroke-width='3'/><circle cx='75' cy='38' r='3' fill='#0f172a'/></svg>",
+    "q": "Perhatikan gambar jam dinding di atas! Jarum pendek menunjuk angka 3 dan jarum panjang menunjuk angka 12. Jam tersebut menunjukkan pukul ....",
+    "p": ["03.00", "12.03", "06.00", "09.00"],
+    "b": 0,
+    "bahas": "Jarum pendek di angka 3 dan jarum panjang di angka 12 dibaca pukul 03.00."
+  },
+  {
+    "q": "Jarum pendek pada jam dinding menunjuk angka 7 dan jarum panjang menunjuk angka 12. Jam tersebut dibaca pukul ....",
+    "p": ["07.00", "12.07", "05.00", "08.00"],
+    "b": 0,
+    "bahas": "Pukul 07.00 ditunjukkan oleh jarum pendek di angka 7 dan jarum panjang di angka 12."
+  },
+  {
+    "q": "Edo mulai belajar pukul 19.00 dan selesai pukul 20.00. Lama Edo belajar adalah ....",
+    "p": ["1 jam", "2 jam", "3 jam", "4 jam"],
+    "b": 0,
+    "bahas": "Dari pukul 19.00 ke pukul 20.00 lamanya adalah 1 jam."
+  },
+  {
+    "q": "Dalam 1 hari terdapat .... jam.",
+    "p": ["12 jam", "20 jam", "24 jam", "60 jam"],
+    "b": 2,
+    "bahas": "1 hari lamanya 24 jam."
+  },
+  {
+    "q": "Pilihlah gambar lingkaran yang diarsir SETENGAH (1/2) bagian!",
+    "p": ["Setengah (1/2)", "Seperempat (1/4)", "Penuh", "Kosong"],
+    "pSvg": [
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='15' fill='#ffffff' stroke='#0284c7' stroke-width='2'/><path d='M30,7 A15,15 0 0,0 30,37 Z' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='15' fill='#ffffff' stroke='#0284c7' stroke-width='2'/><path d='M30,22 L30,7 A15,15 0 0,1 45,22 Z' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='15' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='15' fill='#ffffff' stroke='#0284c7' stroke-width='2'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama diwarnai separuh (setengah) lingkaran."
+  },
+  {
+    "q": "Hasil dari 1/2 + 1/2 (dua potong setengah apel digabungkan kembali) menjadi .... buah apel utuh.",
+    "p": ["1 buah", "2 buah", "3 buah", "4 buah"],
+    "b": 0,
+    "bahas": "Setengah ditambah setengah menjadi 1 bagian utuh."
+  }
+]);
+
+window.tambahPaketUjian("2", "bindo", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='65' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='42' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='38' font-size='14' font-weight='bold' text-anchor='middle' fill='#854d0e'>Tanda Koma ( , )</text></svg>",
+    "q": "Perhatikan kartu tanda baca di atas! Penulisan tanda koma (,) dalam perincian yang benar terdapat pada kalimat ....",
+    "p": [
+      "Ibu membeli apel, jeruk, dan mangga di pasar.",
+      "Ibu membeli apel jeruk dan mangga, di pasar.",
+      "Ibu, membeli apel jeruk dan mangga di pasar.",
+      "Ibu membeli, apel, jeruk dan, mangga."
+    ],
+    "b": 0,
+    "bahas": "Tanda koma digunakan untuk memisahkan unsur-unsur dalam perincian lebih dari dua benda."
+  },
+  {
+    "q": "Di antara kata-kata berikut yang merupakan KATA BENDA adalah ....",
+    "p": ["Pensil dan buku", "Cantik dan rajin", "Berlari dan tidur", "Besar dan kecil"],
+    "b": 0,
+    "bahas": "Pensil dan buku adalah nama benda (kata benda)."
+  },
+  {
+    "q": "Di antara kata-kata berikut yang merupakan KATA SIFAT adalah ....",
+    "p": ["Rajin dan ramah", "Meja dan kursi", "Makan dan minum", "Sepeda dan bola"],
+    "b": 0,
+    "bahas": "Rajin dan ramah menjelaskan sifat seseorang (kata sifat)."
+  },
+  {
+    "q": "Antonim (lawan kata) dari kata 'rajin' adalah ....",
+    "p": ["Malas", "Pintar", "Sopan", "Cepat"],
+    "b": 0,
+    "bahas": "Lawan kata dari rajin adalah malas."
+  },
+  {
+    "q": "Antonim (lawan kata) dari kata 'hemat' adalah ....",
+    "p": ["Boros", "Rajin", "Murah", "Cermat"],
+    "b": 0,
+    "bahas": "Lawan kata dari hemat adalah boros."
+  },
+  {
+    "svg": "<svg width='165' height='70' xmlns='http://w3.org'><rect x='20' y='15' width='125' height='40' rx='6' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='82' y='40' font-size='12' font-weight='bold' text-anchor='middle' fill='#15803d'>Rp5.000,00</text></svg>",
+    "q": "Perhatikan gambar uang kertas pada ilustrasi di atas! Nilai mata uang rupiah tersebut dibaca ....",
+    "p": [
+      "Lima ratus rupiah",
+      "Lima ribu rupiah",
+      "Lima puluh ribu rupiah",
+      "Lima rupiah"
+    ],
+    "b": 1,
+    "bahas": "Rp5.000,00 dibaca lima ribu rupiah."
+  },
+  {
+    "q": "Mata uang resmi negara Indonesia adalah ....",
+    "p": ["Rupiah", "Ringgit", "Dolar", "Yen"],
+    "b": 0,
+    "bahas": "Mata uang negara Indonesia adalah Rupiah (Rp)."
+  },
+  {
+    "q": "Cara bijak menggunakan uang saku yang diberikan orang tua setiap hari adalah ....",
+    "p": [
+      "Menyisihkan sebagian uang saku untuk ditabung di celengan",
+      "Menghabiskan seluruh uang saku untuk membeli mainan mahal",
+      "Membeli jajanan yang tidak sehat secara berlebihan",
+      "Membuang uang receh di jalan"
+    ],
+    "b": 0,
+    "bahas": "Menabung sebagian uang saku melatih sikap hemat dan bijak mengelola uang."
+  },
+  {
+    "q": "Pekerjaan atau profesi orang yang bertugas mengobati orang sakit di rumah sakit atau puskesmas adalah ....",
+    "p": ["Dokter", "Nelayan", "Petani", "Sopir"],
+    "b": 0,
+    "bahas": "Dokter bertugas memeriksa dan mengobati pasien yang sakit."
+  },
+  {
+    "q": "Pekerjaan masyarakat pesisir Pulau Madura yang menangkap ikan di laut menggunakan perahu disebut ....",
+    "p": ["Nelayan", "Pedagang", "Guru", "Polisi"],
+    "b": 0,
+    "bahas": "Nelayan adalah orang yang mata pencahariannya menangkap ikan di laut."
+  },
+  {
+    "svg": "<svg width='165' height='70' xmlns='http://w3.org'><rect x='20' y='12' width='125' height='46' rx='8' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><text x='82' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#92400e'>CERITA FABEL</text><text x='82' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Semut &amp; Belalang</text></svg>",
+    "q": "Perhatikan kartu bacaan pada gambar di atas! Cerita dongeng yang tokoh-tokohnya diperankan oleh hewan yang dapat berbicara seperti manusia disebut ....",
+    "p": ["Fabel", "Berita koran", "Buku kamus", "Pantun"],
+    "b": 0,
+    "bahas": "Fabel adalah cerita fiksi dengan tokoh binatang yang berperilaku seperti manusia."
+  },
+  {
+    "q": "Dalam cerita fabel 'Semut dan Belalang', semut rajin mengumpulkan makanan sebelum musim hujan tiba, sedangkan belalang hanya bermalas-malasan bernyanyi. Sifat yang patut ditiru dari semut adalah ....",
+    "p": ["Rajin bekerja dan suka menabung persediaan", "Pemalas", "Sombong", "Suka mengejek"],
+    "b": 0,
+    "bahas": "Semut rajin bekerja keras dan menyiapkan bekal untuk masa depan."
+  },
+  {
+    "q": "Ketika bermain bersama teman yang berbeda suku dan agama di sekolah, sikap kita yang baik adalah ....",
+    "p": [
+      "Saling menghormati dan berteman dengan rukun",
+      "Mengejek logat bahasa teman",
+      "Memilih teman yang kaya saja",
+      "Bertengkar saat bermain"
+    ],
+    "b": 0,
+    "bahas": "Keragaman teman di sekolah harus disikapi dengan saling menghargai dan rukun."
+  },
+  {
+    "q": "Sinonim (persamaan kata) dari kata 'bijak' adalah ....",
+    "p": ["Pandai dan berhati-hati dalam bertindak", "Ceroboh", "Pemarah", "Malas"],
+    "b": 0,
+    "bahas": "Bijak berarti pandai menggunakan akal budi dan cermat dalam bertindak."
+  },
+  {
+    "q": "Susunan kata acak 'menabung - Siti - celengan - di - uang' menjadi kalimat yang tepat adalah ....",
+    "p": [
+      "Siti menabung uang di celengan.",
+      "Celengan menabung uang di Siti.",
+      "Uang menabung Siti di celengan.",
+      "Di celengan uang Siti menabung."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat S-P-O-K yang tepat adalah 'Siti menabung uang di celengan.'"
+  },
+  {
+    "q": "Perbedaan antara 'kebutuhan' dan 'keinginan' adalah kebutuhan merupakan barang yang ....",
+    "p": [
+      "Harus dipenuhi agar dapat hidup dan belajar dengan baik (seperti makanan dan buku sekolah)",
+      "Boleh ditunda karena hanya untuk bersenang-senang",
+      "Harganya selalu paling mahal di toko",
+      "Tidak pernah dipakai sama sekali"
+    ],
+    "b": 0,
+    "bahas": "Kebutuhan adalah hal pokok yang diperlukan seperti makanan sehat, pakaian, dan perlengkapan sekolah."
+  },
+  {
+    "q": "Pilihlah gambar CELENGAN (tempat menabung uang) di bawah ini!",
+    "p": ["Celengan", "Bola", "Segitiga", "Pensil"],
+    "pSvg": [
+      "<svg width='60' height='45' xmlns='http://w3.org'><ellipse cx='30' cy='24' rx='16' ry='12' fill='#f43f5e' stroke='#be123c' stroke-width='2'/><line x1='24' y1='15' x2='36' y2='15' stroke='#0f172a' stroke-width='2.5'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='13' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><polygon points='30,8 12,37 48,37' fill='#22c55e'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><rect x='14' y='18' width='32' height='8' fill='#facc15'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama berwarna merah muda dengan lubang koin di atasnya adalah celengan."
+  },
+  {
+    "q": "Tanda baca yang dipakai untuk mengakhiri kalimat tanya 'Berapa harga buku tulis ini...' adalah ....",
+    "p": ["Tanda tanya (?)", "Tanda titik (.)", "Tanda koma (,)", "Tanda seru (!)"],
+    "b": 0,
+    "bahas": "Kalimat tanya diakhiri dengan tanda tanya (?)."
+  },
+  {
+    "q": "Jika diberi uang kembalian belanja oleh Ibu di warung, sikap jujur yang harus kita lakukan adalah ....",
+    "p": [
+      "Mengembalikan seluruh uang kembalian kepada Ibu",
+      "Menyembunyikan uang kembalian di saku",
+      "Membelikan permen tanpa izin Ibu",
+      "Berbohong uangnya hilang"
+    ],
+    "b": 0,
+    "bahas": "Jujur mengembalikan uang kembalian adalah perilaku terpuji."
+  },
+  {
+    "q": "Manfaat membiasakan menabung sejak kelas 2 SD adalah ....",
+    "p": [
+      "Memiliki simpanan uang untuk keperluan sekolah di masa depan",
+      "Menjadi anak yang boros",
+      "Sering kehilangan uang jajan",
+      "Tidak punya teman bermain"
+    ],
+    "b": 0,
+    "bahas": "Menabung melatih hidup hemat dan menyiapkan dana untuk kebutuhan penting."
+  }
+]);
+
+window.tambahPaketUjian("2", "pai", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='11' font-weight='bold' text-anchor='middle' fill='#854d0e'>SURAH AL-FALAQ</text><text x='87' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Terdiri atas 5 Ayat • Waktu Subuh</text></svg>",
+    "q": "Perhatikan kartu informasi surah pada gambar di atas! Arti dari nama Surah 'Al-Falaq' adalah ....",
+    "p": ["Waktu subuh", "Manusia", "Nikmat yang banyak", "Pertolongan"],
+    "b": 0,
+    "bahas": "Al-Falaq secara bahasa artinya waktu subuh."
+  },
+  {
+    "q": "Surah Al-Falaq mengajarkan kepada umat Islam agar senantiasa memohon perlindungan dari segala kejahatan makhluk hanya kepada ....",
+    "p": ["Allah Swt.", "Benda keramat", "Manusia kaya", "Dukun"],
+    "b": 0,
+    "bahas": "Qul a'uzu birabbil-falaq (Katakanlah: Aku berlindung kepada Tuhan yang menguasai subuh)."
+  },
+  {
+    "q": "Surah Al-Kautsar merupakan surah paling pendek di dalam Al-Qur'an yang terdiri atas .... ayat.",
+    "p": ["3 ayat", "4 ayat", "5 ayat", "6 ayat"],
+    "b": 0,
+    "bahas": "Surah Al-Kautsar berjumlah 3 ayat dan memiliki arti nikmat yang banyak."
+  },
+  {
+    "q": "Perintah Allah Swt. pada ayat kedua Surah Al-Kautsar yang berbunyi 'Fasalli lirabbika wanhar' adalah perintah untuk melaksanakan ....",
+    "p": [
+      "Salat dan berkurban karena Allah",
+      "Puasa dan zakat fitrah",
+      "Haji ke Baitullah",
+      "Belajar membaca buku"
+    ],
+    "b": 0,
+    "bahas": "'Fasalli lirabbika wanhar' artinya Maka laksanakanlah salat karena Tuhanmu, dan berkurbanlah."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='11' font-weight='bold' text-anchor='middle' fill='#0369a1'>MALAIKAT ALLAH</text><text x='87' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Diciptakan dari Nur (Cahaya)</text></svg>",
+    "q": "Perhatikan kartu informasi pada gambar di atas! Malaikat adalah makhluk gaib ciptaan Allah Swt. yang diciptakan dari ....",
+    "p": ["Nur (cahaya)", "Tanah liat", "Api yang menyala", "Air hujan"],
+    "b": 0,
+    "bahas": "Malaikat diciptakan dari nur (cahaya) dan selalu taat menjalankan perintah Allah Swt."
+  },
+  {
+    "q": "Iman kepada malaikat-malaikat Allah merupakan rukun iman yang ke-....",
+    "p": ["Satu", "Dua", "Tiga", "Empat"],
+    "b": 1,
+    "bahas": "Rukun iman kedua adalah iman kepada malaikat-malaikat Allah."
+  },
+  {
+    "q": "Jumlah nama malaikat Allah Swt. yang wajib kita ketahui dan imani ada .... malaikat.",
+    "p": ["5 malaikat", "10 malaikat", "25 malaikat", "99 malaikat"],
+    "b": 1,
+    "bahas": "Ada 10 nama malaikat yang wajib kita ketahui beserta tugas-tugasnya."
+  },
+  {
+    "q": "Malaikat yang bertugas menyampaikan wahyu dari Allah Swt. kepada para nabi dan rasul adalah Malaikat ....",
+    "p": ["Jibril", "Mikail", "Israfil", "Izrail"],
+    "b": 0,
+    "bahas": "Malaikat Jibril bertugas menyampaikan wahyu."
+  },
+  {
+    "q": "Malaikat yang bertugas menurunkan air hujan dan membagikan rezeki kepada makhluk hidup adalah Malaikat ....",
+    "p": ["Mikail", "Jibril", "Malik", "Ridwan"],
+    "b": 0,
+    "bahas": "Malaikat Mikail bertugas mengatur hujan dan membagikan rezeki."
+  },
+  {
+    "q": "Malaikat yang bertugas meniup sangkakala pada hari kiamat tiba adalah Malaikat ....",
+    "p": ["Israfil", "Izrail", "Munkar", "Nakir"],
+    "b": 0,
+    "bahas": "Malaikat Israfil bertugas meniup sangkakala."
+  },
+  {
+    "q": "Malaikat yang bertugas mencabut nyawa setiap makhluk hidup apabila ajalnya telah tiba adalah Malaikat ....",
+    "p": ["Izrail", "Israfil", "Raqib", "Atid"],
+    "b": 0,
+    "bahas": "Malaikat Izrail bertugas mencabut nyawa."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#15803d'>MALAIKAT RAQIB &amp; ATID</text><text x='87' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Pencatat Amal Baik &amp; Buruk</text></svg>",
+    "q": "Perhatikan kartu tugas malaikat pada gambar di atas! Malaikat yang bertugas mencatat amal kebaikan manusia adalah Malaikat ....",
+    "p": ["Raqib", "Atid", "Malik", "Ridwan"],
+    "b": 0,
+    "bahas": "Malaikat Raqib mencatat amal baik, sedangkan Malaikat Atid mencatat amal buruk."
+  },
+  {
+    "q": "Malaikat yang bertugas menjaga pintu surga dengan wajah ramah dan penuh senyuman adalah Malaikat ....",
+    "p": ["Ridwan", "Malik", "Munkar", "Nakir"],
+    "b": 0,
+    "bahas": "Malaikat Ridwan menjaga pintu surga, sedangkan Malaikat Malik menjaga pintu neraka."
+  },
+  {
+    "q": "Malaikat yang bertugas menanyai manusia di dalam alam kubur adalah Malaikat ....",
+    "p": ["Munkar dan Nakir", "Raqib dan Atid", "Jibril dan Mikail", "Malik dan Ridwan"],
+    "b": 0,
+    "bahas": "Malaikat Munkar dan Nakir bertugas menanyai manusia di alam kubur."
+  },
+  {
+    "q": "Sifat istimewa yang dimiliki oleh para malaikat Allah Swt. adalah ....",
+    "p": [
+      "Selalu patuh kepada perintah Allah Swt. dan tidak pernah berbuat dosa",
+      "Suka makan dan minum seperti manusia",
+      "Sering tidur di siang hari",
+      "Kadang-kadang membantah perintah Allah"
+    ],
+    "b": 0,
+    "bahas": "Malaikat tidak makan, tidak minum, tidak tidur, dan selalu taat kepada Allah Swt."
+  },
+  {
+    "q": "Menyadari bahwa setiap perbuatan kita selalu dicatat oleh Malaikat Raqib dan Atid membuat kita selalu berusaha untuk ....",
+    "p": [
+      "Memperbanyak amal kebaikan dan menjauhi perbuatan tercela",
+      "Berani berbohong saat tidak ada guru",
+      "Mengambil barang teman diam-diam",
+      "Malas mengerjakan salat lima waktu"
+    ],
+    "b": 0,
+    "bahas": "Keyakinan diawasi malaikat mendorong kita selalu berbuat jujur dan baik."
+  },
+  {
+    "q": "Contoh amal kebaikan di sekolah yang dicatat oleh Malaikat Raqib adalah ....",
+    "p": [
+      "Membantu teman yang kesulitan, berkata jujur, dan menjaga kebersihan kelas",
+      "Mengejek teman di halaman sekolah",
+      "Menyontek saat ulangan",
+      "Membuang sampah di laci meja"
+    ],
+    "b": 0,
+    "bahas": "Segala perbuatan baik dan jujur dicatat sebagai pahala oleh Malaikat Raqib."
+  },
+  {
+    "q": "Pilihlah gambar simbol MASJID (tempat salat dan mengaji umat Islam) di bawah ini!",
+    "p": ["Masjid", "Bola", "Kotak", "Bintang"],
+    "pSvg": [
+      "<svg width='65' height='45' xmlns='http://w3.org'><path d='M18,22 A14,14 0 0,1 46,22 Z' fill='#22c55e'/><rect x='18' y='22' width='28' height='16' fill='#dcfce7' stroke='#16a34a' stroke-width='1.5'/><line x1='32' y1='4' x2='32' y2='9' stroke='#ca8a04' stroke-width='2'/></svg>",
+      "<svg width='65' height='45' xmlns='http://w3.org'><circle cx='32' cy='22' r='13' fill='#38bdf8'/></svg>",
+      "<svg width='65' height='45' xmlns='http://w3.org'><rect x='18' y='10' width='28' height='25' fill='#ef4444'/></svg>",
+      "<svg width='65' height='45' xmlns='http://w3.org'><polygon points='32,6 37,17 49,17 39,24 42,36 32,29 22,36 25,24 15,17 27,17' fill='#facc15'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama berkubah hijau adalah masjid."
+  },
+  {
+    "q": "Ketika turun hujan yang menyuburkan tanaman sebagai rezeki dari Allah Swt. melalui Malaikat Mikail, kita mengucapkan doa dan rasa syukur dengan membaca ....",
+    "p": ["Alhamdulillah", "Astaghfirullah", "Innalillahi", "Subhanallah"],
+    "b": 0,
+    "bahas": "Mensyukuri turunnya hujan diwujudkan dengan mengucapkan Alhamdulillah."
+  },
+  {
+    "q": "Anak yang beriman kepada malaikat Allah Swt. akan selalu bersikap ....",
+    "p": ["Disiplin, jujur, dan taat beribadah", "Pemalas dan suka berbohong", "Sombong kepada teman", "Kasar kepada orang tua"],
+    "b": 0,
+    "bahas": "Iman kepada malaikat membentuk pribadi yang jujur, disiplin, dan taat beribadah."
+  }
+]);
+
+window.tambahPaketUjian("2", "pancasila", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>KEBERAGAMAN TEMAN</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Berbeda Hobi, Suku &amp; Ciri Fisik</text></svg>",
+    "q": "Perhatikan kartu informasi pada gambar di atas! Di sekolah kita memiliki banyak teman dengan ciri fisik dan hobi yang berbeda. Sikap kita yang baik adalah ....",
+    "p": [
+      "Saling menghargai, menghormati, dan berteman dengan rukun",
+      "Mengejek teman yang berbeda dengan kita",
+      "Hanya mau berteman dengan anak yang sama hobinya",
+      "Menjauhi teman yang berasal dari daerah lain"
+    ],
+    "b": 0,
+    "bahas": "Perbedaan antarteman adalah anugerah Tuhan yang harus disikapi dengan saling menghargai."
+  },
+  {
+    "q": "Setiap anak memiliki hobi (kegemaran) masing-masing. Budi suka bermain sepak bola, sedangkan Siti suka membaca buku. Hobi Budi dan Siti ....",
+    "p": ["Berbeda tetapi tetap rukun bermain bersama", "Harus dipaksa sama", "Membuat mereka bertengkar", "Tidak boleh dilakukan"],
+    "b": 0,
+    "bahas": "Perbedaan kegemaran tidak menghalangi persahabatan di kelas."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><circle cx='50' cy='35' r='16' fill='#fed7aa' stroke='#ea580c' stroke-width='2'/><line x1='38' y1='22' x2='62' y2='22' stroke='#0f172a' stroke-width='3'/><circle cx='100' cy='35' r='16' fill='#fde68a' stroke='#ca8a04' stroke-width='2'/><path d='M88,22 Q94,16 100,22 Q106,16 112,22' fill='none' stroke='#0f172a' stroke-width='3'/></svg>",
+    "q": "Perhatikan gambar dua anak dengan jenis rambut berbeda (lurus dan keriting) di atas! Ciri fisik manusia yang berbeda-beda merupakan ciptaan ....",
+    "p": ["Tuhan Yang Maha Esa", "Manusia sendiri", "Tukang cukur", "Teman sekelas"],
+    "b": 0,
+    "bahas": "Semua ciri fisik manusia adalah ciptaan Tuhan Yang Maha Esa yang patut disyukuri."
+  },
+  {
+    "q": "Ketika ada teman baru pindahan dari luar Pulau Madura yang berbicara dengan logat bahasa daerah yang berbeda, sikap kita adalah ....",
+    "p": [
+      "Menyambutnya dengan ramah dan mengajaknya berkenalan",
+      "Menertawakan cara bicaranya",
+      "Melarangnya duduk di dekat kita",
+      "Pura-pura tidak mendengar saat dia bertanya"
+    ],
+    "b": 0,
+    "bahas": "Menyambut teman baru dengan ramah mencerminkan nilai kemanusiaan dan persatuan."
+  },
+  {
+    "q": "Di Indonesia terdapat 6 agama resmi yang diakui negara, yaitu Islam, Kristen, Katolik, Hindu, Buddha, dan ....",
+    "p": ["Konghucu", "Sunda Wiwitan", "Kejawen", "Animisme"],
+    "b": 0,
+    "bahas": "Enam agama resmi di Indonesia: Islam, Kristen, Katolik, Hindu, Buddha, dan Konghucu."
+  },
+  {
+    "q": "Tempat ibadah umat beragama Kristen dan Katolik adalah ....",
+    "p": ["Gereja", "Masjid", "Pura", "Vihara"],
+    "b": 0,
+    "bahas": "Masjid (Islam), Gereja (Kristen & Katolik), Pura (Hindu), Vihara (Buddha), Klenteng (Konghucu)."
+  },
+  {
+    "q": "Tempat ibadah umat beragama Hindu adalah ....",
+    "p": ["Pura", "Masjid", "Gereja", "Klenteng"],
+    "b": 0,
+    "bahas": "Umat Hindu melaksanakan ibadah di Pura."
+  },
+  {
+    "q": "Saat teman yang berbeda agama sedang merayakan hari raya keagamaannya, sikap toleransi yang baik adalah ....",
+    "p": [
+      "Mengucapkan selamat dan menjaga kerukunan bertetangga",
+      "Mengganggu jalannya perayaan mereka",
+      "Mengejek pakaian ibadah mereka",
+      "Membuat kegaduhan di depan tempat ibadahnya"
+    ],
+    "b": 0,
+    "bahas": "Toleransi beragama menjaga kedamaian dan persatuan bangsa."
+  },
+  {
+    "q": "Pengamalan Pancasila sila ke-1 (Ketuhanan Yang Maha Esa) di sekolah ditunjukkan dengan cara ....",
+    "p": [
+      "Berdoa sebelum dan sesudah pelajaran serta menghormati teman yang berbeda agama",
+      "Menyapu halaman kelas bersama",
+      "Memilih ketua kelas dengan musyawarah",
+      "Menabung uang saku"
+    ],
+    "b": 0,
+    "bahas": "Berdoa dan saling menghormati kebebasan beragama adalah wujud sila pertama."
+  },
+  {
+    "q": "Pengamalan Pancasila sila ke-3 (Persatuan Indonesia) saat bermain di lapangan sekolah adalah ....",
+    "p": [
+      "Bermain bersama semua teman tanpa membeda-bedakan suku dan asal daerah",
+      "Membuat kelompok geng yang memusuhi kelas lain",
+      "Berebut mainan ayunan",
+      "Mengejek nama orang tua teman"
+    ],
+    "b": 0,
+    "bahas": "Berteman tanpa pilih-pilih memperkuat persatuan di sekolah."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#15803d'>GOTONG ROYONG</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Bekerja Sama Membersihkan Kelas</text></svg>",
+    "q": "Perhatikan kartu kegiatan pada gambar di atas! Manfaat bekerja sama membersihkan ruang kelas bersama teman adalah ....",
+    "p": [
+      "Kelas menjadi bersih, pekerjaan cepat selesai, dan mempererat persahabatan",
+      "Kelas menjadi kotor berantakan",
+      "Waktu istirahat habis untuk bertengkar",
+      "Hanya satu anak yang kelelahan"
+    ],
+    "b": 0,
+    "bahas": "Gotong royong meringankan pekerjaan dan menumbuhkan kekompakan."
+  },
+  {
+    "q": "Ketika terjadi perbedaan pendapat saat memilih permainan yang akan dimainkan bersama teman, cara penyelesaian terbaik adalah ....",
+    "p": [
+      "Berdiskusi (musyawarah) secara baik-baik agar semua setuju",
+      "Memaksakan permainan yang kita sukai sendiri",
+      "Marah dan pulang ke rumah",
+      "Menangis di tengah lapangan"
+    ],
+    "b": 0,
+    "bahas": "Musyawarah (sila keempat) menyelesaikan perbedaan pendapat secara damai."
+  },
+  {
+    "q": "Contoh makanan tradisional khas Pulau Madura yang terkenal lezat ke seluruh Indonesia adalah ....",
+    "p": ["Satè Madhurâ dan Soto Madura", "Pempek Palembang", "Gudeg Yogyakarta", "Papeda Papua"],
+    "b": 0,
+    "bahas": "Sate Madura dan Soto Madura merupakan kekayaan kuliner Nusantara dari Madura."
+  },
+  {
+    "q": "Meskipun setiap daerah di Indonesia memiliki makanan khas dan pakaian adat yang berbeda-beda, kita harus merasa ....",
+    "p": [
+      "Bangga dan mencintai kekayaan budaya Indonesia",
+      "Malu dengan budaya daerah sendiri",
+      "Sombong dan merendahkan daerah lain",
+      "Tidak peduli dengan budaya bangsa"
+    ],
+    "b": 0,
+    "bahas": "Keberagaman budaya Nusantara adalah kekayaan bangsa Indonesia yang membanggakan."
+  },
+  {
+    "q": "Apabila melihat teman terjatuh saat berlari di halaman sekolah, sikap kemanusiaan (sila kedua) yang harus kita lakukan adalah ....",
+    "p": [
+      "Segera menolongnya berdiri dan membawanya ke ruang UKS jika terluka",
+      "Menertawakannya bersama teman-teman",
+      "Membiarkannya menangis sendirian",
+      "Melangkahinya sambil berlari"
+    ],
+    "b": 0,
+    "bahas": "Menolong teman yang kesusahan adalah wujud nyata sila kedua Pancasila."
+  },
+  {
+    "q": "Simbol sila kedua Pancasila (Kemanusiaan yang adil dan beradab) pada perisai Garuda Pancasila adalah ....",
+    "p": ["Rantai emas", "Bintang emas", "Pohon beringin", "Kepala banteng"],
+    "b": 0,
+    "bahas": "Rantai emas melambangkan hubungan sesama manusia yang saling membantu."
+  },
+  {
+    "q": "Pilihlah gambar simbol RANTAI EMAS (Sila Kedua Pancasila) di bawah ini!",
+    "p": ["Rantai", "Bintang", "Pohon", "Segitiga"],
+    "pSvg": [
+      "<svg width='65' height='45' xmlns='http://w3.org'><circle cx='22' cy='22' r='8' fill='none' stroke='#ca8a04' stroke-width='3'/><circle cx='33' cy='22' r='8' fill='none' stroke='#ca8a04' stroke-width='3'/><circle cx='44' cy='22' r='8' fill='none' stroke='#ca8a04' stroke-width='3'/></svg>",
+      "<svg width='65' height='45' xmlns='http://w3.org'><polygon points='32,6 37,17 49,17 39,24 42,36 32,29 22,36 25,24 15,17 27,17' fill='#facc15'/></svg>",
+      "<svg width='65' height='45' xmlns='http://w3.org'><circle cx='32' cy='18' r='11' fill='#16a34a'/><rect x='29' y='27' width='6' height='12' fill='#92400e'/></svg>",
+      "<svg width='65' height='45' xmlns='http://w3.org'><polygon points='32,8 14,37 50,37' fill='#38bdf8'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama menunjukkan mata rantai emas yang saling berkaitan."
+  },
+  {
+    "q": "Sikap sopan santun yang harus diterapkan saat berbicara dengan teman di kelas adalah ....",
+    "p": [
+      "Menggunakan kata-kata yang baik, lembut, dan tidak mengejek",
+      "Berteriak kasar di telinga teman",
+      "Memanggil teman dengan julukan buruk",
+      "Memotong pembicaraan teman"
+    ],
+    "b": 0,
+    "bahas": "Berbicara santun menjaga perasaan teman dan menciptakan kerukunan."
+  },
+  {
+    "q": "Ketika ibu guru membagi kelompok belajar secara acak di kelas, sikap kita yang baik adalah ....",
+    "p": [
+      "Menerima anggota kelompok dengan senang hati dan bekerja sama mengerjakan tugas",
+      "Menolak bergabung jika tidak satu kelompok dengan sahabat dekat",
+      "Marah dan tidak mau mengerjakan tugas",
+      "Menyuruh satu orang mengerjakan semua tugas"
+    ],
+    "b": 0,
+    "bahas": "Bekerja sama dengan siapa saja melatih kebersamaan dan sikap adil."
+  },
+  {
+    "q": "Kerukunan antarteman di sekolah membuat suasana belajar menjadi ....",
+    "p": [
+      "Nyaman, aman, damai, dan menyenangkan",
+      "Ribut dan penuh pertengkaran",
+      "Membosankan dan menakutkan",
+      "Kotor dan berantakan"
+    ],
+    "b": 0,
+    "bahas": "Hidup rukun menciptakan lingkungan sekolah yang harmonis."
+  }
+]);
+
+window.tambahPaketUjian("2", "bing", "UTS Semester 2", [
+  {
+    "svg": "<svg width='165' height='70' xmlns='http://w3.org'><rect x='20' y='12' width='125' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='82' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>MY FAMILY</text><text x='82' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Grandfather &amp; Grandmother</text></svg>",
+    "q": "Look at the family card above! What does 'Grandmother' mean in Indonesian?",
+    "p": ["Kakek", "Nenek", "Bibi", "Paman"],
+    "b": 1,
+    "bahas": "'Grandmother' artinya nenek, sedangkan 'Grandfather' artinya kakek."
+  },
+  {
+    "q": "Mr. Budi is my father. ... is very handsome and kind.",
+    "p": ["She", "He", "It", "We"],
+    "b": 1,
+    "bahas": "Kata ganti untuk laki-laki tunggal (Mr. Budi / ayah) adalah 'He'."
+  },
+  {
+    "q": "Mrs. Ani is my mother. ... is cooking in the kitchen.",
+    "p": ["He", "She", "They", "We"],
+    "b": 1,
+    "bahas": "Kata ganti untuk perempuan tunggal (Mrs. Ani / ibu) adalah 'She'."
+  },
+  {
+    "q": "This is Made. ... bag is blue.",
+    "p": ["His", "Her", "My", "Our"],
+    "b": 0,
+    "bahas": "Kepemilikan untuk laki-laki tunggal (Made) menggunakan 'His'."
+  },
+  {
+    "q": "That is Cici. ... dress is pink.",
+    "p": ["His", "Her", "Its", "Their"],
+    "b": 1,
+    "bahas": "Kepemilikan untuk perempuan tunggal (Cici) menggunakan 'Her'."
+  },
+  {
+    "svg": "<svg width='160' height='75' xmlns='http://w3.org'><rect x='45' y='12' width='18' height='52' rx='4' fill='#38bdf8' stroke='#0284c7' stroke-width='2'/><rect x='95' y='36' width='18' height='28' rx='4' fill='#facc15' stroke='#ca8a04' stroke-width='2'/></svg>",
+    "q": "Look at the picture above! The blue bar on the left is ..., and the yellow bar on the right is short.",
+    "p": ["tall", "fat", "old", "small"],
+    "b": 0,
+    "bahas": "Lawan kata dari 'short' (pendek) adalah 'tall' (tinggi)."
+  },
+  {
+    "q": "What is the opposite (antonim) of 'big'?",
+    "p": ["Tall", "Small", "Old", "Long"],
+    "b": 1,
+    "bahas": "Lawan kata dari 'big' (besar) adalah 'small' (kecil)."
+  },
+  {
+    "q": "My grandfather is 75 years old. He is ....",
+    "p": ["young", "old", "short", "thin"],
+    "b": 1,
+    "bahas": "Kakek berusia 75 tahun artinya sudah tua (old), lawannya muda (young)."
+  },
+  {
+    "q": "My baby sister is 1 year old. She is very ....",
+    "p": ["old", "young", "tall", "big"],
+    "b": 1,
+    "bahas": "Adik bayi berusia 1 tahun masih sangat muda (young)."
+  },
+  {
+    "q": "What does 'beautiful' mean in Indonesian?",
+    "p": ["Tampan", "Cantik", "Tinggi", "Gemuk"],
+    "b": 1,
+    "bahas": "'Beautiful' artinya cantik, sedangkan 'handsome' artinya tampan."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><ellipse cx='75' cy='38' rx='35' ry='22' fill='#94a3b8' stroke='#475569' stroke-width='2'/><text x='75' y='42' font-size='10' font-weight='bold' text-anchor='middle' fill='#ffffff'>ELEPHANT</text></svg>",
+    "q": "Look at the label above! An elephant is a very ... animal.",
+    "p": ["small", "big", "thin", "short"],
+    "b": 1,
+    "bahas": "Gajah (elephant) adalah hewan yang bertubuh sangat besar (big)."
+  },
+  {
+    "q": "An ant (semut) is a ... insect.",
+    "p": ["big", "small", "tall", "fat"],
+    "b": 1,
+    "bahas": "Semut adalah serangga yang bertubuh kecil (small)."
+  },
+  {
+    "q": "A giraffe has a ... neck.",
+    "p": ["short", "long", "small", "fat"],
+    "b": 1,
+    "bahas": "Jerapah (giraffe) memiliki leher yang panjang (long)."
+  },
+  {
+    "q": "Who is your father's brother? He is my ....",
+    "p": ["aunt", "uncle", "sister", "grandmother"],
+    "b": 1,
+    "bahas": "Saudara laki-laki dari ayah atau ibu adalah paman (uncle)."
+  },
+  {
+    "q": "Who is your mother's sister? She is my ....",
+    "p": ["uncle", "aunt", "brother", "grandfather"],
+    "b": 1,
+    "bahas": "Saudara perempuan dari ayah atau ibu adalah bibi (aunt)."
+  },
+  {
+    "q": "Is your brother tall? Yes, he ....",
+    "p": ["is", "am", "are", "do"],
+    "b": 0,
+    "bahas": "Pertanyaan 'Is your brother...?' dijawab singkat dengan 'Yes, he is.'"
+  },
+  {
+    "q": "Is your sister fat? No, she ....",
+    "p": ["is not", "am not", "are not", "do not"],
+    "b": 0,
+    "bahas": "Jawaban negatif singkat untuk 'Is your sister...?' adalah 'No, she is not.'"
+  },
+  {
+    "q": "Which picture shows a BIG ball?",
+    "p": ["Big ball", "Small ball", "Square", "Triangle"],
+    "pSvg": [
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='17' fill='#ef4444' stroke='#991b1b' stroke-width='2'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='7' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><rect x='16' y='10' width='28' height='25' fill='#facc15'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><polygon points='30,8 12,37 48,37' fill='#22c55e'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama adalah lingkaran bola berukuran besar (big ball)."
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'is - tall - Father - My'",
+    "p": [
+      "My father is tall.",
+      "Tall is my father.",
+      "Father is tall my.",
+      "Is tall my father."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat yang tepat adalah 'My father is tall.'"
+  },
+  {
+    "q": "'Adik perempuanku cantik.' The English translation is ....",
+    "p": [
+      "My sister is beautiful.",
+      "My brother is handsome.",
+      "My mother is tall.",
+      "My father is old."
+    ],
+    "b": 0,
+    "bahas": "Adik perempuanku cantik = My sister is beautiful."
+  }
+]);
+
+window.tambahPaketUjian("2", "madura", "UTS Semester 2", [
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><rect x='40' y='15' width='70' height='42' rx='4' fill='#38bdf8' stroke='#0284c7' stroke-width='2'/><line x1='75' y1='15' x2='75' y2='57' stroke='#ffffff' stroke-width='2.5'/></svg>",
+    "q": "Abâs ghâmbhâr buku è attas! Lamon Hasan buka buku, Hasan lagi ....",
+    "p": ["Maca", "Tèdung", "Berka'", "Alangngoy"],
+    "b": 0,
+    "bahas": "Maca artèna membaca."
+  },
+  {
+    "q": "Oca' 'nolès' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Menulis", "Membaca", "Berjalan", "Duduk"],
+    "b": 0,
+    "bahas": "Nolès artèna menulis."
+  },
+  {
+    "q": "Oca' 'toju'' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Duduk", "Berdiri", "Tidur", "Lari"],
+    "b": 0,
+    "bahas": "Toju' artèna duduk, dhinèng manjheng artèna berdiri."
+  },
+  {
+    "q": "Oca' 'manjheng' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Berdiri", "Duduk", "Tidur", "Makan"],
+    "b": 0,
+    "bahas": "Manjheng artèna berdiri."
+  },
+  {
+    "svg": "<svg width='165' height='70' xmlns='http://w3.org'><circle cx='55' cy='35' r='20' fill='#ef4444' stroke='#991b1b' stroke-width='2'/><circle cx='115' cy='38' r='9' fill='#22c55e' stroke='#15803d' stroke-width='2'/></svg>",
+    "q": "Abâs bunderan mèra sè rajâ è kacèr bân bunderan bhuru è kangan! Tabhâligghâ (antonim) dâri oca' 'rajâ' (besar) èngghi panèka ....",
+    "p": ["Kènè' (kecil)", "Lanjhâng", "Tèngghi", "Panas"],
+    "b": 0,
+    "bahas": "Rajâ (besar) tabhâligghâ kènè' (kecil)."
+  },
+  {
+    "q": "Tabhâligghâ (antonim) dâri oca' 'lanjhâng' (panjang) èngghi panèka ....",
+    "p": ["Pandhâ' (pendek)", "Rajâ", "Bhersè", "Cellep"],
+    "b": 0,
+    "bahas": "Lanjhâng (panjang) tabhâligghâ pandhâ' (pendek)."
+  },
+  {
+    "q": "Tabhâligghâ (antonim) dâri oca' 'bhersè' (bersih) èngghi panèka ....",
+    "p": ["Kotor", "Raddhin", "Sèhat", "Bhâghus"],
+    "b": 0,
+    "bahas": "Bhersè tabhâligghâ kotor."
+  },
+  {
+    "svg": "<svg width='165' height='65' xmlns='http://w3.org'><rect x='25' y='12' width='115' height='42' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='82' y='39' font-size='16' font-weight='bold' text-anchor='middle' fill='#0f172a'>17</text></svg>",
+    "q": "Abâs angka è ghâmbhâr attas! Bilângan '17' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Ennem bellâs", "Pètto' bellâs", "Bâllu' bellâs", "Sanga' bellâs"],
+    "b": 1,
+    "bahas": "17 dâlem bhâsa Madhurâ èbâca 'pètto' bellâs'."
+  },
+  {
+    "q": "Bilângan '19' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Bâllu' bellâs", "Sanga' bellâs", "Du polo", "Sabellâs"],
+    "b": 1,
+    "bahas": "19 dâlem bhâsa Madhurâ èbâca 'sanga' bellâs'."
+  },
+  {
+    "q": "Bilângan '20' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Sapolo", "Du polo", "Tello polo", "Sèlaè'"],
+    "b": 1,
+    "bahas": "20 dâlem bhâsa Madhurâ èbâca 'du polo'."
+  },
+  {
+    "q": "Kakanan khas Madhurâ sè èghâbây dâri dhâghing ajâm sè èsundukè bân èobbhâr kalabân bumbu kacang èngghi panèka ....",
+    "p": ["Satè Madhurâ", "Bakso", "Pecel", "Rawon"],
+    "b": 0,
+    "bahas": "Satè Madhurâ panèka kakanan khas Madhurâ sè sanget kasohor."
+  },
+  {
+    "q": "Polo Madhurâ kasohor ngasèllaghi bumbu dâpor sè rassana accèn (asin) dâri aèng tasè', èngghi panèka ....",
+    "p": ["Buja (garam)", "Ghulâ", "Cabbhi", "Mènynya'"],
+    "b": 0,
+    "bahas": "Buja (garam) èghâbây dâri aèng tasè' è tambâ' buja Madhurâ."
+  },
+  {
+    "q": "Mainan tradisional sè èkaghâbây dâri kertas bân perrèng tèpès sè èpa'abber è lapangan ngangghuy benang èngghi panèka ....",
+    "p": ["Lajângan (layang-layang)", "Bal-balan", "Kelereng", "Boneka"],
+    "b": 0,
+    "bahas": "Lajângan èpa'abber è bâkto bâdâ angèn."
+  },
+  {
+    "q": "Bhâsa alosna oca' 'mangkat / èntar' ka'angghuy Bapak Guru èngghi panèka ....",
+    "p": ["Mèyos", "Sare", "Dhâ'âr", "Kondhur"],
+    "b": 0,
+    "bahas": "Èntar bhâsa alosna 'mèyos'."
+  },
+  {
+    "q": "Bhâsa alosna oca' 'molè' (pulang) ka'angghuy Ibu Guru èngghi panèka ....",
+    "p": ["Kondhur / Palèman", "Mèyos", "Rabhu", "Sare"],
+    "b": 0,
+    "bahas": "Molè bhâsa alosna 'kondhur' otabâ 'palèman'."
+  },
+  {
+    "q": "Kèbân sè odi' è darat, andi' tandhu', bân abhânto petani macol sabâ èngghi panèka ....",
+    "p": ["Sapè / Kerbhu", "Jhuko'", "Mano'", "Kocèng"],
+    "b": 0,
+    "bahas": "Sapè sareng kerbhu abhânto petani è sabâ."
+  },
+  {
+    "q": "Bârnana bhiru dâun (hijau) dâlem bhâsa Madhurâ èsebbhut ....",
+    "p": ["Bhuru", "Bhiru", "Mèra", "Konèng"],
+    "b": 0,
+    "bahas": "Hijau dâlem bhâsa Madhurâ èngghi panèka 'bhuru', dhinèng biru èngghi panèka 'bhiru'."
+  },
+  {
+    "q": "Pilih ghâmbhâr LAJÂNGAN (layang-layang) è bâbâ panèka!",
+    "p": ["Lajângan", "Bola", "Buku", "Kocèng"],
+    "pSvg": [
+      "<svg width='60' height='45' xmlns='http://w3.org'><polygon points='30,5 46,20 30,38 14,20' fill='#facc15' stroke='#ca8a04' stroke-width='2'/><line x1='30' y1='5' x2='30' y2='38' stroke='#0f172a' stroke-width='1'/><line x1='14' y1='20' x2='46' y2='20' stroke='#0f172a' stroke-width='1'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='13' fill='#ef4444'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><rect x='16' y='10' width='28' height='24' fill='#22c55e'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='24' r='12' fill='#fed7aa'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Ghâmbhâr kapèng sèttong konèng panèka lajângan."
+  },
+  {
+    "q": "Ronto plastik sè bâdâ è tanèyan sakola'an kodhu èbuwâng ka ....",
+    "p": ["Tempat ronto (tempat sampah)", "Kolong bangku", "Selokan", "Attas mèjâ"],
+    "b": 0,
+    "bahas": "Mbuwâng ronto ka tempat ronto ajâgâ kabersèyan sakola'an."
+  },
+  {
+    "q": "Sabbhân arè sabellunna tèdung malem, kita kodhu ....",
+    "p": [
+      "Ngosok ghighi, abhersè'è soko, bân adhu'a",
+      "Ngakan permen bânnya'",
+      "Amaèn è lowar roma",
+      "Nontong TV sampe' lagghu"
+    ],
+    "b": 0,
+    "bahas": "Ngosok ghighi bân adhu'a sabellunna tèdung panèka kabiyasa'an sè bhâghus."
+  }
+]);
+
+window.tambahPaketUjian("2", "kesenian", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><polygon points='25,55 60,20 95,55' fill='#22c55e'/><polygon points='70,55 110,15 150,55' fill='#16a34a'/><circle cx='135' cy='18' r='9' fill='#facc15'/></svg>",
+    "q": "Perhatikan gambar pemandangan gunung dan matahari di atas! Warna yang paling tepat untuk mewarnai matahari pagi adalah ....",
+    "p": ["Kuning atau oranye cerah", "Hitam pekat", "Ungu tua", "Abu-abu gelap"],
+    "b": 0,
+    "bahas": "Matahari pagi bersinar cerah sehingga cocok diwarnai kuning atau oranye."
+  },
+  {
+    "q": "Kegiatan menggambar suasana hati seperti wajah tersenyum gembira atau pemandangan alam yang indah disebut menggambar ....",
+    "p": ["Ekspresi", "Peta jalan", "Garis tepi", "Huruf angka"],
+    "b": 0,
+    "bahas": "Gambar ekspresi menuangkan perasaan dan imajinasi ke dalam karya gambar."
+  },
+  {
+    "q": "Untuk membuat garis tepi gambar pemandangan tampak tegas dan jelas setelah diwarnai krayon, kita dapat menebalkannya menggunakan ....",
+    "p": ["Spidol hitam atau pensil warna gelap", "Penghapus karet", "Lem kertas", "Penggaris besi"],
+    "b": 0,
+    "bahas": "Spidol hitam memperjelas garis batas objek gambar."
+  },
+  {
+    "svg": "<svg width='165' height='70' xmlns='http://w3.org'><rect x='25' y='15' width='115' height='40' rx='8' fill='#fce7f3' stroke='#db2777' stroke-width='2'/><text x='82' y='40' font-size='11' font-weight='bold' text-anchor='middle' fill='#9d174d'>TEKNIK CETAK / CAP</text></svg>",
+    "q": "Perhatikan kartu informasi pada gambar di atas! Bahan alam yang dapat dipotong dan digunakan sebagai cetakan stempel (cap) gambar bunga adalah ....",
+    "p": [
+      "Pelepah pisang, wortel, dan kentang",
+      "Batu kali yang keras",
+      "Kaca jendela",
+      "Kawat besi"
+    ],
+    "b": 0,
+    "bahas": "Pelepah pisang, wortel, dan umbi kentang mudah dipotong menjadi pola stempel cap."
+  },
+  {
+    "q": "Jari tangan dan telapak tangan kita juga dapat dicelupkan ke pewarna aman lalu ditempelkan ke kertas gambar untuk membuat lukisan cap yang disebut ....",
+    "p": ["Finger painting (lukis jari)", "Seni pahat", "Seni anyam", "Origami"],
+    "b": 0,
+    "bahas": "Finger painting adalah teknik melukis langsung menggunakan jari dan telapak tangan."
+  },
+  {
+    "q": "Setelah selesai melakukan kegiatan melukis menggunakan pewarna jari (finger painting), hal pertama yang harus segera dilakukan adalah ....",
+    "p": [
+      "Mencuci tangan dengan air bersih dan sabun",
+      "Mengusapkan tangan ke baju seragam teman",
+      "Memegang buku pelajaran yang bersih",
+      "Menggosok mata dengan jari"
+    ],
+    "b": 0,
+    "bahas": "Mencuci tangan dengan air dan sabun menjaga kebersihan serta kesehatan."
+  },
+  {
+    "q": "Karya seni rupa yang memiliki ukuran panjang, lebar, dan tinggi sehingga dapat dilihat dari depan, samping, maupun belakang disebut karya seni rupa ....",
+    "p": ["Tiga dimensi", "Dua dimensi", "Satu garis", "Datar"],
+    "b": 0,
+    "bahas": "Patung kecil, vas bunga, dan mainan dari kardus termasuk karya tiga dimensi."
+  },
+  {
+    "q": "Bahan lunak buatan yang berwarna-warni dan mudah dibentuk menjadi tiruan buah-buahan atau hewan dengan tangan adalah ....",
+    "p": ["Plastisin / lilin mainan", "Kardus tebal", "Batu bata", "Kayu jati"],
+    "b": 0,
+    "bahas": "Plastisin bersifat lunak dan lentur sehingga mudah dibentuk."
+  },
+  {
+    "q": "Bahan alam lunak di sekitar sungai atau sawah yang dapat dibentuk menjadi celengan atau mangkuk kecil lalu dijemur hingga keras adalah ....",
+    "p": ["Tanah liat", "Pasir kering", "Kertas koran", "Daun pisang"],
+    "b": 0,
+    "bahas": "Tanah liat (lempung) adalah bahan alam lunak untuk membuat gerabah dan patung."
+  },
+  {
+    "q": "Kardus bekas kemasan susu atau sepatu dapat dimanfaatkan menjadi karya seni tiga dimensi berupa ....",
+    "p": [
+      "Mainan rumah-rumahan, mobil-mobilan, atau tempat pensil",
+      "Air minum kemasan",
+      "Cat air warna-warni",
+      "Benang jahit"
+    ],
+    "b": 0,
+    "bahas": "Kardus bekas mudah digunting dan ditempel menjadi kerajinan tiga dimensi."
+  },
+  {
+    "svg": "<svg width='160' height='70' xmlns='http://w3.org'><rect x='50' y='15' width='60' height='40' rx='4' fill='#d97706' stroke='#92400e' stroke-width='2'/><line x1='50' y1='25' x2='110' y2='25' stroke='#fef3c7' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar kotak kardus di atas! Untuk merekatkan bagian-bagian kardus bekas agar menempel kuat saat membuat prakarya rumah-rumahan, kita menggunakan ....",
+    "p": ["Lem kertas kuat / selotip", "Air putih", "Penghapus karet", "Pensil warna"],
+    "b": 0,
+    "bahas": "Lem atau selotip merekatkan potongan kardus dengan rapi."
+  },
+  {
+    "q": "Biji-bijian kering seperti kacang hijau, jagung, dan kedelai dapat ditempelkan pada pola gambar burung untuk membuat karya ....",
+    "p": ["Kolase / mozaik biji-bijian", "Lukisan cat minyak", "Origami kertas", "Patung kayu"],
+    "b": 0,
+    "bahas": "Biji-bijian kering memberi tekstur dan warna alami yang indah pada karya tempel."
+  },
+  {
+    "q": "Campuran warna cat air biru dan kuning dengan jumlah yang sama akan menghasilkan warna baru yaitu ....",
+    "p": ["Hijau", "Ungu", "Oranye", "Merah"],
+    "b": 0,
+    "bahas": "Biru + kuning = hijau."
+  },
+  {
+    "q": "Campuran warna cat air merah dan kuning akan menghasilkan warna baru yaitu ....",
+    "p": ["Oranye (jingga)", "Hijau", "Ungu", "Biru"],
+    "b": 0,
+    "bahas": "Merah + kuning = oranye."
+  },
+  {
+    "q": "Untuk membuat gambar langit pada malam hari bertabur bintang, warna krayon yang paling sesuai adalah ....",
+    "p": [
+      "Biru tua atau hitam dengan bintang berwarna kuning",
+      "Kuning seluruhnya tanpa bintang",
+      "Putih polos",
+      "Merah muda seluruhnya"
+    ],
+    "b": 0,
+    "bahas": "Langit malam berwarna gelap (biru tua/hitam) kontras dengan cahaya bintang berwarna kuning."
+  },
+  {
+    "q": "Saat menggunting pola gambar dari kertas karton, kita harus memegang gunting dengan ....",
+    "p": [
+      "Hati-hati dan mengikuti garis pola secara perlahan",
+      "Terburu-buru sambil bercanda dengan teman",
+      "Menutup mata",
+      "Berlari-lari di dalam kelas"
+    ],
+    "b": 0,
+    "bahas": "Ketelitian dan kehati-hatian menjaga keselamatan kerja dan kerapian potongan."
+  },
+  {
+    "q": "Pilihlah gambar RUMAH SEDERHANA dari gabungan bentuk segitiga dan kotak di bawah ini!",
+    "p": ["Rumah", "Bola", "Bintang", "Bulan"],
+    "pSvg": [
+      "<svg width='60' height='45' xmlns='http://w3.org'><polygon points='30,6 12,22 48,22' fill='#ef4444'/><rect x='16' y='22' width='28' height='18' fill='#fef08a' stroke='#ca8a04' stroke-width='1.5'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='14' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><polygon points='30,6 36,18 49,18 39,26 42,38 30,31 18,38 21,26 11,18 24,18' fill='#facc15'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><path d='M32,8 A14,14 0 1,0 32,36 A10,10 0 1,1 32,8 Z' fill='#a855f7'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama memiliki atap segitiga merah dan dinding kotak kuning."
+  },
+  {
+    "q": "Karya seni yang sudah selesai dibuat sebaiknya kita rawat dan simpan dengan baik sebagai wujud ....",
+    "p": [
+      "Menghargai hasil usaha dan kreativitas diri sendiri",
+      "Kesombongan kepada teman",
+      "Membuang-buang waktu belajar",
+      "Mengotori lemari kelas"
+    ],
+    "b": 0,
+    "bahas": "Menyimpan dan merawat karya melatih rasa bangga dan tanggung jawab."
+  },
+  {
+    "q": "Ketika teman menunjukkan hasil prakarya plastisinnya yang lucu di depan kelas, sikap kita yang baik adalah ....",
+    "p": [
+      "Memberikan tepuk tangan dan memuji karyanya dengan ramah",
+      "Mengejek bentuknya jelek",
+      "Meremas plastisin milik teman hingga rusak",
+      "Tertawa terbahak-bahak mengejek"
+    ],
+    "b": 0,
+    "bahas": "Memberi pujian dan tepuk tangan menumbuhkan rasa percaya diri teman."
+  },
+  {
+    "q": "Manfaat memanfaatkan barang bekas seperti kardus dan botol plastik untuk membuat kerajinan tangan adalah ....",
+    "p": [
+      "Mengurangi sampah di lingkungan dan melatih kreativitas",
+      "Menambah tumpukan sampah di rumah",
+      "Membuat halaman sekolah menjadi kotor",
+      "Menghabiskan banyak uang jajan"
+    ],
+    "b": 0,
+    "bahas": "Daur ulang barang bekas menjaga kebersihan lingkungan sekaligus menghasilkan karya berguna."
+  }
+]);
+
