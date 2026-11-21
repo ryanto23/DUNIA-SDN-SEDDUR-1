@@ -1864,3 +1864,1536 @@ window.tambahPaketUjian("3", "kesenian", "UAS Semester 1", [
   }
 ]);
 
+window.tambahPaketUjian("3", "mtk", "UTS Semester 1", [
+  {
+    "q": "Bilangan 648 dibaca ....",
+    "p": [
+      "Enam ratus delapan puluh empat",
+      "Enam ratus empat puluh delapan",
+      "Enam puluh empat delapan",
+      "Empat ratus enam puluh delapan"
+    ],
+    "b": 1,
+    "bahas": "6 ratusan (600) + 4 puluhan (40) + 8 satuan (8) dibaca enam ratus empat puluh delapan."
+  },
+  {
+    "q": "Lambang bilangan dari 'sembilan ratus tujuh puluh lima' adalah ....",
+    "p": ["957", "975", "795", "907"],
+    "b": 1,
+    "bahas": "Sembilan ratus (900) + tujuh puluh (70) + lima (5) = 975."
+  },
+  {
+    "q": "Pada bilangan 834, angka 3 menempati nilai tempat ....",
+    "p": ["Ratusan", "Puluhan", "Satuan", "Ribuan"],
+    "b": 1,
+    "bahas": "8 = ratusan, 3 = puluhan, 4 = satuan."
+  },
+  {
+    "q": "Nilai angka 7 pada bilangan 752 adalah ....",
+    "p": ["7", "70", "700", "7.000"],
+    "b": 2,
+    "bahas": "Angka 7 berada di posisi ratusan sehingga nilainya 700."
+  },
+  {
+    "svg": "<svg width='180' height='65' xmlns='http://w3.org'><rect x='12' y='14' width='58' height='36' rx='6' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='41' y='37' font-size='13' font-weight='bold' text-anchor='middle'>465</text><circle cx='90' cy='32' r='12' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><text x='90' y='37' font-size='12' font-weight='bold' text-anchor='middle'>?</text><rect x='110' y='14' width='58' height='36' rx='6' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='139' y='37' font-size='13' font-weight='bold' text-anchor='middle'>456</text></svg>",
+    "q": "Perhatikan dua bilangan pada gambar di atas! Tanda perbandingan yang tepat untuk mengganti tanda tanya (?) adalah ....",
+    "p": ["<", ">", "=", "+"],
+    "b": 1,
+    "bahas": "465 lebih besar daripada 456, sehingga tandanya adalah '>'."
+  },
+  {
+    "q": "Urutan bilangan berikut dari yang terkecil ke terbesar yang benar adalah ....",
+    "p": [
+      "342, 324, 423, 432",
+      "324, 342, 423, 432",
+      "432, 423, 342, 324",
+      "324, 423, 342, 432"
+    ],
+    "b": 1,
+    "bahas": "Urutan bilangan dari paling kecil ke paling besar adalah 324, 342, 423, 432."
+  },
+  {
+    "q": "Dekomposisi (uraian nilai tempat) dari bilangan 589 adalah ....",
+    "p": [
+      "500 + 80 + 9",
+      "500 + 90 + 8",
+      "50 + 80 + 9",
+      "500 + 8 + 9"
+    ],
+    "b": 0,
+    "bahas": "589 terdiri atas 5 ratusan (500) + 8 puluhan (80) + 9 satuan (9)."
+  },
+  {
+    "q": "Bilangan yang terbentuk dari 6 ratusan + 0 puluhan + 4 satuan adalah ....",
+    "p": ["640", "604", "406", "460"],
+    "b": 1,
+    "bahas": "600 + 0 + 4 = 604."
+  },
+  {
+    "q": "Hasil penjumlahan dari 234 + 145 adalah ....",
+    "p": ["369", "379", "389", "479"],
+    "b": 1,
+    "bahas": "Ratusan: 200+100=300, Puluhan: 30+40=70, Satuan: 4+5=9. Jadi 379."
+  },
+  {
+    "q": "Hasil penjumlahan bersusun dari 368 + 257 adalah ....",
+    "p": ["515", "615", "625", "635"],
+    "b": 2,
+    "bahas": "8+7=15 (tulis 5 simpan 1), 1+6+5=12 (tulis 2 simpan 1), 1+3+2=6. Hasilnya 625."
+  },
+  {
+    "q": "Di perpustakaan SD Negeri Seddur 1 terdapat 245 buku cerita dan 178 buku pelajaran. Jumlah seluruh buku di perpustakaan tersebut adalah ....",
+    "p": ["413 buku", "423 buku", "433 buku", "323 buku"],
+    "b": 1,
+    "bahas": "245 + 178 = 423 buku."
+  },
+  {
+    "q": "Hasil pengurangan dari 487 - 152 adalah ....",
+    "p": ["325", "335", "345", "639"],
+    "b": 1,
+    "bahas": "487 - 152 = 335."
+  },
+  {
+    "q": "Hasil pengurangan dengan teknik meminjam dari 524 - 168 adalah ....",
+    "p": ["356", "366", "456", "466"],
+    "b": 0,
+    "bahas": "524 - 168 = 356."
+  },
+  {
+    "q": "Pak Budi memanen 450 buah jeruk dari kebunnya. Sebanyak 235 buah jeruk terjual di pasar. Sisa buah jeruk milik Pak Budi adalah ....",
+    "p": ["205 buah", "215 buah", "225 buah", "685 buah"],
+    "b": 1,
+    "bahas": "450 - 235 = 215 buah jeruk."
+  },
+  {
+    "q": "Bilangan yang tepat untuk mengisi titik-titik pada operasi hitung 150 + ... = 400 adalah ....",
+    "p": ["150", "200", "250", "350"],
+    "b": 2,
+    "bahas": "400 - 150 = 250."
+  },
+  {
+    "q": "Bilangan yang tepat untuk melengkapi pengurangan ... - 120 = 230 adalah ....",
+    "p": ["110", "330", "350", "450"],
+    "b": 2,
+    "bahas": "230 + 120 = 350."
+  },
+  {
+    "svg": "<svg width='175' height='65' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='42' rx='8' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='38' font-size='12' font-weight='bold' text-anchor='middle' fill='#15803d'>4 + 4 + 4 + 4 + 4</text></svg>",
+    "q": "Perhatikan penjumlahan berulang pada gambar di atas! Bentuk perkalian yang tepat dari penjumlahan tersebut adalah ....",
+    "p": ["4 × 4", "5 × 4", "4 × 6", "5 × 5"],
+    "b": 1,
+    "bahas": "Angka 4 dijumlahkan sebanyak 5 kali ditulis 5 × 4 = 20."
+  },
+  {
+    "q": "Hasil perkalian dari 6 × 7 adalah ....",
+    "p": ["36", "42", "48", "49"],
+    "b": 1,
+    "bahas": "6 × 7 = 42."
+  },
+  {
+    "q": "Ibu membeli 4 kantong plastik berisi buah apel. Setiap kantong berisi 8 buah apel. Jumlah seluruh buah apel yang dibeli Ibu adalah ....",
+    "p": ["12 buah", "24 buah", "32 buah", "36 buah"],
+    "b": 2,
+    "bahas": "4 × 8 = 32 buah apel."
+  },
+  {
+    "q": "Hasil perkalian dari 15 × 4 adalah ....",
+    "p": ["45", "50", "60", "75"],
+    "b": 2,
+    "bahas": "15 × 4 = (10 × 4) + (5 × 4) = 40 + 20 = 60."
+  },
+  {
+    "q": "Hasil pembagian dari 45 : 5 adalah ....",
+    "p": ["7", "8", "9", "10"],
+    "b": 2,
+    "bahas": "45 : 5 = 9 (karena 9 × 5 = 45)."
+  },
+  {
+    "q": "Rani memiliki 36 butir permen yang akan dibagikan sama banyak kepada 6 orang temannya. Banyak permen yang diterima setiap teman adalah ....",
+    "p": ["5 butir", "6 butir", "7 butir", "8 butir"],
+    "b": 1,
+    "bahas": "36 : 6 = 6 butir permen."
+  },
+  {
+    "q": "Perhatikan pola bilangan loncat berikut: 120, 125, 130, 135, .... Bilangan berikutnya adalah ....",
+    "p": ["136", "140", "145", "150"],
+    "b": 1,
+    "bahas": "Pola bilangan bertambah 5 setiap langkah: 135 + 5 = 140."
+  },
+  {
+    "q": "Di sebuah toko terdapat 320 buku tulis. Pada pagi hari terjual 115 buku dan sore hari terjual lagi 85 buku. Sisa buku tulis di toko tersebut sekarang adalah ....",
+    "p": ["110 buku", "120 buku", "130 buku", "200 buku"],
+    "b": 1,
+    "bahas": "320 - 115 - 85 = 205 - 85 = 120 buku."
+  },
+  {
+    "q": "Manakah bilangan di bawah ini yang merupakan bilangan genap?",
+    "p": ["341", "457", "568", "679"],
+    "b": 2,
+    "bahas": "Bilangan genap memiliki angka satuan 0, 2, 4, 6, atau 8. Bilangan 568 berakhiran 8 sehingga merupakan bilangan genap."
+  }
+]);
+
+window.tambahPaketUjian("3", "ipas", "UTS Semester 1", [
+  {
+    "q": "Kelompok hewan yang tidak memiliki tulang belakang di dalam tubuhnya disebut hewan ....",
+    "p": ["Vertebrata", "Invertebrata / Avertebrata", "Mamalia", "Reptilia"],
+    "b": 1,
+    "bahas": "Invertebrata adalah kelompok hewan yang tidak mempunyai tulang belakang, seperti kupu-kupu, cacing, dan siput."
+  },
+  {
+    "q": "Hewan di bawah ini yang termasuk kelompok hewan bertulang belakang (vertebrata) adalah ....",
+    "p": ["Cacing tanah dan siput", "Kucing, ayam, dan ikan mas", "Laba-laba dan semut", "Ubur-ubur dan bintang laut"],
+    "b": 1,
+    "bahas": "Kucing (mamalia), ayam (unggas/aves), dan ikan memiliki rangka tulang belakang di dalam tubuhnya."
+  },
+  {
+    "q": "Ikan dapat bergerak lincah dan berenang di dalam air menggunakan alat gerak berupa ....",
+    "p": ["Kaki berselaput", "Sirip dan ekor", "Sayap berbulu", "Otot perut"],
+    "b": 1,
+    "bahas": "Ikan berenang dengan sirip dan menggunakan ekornya untuk berbelok arah di air."
+  },
+  {
+    "q": "Hewan yang memiliki bentuk gigi seri datar untuk memotong rumput serta gigi geraham lebar untuk mengunyah tumbuhan termasuk pemakan tumbuhan yang disebut ....",
+    "p": ["Karnivora", "Herbivora", "Omnivora", "Insektivora"],
+    "b": 1,
+    "bahas": "Herbivora adalah hewan pemakan tumbuhan seperti sapi, kambing, kelinci, dan kuda."
+  },
+  {
+    "q": "Hewan karnivora seperti harimau dan kucing memiliki gigi taring yang runcing dan tajam dengan fungsi utama untuk ....",
+    "p": [
+      "Mengunyah daun-daunan yang keras",
+      "Mencabik dan merobek daging mangsanya",
+      "Menghisap nektar pada bunga",
+      "Memecah biji-bijian kecil"
+    ],
+    "b": 1,
+    "bahas": "Gigi taring yang tajam membantu hewan karnivora menangkap dan merobek daging."
+  },
+  {
+    "q": "Ayam dan bebek memakan biji-bijian serta cacing kecil sehingga termasuk kelompok hewan ....",
+    "p": ["Herbivora", "Karnivora", "Omnivora (pemakan segalanya)", "Pemakan buah saja"],
+    "b": 2,
+    "bahas": "Omnivora adalah hewan pemakan tumbuhan maupun hewan lain, contohnya ayam, bebek, dan tikus."
+  },
+  {
+    "q": "Burung elang memiliki paruh yang melengkung tajam dan cakar yang kuat karena makanannya berupa ....",
+    "p": ["Nektar bunga", "Daging hewan kecil seperti ular dan tikus", "Rumput segar", "Biji padi"],
+    "b": 1,
+    "bahas": "Bentuk paruh dan cakar hewan menyesuaikan dengan jenis makanannya."
+  },
+  {
+    "q": "Kupu-kupu dan lebah memiliki alat mulut berbentuk seperti belalai panjang yang dapat digulung (probosis) yang berguna untuk ....",
+    "p": [
+      "Menghisap sari manis (nektar) di dasar bunga",
+      "Menggigit batang kayu yang keras",
+      "Menangkap ikan di sungai",
+      "Menggali lubang di tanah"
+    ],
+    "b": 0,
+    "bahas": "Mulut penghisap pada kupu-kupu berfungsi mengambil nektar bunga."
+  },
+  {
+    "q": "Siput dan kura-kura memiliki cangkang keras di bagian punggungnya yang berfungsi untuk ....",
+    "p": [
+      "Melindungi tubuhnya yang lunak dari serangan musuh",
+      "Membantu terbang tinggi di udara",
+      "Menyimpan cadangan air minum",
+      "Menarik perhatian mangsa"
+    ],
+    "b": 0,
+    "bahas": "Cangkang keras melindungi tubuh lunak siput dan kura-kura dari bahaya."
+  },
+  {
+    "q": "Perbedaan ciri fisik yang mencolok antara katak dan buaya adalah ....",
+    "p": [
+      "Katak berkulit lembap dan berlendir tanpa sisik, sedangkan buaya berkulit tebal bersisik keras",
+      "Katak bertelur di sarang pohon, sedangkan buaya beranak",
+      "Katak memiliki sayap, sedangkan buaya memiliki sirip",
+      "Katak memakan rumput, sedangkan buaya memakan buah"
+    ],
+    "b": 0,
+    "bahas": "Katak termasuk amfibi berkulit basah/lembap, sedangkan buaya termasuk reptil bersisik keras."
+  },
+  {
+    "q": "Seluruh tahapan pertumbuhan dan perkembangan yang dialami makhluk hidup sejak lahir atau menetas hingga dewasa dan berkembang biak disebut ....",
+    "p": ["Siklus hidup (daur hidup)", "Rantai makanan", "Fotosintesis", "Adaptasi"],
+    "b": 0,
+    "bahas": "Siklus hidup adalah rangkaian tahapan pertumbuhan dan perkembangan makhluk hidup sepanjang hidupnya."
+  },
+  {
+    "svg": "<svg width='185' height='70' xmlns='http://w3.org'><rect x='6' y='20' width='34' height='28' rx='5' fill='#fef08a' stroke='#ca8a04'/><text x='23' y='37' font-size='8' text-anchor='middle'>Telur</text><text x='45' y='37' font-size='10'>→</text><rect x='52' y='20' width='36' height='28' rx='5' fill='#dcfce7' stroke='#16a34a'/><text x='70' y='37' font-size='8' text-anchor='middle'>Ulat</text><text x='93' y='37' font-size='10'>→</text><rect x='100' y='20' width='36' height='28' rx='5' fill='#e0f2fe' stroke='#0284c7'/><text x='118' y='37' font-size='8' text-anchor='middle'>Pupa</text><text x='141' y='37' font-size='10'>→</text><rect x='148' y='20' width='34' height='28' rx='5' fill='#fce7f3' stroke='#db2777'/><text x='165' y='37' font-size='8' text-anchor='middle'>Kupu</text></svg>",
+    "q": "Perhatikan bagan siklus hidup kupu-kupu pada gambar di atas! Perubahan bentuk tubuh yang sangat berbeda pada setiap tahapannya disebut metamorfosis ....",
+    "p": ["Sempurna", "Tidak sempurna", "Tanpa metamorfosis", "Buatan"],
+    "b": 0,
+    "bahas": "Metamorfosis sempurna mengalami 4 tahap: telur → larva (ulat) → pupa (kepompong) → imago (dewasa)."
+  },
+  {
+    "q": "Tahapan pada siklus hidup kupu-kupu yang paling sering merugikan petani karena memakan daun-daun tanaman sayur adalah tahap ....",
+    "p": ["Telur", "Larva (ulat)", "Pupa (kepompong)", "Kupu-kupu dewasa"],
+    "b": 1,
+    "bahas": "Pada fase larva (ulat), ulat sangat rakus memakan dedaunan untuk menyimpan energi sebelum menjadi kepompong."
+  },
+  {
+    "q": "Tahap kepompong (pupa) dalam siklus hidup kupu-kupu adalah masa di mana ulat ....",
+    "p": [
+      "Berpuasa dan membungkus diri dalam selubung untuk berubah bentuk menjadi kupu-kupu",
+      "Bertelur di permukaan daun",
+      "Terbang mencari nektar bunga",
+      "Memakan daun jagung setiap hari"
+    ],
+    "b": 0,
+    "bahas": "Di dalam kepompong (pupa), terjadi pembentukan sayap dan organ tubuh kupu-kupu dewasa."
+  },
+  {
+    "q": "Hewan di bawah ini yang mengalami metamorfosis sempurna seperti kupu-kupu adalah ....",
+    "p": ["Nyamuk, lalat, dan katak", "Belalang, kecoak, dan jangkrik", "Kucing, sapi, dan kambing", "Ayam, bebek, dan burung"],
+    "b": 0,
+    "bahas": "Nyamuk, lalat, lebah, dan katak mengalami metamorfosis sempurna."
+  },
+  {
+    "q": "Dalam siklus hidup nyamuk, fase larva (jentik-jentik) dan pupa hidup di tempat yang berupa ....",
+    "p": ["Genangan air yang tenang", "Dedaunan kering di tanah", "Sarang di atas pohon tinggi", "Lubang pasir di pantai"],
+    "b": 0,
+    "bahas": "Nyamuk bertelur di permukaan air, lalu menetas menjadi jentik-jentik air."
+  },
+  {
+    "q": "Belalang dan kecoak mengalami metamorfosis tidak sempurna karena di dalam siklus hidupnya TIDAK melewati tahap ....",
+    "p": ["Telur", "Nimfa (hewan muda)", "Pupa (kepompong)", "Hewan dewasa"],
+    "b": 2,
+    "bahas": "Metamorfosis tidak sempurna hanya melalui 3 tahap: telur → nimfa → imago (dewasa), tanpa tahap pupa."
+  },
+  {
+    "q": "Hewan muda yang baru menetas dari telur pada siklus hidup belalang atau kecoak dan bentuknya sudah mirip induknya tetapi belum bersayap disebut ....",
+    "p": ["Larva", "Nimfa", "Pupa", "Berudu"],
+    "b": 1,
+    "bahas": "Nimfa adalah fase hewan muda pada metamorfosis tidak sempurna."
+  },
+  {
+    "q": "Pada siklus hidup katak, tahap berudu (kecebong) yang hidup di dalam air bernapas menggunakan ....",
+    "p": ["Paru-paru", "Insang", "Trakea", "Kulit kering"],
+    "b": 1,
+    "bahas": "Berudu hidup di air dan bernapas dengan insang, sedangkan katak dewasa bernapas dengan paru-paru dan kulit."
+  },
+  {
+    "q": "Hewan-hewan di bawah ini yang berkembang biak dengan cara melahirkan anak (vivipar) dan tidak mengalami metamorfosis adalah ....",
+    "p": ["Kucing, kelinci, dan kambing", "Ayam, bebek, dan angsa", "Kupu-kupu, nyamuk, dan lebah", "Katak, ikan, dan penyu"],
+    "b": 0,
+    "bahas": "Kucing, kelinci, dan kambing adalah mamalia yang melahirkan anak dengan bentuk tubuh langsung menyerupai induknya."
+  },
+  {
+    "q": "Urutan siklus hidup tanaman kacang hijau dan jagung yang benar dimulai dari ....",
+    "p": [
+      "Biji → kecambah → tanaman muda → tanaman dewasa berbunga dan berbuah",
+      "Tanaman dewasa → biji → kecambah → bunga",
+      "Kecambah → biji → buah → tanaman muda",
+      "Bunga → biji → tanaman dewasa → kecambah"
+    ],
+    "b": 0,
+    "bahas": "Siklus tumbuhan berbiji dimulai dari biji yang tumbuh menjadi kecambah, tanaman muda, lalu tanaman dewasa yang menghasilkan bunga dan biji kembali."
+  },
+  {
+    "q": "Bagian pertama yang muncul saat biji kacang hijau mulai berkecambah di kapas basah adalah ....",
+    "p": ["Bunga", "Akar kecil (radikula)", "Buah", "Duri"],
+    "b": 1,
+    "bahas": "Saat berkecambah, akar kecil muncul lebih dulu untuk menyerap air dan nutrisi."
+  },
+  {
+    "q": "Cara yang paling tepat untuk mencegah perkembangbiakan nyamuk demam berdarah di lingkungan rumah dan sekolah adalah ....",
+    "p": [
+      "Menguras bak mandi secara rutin dan menutup rapat tempat penampungan air",
+      "Membiarkan kaleng bekas terisi air hujan di halaman",
+      "Menumpuk baju kotor di sudut kamar",
+      "Menutup semua ventilasi udara rumah"
+    ],
+    "b": 0,
+    "bahas": "Memutus siklus hidup nyamuk dilakukan dengan gerakan 3M (Menguras, Menutup, Mendaur ulang) agar jentik nyamuk tidak berkembang."
+  },
+  {
+    "q": "Sikap menyayangi hewan peliharaan di rumah seperti kucing atau ayam dapat dilakukan dengan cara ....",
+    "p": [
+      "Memberi makan dan minum secara teratur serta menjaga kebersihan kandangnya",
+      "Mengurungnya di kandang sempit tanpa diberi makan",
+      "Melemparinya dengan batu saat bermain",
+      "Membiarkan kandangnya kotor dan berbau"
+    ],
+    "b": 0,
+    "bahas": "Hewan peliharaan membutuhkan makanan, minuman, dan kandang bersih agar tumbuh sehat."
+  },
+  {
+    "q": "Mengapa kita perlu menjaga kelestarian hewan-hewan seperti kupu-kupu dan lebah di alam?",
+    "p": [
+      "Karena kupu-kupu dan lebah membantu proses penyerbukan bunga agar tumbuhan dapat berbuah",
+      "Karena kupu-kupu memakan seluruh daun padi di sawah",
+      "Karena lebah menghasilkan racun berbahaya bagi tanaman",
+      "Karena kupu-kupu mengusir burung pemakan serangga"
+    ],
+    "b": 0,
+    "bahas": "Kupu-kupu dan lebah adalah serangga penyerbuk alami yang sangat membantu perkembangbiakan tumbuhan."
+  }
+]);
+
+window.tambahPaketUjian("3", "bindo", "UTS Semester 1", [
+  {
+    "q": "Permainan tradisional yang dimainkan secara berkelompok dengan cara melompati kotak-kotak yang digambar di tanah menggunakan satu kaki disebut ....",
+    "p": ["Engklek / Sunda manda", "Congklak", "Egrang", "Lompat tali"],
+    "b": 0,
+    "bahas": "Engklek adalah permainan tradisional melompat dengan satu kaki di atas petak-petak gambar di tanah."
+  },
+  {
+    "q": "Saat bermain bersama teman di lapangan sekolah, sikap yang harus kita hindari agar permainan tetap menyenangkan adalah ....",
+    "p": ["Curang dan suka marah saat kalah", "Bermain dengan jujur dan sportif", "Menolong teman yang terjatuh", "Mengantre giliran dengan sabar"],
+    "b": 0,
+    "bahas": "Berbuat curang dan marah merusak kerukunan saat bermain bersama teman."
+  },
+  {
+    "q": "Gagasan utama yang menjadi inti pembahasan dalam sebuah paragraf disebut ....",
+    "p": ["Ide pokok", "Kalimat penjelas", "Judul cerita", "Tanda baca"],
+    "b": 0,
+    "bahas": "Ide pokok merupakan gagasan utama yang mendasari terbentuknya sebuah paragraf."
+  },
+  {
+    "q": "Bacalah paragraf berikut!\nBermain lompat tali memiliki banyak manfaat bagi kesehatan tubuh anak. Melompat secara berulang dapat melatih kekuatan otot kaki dan kelincahan gerak. Selain itu, bermain lompat tali bersama teman juga melatih kekompakan dan rasa gembira.\n\nIde pokok paragraf di atas adalah ....",
+    "p": [
+      "Cara membuat tali dari karet gelang",
+      "Manfaat bermain lompat tali bagi kesehatan tubuh anak",
+      "Aturan perlombaan lompat tinggi di sekolah",
+      "Jenis-jenis permainan tradisional dari Madura"
+    ],
+    "b": 1,
+    "bahas": "Kalimat pertama menjadi kalimat utama yang menjelaskan manfaat bermain lompat tali bagi kesehatan."
+  },
+  {
+    "q": "Penggunaan huruf kapital yang paling tepat pada kalimat di bawah ini adalah ....",
+    "p": [
+      "Pada hari Sabtu, Edo dan Siti bermain di Taman Kota Pamekasan.",
+      "pada hari sabtu, edo dan siti bermain di taman kota pamekasan.",
+      "Pada Hari Sabtu, Edo dan Siti bermain Di Taman Kota Pamekasan.",
+      "Pada hari Sabtu, edo dan siti bermain di Taman kota Pamekasan."
+    ],
+    "b": 0,
+    "bahas": "Huruf kapital digunakan pada awal kalimat (Pada), nama hari (Sabtu), nama orang (Edo, Siti), dan nama tempat (Taman Kota Pamekasan)."
+  },
+  {
+    "q": "Tanda baca yang tepat untuk mengakhiri kalimat perintah berikut adalah ....\n'Rapikan kembali mainanmu setelah selesai bermain...'",
+    "p": ["Tanda titik (.)", "Tanda tanya (?)", "Tanda seru (!)", "Tanda koma (,)"],
+    "b": 2,
+    "bahas": "Kalimat perintah atau ajakan yang tegas diakhiri dengan tanda seru (!)."
+  },
+  {
+    "q": "Tanda baca yang digunakan untuk mengakhiri kalimat tanya 'Siapa yang mengajakmu bermain sepeda...' adalah ....",
+    "p": ["Tanda tanya (?)", "Tanda titik (.)", "Tanda seru (!)", "Tanda titik dua (:)"],
+    "b": 0,
+    "bahas": "Setiap kalimat tanya diakhiri dengan tanda tanya (?)."
+  },
+  {
+    "svg": "<svg width='175' height='80' xmlns='http://w3.org'><rect x='15' y='15' width='55' height='35' rx='5' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='42' y='36' font-size='8' font-weight='bold' text-anchor='middle'>Sekolah</text><line x1='70' y1='32' x2='105' y2='32' stroke='#0f172a' stroke-width='2'/><rect x='105' y='15' width='55' height='35' rx='5' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='132' y='36' font-size='8' font-weight='bold' text-anchor='middle'>Taman</text><text x='150' y='72' font-size='8' font-weight='bold' fill='#dc2626'>↑ Utara</text></svg>",
+    "q": "Perhatikan gambar denah sederhana di atas! Jika arah atas menunjukkan arah Utara, maka letak Taman berada di sebelah ... Sekolah.",
+    "p": ["Barat", "Timur", "Selatan", "Utara"],
+    "b": 1,
+    "bahas": "Jika atas adalah Utara, maka sebelah kanan adalah Timur. Taman berada di sebelah kanan (Timur) Sekolah."
+  },
+  {
+    "q": "Gambar yang menunjukkan letak suatu tempat, jalan, dan bangunan secara sederhana agar mudah ditemukan disebut ....",
+    "p": ["Denah", "Poster", "Komik", "Lukisan"],
+    "b": 0,
+    "bahas": "Denah adalah gambar yang menunjukkan lokasi atau letak suatu tempat."
+  },
+  {
+    "q": "Perhatikan kalimat berikut: 'Rani membaca buku cerita di perpustakaan.' Unsur yang berkedudukan sebagai Predikat (P) adalah ....",
+    "p": ["Rani", "membaca", "buku cerita", "di perpustakaan"],
+    "b": 1,
+    "bahas": "Rani (Subjek), membaca (Predikat), buku cerita (Objek), di perpustakaan (Keterangan tempat)."
+  },
+  {
+    "q": "Pada kalimat 'Budi menendang bola di lapangan', kata 'di lapangan' berkedudukan sebagai ....",
+    "p": ["Subjek", "Predikat", "Objek", "Keterangan tempat"],
+    "b": 3,
+    "bahas": "'Di lapangan' menjelaskan lokasi terjadinya kegiatan sehingga berfungsi sebagai keterangan tempat."
+  },
+  {
+    "q": "Kalimat di bawah ini yang memiliki pola lengkap Subjek - Predikat - Objek - Keterangan (S-P-O-K) adalah ....",
+    "p": [
+      "Ibu memasak sayur bayam di dapur.",
+      "Adik tidur nyenyak.",
+      "Kucing itu berlari cepat.",
+      "Ayah membaca di teras."
+    ],
+    "b": 0,
+    "bahas": "Ibu (S) + memasak (P) + sayur bayam (O) + di dapur (K)."
+  },
+  {
+    "q": "Cerita yang dibuat berdasarkan khayalan atau imajinasi pengarang (seperti dongeng hewan yang bisa berbicara) disebut cerita ....",
+    "p": ["Fiksi", "Nonfiksi", "Berita koran", "Laporan pengamatan"],
+    "b": 0,
+    "bahas": "Cerita fiksi adalah karya sastra hasil imajinasi pengarang."
+  },
+  {
+    "q": "Kalimat di bawah ini yang merupakan FAKTA (kenyataan yang benar-benar terjadi) adalah ....",
+    "p": [
+      "Kancil mengajak buaya berbaris menghitung jumlah mereka.",
+      "Matahari terbit dari sebelah timur pada pagi hari.",
+      "Pohon beringin itu berbicara kepada seorang anak kecil.",
+      "Menurutku, bermain kelereng adalah permainan paling seru sedunia."
+    ],
+    "b": 1,
+    "bahas": "Matahari terbit dari arah timur adalah kenyataan alam yang pasti benar (fakta)."
+  },
+  {
+    "q": "Bacalah kutipan puisi berikut!\nSahabatku...\nKita belajar bersama di kelas\nTertawa riang saat jam istirahat\nSaling menolong kala susah datang\nPersahabatan kita takkan pernah pudar\n\nTema yang sesuai untuk puisi di atas adalah ....",
+    "p": ["Keindahan alam laut", "Persahabatan yang rukun", "Kegiatan berkebun di rumah", "Olahraga sepak bola"],
+    "b": 1,
+    "bahas": "Isi puisi menggambarkan kebersamaan dan kerukunan antarsahabat."
+  },
+  {
+    "q": "Kata dasar 'tulis' apabila mendapat awalan 'me-' menjadi ....",
+    "p": ["Mentulis", "Menulis", "Metulis", "Mengtulis"],
+    "b": 1,
+    "bahas": "Awalan 'me-' + 'tulis' luluh menjadi 'menulis'."
+  },
+  {
+    "q": "Kata dasar 'sapu' apabila mendapat awalan 'me-' menjadi ....",
+    "p": ["Mensapu", "Menyapu", "Mesapu", "Mengsapu"],
+    "b": 1,
+    "bahas": "Awalan 'me-' + 'sapu' luluh menjadi 'menyapu'."
+  },
+  {
+    "q": "Sinonim (persamaan kata) dari kata 'kawan' adalah ....",
+    "p": ["Lawan", "Sahabat / teman", "Musuh", "Tamu"],
+    "b": 1,
+    "bahas": "Kata 'kawan' sama artinya dengan 'teman' atau 'sahabat'."
+  },
+  {
+    "q": "Antonim (lawan kata) dari kata 'menang' adalah ....",
+    "p": ["Juara", "Kalah", "Berhasil", "Unggul"],
+    "b": 1,
+    "bahas": "Lawan kata dari 'menang' adalah 'kalah'."
+  },
+  {
+    "q": "Urutan kalimat acak berikut menjadi sebuah paragraf yang padu adalah ....\n(1) Setelah selesai bermain, mereka merapikan kembali mainannya.\n(2) Pada hari Minggu pagi, Dina dan Rina bermain boneka di teras rumah.\n(3) Ibu memuji sikap tertib Dina dan Rina.\n(4) Mereka bermain dengan sangat gembira dan rukun.",
+    "p": [
+      "(2) - (4) - (1) - (3)",
+      "(1) - (2) - (3) - (4)",
+      "(2) - (1) - (4) - (3)",
+      "(4) - (2) - (1) - (3)"
+    ],
+    "b": 0,
+    "bahas": "Urutan kronologis cerita: mulai bermain (2) → bermain gembira (4) → merapikan mainan (1) → dipuji Ibu (3)."
+  },
+  {
+    "q": "Tanda koma (,) pada kalimat 'Ibu membeli jeruk, apel, pisang, dan mangga di pasar' berfungsi untuk ....",
+    "p": [
+      "Mengakhiri kalimat berita",
+      "Memisahkan nama-nama buah dalam perincian",
+      "Menunjukkan kalimat perintah",
+      "Menggantikan tanda tanya"
+    ],
+    "b": 1,
+    "bahas": "Tanda koma memisahkan unsur-unsur dalam suatu perincian."
+  },
+  {
+    "q": "Penulisan kata depan 'di' yang menunjukkan tempat harus ditulis terpisah dari kata yang mengikutinya, seperti pada kalimat ....",
+    "p": [
+      "Buku cerita itu dibaca oleh Andi.",
+      "Anak-anak bermain layang-layang di lapangan.",
+      "Bola ditendang oleh penjaga gawang.",
+      "Kue bolu dimakan oleh Adik."
+    ],
+    "b": 1,
+    "bahas": "'Di lapangan' menunjukkan keterangan tempat sehingga ditulis terpisah."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#92400e'>JAGA KEBERSIHAN!</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Buanglah Sampah pada Tempatnya</text></svg>",
+    "q": "Perhatikan papan imbauan pada gambar di atas! Kalimat 'Buanglah Sampah pada Tempatnya' termasuk jenis kalimat ....",
+    "p": ["Ajakan / perintah kebaikan", "Kalimat tanya", "Cerita dongeng", "Kalimat berita"],
+    "b": 0,
+    "bahas": "Kata berpartikel '-lah' ('Buanglah') menunjukkan kalimat perintah atau imbauan yang sopan."
+  },
+  {
+    "q": "Ketika seorang teman meminta maaf karena tidak sengaja menyenggol buku kita hingga jatuh, sikap kita yang baik adalah ....",
+    "p": [
+      "Memaafkannya dengan tulus dan tersenyum",
+      "Memarahinya di depan seluruh teman",
+      "Membalas menjatuhkan bukunya",
+      "Tidak mau berbicara dengannya lagi"
+    ],
+    "b": 0,
+    "bahas": "Memaafkan kesalahan teman yang tidak disengaja menjaga kerukunan dan persahabatan."
+  },
+  {
+    "q": "Manfaat gemar membaca buku cerita maupun buku pengetahuan sejak kelas 3 SD adalah ....",
+    "p": [
+      "Menambah kosakata baru, memperluas wawasan, dan melatih kelancaran membaca",
+      "Membuat kita lupa mengerjakan tugas sekolah",
+      "Mengurangi waktu istirahat malam",
+      "Membuat mata cepat lelah jika dibaca sambil tiduran"
+    ],
+    "b": 0,
+    "bahas": "Membaca memperkaya kosakata, pengetahuan, dan daya imajinasi anak."
+  }
+]);
+
+window.tambahPaketUjian("3", "pai", "UTS Semester 1", [
+  {
+    "q": "Wahyu pertama yang diturunkan Allah Swt. kepada Nabi Muhammad saw. melalui Malaikat Jibril di Gua Hira adalah Surah ....",
+    "p": ["Al-Fatihah ayat 1–7", "Al-'Alaq ayat 1–5", "An-Nas ayat 1–6", "Al-Ikhlas ayat 1–4"],
+    "b": 1,
+    "bahas": "Surah Al-'Alaq ayat 1–5 merupakan wahyu pertama yang diterima Nabi Muhammad saw. di Gua Hira."
+  },
+  {
+    "q": "Perintah pertama dalam Surah Al-'Alaq ayat 1 yang berbunyi 'Iqra' bismi rabbikal-lazi khalaq' adalah perintah untuk ....",
+    "p": ["Membaca", "Menulis", "Berpuasa", "Berhaji"],
+    "b": 0,
+    "bahas": "Kata 'Iqra'' artinya bacalah, yang menjadi perintah awal agar umat Islam gemar membaca dan menuntut ilmu."
+  },
+  {
+    "q": "Dalam Q.S. Al-'Alaq ayat 2 disebutkan 'Khalaqal-insana min 'alaq' yang artinya Allah Swt. telah menciptakan manusia dari ....",
+    "p": ["Segumpal darah", "Cahaya", "Api yang menyala", "Angin kencang"],
+    "b": 0,
+    "bahas": "'Khalaqal-insana min 'alaq' artinya Dia telah menciptakan manusia dari segumpal darah."
+  },
+  {
+    "q": "Dalam Q.S. Al-'Alaq ayat 4 dijelaskan bahwa Allah Swt. mengajarkan manusia menulis dengan perantaraan ....",
+    "p": ["Qalam (pena / alat tulis)", "Pedang", "Cangkul", "Kapal layar"],
+    "b": 0,
+    "bahas": "'Allazi 'allama bil-qalam' artinya Yang mengajar (manusia) dengan pena (qalam)."
+  },
+  {
+    "q": "Cara membaca huruf hijaiyah tertentu yang berharakat sukun (mati) dengan suara memantul disebut hukum bacaan ....",
+    "p": ["Qalqalah", "Izhar", "Idgham", "Mad"],
+    "b": 0,
+    "bahas": "Qalqalah secara bahasa berarti memantul."
+  },
+  {
+    "q": "Jumlah huruf qalqalah ada 5 huruf yang biasa disingkat menjadi 'baju di toko', yaitu ....",
+    "p": [
+      "Ba (ب), Jim (ج), Dal (د), Tha (ط), Qaf (ق)",
+      "Alif (ا), Wawu (و), Ya (ي), Mim (م), Nun (ن)",
+      "Sin (س), Syin (ش), Shad (ص), Dhad (ض), Lam (ل)",
+      "Kaf (ك), Fa (ف), Ha (ه), Ain (ع), Ghain (غ)"
+    ],
+    "b": 0,
+    "bahas": "Kelima huruf qalqalah adalah Ba, Jim, Dal, Tha, dan Qaf (ب ج د ط ق)."
+  },
+  {
+    "q": "Bacaan qalqalah yang terjadi apabila huruf qalqalah bersukun asli berada di tengah-tengah kata dan dibaca dengan pantulan ringan disebut ....",
+    "p": ["Qalqalah sugra (kecil)", "Qalqalah kubra (besar)", "Izhar halqi", "Ikhfa haqiqi"],
+    "b": 0,
+    "bahas": "Qalqalah sugra terjadi di tengah kata dengan pantulan ringan, sedangkan qalqalah kubra terjadi di akhir ayat/waqaf dengan pantulan kuat."
+  },
+  {
+    "q": "Sifat-sifat yang pasti dimiliki oleh Allah Swt. dan sesuai dengan keagungan-Nya sebagai Tuhan semesta alam disebut sifat ....",
+    "p": ["Wajib bagi Allah", "Mustahil bagi Allah", "Jaiz bagi Allah", "Manusia biasa"],
+    "b": 0,
+    "bahas": "Sifat wajib bagi Allah adalah sifat kesempurnaan yang pasti ada pada zat Allah Swt."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>SIFAT WAJIB ALLAH</text><text x='87' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Wujud • Qidam • Baqa • Mukhalafatu</text></svg>",
+    "q": "Perhatikan kartu sifat wajib Allah pada gambar di atas! Sifat wajib pertama yaitu 'Wujud' memiliki arti bahwa Allah Swt. itu ....",
+    "p": ["Ada", "Terdahulu", "Kekal", "Berbeda dengan makhluk"],
+    "b": 0,
+    "bahas": "Wujud artinya Allah Swt. pasti Ada, dan adanya alam semesta menjadi bukti keberadaan-Nya."
+  },
+  {
+    "q": "Sifat wajib Allah 'Qidam' memiliki arti bahwa Allah Swt. Maha ....",
+    "p": ["Terdahulu (tidak berpermulaan)", "Kekal abadi", "Berdiri sendiri", "Melihat"],
+    "b": 0,
+    "bahas": "Qidam artinya Allah Maha Terdahulu, sudah ada sebelum segala makhluk diciptakan."
+  },
+  {
+    "q": "Segala makhluk di dunia pasti akan rusak dan mati, sedangkan Allah Swt. kekal selamanya karena Allah memiliki sifat wajib ....",
+    "p": ["Baqa", "Wujud", "Qidam", "Qudrat"],
+    "b": 0,
+    "bahas": "Baqa artinya Allah Maha Kekal dan tidak akan pernah binasa."
+  },
+  {
+    "q": "Sifat wajib Allah 'Mukhalafatu lil-hawadisi' artinya Allah Swt. ....",
+    "p": [
+      "Berbeda dengan seluruh makhluk ciptaan-Nya",
+      "Sama dengan benda-benda di bumi",
+      "Membutuhkan bantuan malaikat",
+      "Memiliki anak dan orang tua"
+    ],
+    "b": 0,
+    "bahas": "Mukhalafatu lil-hawadisi artinya Allah berbeda dan tidak menyerupai makhluk apa pun."
+  },
+  {
+    "q": "Allah Swt. berdiri sendiri menciptakan dan mengatur alam semesta tanpa membutuhkan bantuan siapa pun karena Allah memiliki sifat wajib ....",
+    "p": ["Qiyamuhu binafsihi", "Wahdaniyah", "Iradat", "Hayat"],
+    "b": 0,
+    "bahas": "Qiyamuhu binafsihi artinya Allah berdiri sendiri dengan zat-Nya tanpa bergantung pada apa pun."
+  },
+  {
+    "q": "Sifat wajib Allah 'Wahdaniyah' memiliki arti bahwa Allah Swt. Maha ....",
+    "p": ["Esa / Tunggal", "Berkuasa", "Berkehendak", "Mengetahui"],
+    "b": 0,
+    "bahas": "Wahdaniyah artinya Allah Maha Esa (satu) dan tidak ada sekutu bagi-Nya."
+  },
+  {
+    "q": "Asmaulhusna 'Al-Wahhab' memiliki arti bahwa Allah Swt. Maha ....",
+    "p": ["Pemberi Karunia", "Besar", "Pengampun", "Penyayang"],
+    "b": 0,
+    "bahas": "Al-Wahhab artinya Allah Maha Pemberi Karunia kepada seluruh makhluk-Nya tanpa mengharap imbalan."
+  },
+  {
+    "q": "Asmaulhusna 'Al-Kabir' memiliki arti bahwa Allah Swt. Maha ....",
+    "p": ["Besar", "Kecil", "Sabar", "Teliti"],
+    "b": 0,
+    "bahas": "Al-Kabir artinya Allah Maha Besar; keagungan dan kebesaran-Nya melampaui segala sesuatu."
+  },
+  {
+    "q": "Perilaku meneladani Asmaulhusna 'Al-Wahhab' dalam kehidupan sehari-hari di sekolah adalah ....",
+    "p": [
+      "Suka berbagi bekal makanan, meminjamkan alat tulis, dan bersedekah dengan ikhlas",
+      "Meminta hadiah setiap kali membantu teman",
+      "Menyembunyikan makanan saat teman kelaparan",
+      "Pelit dan tidak mau meminjamkan pensil"
+    ],
+    "b": 0,
+    "bahas": "Memberi dan berbagi kepada sesama dengan tulus tanpa pamrih adalah wujud meneladani Al-Wahhab."
+  },
+  {
+    "q": "Perilaku yang mencerminkan meneladani Asmaulhusna 'Al-Kabir' adalah ....",
+    "p": [
+      "Selalu bersikap rendah hati (tidak sombong) dan mengagungkan kebesaran Allah Swt.",
+      "Menyombongkan nilai ulangan yang tinggi di depan teman",
+      "Meremehkan teman yang kurang mampu",
+      "Meninggalkan salat karena sibuk bermain"
+    ],
+    "b": 0,
+    "bahas": "Menyadari bahwa hanya Allah Yang Maha Besar (Al-Kabir) membuat manusia bersikap rendah hati."
+  },
+  {
+    "q": "Kalimat zikir 'Allahu Akbar' yang sering kita ucapkan saat salat dan azan berkaitan erat dengan Asmaulhusna ....",
+    "p": ["Al-Kabir", "Al-Gaffar", "As-Salam", "Al-Hafiz"],
+    "b": 0,
+    "bahas": "'Allahu Akbar' artinya Allah Maha Besar, selaras dengan makna Al-Kabir."
+  },
+  {
+    "q": "Bukti nyata adanya Allah Swt. yang dapat kita amati di lingkungan sekitar setiap hari adalah ....",
+    "p": [
+      "Terbit dan terbenamnya matahari secara teratur serta tumbuhnya pepohonan hijau",
+      "Adanya meja dan kursi buatan tukang kayu",
+      "Adanya buku tulis buatan pabrik kertas",
+      "Adanya gedung sekolah yang dibangun pekerja"
+    ],
+    "b": 0,
+    "bahas": "Alam semesta, matahari, bulan, dan makhluk hidup adalah ciptaan Allah Swt. yang membuktikan wujud-Nya."
+  },
+  {
+    "q": "Salah satu cara mengamalkan perintah membaca ('Iqra'') dalam Surah Al-'Alaq ayat 1 bagi siswa kelas 3 SD adalah ....",
+    "p": [
+      "Rajin membaca Al-Qur'an dan buku-buku pelajaran yang bermanfaat setiap hari",
+      "Membaca buku komik sampai larut malam hingga lupa salat",
+      "Mencoret-coret halaman buku perpustakaan",
+      "Malas membuka buku pelajaran saat di rumah"
+    ],
+    "b": 0,
+    "bahas": "Membaca Al-Qur'an dan ilmu pengetahuan merupakan pengamalan perintah Iqra' yang membawa kemajuan."
+  },
+  {
+    "q": "Dalam Q.S. Al-'Alaq ayat 1 terdapat lafaz 'khalaq' di akhir ayat. Huruf Qaf (ق) sukun karena waqaf di akhir ayat tersebut dibaca dengan hukum ....",
+    "p": ["Qalqalah kubra (pantulan besar/kuat)", "Qalqalah sugra", "Izhar syafawi", "Idgham bilagunnah"],
+    "b": 0,
+    "bahas": "Huruf qalqalah yang disukunkan karena berhenti (waqaf) di akhir ayat dibaca memantul kuat (qalqalah kubra)."
+  },
+  {
+    "q": "Nikmat kesehatan mata, telinga, akal pikiran, dan orang tua yang menyayangi kita merupakan karunia dari Allah Swt. yang wajib kita ....",
+    "p": ["Syukuri dengan beribadah dan berbuat baik", "Sia-siakan dengan bermalas-malasan", "Keluhkan setiap hari", "Sombongkan kepada teman"],
+    "b": 0,
+    "bahas": "Segala karunia Allah Swt. (Al-Wahhab) wajib disyukuri dengan ketaatan dan amal kebaikan."
+  },
+  {
+    "q": "Sifat mustahil bagi Allah Swt. adalah sifat yang tidak mungkin dimiliki Allah. Lawan dari sifat wajib 'Wujud' (Ada) adalah sifat mustahil ....",
+    "p": ["'Adam (Tiada)", "Hudus (Baru)", "Fana (Rusak)", "Maut (Mati)"],
+    "b": 0,
+    "bahas": "'Adam artinya tiada, yang merupakan lawan dari sifat wajib Wujud (Ada)."
+  },
+  {
+    "q": "Manfaat mengenal sifat-sifat wajib Allah dan Asmaulhusna sejak usia sekolah dasar adalah ....",
+    "p": [
+      "Memperkuat keimanan kepada Allah Swt. dan membiasakan perilaku terpuji dalam kehidupan sehari-hari",
+      "Membuat kita merasa lebih hebat dari orang lain",
+      "Mengurangi waktu membantu orang tua di rumah",
+      "Membuat kita malas belajar ilmu pengetahuan"
+    ],
+    "b": 0,
+    "bahas": "Mengenal Allah Swt. menumbuhkan kecintaan beribadah dan akhlak mulia kepada sesama."
+  }
+]);
+
+window.tambahPaketUjian("3", "pancasila", "UTS Semester 1", [
+  {
+    "q": "Keterangan yang menjelaskan ciri-ciri khusus seseorang seperti nama lengkap, tempat tanggal lahir, alamat rumah, dan agama disebut ....",
+    "p": ["Identitas diri", "Cita-cita", "Hobi bermain", "Prestasi lomba"],
+    "b": 0,
+    "bahas": "Identitas diri adalah jati diri atau data khusus yang membedakan seseorang dengan orang lain."
+  },
+  {
+    "q": "Ketika memperkenalkan diri di depan teman-teman baru di kelas, sikap yang sebaiknya kita tunjukkan adalah ....",
+    "p": [
+      "Berdiri tegak, tersenyum ramah, dan berbicara dengan suara jelas serta sopan",
+      "Menunduk sambil berbisik pelan",
+      "Membelakangi teman-teman sekelas",
+      "Berteriak keras dengan wajah cemberut"
+    ],
+    "b": 0,
+    "bahas": "Sikap ramah, percaya diri, dan sopan membuat teman baru merasa senang berkenalan dengan kita."
+  },
+  {
+    "q": "Keluarga inti di dalam rumah terdiri atas ....",
+    "p": [
+      "Ayah, ibu, dan anak",
+      "Kakek, nenek, dan paman",
+      "Tetangga sebelah rumah",
+      "Ketua RT dan kepala desa"
+    ],
+    "b": 0,
+    "bahas": "Keluarga inti terdiri dari ayah, ibu, dan anak-anak."
+  },
+  {
+    "q": "Dalam susunan wilayah pemerintahan di Indonesia, gabungan dari beberapa Rukun Tetangga (RT) membentuk wilayah ....",
+    "p": ["Rukun Warga (RW)", "Kecamatan", "Kabupaten", "Provinsi"],
+    "b": 0,
+    "bahas": "Beberapa RT bergabung menjadi satu Rukun Warga (RW)."
+  },
+  {
+    "q": "Wilayah pemerintahan yang dipimpin oleh seorang Kepala Desa atau Lurah disebut ....",
+    "p": ["Desa / Kelurahan", "Kecamatan", "Kabupaten", "Provinsi"],
+    "b": 0,
+    "bahas": "Desa dipimpin oleh Kepala Desa, sedangkan kelurahan dipimpin oleh Lurah."
+  },
+  {
+    "q": "Gabungan dari beberapa desa atau kelurahan membentuk wilayah pemerintahan yang dipimpin oleh seorang Camat, yaitu ....",
+    "p": ["Kecamatan", "Kabupaten", "Provinsi", "Rukun Warga"],
+    "b": 0,
+    "bahas": "Kecamatan terdiri atas beberapa desa/kelurahan dan dipimpin oleh Camat."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>BHINNEKA TUNGGAL IKA</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Semboyan Persatuan Indonesia</text></svg>",
+    "q": "Perhatikan semboyan bangsa pada gambar di atas! Arti dari semboyan 'Bhinneka Tunggal Ika' adalah ....",
+    "p": [
+      "Berbeda-beda tetapi tetap satu jua",
+      "Bersatu kita teguh bercerai kita runtuh",
+      "Maju terus pantang mundur",
+      "Kebersihan adalah pangkal kesehatan"
+    ],
+    "b": 0,
+    "bahas": "Bhinneka Tunggal Ika berarti berbeda-beda (suku, agama, budaya, bahasa), tetapi tetap satu bangsa Indonesia."
+  },
+  {
+    "q": "Bahasa persatuan yang digunakan untuk berkomunikasi antarsuku bangsa dari Sabang sampai Merauke adalah bahasa ....",
+    "p": ["Indonesia", "Jawa", "Madura", "Sunda"],
+    "b": 0,
+    "bahas": "Bahasa Indonesia adalah bahasa resmi dan bahasa persatuan Negara Kesatuan Republik Indonesia."
+  },
+  {
+    "q": "Sikap yang benar terhadap teman di sekolah yang memiliki suku bangsa dan bahasa daerah berbeda dengan kita adalah ....",
+    "p": [
+      "Saling menghormati, menghargai, dan bermain bersama dengan rukun",
+      "Mengejek logat bahasa daerahnya",
+      "Hanya mau berteman dengan anak yang sama sukunya",
+      "Menjauhinya saat jam istirahat"
+    ],
+    "b": 0,
+    "bahas": "Menghormati perbedaan suku dan budaya mempererat persatuan di sekolah."
+  },
+  {
+    "q": "Setiap hari Senin pagi, seluruh siswa SD Negeri Seddur 1 mengikuti upacara bendera. Manfaat mengikuti upacara bendera dengan tertib adalah menumbuhkan rasa ....",
+    "p": [
+      "Cinta tanah air dan kedisiplinan",
+      "Malas berdiri di lapangan",
+      "Ingin cepat pulang ke rumah",
+      "Sombong terhadap sekolah lain"
+    ],
+    "b": 0,
+    "bahas": "Upacara bendera melatih kedisiplinan dan menanamkan jiwa nasionalisme cinta tanah air."
+  },
+  {
+    "q": "Aturan atau ketentuan yang dibuat oleh pihak sekolah dan wajib dipatuhi oleh seluruh warga sekolah disebut ....",
+    "p": ["Tata tertib sekolah", "Undang-undang lalu lintas", "Peraturan desa", "Jadwal ronda malam"],
+    "b": 0,
+    "bahas": "Tata tertib sekolah mengatur hak, kewajiban, dan kedisiplinan siswa maupun guru di sekolah."
+  },
+  {
+    "q": "Contoh aturan yang harus dipatuhi siswa ketika berada di dalam perpustakaan sekolah adalah ....",
+    "p": [
+      "Membaca dengan tenang, tidak berisik, dan mengembalikan buku ke rak semula",
+      "Makan jajanan berkuah di meja baca",
+      "Berlari-lari mengejar teman di antara rak buku",
+      "Merobek halaman gambar pada buku cerita"
+    ],
+    "b": 0,
+    "bahas": "Menjaga ketenangan dan merawat buku perpustakaan membuat pengunjung lain nyaman membaca."
+  },
+  {
+    "q": "Apabila siswa datang terlambat ke sekolah karena bangun kesiangan, sikap yang jujur dan bertanggung jawab saat ditanya guru adalah ....",
+    "p": [
+      "Mengakui kesalahan dengan jujur, meminta maaf, dan berjanji bangun lebih pagi",
+      "Berbohong mengatakan ban sepeda bocor di jalan",
+      "Menyalahkan ibu karena lupa membangunkan",
+      "Bersembunyi di belakang gedung sekolah"
+    ],
+    "b": 0,
+    "bahas": "Jujur mengakui kesalahan dan meminta maaf adalah cerminan sikap patuh aturan."
+  },
+  {
+    "q": "Segala sesuatu yang harus dikerjakan oleh siswa dengan penuh rasa tanggung jawab di sekolah disebut ....",
+    "p": ["Kewajiban siswa", "Hak siswa", "Hadiah juara", "Cita-cita"],
+    "b": 0,
+    "bahas": "Kewajiban adalah tugas yang wajib dilaksanakan."
+  },
+  {
+    "q": "Contoh kewajiban siswa di lingkungan sekolah adalah ....",
+    "p": [
+      "Memakai seragam rapi sesuai jadwal, belajar dengan tekun, dan melaksanakan piket kelas",
+      "Mendapatkan nilai rapor dari guru",
+      "Mendapatkan kasih sayang dari guru",
+      "Menggunakan lapangan olahraga sekolah"
+    ],
+    "b": 0,
+    "bahas": "Memakai seragam, belajar tekun, dan piket kelas adalah kewajiban siswa."
+  },
+  {
+    "q": "Contoh hak yang diterima siswa setelah melaksanakan kewajibannya di sekolah adalah ....",
+    "p": [
+      "Mendapatkan bimbingan pelajaran dari guru dan belajar di kelas yang bersih serta nyaman",
+      "Membersihkan papan tulis setiap pagi",
+      "Datang sebelum bel masuk berbunyi",
+      "Mematuhi nasihat kepala sekolah"
+    ],
+    "b": 0,
+    "bahas": "Mendapat pengajaran dan fasilitas belajar yang layak adalah hak siswa."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#15803d'>PIKET KEBERSIHAN KELAS</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Tanggung Jawab Bersama Regu Piket</text></svg>",
+    "q": "Perhatikan gambar di atas! Manfaat melaksanakan jadwal piket kebersihan kelas secara bersama-sama adalah ....",
+    "p": [
+      "Ruang kelas menjadi bersih, sehat, nyaman untuk belajar, dan pekerjaan terasa ringan",
+      "Waktu bermain menjadi hilang seluruhnya",
+      "Sampah menumpuk di sudut ruangan",
+      "Hanya ketua kelas yang bekerja membersihkan kelas"
+    ],
+    "b": 0,
+    "bahas": "Kerja sama regu piket menjaga kebersihan kelas dan meringankan pekerjaan."
+  },
+  {
+    "q": "Aturan di sekolah dibuat bersama dengan tujuan utama agar kegiatan belajar mengajar berjalan dengan ....",
+    "p": ["Tertib, aman, lancar, dan nyaman", "Kacau dan ribut", "Lambat dan membosankan", "Penuh hukuman"],
+    "b": 0,
+    "bahas": "Tata tertib menciptakan suasana belajar yang kondusif bagi semua warga sekolah."
+  },
+  {
+    "q": "Ketika ada teman yang melanggar aturan kelas, misalnya membuang bungkus jajanan di lantai, sikap kita yang baik adalah ....",
+    "p": [
+      "Menegurnya dengan bahasa sopan dan mengajaknya membuang sampah ke tempat sampah",
+      "Memarahinya dengan kata-kata kasar",
+      "Ikut membuang sampah di lantai kelas",
+      "Mengejeknya di depan guru"
+    ],
+    "b": 0,
+    "bahas": "Mengingatkan teman dengan santun membantu menjaga kebersihan dan ketertiban kelas."
+  },
+  {
+    "q": "Kesepakatan kelas pada awal tahun ajaran dibuat dengan cara bermusyawarah antara ....",
+    "p": [
+      "Wali kelas dan seluruh siswa di kelas tersebut",
+      "Kepala sekolah dan penjaga sekolah saja",
+      "Dua orang siswa tanpa sepengetahuan guru",
+      "Pedagang kantin sekolah"
+    ],
+    "b": 0,
+    "bahas": "Kesepakatan kelas disusun bersama antara guru dan seluruh siswa agar dipatuhi dengan penuh kesadaran."
+  },
+  {
+    "q": "Sanksi atau konsekuensi yang diberikan guru kepada siswa yang melanggar tata tertib sekolah bertujuan untuk ....",
+    "p": [
+      "Mendidik siswa agar menyadari kesalahannya dan menjadi lebih disiplin",
+      "Membuat siswa membenci sekolah",
+      "Mempermalukan siswa di depan umum",
+      "Mengurangi jumlah siswa di kelas"
+    ],
+    "b": 0,
+    "bahas": "Konsekuensi pelanggaran aturan bersifat mendidik agar siswa belajar bertanggung jawab."
+  },
+  {
+    "q": "Negara Kesatuan Republik Indonesia (NKRI) merupakan negara kepulauan terbesar di dunia yang memiliki ribuan pulau. Lima pulau besar di Indonesia adalah ....",
+    "p": [
+      "Sumatera, Jawa, Kalimantan, Sulawesi, dan Papua",
+      "Madura, Bali, Lombok, Flores, dan Timor",
+      "Jawa, Madura, Singapura, Malaysia, dan Brunei",
+      "Sumatera, Kalimantan, Filipina, Jepang, dan Korea"
+    ],
+    "b": 0,
+    "bahas": "Lima pulau utama terbesar di Indonesia adalah Sumatera, Jawa, Kalimantan, Sulawesi, dan Papua."
+  },
+  {
+    "q": "Salah satu contoh kearifan lokal dan budaya khas dari Pulau Madura, Provinsi Jawa Timur, yang perlu kita lestarikan adalah ....",
+    "p": [
+      "Karapan Sapi, Tari Muang Sangkal, dan Batik Tulis Madura",
+      "Tari Kecak dan Upacara Ngaben",
+      "Rumah Gadang dan Tari Piring",
+      "Tari Saman dan Rencong"
+    ],
+    "b": 0,
+    "bahas": "Karapan Sapi, Tari Muang Sangkal, dan Batik Tulis Madura adalah kekayaan budaya khas Madura."
+  },
+  {
+    "q": "Sikap bangga sebagai anak Indonesia dapat ditunjukkan dalam kehidupan sehari-hari dengan cara ....",
+    "p": [
+      "Belajar dengan giat, menggunakan bahasa Indonesia dengan baik, dan mencintai budaya Nusantara",
+      "Lebih menyukai budaya asing daripada budaya sendiri",
+      "Malu menggunakan produk buatan Indonesia",
+      "Malas mengikuti kegiatan pramuka di sekolah"
+    ],
+    "b": 0,
+    "bahas": "Mencintai produk dalam negeri, berbahasa Indonesia dengan santun, dan tekun belajar adalah wujud bangga menjadi anak Indonesia."
+  },
+  {
+    "q": "Apabila hak dan kewajiban dilaksanakan dengan seimbang oleh seluruh warga sekolah, maka suasana sekolah akan menjadi ....",
+    "p": [
+      "Harmonis, rukun, bersih, dan menyenangkan untuk belajar",
+      "Sering terjadi pertengkaran antar-siswa",
+      "Fasilitas sekolah cepat rusak",
+      "Guru kesulitan mengajar di kelas"
+    ],
+    "b": 0,
+    "bahas": "Keseimbangan hak dan kewajiban menciptakan kerukunan dan kenyamanan di lingkungan sekolah."
+  }
+]);
+
+window.tambahPaketUjian("3", "bing", "UTS Semester 1", [
+  {
+    "svg": "<svg width='160' height='75' xmlns='http://w3.org'><ellipse cx='80' cy='50' rx='42' ry='12' fill='#ffffff' stroke='#0284c7' stroke-width='2'/><path d='M52,47 Q80,25 108,47 Z' fill='#facc15' stroke='#ca8a04' stroke-width='2'/><circle cx='72' cy='38' r='4' fill='#ef4444'/><circle cx='88' cy='38' r='4' fill='#22c55e'/></svg>",
+    "q": "Look at the picture above! Made is eating fried ... on a plate.",
+    "p": ["rice", "milk", "water", "juice"],
+    "b": 0,
+    "bahas": "Nasi goreng dalam bahasa Inggris adalah 'fried rice'."
+  },
+  {
+    "q": "Aisyah is thirsty. She wants to drink a glass of ....",
+    "p": ["bread", "noodles", "water", "meatball"],
+    "b": 2,
+    "bahas": "Minuman untuk menghilangkan haus adalah air (water)."
+  },
+  {
+    "q": "What is 'roti' in English?",
+    "p": ["Bread", "Egg", "Soup", "Fish"],
+    "b": 0,
+    "bahas": "Roti dalam bahasa Inggris adalah 'bread'."
+  },
+  {
+    "q": "What is 'susu' in English?",
+    "p": ["Tea", "Coffee", "Milk", "Juice"],
+    "b": 2,
+    "bahas": "Susu dalam bahasa Inggris adalah 'milk'."
+  },
+  {
+    "q": "My mother cooks fried ... for breakfast. It comes from a hen.",
+    "p": ["egg", "banana", "carrot", "potato"],
+    "b": 0,
+    "bahas": "Makanan yang berasal dari ayam betina (hen) untuk sarapan adalah telur (egg)."
+  },
+  {
+    "q": "I ... eating fried chicken. It is very delicious.",
+    "p": ["like", "likes", "liking", "am like"],
+    "b": 0,
+    "bahas": "Subjek 'I' menggunakan kata kerja dasar 'like'."
+  },
+  {
+    "q": "Cici ... drinking sweet iced tea after playing in the yard.",
+    "p": ["like", "likes", "do like", "are like"],
+    "b": 1,
+    "bahas": "Subjek tunggal orang ketiga 'Cici' (she) menggunakan kata kerja 'likes'."
+  },
+  {
+    "q": "Joshua ... eating satay and soto.",
+    "p": ["like", "likes", "do not like", "are"],
+    "b": 1,
+    "bahas": "Subjek tunggal 'Joshua' (he) berpasangan dengan 'likes'."
+  },
+  {
+    "q": "We ... eating watermelon because it is sweet and fresh.",
+    "p": ["like", "likes", "is like", "does like"],
+    "b": 0,
+    "bahas": "Subjek jamak 'We' menggunakan kata kerja dasar 'like'."
+  },
+  {
+    "q": "I ... like coffee because it is bitter.",
+    "p": ["do not", "does not", "is not", "am not"],
+    "b": 0,
+    "bahas": "Kalimat negatif Simple Present untuk subjek 'I' menggunakan 'do not' (I do not like coffee)."
+  },
+  {
+    "q": "Udin ... like spicy noodles. He likes sweet porridge.",
+    "p": ["do not", "does not", "are not", "am not"],
+    "b": 1,
+    "bahas": "Kalimat negatif Simple Present untuk subjek tunggal 'Udin' (he) menggunakan 'does not'."
+  },
+  {
+    "q": "Rani ... like durian, but she likes mango.",
+    "p": ["do not", "does not", "have not", "are not"],
+    "b": 1,
+    "bahas": "Subjek tunggal 'Rani' (she) dalam kalimat negatif menggunakan 'does not'."
+  },
+  {
+    "q": "They ... like bitter vegetables.",
+    "p": ["do not", "does not", "is not", "was not"],
+    "b": 0,
+    "bahas": "Subjek jamak 'They' dalam kalimat negatif menggunakan 'do not'."
+  },
+  {
+    "q": "Do you like meatballs (bakso)? Yes, I ....",
+    "p": ["do", "does", "am", "is"],
+    "b": 0,
+    "bahas": "Pertanyaan 'Do you like...?' dijawab singkat dengan 'Yes, I do.'"
+  },
+  {
+    "q": "Does Siti like orange juice? Yes, she ....",
+    "p": ["do", "does", "is", "are"],
+    "b": 1,
+    "bahas": "Pertanyaan 'Does Siti like...?' dijawab singkat dengan 'Yes, she does.'"
+  },
+  {
+    "q": "Does Budi like milk? No, he ....",
+    "p": ["do not", "does not", "is not", "am not"],
+    "b": 1,
+    "bahas": "Jawaban negatif singkat untuk pertanyaan 'Does Budi...?' adalah 'No, he does not.'"
+  },
+  {
+    "svg": "<svg width='165' height='70' xmlns='http://w3.org'><rect x='20' y='12' width='125' height='46' rx='8' fill='#fee2e2' stroke='#dc2626' stroke-width='2'/><text x='82' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#991b1b'>Lina: ❌ Noodles</text><text x='82' y='48' font-size='10' font-weight='bold' text-anchor='middle' fill='#15803d'>Lina: ✔️ Fried Fish</text></svg>",
+    "q": "Look at the table above! Which sentence is TRUE about Lina?",
+    "p": [
+      "Lina does not like noodles, but she likes fried fish.",
+      "Lina likes noodles and fried fish.",
+      "Lina does not like fried fish.",
+      "Lina likes noodles, but she does not like fried fish."
+    ],
+    "b": 0,
+    "bahas": "Tanda silang pada noodles (tidak suka mi) dan centang pada fried fish (suka ikan goreng)."
+  },
+  {
+    "q": "What is 'ikan goreng' in English?",
+    "p": ["Fried chicken", "Fried fish", "Fried banana", "Fried egg"],
+    "b": 1,
+    "bahas": "Ikan goreng dalam bahasa Inggris adalah 'fried fish'."
+  },
+  {
+    "q": "What is 'pisang goreng' in English?",
+    "p": ["Fried rice", "Fried banana", "Fried noodle", "Fried potato"],
+    "b": 1,
+    "bahas": "Pisang goreng dalam bahasa Inggris adalah 'fried banana'."
+  },
+  {
+    "q": "A rabbit likes eating orange ....",
+    "p": ["carrots", "fish", "meat", "chicken"],
+    "b": 0,
+    "bahas": "Kelinci (rabbit) suka makan wortel berwarna oranye (carrots)."
+  },
+  {
+    "q": "A cat likes eating ....",
+    "p": ["fish", "grass", "banana", "carrot"],
+    "b": 0,
+    "bahas": "Kucing (cat) suka makan ikan (fish)."
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'likes - Mother - drinking - tea - hot'",
+    "p": [
+      "Mother likes drinking hot tea.",
+      "Drinking likes Mother hot tea.",
+      "Hot tea likes drinking Mother.",
+      "Mother drinking likes hot tea."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat yang benar adalah 'Mother likes drinking hot tea.'"
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'do - not - I - like - coffee'",
+    "p": [
+      "I do not like coffee.",
+      "Do not I like coffee.",
+      "Coffee I do not like.",
+      "I like do not coffee."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat negatif yang tepat adalah 'I do not like coffee.'"
+  },
+  {
+    "q": "Which one is a DRINK?",
+    "p": ["Orange juice", "Fried rice", "Bread", "Meatball"],
+    "b": 0,
+    "bahas": "Orange juice (jus jeruk) adalah minuman (drink), sedangkan yang lainnya makanan (food)."
+  },
+  {
+    "q": "'Ayah suka makan sate ayam.' The English translation is ....",
+    "p": [
+      "Father likes eating chicken satay.",
+      "Father like eating chicken satay.",
+      "Father does not like chicken satay.",
+      "Father likes drinking chicken soup."
+    ],
+    "b": 0,
+    "bahas": "Father (subjek tunggal) + likes eating + chicken satay (sate ayam)."
+  }
+]);
+
+window.tambahPaketUjian("3", "madura", "UTS Semester 1", [
+  {
+    "q": "Lamon bâ'na atemmo sareng Bapak otabâ Ibu Guru è jalan, tatakrama sè bhâghus èngghi panèka ....",
+    "p": [
+      "Mator salam sambi mesem kalabân sopan",
+      "Berka' ceppet ta' ngabâs",
+      "Neng-neng bhâi sambi nunduk",
+      "Acaca rammè sareng kanca"
+    ],
+    "b": 0,
+    "bahas": "Ngocap salam kalabân sopan nalèka atemmo guru panèka tatakrama sè bhâghus."
+  },
+  {
+    "q": "Bhâsa alosna oca' 'ngakan' (makan) ka'angghuy Eppa' sareng Embu' èngghi panèka ....",
+    "p": ["Dhâ'âr", "Sare", "Mèyos", "Rabhu"],
+    "b": 0,
+    "bahas": "Ngakan bhâsa alosna 'dhâ'âr'."
+  },
+  {
+    "q": "Bhâsa alosna oca' 'tèdung' (tidur) ka'angghuy orèng towa èngghi panèka ....",
+    "p": ["Sare", "Dhâ'âr", "Kondhur", "Adhâbu"],
+    "b": 0,
+    "bahas": "Tèdung bhâsa alosna 'sare'."
+  },
+  {
+    "q": "Bhâsa alosna oca' 'mata' ka'angghuy orèng sè èhormadhi èngghi panèka ....",
+    "p": ["Soca", "Asta", "Padâ", "Grana"],
+    "b": 0,
+    "bahas": "Mata bhâsa alosna 'soca', tanang = 'asta', soko = 'padâ'."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><path d='M75,18 Q62,38 66,52 Q75,56 84,52 Q88,38 75,18 Z' fill='#fed7aa' stroke='#ea580c' stroke-width='2'/><circle cx='71' cy='46' r='2' fill='#9a3412'/><circle cx='79' cy='46' r='2' fill='#9a3412'/></svg>",
+    "q": "Abâs ghâmbhâr angghuta bhâdhân è attas! Angghuta bhâdhân ghâpanèka aghuna ka'angghuy nyèyom bâu, nyamana ....",
+    "p": ["Èlong", "Kopèng", "Mata", "Cangkèm"],
+    "b": 0,
+    "bahas": "Èlong (hidung) aghuna ka'angghuy nyèyom bâu."
+  },
+  {
+    "q": "Angghuta bhâdhân sè aghuna ka'angghuy ngabâs ghâmbhâr sareng maca buku èngghi panèka ....",
+    "p": ["Mata", "Kopèng", "Èlong", "Soko"],
+    "b": 0,
+    "bahas": "Mata aghuna ka'angghuy ngabâs (melihat)."
+  },
+  {
+    "q": "Ana'na ajâm dâlem bhâsa Madhurâ èsebbhut ....",
+    "p": ["Pètè'", "Mèncè'", "Bhudhu'", "Kacèr"],
+    "b": 0,
+    "bahas": "Ana'na ajâm èsebbhut 'pètè''."
+  },
+  {
+    "q": "Ana'na kocèng dâlem bhâsa Madhurâ èsebbhut ....",
+    "p": ["Mèncè'", "Pètè'", "Empe'", "Bhellu"],
+    "b": 0,
+    "bahas": "Ana'na kocèng èsebbhut 'mèncè''."
+  },
+  {
+    "q": "Kèbân sè bisa ngabber, andi' lèmbâng, bân monyèna 'kuk-kuruyuk' è bâkto lagghu èngghi panèka ....",
+    "p": ["Ajâm lakè'", "Mano' dârâ", "Ètèk", "Kocèng"],
+    "b": 0,
+    "bahas": "Ajâm lakè' (ayam jantan) akoko' è bâkto lagghu."
+  },
+  {
+    "q": "Kèbân sè odi' è sabâ, abâdhân rajâ, bân segghut èghuna'aghi abhânto petani macol tana èngghi panèka ....",
+    "p": ["Kerbhu / Sapè", "Kocèng", "Mano'", "Jhuko'"],
+    "b": 0,
+    "bahas": "Kerbhu (kerbau) sareng sapè segghut abhânto petani è sabâ."
+  },
+  {
+    "q": "Oca' 'maca' tamaso' macemma oca' ....",
+    "p": ["Oca' lako (kata kerja)", "Oca' bhârâng (kata benda)", "Oca' sèpat (kata sifat)", "Oca' bilângan"],
+    "b": 0,
+    "bahas": "Maca (membaca) nodhuwâghi kalakoan sehingga tamaso' oca' lako."
+  },
+  {
+    "q": "Oca' 'nolès' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Menulis", "Membaca", "Berlari", "Tidur"],
+    "b": 0,
+    "bahas": "Nolès artèna menulis."
+  },
+  {
+    "q": "Oca' 'berka'' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Berlari", "Berjalan", "Duduk", "Berdiri"],
+    "b": 0,
+    "bahas": "Berka' artèna berlari."
+  },
+  {
+    "svg": "<svg width='160' height='65' xmlns='http://w3.org'><rect x='25' y='12' width='110' height='42' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='80' y='39' font-size='16' font-weight='bold' text-anchor='middle' fill='#0f172a'>15</text></svg>",
+    "q": "Abâs angka è ghâmbhâr attas! Bilângan '15' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Sapolo lèma'", "Lèma bellâs", "Du polo lèma'", "Sèlaè'"],
+    "b": 1,
+    "bahas": "11 = sabellâs, 12 = du bellâs, ..., 15 = lèma bellâs."
+  },
+  {
+    "q": "Bilângan '20' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Sapolo", "Du polo", "Tello polo", "Sèlaè'"],
+    "b": 1,
+    "bahas": "20 dâlem bhâsa Madhurâ èbâca 'du polo'."
+  },
+  {
+    "q": "Bilângan '25' dâlem bhâsa Madhurâ èsebbhut ....",
+    "p": ["Sèlaè'", "Du polo", "Sèket", "Sabidhâk"],
+    "b": 0,
+    "bahas": "25 andi' sebbhutân khusus èngghi panèka 'sèlaè''."
+  },
+  {
+    "q": "Tabhâligghâ (antonim) dâri oca' 'tèngghi' (tinggi) èngghi panèka ....",
+    "p": ["Pandhâ' / Mabâ", "Lanjhâng", "Rajâ", "Lèbâr"],
+    "b": 0,
+    "bahas": "Tèngghi tabhâligghâ pandhâ' otabâ mabâ (rendah)."
+  },
+  {
+    "q": "Tabhâligghâ (antonim) dâri oca' 'panas' èngghi panèka ....",
+    "p": ["Cellep (dingin)", "Anga'", "Tèra'", "Petteng"],
+    "b": 0,
+    "bahas": "Panas tabhâligghâ cellep (dingin)."
+  },
+  {
+    "q": "Okara è bâbâ panèka sè aghuna'aghi oca' tanya 'sapa' (siapa) sè teppa' èngghi panèka ....",
+    "p": [
+      "Sapa nyamana kancana bâ'na sè anyar?",
+      "Sapa arghâna buku rèya?",
+      "Sapa bâ'na sè èntara ka pasar?",
+      "Sapa bânnya'na potlot è tas?"
+    ],
+    "b": 0,
+    "bahas": "Oca' tanya 'sapa' èghuna'aghi ka'angghuy nanya'aghi orèng."
+  },
+  {
+    "q": "Bâca teks è bâbâ panèka!\n'Hasan andi' kocèng sè bhuluna bârna potè bân celleng. Sabbhân arè Hasan aberri' ngakan jhuko' bân ngombhi aèng bhersè. Kocèngnga Hasan sèhat bân senneng amaèn è tanèyan.'\n\nApa bârna bhuluna kocèngnga Hasan?",
+    "p": ["Potè bân celleng", "Konèng bân mèra", "Bhuru bân bhiru", "Abu-abu sadhâjâ"],
+    "b": 0,
+    "bahas": "Dâlem teks èsebbhutaghi bhuluna bârna potè bân celleng."
+  },
+  {
+    "q": "Pakakas sakola'an sè èghuna'aghi ka'angghuy ngabussaghi tolesan potlot sè sala èngghi panèka ....",
+    "p": ["Pangabhus / Setip", "Potlot", "Pangghâris", "Gunting"],
+    "b": 0,
+    "bahas": "Pangabhus / setip èghuna'aghi ngabhus tolesan potlot."
+  },
+  {
+    "q": "Sabellunna mangkat ka sakola'an, na'-kana' sè bhâghus kodhu ....",
+    "p": [
+      "Pamètan bân nyèyom astana Eppa' sareng Embu'",
+      "Mangkat dhibi' ta' mator pamèt",
+      "Nangès mènta pèssè bânnya'",
+      "Tèdung polè è kamar"
+    ],
+    "b": 0,
+    "bahas": "Pamètan ka Eppa' bân Embu' sabellunna mangkat sakola'an panèka tatakrama moljâ."
+  },
+  {
+    "q": "Oca' 'sakola'an' asalla dâri oca' asal ....",
+    "p": ["Sakola", "Kola", "Sako", "La'an"],
+    "b": 0,
+    "bahas": "Oca' asalna 'sakola' + panotèng '-an' dhâddhi 'sakola'an'."
+  },
+  {
+    "q": "Lamon kanca bâdâ sè ghâgghâr è tanèyan sakola'an, kita kodhu ....",
+    "p": ["Lèkkas nolongè", "Ngèjhek bân aghellâ'", "Neng-neng bhâi", "Berka' maso' ka kelas"],
+    "b": 0,
+    "bahas": "Salèng nolongè sareng kanca panèka tèngka sè bhâghus."
+  },
+  {
+    "q": "Oca' 'mator sakalangkong' èocapaghi nalèka ....",
+    "p": ["Èbhânto otabâ èberri' bârâng bi' orèng laèn", "Ngalakonè kasala'an", "Mangkat tèdung", "Lèbât è adâ'na orèng towa"],
+    "b": 0,
+    "bahas": "Mator sakalangkong artèna terima kasih."
+  }
+]);
+
+window.tambahPaketUjian("3", "kesenian", "UTS Semester 1", [
+  {
+    "q": "Unsur seni rupa yang terbentuk dari deretan titik-titik yang dihubungkan secara memanjang disebut ....",
+    "p": ["Garis", "Warna", "Tekstur", "Volume"],
+    "b": 0,
+    "bahas": "Garis merupakan gabungan titik-titik yang berderet memanjang dan memiliki arah tertentu."
+  },
+  {
+    "svg": "<svg width='165' height='60' xmlns='http://w3.org'><path d='M15,35 Q35,15 55,35 T95,35 T135,35' fill='none' stroke='#0284c7' stroke-width='3.5'/></svg>",
+    "q": "Perhatikan bentuk garis bergelombang pada gambar di atas! Garis tersebut sering digunakan untuk menggambar ....",
+    "p": [
+      "Ombak air laut, aliran sungai, dan awan",
+      "Tiang bendera yang tegak lurus",
+      "Ujung atap rumah yang lancip",
+      "Kotak papan tulis"
+    ],
+    "b": 0,
+    "bahas": "Garis lengkung bergelombang sangat cocok menggambarkan ombak air, aliran sungai, dan awan."
+  },
+  {
+    "q": "Garis patah-patah yang bersudut lancip naik turun seperti gigi gergaji atau kilatan petir disebut garis ....",
+    "p": ["Zig-zag", "Lurus mendatar", "Lingkaran", "Spiral"],
+    "b": 0,
+    "bahas": "Garis zig-zag memiliki sudut tajam naik turun."
+  },
+  {
+    "q": "Bentuk-bentuk teratur yang dapat diukur dengan penggaris atau jangka seperti persegi, segitiga, dan lingkaran disebut bentuk ....",
+    "p": ["Geometris", "Organis bebas", "Abstrak", "Acak"],
+    "b": 0,
+    "bahas": "Bentuk geometris adalah bentuk beraturan yang memiliki ukuran pasti."
+  },
+  {
+    "q": "Bentuk yang menyerupai benda-benda di alam dengan garis lengkung bebas seperti bentuk daun, batu kali, dan awan disebut bentuk ....",
+    "p": ["Organis / nongeometris", "Geometris kaku", "Kubistis", "Silindris"],
+    "b": 0,
+    "bahas": "Bentuk organis memiliki lengkungan bebas dan alami."
+  },
+  {
+    "q": "Tiga warna dasar (primer) yang tidak dapat dibuat dari campuran warna lain adalah ....",
+    "p": [
+      "Merah, kuning, dan biru",
+      "Hijau, oranye, dan ungu",
+      "Hitam, putih, dan abu-abu",
+      "Cokelat, merah muda, dan krem"
+    ],
+    "b": 0,
+    "bahas": "Merah, kuning, dan biru adalah tiga warna primer (utama)."
+  },
+  {
+    "svg": "<svg width='185' height='65' xmlns='http://w3.org'><circle cx='35' cy='32' r='16' fill='#ef4444'/><text x='62' y='37' font-size='14' font-weight='bold'>+</text><circle cx='90' cy='32' r='16' fill='#38bdf8'/><text x='117' y='37' font-size='14' font-weight='bold'>=</text><circle cx='148' cy='32' r='18' fill='#a855f7' stroke='#0f172a' stroke-width='2'/></svg>",
+    "q": "Perhatikan pencampuran warna pada gambar di atas! Jika warna merah dicampur dengan warna biru, maka akan menghasilkan warna sekunder yaitu ....",
+    "p": ["Hijau", "Oranye", "Ungu", "Cokelat"],
+    "b": 2,
+    "bahas": "Campuran warna merah dan biru menghasilkan warna ungu."
+  },
+  {
+    "q": "Jika cat air warna kuning dicampur dengan cat air warna biru, maka akan menghasilkan warna sekunder yaitu ....",
+    "p": ["Oranye", "Hijau", "Ungu", "Merah muda"],
+    "b": 1,
+    "bahas": "Campuran warna kuning dan biru menghasilkan warna hijau."
+  },
+  {
+    "q": "Warna sekunder yang terbentuk dari pencampuran warna merah dan kuning adalah ....",
+    "p": ["Oranye (jingga)", "Hijau", "Ungu", "Abu-abu"],
+    "b": 0,
+    "bahas": "Campuran warna merah dan kuning menghasilkan warna oranye."
+  },
+  {
+    "q": "Alat yang digunakan sebagai wadah untuk mencampur berbagai warna cat air sebelum disapukan ke kertas gambar disebut ....",
+    "p": ["Palet", "Kuas", "Kanvas", "Rautan"],
+    "b": 0,
+    "bahas": "Palet adalah piring kecil bercekung tempat mencampur cat warna."
+  },
+  {
+    "q": "Alat gambar yang memiliki sifat warna cerah, tebal, lembut seperti lilin, dan tidak memerlukan air saat digunakan adalah ....",
+    "p": ["Krayon / pastel minyak", "Cat air", "Pensil 2B", "Arang"],
+    "b": 0,
+    "bahas": "Krayon atau oil pastel langsung digoreskan ke kertas dan menghasilkan warna tebal yang cerah."
+  },
+  {
+    "q": "Teknik mewarnai gambar dengan cara menggoreskan pensil warna secara miring sejajar atau menyilang untuk menciptakan kesan bayangan disebut teknik ....",
+    "p": ["Arsir", "Kolase", "Mozaik", "Lipat"],
+    "b": 0,
+    "bahas": "Teknik arsir menggunakan goresan garis sejajar atau silang."
+  },
+  {
+    "q": "Langkah pertama yang dilakukan sebelum mewarnai gambar pemandangan alam di buku gambar adalah ....",
+    "p": [
+      "Membuat sketsa tipis menggunakan pensil",
+      "Menyiram kertas dengan air",
+      "Melipat kertas menjadi dua bagian",
+      "Memotong kertas menjadi kecil-kecil"
+    ],
+    "b": 0,
+    "bahas": "Sketsa pensil tipis membantu mengatur tata letak objek sebelum diwarnai."
+  },
+  {
+    "q": "Gambar hiasan berpola yang dibuat dengan menggabungkan berbagai garis, bentuk geometris, dan motif tumbuhan atau hewan untuk memperindah permukaan benda disebut gambar ....",
+    "p": ["Dekoratif", "Peta jalan", "Foto keluarga", "Denah rumah"],
+    "b": 0,
+    "bahas": "Gambar dekoratif berfungsi menghias bidang agar tampak indah."
+  },
+  {
+    "q": "Motif gambar dekoratif yang mengambil inspirasi dari bentuk daun, bunga, dan sulur tumbuhan disebut motif ....",
+    "p": ["Flora (tumbuhan)", "Fauna (hewan)", "Geometris", "Figuratif manusia"],
+    "b": 0,
+    "bahas": "Flora berarti dunia tumbuhan, sedangkan fauna berarti dunia hewan."
+  },
+  {
+    "q": "Motif gambar dekoratif yang mengambil inspirasi dari bentuk kupu-kupu, burung, dan ikan disebut motif ....",
+    "p": ["Fauna (hewan)", "Flora (tumbuhan)", "Geometris", "Abstrak"],
+    "b": 0,
+    "bahas": "Motif fauna menampilkan bentuk-bentuk hewan yang digayakan secara indah."
+  },
+  {
+    "q": "Karya seni rupa yang dibuat dengan cara menempelkan potongan-potongan kecil kertas warna, kepingan keramik, atau kulit telur pada pola gambar sehingga membentuk gambar utuh disebut ....",
+    "p": ["Mozaik", "Lukisan cat minyak", "Patung kayu", "Anyaman bambu"],
+    "b": 0,
+    "bahas": "Mozaik menyusun kepingan-kepingan kecil bahan sejenis pada bidang gambar."
+  },
+  {
+    "q": "Bahan alami di sekitar rumah yang dapat dimanfaatkan untuk membuat karya seni tempel kolase adalah ....",
+    "p": [
+      "Daun kering, biji kacang hijau, dan biji jagung",
+      "Pecahan kaca jendela",
+      "Paku besi berkarat",
+      "Kawat berduri"
+    ],
+    "b": 0,
+    "bahas": "Daun kering dan biji-bijian aman, mudah didapat, dan indah untuk karya kolase."
+  },
+  {
+    "q": "Garis tegak lurus (vertikal) pada gambar pohon kelapa atau tiang bendera memberikan kesan ....",
+    "p": ["Kuat, kokoh, dan menjulang tinggi", "Lemah dan roboh", "Bergerak berputar", "Air mengalir"],
+    "b": 0,
+    "bahas": "Garis vertikal memberi kesan kokoh dan tegas."
+  },
+  {
+    "q": "Garis mendatar (horizontal) pada gambar permukaan air laut yang tenang memberikan kesan ....",
+    "p": ["Tenang dan luas", "Kacau dan ribut", "Tajam dan berbahaya", "Berputar cepat"],
+    "b": 0,
+    "bahas": "Garis horizontal memberikan kesan tenang, damai, dan luas."
+  },
+  {
+    "q": "Untuk mendapatkan warna merah muda (pink) saat melukis dengan cat air, warna merah dapat dicampur dengan warna ....",
+    "p": ["Putih", "Hitam", "Hijau", "Biru"],
+    "b": 0,
+    "bahas": "Mencampur warna merah dengan putih menghasilkan warna merah muda yang lembut."
+  },
+  {
+    "q": "Agar hasil mewarnai menggunakan pensil warna atau krayon terlihat rapi dan indah, sebaiknya kita mewarnai dengan cara ....",
+    "p": [
+      "Searah, rata, dan tidak keluar dari garis tepi gambar",
+      "Mencoret ke segala arah secara terburu-buru",
+      "Menekan pensil warna sampai kertas robek",
+      "Mengotori bagian kertas yang kosong dengan tangan"
+    ],
+    "b": 0,
+    "bahas": "Goresan searah di dalam garis tepi menghasilkan warna yang halus dan rapi."
+  },
+  {
+    "q": "Setelah selesai melukis menggunakan cat air dan kuas di kelas, alat lukis yang harus segera dicuci bersih dengan air agar bulunya tidak mengeras adalah ....",
+    "p": ["Kuas cat dan palet", "Buku gambar", "Penghapus karet", "Penggaris kayu"],
+    "b": 0,
+    "bahas": "Kuas dan palet harus dicuci setelah dipakai agar cat tidak mengering dan merusak bulu kuas."
+  },
+  {
+    "q": "Sikap yang baik saat melihat hasil gambar teman di kelas yang berbeda gaya dengan gambar kita adalah ....",
+    "p": [
+      "Menghargai dan memuji keunikan karya teman dengan sopan",
+      "Mengejek warna gambar teman",
+      "Mencoret gambar milik teman",
+      "Menganggap gambar sendiri paling sempurna"
+    ],
+    "b": 0,
+    "bahas": "Saling menghargai hasil karya melatih sikap apresiasi seni dan kerukunan di kelas."
+  },
+  {
+    "q": "Manfaat belajar menggambar dan mengenal warna sejak kelas 3 SD adalah ....",
+    "p": [
+      "Melatih kreativitas, imajinasi, kesabaran, dan ketelitian",
+      "Membuat siswa lupa belajar membaca dan berhitung",
+      "Menghabiskan waktu bermain tanpa guna",
+      "Membuat ruang kelas menjadi berantakan"
+    ],
+    "b": 0,
+    "bahas": "Kegiatan seni rupa mengembangkan daya cipta, konsentrasi, dan kepekaan estetika anak."
+  }
+]);
+
