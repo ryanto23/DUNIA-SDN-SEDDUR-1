@@ -1633,3 +1633,1120 @@ window.tambahPaketUjian("2", "kesenian", "UAS Semester 1", [
   }
 ]);
 
+window.tambahPaketUjian("2", "mtk", "UTS Semester 1", [
+  {
+    "svg": "<svg width='180' height='65' xmlns='http://w3.org'><rect x='12' y='12' width='75' height='40' rx='6' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='49' y='36' font-size='12' text-anchor='middle'>🍎🍎🍎🍎🍎</text><rect x='93' y='12' width='75' height='40' rx='6' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='130' y='36' font-size='12' text-anchor='middle'>🍎🍎🍎🍎</text></svg>",
+    "q": "Hitunglah seluruh buah apel pada kedua kotak di atas!",
+    "p": ["8", "9", "10", "11"],
+    "b": 1,
+    "bahas": "5 apel + 4 apel = 9 buah apel."
+  },
+  {
+    "svg": "<svg width='185' height='68' xmlns='http://w3.org'><rect x='12' y='12' width='45' height='42' rx='5' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='34' y='37' font-size='10' font-weight='bold' text-anchor='middle'>10</text><rect x='64' y='12' width='45' height='42' rx='5' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><text x='86' y='37' font-size='10' font-weight='bold' text-anchor='middle'>10</text><rect x='118' y='12' width='55' height='42' rx='5' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='145' y='37' font-size='12' text-anchor='middle'>⭐⭐⭐</text></svg>",
+    "q": "Perhatikan gambar balok puluhan dan bintang satuan di atas! Bilangan yang ditunjukkan gambar tersebut adalah ....",
+    "p": ["20", "23", "32", "13"],
+    "b": 1,
+    "bahas": "2 puluhan (20) + 3 satuan (3) = 23."
+  },
+  {
+    "q": "Bilangan 67 dibaca ....",
+    "p": ["Enam puluh tujuh", "Tujuh puluh enam", "Enam tujuh", "Enam ratus tujuh"],
+    "b": 0,
+    "bahas": "6 puluhan dan 7 satuan dibaca enam puluh tujuh."
+  },
+  {
+    "q": "Lambang bilangan dari 'delapan puluh empat' adalah ....",
+    "p": ["48", "84", "804", "840"],
+    "b": 1,
+    "bahas": "Delapan puluh (80) + empat (4) = 84."
+  },
+  {
+    "svg": "<svg width='165' height='65' xmlns='http://w3.org'><rect x='25' y='12' width='115' height='40' rx='8' fill='#fce7f3' stroke='#db2777' stroke-width='2'/><text x='82' y='38' font-size='15' font-weight='bold' text-anchor='middle' fill='#9d174d'>59</text></svg>",
+    "q": "Perhatikan kartu bilangan di atas! Pada bilangan 59, angka 5 menempati nilai tempat ....",
+    "p": ["Satuan", "Puluhan", "Ratusan", "Ribuan"],
+    "b": 1,
+    "bahas": "Pada bilangan 59, angka 5 adalah puluhan (50) dan angka 9 adalah satuan."
+  },
+  {
+    "q": "Nilai angka 8 pada bilangan 48 adalah ....",
+    "p": ["8", "80", "40", "48"],
+    "b": 0,
+    "bahas": "Angka 8 berada di tempat satuan sehingga nilainya 8."
+  },
+  {
+    "svg": "<svg width='180' height='65' xmlns='http://w3.org'><rect x='15' y='14' width='52' height='36' rx='6' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='41' y='37' font-size='13' font-weight='bold' text-anchor='middle'>74</text><circle cx='90' cy='32' r='12' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='90' y='37' font-size='12' font-weight='bold' text-anchor='middle'>?</text><rect x='113' y='14' width='52' height='36' rx='6' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='139' y='37' font-size='13' font-weight='bold' text-anchor='middle'>47</text></svg>",
+    "q": "Perhatikan dua bilangan di atas! Bilangan 74 ... daripada 47.",
+    "p": ["Lebih kecil", "Lebih besar", "Sama dengan", "Lebih sedikit"],
+    "b": 1,
+    "bahas": "74 lebih besar daripada 47."
+  },
+  {
+    "q": "Urutan bilangan berikut dari yang terkecil adalah ....",
+    "p": ["35, 31, 38, 33", "31, 33, 35, 38", "38, 35, 33, 31", "33, 31, 38, 35"],
+    "b": 1,
+    "bahas": "Urutan dari paling kecil ke paling besar adalah 31, 33, 35, 38."
+  },
+  {
+    "svg": "<svg width='185' height='60' xmlns='http://w3.org'><rect x='10' y='12' width='35' height='35' rx='5' fill='#dcfce7' stroke='#16a34a'/><text x='27' y='34' font-size='11' font-weight='bold' text-anchor='middle'>20</text><rect x='52' y='12' width='35' height='35' rx='5' fill='#dcfce7' stroke='#16a34a'/><text x='69' y='34' font-size='11' font-weight='bold' text-anchor='middle'>25</text><rect x='94' y='12' width='35' height='35' rx='5' fill='#dcfce7' stroke='#16a34a'/><text x='111' y='34' font-size='11' font-weight='bold' text-anchor='middle'>30</text><rect x='136' y='12' width='35' height='35' rx='5' fill='#fef08a' stroke='#ca8a04'/><text x='153' y='34' font-size='11' font-weight='bold' text-anchor='middle'>?</text></svg>",
+    "q": "Perhatikan pola bilangan loncat 5 pada gambar di atas! Bilangan untuk mengisi kotak (?) adalah ....",
+    "p": ["31", "32", "35", "40"],
+    "b": 2,
+    "bahas": "Bilangan loncat 5: 20, 25, 30, 35."
+  },
+  {
+    "q": "Hasil penjumlahan dari 24 + 13 adalah ....",
+    "p": ["35", "36", "37", "38"],
+    "b": 2,
+    "bahas": "Puluhan: 20 + 10 = 30, Satuan: 4 + 3 = 7. Jadi 37."
+  },
+  {
+    "q": "Hasil penjumlahan menyimpan dari 38 + 16 adalah ....",
+    "p": ["44", "52", "54", "64"],
+    "b": 2,
+    "bahas": "8 + 6 = 14 (tulis 4 simpan 1), 1 + 3 + 1 = 5. Jadi 54."
+  },
+  {
+    "svg": "<svg width='180' height='65' xmlns='http://w3.org'><rect x='12' y='12' width='156' height='40' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='90' y='37' font-size='12' font-weight='bold' text-anchor='middle' fill='#0369a1'>25 Buku + 14 Buku = ...</text></svg>",
+    "q": "Budi memiliki 25 buku cerita. Ibu membelikan lagi 14 buku cerita. Jumlah buku Budi sekarang adalah ....",
+    "p": ["38 buku", "39 buku", "40 buku", "49 buku"],
+    "b": 1,
+    "bahas": "25 + 14 = 39 buku."
+  },
+  {
+    "q": "Hasil pengurangan dari 49 - 15 adalah ....",
+    "p": ["32", "33", "34", "35"],
+    "b": 2,
+    "bahas": "49 - 15 = 34."
+  },
+  {
+    "q": "Hasil pengurangan meminjam dari 52 - 17 adalah ....",
+    "p": ["35", "37", "45", "69"],
+    "b": 0,
+    "bahas": "52 - 17 = 35."
+  },
+  {
+    "q": "Di keranjang ada 36 buah jeruk. Sebanyak 12 buah jeruk dimakan bersama keluarga. Sisa jeruk di keranjang ada ....",
+    "p": ["22 buah", "24 buah", "26 buah", "48 buah"],
+    "b": 1,
+    "bahas": "36 - 12 = 24 buah jeruk."
+  },
+  {
+    "svg": "<svg width='160' height='70' xmlns='http://w3.org'><polygon points='80,10 40,58 120,58' fill='#ef4444' stroke='#991b1b' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar bangun datar di atas! Banyak sisi pada bangun segitiga tersebut ada ....",
+    "p": ["2 sisi", "3 sisi", "4 sisi", "5 sisi"],
+    "b": 1,
+    "bahas": "Segitiga memiliki 3 sisi dan 3 sudut."
+  },
+  {
+    "svg": "<svg width='160' height='70' xmlns='http://w3.org'><rect x='50' y='12' width='60' height='46' fill='#38bdf8' stroke='#0284c7' stroke-width='2'/></svg>",
+    "q": "Gambar bangun datar berwarna biru di atas memiliki 4 sisi dan 4 sudut, disebut ....",
+    "p": ["Segitiga", "Segi empat", "Lingkaran", "Oval"],
+    "b": 1,
+    "bahas": "Bangun yang memiliki 4 sisi disebut segi empat."
+  },
+  {
+    "q": "Benda di ruang kelas yang permukaannya berbentuk lingkaran adalah ....",
+    "p": ["Papan tulis", "Jam dinding bulat", "Buku gambar", "Meja guru"],
+    "b": 1,
+    "bahas": "Jam dinding bulat berbentuk lingkaran."
+  },
+  {
+    "q": "Pilihlah gambar yang menunjukkan bangun LINGKARAN!",
+    "p": ["Lingkaran", "Segitiga", "Persegi", "Bintang"],
+    "pSvg": [
+      "<svg width='60' height='42' xmlns='http://w3.org'><circle cx='30' cy='21' r='15' fill='#facc15' stroke='#ca8a04' stroke-width='2'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><polygon points='30,5 10,37 50,37' fill='#ef4444'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><rect x='14' y='5' width='32' height='32' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><polygon points='30,5 35,16 48,16 38,23 41,35 30,28 19,35 22,23 12,16 25,16' fill='#22c55e'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama yang berbentuk bulat tanpa sudut adalah lingkaran."
+  },
+  {
+    "q": "Bilangan yang terletak tepat di antara 68 dan 70 adalah ....",
+    "p": ["67", "69", "71", "72"],
+    "b": 1,
+    "bahas": "Urutannya adalah 68, 69, 70."
+  }
+]);
+
+window.tambahPaketUjian("2", "bindo", "UTS Semester 1", [
+  {
+    "svg": "<svg width='150' height='75' xmlns='http://w3.org'><circle cx='75' cy='38' r='24' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><circle cx='66' cy='32' r='3' fill='#0f172a'/><circle cx='84' cy='32' r='3' fill='#0f172a'/><path d='M65,48 Q75,38 85,48' fill='none' stroke='#0f172a' stroke-width='2.5'/></svg>",
+    "q": "Perhatikan ekspresi wajah pada gambar di atas! Bibir melengkung ke bawah menunjukkan perasaan ....",
+    "p": ["Senang", "Sedih", "Terkejut", "Mengantuk"],
+    "b": 1,
+    "bahas": "Bibir melengkung ke bawah menggambarkan perasaan sedih."
+  },
+  {
+    "svg": "<svg width='150' height='75' xmlns='http://w3.org'><circle cx='75' cy='38' r='24' fill='#fecaca' stroke='#dc2626' stroke-width='2'/><line x1='61' y1='26' x2='71' y2='31' stroke='#0f172a' stroke-width='2.5'/><line x1='89' y1='26' x2='79' y2='31' stroke='#0f172a' stroke-width='2.5'/><circle cx='66' cy='35' r='3' fill='#0f172a'/><circle cx='84' cy='35' r='3' fill='#0f172a'/><line x1='66' y1='49' x2='84' y2='49' stroke='#0f172a' stroke-width='2.5'/></svg>",
+    "q": "Perhatikan wajah berwarna kemerahan dengan alis menukik pada gambar di atas! Ekspresi tersebut menunjukkan perasaan ....",
+    "p": ["Gembira", "Marah", "Malu", "Tenang"],
+    "b": 1,
+    "bahas": "Alis menukik dan wajah memerah menunjukkan perasaan marah."
+  },
+  {
+    "q": "Ketika kita mendapat hadiah buku cerita baru dari Ibu, perasaan kita adalah ....",
+    "p": ["Sedih", "Senang / Gembira", "Takut", "Marah"],
+    "b": 1,
+    "bahas": "Menerima hadiah membuat hati merasa senang dan bersyukur."
+  },
+  {
+    "q": "Saat merasa marah karena mainan direbut teman, cara menenangkan diri yang baik adalah ....",
+    "p": [
+      "Menarik napas dalam-dalam, menghitung sampai sepuluh, dan berbicara baik-baik",
+      "Memukul teman sekuat tenaga",
+      "Berteriak sambil menangis keras",
+      "Melempar buku ke lantai"
+    ],
+    "b": 0,
+    "bahas": "Menarik napas dalam-dalam membantu meredakan amarah agar tidak menyakiti orang lain."
+  },
+  {
+    "q": "Penggunaan huruf kapital yang benar terdapat pada kalimat ....",
+    "p": [
+      "siti dan rina bermain boneka di teras.",
+      "Siti dan Rina bermain boneka di teras.",
+      "Siti dan rina bermain Boneka di teras.",
+      "siti dan Rina bermain boneka di Teras."
+    ],
+    "b": 1,
+    "bahas": "Huruf kapital dipakai di awal kalimat (Siti) dan nama orang (Rina)."
+  },
+  {
+    "q": "Tanda baca yang digunakan pada akhir kalimat berita seperti 'Ayah membaca koran di ruang tamu' adalah ....",
+    "p": ["Titik (.)", "Tanya (?)", "Seru (!)", "Koma (,)"],
+    "b": 0,
+    "bahas": "Kalimat berita diakhiri dengan tanda titik (.)."
+  },
+  {
+    "svg": "<svg width='160' height='70' xmlns='http://w3.org'><rect x='25' y='12' width='110' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='80' y='33' font-size='11' font-weight='bold' text-anchor='middle' fill='#0369a1'>JARAK BACA</text><text x='80' y='48' font-size='10' text-anchor='middle' fill='#0f172a'>Minimal 30 cm</text></svg>",
+    "q": "Perhatikan kartu informasi kesehatan mata di atas! Membaca buku dengan jarak sekitar 30 cm di tempat terang bertujuan agar ....",
+    "p": [
+      "Mata tetap sehat dan tidak cepat lelah",
+      "Buku cepat selesai dibaca",
+      "Tulisan terlihat kecil sekali",
+      "Mata menjadi mengantuk"
+    ],
+    "b": 0,
+    "bahas": "Jarak baca ideal 30 cm dengan pencahayaan cukup menjaga kesehatan mata."
+  },
+  {
+    "q": "Kebiasaan yang dapat merusak kesehatan mata adalah ....",
+    "p": [
+      "Menonton layar ponsel sambil tiduran di ruangan gelap",
+      "Makan sayur wortel dan bayam",
+      "Belajar di meja belajar yang terang",
+      "Mengistirahatkan mata setelah membaca"
+    ],
+    "b": 0,
+    "bahas": "Menatap layar di tempat gelap dan sambil tiduran membuat mata cepat rusak."
+  },
+  {
+    "svg": "<svg width='150' height='75' xmlns='http://w3.org'><polygon points='75,14 63,56 87,56' fill='#f97316' stroke='#c2410c' stroke-width='2'/><path d='M75,14 Q65,5 60,12 M75,14 Q85,5 90,12' fill='none' stroke='#16a34a' stroke-width='2.5'/></svg>",
+    "q": "Perhatikan gambar sayuran berwarna oranye di atas! Sayuran wortel kaya vitamin A yang sangat baik untuk kesehatan ....",
+    "p": ["Telinga", "Mata", "Kaki", "Rambut"],
+    "b": 1,
+    "bahas": "Wortel mengandung vitamin A yang menjaga kesehatan mata."
+  },
+  {
+    "q": "Perhatikan kalimat berikut: 'Budi menyiram bunga.' Kata 'Budi' dalam kalimat tersebut berkedudukan sebagai ....",
+    "p": ["Subjek", "Predikat", "Objek", "Keterangan"],
+    "b": 0,
+    "bahas": "Budi adalah pelaku kegiatan sehingga disebut Subjek (S)."
+  },
+  {
+    "q": "Perhatikan kalimat berikut: 'Ibu memasak nasi.' Kata 'memasak' berkedudukan sebagai ....",
+    "p": ["Subjek", "Predikat", "Objek", "Nama tempat"],
+    "b": 1,
+    "bahas": "Memasak adalah kata kerja (kegiatan yang dilakukan) sehingga disebut Predikat (P)."
+  },
+  {
+    "q": "Perhatikan kalimat berikut: 'Edo menendang bola.' Kata 'bola' berkedudukan sebagai ....",
+    "p": ["Subjek", "Predikat", "Objek", "Keterangan waktu"],
+    "b": 2,
+    "bahas": "Edo (Subjek), menendang (Predikat), bola (Objek)."
+  },
+  {
+    "q": "Kata tanya yang digunakan untuk menanyakan nama orang adalah ....",
+    "p": ["Siapa", "Di mana", "Kapan", "Berapa"],
+    "b": 0,
+    "bahas": "Kata tanya 'Siapa' menanyakan orang."
+  },
+  {
+    "q": "Kalimat tanya berikut yang menggunakan tanda baca dengan benar adalah ....",
+    "p": [
+      "Di mana kamu membeli buku gambar itu?",
+      "Di mana kamu membeli buku gambar itu.",
+      "Di mana kamu membeli buku gambar itu!",
+      "Di mana kamu membeli buku gambar itu,"
+    ],
+    "b": 0,
+    "bahas": "Kalimat tanya diawali kata tanya dan diakhiri tanda tanya (?)."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><line x1='20' y1='45' x2='155' y2='45' stroke='#0284c7' stroke-width='2'/><rect x='30' y='20' width='22' height='25' fill='#38bdf8'/><rect x='65' y='15' width='22' height='30' fill='#22c55e'/><rect x='100' y='25' width='22' height='20' fill='#f59e0b'/></svg>",
+    "q": "Perhatikan gambar grafik batang sederhana di atas! Batang yang paling tinggi adalah batang berwarna ....",
+    "p": ["Biru", "Hijau", "Oranye", "Merah"],
+    "b": 1,
+    "bahas": "Batang di tengah berwarna hijau paling tinggi dibanding batang biru dan oranye."
+  },
+  {
+    "q": "Sinonim (persamaan arti) dari kata 'gembira' adalah ....",
+    "p": ["Sedih", "Senang", "Takut", "Cemas"],
+    "b": 1,
+    "bahas": "Gembira sama artinya dengan senang atau bahagia."
+  },
+  {
+    "q": "Antonim (lawan kata) dari kata 'bersih' adalah ....",
+    "p": ["Rapi", "Kotor", "Sehat", "Wangi"],
+    "b": 1,
+    "bahas": "Lawan kata dari bersih adalah kotor."
+  },
+  {
+    "q": "Susunan kata acak 'minum - Siti - susu - hangat' menjadi kalimat yang benar adalah ....",
+    "p": [
+      "Siti minum susu hangat.",
+      "Susu minum Siti hangat.",
+      "Hangat minum Siti susu.",
+      "Minum Siti hangat susu."
+    ],
+    "b": 0,
+    "bahas": "Susunan Subjek-Predikat-Objek yang tepat adalah 'Siti minum susu hangat.'"
+  },
+  {
+    "q": "Pilihlah gambar ekspresi wajah TERSENYUM SENANG di bawah ini!",
+    "p": ["Senyum", "Sedih", "Datar", "Kotak"],
+    "pSvg": [
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='23' r='16' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><circle cx='25' cy='19' r='2' fill='#0f172a'/><circle cx='35' cy='19' r='2' fill='#0f172a'/><path d='M23,27 Q30,34 37,27' fill='none' stroke='#0f172a' stroke-width='2'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='23' r='16' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><path d='M23,31 Q30,24 37,31' fill='none' stroke='#0f172a' stroke-width='2'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='23' r='16' fill='#e2e8f0' stroke='#64748b' stroke-width='2'/><line x1='23' y1='28' x2='37' y2='28' stroke='#0f172a' stroke-width='2'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><rect x='14' y='7' width='32' height='32' fill='#fca5a5'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama berwarna kuning dengan bibir tersenyum ke atas."
+  },
+  {
+    "q": "Saat teman sedang bercerita di depan kelas, sikap kita yang baik adalah ....",
+    "p": [
+      "Mendengarkan dengan tenang dan tidak memotong pembicaraannya",
+      "Berteriak-teriak mengganggu teman",
+      "Mengobrol ramai dengan teman sebangku",
+      "Tertawa mengejek ceritanya"
+    ],
+    "b": 0,
+    "bahas": "Menyimak dengan tenang menghargai teman yang sedang berbicara."
+  }
+]);
+
+window.tambahPaketUjian("2", "pai", "UTS Semester 1", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='11' font-weight='bold' text-anchor='middle' fill='#15803d'>SURAH AN-NAS</text><text x='87' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Terdiri atas 6 Ayat • Artinya Manusia</text></svg>",
+    "q": "Perhatikan kartu informasi surah di atas! Surah An-Nas merupakan surah ke-114 (penutup) dalam Al-Qur'an yang artinya ....",
+    "p": ["Waktu subuh", "Manusia", "Pertolongan", "Gajah"],
+    "b": 1,
+    "bahas": "An-Nas secara bahasa memiliki arti manusia."
+  },
+  {
+    "q": "Dalam Surah An-Nas kita diajarkan agar memohon perlindungan dari kejahatan bisikan setan hanya kepada ....",
+    "p": ["Allah Swt.", "Malaikat", "Manusia kuat", "Jin"],
+    "b": 0,
+    "bahas": "Qul a'uzu birabbin-nas (Katakanlah: Aku berlindung kepada Tuhan manusia, yaitu Allah Swt.)."
+  },
+  {
+    "q": "Ayat ke-3 Surah An-Nas berbunyi 'Ilahin-nas' yang memiliki arti ....",
+    "p": ["Tuhan manusia", "Raja manusia", "Sembahan manusia", "Dari golongan jin"],
+    "b": 2,
+    "bahas": "'Malikin-nas' artinya Raja manusia, sedangkan 'Ilahin-nas' artinya Sembahan manusia."
+  },
+  {
+    "svg": "<svg width='175' height='65' xmlns='http://w3.org'><rect x='20' y='12' width='135' height='40' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='37' font-size='11' font-weight='bold' text-anchor='middle' fill='#854d0e'>← Kanan ke Kiri</text></svg>",
+    "q": "Perhatikan tanda panah arah pada gambar di atas! Menulis dan membaca huruf hijaiyah dalam Al-Qur'an selalu dimulai dari arah ....",
+    "p": ["Kiri ke kanan", "Kanan ke kiri", "Bawah ke atas", "Tengah ke pinggir"],
+    "b": 1,
+    "bahas": "Tulisan Arab/huruf hijaiyah ditulis dan dibaca dari kanan ke kiri."
+  },
+  {
+    "q": "Tanda baca harakat yang terletak di atas huruf hijaiyah dan berbunyi 'a' disebut ....",
+    "p": ["Fathah", "Kasrah", "Dammah", "Sukun"],
+    "b": 0,
+    "bahas": "Fathah berbunyi 'a', Kasrah berbunyi 'i', dan Dammah berbunyi 'u'."
+  },
+  {
+    "q": "Tanda baca harakat yang bentuknya seperti huruf wawu kecil di atas huruf dan berbunyi 'u' disebut ....",
+    "p": ["Fathah", "Kasrah", "Dammah", "Tanwin"],
+    "b": 2,
+    "bahas": "Dammah berbunyi 'u'."
+  },
+  {
+    "q": "Di antara huruf hijaiyah berikut yang TIDAK DAPAT disambung dengan huruf sesudahnya di sebelah kiri adalah ....",
+    "p": ["Alif, Dal, Dzal, Ra, Zai, Wawu", "Ba, Ta, Tsa", "Sin, Syin, Sad", "Kaf, Lam, Mim"],
+    "b": 0,
+    "bahas": "Enam huruf hijaiyah (ا د ذ ر ز و) tidak bisa menyambung huruf di sebelah kirinya."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='11' font-weight='bold' text-anchor='middle' fill='#0369a1'>AL-HAFIZ</text><text x='87' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Asmaulhusna Allah Swt.</text></svg>",
+    "q": "Perhatikan kartu Asmaulhusna pada gambar di atas! Arti dari 'Al-Hafiz' adalah Allah Swt. Maha ....",
+    "p": ["Memelihara / Menjaga", "Melindungi", "Mengetahui", "Teliti"],
+    "b": 0,
+    "bahas": "Al-Hafiz artinya Allah Maha Memelihara dan Menjaga seluruh makhluk-Nya."
+  },
+  {
+    "q": "Asmaulhusna 'Al-Wali' memiliki arti bahwa Allah Swt. Maha ....",
+    "p": ["Melindungi", "Mendengar", "Melihat", "Menciptakan"],
+    "b": 0,
+    "bahas": "Al-Wali artinya Allah Maha Melindungi hamba-hamba-Nya yang beriman."
+  },
+  {
+    "q": "Allah Swt. mengetahui semua perbuatan kita baik yang tampak maupun yang tersembunyi karena Allah memiliki Asmaulhusna ....",
+    "p": ["Al-'Alim", "Al-Hafiz", "As-Salam", "Al-Malik"],
+    "b": 0,
+    "bahas": "Al-'Alim artinya Allah Maha Mengetahui segala sesuatu."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#fce7f3' stroke='#db2777' stroke-width='2'/><text x='87' y='32' font-size='11' font-weight='bold' text-anchor='middle' fill='#9d174d'>AL-KHABIR</text><text x='87' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Allah Maha Teliti</text></svg>",
+    "q": "Perhatikan gambar di atas! Sikap meneladani Asmaulhusna 'Al-Khabir' saat mengerjakan soal ulangan di kelas adalah ....",
+    "p": [
+      "Mengerjakan soal dengan teliti, cermat, dan jujur tanpa menyontek",
+      "Mengerjakan soal terburu-buru asal cepat selesai",
+      "Menyontek jawaban teman di sebelahnya",
+      "Tidak memeriksa kembali hasil pekerjaannya"
+    ],
+    "b": 0,
+    "bahas": "Teliti dan cermat dalam belajar mencerminkan meneladani sifat Allah Al-Khabir."
+  },
+  {
+    "q": "Contoh perilaku meneladani Asmaulhusna 'Al-Hafiz' dalam menjaga barang milik sendiri adalah ....",
+    "p": [
+      "Merawat buku pelajaran dengan rapi dan menyimpan alat tulis di tempat pensil",
+      "Mencoret-coret halaman buku pelajaran",
+      "Membiarkan pensil berserakan di lantai kelas",
+      "Merobek kertas buku tulis untuk bermain"
+    ],
+    "b": 0,
+    "bahas": "Merawat dan menjaga barang milik sendiri dengan baik adalah wujud meneladani sifat Al-Hafiz."
+  },
+  {
+    "q": "Sebelum membaca Al-Qur'an, umat Islam disunahkan membaca ta'awuz dan basmalah serta dalam keadaan suci dengan cara ....",
+    "p": ["Berwudu terlebih dahulu", "Makan dan minum", "Berlari-lari di halaman", "Tidur sebentar"],
+    "b": 0,
+    "bahas": "Berwudu sebelum menyentuh dan membaca mushaf Al-Qur'an merupakan adab mulia."
+  },
+  {
+    "q": "Ketika ada teman yang membaca ayat-ayat suci Al-Qur'an di kelas, sikap kita yang baik adalah ....",
+    "p": [
+      "Mendengarkan dengan tenang dan khidmat",
+      "Berteriak-teriak mengobrol dengan teman lain",
+      "Tertawa keras di dekatnya",
+      "Bermain bola di dalam kelas"
+    ],
+    "b": 0,
+    "bahas": "Mendengarkan bacaan Al-Qur'an dengan tenang mendatangkan pahala dan rahmat Allah Swt."
+  },
+  {
+    "q": "Asmaulhusna artinya nama-nama Allah Swt. yang baik dan indah. Jumlah Asmaulhusna seluruhnya ada ....",
+    "p": ["25", "50", "99", "100"],
+    "b": 2,
+    "bahas": "Asmaulhusna berjumlah 99 nama indah milik Allah Swt."
+  },
+  {
+    "q": "Menyadari bahwa Allah Swt. memiliki sifat 'Al-'Alim' (Maha Mengetahui) membuat kita selalu bersikap ....",
+    "p": [
+      "Jujur dan berhati-hati dalam berkata serta berbuat meskipun tidak ada guru yang melihat",
+      "Berani mengambil barang teman saat kelas sepi",
+      "Berbohong kepada orang tua di rumah",
+      "Malas belajar saat tidak diawasi"
+    ],
+    "b": 0,
+    "bahas": "Keyakinan bahwa Allah Maha Mengetahui membuat kita jujur di mana saja berada."
+  },
+  {
+    "q": "Memohon perlindungan hanya kepada Allah Swt. (Al-Wali) dilakukan dengan cara rajin ....",
+    "p": [
+      "Berdoa sebelum dan sesudah melakukan kegiatan",
+      "Meminta pertolongan kepada pohon besar",
+      "Memakai jimat di saku baju",
+      "Takut sendirian di kamar"
+    ],
+    "b": 0,
+    "bahas": "Berdoa hanya kepada Allah Swt. adalah wujud keimanan kepada Al-Wali."
+  },
+  {
+    "q": "Perilaku menjaga kelestarian lingkungan sekolah sebagai teladan sifat 'Al-Hafiz' adalah ....",
+    "p": [
+      "Menyiram tanaman di taman sekolah dan membuang sampah pada tempatnya",
+      "Memetik bunga di taman hingga rusak",
+      "Membuang bungkus jajan di selokan",
+      "Mencoret dinding kelas dengan kapur"
+    ],
+    "b": 0,
+    "bahas": "Menjaga kebersihan dan kelestarian tanaman mencerminkan sifat memelihara (Al-Hafiz)."
+  },
+  {
+    "q": "Pilihlah gambar simbol yang mengingatkan kita untuk selalu rajin membaca AL-QUR'AN!",
+    "p": ["Al-Qur'an", "Bola", "Mobil", "Es krim"],
+    "pSvg": [
+      "<svg width='65' height='45' xmlns='http://w3.org'><rect x='14' y='8' width='36' height='28' rx='3' fill='#22c55e' stroke='#15803d' stroke-width='2'/><line x1='32' y1='8' x2='32' y2='36' stroke='#fef08a' stroke-width='2'/></svg>",
+      "<svg width='65' height='45' xmlns='http://w3.org'><circle cx='32' cy='22' r='14' fill='#38bdf8'/></svg>",
+      "<svg width='65' height='45' xmlns='http://w3.org'><rect x='14' y='16' width='36' height='14' rx='4' fill='#ef4444'/><circle cx='22' cy='32' r='4' fill='#0f172a'/><circle cx='42' cy='32' r='4' fill='#0f172a'/></svg>",
+      "<svg width='65' height='45' xmlns='http://w3.org'><polygon points='25,22 39,22 32,40' fill='#d97706'/><circle cx='32' cy='16' r='8' fill='#f43f5e'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama berbentuk kitab/buku terbuka berwarna hijau melambangkan mushaf Al-Qur'an."
+  },
+  {
+    "q": "Anak yang rajin membaca Al-Qur'an dan meneladani Asmaulhusna akan disayang oleh ....",
+    "p": ["Allah Swt., orang tua, dan guru", "Setan yang membisikkan kejahatan", "Orang yang malas", "Penjahat"],
+    "b": 0,
+    "bahas": "Allah Swt., orang tua, dan guru mencintai anak yang rajin mengaji dan berakhlak mulia."
+  }
+]);
+
+window.tambahPaketUjian("2", "pancasila", "UTS Semester 1", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>ATURAN DI RUMAH</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Disepakati &amp; Dipatuhi Keluarga</text></svg>",
+    "q": "Perhatikan kartu informasi pada gambar di atas! Aturan di rumah dibuat oleh orang tua untuk dipatuhi oleh ....",
+    "p": [
+      "Seluruh anggota keluarga di rumah",
+      "Ayah dan ibu saja",
+      "Adik yang masih kecil saja",
+      "Tamu yang datang berkunjung"
+    ],
+    "b": 0,
+    "bahas": "Aturan di rumah wajib ditaati oleh semua anggota keluarga agar tercipta ketertiban dan kerukunan."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><rect x='30' y='25' width='90' height='28' rx='4' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><rect x='35' y='16' width='25' height='12' rx='3' fill='#ffffff' stroke='#0284c7' stroke-width='1.5'/><rect x='90' y='16' width='25' height='12' rx='3' fill='#ffffff' stroke='#0284c7' stroke-width='1.5'/></svg>",
+    "q": "Perhatikan gambar tempat tidur yang rapi di atas! Setelah bangun tidur di pagi hari, aturan baik yang harus kita lakukan adalah ....",
+    "p": [
+      "Merapikan bantal dan melipat selimut sendiri",
+      "Langsung menonton televisi tanpa mandi",
+      "Membiarkan kasur berantakan",
+      "Tidur kembali sampai siang hari"
+    ],
+    "b": 0,
+    "bahas": "Merapikan tempat tidur sendiri melatih kemandirian dan kedisiplinan sejak kecil."
+  },
+  {
+    "q": "Sebelum berangkat ke sekolah maupun keluar rumah untuk bermain, kita wajib ....",
+    "p": [
+      "Berpamitan dan mencium tangan ayah serta ibu",
+      "Pergi diam-diam lewat pintu belakang",
+      "Berteriak dari luar pagar rumah",
+      "Mengambil mainan teman tanpa izin"
+    ],
+    "b": 0,
+    "bahas": "Berpamitan kepada orang tua membuat orang tua tenang dan mendoakan keselamatan kita."
+  },
+  {
+    "svg": "<svg width='160' height='70' xmlns='http://w3.org'><circle cx='80' cy='35' r='22' fill='#ffffff' stroke='#0284c7' stroke-width='2'/><circle cx='80' cy='35' r='14' fill='#fef08a' stroke='#ca8a04' stroke-width='1.5'/></svg>",
+    "q": "Perhatikan gambar piring makan di atas! Aturan yang baik sebelum makan bersama keluarga adalah ....",
+    "p": [
+      "Mencuci tangan dengan sabun dan berdoa",
+      "Langsung makan sambil berdiri",
+      "Berbicara keras saat mulut penuh makanan",
+      "Berebut lauk dengan adik"
+    ],
+    "b": 0,
+    "bahas": "Mencuci tangan menjaga kebersihan dan berdoa merupakan wujud syukur kepada Tuhan."
+  },
+  {
+    "q": "Setelah selesai makan di meja makan, piring dan gelas kotor sebaiknya ....",
+    "p": [
+      "Dibawa ke dapur untuk dicuci",
+      "Ditinggalkan di atas meja makan",
+      "Diletakkan di bawah kursi",
+      "Disembunyikan di dalam kamar"
+    ],
+    "b": 0,
+    "bahas": "Membawa piring kotor ke dapur menjaga meja makan tetap bersih dan rapi."
+  },
+  {
+    "svg": "<svg width='160' height='70' xmlns='http://w3.org'><rect x='40' y='15' width='80' height='42' rx='5' fill='#f8fafc' stroke='#334155' stroke-width='2'/><line x1='40' y1='29' x2='120' y2='29' stroke='#334155' stroke-width='2'/><line x1='40' y1='43' x2='120' y2='43' stroke='#334155' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar rak sepatu di atas! Setelah pulang dari sekolah, sepatu sekolah sebaiknya diletakkan di ....",
+    "p": [
+      "Rak sepatu dengan rapi",
+      "Tengah ruang tamu",
+      "Atas tempat tidur",
+      "Depan pintu masuk sehingga menghalangi jalan"
+    ],
+    "b": 0,
+    "bahas": "Menyimpan sepatu di rak sepatu membuat rumah rapi dan mudah ditemukan saat akan dipakai lagi."
+  },
+  {
+    "q": "Aturan waktu belajar di rumah pada malam hari sebaiknya dilakukan dengan cara ....",
+    "p": [
+      "Mematikan televisi dan mengerjakan PR dengan sungguh-sungguh",
+      "Belajar sambil menonton film kartun",
+      "Menunda PR hingga pagi hari di sekolah",
+      "Bermain ponsel sampai larut malam"
+    ],
+    "b": 0,
+    "bahas": "Suasana tenang tanpa suara televisi membantu kita fokus belajar."
+  },
+  {
+    "q": "Setelah selesai bermain bersama adik di ruang keluarga, mainan yang berserakan di lantai harus ....",
+    "p": [
+      "Dirapikan dan dimasukkan kembali ke kotak mainan",
+      "Dibiarkan berserakan di lantai",
+      "Disuruh ibu membereskan semuanya",
+      "Ditendang ke kolong meja"
+    ],
+    "b": 0,
+    "bahas": "Merapikan mainan mencegah orang lain tersandung dan menjaga kerapian rumah."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><circle cx='75' cy='35' r='22' fill='#ffffff' stroke='#0f172a' stroke-width='2'/><line x1='75' y1='35' x2='75' y2='20' stroke='#dc2626' stroke-width='2.5'/><line x1='75' y1='35' x2='88' y2='35' stroke='#0f172a' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar jam dinding di atas! Tidur malam tidak terlalu larut (sekitar pukul 21.00) merupakan aturan di rumah agar tubuh kita ....",
+    "p": [
+      "Segar, sehat, dan tidak bangun kesiangan",
+      "Lemas dan mengantuk di sekolah",
+      "Terlambat datang ke sekolah",
+      "Lupa mengerjakan tugas"
+    ],
+    "b": 0,
+    "bahas": "Tidur cukup dan teratur menjaga kesehatan serta membuat kita bangun pagi dengan segar."
+  },
+  {
+    "q": "Apabila kita melanggar aturan di rumah, misalnya pulang bermain terlalu sore tanpa izin, sikap yang benar adalah ....",
+    "p": [
+      "Mengakui kesalahan dengan jujur dan meminta maaf kepada ayah dan ibu",
+      "Berbohong mengatakan ada kerja kelompok",
+      "Menyalahkan teman bermain",
+      "Marah saat dinasihati orang tua"
+    ],
+    "b": 0,
+    "bahas": "Jujur mengakui kesalahan dan meminta maaf adalah wujud hormat kepada orang tua."
+  },
+  {
+    "q": "Contoh sikap patuh aturan saat berada di ruang kelas adalah ....",
+    "p": [
+      "Duduk tertib, memperhatikan penjelasan guru, dan mengangkat tangan sebelum bertanya",
+      "Berlari-lari di atas kursi kelas",
+      "Makan jajanan saat guru menerangkan pelajaran",
+      "Mengobrol keras dengan teman sebangku"
+    ],
+    "b": 0,
+    "bahas": "Memperhatikan guru dan menjaga ketertiban kelas adalah aturan utama di sekolah."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><rect x='55' y='22' width='40' height='36' rx='4' fill='#22c55e' stroke='#15803d' stroke-width='2'/><rect x='50' y='16' width='50' height='6' rx='2' fill='#16a34a'/></svg>",
+    "q": "Perhatikan gambar tempat sampah berwarna hijau di atas! Sampah bungkus jajanan setelah istirahat harus dibuang ke ....",
+    "p": ["Tempat sampah", "Kolong bangku kelas", "Selokan air", "Halaman sekolah"],
+    "b": 0,
+    "bahas": "Membuang sampah di tempat sampah menjaga lingkungan tetap bersih dan sehat."
+  },
+  {
+    "q": "Menghemat energi listrik di rumah sesuai aturan keluarga dapat dilakukan dengan cara ....",
+    "p": [
+      "Mematikan lampu dan kipas angin saat meninggalkan ruangan",
+      "Menyalakan televisi sepanjang malam saat tidur",
+      "Membuka pintu kulkas terlalu lama",
+      "Menyalakan semua lampu kamar di siang hari"
+    ],
+    "b": 0,
+    "bahas": "Mematikan peralatan listrik yang tidak dipakai menghemat biaya dan energi."
+  },
+  {
+    "q": "Saat mengantre mencuci tangan di depan kelas bersama teman-teman, sikap yang mematuhi aturan adalah ....",
+    "p": [
+      "Berbaris dengan sabar menunggu giliran tanpa mendorong teman",
+      "Menyerobot barisan paling depan",
+      "Mendorong teman agar cepat selesai",
+      "Bermain percikan air ke baju teman"
+    ],
+    "b": 0,
+    "bahas": "Budaya antre melatih kesabaran dan menghargai hak orang lain."
+  },
+  {
+    "q": "Apabila ingin meminjam pensil warna milik kakak di rumah, aturan sopan santun yang harus dilakukan adalah ....",
+    "p": [
+      "Meminta izin terlebih dahulu dan mengembalikannya setelah selesai dipakai",
+      "Langsung mengambil dari tas kakak diam-diam",
+      "Mematahkan pensil warna kakak",
+      "Menyembunyikannya di dalam kamar"
+    ],
+    "b": 0,
+    "bahas": "Meminta izin sebelum memakai barang orang lain adalah aturan sopan santun yang wajib dijaga."
+  },
+  {
+    "q": "Akibat yang terjadi apabila anggota keluarga di rumah TIDAK mematuhi aturan yang berlaku adalah ....",
+    "p": [
+      "Rumah menjadi berantakan, tidak nyaman, dan sering terjadi perselisihan",
+      "Suasana rumah menjadi sangat damai",
+      "Semua pekerjaan rumah cepat selesai",
+      "Keluarga hidup semakin rukun"
+    ],
+    "b": 0,
+    "bahas": "Pelanggaran aturan menimbulkan ketidaktertiban dan ketidaknyamanan bersama."
+  },
+  {
+    "q": "Manfaat yang kita rasakan jika selalu patuh pada aturan di rumah dan di sekolah adalah ....",
+    "p": [
+      "Hidup menjadi disiplin, tertib, aman, dan disayang orang tua serta guru",
+      "Sering mendapat teguran dari guru",
+      "Dijauhi oleh teman-teman di kelas",
+      "Pekerjaan rumah menumpuk berantakan"
+    ],
+    "b": 0,
+    "bahas": "Kepatuhan terhadap aturan membentuk karakter disiplin dan membawa ketenteraman."
+  },
+  {
+    "q": "Pilihlah gambar simbol yang mengingatkan kita untuk MEMBUANG SAMPAH PADA TEMPATNYA!",
+    "p": ["Tempat sampah", "Bola sepak", "Pensil", "Sepeda"],
+    "pSvg": [
+      "<svg width='60' height='45' xmlns='http://w3.org'><rect x='18' y='12' width='24' height='26' rx='3' fill='#22c55e' stroke='#15803d' stroke-width='2'/><rect x='15' y='8' width='30' height='4' fill='#16a34a'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='30' cy='22' r='14' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><rect x='26' y='8' width='8' height='28' fill='#facc15'/></svg>",
+      "<svg width='60' height='45' xmlns='http://w3.org'><circle cx='20' cy='28' r='7' fill='none' stroke='#0f172a' stroke-width='2'/><circle cx='40' cy='28' r='7' fill='none' stroke='#0f172a' stroke-width='2'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama adalah tempat sampah berwarna hijau."
+  },
+  {
+    "q": "Ketika ibu sedang sibuk membersihkan ruang tamu, sikap anak yang patuh dan berbakti adalah ....",
+    "p": [
+      "Ikut membantu mengelap meja atau merapikan bantal sofa",
+      "Mengotori lantai yang baru saja disapu ibu",
+      "Berteriak meminta dibuatkan minuman segera",
+      "Pergi bermain tanpa pamit"
+    ],
+    "b": 0,
+    "bahas": "Membantu pekerjaan orang tua meringankan beban ibu dan mempererat kasih sayang keluarga."
+  },
+  {
+    "q": "Simbol sila pertama Pancasila pada perisai Garuda Pancasila yang mengingatkan kita untuk rajin beribadah sesuai aturan agama adalah ....",
+    "p": ["Bintang emas", "Rantai emas", "Pohon beringin", "Kepala banteng"],
+    "b": 0,
+    "bahas": "Bintang emas melambangkan sila pertama Pancasila, Ketuhanan Yang Maha Esa."
+  }
+]);
+
+window.tambahPaketUjian("2", "bing", "UTS Semester 1", [
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><circle cx='75' cy='38' r='18' fill='#ef4444' stroke='#991b1b' stroke-width='2'/><path d='M75,20 Q82,12 88,16' fill='none' stroke='#16a34a' stroke-width='2.5'/></svg>",
+    "q": "Look at the red fruit above! What fruit is it?",
+    "p": ["Banana", "Apple", "Grape", "Orange"],
+    "b": 1,
+    "bahas": "Buah bulat berwarna merah pada gambar adalah apel (apple)."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><path d='M45,48 Q75,58 105,22 Q85,42 45,48 Z' fill='#facc15' stroke='#ca8a04' stroke-width='2'/></svg>",
+    "q": "Look at the yellow fruit above! Monkeys like eating this fruit. It is a ....",
+    "p": ["banana", "watermelon", "strawberry", "pineapple"],
+    "b": 0,
+    "bahas": "Pisang berwarna kuning dalam bahasa Inggris adalah 'banana'."
+  },
+  {
+    "q": "What is 'semangka' in English?",
+    "p": ["Watermelon", "Mango", "Papaya", "Avocado"],
+    "b": 0,
+    "bahas": "Semangka dalam bahasa Inggris adalah 'watermelon'."
+  },
+  {
+    "q": "What is 'jeruk' in English?",
+    "p": ["Grape", "Orange", "Apple", "Pear"],
+    "b": 1,
+    "bahas": "Jeruk dalam bahasa Inggris adalah 'orange'."
+  },
+  {
+    "q": "What is 'anggur' in English?",
+    "p": ["Grape", "Banana", "Durian", "Melon"],
+    "b": 0,
+    "bahas": "Anggur dalam bahasa Inggris adalah 'grape'."
+  },
+  {
+    "q": "I ... eating sweet mango.",
+    "p": ["like", "likes", "is", "am"],
+    "b": 0,
+    "bahas": "Subjek 'I' berpasangan dengan kata kerja 'like'."
+  },
+  {
+    "q": "Cici ... eating strawberry. It is sweet and sour.",
+    "p": ["like", "likes", "do", "are"],
+    "b": 1,
+    "bahas": "Subjek tunggal 'Cici' (she) berpasangan dengan 'likes'."
+  },
+  {
+    "q": "Made ... eating papaya.",
+    "p": ["like", "likes", "do not", "are"],
+    "b": 1,
+    "bahas": "Subjek tunggal 'Made' (he) menggunakan 'likes'."
+  },
+  {
+    "q": "Do you like pineapple? Yes, I ....",
+    "p": ["do", "does", "is", "am"],
+    "b": 0,
+    "bahas": "Pertanyaan 'Do you like...?' dijawab singkat dengan 'Yes, I do.'"
+  },
+  {
+    "q": "Do you like durian? No, I ....",
+    "p": ["do not", "does not", "is not", "am not"],
+    "b": 0,
+    "bahas": "Jawaban negatif singkat untuk 'Do you like...?' adalah 'No, I do not.'"
+  },
+  {
+    "svg": "<svg width='165' height='70' xmlns='http://w3.org'><rect x='20' y='12' width='125' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='82' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>MY FATHER</text><text x='82' y='47' font-size='9' text-anchor='middle' fill='#0f172a'>Likes Watermelon</text></svg>",
+    "q": "Look at the card above! What does 'My father' mean in Indonesian?",
+    "p": ["Ibuku", "Ayahku", "Kakakku", "Kakekku"],
+    "b": 1,
+    "bahas": "'My father' artinya ayahku."
+  },
+  {
+    "q": "What is 'ibu' in English?",
+    "p": ["Father", "Mother", "Brother", "Sister"],
+    "b": 1,
+    "bahas": "Ibu dalam bahasa Inggris adalah 'mother'."
+  },
+  {
+    "q": "What is 'kakek' in English?",
+    "p": ["Grandfather", "Grandmother", "Uncle", "Aunt"],
+    "b": 0,
+    "bahas": "Kakek adalah 'grandfather' dan nenek adalah 'grandmother'."
+  },
+  {
+    "q": "My mother ... orange juice every morning.",
+    "p": ["like", "likes", "do", "are"],
+    "b": 1,
+    "bahas": "Subjek tunggal 'My mother' menggunakan 'likes'."
+  },
+  {
+    "q": "My grandfather ... not like sour mango.",
+    "p": ["do", "does", "is", "are"],
+    "b": 1,
+    "bahas": "Kalimat negatif untuk subjek tunggal 'My grandfather' menggunakan 'does not like'."
+  },
+  {
+    "q": "Does your sister like banana? Yes, she ....",
+    "p": ["do", "does", "is", "am"],
+    "b": 1,
+    "bahas": "Pertanyaan 'Does your sister...?' dijawab singkat dengan 'Yes, she does.'"
+  },
+  {
+    "q": "What color is a ripe watermelon inside?",
+    "p": ["Red", "Blue", "Black", "Purple"],
+    "b": 0,
+    "bahas": "Bagian dalam semangka matang berwarna merah (red)."
+  },
+  {
+    "q": "Which picture shows 'an orange'?",
+    "p": ["Orange", "Banana", "Star", "Book"],
+    "pSvg": [
+      "<svg width='60' height='42' xmlns='http://w3.org'><circle cx='30' cy='22' r='14' fill='#f97316' stroke='#c2410c' stroke-width='2'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><path d='M16,30 Q32,38 45,12 Q32,26 16,30 Z' fill='#facc15'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><polygon points='30,5 35,16 48,16 38,23 41,35 30,28 19,35 22,23 12,16 25,16' fill='#22c55e'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><rect x='16' y='8' width='28' height='26' fill='#38bdf8'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama berbentuk bulat berwarna jingga adalah buah jeruk (an orange)."
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'likes - Father - my - apple'",
+    "p": [
+      "My father likes apple.",
+      "Likes my father apple.",
+      "Apple likes my father.",
+      "Father apple my likes."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat yang tepat adalah 'My father likes apple.'"
+  },
+  {
+    "q": "'Aku suka makan pisang.' The English translation is ....",
+    "p": [
+      "I like eating banana.",
+      "I likes eating banana.",
+      "I do not like banana.",
+      "My mother likes banana."
+    ],
+    "b": 0,
+    "bahas": "Aku suka makan pisang = I like eating banana."
+  }
+]);
+
+window.tambahPaketUjian("2", "madura", "UTS Semester 1", [
+  {
+    "q": "Lamon èberri' kakanan bi' Nèni', kita ngocap ....",
+    "p": ["Mator sakalangkong", "Nyoon sèwu", "Mènta sapora", "Sèngko' molè"],
+    "b": 0,
+    "bahas": "Mator sakalangkong artèna terima kasih."
+  },
+  {
+    "q": "Bhâsa alosna oca' 'ngakan' ka'angghuy Eppa' sareng Embu' èngghi panèka ....",
+    "p": ["Dhâ'âr", "Sare", "Mèyos", "Rabhu"],
+    "b": 0,
+    "bahas": "Ngakan bhâsa alosna 'dhâ'âr'."
+  },
+  {
+    "q": "Bhâsa alosna oca' 'tèdung' ka'angghuy orèng towa èngghi panèka ....",
+    "p": ["Sare", "Dhâ'âr", "Kondhur", "Adhâbu"],
+    "b": 0,
+    "bahas": "Tèdung bhâsa alosna 'sare'."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><path d='M55,22 Q42,35 55,48 Q62,48 62,35 Q62,22 55,22 Z' fill='#fed7aa' stroke='#ea580c' stroke-width='2'/><path d='M95,22 Q108,35 95,48 Q88,48 88,35 Q88,22 95,22 Z' fill='#fed7aa' stroke='#ea580c' stroke-width='2'/></svg>",
+    "q": "Abâs ghâmbhâr angghuta bhâdhân è attas! Angghuta bhâdhân ka'angghuy ngèdingaghi sowara èngghi panèka ....",
+    "p": ["Kopèng", "Mata", "Èlong", "Tanang"],
+    "b": 0,
+    "bahas": "Kopèng (telinga) aghuna ka'angghuy ngèdingaghi sowara."
+  },
+  {
+    "q": "Angghuta bhâdhân ka'angghuy nolès è buku èngghi panèka ....",
+    "p": ["Tanang", "Soko", "Kopèng", "Èlong"],
+    "b": 0,
+    "bahas": "Tanang artèna tangan."
+  },
+  {
+    "q": "Oca' 'Eppa'' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Ayah", "Ibu", "Kakek", "Nenek"],
+    "b": 0,
+    "bahas": "Eppa' artèna ayah, dhinèng Embu' artèna ibu."
+  },
+  {
+    "q": "Oca' 'Kaki'' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Kakek", "Nenek", "Paman", "Kakak"],
+    "b": 0,
+    "bahas": "Kaki' artèna kakek, dhinèng Nèni' artèna nenek."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><ellipse cx='75' cy='38' rx='35' ry='14' fill='#38bdf8' stroke='#0284c7' stroke-width='2'/><polygon points='110,38 128,24 128,52' fill='#0284c7'/><circle cx='55' cy='34' r='3' fill='#0f172a'/></svg>",
+    "q": "Abâs ghâmbhâr kèbân sè odi' è aèng è attas! Nyamana dâlem bhâsa Madhurâ èngghi panèka ....",
+    "p": ["Jhuko'", "Kocèng", "Ajâm", "Mano'"],
+    "b": 0,
+    "bahas": "Jhuko' artèna ikan."
+  },
+  {
+    "q": "Kèbân sè monyèna 'embè'-embè'' bân ngakan rebbhâ èngghi panèka ....",
+    "p": ["Embik", "Kocèng", "Jhuko'", "Mano'"],
+    "b": 0,
+    "bahas": "Embik artèna kambing."
+  },
+  {
+    "q": "Buwâ sè bârna mèra è dhâlemma bân bânnya' aèngnga èngghi panèka ....",
+    "p": ["Semangka", "Ghâddhâng", "Salak", "Dhurin"],
+    "b": 0,
+    "bahas": "Semangka bârna mèra è dhâlemma."
+  },
+  {
+    "svg": "<svg width='160' height='65' xmlns='http://w3.org'><rect x='25' y='12' width='110' height='42' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='80' y='39' font-size='16' font-weight='bold' text-anchor='middle' fill='#0f172a'>12</text></svg>",
+    "q": "Abâs angka è ghâmbhâr attas! Bilângan '12' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Sabellâs", "Du bellâs", "Tello bellâs", "Du polo"],
+    "b": 1,
+    "bahas": "12 dâlem bhâsa Madhurâ èbâca 'du bellâs'."
+  },
+  {
+    "q": "Bilângan '10' dâlem bhâsa Madhurâ èbâca ....",
+    "p": ["Pètto'", "Bâllu'", "Sanga'", "Sapolo"],
+    "b": 3,
+    "bahas": "10 dâlem bhâsa Madhurâ èbâca 'sapolo'."
+  },
+  {
+    "q": "Bârnana langngè' è bâkto sèyang sè cerrah èngghi panèka ....",
+    "p": ["Bhiru", "Celleng", "Mèra", "Konèng"],
+    "b": 0,
+    "bahas": "Bhiru artèna biru."
+  },
+  {
+    "q": "Bârnana obu'na na'-kana' Madhurâ èngghi panèka ....",
+    "p": ["Celleng", "Potè", "Konèng", "Bhuru"],
+    "b": 0,
+    "bahas": "Celleng artèna hitam."
+  },
+  {
+    "q": "Pakakas ka'angghuy nyapo lantai roma sopajâ bhersè èngghi panèka ....",
+    "p": ["Sapo", "Potlot", "Buku", "Sendok"],
+    "b": 0,
+    "bahas": "Sapo artèna sapu."
+  },
+  {
+    "q": "Oca' 'maca' artèna ....",
+    "p": ["Membaca", "Menulis", "Tidur", "Lari"],
+    "b": 0,
+    "bahas": "Maca artèna membaca."
+  },
+  {
+    "q": "Oca' 'ngombhi' artèna ....",
+    "p": ["Minum", "Makan", "Jalan", "Duduk"],
+    "b": 0,
+    "bahas": "Ngombhi artèna minum."
+  },
+  {
+    "q": "Pilih ghâmbhâr BUNDER (lingkaran) è bâbâ panèka!",
+    "p": ["Bunder", "Segitello'", "Kotak", "Bintang"],
+    "pSvg": [
+      "<svg width='60' height='42' xmlns='http://w3.org'><circle cx='30' cy='21' r='14' fill='#ef4444'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><polygon points='30,5 10,37 50,37' fill='#facc15'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><rect x='14' y='5' width='32' height='32' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><polygon points='30,5 35,16 48,16 38,23 41,35 30,28 19,35 22,23 12,16 25,16' fill='#22c55e'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Ghâmbhâr kapèng sèttong bunder mèra."
+  },
+  {
+    "q": "Sabellunna tèdung malem, kita kodhu ngosok ....",
+    "p": ["Ghighi", "Kopèng", "Soko", "Obu'"],
+    "b": 0,
+    "bahas": "Ngosok ghighi (menggosok gigi) sabellunna tèdung ajâgâ ghighi pagghun bhersè."
+  },
+  {
+    "q": "Sareng kanca è sakola'an, kita kodhu ....",
+    "p": ["Rokon bân salèng nolongè", "Atokar sabbhân arè", "Ngèjhek kanca", "Nangès keras"],
+    "b": 0,
+    "bahas": "Odi' rokon sareng kanca mabâdâ sakola'an sè nyaman."
+  }
+]);
+
+window.tambahPaketUjian("2", "kesenian", "UTS Semester 1", [
+  {
+    "svg": "<svg width='180' height='65' xmlns='http://w3.org'><circle cx='35' cy='32' r='16' fill='#ef4444'/><circle cx='90' cy='32' r='16' fill='#facc15'/><circle cx='145' cy='32' r='16' fill='#38bdf8'/></svg>",
+    "q": "Perhatikan tiga lingkaran warna pada gambar di atas! Merah, kuning, dan biru termasuk kelompok warna ....",
+    "p": ["Dasar (primer)", "Campuran (sekunder)", "Netral", "Gelap"],
+    "b": 0,
+    "bahas": "Merah, kuning, dan biru adalah tiga warna dasar (primer)."
+  },
+  {
+    "svg": "<svg width='185' height='65' xmlns='http://w3.org'><circle cx='35' cy='32' r='16' fill='#ef4444'/><text x='62' y='37' font-size='14' font-weight='bold'>+</text><circle cx='90' cy='32' r='16' fill='#facc15'/><text x='117' y='37' font-size='14' font-weight='bold'>=</text><circle cx='148' cy='32' r='18' fill='#f97316' stroke='#0f172a' stroke-width='2'/></svg>",
+    "q": "Perhatikan pencampuran warna di atas! Warna merah dicampur warna kuning menghasilkan warna ....",
+    "p": ["Hijau", "Oranye (jingga)", "Ungu", "Hitam"],
+    "b": 1,
+    "bahas": "Campuran merah dan kuning menghasilkan warna oranye."
+  },
+  {
+    "q": "Jika warna biru dicampur dengan warna kuning, maka akan menghasilkan warna ....",
+    "p": ["Hijau", "Ungu", "Oranye", "Merah muda"],
+    "b": 0,
+    "bahas": "Campuran biru dan kuning menghasilkan warna hijau."
+  },
+  {
+    "q": "Jika warna merah dicampur dengan warna biru, maka akan menghasilkan warna ....",
+    "p": ["Ungu", "Hijau", "Kuning", "Cokelat"],
+    "b": 0,
+    "bahas": "Campuran merah dan biru menghasilkan warna ungu."
+  },
+  {
+    "q": "Buah semangka yang sudah matang di bagian dalamnya diwarnai dengan warna ....",
+    "p": ["Merah", "Biru", "Hitam", "Ungu"],
+    "b": 0,
+    "bahas": "Daging buah semangka matang berwarna merah segar."
+  },
+  {
+    "q": "Daun pepohonan dan rumput di lapangan sekolah biasanya diwarnai dengan warna ....",
+    "p": ["Hijau", "Merah", "Ungu", "Hitam"],
+    "b": 0,
+    "bahas": "Daun dan rumput yang segar berwarna hijau."
+  },
+  {
+    "svg": "<svg width='160' height='60' xmlns='http://w3.org'><line x1='20' y1='30' x2='140' y2='30' stroke='#0284c7' stroke-width='4'/></svg>",
+    "q": "Perhatikan gambar garis mendatar di atas! Garis tersebut disebut garis ....",
+    "p": ["Lurus mendatar", "Zig-zag", "Lingkaran", "Lengkung"],
+    "b": 0,
+    "bahas": "Garis pada gambar adalah garis lurus mendatar."
+  },
+  {
+    "svg": "<svg width='160' height='60' xmlns='http://w3.org'><path d='M15,38 Q38,14 60,38 T105,38 T145,38' fill='none' stroke='#16a34a' stroke-width='4'/></svg>",
+    "q": "Perhatikan bentuk garis bergelombang pada gambar di atas! Garis tersebut disebut garis ....",
+    "p": ["Lengkung / gelombang", "Lurus tegak", "Zig-zag", "Kotak"],
+    "b": 0,
+    "bahas": "Garis tersebut berbentuk lengkung bergelombang."
+  },
+  {
+    "q": "Alat gambar yang menghasilkan warna tebal seperti lilin dan tidak perlu dicampur air adalah ....",
+    "p": ["Krayon", "Cat air", "Pensil 2B", "Penghapus"],
+    "b": 0,
+    "bahas": "Krayon langsung digoreskan pada kertas gambar dan menghasilkan warna tebal."
+  },
+  {
+    "q": "Alat yang digunakan untuk menggoreskan cat air ke atas kertas gambar adalah ....",
+    "p": ["Kuas", "Gunting", "Penggaris", "Rautan"],
+    "b": 0,
+    "bahas": "Kuas digunakan untuk menyapukan cat air pada gambar."
+  },
+  {
+    "q": "Alat yang digunakan untuk meraut ujung pensil gambar yang tumpul agar runcing kembali adalah ....",
+    "p": ["Rautan pensil", "Penghapus", "Lem kertas", "Palet"],
+    "b": 0,
+    "bahas": "Rautan pensil digunakan untuk meruncingkan ujung pensil."
+  },
+  {
+    "svg": "<svg width='150' height='70' xmlns='http://w3.org'><rect x='45' y='15' width='60' height='40' fill='#facc15' stroke='#ca8a04' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar bangun datar di atas! Bentuk benda yang menyerupai persegi panjang tersebut adalah ....",
+    "p": ["Buku gambar dan papan tulis", "Bola sepak", "Roda sepeda", "Uang koin"],
+    "b": 0,
+    "bahas": "Buku gambar dan papan tulis berbentuk persegi panjang."
+  },
+  {
+    "q": "Bentuk atap rumah pada gambar pemandangan biasanya digambar menggunakan bangun datar ....",
+    "p": ["Segitiga atau trapesium", "Lingkaran", "Bintang", "Oval"],
+    "b": 0,
+    "bahas": "Atap rumah umumnya berbentuk segitiga atau trapesium."
+  },
+  {
+    "q": "Bahan alam yang dapat kita kumpulkan di halaman rumah untuk membuat hiasan kolase adalah ....",
+    "p": [
+      "Daun kering, ranting kecil, dan biji-bijian",
+      "Pecahan kaca tajam",
+      "Besi berkarat",
+      "Kawat berduri"
+    ],
+    "b": 0,
+    "bahas": "Daun kering dan biji-bijian aman dan indah untuk kerajinan kolase."
+  },
+  {
+    "q": "Permukaan kapas dan bulu kucing apabila diraba terasa ....",
+    "p": ["Lembut dan halus", "Kasar dan tajam", "Keras seperti batu", "Berduri"],
+    "b": 0,
+    "bahas": "Kapas dan bulu kucing memiliki tekstur lembut."
+  },
+  {
+    "q": "Permukaan kulit buah salak dan batang kayu apabila diraba terasa ....",
+    "p": ["Kasar", "Licin seperti kaca", "Basah", "Lembut seperti kapas"],
+    "b": 0,
+    "bahas": "Kulit salak dan batang kayu memiliki tekstur kasar."
+  },
+  {
+    "q": "Membuat bentuk hewan kelinci atau buah apel dari plastisin dilakukan dengan cara ....",
+    "p": [
+      "Ditekan, dipilin, dan dibentuk dengan jari tangan",
+      "Dipotong menggunakan gergaji",
+      "Dibakar di atas kompor",
+      "Direndam di dalam ember air"
+    ],
+    "b": 0,
+    "bahas": "Plastisin bersifat lunak sehingga mudah dibentuk dengan jari tangan."
+  },
+  {
+    "q": "Pilihlah gambar bangun SEGITIGA di bawah ini!",
+    "p": ["Segitiga", "Lingkaran", "Persegi", "Bintang"],
+    "pSvg": [
+      "<svg width='60' height='42' xmlns='http://w3.org'><polygon points='30,5 10,37 50,37' fill='#ef4444' stroke='#991b1b' stroke-width='2'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><circle cx='30' cy='21' r='14' fill='#38bdf8'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><rect x='14' y='5' width='32' height='32' fill='#facc15'/></svg>",
+      "<svg width='60' height='42' xmlns='http://w3.org'><polygon points='30,5 35,16 48,16 38,23 41,35 30,28 19,35 22,23 12,16 25,16' fill='#22c55e'/></svg>"
+    ],
+    "b": 0,
+    "bahas": "Gambar pertama berwarna merah yang memiliki 3 sisi adalah segitiga."
+  },
+  {
+    "q": "Agar hasil mewarnai gambar terlihat indah dan rapi, kita mewarnai ....",
+    "p": [
+      "Di dalam garis gambar dan tidak keluar garis",
+      "Mencoret-coret keluar dari garis tepi",
+      "Menekan krayon sampai kertas robek",
+      "Mengotori seluruh halaman buku"
+    ],
+    "b": 0,
+    "bahas": "Mewarnai di dalam garis membuat gambar tampak rapi dan bersih."
+  },
+  {
+    "q": "Setelah selesai menggambar dan mewarnai di kelas, alat gambar sebaiknya ....",
+    "p": [
+      "Dirapikan kembali ke dalam kotak pensil atau tas",
+      "Dibiarkan berserakan di lantai",
+      "Dipatahkan menjadi dua",
+      "Ditinggalkan di meja teman"
+    ],
+    "b": 0,
+    "bahas": "Merapikan alat gambar menjaga kebersihan kelas dan melatih tanggung jawab."
+  }
+]);
+
