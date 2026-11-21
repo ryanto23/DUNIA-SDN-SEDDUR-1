@@ -3487,3 +3487,1665 @@ window.tambahPaketUjian("6", "kesenian", "UTS Semester 1", [
   }
 ]);
 
+window.tambahPaketUjian("6", "mtk", "UTS Semester 2", [
+  {
+    "svg": "<svg width='165' height='75' xmlns='http://w3.org'><rect x='50' y='25' width='45' height='40' fill='#bae6fd' stroke='#0284c7' stroke-width='2'/><polygon points='50,25 68,12 113,12 95,25' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><polygon points='95,25 113,12 113,52 95,65' fill='#7dd3fc' stroke='#0284c7' stroke-width='2'/></svg>",
+    "q": "Perhatikan gambar bangun ruang kubus di atas! Banyak sisi, rusuk, dan titik sudut pada bangun kubus secara berurutan adalah ....",
+    "p": [
+      "6 sisi, 12 rusuk, dan 8 titik sudut",
+      "6 sisi, 8 rusuk, dan 12 titik sudut",
+      "8 sisi, 12 rusuk, dan 6 titik sudut",
+      "4 sisi, 12 rusuk, dan 8 titik sudut"
+    ],
+    "b": 0,
+    "bahas": "Kubus dan balok sama-sama memiliki 6 sisi, 12 rusuk, dan 8 titik sudut."
+  },
+  {
+    "q": "Perbedaan utama antara bangun ruang kubus dan balok terletak pada ....",
+    "p": [
+      "Bentuk dan ukuran sisinya (semua sisi kubus berbentuk persegi kongruen, sedangkan balok memiliki sisi berbentuk persegi panjang)",
+      "Jumlah titik sudutnya",
+      "Jumlah rusuknya",
+      "Jumlah sisinya"
+    ],
+    "b": 0,
+    "bahas": "Kubus dibatasi 6 persegi sama besar, sedangkan balok dibatasi 3 pasang persegi panjang yang berhadapan sama besar."
+  },
+  {
+    "q": "Sebuah kubus memiliki panjang rusuk 9 cm. Jumlah panjang seluruh rusuk kubus tersebut adalah ....",
+    "p": ["54 cm", "72 cm", "81 cm", "108 cm"],
+    "b": 3,
+    "bahas": "Kubus memiliki 12 rusuk sama panjang. Total panjang rusuk = 12 × 9 cm = 108 cm."
+  },
+  {
+    "q": "Sebuah kerangka balok dibuat dari kawat dengan ukuran panjang 15 cm, lebar 10 cm, dan tinggi 8 cm. Panjang kawat seluruhnya yang dibutuhkan untuk membuat kerangka balok tersebut adalah ....",
+    "p": ["33 cm", "66 cm", "132 cm", "1.200 cm"],
+    "b": 2,
+    "bahas": "Panjang kerangka balok = 4 × (p + l + t) = 4 × (15 + 10 + 8) = 4 × 33 = 132 cm."
+  },
+  {
+    "q": "Banyaknya pola jaring-jaring kubus yang berbeda yang dapat dibentuk dari 6 buah persegi adalah ....",
+    "p": ["6 pola", "8 pola", "11 pola", "12 pola"],
+    "b": 2,
+    "bahas": "Terdapat 11 macam jaring-jaring kubus yang berbeda."
+  },
+  {
+    "svg": "<svg width='175' height='75' xmlns='http://w3.org'><rect x='55' y='10' width='20' height='18' fill='#fef08a' stroke='#ca8a04' stroke-width='1.5'/><rect x='35' y='28' width='20' height='18' fill='#fef08a' stroke='#ca8a04' stroke-width='1.5'/><rect x='55' y='28' width='20' height='18' fill='#bae6fd' stroke='#0284c7' stroke-width='1.5'/><text x='65' y='40' font-size='8' font-weight='bold' text-anchor='middle'>A</text><rect x='75' y='28' width='20' height='18' fill='#fef08a' stroke='#ca8a04' stroke-width='1.5'/><rect x='95' y='28' width='20' height='18' fill='#fce7f3' stroke='#db2777' stroke-width='1.5'/><text x='105' y='40' font-size='8' font-weight='bold' text-anchor='middle'>B</text><rect x='55' y='46' width='20' height='18' fill='#fef08a' stroke='#ca8a04' stroke-width='1.5'/></svg>",
+    "q": "Perhatikan gambar jaring-jaring kubus di atas! Jika persegi bertanda huruf A dijadikan sebagai sisi alas kubus, maka sisi yang menjadi tutup (atas) kubus adalah persegi bertanda huruf ....",
+    "p": ["Huruf B", "Persegi di sebelah kiri A", "Persegi di atas A", "Persegi di bawah A"],
+    "b": 0,
+    "bahas": "Pada deretan 4 persegi sejajar, sisi yang berhadapan berselang 1 kotak, sehingga A berhadapan dengan B sebagai tutup kubus."
+  },
+  {
+    "q": "Volume sebuah kotak berbentuk kubus dengan panjang rusuk 12 cm adalah ....",
+    "p": ["144 cm³", "864 cm³", "1.728 cm³", "48 cm³"],
+    "b": 2,
+    "bahas": "Volume kubus = s × s × s = 12 × 12 × 12 = 1.728 cm³."
+  },
+  {
+    "q": "Sebuah akuarium berbentuk balok memiliki panjang 50 cm, lebar 30 cm, dan tinggi 40 cm. Volume air maksimal yang dapat ditampung akuarium tersebut dalam satuan liter adalah ....",
+    "p": ["6 liter", "60 liter", "600 liter", "6.000 liter"],
+    "b": 1,
+    "bahas": "Volume = 50 × 30 × 40 = 60.000 cm³. Karena 1 liter = 1.000 cm³, maka 60.000 : 1.000 = 60 liter."
+  },
+  {
+    "q": "Sebuah bak mandi berbentuk kubus mampu menampung air penuh sebanyak 512 liter (dm³). Panjang rusuk bagian dalam bak mandi tersebut adalah ....",
+    "p": ["6 dm", "7 dm", "8 dm", "9 dm"],
+    "b": 2,
+    "bahas": "Akar pangkat tiga dari 512 adalah 8 (karena 8 × 8 × 8 = 512), jadi panjang rusuknya 8 dm."
+  },
+  {
+    "q": "Susunan bangun ruang terdiri atas 3 lapisan kubus satuan. Lapisan paling bawah terdiri atas 9 kubus satuan, lapisan tengah 4 kubus satuan, dan lapisan paling atas 1 kubus satuan. Banyak seluruh kubus satuan penyusun bangun tersebut adalah ....",
+    "p": ["12 kubus satuan", "13 kubus satuan", "14 kubus satuan", "15 kubus satuan"],
+    "b": 2,
+    "bahas": "Total kubus satuan = 9 + 4 + 1 = 14 kubus satuan."
+  },
+  {
+    "q": "Jika sebuah susunan balok terdiri atas 4 kubus satuan ke kanan, 3 kubus satuan ke belakang, dan 2 kubus satuan ke atas, maka banyak seluruh kubus satuan dalam susunan tersebut adalah ....",
+    "p": ["9 kubus satuan", "12 kubus satuan", "24 kubus satuan", "36 kubus satuan"],
+    "b": 2,
+    "bahas": "Banyak kubus satuan = 4 × 3 × 2 = 24 kubus satuan."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>SKALA PELUANG</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Tidak Mungkin ➔ Mungkin ➔ Pasti</text></svg>",
+    "q": "Perhatikan skala peluang kejadian pada gambar di atas! Kejadian 'Matahari terbit dari arah Timur pada pagi hari' dalam skala peluang termasuk kategori ....",
+    "p": ["Pasti terjadi", "Tidak mungkin terjadi", "Kurang mungkin terjadi", "Sangat kecil kemungkinannya"],
+    "b": 0,
+    "bahas": "Matahari terbit dari Timur adalah hukum alam yang selalu terjadi sehingga peluangnya Pasti."
+  },
+  {
+    "q": "Kejadian 'Seekor kucing melahirkan anak gajah' dalam skala peluang termasuk kategori ....",
+    "p": ["Tidak mungkin terjadi", "Mungkin terjadi", "Sangat mungkin terjadi", "Pasti terjadi"],
+    "b": 0,
+    "bahas": "Peristiwa tersebut mustahil terjadi sehingga peluangnya adalah Tidak Mungkin (nol)."
+  },
+  {
+    "q": "Di dalam sebuah kantong tertutup terdapat 8 bola merah, 3 bola kuning, dan 1 bola hijau. Jika diambil satu bola secara acak tanpa melihat, warna bola yang peluang terambilnya PALING BESAR (sangat mungkin) adalah ....",
+    "p": ["Bola merah", "Bola kuning", "Bola hijau", "Bola biru"],
+    "b": 0,
+    "bahas": "Bola merah berjumlah paling banyak (8 dari 12 bola) sehingga peluang terambilnya paling besar."
+  },
+  {
+    "q": "Berdasarkan soal kantong berisi 8 bola merah, 3 bola kuning, dan 1 bola hijau di atas, warna bola yang peluang terambilnya PALING KECIL (kurang mungkin) adalah ....",
+    "p": ["Bola hijau", "Bola merah", "Bola kuning", "Semua sama besar"],
+    "b": 0,
+    "bahas": "Bola hijau hanya ada 1 buah sehingga peluang terambilnya paling kecil."
+  },
+  {
+    "q": "Sebuah dadu bersisi enam (angka 1, 2, 3, 4, 5, dan 6) dilemparkan satu kali. Kejadian munculnya mata dadu angka 7 memiliki peluang ....",
+    "p": ["Tidak mungkin terjadi", "Sangat mungkin terjadi", "Pasti terjadi", "Sama mungkin dengan angka 6"],
+    "b": 0,
+    "bahas": "Mata dadu hanya bernomor 1 sampai 6 sehingga tidak mungkin muncul angka 7."
+  },
+  {
+    "q": "Pada pelemparan sebuah uang logam (koin) yang memiliki sisi Angka dan sisi Gambar sebanyak satu kali, perbandingan peluang munculnya sisi Angka dan sisi Gambar adalah ....",
+    "p": [
+      "Sama besar (seimbang / 50% banding 50%)",
+      "Sisi Angka jauh lebih besar",
+      "Sisi Gambar tidak mungkin muncul",
+      "Sisi Angka pasti muncul"
+    ],
+    "b": 0,
+    "bahas": "Koin memiliki dua sisi seimbang sehingga peluang muncul sisi Angka dan Gambar sama besar."
+  },
+  {
+    "q": "Sebuah roda putar (spinner) dibagi menjadi 8 juring sama besar: 4 juring berwarna biru, 2 juring berwarna merah, dan 2 juring berwarna kuning. Jika roda diputar, jarum penunjuk paling mungkin berhenti pada warna ....",
+    "p": ["Biru", "Merah", "Kuning", "Hijau"],
+    "b": 0,
+    "bahas": "Warna biru menempati bagian paling luas (4 dari 8 juring = setengah lingkaran) sehingga paling mungkin ditunjuk jarum."
+  },
+  {
+    "q": "Dalam kotak hadiah terdapat 5 kupon bertuliskan 'Buku Tulis' dan 5 kupon bertuliskan 'Pensil Warna'. Jika Budi mengambil satu kupon secara acak, peluang mendapatkan Buku Tulis dibandingkan Pensil Warna adalah ....",
+    "p": [
+      "Sama besar (sama-sama mungkin terjadi)",
+      "Buku Tulis lebih kecil peluangnya",
+      "Pensil Warna tidak mungkin didapat",
+      "Buku Tulis pasti didapat"
+    ],
+    "b": 0,
+    "bahas": "Jumlah kupon Buku Tulis dan Pensil Warna sama banyak (masing-masing 5), jadi peluangnya sama besar."
+  },
+  {
+    "q": "Susunan skala peluang dari kejadian yang paling mustahil hingga kejadian yang pasti terjadi secara berurutan adalah ....",
+    "p": [
+      "Tidak mungkin → Kurang mungkin → Mungkin → Sangat mungkin → Pasti",
+      "Pasti → Mungkin → Tidak mungkin → Sangat mungkin → Kurang mungkin",
+      "Mungkin → Tidak mungkin → Kurang mungkin → Pasti → Sangat mungkin",
+      "Kurang mungkin → Tidak mungkin → Pasti → Mungkin → Sangat mungkin"
+    ],
+    "b": 0,
+    "bahas": "Urutan skala peluang dari 0 sampai 1 adalah Tidak mungkin, Kurang mungkin, Mungkin, Sangat mungkin, dan Pasti."
+  },
+  {
+    "q": "Sebuah balok memiliki volume 360 cm³. Jika panjang balok 10 cm dan lebarnya 6 cm, maka tinggi balok tersebut adalah ....",
+    "p": ["5 cm", "6 cm", "8 cm", "12 cm"],
+    "b": 1,
+    "bahas": "Tinggi = Volume : (p × l) = 360 : (10 × 6) = 360 : 60 = 6 cm."
+  },
+  {
+    "q": "Luas permukaan sebuah kubus yang memiliki panjang rusuk 7 cm adalah ....",
+    "p": ["49 cm²", "196 cm²", "294 cm²", "343 cm²"],
+    "b": 2,
+    "bahas": "Kubus memiliki 6 sisi persegi. Luas permukaan = 6 × s × s = 6 × 7 × 7 = 294 cm²."
+  },
+  {
+    "q": "Dalam sebuah kotak terdapat 10 kartu bernomor 1 sampai 10. Jika diambil satu kartu secara acak, peluang terambilnya kartu bernomor genap (2, 4, 6, 8, 10) dibandingkan kartu bernomor ganjil (1, 3, 5, 7, 9) adalah ....",
+    "p": [
+      "Sama besar (masing-masing 5 kartu dari 10 kartu)",
+      "Nomor genap lebih besar peluangnya",
+      "Nomor ganjil lebih besar peluangnya",
+      "Tidak mungkin terambil nomor genap"
+    ],
+    "b": 0,
+    "bahas": "Terdapat 5 bilangan genap dan 5 bilangan ganjil dari 1 sampai 10, sehingga peluang keduanya sama besar."
+  },
+  {
+    "q": "Sebuah kotak kardus besar berukuran panjang 40 cm, lebar 20 cm, dan tinggi 20 cm akan diisi penuh dengan kubus-kubus kecil berukuran rusuk 10 cm. Banyak maksimal kubus kecil yang dapat masuk ke dalam kardus besar tersebut adalah ....",
+    "p": ["8 kubus kecil", "12 kubus kecil", "16 kubus kecil", "20 kubus kecil"],
+    "b": 2,
+    "bahas": "Volume kardus = 40 × 20 × 20 = 16.000 cm³. Volume 1 kubus kecil = 10 × 10 × 10 = 1.000 cm³. Banyak kubus = 16.000 : 1.000 = 16 kubus."
+  },
+  {
+    "q": "Langit mendung hitam pekat disertai petir dan angin dingin bertiup kencang. Berdasarkan skala peluang, kemungkinan turunnya hujan dalam waktu dekat termasuk kategori ....",
+    "p": ["Sangat mungkin terjadi", "Tidak mungkin terjadi", "Kurang mungkin terjadi", "Mustahil terjadi"],
+    "b": 0,
+    "bahas": "Tanda-tanda cuaca mendung tebal dan angin dingin menunjukkan peluang turunnya hujan sangat besar (sangat mungkin)."
+  }
+]);
+
+window.tambahPaketUjian("6", "ipas", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>ROTASI &amp; REVOLUSI BUMI</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Perputaran Bumi pada Poros &amp; Orbit</text></svg>",
+    "q": "Perhatikan kartu astronomi pada gambar di atas! Perputaran Bumi pada porosnya (sumbunya) dari arah barat ke timur selama 23 jam 56 menit (dibulatkan 24 jam) disebut ....",
+    "p": ["Rotasi Bumi", "Revolusi Bumi", "Revolusi Bulan", "Gerhana Matahari"],
+    "b": 0,
+    "bahas": "Rotasi Bumi adalah perputaran Bumi pada sumbunya sendiri selama 24 jam."
+  },
+  {
+    "q": "Peristiwa alam yang merupakan akibat langsung dari terjadinya ROTASI BUMI adalah ....",
+    "p": [
+      "Terjadinya siang dan malam, gerak semu harian matahari dari timur ke barat, dan perbedaan waktu di berbagai daerah",
+      "Perubahan musim di belahan bumi utara dan selatan",
+      "Gerak semu tahunan matahari",
+      "Terjadinya gerhana bulan total"
+    ],
+    "b": 0,
+    "bahas": "Rotasi Bumi menyebabkan pergantian siang-malam, perbedaan zona waktu (WIB, WITA, WIT), serta pembelokan arah angin dan arus laut."
+  },
+  {
+    "q": "Indonesia terbagi menjadi tiga wilayah zona waktu (WIB, WITA, dan WIT) dengan selisih masing-masing 1 jam. Apabila di Kota Pamekasan (WIB) menunjukkan pukul 08.00 pagi, maka waktu di Kota Jayapura, Papua (WIT) menunjukkan pukul ....",
+    "p": ["07.00 pagi", "09.00 pagi", "10.00 pagi", "11.00 siang"],
+    "b": 2,
+    "bahas": "WIT (Waktu Indonesia Timur) lebih cepat 2 jam daripada WIB, sehingga 08.00 + 2 jam = 10.00 WIT."
+  },
+  {
+    "q": "Peredaran Bumi mengelilingi Matahari pada lintasan orbitnya selama 365 1/4 hari (1 tahun) disebut ....",
+    "p": ["Revolusi Bumi", "Rotasi Bumi", "Rotasi Bulan", "Pasang surut air laut"],
+    "b": 0,
+    "bahas": "Revolusi Bumi dengan kemiringan sumbu 23,5° mengakibatkan pergantian musim dan perbedaan lamanya siang serta malam."
+  },
+  {
+    "q": "Susunan planet-planet dalam sistem Tata Surya kita secara berurutan dimulai dari yang paling dekat dengan Matahari adalah ....",
+    "p": [
+      "Merkurius, Venus, Bumi, Mars, Jupiter, Saturnus, Uranus, Neptunus",
+      "Merkurius, Mars, Bumi, Venus, Jupiter, Saturnus, Uranus, Neptunus",
+      "Venus, Merkurius, Bumi, Mars, Saturnus, Jupiter, Uranus, Neptunus",
+      "Bumi, Venus, Merkurius, Mars, Jupiter, Uranus, Saturnus, Neptunus"
+    ],
+    "b": 0,
+    "bahas": "Urutan 8 planet dari Matahari: Merkurius, Venus, Bumi, Mars, Jupiter, Saturnus, Uranus, Neptunus."
+  },
+  {
+    "q": "Planet terbesar dalam sistem Tata Surya yang memiliki bintik merah raksasa dan puluhan satelit alami adalah planet ....",
+    "p": ["Jupiter", "Saturnus", "Uranus", "Bumi"],
+    "b": 0,
+    "bahas": "Jupiter merupakan planet paling besar di Tata Surya."
+  },
+  {
+    "q": "Planet yang memiliki suhu permukaan paling panas di Tata Surya karena atmosfernya dipenuhi gas karbon dioksida tebal yang memerangkap panas matahari serta dijuluki Bintang Kejora adalah ....",
+    "p": ["Venus", "Merkurius", "Mars", "Neptunus"],
+    "b": 0,
+    "bahas": "Venus adalah planet terpanas dan paling terang tampak dari Bumi saat fajar atau senja."
+  },
+  {
+    "q": "Planet ke-6 dari Matahari yang terkenal memiliki cincin indah yang tersusun dari miliaran bongkahan es dan debu luar angkasa adalah ....",
+    "p": ["Saturnus", "Uranus", "Jupiter", "Mars"],
+    "b": 0,
+    "bahas": "Saturnus memiliki sistem cincin yang paling besar dan indah di Tata Surya."
+  },
+  {
+    "svg": "<svg width='180' height='70' xmlns='http://w3.org'><circle cx='35' cy='35' r='16' fill='#facc15'/><circle cx='90' cy='35' r='8' fill='#94a3b8'/><circle cx='145' cy='35' r='12' fill='#38bdf8'/><text x='35' y='62' font-size='7' text-anchor='middle'>Matahari</text><text x='90' y='62' font-size='7' text-anchor='middle'>Bulan</text><text x='145' y='62' font-size='7' text-anchor='middle'>Bumi</text></svg>",
+    "q": "Perhatikan posisi Matahari, Bulan, dan Bumi pada garis lurus di atas! Peristiwa tertutupnya cahaya Matahari oleh Bulan sehingga bayangan Bulan jatuh ke permukaan Bumi disebut ....",
+    "p": ["Gerhana Matahari", "Gerhana Bulan", "Fase Bulan Purnama", "Revolusi Matahari"],
+    "b": 0,
+    "bahas": "Gerhana Matahari terjadi ketika posisi Matahari - Bulan - Bumi berada pada satu garis lurus."
+  },
+  {
+    "q": "Gerhana Bulan total terjadi pada malam bulan purnama ketika posisi benda langit berada pada satu garis lurus dengan urutan ....",
+    "p": [
+      "Matahari – Bumi – Bulan",
+      "Matahari – Bulan – Bumi",
+      "Bumi – Matahari – Bulan",
+      "Bulan – Matahari – Bumi"
+    ],
+    "b": 0,
+    "bahas": "Pada Gerhana Bulan, Bumi berada di antara Matahari dan Bulan sehingga Bulan masuk ke dalam bayangan umbra Bumi."
+  },
+  {
+    "q": "Benda langit kecil yang memasuki atmosfer Bumi dan terbakar habis akibat gesekan udara sehingga tampak seperti bintang jatuh disebut ....",
+    "p": ["Meteor", "Komet", "Asteroid", "Satelit"],
+    "b": 0,
+    "bahas": "Meteor adalah meteoroid yang terbakar di atmosfer Bumi; jika sampai ke permukaan Bumi disebut meteorit."
+  },
+  {
+    "q": "Benda langit yang tersusun dari es, debu, dan gas beku yang mengelilingi Matahari dengan lintasan sangat lonjong dan memiliki ekor bercahaya saat mendekati Matahari disebut ....",
+    "p": ["Komet (bintang berekor)", "Planet kerdil", "Satelit alami", "Meteor"],
+    "b": 0,
+    "bahas": "Ekor komet selalu menjauhi arah Matahari akibat dorongan angin matahari."
+  },
+  {
+    "q": "Sumber energi yang paling banyak digunakan manusia saat ini untuk pembangkit listrik dan bahan bakar kendaraan bermotor (seperti bensin, solar, dan batu bara) berasal dari energi ....",
+    "p": [
+      "Fosil (sumber daya alam tidak terbarukan)",
+      "Terbarukan yang tak terbatas",
+      "Panas bumi alami",
+      "Gelombang pasang surut laut"
+    ],
+    "b": 0,
+    "bahas": "Minyak bumi, batu bara, dan gas alam adalah energi fosil yang cadangannya terbatas dan dapat habis."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#15803d'>ENERGI TERBARUKAN</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Surya • Angin • Air • Panas Bumi • Bioenergi</text></svg>",
+    "q": "Perhatikan kartu energi ramah lingkungan pada gambar di atas! Pembangkit listrik yang mengubah energi cahaya matahari langsung menjadi energi listrik menggunakan panel surya disebut ....",
+    "p": [
+      "PLTS (Pembangkit Listrik Tenaga Surya)",
+      "PLTU (Pembangkit Listrik Tenaga Uap batu bara)",
+      "PLTD (Pembangkit Listrik Tenaga Diesel)",
+      "PLTG (Pembangkit Listrik Tenaga Gas)"
+    ],
+    "b": 0,
+    "bahas": "PLTS memanfaatkan sel surya (fotovoltaik) untuk mengubah sinar matahari menjadi listrik."
+  },
+  {
+    "q": "Pembangkit listrik tenaga angin (PLTB / Bayu) memanfaatkan hembusan angin kencang untuk memutar ....",
+    "p": [
+      "Turbin kincir angin raksasa yang terhubung ke generator listrik",
+      "Tungku pembakaran batu bara",
+      "Mesin diesel berbahan bakar solar",
+      "Panel kaca pemanas air"
+    ],
+    "b": 0,
+    "bahas": "Energi kinetik angin memutar baling-baling turbin untuk menghasilkan energi listrik bersih."
+  },
+  {
+    "q": "Bahan bakar alternatif ramah lingkungan (biosolar / biodiesel) yang diolah dari tumbuhan seperti biji jarak, kelapa sawit, atau singkong disebut ....",
+    "p": ["Biofuel (bahan bakar nabati)", "Batu bara muda", "Minyak tanah", "Gas elpiji"],
+    "b": 0,
+    "bahas": "Biofuel (biodiesel dan bioetanol) merupakan energi terbarukan yang berasal dari bahan organik nabati."
+  },
+  {
+    "q": "Gas metana yang dihasilkan dari proses pembusukan kotoran hewan ternak (seperti kotoran sapi) dan limbah organik di dalam tangki kedap udara yang dapat dipakai untuk memasak adalah ....",
+    "p": ["Biogas", "Bensin pertalite", "Avtur pesawat", "Batu bara"],
+    "b": 0,
+    "bahas": "Biogas adalah energi alternatif ramah lingkungan dari fermentasi limbah organik dan kotoran ternak."
+  },
+  {
+    "q": "Keunggulan utama penggunaan energi alternatif terbarukan dibandingkan energi fosil adalah ....",
+    "p": [
+      "Tidak akan habis karena terus tersedia di alam dan tidak menimbulkan polusi udara berbahaya",
+      "Harganya selalu lebih mahal dari emas",
+      "Menghasilkan asap hitam pekat yang merusak lapisan ozon",
+      "Hanya dapat digunakan pada malam hari"
+    ],
+    "b": 0,
+    "bahas": "Energi terbarukan bersifat berkelanjutan dan ramah lingkungan (rendah emisi karbon)."
+  },
+  {
+    "q": "Dampak negatif pembakaran bahan bakar fosil (batu bara dan minyak bumi) secara berlebihan bagi lingkungan Bumi adalah ....",
+    "p": [
+      "Meningkatnya gas rumah kaca yang memicu pemanasan global (global warming) dan perubahan iklim ekstrem",
+      "Udara di perkotaan menjadi semakin sejuk dan bersih",
+      "Cadangan minyak bumi bertambah dua kali lipat",
+      "Es di kutub utara semakin menebal"
+    ],
+    "b": 0,
+    "bahas": "Emisi karbon dioksida dari pembakaran fosil memerangkap panas di atmosfer dan menyebabkan pemanasan global."
+  },
+  {
+    "q": "Tindakan nyata yang dapat dilakukan siswa kelas 6 SD di rumah untuk menghemat energi listrik setiap hari adalah ....",
+    "p": [
+      "Mematikan lampu, kipas angin, dan televisi saat tidak digunakan serta memanfaatkan cahaya matahari di siang hari",
+      "Menyalakan pendingin ruangan (AC) dengan pintu kamar terbuka lebar",
+      "Membiarkan pengisi daya (charger) ponsel tetap tertancap di stopkontak meski tidak dipakai",
+      "Menyalakan seluruh lampu rumah sepanjang siang dan malam"
+    ],
+    "b": 0,
+    "bahas": "Menghemat listrik mengurangi beban pembangkit listrik berbahan bakar fosil."
+  },
+  {
+    "q": "Bentuk perubahan energi yang terjadi pada saat panel surya bekerja di atap rumah adalah ....",
+    "p": [
+      "Energi cahaya matahari menjadi energi listrik",
+      "Energi listrik menjadi energi gerak",
+      "Energi kimia menjadi energi bunyi",
+      "Energi angin menjadi energi panas"
+    ],
+    "b": 0,
+    "bahas": "Sel surya menyerap foton cahaya matahari dan mengubahnya langsung menjadi arus listrik."
+  },
+  {
+    "q": "Perhitungan kalender Masehi dibuat berdasarkan kala revolusi Bumi mengelilingi Matahari, sedangkan kalender Hijriah (Islam) dibuat berdasarkan ....",
+    "p": [
+      "Kala revolusi Bulan mengelilingi Bumi (selama sekitar 29,5 hari dalam satu bulan)",
+      "Kala rotasi Matahari",
+      "Kala revolusi Planet Mars",
+      "Perubahan arah angin musim"
+    ],
+    "b": 0,
+    "bahas": "Kalender Hijriah (komariah) berpatokan pada peredaran Bulan mengelilingi Bumi."
+  },
+  {
+    "q": "Pada tahun kabisat (setiap 4 tahun sekali seperti tahun 2024 dan 2028), jumlah hari dalam kalender Masehi menjadi 366 hari dengan tambahan 1 hari pada bulan ....",
+    "p": ["Februari (menjadi 29 hari)", "Januari", "Agustus", "Desember"],
+    "b": 0,
+    "bahas": "Kelebihan 1/4 hari setiap tahun revolusi Bumi dikumpulkan selama 4 tahun menjadi 1 hari penuh di bulan Februari."
+  },
+  {
+    "q": "Mengapa masyarakat di Pulau Madura yang memiliki intensitas sinar matahari melimpah dan angin pesisir kencang sangat berpotensi mengembangkan energi alternatif?",
+    "p": [
+      "Karena wilayah pesisir Madura sangat cocok untuk pemasangan panel surya (PLTS) dan turbin angin (PLTB)",
+      "Karena di Madura tidak pernah ada sinar matahari",
+      "Karena semua sungai di Madura memiliki air terjun tinggi",
+      "Karena Madura berada di daerah kutub bersalju"
+    ],
+    "b": 0,
+    "bahas": "Potensi radiasi matahari tinggi dan angin laut menjadikan wilayah pesisir Madura ideal untuk PLTS dan PLTB."
+  },
+  {
+    "q": "Kesimpulan yang paling tepat mengenai upaya menjaga kelestarian energi di Bumi adalah ....",
+    "p": [
+      "Kita harus menghemat pemakaian energi fosil mulai sekarang serta beralih mengembangkan energi terbarukan yang ramah lingkungan",
+      "Energi fosil tidak perlu dihemat karena jumlahnya tidak akan pernah habis",
+      "Penghematan energi hanya menjadi tanggung jawab pabrik besar",
+      "Listrik boleh digunakan boros asalkan mampu membayar tagihannya"
+    ],
+    "b": 0,
+    "bahas": "Konservasi energi dan transisi menuju energi bersih adalah kunci menyelamatkan masa depan Bumi."
+  }
+]);
+
+window.tambahPaketUjian("6", "bindo", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>TEKS BIOGRAFI</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Riwayat Hidup &amp; Keteladanan Tokoh</text></svg>",
+    "q": "Perhatikan kartu jenis teks pada gambar di atas! Teks yang menceritakan riwayat hidup, perjalanan perjuangan, serta jasa-jasa seorang tokoh yang ditulis oleh orang lain disebut teks ....",
+    "p": ["Biografi", "Autobiografi", "Fabel", "Prosedur"],
+    "b": 0,
+    "bahas": "Biografi ditulis oleh orang lain, sedangkan riwayat hidup yang ditulis sendiri oleh tokohnya disebut autobiografi."
+  },
+  {
+    "q": "Hal utama yang paling bermanfaat untuk diteladani dari membaca teks biografi tokoh inspiratif dunia maupun pahlawan nasional adalah ....",
+    "p": [
+      "Semangat pantang menyerah, kerja keras, kejujuran, dan kepedulian sosialnya",
+      "Kekayaan harta benda yang dimilikinya",
+      "Pakaian mewah yang dikenakannya",
+      "Keberuntungannya tanpa berusaha keras"
+    ],
+    "b": 0,
+    "bahas": "Biografi memuat keteladanan karakter dan perjuangan tokoh yang menginspirasi pembaca."
+  },
+  {
+    "q": "Bacalah kutipan biografi singkat berikut!\nB.J. Habibie dikenal sebagai Bapak Teknologi Indonesia. Sejak kecil beliau sangat gemar membaca buku dan tekun mempelajari ilmu pengetahuan, terutama bidang dirgantara. Ketekunan itu mengantarkannya merancang pesawat terbang pertama karya anak bangsa, yaitu N-250 Gatotkaca.\n\nSifat unggul B.J. Habibie yang dapat diteladani siswa berdasarkan kutipan di atas adalah ....",
+    "p": [
+      "Gemar membaca dan tekun mempelajari ilmu pengetahuan hingga melahirkan karya bermanfaat",
+      "Mudah menyerah saat menghadapi pelajaran sulit",
+      "Hanya mengandalkan bakat tanpa mau belajar",
+      "Menyimpan ilmunya untuk diri sendiri"
+    ],
+    "b": 0,
+    "bahas": "Kutipan tersebut menonjolkan kegemaran membaca dan ketekunan belajar B.J. Habibie."
+  },
+  {
+    "q": "Penulisan kutipan langsung ucapan tokoh terkenal yang benar sesuai kaidah ejaan adalah ....",
+    "p": [
+      "Ki Hajar Dewantara berpesan, 'Ing ngarsa sung tuladha, ing madya mangun karsa, tut wuri handayani.'",
+      "Ki Hajar Dewantara berpesan 'Ing ngarsa sung tuladha, ing madya mangun karsa, tut wuri handayani.'",
+      "Ki Hajar Dewantara berpesan, Ing ngarsa sung tuladha, ing madya mangun karsa, tut wuri handayani.",
+      "'Ki Hajar Dewantara berpesan', Ing ngarsa sung tuladha, ing madya mangun karsa, tut wuri handayani."
+    ],
+    "b": 0,
+    "bahas": "Kutipan langsung diapit tanda petik dan didahului tanda koma setelah kalimat pengiring."
+  },
+  {
+    "q": "Teknik mencatat kreatif yang memetakan gagasan utama di bagian tengah dan cabang-cabang informasi penting di sekelilingnya menggunakan kata kunci, garis, dan warna disebut ....",
+    "p": ["Peta pikiran (mind map)", "Daftar pustaka", "Indeks buku", "Kuitansi pembayaran"],
+    "b": 0,
+    "bahas": "Peta pikiran (mind map) membantu merangkum isi bacaan secara visual dan terstruktur."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>STRUKTUR PIDATO</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Pembukaan • Isi Pidato • Penutup</text></svg>",
+    "q": "Perhatikan bagan struktur teks pidato pada gambar di atas! Bagian pidato yang berisi salam penghormatan kepada hadirin serta ucapan puji syukur kepada Tuhan Yang Maha Esa terletak pada bagian ....",
+    "p": ["Pembukaan (pendahuluan)", "Isi pidato", "Penutup pidato", "Judul pidato"],
+    "b": 0,
+    "bahas": "Pembukaan pidato memuat salam pembuka, sapaan penghormatan, dan ungkapan syukur."
+  },
+  {
+    "q": "Pidato yang bertujuan meyakinkan dan mengajak pendengar agar tergerak melakukan suatu kebaikan (seperti menjaga kebersihan lingkungan atau gemar membaca) disebut pidato ....",
+    "p": ["Persuasif", "Informatif saja", "Rekreatif jenaka", "Laporan keuangan"],
+    "b": 0,
+    "bahas": "Pidato persuasif bersifat mengajak dan membujuk pendengar melakukan tindakan positif."
+  },
+  {
+    "q": "Kalimat penutup pidato yang santun dan tepat diucapkan oleh wakil siswa kelas 6 pada acara perpisahan sekolah adalah ....",
+    "p": [
+      "Demikian yang dapat saya sampaikan. Mohon maaf apabila terdapat tutur kata yang kurang berkenan. Terima kasih atas perhatian Bapak dan Ibu.",
+      "Cukup sekian pidato saya, silakan semuanya segera pulang sekarang!",
+      "Kalau ada kata-kata saya yang salah, itu bukan urusan saya.",
+      "Pidato ini sudah selesai, jangan ada yang bertanya lagi."
+    ],
+    "b": 0,
+    "bahas": "Penutup pidato berisi simpulan singkat, permohonan maaf atas kekurangan, ucapan terima kasih, dan salam penutup."
+  },
+  {
+    "q": "Metode berpidato dengan cara menyiapkan catatan kecil berisi garis-garis besar (poin-poin penting) materi yang akan disampaikan disebut metode ....",
+    "p": ["Ekstemporan", "Impromptu (mendadak)", "Menghafal naskah", "Membaca naskah penuh"],
+    "b": 0,
+    "bahas": "Metode ekstemporan menggunakan catatan pokok pikiran sehingga pembicara tetap komunikatif dan terarah."
+  },
+  {
+    "q": "Kegiatan bertukar pikiran secara teratur antara dua kelompok (kelompok pro/setuju dan kelompok kontra/tidak setuju) mengenai suatu topik dengan disertai alasan logis disebut ....",
+    "p": ["Debat / diskusi terarah", "Wawancara kerja", "Monolog", "Deklamasi puisi"],
+    "b": 0,
+    "bahas": "Debat melatih kemampuan berpikir kritis, menyampaikan argumen santun, dan menghargai perbedaan pandangan."
+  },
+  {
+    "q": "Sikap terpuji yang wajib dijaga oleh peserta diskusi atau debat di kelas ketika teman dari kelompok lawan menyampaikan pendapat berbeda adalah ....",
+    "p": [
+      "Mendengarkan dengan tenang hingga selesai dan menyanggahnya menggunakan bahasa santun serta alasan logis",
+      "Memotong pembicaraan teman dengan teriakan keras",
+      "Mengejek pribadi teman yang berbeda pendapat",
+      "Marah dan meninggalkan ruang kelas"
+    ],
+    "b": 0,
+    "bahas": "Diskusi yang sehat mengutamakan kekuatan argumen dan etika kesantunan berbahasa."
+  },
+  {
+    "q": "Kalimat di bawah ini yang merupakan KALIMAT EFEKTIF (hemat kata dan jelas maknanya) adalah ....",
+    "p": [
+      "Seluruh siswa kelas enam sedang merencanakan kegiatan karya wisata.",
+      "Seluruh siswa-siswa kelas enam sedang merencanakan kegiatan karya wisata.",
+      "Semua para siswa-siswa kelas enam sedang merencanakan kegiatan karya wisata.",
+      "Para seluruh siswa kelas enam pada merencanakan kegiatan karya wisata."
+    ],
+    "b": 0,
+    "bahas": "Kata 'Seluruh' sudah menyatakan jamak sehingga tidak perlu diikuti kata ulang 'siswa-siswa'."
+  },
+  {
+    "q": "Tanda bukti tertulis penyerahan sejumlah uang yang ditandatangani oleh penerima uang dan sering digunakan dalam pencatatan anggaran kegiatan kelas disebut ....",
+    "p": ["Kuitansi", "Resep dokter", "Denah lokasi", "Formulir pendaftaran"],
+    "b": 0,
+    "bahas": "Kuitansi adalah bukti transaksi pembayaran yang sah."
+  },
+  {
+    "q": "Unsur penting yang harus tercantum di dalam sebuah kuitansi pembayaran yang sah adalah ....",
+    "p": [
+      "Nomor kuitansi, nama pembayar, jumlah uang (angka dan huruf), tujuan pembayaran, tempat dan tanggal, serta tanda tangan penerima",
+      "Daftar riwayat hidup penjual",
+      "Sinopsis buku cerita",
+      "Jadwal pelajaran sekolah"
+    ],
+    "b": 0,
+    "bahas": "Kuitansi memuat informasi lengkap mengenai siapa yang membayar, nominal uang, keperluan, tanggal, dan tanda tangan penerima."
+  },
+  {
+    "q": "Iklan layanan masyarakat di media cetak maupun elektronik bertujuan untuk ....",
+    "p": [
+      "Mengajak masyarakat melakukan kebiasaan positif demi kepentingan bersama (seperti hemat energi dan anti perundungan)",
+      "Menjual barang elektronik dengan harga diskon besar",
+      "Mencari keuntungan uang sebanyak-banyaknya",
+      "Mempromosikan merek minuman kemasan"
+    ],
+    "b": 0,
+    "bahas": "Iklan layanan masyarakat bersifat nonkomersial untuk memberikan edukasi sosial."
+  },
+  {
+    "q": "Kalimat iklan yang menarik dan persuasif untuk mempromosikan wisata edukasi ke Pulau Madura adalah ....",
+    "p": [
+      "Jelajahi Keindahan Pantai Lombang dan Kekayaan Sejarah Keraton Sumenep Bersama Keluarga!",
+      "Pulau Madura terletak di sebelah timur laut Pulau Jawa.",
+      "Kemarin rombongan siswa berkunjung ke museum daerah.",
+      "Harga tiket masuk tempat wisata dibayar di loket."
+    ],
+    "b": 0,
+    "bahas": "Kalimat iklan menggunakan kata kerja ajakan yang menggugah minat pembaca."
+  },
+  {
+    "q": "Kalimat di bawah ini yang merupakan FAKTA dalam laporan perencanaan liburan kelas adalah ....",
+    "p": [
+      "Biaya sewa satu unit bus pariwisata adalah Rp1.500.000,00 per hari.",
+      "Menurut pendapatku, berlibur ke kebun binatang jauh lebih seru daripada ke museum.",
+      "Sebaiknya kita berangkat pukul enam pagi agar tidak terjebak macet.",
+      "Mungkin cuaca pada hari Sabtu nanti akan cerah berawan."
+    ],
+    "b": 0,
+    "bahas": "Besaran tarif sewa bus yang pasti merupakan data faktual (fakta)."
+  },
+  {
+    "q": "Kalimat di bawah ini yang merupakan OPINI dalam diskusi penentuan tujuan wisata kelas adalah ....",
+    "p": [
+      "Saya rasa berkunjung ke taman edukasi sains akan memberikan pengalaman belajar yang paling berkesan.",
+      "Jarak tempuh dari sekolah menuju lokasi museum sekitar 25 kilometer.",
+      "Jumlah siswa kelas enam yang akan ikut serta sebanyak 32 anak.",
+      "Kegiatan karya wisata dilaksanakan pada hari Sabtu."
+    ],
+    "b": 0,
+    "bahas": "Frasa 'Saya rasa' dan 'paling berkesan' menunjukkan pendapat pribadi (opini)."
+  },
+  {
+    "q": "Kata hubung (konjungsi) antarkalimat yang menyatakan pertentangan dengan kalimat sebelumnya adalah ....",
+    "p": ["Namun / Akan tetapi", "Oleh karena itu", "Selain itu", "Kemudian"],
+    "b": 0,
+    "bahas": "'Namun' dan 'Akan tetapi' menyatakan hubungan pertentangan."
+  },
+  {
+    "q": "Konjungsi antarkalimat yang menyatakan hubungan sebab-akibat (simpulan) yang tepat adalah ....",
+    "p": ["Oleh karena itu / Dengan demikian", "Meskipun demikian", "Sebaliknya", "Padahal"],
+    "b": 0,
+    "bahas": "'Oleh karena itu' digunakan untuk menghubungkan sebab dengan akibat."
+  },
+  {
+    "q": "Pesan moral (amanat) yang terkandung di dalam sebuah cerita fiksi anak (cerpen) adalah ....",
+    "p": [
+      "Nilai-nilai kebaikan dan pelajaran hidup yang ingin disampaikan pengarang kepada pembaca melalui jalan cerita",
+      "Nama penerbit dan tahun terbit buku",
+      "Jumlah halaman dalam buku cerita",
+      "Daftar harga buku di toko"
+    ],
+    "b": 0,
+    "bahas": "Amanat adalah pesan kebaikan yang dapat dipetik pembaca dari kisah tokoh dalam cerita."
+  },
+  {
+    "q": "Sudut pandang pengarang dalam cerita pendek yang menggunakan kata ganti tokoh utama 'aku' atau 'saya' disebut sudut pandang ....",
+    "p": ["Orang pertama", "Orang kedua", "Orang ketiga serba tahu", "Pengamat luar"],
+    "b": 0,
+    "bahas": "Penggunaan kata ganti 'aku' menunjukkan sudut pandang orang pertama."
+  },
+  {
+    "q": "Sinonim (persamaan kata) dari kata 'inovasi' pada kalimat 'Anak-anak muda menciptakan berbagai inovasi ramah lingkungan' adalah ....",
+    "p": ["Pembaruan / penemuan baru", "Kerusakan", "Kemunduran", "Penghambatan"],
+    "b": 0,
+    "bahas": "Inovasi bermakna pembaruan atau kreasi baru yang bermanfaat."
+  },
+  {
+    "q": "Antonim (lawan kata) dari kata 'optimis' pada kalimat 'Kita harus selalu optimis meraih cita-cita' adalah ....",
+    "p": ["Pesimis", "Percaya diri", "Bersemangat", "Tekun"],
+    "b": 0,
+    "bahas": "Optimis (penuh harapan) berlawanan arti dengan pesimis (mudah putus asa)."
+  },
+  {
+    "q": "Manfaat menyusun anggaran biaya kegiatan secara transparan sebelum melaksanakan acara perpisahan kelas adalah ....",
+    "p": [
+      "Agar pengeluaran dana terencana dengan jelas, hemat, dan dapat dipertanggungjawabkan bersama",
+      "Agar uang kas kelas cepat habis tanpa catatan",
+      "Agar hanya bendahara saja yang mengetahui penggunaannya",
+      "Agar siswa tidak perlu menabung"
+    ],
+    "b": 0,
+    "bahas": "Perencanaan anggaran melatih kejujuran, transparansi, dan tanggung jawab keuangan."
+  }
+]);
+
+window.tambahPaketUjian("6", "pai", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='11' font-weight='bold' text-anchor='middle' fill='#15803d'>SURAH AL-A'LA</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Terdiri atas 19 Ayat • Surah ke-87</text></svg>",
+    "q": "Perhatikan kartu informasi surah pada gambar di atas! Arti dari nama Surah 'Al-A'la' adalah ....",
+    "p": ["Yang Maha Tinggi", "Waktu Duha", "Segumpal Darah", "Guncangan"],
+    "b": 0,
+    "bahas": "Al-A'la artinya Yang Maha Tinggi, diambil dari ayat pertama 'Sabbihisma rabbikal-a'la'."
+  },
+  {
+    "q": "Perintah utama Allah Swt. kepada Nabi Muhammad saw. dan seluruh umat Islam pada ayat pertama Surah Al-A'la ('Sabbihisma rabbikal-a'la') adalah ....",
+    "p": [
+      "Bertasbih menyucikan nama Tuhanmu Yang Maha Tinggi",
+      "Bersedekah kepada anak yatim piatu",
+      "Melaksanakan ibadah haji ke Baitullah",
+      "Membangun masjid yang megah"
+    ],
+    "b": 0,
+    "bahas": "Ayat pertama Q.S. Al-A'la memerintahkan kita untuk selalu bertasbih menyucikan nama Allah Swt."
+  },
+  {
+    "q": "Dalam Q.S. Al-A'la ayat 14–15 dijelaskan bahwa orang yang beruntung dan berbahagia adalah orang yang menyucikan dirinya (dengan beriman dan beramal saleh), lalu mengingat nama Tuhannya dan mendirikan ....",
+    "p": ["Salat", "Perdagangan", "Kerajaan", "Perlombaan"],
+    "b": 0,
+    "bahas": "'Qad aflaha man tazakka, wa zakarasma rabbihi fasalla' (Sungguh beruntung orang yang menyucikan diri, dan mengingat nama Tuhannya, lalu dia salat)."
+  },
+  {
+    "q": "Peringatan Allah Swt. dalam Q.S. Al-A'la ayat 16–17 terhadap manusia yang sering terlena adalah bahwa kebanyakan manusia lebih mengutamakan kehidupan dunia, padahal kehidupan akhirat itu ....",
+    "p": [
+      "Lebih baik dan lebih kekal (khairun wa abqa)",
+      "Sama saja dengan kehidupan dunia",
+      "Hanya berlangsung sebentar saja",
+      "Tidak perlu dipersiapkan bekalnya"
+    ],
+    "b": 0,
+    "bahas": "'Wal-akhiratu khairun wa abqa' artinya sedangkan kehidupan akhirat itu lebih baik dan lebih kekal."
+  },
+  {
+    "q": "Dalam ayat terakhir Surah Al-A'la (ayat 19) disebutkan bahwa nasihat-nasihat mulia tersebut juga terdapat dalam suhuf (lembaran-lembaran kitab) terdahulu, yaitu suhuf Nabi ....",
+    "p": ["Ibrahim a.s. dan Musa a.s.", "Nuh a.s. dan Hud a.s.", "Daud a.s. dan Sulaiman a.s.", "Isa a.s. dan Yahya a.s."],
+    "b": 0,
+    "bahas": "'Suhufi Ibrahima wa Musa' (lembaran-lembaran suhuf Nabi Ibrahim a.s. dan Nabi Musa a.s.)."
+  },
+  {
+    "q": "Hukum bacaan tajwid pada lafaz 'khairun wa abqa' di mana tanwin bertemu huruf wawu (و) sehingga dibaca masuk disertai dengung selama dua harakat disebut ....",
+    "p": ["Idgham bigunnah", "Idgham bilagunnah", "Izhar halqi", "Iqlab"],
+    "b": 0,
+    "bahas": "Idgham bigunnah terjadi apabila nun sukun atau tanwin bertemu salah satu huruf ي ن م و (yanmu)."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>QADA DAN QADAR</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Rukun Iman ke-6 • Takdir Mubram &amp; Mu'allaq</text></svg>",
+    "q": "Perhatikan kartu rukun iman pada gambar di atas! Meyakini dengan sepenuh hati bahwa Allah Swt. telah menentukan segala sesuatu bagi makhluk-Nya sejak zaman azali hingga terwujudnya ketetapan tersebut merupakan rukun iman ke-....",
+    "p": ["Empat", "Lima", "Enam", "Tiga"],
+    "b": 2,
+    "bahas": "Iman kepada Qada dan Qadar adalah rukun iman yang keenam (terakhir)."
+  },
+  {
+    "q": "Ketetapan atau rencana Allah Swt. terhadap segala sesuatu sejak zaman azali sebelum makhluk diciptakan disebut ....",
+    "p": ["Qada", "Qadar", "Ikhtiar", "Tawakal"],
+    "b": 0,
+    "bahas": "Qada adalah ketetapan Allah sejak zaman azali, sedangkan Qadar adalah perwujudan nyata dari ketetapan tersebut."
+  },
+  {
+    "q": "Ketetapan mutlak Allah Swt. yang pasti terjadi pada setiap makhluk dan tidak dapat diubah oleh usaha manusia (seperti jenis kelamin saat lahir, waktu kematian, dan terjadinya hari kiamat) disebut takdir ....",
+    "p": ["Mubram", "Mu'allaq", "Ikhtiari", "Sementara"],
+    "b": 0,
+    "bahas": "Takdir mubram adalah takdir pasti yang mutlak berada dalam kekuasaan Allah Swt."
+  },
+  {
+    "q": "Ketetapan Allah Swt. yang masih digantungkan pada usaha (ikhtiar) dan doa manusia (seperti kepandaian, kesehatan, dan keberhasilan meraih cita-cita) disebut takdir ....",
+    "p": ["Mu'allaq", "Mubram", "Mutlak", "Azali"],
+    "b": 0,
+    "bahas": "Takdir mu'allaq dapat berubah atas izin Allah melalui ikhtiar sungguh-sungguh dan doa hamba-Nya."
+  },
+  {
+    "q": "Contoh peristiwa dalam kehidupan sehari-hari yang termasuk takdir MU'ALLAQ adalah ....",
+    "p": [
+      "Seorang siswa yang awalnya kesulitan belajar Matematika menjadi juara kelas karena rajin berlatih dan berdoa",
+      "Matahari terbit dari arah timur setiap pagi",
+      "Seseorang terlahir sebagai anak laki-laki atau perempuan",
+      "Setiap makhluk bernyawa pasti mengalami kematian"
+    ],
+    "b": 0,
+    "bahas": "Prestasi belajar diraih melalui usaha tekun (ikhtiar) dan doa sehingga termasuk takdir mu'allaq."
+  },
+  {
+    "q": "Usaha sungguh-sungguh yang dilakukan manusia dengan mengerahkan segenap kemampuan dan cara yang halal untuk mencapai tujuan yang diinginkan disebut ....",
+    "p": ["Ikhtiar", "Tawakal", "Qanaah", "Syukur"],
+    "b": 0,
+    "bahas": "Ikhtiar adalah berusaha sekuat tenaga sesuai syariat Islam untuk meraih kebaikan."
+  },
+  {
+    "q": "Menyerahkan segala hasil usaha sepenuhnya kepada keputusan Allah Swt. setelah berikhtiar secara maksimal dan berdoa dengan khusyuk disebut ....",
+    "p": ["Tawakal", "Takabur", "Putus asa", "Riya"],
+    "b": 0,
+    "bahas": "Tawakal adalah berserah diri kepada Allah Swt. setelah melakukan usaha dan doa terbaik."
+  },
+  {
+    "q": "Dalam Surah Ar-Ra'd ayat 11 dijelaskan bahwa Allah Swt. tidak akan mengubah keadaan suatu kaum sehingga mereka mau ....",
+    "p": [
+      "Mengubah keadaan yang ada pada diri mereka sendiri (berusaha memperbaiki diri)",
+      "Menunggu keajaiban datang tanpa bekerja",
+      "Menyalahkan orang lain atas kesulitannya",
+      "Bermalas-malasan sepanjang hari"
+    ],
+    "b": 0,
+    "bahas": "Q.S. Ar-Ra'd ayat 11 menegaskan pentingnya ikhtiar manusia untuk meraih perubahan nasib yang lebih baik."
+  },
+  {
+    "q": "Sikap yang paling tepat bagi seorang siswa yang beriman kepada Qada dan Qadar ketika berhasil meraih nilai terbaik dalam ujian akhir sekolah adalah ....",
+    "p": [
+      "Mengucapkan Alhamdulillah, bersyukur kepada Allah Swt., berterima kasih kepada orang tua dan guru, serta tetap rendah hati",
+      "Menyombongkan diri dan meremehkan teman yang nilainya rendah",
+      "Merasa keberhasilan itu semata-mata karena kepintarannya sendiri tanpa pertolongan Allah",
+      "Berhenti belajar karena merasa sudah paling pandai"
+    ],
+    "b": 0,
+    "bahas": "Keberhasilan disikapi dengan syukur dan tawadu (rendah hati), bukan kesombongan."
+  },
+  {
+    "q": "Sikap yang paling tepat apabila kita mengalami musibah atau kegagalan dalam lomba meskipun sudah berlatih keras adalah ....",
+    "p": [
+      "Bersabar, berbaik sangka (husnuzan) kepada Allah Swt., mengevaluasi kekurangan diri, dan bangkit berusaha lagi",
+      "Marah-marah dan menyalahkan takdir Allah",
+      "Putus asa dan tidak mau belajar lagi selamanya",
+      "Iri hati dan membenci teman yang menang"
+    ],
+    "b": 0,
+    "bahas": "Orang beriman menyikapi ujian dengan sabar, husnuzan kepada Allah, dan terus berikhtiar."
+  },
+  {
+    "q": "Perilaku menyombongkan diri dan merasa tidak membutuhkan pertolongan Allah Swt. dalam mencapai cita-cita merupakan sikap yang bertentangan dengan iman kepada Qada dan Qadar karena termasuk sifat ....",
+    "p": ["Takabur", "Tawadu", "Qanaah", "Istiqamah"],
+    "b": 0,
+    "bahas": "Takabur (sombong) sangat dibenci Allah Swt. karena segala kemampuan manusia berasal dari karunia-Nya."
+  },
+  {
+    "q": "Menerima dengan rela dan merasa cukup atas setiap pemberian rezeki dari Allah Swt. setelah berusaha maksimal disebut sifat ....",
+    "p": ["Qanaah", "Serakah (tamak)", "Bakhil (kikir)", "Hasad (dengki)"],
+    "b": 0,
+    "bahas": "Qanaah adalah sikap rela menerima dan mensyukuri ketetapan rezeki dari Allah Swt. sehingga hati menjadi tenang."
+  },
+  {
+    "q": "Urutan langkah yang benar bagi seorang muslim dalam menghadapi ujian akhir sekolah kelas 6 sesuai konsep iman kepada Qada dan Qadar adalah ....",
+    "p": [
+      "Berikhtiar belajar dengan tekun → berdoa memohon kemudahan kepada Allah → bertawakal menerima hasil terbaik",
+      "Bertawakal saja di rumah tanpa pernah membuka buku pelajaran",
+      "Berdoa saja tanpa mau belajar dan mengerjakan latihan soal",
+      "Menyontek jawaban teman agar mendapat nilai tinggi"
+    ],
+    "b": 0,
+    "bahas": "Ikhtiar, doa, dan tawakal adalah satu kesatuan yang tidak boleh dipisahkan."
+  },
+  {
+    "q": "Salah satu manfaat beriman kepada Qada dan Qadar bagi kesehatan mental dan ketenangan jiwa manusia adalah ....",
+    "p": [
+      "Hati menjadi tenang, tidak mudah cemas berlebihan, tidak sombong saat sukses, dan tidak putus asa saat diuji",
+      "Membuat seseorang menjadi pemalas karena menganggap semua sudah ditakdirkan",
+      "Menjadikan manusia suka mengeluh setiap hari",
+      "Membuat orang berani melanggar aturan agama"
+    ],
+    "b": 0,
+    "bahas": "Iman kepada Qada dan Qadar melahirkan ketenangan batin, optimisme, dan ketabahan jiwa."
+  },
+  {
+    "q": "Dalam Q.S. Al-A'la ayat 9 berbunyi 'Fazakkir in nafa'atiz-zikra' yang memerintahkan umat Islam untuk senantiasa memberikan ....",
+    "p": [
+      "Peringatan dan nasihat kebaikan apabila peringatan itu bermanfaat",
+      "Hukuman fisik kepada orang yang lupa",
+      "Harta benda kepada orang yang kaya",
+      "Pujian berlebihan kepada pemimpin"
+    ],
+    "b": 0,
+    "bahas": "Saling menasihati dalam kebenaran dan kesabaran adalah kewajiban sesama muslim."
+  },
+  {
+    "q": "Kelompok orang yang akan mudah menerima nasihat kebaikan menurut Q.S. Al-A'la ayat 10 ('Sayazzakkaru may yakhsa') adalah orang yang ....",
+    "p": [
+      "Takut dan bertakwa kepada Allah Swt.",
+      "Sombong dan keras kepala",
+      "Hanya mencintai kemewahan dunia",
+      "Selalu membantah perintah orang tua"
+    ],
+    "b": 0,
+    "bahas": "Hati yang takut (khauf) kepada Allah Swt. akan lembut dan mudah menerima nasihat Al-Qur'an."
+  },
+  {
+    "q": "Contoh tindakan menjaga kesehatan tubuh sebagai bentuk ikhtiar mensyukuri nikmat Allah Swt. adalah ....",
+    "p": [
+      "Mengonsumsi makanan halal dan bergizi, menjaga kebersihan diri, berolahraga, dan istirahat teratur",
+      "Makan makanan sembarangan hingga sakit perut",
+      "Tidak pernah mencuci tangan sebelum makan",
+      "Begadang bermain ponsel hingga larut malam"
+    ],
+    "b": 0,
+    "bahas": "Menjaga kesehatan adalah bagian dari ikhtiar dan amanah menjaga tubuh ciptaan Allah."
+  },
+  {
+    "q": "Apabila kita melihat teman yang bersedih karena tidak lolos seleksi lomba pidato tingkat kecamatan, ucapan motivasi yang mencerminkan iman kepada takdir Allah adalah ....",
+    "p": [
+      "Jangan bersedih, kamu sudah berusaha hebat. Pasti ada hikmah terbaik dari Allah, ayo kita berlatih lagi untuk kesempatan berikutnya!",
+      "Kamu memang tidak berbakat, lebih baik berhenti saja ikut lomba.",
+      "Sudahlah, menangis saja terus di kelas.",
+      "Itu salahmu sendiri karena tidak sepintar diriku."
+    ],
+    "b": 0,
+    "bahas": "Memberikan dukungan positif dan mengingatkan hikmah di balik setiap ketetapan Allah menguatkan semangat teman."
+  },
+  {
+    "q": "Kesimpulan yang tepat mengenai hubungan antara takdir Allah Swt. dengan usaha manusia adalah ....",
+    "p": [
+      "Manusia wajib berusaha dan berdoa secara maksimal dengan cara yang halal, sedangkan hasil akhirnya ditentukan oleh Allah Swt. Yang Maha Bijaksana",
+      "Manusia tidak perlu berusaha karena takdir sudah tertulis",
+      "Usaha manusia pasti berhasil tanpa perlu berdoa kepada Allah",
+      "Takdir Allah hanya berlaku bagi orang dewasa saja"
+    ],
+    "b": 0,
+    "bahas": "Ikhtiar dan doa adalah tugas manusia, sementara keputusan akhir adalah hak prerogatif Allah Swt."
+  }
+]);
+
+window.tambahPaketUjian("6", "pancasila", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>KEBINEKAAN INDONESIA</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Toleransi Budaya, Agama &amp; Wilayah Provinsi</text></svg>",
+    "q": "Perhatikan kartu tema pembelajaran pada gambar di atas! Sikap menghormati dan menghargai perbedaan keyakinan agama, suku bangsa, dan adat istiadat di lingkungan masyarakat merupakan cerminan semboyan ....",
+    "p": [
+      "Bhinneka Tunggal Ika",
+      "Tut Wuri Handayani",
+      "Ing Ngarsa Sung Tuladha",
+      "Rawe-Rawe Rantas"
+    ],
+    "b": 0,
+    "bahas": "Bhinneka Tunggal Ika (berbeda-beda tetapi tetap satu jua) menjadi prinsip persatuan bangsa Indonesia."
+  },
+  {
+    "q": "Landasan konstitusional (hukum dasar) yang menjamin kemerdekaan setiap warga negara Indonesia untuk memeluk agama dan beribadat menurut agama dan kepercayaannya masing-masing terdapat dalam UUD NRI Tahun 1945 Pasal ....",
+    "p": ["Pasal 29 Ayat (2)", "Pasal 27 Ayat (1)", "Pasal 31 Ayat (1)", "Pasal 33 Ayat (3)"],
+    "b": 0,
+    "bahas": "Pasal 29 Ayat (2) UUD NRI Tahun 1945 menjamin kebebasan penduduk memeluk agama dan beribadah sesuai keyakinannya."
+  },
+  {
+    "q": "Contoh perilaku toleransi beragama yang benar dalam kehidupan bertetangga di Indonesia adalah ....",
+    "p": [
+      "Menjaga ketenangan lingkungan saat tetangga melaksanakan ibadah dan bekerja sama dalam kegiatan sosial kemasyarakatan",
+      "Mengikuti tata cara ritual ibadah agama lain",
+      "Melarang tetangga mendirikan tempat ibadah yang sah",
+      "Memaksakan pendapat keagamaan kepada orang lain"
+    ],
+    "b": 0,
+    "bahas": "Toleransi beragama diwujudkan dengan saling menghormati kebebasan ibadah tanpa mencampuradukkan akidah."
+  },
+  {
+    "q": "Provinsi tempat kita tinggal saat ini yang beribu kota di Kota Surabaya dan mencakup wilayah Pulau Madura serta kawasan Tapal Kuda hingga Mataraman adalah Provinsi ....",
+    "p": ["Jawa Timur", "Jawa Tengah", "Jawa Barat", "Bali"],
+    "b": 0,
+    "bahas": "Kabupaten Pamekasan, Sampang, Bangkalan, dan Sumenep di Pulau Madura termasuk wilayah Provinsi Jawa Timur dengan ibu kota Surabaya."
+  },
+  {
+    "q": "Kepala daerah yang memimpin penyelenggaraan pemerintahan di tingkat provinsi dan dipilih langsung oleh rakyat melalui pemilihan kepala daerah (Pilkada) adalah ....",
+    "p": ["Gubernur", "Bupati", "Wali Kota", "Camat"],
+    "b": 0,
+    "bahas": "Provinsi dipimpin oleh Gubernur yang dibantu Wakil Gubernur."
+  },
+  {
+    "q": "Lembaga perwakilan rakyat di tingkat provinsi yang bertugas menyusun peraturan daerah (Perda) provinsi bersama Gubernur dan menampung aspirasi masyarakat daerah adalah ....",
+    "p": [
+      "DPRD Provinsi (Dewan Perwakilan Rakyat Daerah Provinsi)",
+      "DPR RI Pusat",
+      "Mahkamah Agung",
+      "Badan Pemeriksa Keuangan"
+    ],
+    "b": 0,
+    "bahas": "DPRD Provinsi merupakan unsur penyelenggara pemerintahan daerah di tingkat provinsi bersama Gubernur."
+  },
+  {
+    "q": "Pemberian hak, wewenang, dan kewajiban kepada daerah otonom (provinsi dan kabupaten/kota) untuk mengatur dan mengurus sendiri urusan pemerintahan dan kepentingan masyarakat setempat dalam sistem NKRI disebut ....",
+    "p": ["Otonomi daerah", "Sentralisasi mutlak", "Kolonialisme", "Monopoli perdagangan"],
+    "b": 0,
+    "bahas": "Otonomi daerah bertujuan mempercepat pemerataan pembangunan dan pelayanan publik sesuai potensi masing-masing daerah."
+  },
+  {
+    "q": "Meskipun setiap provinsi memiliki otonomi daerah, urusan pemerintahan pusat yang tetap dipegang sepenuhnya oleh pemerintah pusat di Jakarta meliputi ....",
+    "p": [
+      "Politik luar negeri, pertahanan, keamanan, yustisi (hukum), moneter/fiskal nasional, dan agama",
+      "Pengelolaan pasar tradisional desa dan kebersihan taman kota",
+      "Penentuan jadwal piket kelas sekolah dasar",
+      "Pembangunan jalan setapak di dusun"
+    ],
+    "b": 0,
+    "bahas": "Enam urusan pemerintahan absolut (pertahanan, keamanan, luar negeri, yustisi, moneter, dan agama) menjadi kewenangan pemerintah pusat."
+  },
+  {
+    "q": "Pakaian adat tradisional khas Provinsi Jawa Timur yang sering dikenakan pria dalam acara resmi kenegaraan di Surabaya dengan ciri khas baju beskap gelap, kain jarik, dan ikat kepala (udeng) adalah ....",
+    "p": ["Baju Cak dan Ning / Beskap Jawa Timuran", "Pakaian Adat Ulos", "Baju Bodo", "Koteka"],
+    "b": 0,
+    "bahas": "Busana Cak dan Ning merupakan pakaian adat khas Surabaya, Jawa Timur, sedangkan di Madura dikenal Pesa'an dan Kebaya Rancongan."
+  },
+  {
+    "q": "Lagu daerah yang berasal dari Pulau Madura, Provinsi Jawa Timur, yang menceritakan kehidupan perjuangan para nelayan Madura yang gigih melaut mencari ikan di malam hari adalah ....",
+    "p": ["Tanduk Majeng", "Ampar-Ampar Pisang", "Bungong Jeumpa", "Soleram"],
+    "b": 0,
+    "bahas": "Tanduk Majeng adalah lagu daerah ikonik khas Madura yang menggambarkan semangat bahari nelayan Madura."
+  },
+  {
+    "q": "Tradisi gotong royong masyarakat di wilayah pedesaan Madura saat membantu tetangga membangun rumah, hajatan, atau memanen hasil pertanian secara sukarela tanpa dibayar upah disebut ....",
+    "p": ["Song-osong Lombhung", "Subak", "Ngaben", "Mapalus"],
+    "b": 0,
+    "bahas": "Song-osong Lombhung adalah tradisi gotong royong khas masyarakat Madura yang mencerminkan solidaritas tinggi."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#15803d'>GOTONG ROYONG NKRI</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Memperkokoh Persatuan Antarprovinsi</text></svg>",
+    "q": "Perhatikan kartu nilai Pancasila pada gambar di atas! Manfaat utama semangat gotong royong antarwarga di berbagai provinsi Indonesia adalah ....",
+    "p": [
+      "Pekerjaan berat menjadi ringan, mempererat persaudaraan antardaerah, dan memperkokoh keutuhan NKRI",
+      "Menimbulkan ketergantungan dan kemalasan individu",
+      "Memperlebar jurang perbedaan antarsuku",
+      "Menghambat kemajuan teknologi modern"
+    ],
+    "b": 0,
+    "bahas": "Gotong royong adalah inti sari nilai Pancasila yang menyatukan seluruh komponen bangsa."
+  },
+  {
+    "q": "Apabila terjadi bencana alam seperti banjir bandang atau erupsi gunung berapi di suatu provinsi di Indonesia, sikap bela negara dan solidaritas kebangsaan yang dapat dilakukan oleh siswa di provinsi lain adalah ....",
+    "p": [
+      "Menggalang bantuan kemanusiaan secara sukarela melalui sekolah dan mendoakan keselamatan para korban",
+      "Bersikap tidak peduli karena berbeda provinsi",
+      "Menyebarkan berita hoaks mengenai jumlah korban bencana",
+      "Mengejek daerah yang terkena musibah"
+    ],
+    "b": 0,
+    "bahas": "Solidaritas kemanusiaan lintas provinsi menunjukkan rasa senasib sepenanggungan sebagai satu bangsa Indonesia."
+  },
+  {
+    "q": "Bentuk negara Indonesia sebagaimana ditegaskan dalam Pasal 1 Ayat (1) UUD NRI Tahun 1945 adalah Negara Kesatuan yang berbentuk ....",
+    "p": ["Republik", "Kerajaan (Monarki)", "Serikat (Federal)", "Kesultanan"],
+    "b": 0,
+    "bahas": "Pasal 1 Ayat (1) UUD 1945 berbunyi: Negara Indonesia ialah Negara Kesatuan, yang berbentuk Republik."
+  },
+  {
+    "q": "Sikap yang harus dihindari oleh setiap warga negara karena dapat mengancam keutuhan Negara Kesatuan Republik Indonesia (NKRI) adalah ....",
+    "p": [
+      "Separatisme (ingin memisahkan diri dari NKRI), intoleransi, dan menyebarkan ujaran kebencian SARA",
+      "Mengikuti kegiatan pertukaran pelajar antardaerah",
+      "Mempelajari tarian tradisional dari provinsi lain",
+      "Membeli produk kerajinan UMKM Nusantara"
+    ],
+    "b": 0,
+    "bahas": "Separatisme dan konflik SARA (Suku, Agama, Ras, Antargolongan) membahayakan persatuan nasional."
+  },
+  {
+    "q": "Dalam musyawarah pemilihan ketua panitia acara perpisahan kelas 6, terdapat dua calon yang memperoleh suara dukungan berimbang. Cara penyelesaian terbaik sesuai nilai sila keempat Pancasila adalah ....",
+    "p": [
+      "Melakukan musyawarah lanjutan dengan kepala dingin atau pemungutan suara ulang secara jujur dan demokratis, lalu menerima hasilnya dengan lapang dada",
+      "Membubarkan panitia perpisahan kelas",
+      "Memaksakan calon dari kelompok sendiri secara sepihak",
+      "Bertengkar di luar ruang kelas"
+    ],
+    "b": 0,
+    "bahas": "Demokrasi Pancasila mengutamakan musyawarah mufakat, atau voting jujur jika mufakat belum tercapai, disertai sikap lapang dada."
+  },
+  {
+    "q": "Perilaku menjaga fasilitas umum di wilayah provinsi (seperti jembatan penghubung antarpulau, taman kota, dan stasiun) merupakan wujud pengamalan Pancasila sila ke-....",
+    "p": ["Kelima", "Kesatu", "Kedua", "Keempat"],
+    "b": 0,
+    "bahas": "Menjaga fasilitas umum demi kepentingan bersama mencerminkan keadilan sosial (sila kelima)."
+  },
+  {
+    "q": "Contoh tindakan nyata siswa kelas 6 SD dalam menjaga persatuan dan kesatuan di dunia digital (media sosial dan grup percakapan kelas) adalah ....",
+    "p": [
+      "Menggunakan bahasa yang santun, tidak melakukan perundungan siber (cyberbullying), dan tidak menyebarkan berita bohong",
+      "Mengejek foto profil teman di grup kelas",
+      "Mengeluarkan teman dari grup percakapan tanpa alasan jelas",
+      "Membagikan pesan berantai yang belum jelas kebenarannya"
+    ],
+    "b": 0,
+    "bahas": "Etika digital yang santun mencegah perpecahan dan menjaga kerukunan di era teknologi."
+  },
+  {
+    "q": "Pembangunan Jembatan Nasional Suramadu yang menghubungkan Surabaya (Pulau Jawa) dan Bangkalan (Pulau Madura) memberikan manfaat besar bagi masyarakat Jawa Timur yaitu ....",
+    "p": [
+      "Memperlancar arus transportasi, perdagangan hasil bumi, dan mempererat hubungan sosial budaya antardaerah",
+      "Menghambat perjalanan nelayan di Selat Madura",
+      "Membuat harga barang menjadi sangat mahal",
+      "Memisahkan masyarakat Madura dari Provinsi Jawa Timur"
+    ],
+    "b": 0,
+    "bahas": "Infrastruktur penghubung mempercepat pemerataan ekonomi dan mobilitas warga antarwilayah."
+  },
+  {
+    "q": "Salah satu cara melestarikan budaya daerah Provinsi Jawa Timur di kalangan pelajar adalah dengan mengikuti lomba seni daerah seperti ....",
+    "p": [
+      "Lomba macapat/mamaca, tari tradisional daerah, karawitan, dan membatik",
+      "Lomba mencoret dinding fasilitas umum",
+      "Lomba bermain gim daring sepanjang malam",
+      "Lomba mengejek logat bahasa daerah"
+    ],
+    "b": 0,
+    "bahas": "Kompetisi seni budaya daerah menumbuhkan kecintaan generasi muda terhadap warisan leluhur."
+  },
+  {
+    "q": "Apabila kamu memiliki sahabat pena atau teman baru dari provinsi lain (misalnya dari Papua atau Aceh), sikap yang menunjukkan rasa bangga sebagai anak Indonesia adalah ....",
+    "p": [
+      "Saling bertukar cerita tentang keindahan budaya dan kuliner daerah masing-masing dengan penuh rasa hormat",
+      "Meremehkan kondisi pembangunan di daerah teman",
+      "Hanya mau menceritakan keunggulan daerah sendiri tanpa mau mendengar cerita teman",
+      "Memutuskan pertemanan karena jaraknya jauh"
+    ],
+    "b": 0,
+    "bahas": "Saling mengenal kekayaan budaya antarprovinsi mempererat rasa persaudaraan sebangsa."
+  },
+  {
+    "q": "Nilai luhur Pancasila yang mengajarkan bahwa setiap manusia memiliki derajat, hak, dan kewajiban yang sama tanpa membeda-bedakan asal provinsi maupun warna kulit terdapat pada sila ke-....",
+    "p": ["Kedua", "Kesatu", "Ketiga", "Keempat"],
+    "b": 0,
+    "bahas": "Sila kedua, Kemanusiaan yang adil dan beradab, menjunjung tinggi persamaan derajat dan martabat manusia."
+  },
+  {
+    "q": "Peran serta masyarakat dalam menjaga kebersihan dan kelestarian alam di wilayah provinsinya masing-masing berdampak langsung pada ....",
+    "p": [
+      "Terciptanya lingkungan yang sehat, terhindar dari bencana banjir dan tanah longsor, serta meningkatnya daya tarik wisata daerah",
+      "Menurunnya kualitas kesehatan warga",
+      "Hilangnya seluruh hutan lindung di provinsi tersebut",
+      "Meningkatnya pencemaran air sungai"
+    ],
+    "b": 0,
+    "bahas": "Kelestarian lingkungan daerah menunjang kesehatan, keselamatan, dan kesejahteraan masyarakat setempat."
+  },
+  {
+    "q": "Mengapa setiap warga negara Indonesia wajib menghormati bendera Merah Putih, bahasa Indonesia, lambang negara Garuda Pancasila, dan lagu kebangsaan Indonesia Raya?",
+    "p": [
+      "Karena keempatnya merupakan identitas nasional dan simbol pemersatu kedaulatan Negara Kesatuan Republik Indonesia",
+      "Karena hanya berlaku pada saat upacara hari Senin saja",
+      "Karena diperintahkan oleh negara asing",
+      "Agar mendapat hadiah dari pemerintah"
+    ],
+    "b": 0,
+    "bahas": "Bendera, bahasa, lambang negara, dan lagu kebangsaan adalah jati diri dan pemersatu bangsa Indonesia."
+  },
+  {
+    "q": "Kesimpulan yang paling tepat mengenai hubungan antara kemajuan daerah provinsi dengan keutuhan NKRI adalah ....",
+    "p": [
+      "Kemajuan setiap provinsi yang dilandasi semangat persatuan dan gotong royong akan mewujudkan Indonesia yang maju, adil, dan makmur",
+      "Setiap provinsi harus bersaing menjatuhkan provinsi lainnya",
+      "Kemajuan negara hanya ditentukan oleh satu provinsi di ibu kota saja",
+      "Keberagaman provinsi menjadi penghalang persatuan nasional"
+    ],
+    "b": 0,
+    "bahas": "Seluruh provinsi merupakan bagian tak terpisahkan yang saling menopang kejayaan Negara Kesatuan Republik Indonesia."
+  }
+]);
+
+window.tambahPaketUjian("6", "bing", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>SIMPLE FUTURE TENSE</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Subject + will + Verb 1 (Akan)</text></svg>",
+    "q": "Look at the grammar card above! Made and his family ... go to Mount Bromo next holiday.",
+    "p": ["will", "did", "was", "were"],
+    "b": 0,
+    "bahas": "Untuk menyatakan rencana atau kegiatan di masa depan (next holiday), digunakan modal 'will' diikuti Verb 1."
+  },
+  {
+    "q": "Aisyah will ... her grandmother in Sumenep tomorrow morning.",
+    "p": ["visit", "visits", "visited", "visiting"],
+    "b": 0,
+    "bahas": "Setelah kata 'will', kata kerja harus selalu dalam bentuk dasar (Verb 1) tanpa akhiran -s/-ed/-ing, yaitu 'visit'."
+  },
+  {
+    "q": "We ... study English together in the library tonight.",
+    "p": ["will", "are", "were", "has"],
+    "b": 0,
+    "bahas": "Keterangan waktu 'tonight' (malam ini / nanti malam) menggunakan 'will study'."
+  },
+  {
+    "q": "What is the negative form of 'Joshua will play football tomorrow'?",
+    "p": [
+      "Joshua will not play football tomorrow.",
+      "Joshua does not play football tomorrow.",
+      "Joshua did not play football tomorrow.",
+      "Joshua is not play football tomorrow."
+    ],
+    "b": 0,
+    "bahas": "Bentuk negatif Simple Future Tense menambahkan 'not' setelah 'will' (will not / won't)."
+  },
+  {
+    "q": "Which time expression is used for Simple Future Tense?",
+    "p": ["Tomorrow and next week", "Yesterday and last night", "Two days ago", "Last year"],
+    "b": 0,
+    "bahas": "'Tomorrow' (besok) dan 'next week' (minggu depan) menunjukkan waktu yang akan datang (future)."
+  },
+  {
+    "q": "What does 'next month' mean in Indonesian?",
+    "p": ["Bulan depan", "Bulan lalu", "Minggu depan", "Tahun lalu"],
+    "b": 0,
+    "bahas": "'Next month' artinya bulan depan."
+  },
+  {
+    "q": "Will Cici swim at Lombang Beach next Sunday? Yes, she ....",
+    "p": ["will", "will not", "does", "did"],
+    "b": 0,
+    "bahas": "Pertanyaan yang diawali 'Will she...?' dijawab singkat dengan 'Yes, she will.'"
+  },
+  {
+    "q": "Will they go to the zoo tomorrow? No, they ....",
+    "p": ["will not", "will", "do not", "did not"],
+    "b": 0,
+    "bahas": "Jawaban negatif singkat untuk pertanyaan 'Will they...?' adalah 'No, they will not' (atau 'won't')."
+  },
+  {
+    "q": "What will you do at the beach next holiday? I will ... a sandcastle.",
+    "p": ["make", "makes", "made", "making"],
+    "b": 0,
+    "bahas": "Membuat istana pasir = 'make a sandcastle' (Verb 1 setelah 'will')."
+  },
+  {
+    "q": "My father will ... a car to Surabaya tomorrow.",
+    "p": ["drive", "drives", "drove", "driving"],
+    "b": 0,
+    "bahas": "Mengemudikan mobil = 'drive a car' (Verb 1)."
+  },
+  {
+    "q": "Mrs. Ani is a teacher. Tomorrow she will ... Mathematics to the sixth-grade students.",
+    "p": ["teach", "teaches", "taught", "teaching"],
+    "b": 0,
+    "bahas": "Mengajar = 'teach' (Verb 1 setelah 'will')."
+  },
+  {
+    "q": "Where will Udin go if he wants to see many wild animals like lions, elephants, and giraffes?",
+    "p": ["To the zoo", "To the post office", "To the bank", "To the bakery"],
+    "b": 0,
+    "bahas": "Kebun binatang dalam bahasa Inggris adalah 'zoo'."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>HOLIDAY ACTIVITIES</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Camping • Fishing • Hiking • Swimming</text></svg>",
+    "q": "Look at the holiday activities card above! What does 'camping' mean in Indonesian?",
+    "p": ["Berkemah", "Memancing", "Bersepeda", "Memasak"],
+    "b": 0,
+    "bahas": "'Camping' artinya berkemah, 'fishing' = memancing, 'hiking' = mendaki gunung."
+  },
+  {
+    "q": "Budi and his scout friends will go ... in the mountain next Saturday. They will bring a tent and sleeping bags.",
+    "p": ["camping", "swimming", "shopping", "skating"],
+    "b": 0,
+    "bahas": "Membawa tenda (tent) dan kantong tidur (sleeping bags) menunjukkan kegiatan berkemah (camping)."
+  },
+  {
+    "q": "Read the short text below!\n'Next week, Rani and her family will have a holiday in Yogyakarta. On the first day, they will visit Borobudur Temple and take many pictures. On the second day, they will buy batik and bakpia at Malioboro.'\n\nWhere will Rani and her family go next week?",
+    "p": ["Yogyakarta", "Bali", "Bandung", "Medan"],
+    "b": 0,
+    "bahas": "Pada kalimat pertama disebutkan 'Rani and her family will have a holiday in Yogyakarta.'"
+  },
+  {
+    "q": "What will Rani and her family do on the second day according to the text above?",
+    "p": [
+      "They will buy batik and bakpia at Malioboro.",
+      "They will swim at the beach.",
+      "They will climb Mount Merapi.",
+      "They will visit a zoo."
+    ],
+    "b": 0,
+    "bahas": "Pada kalimat terakhir tertulis 'On the second day, they will buy batik and bakpia at Malioboro.'"
+  },
+  {
+    "q": "What is 'liburan' in English?",
+    "p": ["Holiday / Vacation", "Homework", "Library", "Uniform"],
+    "b": 0,
+    "bahas": "Liburan dalam bahasa Inggris adalah 'holiday' atau 'vacation'."
+  },
+  {
+    "q": "What is 'mengambil foto' in English?",
+    "p": ["Take pictures / Take photos", "Read books", "Write letters", "Clean the floor"],
+    "b": 0,
+    "bahas": "Mengambil foto = 'take pictures' atau 'take photos'."
+  },
+  {
+    "q": "Siti feels hungry. She ... eat a bowl of Soto Madura for lunch.",
+    "p": ["will", "was", "did", "is"],
+    "b": 0,
+    "bahas": "'She will eat a bowl of Soto Madura' menyatakan tindakan yang akan segera dilakukan."
+  },
+  {
+    "q": "Which sentence is grammatically CORRECT?",
+    "p": [
+      "We will visit the museum tomorrow.",
+      "We will visited the museum tomorrow.",
+      "We will visiting the museum tomorrow.",
+      "We will visits the museum tomorrow."
+    ],
+    "b": 0,
+    "bahas": "Struktur Simple Future Tense yang benar adalah Subject + will + Verb 1 ('will visit')."
+  },
+  {
+    "q": "What is the interrogative (kalimat tanya) form of 'They will go to Bali next year'?",
+    "p": [
+      "Will they go to Bali next year?",
+      "Do they will go to Bali next year?",
+      "Are they will go to Bali next year?",
+      "Did they go to Bali next year?"
+    ],
+    "b": 0,
+    "bahas": "Kalimat tanya Simple Future Tense meletakkan 'Will' di awal kalimat sebelum subjek."
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'will - tomorrow - I - book - a - read'",
+    "p": [
+      "I will read a book tomorrow.",
+      "Tomorrow read a book I will.",
+      "Will I read tomorrow a book.",
+      "A book will read I tomorrow."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat yang tepat adalah 'I will read a book tomorrow.'"
+  },
+  {
+    "q": "Arrange these words into a good sentence: 'go - next - We - beach - will - to - the - Sunday'",
+    "p": [
+      "We will go to the beach next Sunday.",
+      "Next Sunday to the beach will go we.",
+      "We go will to the beach next Sunday.",
+      "To the beach we will next Sunday go."
+    ],
+    "b": 0,
+    "bahas": "Susunan kalimat yang benar adalah 'We will go to the beach next Sunday.'"
+  },
+  {
+    "q": "What will you bring when it is raining outside?",
+    "p": ["An umbrella or a raincoat", "Sunglasses", "A swimsuit", "A kite"],
+    "b": 0,
+    "bahas": "Saat hujan kita membawa payung (umbrella) atau jas hujan (raincoat)."
+  },
+  {
+    "q": "'Kami akan pergi ke Surabaya minggu depan.' The English translation is ....",
+    "p": [
+      "We will go to Surabaya next week.",
+      "We went to Surabaya last week.",
+      "We are going to Surabaya yesterday.",
+      "We will not go to Surabaya next week."
+    ],
+    "b": 0,
+    "bahas": "Kami akan pergi ke Surabaya minggu depan = We will go to Surabaya next week."
+  }
+]);
+
+window.tambahPaketUjian("6", "madura", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>CARAKAN MADHURÂ</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Aksara Rajâ &amp; Aksara Swara</text></svg>",
+    "q": "Abâs informasi aksara daerah è ghâmbhâr attas! Aksara Rajâ dâlem Carakan Madhurâ aghuna ka'angghuy nolès ....",
+    "p": [
+      "Nyama orèng sè èhormadhi, pangkat/gellar, nyama kottha, bân nyama naghârâ",
+      "Sadhâjâ oca' lako (kata kerja)",
+      "Bilângan angka 1 sampe' 10",
+      "Tandhâ baca titik bân koma"
+    ],
+    "b": 0,
+    "bahas": "Aksara Rajâ fungsina padâ sareng huruf kapital ka'angghuy ngormadhi nyama orèng, gellar, sareng nyama kennengngan."
+  },
+  {
+    "q": "Sandhângan dâlem Carakan Madhurâ sè ètolès è adâ'na aksara ka'angghuy ngobâ monyè vokal 'a' dhâddhi 'è' èsebbhut ....",
+    "p": ["Talèng", "Soko", "Cèthak", "Layar"],
+    "b": 0,
+    "bahas": "Talèng ngobâ monyè 'a' dhâddhi 'è' (akadhi oca' 'satè')."
+  },
+  {
+    "q": "Parèbhâsan Madhurâ 'Sapa sè atamen bhâkal ngundhuh' ngandung artè ....",
+    "p": [
+      "Sabbân orèng bhâkal narèma bâlessân miturut tèngka polana dhibi' (mon ngalakonè bhâghus olle bhâghus)",
+      "Petani kodhu namen padi è mosèm ojhân",
+      "Buwâ è kebbhun kodhu èpettik sabellunna massak",
+      "Orèng sè senneng namen kembhâng è tanèyan"
+    ],
+    "b": 0,
+    "bahas": "Parèbhâsan panèka ngèmodhi sopajâ kita salanjhângnga ngalakonè kabhâghusân."
+  },
+  {
+    "q": "Èbhârât Madhurâ 'Akadhi aèng sareng mènynya'' artèna ....",
+    "p": [
+      "Duwâ' orèng otabâ parkara sè ta' bisa akor / ta' bisa èpasèttong",
+      "Duwâ' kanca sè cè' raketta",
+      "Aèng sè cè' bhersèna è somor",
+      "Mènynya' ghuring sè panas è bâjhân"
+    ],
+    "b": 0,
+    "bahas": "Aèng sareng mènynya' ta' bisa nyampor, ngaghâmbhâraghi duwâ' pihak sè ta' bisa akor."
+  },
+  {
+    "q": "Saloka Madhurâ 'Jhâ' ngokor bâjhâna orèng laèn ngangghuy bhâjâna dhibi'' ngajhâri sikap ....",
+    "p": [
+      "Tenggang rasa, ngormadhi kabâdâ'ânna orèng laèn, bân ta' ghâmpang nyala'aghi",
+      "Sombong polana andi' kalambhi bânnya'",
+      "Suka abhândhingaghi arta sareng tatangghâ",
+      "Malas alako è roma"
+    ],
+    "b": 0,
+    "bahas": "Saloka panèka ngajhâri toleransi sareng sikap adil dâ' sasama."
+  },
+  {
+    "q": "Bhâsa èngghi-bhunten (alos) dâri oca' 'nyama' (nama) ka'angghuy Bapak/Ibu Guru otabâ orèng sè èhormadhi èngghi panèka ....",
+    "p": ["Asma", "Nyama", "Sebbhutân", "Gellar"],
+    "b": 0,
+    "bahas": "Nyama bhâsa èngghi-bhuntenna 'asma' (akadhi: Sapa asmana Bapak Kepala Sakola?)."
+  },
+  {
+    "q": "Bhâsa èngghi-bhuntenna oca' 'roma' (rumah) ka'angghuy orèng towa otabâ ghuru èngghi panèka ....",
+    "p": ["Dalem / Kompolan", "Roma", "Ghubhuk", "Tanèyan"],
+    "b": 0,
+    "bahas": "Roma bhâsa èngghi-bhuntenna 'dalem' (akadhi: Dalemma Ibu Guru bâdâ è Pamekasan)."
+  },
+  {
+    "q": "Okara è bâbâ panèka sè aghuna'aghi ondhâgghâ bhâsa èngghi-bhunten sè paling teppa' ka'angghuy mator dâ' Kepala Sakola èngghi panèka ....",
+    "p": [
+      "Nyoon sapora Bapak, kaulâ badhi nyampe'aghi sorat undangan rapat.",
+      "Sèngko' terro aberri'â sorat ka bâ'na, Pak.",
+      "Bâ'na kodhu dhuli rabhu ka acara perpisahan.",
+      "Kocèngnga kaulâ ampon songkan tello arè."
+    ],
+    "b": 0,
+    "bahas": "Ngangghuy 'kaulâ' (saya alos) sareng 'nyoon sapora' nodhuwâghi tatakrama èngghi-bhunten sè alos."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>TEMBHÂNG MACAPAT</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Guru Gatra • Guru Wilangan • Guru Lagu</text></svg>",
+    "q": "Abâs patokan tembhâng Macapat Madhurâ è ghâmbhâr attas! Bânnya'na bâris (larik) dâlem sèttong bait tembhâng Macapat èsebbhut ....",
+    "p": ["Guru gatra", "Guru wilangan", "Guru lagu", "Sampiran"],
+    "b": 0,
+    "bahas": "Guru gatra = bânnya'na bâris sabbhân bait; guru wilangan = bânnya'na keccap sabbhân bâris; guru lagu = monyè vokal akhir bâris."
+  },
+  {
+    "q": "Tembhâng Macapat Madhurâ sè watakna lucu, gembira, bân segghut èghuna'aghi ka'angghuy cangkriman (tebak-tebakan) otabâ nasèhat ringan èngghi panèka ....",
+    "p": ["Pucung", "Artatè (Dhandhanggula)", "Sènom", "Maskumambang"],
+    "b": 0,
+    "bahas": "Tembhâng Pucung andi' watak santai, jenaka, bân akrab sareng na'-kana'."
+  },
+  {
+    "q": "Bagiyân pidato bhâsa Madhurâ sè èssèna salam pamokka', pakormadhân dâ' tamoy sè rabhu, sareng pojhi sokkor dâ' Ghustè Allah SWT bâdâ è bagiyân ....",
+    "p": ["Pamokka' (pembukaan)", "Èssè pidato", "Panotop", "Judul"],
+    "b": 0,
+    "bahas": "Pamokka' pidato ngèssè'è salam, sapaan pakormadhân, sareng pojhi sokkor."
+  },
+  {
+    "q": "Okara panotop pidato bhâsa Madhurâ sè sopan ka'angghuy wakil morèd kellas 6 è acara perpisahan sakola'an èngghi panèka ....",
+    "p": [
+      "Sakadhâr panèka sè bisa kaulâ atoraghi, manabi bâdâ kakorangan bân kasala'an kaulâ nyoon sapora sè sobung bâtessèpon. Mator sakalangkong.",
+      "Cokop sakèya pidato kaulâ, dhuli molè sadhâjâ!",
+      "Mon bâdâ sè sala jhâ' nyala'aghi kaulâ.",
+      "Pidatona la marè, ta' usa atanya polè."
+    ],
+    "b": 0,
+    "bahas": "Panotop pidato kodhu sopan, nyoon sapora manabi bâdâ kakorangan, bân mator sakalangkong."
+  },
+  {
+    "q": "Falsafah luhur masyarakat Madhurâ 'Bhuppa' Bhâbhu' Ghuru Rato' ngajhâri urutân pakormadhân dâ' ....",
+    "p": [
+      "Ayah, Ibu, Guru, bân Pamarenta/Pemimpin",
+      "Kanca, tatangghâ, pedagang, bân nelayan",
+      "Adhi', kaka', paman, bân bibi'",
+      "Arta, pangkat, roma, bân sawâ"
+    ],
+    "b": 0,
+    "bahas": "Bhuppa' (ayah), Bhâbhu' (ibu), Ghuru (guru), Rato (pemimpin formal/pamarenta)."
+  },
+  {
+    "q": "Tradisi ghutong royong masyarakat Madhurâ ka'angghuy abhânto tatangghâ sè mabâdâ hajat otabâ mabhângon roma kalabân ikhlas èsebbhut ....",
+    "p": ["Song-osong Lombhung", "Karapan Sapè", "Ojhung", "Rokat Tasè'"],
+    "b": 0,
+    "bahas": "Song-osong Lombhung panèka budaya ghutong royong sareng solidaritas sosial masyarakat Madhurâ."
+  },
+  {
+    "q": "Tradisi syukuran masyarakat nelayan pesisir Madhurâ kalabân adu'a abhâreng ka'angghuy nyokorè hasil tangkapan jhuko' bân nyoon kasalamadhân è tasè' èsebbhut ....",
+    "p": ["Rokat Tasè' (Petik Laut)", "Karapan Sapè", "Kerapan Kerbhu", "Lompat Batu"],
+    "b": 0,
+    "bahas": "Rokat Tasè' wujud sokkor masyarakat nelayan Madhurâ dâ' rezeki dâri Allah SWT."
+  },
+  {
+    "q": "Bâca teks è bâbâ panèka!\n'Morèd kellas ennem SD Negeri Seddur 1 bhâkal noro' ujian ahèr sakola'an. Sadhâjâ morèd sregep ajhâr abhâreng è perpustakaan, saling abhânto mahamè pelajaran, bân adu'a dâ' Ghustè Allah sopajâ lulus kalabân nilai sè bhâghus.'\n\nApa sè èkalakonè morèd kellas ennem ka'angghuy nyiapaghi ujian miturut teks attas?",
+    "p": [
+      "Sregep ajhâr abhâreng, saling abhânto mahamè pelajaran, bân adu'a",
+      "Amaèn bal-balan sabbhân arè è lapangan",
+      "Nontong televisi sampe' malem",
+      "Nyontek jawaban kanca è kellas"
+    ],
+    "b": 0,
+    "bahas": "Dâlem teks èsebbhutaghi morèd sregep ajhâr abhâreng, saling abhânto, bân adu'a."
+  },
+  {
+    "q": "Oca' 'pakakas' dâlem bhâsa Indonesia artèna ....",
+    "p": ["Peralatan / perkakas", "Pakaian adat", "Makanan khas", "Permainan anak"],
+    "b": 0,
+    "bahas": "Pakakas artèna alat-alat atau perkakas."
+  },
+  {
+    "q": "Oca' 'pangghâliyan' (bhâsa alos) dâlem bhâsa Indonesia artèna ....",
+    "p": ["Pikiran / hati / perasaan", "Tangan", "Kaki", "Rumah"],
+    "b": 0,
+    "bahas": "Pangghâliyan artèna pikiran atau perasaan hati."
+  },
+  {
+    "q": "Tabhâligghâ (antonim) dâri oca' 'andhâp asor' (rendah hati / sopan) èngghi panèka ....",
+    "p": ["Sombong / takabur", "Sabar", "Jujur", "Bângal"],
+    "b": 0,
+    "bahas": "Andhâp asor (rendah hati) tabhâligghâ sombong."
+  },
+  {
+    "q": "Padhâna artè (sinonim) dâri oca' 'ngastètè' èngghi panèka ....",
+    "p": ["Tè-ngatè (hati-hati / waspada)", "Terburu-buru", "Loppah", "Malas"],
+    "b": 0,
+    "bahas": "Ngastètè artèna hati-hati dan cermat."
+  },
+  {
+    "q": "Okara tanduk (kalimat aktif) è bâbâ panèka sè teppa' èngghi panèka ....",
+    "p": [
+      "Hasan nolès sorat undangan ka'angghuy wali morèd.",
+      "Sorat undangan ètolès bi' Hasan.",
+      "Buku carèta èbâca bi' Siti è perpustakaan.",
+      "Tanèyan sakola'an èsapo bi' regu piket."
+    ],
+    "b": 0,
+    "bahas": "Okara tanduk ngangghuy oca' lako aktif ('nolès'), dhinèng laènna ngangghuy ter-ater 'è-' (tanggap)."
+  },
+  {
+    "q": "Oca' rangkep 'sapa-sapa'an' dâlem bhâsa Madhurâ ngandung artè ....",
+    "p": [
+      "Salèng nyapa kalabân ramah bilâ atemmo",
+      "Ta' kennal nyamana orèng",
+      "Atokar è pèngghir jhâlân",
+      "Mènta tolong dâ' tatangghâ"
+    ],
+    "b": 0,
+    "bahas": "Sapa-sapa'an artèna saling menyapa dengan ramah."
+  },
+  {
+    "q": "Bilângan '100' dâlem bhâsa Madhurâ èsebbhut ....",
+    "p": ["Satos", "Sèket", "Sabidhâk", "Sèbu"],
+    "b": 0,
+    "bahas": "100 = satos, 1.000 = sèbu."
+  },
+  {
+    "q": "Lamon kita ampon lulus dâri SD, sikap sè kodhu èjâgâ dâ' Bapak sareng Ibu Guru sè ampon ngajhâri kita èngghi panèka ....",
+    "p": [
+      "Tettep ngormadhi, nyambhung silaturahmi, bân adu'a'aghi kasèhatanna",
+      "Loppah dâ' jhâsana ghuru",
+      "Ta' nyapa bilâ atemmo è jhâlân",
+      "Sombong polana ampon maso' SMP"
+    ],
+    "b": 0,
+    "bahas": "Ngormadhi ghuru salanjhângnga panèka ajaran luhur agama sareng bhudhâjâ Madhurâ."
+  },
+  {
+    "q": "Manfaat utama ngowasaè bhâsa Madhurâ kalabân ondhâgghâ bhâsa sè bhâghus èngghi panèka ....",
+    "p": [
+      "Ngalestarèyaghi wârisân bhudhâjâ leluhur bân abhângon tatakrama sopan santun dâlem masyarakat",
+      "Sopajâ ta' usa ajhâr bhâsa Indonesia",
+      "Ka'angghuy ngèjhek orèng dâri daerah laèn",
+      "Sopajâ èsebbhut orèng modern"
+    ],
+    "b": 0,
+    "bahas": "Bhâsa Madhurâ nyimpen nilai-nilai luhur tatakrama sareng identitas bhudhâjâ."
+  }
+]);
+
+window.tambahPaketUjian("6", "kesenian", "UTS Semester 2", [
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>UNSUR &amp; PRINSIP RUPA</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Ritme • Keseimbangan • Perspektif</text></svg>",
+    "q": "Perhatikan kartu konsep seni rupa pada gambar di atas! Pengulangan satu atau beberapa unsur rupa (seperti garis, bentuk, atau warna) secara teratur dan berkesinambungan sehingga menimbulkan kesan gerak yang hidup disebut prinsip ....",
+    "p": ["Ritme (irama)", "Tekstur", "Proporsi", "Gelap terang"],
+    "b": 0,
+    "bahas": "Ritme (irama) dalam seni rupa tercipta melalui pengulangan unsur garis, bidang, atau warna secara teratur."
+  },
+  {
+    "q": "Susunan unsur-unsur gambar yang bagian kiri dan kanannya tidak sama persis secara bentuk maupun ukuran, namun tetap terasa seimbang dan harmonis karena pengaturan warna serta penempatannya disebut keseimbangan ....",
+    "p": ["Asimetris", "Simetris", "Radial", "Sentral"],
+    "b": 0,
+    "bahas": "Keseimbangan asimetris menyajikan komposisi dinamis tanpa harus identik antara sisi kiri dan kanan."
+  },
+  {
+    "q": "Teknik menggambar benda atau pemandangan alam yang menciptakan kesan ruang tiga dimensi (kedalaman/jarak) pada bidang datar dengan menempatkan garis horizon dan titik hilang disebut teknik ....",
+    "p": ["Perspektif", "Pointilis", "Aquarel", "Arsir silang"],
+    "b": 0,
+    "bahas": "Gambar perspektif membuat objek dekat tampak besar dan objek yang semakin jauh menuju titik hilang tampak mengecil."
+  },
+  {
+    "q": "Garis mendatar khayal setinggi pandangan mata pengamat yang memisahkan bidang langit dan bidang daratan atau laut pada gambar perspektif disebut garis ....",
+    "p": ["Horizon (cakrawala)", "Diagonal", "Zig-zag", "Vertikal"],
+    "b": 0,
+    "bahas": "Garis horizon menjadi tempat letak titik hilang dalam gambar perspektif."
+  },
+  {
+    "q": "Teknik mewarnai menggunakan cat air dengan sapuan warna yang tipis dan transparan serta menggunakan banyak campuran air disebut teknik ....",
+    "p": ["Aquarel", "Plakat", "Dussel", "Spray"],
+    "b": 0,
+    "bahas": "Teknik aquarel menghasilkan sapuan warna transparan, sedangkan teknik plakat menggunakan sapuan warna tebal dan pekat."
+  },
+  {
+    "q": "Karya seni rupa tiga dimensi yang dibuat dengan cara mengurangi atau menambah bahan hingga membentuk wujud manusia, hewan, atau bentuk abstrak yang dapat dilihat dari segala arah disebut ....",
+    "p": ["Seni patung", "Seni grafis", "Seni ilustrasi", "Seni kaligrafi"],
+    "b": 0,
+    "bahas": "Patung merupakan karya seni rupa tiga dimensi yang memiliki volume (panjang, lebar, dan tinggi)."
+  },
+  {
+    "q": "Teknik pembuatan patung dari bahan keras (seperti kayu jati atau batu andesit) dengan cara membuang bagian yang tidak diperlukan menggunakan pahat dan palu disebut teknik ....",
+    "p": ["Pahat (ukir)", "Butsir", "Cor (tuang)", "Konstruksi"],
+    "b": 0,
+    "bahas": "Teknik pahat dilakukan dengan mengurangi bahan keras sedikit demi sedikit hingga membentuk wujud patung."
+  },
+  {
+    "q": "Teknik membuat patung dari bahan lunak (seperti tanah liat atau plastisin) dengan cara memijit, menambah, dan mengurangi bahan menggunakan jari tangan serta sudip disebut teknik ....",
+    "p": ["Butsir", "Pahat", "Las listrik", "Tenun"],
+    "b": 0,
+    "bahas": "Teknik butsir digunakan khusus untuk membentuk bahan bersifat plastis/lunak."
+  },
+  {
+    "q": "Teknik pembuatan karya seni tiga dimensi dengan cara menyusun, menyambung, atau merakit berbagai potongan bahan (seperti kardus, stik es krim, kawat, atau botol bekas) menggunakan lem atau tali disebut teknik ....",
+    "p": ["Konstruksi / merakit", "Cor logam", "Cetak saring", "Celup ikat"],
+    "b": 0,
+    "bahas": "Teknik konstruksi menggabungkan beberapa komponen bahan hingga membentuk struktur tiga dimensi yang kokoh."
+  },
+  {
+    "svg": "<svg width='175' height='70' xmlns='http://w3.org'><rect x='15' y='12' width='145' height='46' rx='8' fill='#fef08a' stroke='#ca8a04' stroke-width='2'/><text x='87' y='32' font-size='10' font-weight='bold' text-anchor='middle' fill='#854d0e'>KRIYA NUSANTARA</text><text x='87' y='47' font-size='8' text-anchor='middle' fill='#0f172a'>Batik • Tenun • Anyaman • Ukir</text></svg>",
+    "q": "Perhatikan kartu kriya Nusantara pada gambar di atas! Karya seni kerajinan tangan yang mengutamakan keterampilan tangan dan ketelitian untuk menghasilkan benda pakai maupun hias bernilai estetis tinggi disebut seni ....",
+    "p": ["Kriya", "Teater", "Tari", "Vokal"],
+    "b": 0,
+    "bahas": "Seni kriya (kerajinan) meliputi kriya batik, kriya kayu ukir, kriya anyaman, kriya keramik, dan kriya tenun."
+  },
+  {
+    "q": "Bahan perintang warna yang dipanaskan di atas wajan kecil dan ditorehkan menggunakan canting pada kain mori dalam proses pembuatan batik tulis adalah ....",
+    "p": ["Malam (lilin batik)", "Lem kanji", "Cat tembok", "Minyak kelapa"],
+    "b": 0,
+    "bahas": "Malam berfungsi menutup bagian motif kain agar tidak terkena warna saat proses pencelupan."
+  },
+  {
+    "q": "Teknik pembuatan motif pada kain dengan cara mengikat beberapa bagian kain putih menggunakan karet gelang atau tali rafia lalu mencelupkannya ke dalam larutan pewarna tekstil disebut teknik ....",
+    "p": ["Ikat celup (jumputan / tie dye)", "Batik tulis canting", "Sablon gesut", "Sulam pita"],
+    "b": 0,
+    "bahas": "Teknik ikat celup menghasilkan motif lingkaran dan garis gradasi yang unik pada bagian kain yang terikat."
+  },
+  {
+    "q": "Pameran karya seni rupa yang diselenggarakan di sekolah menjelang kelulusan kelas 6 memiliki tujuan utama untuk ....",
+    "p": [
+      "Menampilkan hasil karya kreatif siswa, melatih kemampuan berorganisasi, dan menumbuhkan sikap saling mengapresiasi",
+      "Menunjukkan siswa mana yang paling kaya di sekolah",
+      "Menjual paksa seluruh karya kepada tamu undangan",
+      "Menggantikan seluruh ujian akhir sekolah"
+    ],
+    "b": 0,
+    "bahas": "Pameran kelas melatih tanggung jawab kepanitiaan, komunikasi, dan apresiasi seni."
+  },
+  {
+    "q": "Dalam kepanitiaan pameran seni rupa di kelas, seksi yang bertugas menata letak lukisan di dinding serta mengatur posisi meja pajangan patung agar tampak rapi dan indah dilihat pengunjung adalah seksi ....",
+    "p": ["Dekorasi dan penataan ruang (display)", "Konsumsi", "Keamanan pagar luar", "Bendahara"],
+    "b": 0,
+    "bahas": "Seksi dekorasi dan penataan ruang mengatur estetika tata pamer agar pengunjung nyaman menikmati karya."
+  },
+  {
+    "q": "Label kecil yang ditempelkan di dekat setiap karya seni pada saat pameran yang berisi informasi judul karya, nama pembuat, kelas, media/bahan, dan tahun pembuatan disebut ....",
+    "p": ["Keterangan karya (kuratorial / label karya)", "Kuitansi pembayaran", "Daftar hadir tamu", "Undangan rapat"],
+    "b": 0,
+    "bahas": "Label karya memudahkan pengunjung memahami identitas dan bahan pembuatan karya seni."
+  },
+  {
+    "q": "Buku yang diletakkan di meja pintu masuk ruang pameran untuk diisi nama, asal kelas/instansi, serta pesan dan kesan pengunjung disebut ....",
+    "p": ["Buku tamu dan buku kesan pesan", "Buku kas keuangan", "Buku absensi harian guru", "Buku agenda surat"],
+    "b": 0,
+    "bahas": "Buku kesan dan pesan memberikan masukan berharga bagi panitia dan pembuat karya."
+  },
+  {
+    "q": "Perpaduan warna yang terdiri atas warna merah, kuning, dan oranye dalam seni rupa digolongkan sebagai kelompok warna ....",
+    "p": ["Panas (memberi kesan hangat, cerah, dan bersemangat)", "Dingin (memberi kesan sejuk dan tenang)", "Netral monokrom", "Gelap suram"],
+    "b": 0,
+    "bahas": "Merah, jingga, dan kuning adalah warna panas, sedangkan biru, hijau, dan ungu tergolong warna dingin."
+  },
+  {
+    "q": "Tiga warna dasar utama dalam seni rupa yang tidak dapat dihasilkan dari pencampuran warna lain (merah, kuning, dan biru) disebut warna ....",
+    "p": ["Primer", "Sekunder", "Tersier", "Komplementer"],
+    "b": 0,
+    "bahas": "Warna primer terdiri atas merah, kuning, dan biru."
+  },
+  {
+    "q": "Karya seni kerajinan ukir kayu yang sangat terkenal dari Kabupaten Jepara (Jawa Tengah) dan Karduluk (Sumenep, Madura) termasuk jenis karya seni rupa ....",
+    "p": ["Kriya ukir kayu", "Kriya logam", "Kriya kulit", "Kriya kaca"],
+    "b": 0,
+    "bahas": "Desa Karduluk di Sumenep (Madura) dan Jepara terkenal sebagai sentra seni ukir kayu berkualitas tinggi."
+  },
+  {
+    "q": "Prinsip kesatuan (unity) dalam menyusun gambar pemandangan atau poster bertema lingkungan berarti ....",
+    "p": [
+      "Seluruh unsur gambar (objek utama, latar belakang, garis, dan warna) saling mendukung dan menyatu secara harmonis",
+      "Semua objek digambar dengan warna hitam yang sama persis",
+      "Gambar hanya berisi satu titik kecil di tengah kertas",
+      "Setiap sudut kertas diisi gambar yang bertabrakan tanpa tema"
+    ],
+    "b": 0,
+    "bahas": "Kesatuan (unity) menyatukan berbagai unsur rupa menjadi satu kesatuan komposisi yang utuh."
+  },
+  {
+    "q": "Penilaian dan penghargaan terhadap suatu karya seni dengan cara mengamati, memahami pesan pembuatnya, serta memberikan tanggapan yang membangun disebut ....",
+    "p": ["Apresiasi seni", "Manipulasi karya", "Plagiarisme", "Eksploitasi"],
+    "b": 0,
+    "bahas": "Apresiasi seni menumbuhkan kepekaan rasa keindahan dan sikap menghargai kreativitas orang lain."
+  },
+  {
+    "q": "Perbuatan meniru atau mengakui karya seni milik teman atau seniman lain sebagai hasil karya sendiri tanpa izin merupakan perbuatan tidak terpuji yang disebut ....",
+    "p": ["Plagiarisme (menjiplak)", "Inovasi kreatif", "Kolaborasi", "Modifikasi"],
+    "b": 0,
+    "bahas": "Plagiarisme melanggar kejujuran berkarya; setiap siswa dilatih menciptakan karya orisinal sesuai kemampuannya."
+  },
+  {
+    "q": "Langkah menjaga keselamatan kerja saat menggunakan peralatan kriya dan patung di kelas (seperti pisau ukir, gunting, atau lem tembak) adalah ....",
+    "p": [
+      "Memakai alat sesuai fungsinya dengan hati-hati, tidak bercanda saat memegang alat tajam, dan mengikuti petunjuk guru",
+      "Menggunakan alat tajam sambil berlarian di ruang kelas",
+      "Menyentuh ujung lem tembak yang masih menyala panas",
+      "Meninggalkan alat tajam berserakan di lantai"
+    ],
+    "b": 0,
+    "bahas": "Kedisiplinan menggunakan alat kerja mencegah terjadinya luka atau kecelakaan di ruang praktik."
+  },
+  {
+    "q": "Manfaat pemanfaatan limbah kardus, botol plastik, dan kain perca menjadi karya seni konstruksi tiga dimensi adalah ....",
+    "p": [
+      "Mengurangi pencemaran sampah di lingkungan sekaligus melatih kreativitas dan jiwa kewirausahaan",
+      "Menambah volume sampah plastik di tempat pembuangan akhir",
+      "Menghabiskan biaya belanja bahan baru yang mahal",
+      "Mengotori halaman sekolah"
+    ],
+    "b": 0,
+    "bahas": "Daur ulang kreatif mengubah barang bekas menjadi karya seni bernilai guna dan estetika."
+  },
+  {
+    "q": "Sikap yang paling tepat setelah acara pameran seni rupa kelas 6 selesai dilaksanakan adalah ....",
+    "p": [
+      "Bekerja sama membongkar pajangan dengan tertib, menyimpan karya dengan rapi, dan membersihkan ruang kelas kembali seperti semula",
+      "Langsung pulang meninggalkan ruang kelas yang berantakan",
+      "Merusak karya teman yang dipajang di papan pameran",
+      "Membuang seluruh karya siswa ke tempat sampah"
+    ],
+    "b": 0,
+    "bahas": "Gotong royong membereskan ruang pameran mencerminkan tanggung jawab dan kebersamaan kelas."
+  }
+]);
+
