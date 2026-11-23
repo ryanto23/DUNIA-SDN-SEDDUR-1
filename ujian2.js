@@ -3851,3 +3851,162 @@ window.tambahPaketUjian("2", "kesenian", "UTS Semester 2", [
   }
 ]);
 
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("2", "pjok", "UAS Semester 2", [
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><polygon points='35,55 43,35 51,55' fill='#f97316'/><polygon points='75,55 83,35 91,55' fill='#f97316'/><polygon points='115,55 123,35 131,55' fill='#f97316'/><path d='M25 50 Q43 28 63 48 T103 48 T143 48' stroke='#0284c7' fill='none' stroke-width='2.5' stroke-dasharray='4,2'/><text x='90' y='23' font-size='9' font-weight='bold' text-anchor='middle' fill='#92400e'>LARI BERKELOK (ZIG-ZAG)</text></svg>",
+    "q": "Perhatikan gambar lintasan di atas! Berlari berkelok-kelok (zig-zag) melewati rintangan kerucut melatih .... tubuh.",
+    "p": ["Kelincahan", "Kekuatan gigi", "Suara nyanyian", "Daya ingat"],
+    "b": 0,
+    "bahas": "Berlari zig-zag melatih kelincahan mengubah arah gerak tubuh dengan cepat."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><rect x='25' y='52' width='130' height='10' rx='4' fill='#22c55e'/><path d='M65 48 C65 32 105 32 105 48' stroke='#15803d' fill='none' stroke-width='3'/><polygon points='102,45 109,49 103,52' fill='#15803d'/><text x='90' y='24' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>GULING DEPAN DI MATRAS</text></svg>",
+    "q": "Perhatikan gambar gerakan di atas! Saat melakukan guling depan (roll depan) di atas matras, bagian tubuh yang pertama menyentuh matras setelah kedua telapak tangan adalah ....",
+    "p": ["Tengkuk (punggung atas)", "Dahi", "Lutut", "Ujung hidung"],
+    "b": 0,
+    "bahas": "Dagu ditempelkan ke dada sehingga tengkuk mendarat aman di atas matras."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><line x1='35' y1='25' x2='145' y2='25' stroke='#334155' stroke-width='4'/><line x1='35' y1='25' x2='35' y2='65' stroke='#334155' stroke-width='4'/><line x1='145' y1='25' x2='145' y2='65' stroke='#334155' stroke-width='4'/><circle cx='90' cy='38' r='6' fill='#f59e0b'/><line x1='78' y1='25' x2='84' y2='44' stroke='#0284c7' stroke-width='3'/><line x1='102' y1='25' x2='96' y2='44' stroke='#0284c7' stroke-width='3'/><text x='90' y='62' font-size='8' font-weight='bold' text-anchor='middle' fill='#0369a1'>BERGAJUT DI PALANG</text></svg>",
+    "q": "Perhatikan gambar di atas! Latihan bergantung pada palang tunggal dengan kedua tangan melatih kekuatan otot ....",
+    "p": ["Lengan dan bahu", "Betis dan tumit", "Leher", "Jari kaki"],
+    "b": 0,
+    "bahas": "Bergantung menahan berat badan melatih kekuatan otot tangan, lengan, dan bahu."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/><rect x='35' y='28' width='50' height='26' rx='8' fill='#facc15' stroke='#ca8a04' stroke-width='2'/><text x='60' y='44' font-size='8' font-weight='bold' text-anchor='middle' fill='#713f12'>PAPAN LUNCUR</text><path d='M95 45 Q115 37 135 45 T160 45' stroke='#0284c7' fill='none' stroke-width='3'/><text x='128' y='32' font-size='8' font-weight='bold' text-anchor='middle' fill='#1e3a8a'>KOLAM RENANG</text></svg>",
+    "q": "Perhatikan gambar alat bantu renang di atas! Benda tersebut dipegang dengan kedua tangan saat belajar meluncur dan menggerakkan kaki di kolam renang, namanya adalah ....",
+    "p": ["Papan seluncur (kickboard)", "Raket bulu tangkis", "Bola kasti", "Tongkat estafet"],
+    "b": 0,
+    "bahas": "Papan seluncur membantu menjaga tubuh tetap terapung saat melatih gerakan kaki renang."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fee2e2' stroke='#dc2626' stroke-width='2'/><circle cx='55' cy='40' r='16' fill='#fff' stroke='#dc2626' stroke-width='3'/><line x1='44' y1='29' x2='66' y2='51' stroke='#dc2626' stroke-width='3'/><text x='120' y='36' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>DILARANG LARI</text><text x='120' y='49' font-size='8' text-anchor='middle' fill='#7f1d1d'>Di Tepi Kolam Licin</text></svg>",
+    "q": "Perhatikan rambu keselamatan di atas! Mengapa kita dilarang keras berlari-lari di pinggir kolam renang?",
+    "p": ["Karena lantai tepi kolam basah dan licin sehingga mudah terpeleset", "Karena air kolam bisa tumpah semua", "Karena sepatu bisa cepat kotor", "Karena dilarang bernapas cepat"],
+    "b": 0,
+    "bahas": "Lantai keramik di tepi kolam renang licin dan berisiko menyebabkan cedera jika berlari."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#f3e8ff' stroke='#7c3aed' stroke-width='2'/><rect x='35' y='24' width='36' height='34' rx='6' fill='#a855f7'/><text x='53' y='45' font-size='9' font-weight='bold' text-anchor='middle' fill='#fff'>SAMPO</text><text x='122' y='37' font-size='9' font-weight='bold' text-anchor='middle' fill='#5b21b6'>KERAMAS</text><text x='122' y='50' font-size='8' text-anchor='middle' fill='#334155'>Menjaga Kebersihan Rambut</text></svg>",
+    "q": "Perhatikan gambar di atas! Bagian tubuh yang dibersihkan menggunakan sampo secara teratur agar tidak gatal dan berketombe adalah ....",
+    "p": ["Rambut dan kulit kepala", "Kuku jari", "Gigi geraham", "Telapak kaki"],
+    "b": 0,
+    "bahas": "Keramas dengan sampo membersihkan keringat dan kotoran pada rambut serta kulit kepala."
+  },
+  {
+    "q": "Variasi gerak berjalan ke depan, berjalan ke belakang, dan berjalan ke samping termasuk kelompok gerak ....",
+    "p": ["Lokomotor", "Nonlokomotor", "Manipulatif", "Diam"],
+    "b": 0,
+    "bahas": "Semua variasi gerak berjalan yang memindahkan posisi tubuh termasuk gerak lokomotor."
+  },
+  {
+    "q": "Gerakan melompat ke depan dengan tolakan dua kaki secara bersama-sama menirukan gerakan hewan ....",
+    "p": ["Katak", "Ular", "Ikan", "Burung bangau"],
+    "b": 0,
+    "bahas": "Lompat katak menolak dan mendarat menggunakan kedua kaki secara bersamaan."
+  },
+  {
+    "q": "Gerakan menekuk lutut, membungkukkan badan, dan memutar pinggang di tempat termasuk gerak ....",
+    "p": ["Nonlokomotor", "Lokomotor", "Manipulatif", "Melayang"],
+    "b": 0,
+    "bahas": "Menekuk dan memutar anggota tubuh tanpa berpindah tempat adalah gerak nonlokomotor."
+  },
+  {
+    "q": "Dalam permainan bola kasti, gerakan melempar bola melambung digunakan untuk mengoper bola ke teman yang jaraknya ....",
+    "p": ["Jauh", "Sangat dekat", "Di belakang punggung", "Di bawah tanah"],
+    "b": 0,
+    "bahas": "Lemparan melambung menghasilkan lintasan tinggi dan jauh."
+  },
+  {
+    "q": "Gerakan menendang bola dan menghentikan bola menggunakan kaki termasuk variasi gerak ....",
+    "p": ["Manipulatif", "Lokomotor", "Nonlokomotor", "Istirahat"],
+    "b": 0,
+    "bahas": "Mengendalikan bola dengan kaki atau tangan disebut gerak manipulatif."
+  },
+  {
+    "q": "Sikap awal saat melakukan gerakan guling depan (roll depan) adalah berdiri atau jongkok menghadap matras dengan kedua telapak tangan bertumpu pada ....",
+    "p": ["Matras selebar bahu", "Kepala sendiri", "Lutut teman", "Dinding tembok"],
+    "b": 0,
+    "bahas": "Kedua telapak tangan diletakkan di atas matras selebar bahu sebagai tumpuan awal."
+  },
+  {
+    "q": "Berdiri dengan satu kaki sambil merentangkan kedua tangan ke samping melatih ....",
+    "p": ["Keseimbangan statis", "Kecepatan lari cepat", "Kekuatan pukulan", "Suara merdu"],
+    "b": 0,
+    "bahas": "Menahan posisi tubuh tetap seimbang di tempat disebut keseimbangan statis."
+  },
+  {
+    "q": "Senam irama dapat dilakukan dengan iringan musik, nyanyian, maupun ....",
+    "p": ["Ketukan tepuk tangan atau hitungan teratur", "Suara petir", "Tangisan keras", "Teriakan sembarangan"],
+    "b": 0,
+    "bahas": "Irama pengiring senam ritmik bisa berupa musik, ketukan, atau hitungan 1 sampai 8."
+  },
+  {
+    "q": "Gerakan melangkahkan kaki ke kiri dan ke kanan sambil mengayunkan lengan mengikuti ketukan lagu merupakan gerak dasar senam ....",
+    "p": ["Irama (ritmik)", "Lantai", "Ketangkasan palang", "Bela diri"],
+    "b": 0,
+    "bahas": "Keserasian langkah kaki dan ayunan lengan mengikuti ketukan adalah ciri senam irama."
+  },
+  {
+    "q": "Sebelum masuk ke dalam kolam renang, kita wajib melakukan pemanasan di tepi kolam agar otot tidak mengalami ....",
+    "p": ["Kram (kejang otot)", "Lapar", "Mengantuk", "Haus"],
+    "b": 0,
+    "bahas": "Pemanasan mencegah kram otot saat tubuh berada di dalam air kolam yang dingin."
+  },
+  {
+    "q": "Latihan pengenalan air di kolam renang dangkal bagi siswa kelas 2 SD misalnya bermain berjalan di dalam air dan ....",
+    "p": ["Memasukkan wajah ke air sambil meniup gelembung udara (bubbling)", "Menyelam ke dasar kolam yang paling dalam", "Mendorong teman hingga terjatuh", "Berenang tanpa pengawasan guru"],
+    "b": 0,
+    "bahas": "Latihan bubbling melatih pernapasan dan keberanian di dalam air."
+  },
+  {
+    "q": "Minuman yang paling sehat dan baik dikonsumsi setelah selesai berolahraga adalah ....",
+    "p": ["Air putih bersih yang matang", "Minuman bersoda terlalu dingin", "Air keran mentah", "Minuman berwarna mencolok"],
+    "b": 0,
+    "bahas": "Air putih menggantikan cairan keringat tubuh secara sehat."
+  },
+  {
+    "q": "Setelah selesai pelajaran olahraga dan baju berkeringat, tindakan menjaga kebersihan diri yang benar adalah ....",
+    "p": ["Segera mengganti pakaian dengan seragam bersih dan mencuci baju olahraga yang basah", "Memakai baju berkeringat sampai pulang sekolah sore hari", "Menyimpan baju basah keringat di dalam tas", "Tidak usah mandi sampai besok pagi"],
+    "b": 0,
+    "bahas": "Mengganti pakaian berkeringat mencegah biang keringat dan penyakit kulit."
+  },
+  {
+    "q": "Bagian tubuh yang harus dibersihkan dengan sabun saat mandi setiap hari dua kali adalah ....",
+    "p": ["Seluruh kulit tubuh", "Mata bagian dalam", "Gigi geraham", "Lubang telinga dalam"],
+    "b": 0,
+    "bahas": "Mandi pakai sabun membersihkan keringat, debu, dan kuman di seluruh permukaan kulit."
+  },
+  {
+    "q": "Kuku jari tangan dan kaki yang panjang dan kotor dapat menjadi sarang .... penyebab sakit perut.",
+    "p": ["Kuman dan bakteri", "Vitamin", "Oksigen", "Air bersih"],
+    "b": 0,
+    "bahas": "Kotoran di bawah kuku dapat ikut tertelan saat makan jika tidak dipotong bersih."
+  },
+  {
+    "q": "Permainan tradisional seperti lompat tali karet dan engklek bermanfaat melatih kekuatan otot ....",
+    "p": ["Kaki dan keseimbangan", "Leher", "Jari tangan", "Telinga"],
+    "b": 0,
+    "bahas": "Lompat tali dan engklek melatih tolakan otot kaki dan keseimbangan tubuh."
+  },
+  {
+    "q": "Saat bermain estafet bola bersama teman seregu, kunci utama agar regu bisa menang adalah ....",
+    "p": ["Kompak, bekerja sama, dan saling menyemangati", "Saling menyalahkan jika bola jatuh", "Berebut bola sendiri-sendiri", "Berlaku curang kepada regu lawan"],
+    "b": 0,
+    "bahas": "Kerja sama dan kekompakan sangat dibutuhkan dalam permainan beregu."
+  },
+  {
+    "q": "Apabila melihat teman terjatuh saat bermain kejar-kejaran di halaman sekolah, sikap kita sebaiknya ....",
+    "p": ["Segera menolongnya berdiri dan mengantarnya ke ruang UKS jika terluka", "Menertawakannya bersama teman lain", "Membiarkannya menangis di lapangan", "Mengejeknya karena tidak hati-hati"],
+    "b": 0,
+    "bahas": "Menolong teman yang kesulitan adalah wujud kepedulian dan sportivitas."
+  },
+  {
+    "q": "Waktu istirahat yang paling baik untuk memulihkan tenaga anak kelas 2 SD setelah beraktivitas seharian adalah ....",
+    "p": ["Tidur malam yang cukup selama 8–10 jam", "Bermain gim sampai tengah malam", "Menonton televisi sampai larut malam", "Begadang tanpa tidur"],
+    "b": 0,
+    "bahas": "Tidur malam yang cukup mengembalikan energi tubuh dan membantu pertumbuhan."
+  }
+]);
