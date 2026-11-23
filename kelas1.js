@@ -497,51 +497,5 @@ Object.assign(window.DATA_SEDDUR, {
       ]
     }
   ],
-
-    bing: [
-    {
-      semester: "Semester 1 (TA 2026/2027)",
-      bab: "Bab 1: Greetings, Numbers 1–10 & Colors",
-      soal: [
-        { ikon: "🌅", tanya: "Ucapan sapaan 'Selamat pagi' dalam bahasa Inggris adalah ....", opsi: ["Good morning", "Good night", "Good afternoon", "Goodbye"], kunci: 0, bahas: "Good morning artinya selamat pagi." },
-        { ikon: "👋", tanya: "Jika teman menyapa 'How are you?', jawaban yang sopan dalam bahasa Inggris adalah ....", opsi: ["I am fine, thank you", "My name is Budi", "Good night", "I am seven"], kunci: 0, bahas: "'How are you?' berarti apa kabar, dijawab dengan 'I am fine, thank you' (Saya baik, terima kasih)." },
-        { ikon: "📛", tanya: "Arti dari pertanyaan bahasa Inggris 'What is your name?' adalah ....", opsi: ["Siapa namamu?", "Berapa umurmu?", "Di mana rumahmu?", "Apa warnanya?"], kunci: 0, bahas: "'What is your name?' digunakan untuk menanyakan nama seseorang." },
-        { ikon: "1️⃣", tanya: "Angka '1, 2, 3' dalam bahasa Inggris secara berurutan adalah ....", opsi: ["One, Two, Three", "Four, Five, Six", "Seven, Eight, Nine", "Ten, Eleven, Twelve"], kunci: 0, bahas: "One (1), Two (2), Three (3)." },
-        { ikon: "5️⃣", tanya: "Kata bahasa Inggris untuk bilangan 'Lima (5)' adalah ....", opsi: ["Five", "Four", "Six", "Seven"], kunci: 0, bahas: "Four (4), Five (5), Six (6)." },
-        { ikon: "🔟", tanya: "Bilangan 'Sepuluh (10)' dalam bahasa Inggris disebut ....", opsi: ["Ten", "Eight", "Nine", "Seven"], kunci: 0, bahas: "Eight (8), Nine (9), Ten (10)." },
-        { ikon: "🍎", tanya: "Warna buah apel yang matang pada gambar di samping dalam bahasa Inggris adalah ....", opsi: ["Red", "Blue", "Yellow", "Green"], kunci: 0, bahas: "Red berarti merah." },
-        { ikon: "🍌", tanya: "Warna buah pisang yang matang (kuning) dalam bahasa Inggris adalah ....", opsi: ["Yellow", "Black", "White", "Purple"], kunci: 0, bahas: "Yellow berarti kuning." },
-        { ikon: "🌿", tanya: "Warna daun yang segar (hijau) dalam bahasa Inggris disebut ....", opsi: ["Green", "Red", "Orange", "Pink"], kunci: 0, bahas: "Green berarti hijau." },
-        { ikon: "☁️", tanya: "Warna langit cerah (biru) dalam bahasa Inggris adalah ....", opsi: ["Blue", "Brown", "Grey", "Black"], kunci: 0, bahas: "Blue berarti biru." },
-        { ikon: "🥛", tanya: "Warna susu sapi (putih) dalam bahasa Inggris disebut ....", opsi: ["White", "Black", "Yellow", "Green"], kunci: 0, bahas: "White berarti putih, sedangkan black berarti hitam." },
-        { ikon: "✏️", tanya: "Benda di dalam tas sekolah yang berarti 'Pensil' dalam bahasa Inggris adalah ....", opsi: ["Pencil", "Book", "Eraser", "Ruler"], kunci: 0, bahas: "Pencil = pensil, Book = buku, Eraser = penghapus." },
-        { ikon: "📘", tanya: "Kata 'Book' dalam bahasa Indonesia memiliki arti ....", opsi: ["Buku", "Tas", "Meja", "Kursi"], kunci: 0, bahas: "Book artinya buku." },
-        { ikon: "🎒", tanya: "Benda yang dipakai membawa buku ke sekolah dalam bahasa Inggris disebut ....", opsi: ["Bag", "Pen", "Board", "Door"], kunci: 0, bahas: "Bag artinya tas." },
-        { ikon: "🙏", tanya: "Jika seseorang menolong kita, ucapan 'Terima kasih' dalam bahasa Inggris adalah ....", opsi: ["Thank you", "Sorry", "Please", "Hello"], kunci: 0, bahas: "Thank you artinya terima kasih." }
-      ]
-    },
-    {
-      semester: "Semester 2 (TA 2026/2027)",
-      bab: "Bab 2: My Family, Animals & Fruits",
-      soal: [
-        { ikon: "👩", tanya: "Kata bahasa Inggris untuk anggota keluarga 'Ibu' adalah ....", opsi: ["Mother", "Father", "Brother", "Sister"], kunci: 0, bahas: "Mother berarti ibu, sedangkan Father berarti ayah." },
-        { ikon: "👨", tanya: "Kata 'Father' dalam bahasa Indonesia berarti ....", opsi: ["Ayah", "Ibu", "Kakek", "Nenek"], kunci: 0, bahas: "Father artinya ayah." },
-        { ikon: "👦", tanya: "Saudara laki-laki dalam bahasa Inggris disebut ....", opsi: ["Brother", "Sister", "Mother", "Grandmother"], kunci: 0, bahas: "Brother = saudara laki-laki, Sister = saudara perempuan." },
-        { ikon: "👧", tanya: "Kata 'Sister' dalam bahasa Indonesia memiliki arti ....", opsi: ["Saudara perempuan", "Saudara laki-laki", "Ayah", "Paman"], kunci: 0, bahas: "Sister berarti saudara perempuan (kakak/adik perempuan)." },
-        { ikon: "🐈", tanya: "Hewan peliharaan 'Kucing' dalam bahasa Inggris disebut ....", opsi: ["Cat", "Dog", "Bird", "Fish"], kunci: 0, bahas: "Cat berarti kucing." },
-        { ikon: "🐟", tanya: "Hewan yang hidup di air 'Ikan' dalam bahasa Inggris adalah ....", opsi: ["Fish", "Bird", "Rabbit", "Chicken"], kunci: 0, bahas: "Fish berarti ikan." },
-        { ikon: "🐦", tanya: "Hewan yang bisa terbang 'Burung' dalam bahasa Inggris disebut ....", opsi: ["Bird", "Cow", "Goat", "Duck"], kunci: 0, bahas: "Bird berarti burung." },
-        { ikon: "🐄", tanya: "Kata 'Cow' dalam bahasa Indonesia adalah nama hewan ....", opsi: ["Sapi", "Ayam", "Kambing", "Kelinci"], kunci: 0, bahas: "Cow berarti sapi." },
-        { ikon: "🦆", tanya: "Hewan unggas yang suka berenang 'Bebek' dalam bahasa Inggris adalah ....", opsi: ["Duck", "Cat", "Horse", "Tiger"], kunci: 0, bahas: "Duck berarti bebek." },
-        { ikon: "🍉", tanya: "Nama buah 'Semangka' dalam bahasa Inggris adalah ....", opsi: ["Watermelon", "Apple", "Banana", "Orange"], kunci: 0, bahas: "Watermelon artinya semangka." },
-        { ikon: "🍊", tanya: "Kata 'Orange' selain berarti warna jingga juga merupakan nama buah ....", opsi: ["Jeruk", "Mangga", "Pisang", "Anggur"], kunci: 0, bahas: "Orange berarti buah jeruk." },
-        { ikon: "🥭", tanya: "Nama buah 'Mangga' dalam bahasa Inggris adalah ....", opsi: ["Mango", "Papaya", "Melon", "Grape"], kunci: 0, bahas: "Mango berarti mangga." },
-        { ikon: "👁️", tanya: "Bagian tubuh 'Mata' dalam bahasa Inggris disebut ....", opsi: ["Eye", "Nose", "Ear", "Mouth"], kunci: 0, bahas: "Eye = mata, Nose = hidung, Ear = telinga, Mouth = mulut." },
-        { ikon: "👃", tanya: "Kata 'Nose' dalam bahasa Indonesia berarti bagian tubuh ....", opsi: ["Hidung", "Telinga", "Mulut", "Tangan"], kunci: 0, bahas: "Nose artinya hidung." },
-        { ikon: "❤️", tanya: "Arti dari kalimat bahasa Inggris 'I like banana' adalah ....", opsi: ["Saya suka pisang", "Saya punya apel", "Ini adalah mangga", "Saya makan jeruk"], kunci: 0, bahas: "'I like...' artinya saya suka, sehingga 'I like banana' artinya saya suka pisang." }
-      ]
-    }
-  ]
-});
-
+};
 
