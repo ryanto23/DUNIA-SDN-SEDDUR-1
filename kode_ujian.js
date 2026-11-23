@@ -10,8 +10,8 @@ window.KODE_UJIAN_DEFAULT = {
   "5": "KLS5",
   "6": "KLS6"
 };
-window.URL_SYNC_NILAI = "https://script.google.com/macros/s/AKfycbyCZicmkwDhjFJoVWug7wW2RqqYf6AnD4xoEWCA814o_xOp5tpJmOjLDCrlB5l0fCw/exec";
 
+// Sinkronisasi Cloud Otomatis (Google Forms + Google Sheets)
 window.GOOGLE_FORM_ACTION = "https://google.com";
 window.GOOGLE_FORM_ENTRIES = {
   id: "entry.425357265",
