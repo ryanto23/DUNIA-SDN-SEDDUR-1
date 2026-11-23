@@ -3143,3 +3143,164 @@ window.tambahPaketUjian("1", "pjok", "UAS Semester 2", [
   }
 ]);
 
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("1", "pjok", "UAS Semester 1", [
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><line x1='25' y1='56' x2='155' y2='56' stroke='#15803d' stroke-width='3'/><circle cx='55' cy='30' r='6' fill='#f59e0b'/><line x1='55' y1='36' x2='55' y2='48' stroke='#0284c7' stroke-width='3'/><line x1='55' y1='48' x2='48' y2='56' stroke='#0284c7' stroke-width='3'/><line x1='55' y1='48' x2='62' y2='56' stroke='#0284c7' stroke-width='3'/><polygon points='75,40 115,40 115,35 128,42 115,49 115,44 75,44' fill='#16a34a'/><text x='110' y='24' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>GERAK BERPINDAH</text></svg>",
+    "q": "Perhatikan gambar di atas! Gerakan berpindah tempat dari garis awal menuju garis akhir seperti berjalan dan berlari disebut gerak ....",
+    "p": ["Lokomotor", "Nonlokomotor", "Manipulatif", "Diam"],
+    "b": 0,
+    "bahas": "Gerak lokomotor adalah gerak tubuh yang berpindah tempat dari satu titik ke titik lain."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><circle cx='55' cy='28' r='7' fill='#f59e0b'/><line x1='55' y1='35' x2='55' y2='50' stroke='#b45309' stroke-width='3'/><path d='M38 32 Q55 18 72 32' stroke='#dc2626' fill='none' stroke-width='2.5'/><line x1='55' y1='50' x2='48' y2='62' stroke='#b45309' stroke-width='3'/><line x1='55' y1='50' x2='62' y2='62' stroke='#b45309' stroke-width='3'/><text x='122' y='36' font-size='9' font-weight='bold' text-anchor='middle' fill='#92400e'>AYUN LENGAN</text><text x='122' y='49' font-size='8' text-anchor='middle' fill='#78350f'>Di Tempat Tanpa Pindah</text></svg>",
+    "q": "Perhatikan gambar di atas! Mengayunkan kedua lengan ke atas dan ke bawah di tempat tanpa berpindah kaki disebut gerak ....",
+    "p": ["Nonlokomotor", "Lokomotor", "Manipulatif", "Melompat jauh"],
+    "b": 0,
+    "bahas": "Gerak nonlokomotor adalah gerakan anggota tubuh di tempat tanpa berpindah posisi."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><circle cx='52' cy='42' r='13' fill='#fff' stroke='#0f172a' stroke-width='2'/><polygon points='52,35 57,39 55,45 49,45 47,39' fill='#0f172a'/><polygon points='75,40 105,40 105,35 116,42 105,49 105,44 75,44' fill='#0284c7'/><text x='138' y='37' font-size='9' font-weight='bold' text-anchor='middle' fill='#0369a1'>TENDANG</text><text x='138' y='49' font-size='9' font-weight='bold' text-anchor='middle' fill='#0369a1'>BOLA</text></svg>",
+    "q": "Perhatikan gambar di atas! Gerakan menendang bola dengan kaki dan melempar bola dengan tangan termasuk gerak ....",
+    "p": ["Manipulatif", "Lokomotor", "Nonlokomotor", "Tidur"],
+    "b": 0,
+    "bahas": "Gerak manipulatif adalah gerak memainkan atau menggerakkan benda seperti bola."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fee2e2' stroke='#dc2626' stroke-width='2'/><rect x='28' y='34' width='52' height='12' rx='6' fill='#fff' stroke='#64748b' stroke-width='1.5'/><rect x='80' y='36' width='22' height='8' rx='2' fill='#38bdf8'/><text x='135' y='36' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>SIKAT</text><text x='135' y='49' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>GIGI</text></svg>",
+    "q": "Perhatikan gambar alat kebersihan di atas! Benda tersebut digunakan dua kali sehari setelah sarapan dan sebelum tidur untuk membersihkan ....",
+    "p": ["Gigi dan mulut", "Kuku kaki", "Rambut", "Sepatu olahraga"],
+    "b": 0,
+    "bahas": "Menggosok gigi secara teratur mencegah gigi berlubang dan bau mulut."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#f3e8ff' stroke='#7c3aed' stroke-width='2'/><circle cx='55' cy='40' r='16' fill='#fde047' stroke='#ca8a04' stroke-width='2'/><circle cx='49' cy='36' r='2.5' fill='#0f172a'/><circle cx='61' cy='36' r='2.5' fill='#0f172a'/><path d='M48 45 Q55 51 62 45' stroke='#0f172a' fill='none' stroke-width='2'/><text x='122' y='36' font-size='9' font-weight='bold' text-anchor='middle' fill='#5b21b6'>INDRA</text><text x='122' y='49' font-size='9' font-weight='bold' text-anchor='middle' fill='#5b21b6'>PENGLIHATAN</text></svg>",
+    "q": "Perhatikan gambar wajah di atas! Anggota tubuh yang berfungsi untuk melihat arah jalan saat berjalan dan berlari adalah ....",
+    "p": ["Mata", "Telinga", "Hidung", "Mulut"],
+    "b": 0,
+    "bahas": "Mata adalah indra penglihatan yang membantu kita melihat arah dan rintangan."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/><rect x='30' y='30' width='45' height='22' rx='5' fill='#3b82f6'/><text x='52' y='44' font-size='8' font-weight='bold' text-anchor='middle' fill='#fff'>GARIS</text><line x1='85' y1='42' x2='155' y2='42' stroke='#dc2626' stroke-width='3' stroke-dasharray='5,3'/><text x='120' y='28' font-size='8' font-weight='bold' text-anchor='middle' fill='#1e3a8a'>BERJALAN LURUS</text></svg>",
+    "q": "Perhatikan gambar di atas! Saat berjalan mengikuti garis lurus di halaman sekolah, sikap tubuh yang benar adalah ....",
+    "p": ["Badan tegak, pandangan lurus ke depan, dan lengan diayun bergantian", "Badan membungkuk menunduk ke bawah terus", "Mata dipejamkan rapat", "Tangan dimasukkan ke dalam saku celana"],
+    "b": 0,
+    "bahas": "Sikap jalan yang benar menjaga postur tulang belakang tetap tegak dan seimbang."
+  },
+  {
+    "q": "Sebelum memulai pelajaran olahraga di lapangan sekolah, guru memimpin siswa melakukan gerakan ....",
+    "p": ["Pemanasan", "Tidur siang", "Makan bekal", "Menulis di papan"],
+    "b": 0,
+    "bahas": "Pemanasan melemaskan otot dan sendi sebelum berolahraga agar tidak cedera."
+  },
+  {
+    "q": "Saat berlari cepat ke depan, gerakan ayunan kedua tangan sebaiknya seirama dengan langkah ....",
+    "p": ["Kaki", "Kepala", "Telinga", "Punggung"],
+    "b": 0,
+    "bahas": "Saat kaki kanan melangkah ke depan, tangan kiri mengayun ke depan secara berlawanan."
+  },
+  {
+    "q": "Gerakan melompat dilakukan dengan tolakan ... kaki, sedangkan meloncat dilakukan dengan tolakan dua kaki.",
+    "p": ["Satu", "Tiga", "Empat", "Lima"],
+    "b": 0,
+    "bahas": "Melompat menggunakan tumpuan satu kaki, sedangkan meloncat menggunakan dua kaki bersamaan."
+  },
+  {
+    "q": "Saat mendarat setelah meloncat ke depan, kedua lutut harus sedikit ... untuk menahan berat badan.",
+    "p": ["Ditekuk", "Diluruskan kaku", "Disilangkan", "Diangkat"],
+    "b": 0,
+    "bahas": "Menekuk lutut saat mendarat mencegah nyeri atau cedera pada sendi lutut."
+  },
+  {
+    "q": "Gerakan membungkukkan badan untuk menyentuh ujung jari kaki di tempat melatih kelenturan otot ....",
+    "p": ["Pinggang dan punggung", "Telinga", "Jari tangan", "Leher bagian atas"],
+    "b": 0,
+    "bahas": "Membungkukkan badan meregangkan otot pinggang, punggung, dan paha belakang."
+  },
+  {
+    "q": "Gerakan memutar kepala secara perlahan ke kiri dan ke kanan melatih kelenturan otot ....",
+    "p": ["Leher", "Lutut", "Tumit", "Perut"],
+    "b": 0,
+    "bahas": "Memutar kepala perlahan melemaskan otot-otot di sekitar leher."
+  },
+  {
+    "q": "Dalam permainan lempar tangkap bola kecil, alat yang digunakan untuk menangkap bola adalah kedua ....",
+    "p": ["Tangan", "Kaki", "Lutut", "Siku"],
+    "b": 0,
+    "bahas": "Kedua tangan dibuka membentuk mangkuk untuk menangkap bola dengan aman."
+  },
+  {
+    "q": "Saat melempar bola ke arah keranjang sasaran, pandangan mata harus tertuju pada ....",
+    "p": ["Arah sasaran keranjang", "Tanah di bawah kaki", "Langit di atas awan", "Teman di belakang"],
+    "b": 0,
+    "bahas": "Pandangan mata ke arah target membuat lemparan lebih tepat sasaran."
+  },
+  {
+    "q": "Permainan tradisional balap karung atau lompat katak melatih kekuatan otot ....",
+    "p": ["Kaki (tungkai)", "Leher", "Jari tangan", "Telinga"],
+    "b": 0,
+    "bahas": "Melompat berulang kali menguatkan otot paha dan betis."
+  },
+  {
+    "q": "Permainan tarik tambang dilakukan secara berkelompok untuk melatih kekuatan otot lengan dan sikap ....",
+    "p": ["Kerja sama tim", "Saling menyalahkan", "Bertengkar", "Curang"],
+    "b": 0,
+    "bahas": "Tarik tambang membutuhkan kekompakan tarikan seluruh anggota regu."
+  },
+  {
+    "q": "Bagian tubuh yang termasuk anggota tubuh bagian atas adalah ....",
+    "p": ["Kepala, mata, hidung, mulut, dan tangan", "Lutut, betis, dan telapak kaki", "Tumit dan jari kaki", "Paha dan betis"],
+    "b": 0,
+    "bahas": "Kepala dan tangan berada di bagian atas tubuh manusia."
+  },
+  {
+    "q": "Anggota tubuh yang tidak boleh disentuh oleh orang lain sembarangan (bagian tubuh pribadi) meliputi ....",
+    "p": ["Mulut, dada, kemaluan, dan pantat", "Telapak tangan saat bersalaman", "Pundak saat ditepuk guru", "Sepatu dan topi"],
+    "b": 0,
+    "bahas": "Siswa harus menjaga dan melindungi bagian tubuh pribadi dari sentuhan orang lain yang tidak pantas."
+  },
+  {
+    "q": "Jika ada orang asing yang mencoba menyentuh bagian tubuh pribadi kita, sikap yang harus segera dilakukan adalah ....",
+    "p": ["Berteriak 'TIDAK!', segera lari menjauh, dan melapor kepada orang tua atau guru", "Diam saja dan mengikuti ajakannya", "Tersenyum dan membiarkannya", "Bersembunyi sendirian tanpa memberi tahu siapa pun"],
+    "b": 0,
+    "bahas": "Berani menolak, lari ke tempat ramai, dan melapor ke guru/orang tua melindungi keselamatan anak."
+  },
+  {
+    "q": "Cara menjaga kebersihan telinga yang aman bagi anak kelas 1 SD adalah ....",
+    "p": ["Membersihkan daun telinga bagian luar dengan handuk basah yang bersih atau meminta bantuan orang tua", "Menusuk lubang telinga dalam dengan lidi atau peniti", "Memasukkan air kotor ke dalam telinga", "Memasukkan biji kacang ke lubang telinga"],
+    "b": 0,
+    "bahas": "Membersihkan telinga cukup bagian luarnya saja agar gendang telinga tetap aman."
+  },
+  {
+    "q": "Mandi membersihkan seluruh tubuh sebaiknya dilakukan secara teratur minimal ... kali sehari menggunakan air bersih dan sabun.",
+    "p": ["Dua (pagi dan sore)", "Satu kali seminggu", "Satu kali sebulan", "Tidak perlu mandi"],
+    "b": 0,
+    "bahas": "Mandi pagi dan sore menjaga kulit tetap bersih, segar, dan bebas kuman."
+  },
+  {
+    "q": "Pakaian kotor yang sudah dipakai berolahraga dan basah oleh keringat sebaiknya segera diletakkan di ....",
+    "p": ["Keranjang pakaian kotor untuk segera dicuci", "Atas tempat tidur", "Dalam lemari baju bersih", "Dalam tas buku pelajaran"],
+    "b": 0,
+    "bahas": "Memisahkan baju kotor mencegah bau tidak sedap dan kuman menempel ke baju bersih."
+  },
+  {
+    "q": "Setelah selesai berolahraga di lapangan, kita melakukan gerakan ... agar napas dan detak jantung kembali tenang.",
+    "p": ["Pendinginan", "Lari cepat keliling sekolah", "Pemanasan ulang", "Lompat tinggi"],
+    "b": 0,
+    "bahas": "Pendinginan menurunkan detak jantung dan suhu tubuh secara bertahap."
+  },
+  {
+    "q": "Saat bermain olahraga bersama teman-teman di sekolah, kita harus mematuhi peraturan agar permainan berjalan ....",
+    "p": ["Tertib, aman, dan menyenangkan", "Kacau dan bertengkar", "Curang dan marah-marah", "Berbahaya"],
+    "b": 0,
+    "bahas": "Peraturan permainan menjaga keselamatan dan keadilan bagi seluruh pemain."
+  },
+  {
+    "q": "Anak yang rajin berolahraga dan menjaga kebersihan tubuh setiap hari akan tumbuh menjadi anak yang ....",
+    "p": ["Sehat, kuat, dan bersemangat belajar", "Lemas dan mudah sakit", "Malas bergerak", "Sering mengantuk di kelas"],
+    "b": 0,
+    "bahas": "Olahraga teratur dan pola hidup bersih membuat tubuh bugar serta siap belajar."
+  }
+]);
+
+
