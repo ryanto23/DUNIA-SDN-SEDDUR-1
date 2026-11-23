@@ -5566,3 +5566,176 @@ window.tambahPaketUjian("4", "pjok", "UAS Semester 2", [
     "bahas": "Olahraga pendidikan bertujuan membentuk karakter sportif, jujur, dan tangguh."
   }
 ]);
+
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("4", "pjok", "UAS Semester 1", [
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><rect x='25' y='46' width='135' height='3' fill='#0369a1'/><line x1='92' y1='25' x2='92' y2='62' stroke='#0f172a' stroke-width='2.5'/><circle cx='58' cy='38' r='8' fill='#facc15' stroke='#ca8a04' stroke-width='1.5'/><path d='M68 36 Q92 18 118 38' stroke='#0284c7' fill='none' stroke-width='2' stroke-dasharray='4,2'/><text x='92' y='20' font-size='8.5' font-weight='bold' text-anchor='middle' fill='#0369a1'>PASSING ATAS BOLA VOLI</text></svg>",
+    "q": "Perhatikan ilustrasi di atas! Dalam permainan bola voli mini, teknik mengoper bola tinggi di atas depan dahi menggunakan ujung jari-jari kedua tangan yang terbuka membentuk mangkuk disebut ....",
+    "p": ["Passing atas", "Passing bawah", "Servis bawah", "Blocking"],
+    "b": 0,
+    "bahas": "Passing atas digunakan untuk mengumpan bola tinggi kepada teman seregu menggunakan ujung jari-jari kedua tangan."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><circle cx='52' cy='41' r='15' fill='#f97316' stroke='#9a3412' stroke-width='2'/><path d='M40 34 Q52 41 40 48 M64 34 Q52 41 64 48' stroke='#7c2d12' fill='none' stroke-width='1.5'/><line x1='76' y1='34' x2='122' y2='34' stroke='#d97706' stroke-width='3'/><polygon points='120,30 130,34 120,38' fill='#d97706'/><text x='118' y='52' font-size='8' font-weight='bold' text-anchor='middle' fill='#92400e'>CHEST PASS BASKET</text></svg>",
+    "q": "Perhatikan gambar di atas! Variasi gerak manipulatif mengoper bola basket dari depan dada dengan tolakan kedua tangan lurus ke arah teman disebut ....",
+    "p": ["Chest pass", "Bounce pass", "Overhead pass", "Dribbling"],
+    "b": 0,
+    "bahas": "Chest pass adalah operan setinggi dada yang cepat dan lurus dalam permainan bola basket."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><circle cx='52' cy='28' r='7' fill='#f59e0b'/><line x1='52' y1='35' x2='52' y2='48' stroke='#15803d' stroke-width='3'/><line x1='52' y1='48' x2='38' y2='60' stroke='#15803d' stroke-width='3'/><line x1='52' y1='48' x2='66' y2='60' stroke='#15803d' stroke-width='3'/><text x='122' y='36' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>KUDA-KUDA</text><text x='122' y='49' font-size='8' text-anchor='middle' fill='#0f172a'>Pencak Silat</text></svg>",
+    "q": "Perhatikan ilustrasi bela diri pencak silat di atas! Sikap kuda-kuda tengah dilakukan dengan cara membuka kedua kaki ke samping selebar dua kali bahu dan ....",
+    "p": ["Menekuk kedua lutut dengan berat badan bertumpu seimbang di tengah", "Meluruskan kedua lutut kaku sambil jinjit", "Mengangkat satu kaki ke belakang", "Menyilangkan kedua kaki rapat"],
+    "b": 0,
+    "bahas": "Kuda-kuda tengah memperkuat keseimbangan tubuh dengan menekuk kedua lutut dan membagi beban sama rata."
+  },
+  {
+    "q": "Dalam permainan sepak bola mini, variasi gerak menendang bola menggunakan punggung kaki (kura-kura kaki) menghasilkan laju bola yang ....",
+    "p": ["Keras, lurus, dan cepat (cocok untuk menembak ke gawang)", "Melambung pelan berputar ke belakang", "Menggelinding sangat lambat di tempat", "Berbelok tajam ke luar garis samping"],
+    "b": 0,
+    "bahas": "Punggung kaki memberikan daya dorong maksimal sehingga sering digunakan untuk shooting ke gawang."
+  },
+  {
+    "q": "Teknik menghentikan bola yang datang melambung setinggi dada dalam permainan sepak bola dapat dilakukan menggunakan bagian tubuh ....",
+    "p": ["Dada atau paha", "Kedua telapak tangan", "Ujung jari tangan", "Punggung belakang"],
+    "b": 0,
+    "bahas": "Pemain sepak bola selain kiper dilarang menyentuh bola dengan tangan, sehingga bola tinggi dikontrol dengan dada atau paha."
+  },
+  {
+    "q": "Dalam permainan bola basket mini, teknik mengoper bola dengan cara memegang bola di atas kepala lalu melemparkannya ke teman yang jauh disebut ....",
+    "p": ["Overhead pass", "Chest pass", "Bounce pass", "Lay-up"],
+    "b": 0,
+    "bahas": "Overhead pass dilakukan dari atas kepala untuk mengoper bola melewati jangkauan lawan."
+  },
+  {
+    "q": "Dalam permainan kasti atau rounders, apabila seorang pemukul berhasil memukul bola dengan baik lalu berlari melewati seluruh tiang hinggap (base) dan kembali ke ruang bebas dengan selamat atas pukulannya sendiri, ia memperoleh nilai ....",
+    "p": ["2 poin (home run)", "0 poin", "5 poin", "10 poin"],
+    "b": 0,
+    "bahas": "Dalam permainan kasti, lari keliling selamat atas pukulan sendiri bernilai 2 poin, sedangkan jika diselingi pukulan teman bernilai 1 poin."
+  },
+  {
+    "q": "Dalam permainan bulu tangkis, cara memegang raket seperti orang berjabat tangan (jabat tangan biasa) disebut pegangan ....",
+    "p": ["Forehand grip", "Backhand grip", "American grip", "Combination grip"],
+    "b": 0,
+    "bahas": "Forehand grip menyerupai posisi tangan saat berjabat tangan dan paling dasar digunakan dalam bulu tangkis."
+  },
+  {
+    "q": "Pada cabang atletik jalan cepat dan lari jarak pendek, perbedaan utama antara jalan cepat dan berlari adalah ....",
+    "p": [
+      "Pada jalan cepat selalu ada satu kaki yang menyentuh tanah, sedangkan pada lari ada saat kedua kaki melayang di udara",
+      "Jalan cepat dilakukan sambil melompat-lompat dua kaki",
+      "Lari dilakukan dengan berjalan mundur",
+      "Jalan cepat harus membawa tongkat pemukul"
+    ],
+    "b": 0,
+    "bahas": "Aturan wajib jalan cepat adalah kontak kaki dengan tanah tidak boleh terputus (tidak melayang)."
+  },
+  {
+    "q": "Pada lompat jauh gaya jongkok, teknik menolak pada papan tumpuan harus dilakukan menggunakan ....",
+    "p": ["Satu kaki yang paling kuat tanpa melewati garis batas papan tumpuan", "Dua kaki secara bersamaan", "Kedua telapak tangan", "Lutut kaki kanan"],
+    "b": 0,
+    "bahas": "Tolakan lompat jauh wajib menggunakan satu kaki terkuat di belakang garis batas papan tolak."
+  },
+  {
+    "q": "Dalam bela diri pencak silat, gerakan serangan menggunakan lengan dengan tangan mengepal lurus ke depan mengarah ke ulu hati lawan disebut ....",
+    "p": ["Pukulan lurus (depan)", "Tendangan sabit", "Tangkisan luar", "Elakan bawah"],
+    "b": 0,
+    "bahas": "Pukulan lurus mengarahkan kepalan tangan lurus ke depan dengan lintasan terpendek dan cepat."
+  },
+  {
+    "q": "Dalam pencak silat, pola gerak langkah kaki yang membentuk sudut atau garis (seperti langkah lurus, zig-zag, dan segitiga) bertujuan untuk ....",
+    "p": ["Mengatur posisi tubuh, mendekati atau menjauhi lawan secara lincah dan seimbang", "Membuat tubuh mudah terjatuh", "Menghentikan pertandingan", "Menghitung skor pertandingan"],
+    "b": 0,
+    "bahas": "Pola langkah menentukan efektivitas serangan maupun pertahanan dalam pencak silat."
+  },
+  {
+    "q": "Latihan push-up, pull-up (bergantung angkat tubuh), dan saling mendorong bahu berpasangan merupakan bentuk latihan kebugaran jasmani untuk meningkatkan ....",
+    "p": ["Kekuatan otot lengan, bahu, dan dada", "Kecepatan lari 100 meter", "Kelenturan pergelangan kaki", "Daya ingat pelajaran"],
+    "b": 0,
+    "bahas": "Latihan menahan atau mendorong beban tubuh melatih kekuatan (strength) otot."
+  },
+  {
+    "q": "Latihan sit-up (baring duduk) dan back-up (telungkup mengangkat dada) secara seimbang bermanfaat untuk melatih kekuatan otot ....",
+    "p": ["Perut dan punggung", "Betis dan tumit", "Jari tangan", "Leher bagian atas"],
+    "b": 0,
+    "bahas": "Sit-up melatih otot perut, sedangkan back-up melatih otot punggung agar postur tubuh tetap tegak."
+  },
+  {
+    "q": "Gerakan mencium lutut dalam posisi duduk berlunjur dan gerakan kayang termasuk latihan kebugaran jasmani untuk melatih komponen ....",
+    "p": ["Kelenturan (flexibility)", "Kecepatan (speed)", "Kekuatan angkat beban", "Daya tahan lari maraton"],
+    "b": 0,
+    "bahas": "Kelenturan adalah kemampuan sendi dan otot bergerak dalam ruang gerak seluas-luasnya."
+  },
+  {
+    "q": "Bentuk latihan lari pelan terus-menerus selama 10–15 menit atau bersepeda santai melatih komponen kebugaran jasmani berupa ....",
+    "p": ["Daya tahan jantung dan paru-paru (cardiorespiratory endurance)", "Kekuatan genggaman tangan", "Kelenturan leher", "Keseimbangan satu kaki"],
+    "b": 0,
+    "bahas": "Latihan aerobik meningkatkan efisiensi kerja jantung dan kapasitas paru-paru."
+  },
+  {
+    "q": "Dalam senam lantai, sikap lilin membutuhkan kekuatan otot perut dan kelenturan punggung dengan posisi kedua kaki ....",
+    "p": ["Lurus rapat ke atas tegak lurus dengan matras", "Dibuka lebar ke samping", "Ditekuk menyilang di atas kepala", "Diletakkan di lantai"],
+    "b": 0,
+    "bahas": "Pada sikap lilin, tungkai hingga ujung jari kaki diluruskan rapat vertikal ke atas."
+  },
+  {
+    "q": "Senam Kesegaran Jasmani (SKJ) yang dilakukan siswa di halaman sekolah setiap pagi bermanfaat untuk ....",
+    "p": ["Meningkatkan kebugaran jasmani, melancarkan peredaran darah, dan menambah semangat belajar", "Membuat tubuh lemas dan mengantuk", "Mengurangi kelenturan otot", "Menghabiskan waktu istirahat"],
+    "b": 0,
+    "bahas": "Senam pagi memicu pelepasan hormon endorfin yang membuat siswa bugar dan gembira."
+  },
+  {
+    "q": "Prinsip pertolongan pertama pada cedera keseleo atau terkilir ringan (metode RICE) diawali dengan langkah pertama yaitu ....",
+    "p": ["Rest (mengistirahatkan bagian tubuh yang cedera dan menghentikan aktivitas)", "Run (memaksa berlari cepat)", "Jump (melompat-lompat tinggi)", "Massage keras (memijat keras bagian yang bengkak)"],
+    "b": 0,
+    "bahas": "Metode RICE: Rest (istirahatkan), Ice (kompres es), Compression (balut tekan ringan), Elevation (tinggikan)."
+  },
+  {
+    "q": "Pernyataan yang benar mengenai cara penanganan cedera memar atau terkilir baru adalah ....",
+    "p": [
+      "Tidak boleh dipijat keras pada 24–48 jam pertama karena dapat memperparah pembengkakan pembuluh darah",
+      "Harus langsung dipijat sekuat tenaga agar cepat sembuh",
+      "Harus direndam di dalam air mendidih",
+      "Harus dipakai bermain sepak bola lagi secepatnya"
+    ],
+    "b": 0,
+    "bahas": "Pemijatan keras pada fase akut cedera dapat merusak jaringan otot dan memperluas perdarahan dalam."
+  },
+  {
+    "q": "Dalam pergaulan sehari-hari dengan teman sebaya di sekolah, tindakan perundungan (bullying) seperti mengejek fisik, mengucilkan, atau memukul teman harus dihindari karena ....",
+    "p": ["Menyakiti perasaan dan fisik teman serta merusak kerukunan di sekolah", "Membuat pelaku terlihat hebat", "Diperbolehkan saat jam istirahat", "Meningkatkan prestasi olahraga"],
+    "b": 0,
+    "bahas": "Setiap siswa berhak merasa aman, dihargai, dan berteman dengan rukun tanpa perundungan."
+  },
+  {
+    "q": "Zat gizi dalam makanan yang berfungsi membangun jaringan tubuh yang rusak serta membantu pertumbuhan tinggi dan otot anak adalah ....",
+    "p": ["Protein (ikan, telur, daging, tempe, tahu, kacang-kacangan)", "Gula pasir murni", "Pewarna makanan", "Garam dapur"],
+    "b": 0,
+    "bahas": "Protein merupakan zat pembangun utama sel-sel tubuh anak dalam masa pertumbuhan."
+  },
+  {
+    "q": "Air putih sangat penting dikonsumsi secara cukup (sekitar 6–8 gelas sehari) oleh anak SD karena berfungsi untuk ....",
+    "p": ["Mengatur suhu tubuh, melancarkan pencernaan, dan mencegah dehidrasi", "Menggantikan seluruh fungsi nasi dan lauk", "Membuat tubuh cepat lelah", "Mengurangi nafsu makan sayur"],
+    "b": 0,
+    "bahas": "Sebagian besar tubuh manusia terdiri atas air yang menjaga metabolisme tetap optimal."
+  },
+  {
+    "q": "Perbedaan utama antara gerak lokomotor dan gerak nonlokomotor dalam aktivitas olahraga adalah ....",
+    "p": [
+      "Gerak lokomotor menyebabkan tubuh berpindah tempat, sedangkan gerak nonlokomotor dilakukan di tempat tanpa berpindah posisi",
+      "Gerak lokomotor selalu memakai bola, sedangkan nonlokomotor memakai raket",
+      "Gerak lokomotor dilakukan sambil tidur, sedangkan nonlokomotor sambil berlari",
+      "Tidak ada perbedaan di antara keduanya"
+    ],
+    "b": 0,
+    "bahas": "Lokomotor = berpindah tempat (lari, lompat); Nonlokomotor = di tempat (menekuk, memutar, mengayun)."
+  },
+  {
+    "q": "Sikap terpuji yang harus diterapkan siswa kelas 4 SD ketika menjadi kapten atau anggota tim olahraga di sekolah adalah ....",
+    "p": ["Bermain jujur, menyemangati seluruh anggota tim, dan menghormati lawan maupun wasit", "Memarahi teman yang gagal mencetak gol", "Bermain sendiri tanpa mau mengoper bola", "Mengejek tim lawan yang tertinggal poin"],
+    "b": 0,
+    "bahas": "Kerja sama, sportivitas, dan saling menghormati adalah kunci keberhasilan tim."
+  }
+]);
+
