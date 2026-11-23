@@ -151,7 +151,9 @@
       mtk: { "Sesi 1": [], "Sesi 2": [], "Sesi 3": [] }
     };
     window.PASSWORD_ADMIN_DEFAULT = "admin123";
-    window.URL_SYNC_NILAI = "";
+    window.GOOGLE_FORM_ACTION = "";
+    window.GOOGLE_FORM_ENTRIES = {};
+    window.GOOGLE_SHEET_ID = "";
     window.KODE_UJIAN_DEFAULT = {
       "1": "KLS1-2026",
       "2": "KLS2-2026",
@@ -388,23 +390,47 @@
         localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
       } catch (e) {}
 
-      const urlSync = (window.URL_SYNC_NILAI || "").trim();
-      if (urlSync && urlSync.startsWith("http")) {
-        const params = new URLSearchParams({
-          action: "save",
-          id: String(record.id),
-          tanggal: String(record.tanggal),
-          nama: String(record.nama),
-          kodeUnik: String(record.kodeUnik || "-"),
-          kelas: String(record.kelas),
-          mapel: String(record.mapel),
-          tipeUjian: String(record.tipeUjian || "UTS_UAS"),
-          kategori: String(record.kategori),
-          benar: String(record.benar),
-          nilai: String(record.nilai)
+      const formUrl = (window.GOOGLE_FORM_ACTION || "").trim();
+      const entries = window.GOOGLE_FORM_ENTRIES || {};
+      if (formUrl && formUrl.startsWith("http")) {
+        const iframeName = "hidden_iframe_" + Date.now();
+        const iframe = document.createElement("iframe");
+        iframe.name = iframeName;
+        iframe.style.display = "none";
+        document.body.appendChild(iframe);
+
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = formUrl;
+        form.target = iframeName;
+        form.style.display = "none";
+
+        const dataKirim = {
+          [entries.id]: String(record.id),
+          [entries.nama]: String(record.nama),
+          [entries.kodeUnik]: String(record.kodeUnik || "-"),
+          [entries.kelas]: String(record.kelas),
+          [entries.mapel]: String(record.mapel),
+          [entries.kategori]: String(record.kategori),
+          [entries.benar]: String(record.benar),
+          [entries.nilai]: String(record.nilai)
+        };
+
+        Object.keys(dataKirim).forEach(key => {
+          if (!key || key === "undefined") return;
+          const inp = document.createElement("input");
+          inp.type = "hidden";
+          inp.name = key;
+          inp.value = dataKirim[key];
+          form.appendChild(inp);
         });
-        const beacon = new Image();
-        beacon.src = `${urlSync}?${params.toString()}&_t=${Date.now()}`;
+
+        document.body.appendChild(form);
+        form.submit();
+        setTimeout(() => {
+          form.remove();
+          iframe.remove();
+        }, 3000);
       }
     }
 
@@ -1014,7 +1040,7 @@
         <div class="card card-cbt" style="text-align:center;">
           <div style="font-size:2.6rem;">📋</div>
           <h2 style="color:#0f172a; font-size:1.3rem; margin:6px 0;">Ujian Telah Dikumpulkan</h2>
-          <p style="color:#64748b; font-size:0.86rem; margin-bottom:14px;">Hasil ujian telah tersimpan otomatis ke rekap nilai sekolah &amp; Cloud</p>
+          <p style="color:#64748b; font-size:0.86rem; margin-bottom:14px;">Hasil ujian telah tersimpan otomatis ke Google Sheets &amp; Rekap Sekolah</p>
 
           <div style="background:#f8fafc; border-radius:12px; padding:14px; border:1px solid #cbd5e1; font-size:0.92rem; color:#1e293b; text-align:left; line-height:1.7;">
             <div><strong>Sekolah:</strong> SDN Seddur 1</div>
@@ -1135,7 +1161,7 @@
     function tampilDashboardAdmin() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Keluar Admin</button><div class="star-bar">⚙️ Panel Admin</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI (8 Mapel + Mapel Baru + TKA) &amp; rekap nilai tersinkron Cloud</p></div>
+        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI (8 Mapel + Mapel Baru + TKA) &amp; rekap nilai tersinkron Google Sheets</p></div>
         <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI &amp; Kode GitHub</span><span>▶️</span></button>
         <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>2. 📊 Lihat &amp; Filter Rekap Nilai Siswa</span><span>▶️</span></button>`;
     }
@@ -1429,22 +1455,43 @@
     }
 
             function muatRekapDariCloud() {
-      const urlSync = (window.URL_SYNC_NILAI || "").trim();
+      const sheetId = (window.GOOGLE_SHEET_ID || "").trim();
       const infoBox = document.getElementById("infoRingkasanFilter");
-      if (!urlSync || !urlSync.startsWith("http")) {
+      if (!sheetId) {
         try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
         perbaruiOpsiKodeUnikRekap();
         renderTabelNilai();
         return;
       }
-      if (infoBox) infoBox.textContent = "⏳ Sedang menyinkronkan nilai dari semua HP/Laptop...";
+      if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari Google Sheets...";
 
-      const cbName = "cbSeddurCloud_" + Date.now();
-      window[cbName] = function(dataCloud) {
-        if (Array.isArray(dataCloud)) {
-          cacheRekapCloud = dataCloud;
-          try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(dataCloud)); } catch (e) {}
-        }
+      const cbName = "cbGvizSeddur_" + Date.now();
+      window[cbName] = function(resp) {
+        try {
+          const rows = (resp && resp.table && resp.table.rows) ? resp.table.rows : [];
+          const hasil = [];
+          rows.forEach((r, idx) => {
+            const c = r.c || [];
+            const val = (i) => (c[i] && c[i].v !== null && c[i].v !== undefined) ? String(c[i].v) : "";
+            const fmt = (i) => (c[i] && c[i].f) ? String(c[i].f) : val(i);
+            const namaVal = val(2);
+            if (!namaVal) return;
+            hasil.push({
+              id: Number(val(1)) || (idx + 1),
+              tanggal: fmt(0) || "-",
+              nama: namaVal,
+              kodeUnik: val(3) || "-",
+              kelas: val(4).replace(/[^0-9]/g, "") || val(4),
+              mapel: val(5) || "Umum",
+              kategori: val(6) || "-",
+              benar: val(7) || "-",
+              nilai: Number(val(8)) || 0
+            });
+          });
+          cacheRekapCloud = hasil;
+          try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
+        } catch (err) {}
+
         perbaruiOpsiKodeUnikRekap();
         perbaruiOpsiBabRekap();
         renderTabelNilai();
@@ -1455,7 +1502,7 @@
 
       const script = document.createElement("script");
       script.id = cbName;
-      script.src = `${urlSync}?action=read&callback=${cbName}&_t=${Date.now()}`;
+      script.src = `https://google.com{sheetId}/gviz/tq?tqx=out:json;responseHandler:${cbName}&_t=${Date.now()}`;
       script.onerror = function() {
         try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
         perbaruiOpsiKodeUnikRekap();
@@ -1649,24 +1696,15 @@
     function hapusDataHasilFilter() {
       const tersaring = getDataTersaring();
       if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
-      if (!confirm(`Yakin ingin menghapus ${tersaring.length} data nilai yang tampil pada filter ini dari semua perangkat & Google Sheets?`)) return;
+      if (!confirm(`Yakin ingin menghapus ${tersaring.length} data nilai dari tampilan ini?\n(Untuk menghapus permanen dari Cloud, hapus juga barisnya di Google Sheets Anda)`)) return;
       let semua = [];
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const idDihapus = new Set(tersaring.map(item => item.id));
       try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua.filter(item => !idDihapus.has(item.id)))); } catch (e) {}
       cacheRekapCloud = cacheRekapCloud.filter(item => !idDihapus.has(item.id));
-
-      const urlSync = (window.URL_SYNC_NILAI || "").trim();
-      if (urlSync && urlSync.startsWith("http")) {
-        const daftarId = Array.from(idDihapus).join(",");
-        const beaconDel = new Image();
-        beaconDel.src = `${urlSync}?action=delete&ids=${encodeURIComponent(daftarId)}&_t=${Date.now()}`;
-      }
-
       mainkanEfek('salah');
       perbaruiOpsiKodeUnikRekap();
       renderTabelNilai();
-      alert("✅ Data hasil filter berhasil dihapus dari semua perangkat!");
     }
 
     tampilBeranda();
