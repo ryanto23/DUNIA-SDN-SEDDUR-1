@@ -4010,3 +4010,168 @@ window.tambahPaketUjian("2", "pjok", "UAS Semester 2", [
     "bahas": "Tidur malam yang cukup mengembalikan energi tubuh dan membantu pertumbuhan."
   }
 ]);
+
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("2", "pjok", "UAS Semester 1", [
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><rect x='25' y='48' width='35' height='12' rx='3' fill='#f59e0b'/><rect x='75' y='44' width='35' height='16' rx='3' fill='#f97316'/><rect x='125' y='40' width='35' height='20' rx='3' fill='#ef4444'/><path d='M35 45 Q58 25 82 41 Q108 20 135 37' stroke='#0284c7' fill='none' stroke-width='2.5' stroke-dasharray='4,2'/><text x='90' y='22' font-size='9' font-weight='bold' text-anchor='middle' fill='#0369a1'>MELOMPATI RINTANGAN</text></svg>",
+    "q": "Perhatikan gambar rintangan kardus bertingkat di atas! Gerakan melompati rintangan tersebut melatih kekuatan dan daya ledak otot ....",
+    "p": ["Tungkai (kaki)", "Leher", "Jari tangan", "Telinga"],
+    "b": 0,
+    "bahas": "Melompati rintangan bertingkat bertumpu pada kekuatan tolakan otot kaki."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><circle cx='50' cy='28' r='7' fill='#f59e0b'/><line x1='50' y1='35' x2='50' y2='52' stroke='#b45309' stroke-width='3'/><line x1='30' y1='40' x2='70' y2='40' stroke='#b45309' stroke-width='3'/><line x1='50' y1='52' x2='40' y2='63' stroke='#b45309' stroke-width='3'/><line x1='50' y1='52' x2='60' y2='63' stroke='#b45309' stroke-width='3'/><text x='118' y='36' font-size='9' font-weight='bold' text-anchor='middle' fill='#92400e'>MEMUTAR PINGGANG</text><text x='118' y='49' font-size='8' text-anchor='middle' fill='#78350f'>Gerak Nonlokomotor</text></svg>",
+    "q": "Perhatikan gambar di atas! Gerakan memutar pinggang ke kiri dan ke kanan dengan kedua tangan di pinggang tanpa berpindah tempat termasuk gerak ....",
+    "p": ["Nonlokomotor", "Lokomotor", "Manipulatif", "Meluncur"],
+    "b": 0,
+    "bahas": "Memutar pinggang di tempat tanpa berpindah posisi adalah contoh gerak nonlokomotor."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><rect x='28' y='36' width='55' height='8' rx='4' fill='#a16207'/><circle cx='105' cy='40' r='9' fill='#ef4444' stroke='#991b1b' stroke-width='1.5'/><text x='138' y='35' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>BOLA</text><text x='138' y='48' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>KASTI</text></svg>",
+    "q": "Perhatikan gambar tongkat kayu dan bola kecil di atas! Peralatan tersebut digunakan dalam permainan bola kecil beregu yang bernama ....",
+    "p": ["Bola kasti", "Sepak bola", "Bola basket", "Bola voli"],
+    "b": 0,
+    "bahas": "Bola kasti dimainkan menggunakan bola kecil dan tongkat kayu pemukul."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fee2e2' stroke='#dc2626' stroke-width='2'/><circle cx='48' cy='40' r='16' fill='#22c55e'/><text x='48' y='44' font-size='9' font-weight='bold' text-anchor='middle' fill='#fff'>4 SEHAT</text><text x='118' y='35' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>MAKANAN</text><text x='118' y='48' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>BERGIZI</text><text x='118' y='60' font-size='7.5' text-anchor='middle' fill='#7f1d1d'>Nasi • Lauk • Sayur • Buah</text></svg>",
+    "q": "Perhatikan poster gizi di atas! Agar tubuh anak kelas 2 SD kuat saat berolahraga dan tidak mudah sakit, kita harus makan makanan sehat yang mengandung ....",
+    "p": ["Nasi, lauk pauk, sayur-sayuran, dan buah-buahan", "Permen, es krim, dan kerupuk saja", "Minuman bersoda dan jajanan pedas saja", "Cokelat dan gula pasir setiap waktu"],
+    "b": 0,
+    "bahas": "Makanan bergizi seimbang menyediakan tenaga, zat pembangun, dan vitamin bagi tubuh."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#f3e8ff' stroke='#7c3aed' stroke-width='2'/><rect x='25' y='52' width='130' height='8' rx='3' fill='#7c3aed'/><circle cx='65' cy='44' r='7' fill='#f59e0b'/><line x1='72' y1='46' x2='105' y2='46' stroke='#5b21b6' stroke-width='4'/><text x='90' y='26' font-size='9' font-weight='bold' text-anchor='middle' fill='#5b21b6'>GERAK MERAYAP RENDAH</text></svg>",
+    "q": "Perhatikan gambar gerakan di atas! Gerakan berpindah tempat dengan posisi perut menempel atau dekat dengan lantai seperti tentara melewati rintangan kawat disebut ....",
+    "p": ["Merayap", "Melompat tinggi", "Berjalan jinjit", "Berlari cepat"],
+    "b": 0,
+    "bahas": "Merayap dilakukan dengan posisi tubuh rendah mendekati lantai menggunakan tarikan lengan dan dorongan kaki."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/><rect x='30' y='28' width='45' height='26' rx='6' fill='#ef4444'/><text x='52' y='44' font-size='8' font-weight='bold' text-anchor='middle' fill='#fff'>SAMPAH</text><polygon points='85,40 110,40 110,36 120,42 110,48 110,44 85,44' fill='#2563eb'/><rect x='125' y='26' width='32' height='30' rx='4' fill='#16a34a'/><text x='141' y='44' font-size='7' font-weight='bold' text-anchor='middle' fill='#fff'>TONG</text></svg>",
+    "q": "Perhatikan gambar di atas! Cara menjaga kebersihan lingkungan sekolah agar nyaman digunakan untuk olahraga adalah ....",
+    "p": ["Membuang sampah pada tempatnya dan membersihkan lapangan sekolah", "Membuang bungkus jajanan di tengah lapangan", "Menumpuk daun kering di saluran air", "Mencoret-coret dinding kelas"],
+    "b": 0,
+    "bahas": "Lingkungan sekolah yang bersih membuat kegiatan belajar dan olahraga menjadi sehat serta nyaman."
+  },
+  {
+    "q": "Variasi gerak berjalan jinjit menggunakan ujung telapak kaki bermanfaat untuk melatih kekuatan otot kaki dan ....",
+    "p": ["Keseimbangan tubuh", "Kekuatan leher", "Suara nyanyian", "Kecepatan mengetik"],
+    "b": 0,
+    "bahas": "Berjalan jinjit melatih otot betis, pergelangan kaki, dan keseimbangan."
+  },
+  {
+    "q": "Dalam permainan lomba lari estafet memindahkan bendera kecil secara beregu, setiap anggota regu harus berlari cepat dan menyerahkan bendera kepada ....",
+    "p": ["Teman satu regunya berikutnya", "Regu lawan", "Penonton di pinggir lapangan", "Penjaga kantin"],
+    "b": 0,
+    "bahas": "Lari estafet adalah lari sambung beregu yang membutuhkan kerja sama dan kecepatan."
+  },
+  {
+    "q": "Gerakan menekuk kedua lutut setengah jongkok lalu berdiri tegak kembali secara berulang-ulang di tempat melatih kekuatan otot ....",
+    "p": ["Paha dan tungkai", "Lengan atas", "Leher", "Jari tangan"],
+    "b": 0,
+    "bahas": "Gerakan jongkok-berdiri (squat) memperkuat otot paha dan lutut."
+  },
+  {
+    "q": "Gerakan mengayunkan kedua lengan ke samping kiri dan kanan sambil menekuk lutut mengikuti hitungan termasuk variasi gerak ....",
+    "p": ["Nonlokomotor", "Lokomotor", "Manipulatif", "Melompat jauh"],
+    "b": 0,
+    "bahas": "Gerakan dilakukan di tempat tanpa memindahkan posisi kaki sehingga termasuk nonlokomotor."
+  },
+  {
+    "q": "Dalam permainan sepak bola mini, gerakan menendang bola ke arah gawang lawan disebut ....",
+    "p": ["Menembak bola (shooting)", "Menangkap bola", "Memukul bola", "Melompati bola"],
+    "b": 0,
+    "bahas": "Shooting adalah tendangan yang diarahkan ke gawang untuk mencetak gol."
+  },
+  {
+    "q": "Saat menangkap bola yang datang melambung dari atas, posisi kedua telapak tangan yang benar adalah ....",
+    "p": [
+      "Diangkat ke atas di depan wajah dengan jari-jari terbuka membentuk mangkuk menghadap arah datangnya bola",
+      "Disembunyikan di belakang punggung",
+      "Dikepalkan rapat seperti tinju",
+      "Diletakkan di atas lutut"
+    ],
+    "b": 0,
+    "bahas": "Membentuk mangkuk dengan jari-jari lentur meredam benturan bola saat ditangkap."
+  },
+  {
+    "q": "Dalam permainan lempar tangkap bola berpasangan, gerakan melempar bola menyusur tanah dilakukan dengan cara mengayunkan tangan dari ....",
+    "p": ["Bawah ke depan sejajar permukaan tanah", "Atas kepala tinggi-tinggi", "Belakang punggung memutar", "Samping telinga"],
+    "b": 0,
+    "bahas": "Lemparan menyusur tanah membuat bola menggelinding rendah di atas tanah."
+  },
+  {
+    "q": "Permainan tradisional egrang batok kelapa atau bakiak beregu melatih keseimbangan tubuh serta .... antar-teman.",
+    "p": ["Kekompakan dan kerja sama", "Pertengkaran", "Sikap egois", "Kemalasan"],
+    "b": 0,
+    "bahas": "Bakiak beregu hanya bisa melaju cepat jika langkah seluruh anggota regu kompak."
+  },
+  {
+    "q": "Gerakan push-up bertumpu pada lutut (push-up modifikasi untuk anak SD) melatih kekuatan otot ....",
+    "p": ["Lengan, bahu, dan dada", "Betis", "Leher", "Telinga"],
+    "b": 0,
+    "bahas": "Push-up melatih otot tubuh bagian atas terutama lengan dan dada."
+  },
+  {
+    "q": "Gerakan duduk berlunjur dengan kedua kaki dibuka lebar membentuk huruf V lalu membungkuk meraih ujung kaki melatih .... otot punggung dan paha.",
+    "p": ["Kelenturan", "Kecepatan lari", "Kekuatan gigi", "Keseimbangan satu kaki"],
+    "b": 0,
+    "bahas": "Peregangan duduk huruf V melenturkan otot punggung bawah dan paha bagian dalam."
+  },
+  {
+    "q": "Sarapan pagi sebelum berangkat ke sekolah dan mengikuti pelajaran PJOK sangat penting karena ....",
+    "p": ["Memberikan sumber energi agar tubuh kuat berolahraga dan otak mudah berkonsentrasi belajar", "Membuat perut sakit saat berjalan", "Menyebabkan mengantuk di lapangan", "Mengurangi kekuatan otot"],
+    "b": 0,
+    "bahas": "Sarapan pagi mengisi cadangan energi tubuh setelah berpuasa selama tidur malam."
+  },
+  {
+    "q": "Jika rumah memiliki ruang tamu atau kamar tidur yang bersih dan rapi, manfaatnya bagi kesehatan penghuni rumah adalah ....",
+    "p": ["Udara segar bebas debu, terhindar dari sarang nyamuk/kuman, dan nyaman beristirahat", "Banyak nyamuk bersarang di sudut kamar", "Udara pengap dan berbau", "Mudah terserang batuk dan pilek"],
+    "b": 0,
+    "bahas": "Rumah yang bersih dan berventilasi baik mencegah penyakit saluran pernapasan dan DBD."
+  },
+  {
+    "q": "Cara menjaga kebersihan tempat tidur setelah bangun pagi setiap hari adalah ....",
+    "p": ["Merapikan selimut, menepuk bantal, dan membuka jendela kamar agar sinar matahari masuk", "Membiarkan selimut berantakan di lantai", "Makan camilan remah-remah di atas kasur", "Menutup rapat jendela kamar sepanjang hari"],
+    "b": 0,
+    "bahas": "Sinar matahari pagi dan sirkulasi udara membunuh kuman serta tungau di kamar tidur."
+  },
+  {
+    "q": "Posisi duduk yang benar saat menulis dan membaca buku di kelas agar tulang punggung tidak bengkok adalah ....",
+    "p": ["Duduk tegak dengan punggung bersandar nyaman pada kursi dan jarak mata ke buku sekitar 30 cm", "Membungkuk menempelkan dagu ke meja", "Miring ke kiri atau ke kanan terus-menerus", "Tiduran di atas meja belajar"],
+    "b": 0,
+    "bahas": "Sikap duduk tegak menjaga pertumbuhan tulang belakang anak tetap lurus dan sehat."
+  },
+  {
+    "q": "Saat berjalan membawa tas sekolah yang berisi buku pelajaran, cara memakai tas ransel yang paling sehat untuk tulang punggung adalah ....",
+    "p": ["Memakai kedua tali bahu tas di punggung kiri dan kanan secara seimbang", "Menyampirkan tas berat hanya di satu bahu saja", "Menjinjing tas berat dengan satu tangan terus-menerus", "Menaruh tas di atas kepala"],
+    "b": 0,
+    "bahas": "Kedua tali ransel membagi beban secara merata pada bahu kiri dan kanan."
+  },
+  {
+    "q": "Sebelum memulai pelajaran PJOK di lapangan, kita wajib melakukan pemanasan selama 5–10 menit agar terhindar dari ....",
+    "p": ["Cedera otot dan keseleo", "Rasa haus", "Keringat sehat", "Semangat belajar"],
+    "b": 0,
+    "bahas": "Pemanasan meningkatkan suhu otot dan kelenturan sendi sebelum berolahraga."
+  },
+  {
+    "q": "Setelah selesai berolahraga, kita melakukan pendinginan yang ditandai dengan gerakan ....",
+    "p": ["Mengayun lengan perlahan dan menarik napas dalam-dalam sambil berjalan santai", "Berlari secepat-cepatnya keliling lapangan", "Melompat setinggi-tingginya", "Push-up sekuat tenaga"],
+    "b": 0,
+    "bahas": "Gerakan ringan dan pengaturan napas membantu tubuh kembali rileks."
+  },
+  {
+    "q": "Sikap sportif yang harus ditunjukkan siswa kelas 2 SD ketika timnya kalah dalam permainan olahraga adalah ....",
+    "p": ["Mengucapkan selamat kepada tim pemenang dengan tersenyum dan tetap bersemangat berlatih", "Menangis dan marah-marah menyalahkan teman", "Mengejek tim pemenang", "Tidak mau bersalaman setelah pertandingan"],
+    "b": 0,
+    "bahas": "Menerima kekalahan dengan lapang dada adalah wujud sportivitas sejati."
+  },
+  {
+    "q": "Kegiatan olahraga bersama teman-teman di sekolah maupun di lingkungan rumah bermanfaat untuk mempererat ....",
+    "p": ["Persahabatan dan kerukunan", "Permusuhan", "Pertengkaran", "Sikap sombong"],
+    "b": 0,
+    "bahas": "Bermain olahraga bersama menumbuhkan rasa kebersamaan, saling menghargai, dan kerukunan."
+  }
+]);
