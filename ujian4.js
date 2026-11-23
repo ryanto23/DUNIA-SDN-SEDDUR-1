@@ -5395,3 +5395,174 @@ window.tambahPaketUjian("4", "kesenian", "UTS Semester 2", [
   }
 ]);
 
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("4", "pjok", "UAS Semester 2", [
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><rect x='25' y='52' width='135' height='10' rx='4' fill='#38bdf8'/><path d='M45 48 Q75 28 105 48 Q125 32 145 48' stroke='#0369a1' fill='none' stroke-width='3'/><text x='92' y='24' font-size='9' font-weight='bold' text-anchor='middle' fill='#0369a1'>SENAM LANTAI</text><text x='92' y='36' font-size='8' text-anchor='middle' fill='#0f172a'>Guling Depan &amp; Guling Belakang</text></svg>",
+    "q": "Perhatikan gambar di atas! Saat melakukan gerakan guling belakang (roll belakang) pada senam lantai, sikap awal tubuh adalah ....",
+    "p": [
+      "Jongkok membelakangi matras dengan kedua telapak tangan ditekuk di samping telinga menghadap ke atas",
+      "Berdiri menghadap matras dengan kedua tangan lurus ke depan",
+      "Tidur telungkup di atas matras",
+      "Berdiri dengan satu kaki di tengah lapangan"
+    ],
+    "b": 0,
+    "bahas": "Pada guling belakang, posisi jongkok membelakangi matras dan telapak tangan di samping telinga siap menolak matras."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/><path d='M20 46 Q45 38 70 46 T120 46 T165 46' stroke='#2563eb' fill='none' stroke-width='3'/><circle cx='65' cy='32' r='7' fill='#f59e0b'/><path d='M52 38 Q42 46 56 50 M78 38 Q88 46 74 50' stroke='#1e3a8a' fill='none' stroke-width='2.5'/><text x='128' y='32' font-size='9' font-weight='bold' text-anchor='middle' fill='#1e3a8a'>RENANG GAYA</text><text x='128' y='44' font-size='9' font-weight='bold' text-anchor='middle' fill='#1e3a8a'>DADA (KATAK)</text></svg>",
+    "q": "Perhatikan ilustrasi di atas! Gerakan kaki pada renang gaya dada menyerupai gerakan kaki katak saat berenang, yaitu dengan urutan ....",
+    "p": [
+      "Menarik kedua tumit ke arah pinggul, memutar telapak kaki ke luar, lalu mendorong ke belakang hingga kedua kaki rapat lurus",
+      "Menggerakkan kaki naik turun bergantian seperti menggunting lurus",
+      "Menekuk satu kaki dan mengikat kaki lainnya",
+      "Menyilangkan kedua kaki diam di belakang"
+    ],
+    "b": 0,
+    "bahas": "Gerakan kaki renang gaya dada terdiri dari fase menarik, membuka/memutar, dan mendorong rapat."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#fee2e2' stroke='#dc2626' stroke-width='2'/><rect x='30' y='24' width='40' height='34' rx='6' fill='#ef4444'/><line x1='50' y1='31' x2='50' y2='51' stroke='#fff' stroke-width='4'/><line x1='40' y1='41' x2='60' y2='41' stroke='#fff' stroke-width='4'/><text x='122' y='36' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>PERTOLONGAN</text><text x='122' y='49' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>PERTAMA (P3K)</text></svg>",
+    "q": "Perhatikan simbol kotak P3K di atas! Pertolongan pertama yang tepat ketika siswa mengalami luka gores ringan akibat terjatuh saat berolahraga adalah ....",
+    "p": [
+      "Membersihkan luka dengan air bersih mengalir atau cairan antiseptik lalu menutupnya dengan plester steril",
+      "Menaburkan tanah atau pasir ke atas luka",
+      "Membiarkan luka kotor terkena debu lapangan",
+      "Menggaruk luka dengan kuku yang panjang"
+    ],
+    "b": 0,
+    "bahas": "Membersihkan luka dengan antiseptik mencegah infeksi bakteri pada jaringan kulit yang terbuka."
+  },
+  {
+    "q": "Dalam permainan sepak bola mini, teknik menghentikan bola datar yang bergulir di tanah menggunakan kaki bagian dalam disebut ....",
+    "p": ["Mengontrol bola (stopping)", "Menyundul bola (heading)", "Melempar bola ke dalam (throw-in)", "Menendang penalti"],
+    "b": 0,
+    "bahas": "Stopping atau mengontrol bola bertujuan menguasai bola agar mudah dioper atau digiring kembali."
+  },
+  {
+    "q": "Permainan bola voli mini dimainkan oleh dua regu yang dipisahkan oleh net. Teknik dasar memukul bola dari bawah menggunakan kedua lengan rapat lurus ke depan disebut ....",
+    "p": ["Passing bawah", "Passing atas", "Servis atas", "Smash"],
+    "b": 0,
+    "bahas": "Passing bawah digunakan untuk menerima bola servis atau bola rendah dari lawan."
+  },
+  {
+    "q": "Dalam permainan bola basket mini, teknik mengoper bola dengan cara memantulkannya terlebih dahulu ke lantai sebelum diterima teman disebut ....",
+    "p": ["Bounce pass (operan pantul)", "Chest pass (operan dada)", "Overhead pass (operan atas kepala)", "Lay-up shoot"],
+    "b": 0,
+    "bahas": "Bounce pass efektif digunakan untuk melewati penjagaan lawan yang bertubuh tinggi."
+  },
+  {
+    "q": "Dalam permainan kasti atau rounders, regu yang bertugas mematikan pelari lawan dengan cara menyentuhkan atau melemparkan bola ke bagian tubuh tertentu disebut regu ....",
+    "p": ["Penjaga", "Pemukul", "Pelari", "Penonton"],
+    "b": 0,
+    "bahas": "Regu penjaga bertugas menangkap bola dan menghentikan perolehan nilai regu pemukul."
+  },
+  {
+    "q": "Dalam cabang atletik nomor lari jarak pendek (sprint), aba-aba start jongkok yang benar sebelum pelari melesat berlari adalah ....",
+    "p": ["Bersedia – Siap – Ya (bunyi peluit)", "Mulai – Jalan – Berhenti", "Siap – Duduk – Lari", "Satu – Dua – Lompat"],
+    "b": 0,
+    "bahas": "Start jongkok menggunakan tiga urutan aba-aba resmi: Bersedia, Siap, dan Ya."
+  },
+  {
+    "q": "Dalam cabang bela diri pencak silat, sikap dasar berdiri dengan posisi kaki tertentu untuk memperkukuh tumpuan tubuh saat menyerang maupun bertahan disebut sikap ....",
+    "p": ["Kuda-kuda", "Lilin", "Kapal terbang", "Kayang"],
+    "b": 0,
+    "bahas": "Sikap kuda-kuda menjadi dasar keseimbangan dan kekuatan dalam pencak silat."
+  },
+  {
+    "q": "Gerakan kayang dalam senam lantai bermanfaat untuk melatih kelenturan otot ....",
+    "p": ["Punggung, pinggang, dan bahu", "Jari kaki dan tumit", "Leher bagian depan", "Kelopak mata"],
+    "b": 0,
+    "bahas": "Kayang melengkungkan tubuh ke belakang dengan tumpuan kedua tangan dan kaki sehingga melatih kelenturan punggung."
+  },
+  {
+    "q": "Unsur utama yang membedakan senam irama (aktivitas gerak berirama) dengan senam lantai adalah ....",
+    "p": ["Keserasian gerakan dengan irama musik, ketukan, atau hitungan yang berkesinambungan", "Wajib menggunakan palang bertingkat", "Dilakukan di dalam air kolam", "Harus berlari secepat-cepatnya tanpa musik"],
+    "b": 0,
+    "bahas": "Senam irama menekankan kontinuitas gerakan, keluwesan, dan ketepatan irama."
+  },
+  {
+    "q": "Langkah biasa dalam aktivitas gerak berirama (senam irama) dikenal juga dengan istilah ....",
+    "p": ["Looppas", "Bijtrekpas", "Galoppas", "Kruispas"],
+    "b": 0,
+    "bahas": "Looppas adalah istilah langkah biasa dalam senam irama."
+  },
+  {
+    "q": "Langkah rapat dalam aktivitas gerak berirama disebut juga dengan istilah ....",
+    "p": ["Bijtrekpas", "Looppas", "Balancepas", "Wisselpas"],
+    "b": 0,
+    "bahas": "Bijtrekpas adalah gerakan melangkahkan satu kaki dan merapatkan kaki lainnya secara berirama."
+  },
+  {
+    "q": "Latihan lari bolak-balik memindahkan bola (shuttle run) bertujuan utama untuk melatih ....",
+    "p": ["Kelincahan dan kecepatan mengubah arah", "Kekuatan otot lengan", "Kelenturan pinggang", "Daya tahan mengapung di air"],
+    "b": 0,
+    "bahas": "Shuttle run melatih kelincahan (agility) kaki saat berhenti dan berbalik arah dengan cepat."
+  },
+  {
+    "q": "Latihan lompat tali (skipping) secara rutin selama beberapa menit setiap hari bermanfaat untuk meningkatkan ....",
+    "p": ["Daya tahan jantung paru, kekuatan otot tungkai, dan koordinasi gerak", "Kelemahan otot kaki", "Rasa kantuk di siang hari", "Kekakuan sendi lutut"],
+    "b": 0,
+    "bahas": "Skipping adalah latihan kardio yang sangat baik untuk kebugaran jasmani dan kekuatan tungkai."
+  },
+  {
+    "q": "Pada renang gaya dada, teknik pengambilan napas dilakukan pada saat ....",
+    "p": ["Kedua tangan melakukan tarikan ke samping dan kepala terangkat ke atas permukaan air", "Kepala berada di dasar kolam", "Kedua kaki sedang lurus diam", "Tubuh sedang tenggelam"],
+    "b": 0,
+    "bahas": "Saat kedua lengan menarik air ke samping-bawah, kepala terangkat untuk menghirup udara lewat mulut."
+  },
+  {
+    "q": "Sikap tubuh (body position) yang benar saat meluncur dalam renang gaya dada adalah ....",
+    "p": ["Lurus mendatar sejajar permukaan air (streamline)", "Tegak lurus berdiri di dalam air", "Membungkuk menekuk lutut di perut", "Miring ke sisi kiri terus-menerus"],
+    "b": 0,
+    "bahas": "Posisi streamline meminimalkan gesekan air sehingga luncuran menjadi jauh dan cepat."
+  },
+  {
+    "q": "Cedera memar ringan akibat terbentur bola atau terjatuh saat olahraga sebaiknya segera dikompres menggunakan .... untuk mengurangi pembengkakan.",
+    "p": ["Air dingin atau es yang dibalut handuk", "Air mendidih panas", "Minyak tanah", "Balsem pedas secara berlebihan"],
+    "b": 0,
+    "bahas": "Kompres dingin (ice pack) menyempitkan pembuluh darah lokal sehingga mengurangi nyeri dan bengkak."
+  },
+  {
+    "q": "Cedera otot terkilir atau keseleo pada pergelangan kaki saat berolahraga paling sering terjadi karena ....",
+    "p": ["Kurang melakukan pemanasan dan peregangan sebelum olahraga atau salah tumpuan saat mendarat", "Minum air putih sebelum bermain", "Memakai sepatu olahraga yang pas", "Melakukan pendinginan setelah selesai"],
+    "b": 0,
+    "bahas": "Pemanasan yang kurang membuat otot dan ligamen sendi belum siap menerima beban gerakan mendadak."
+  },
+  {
+    "q": "Perilaku terpuji dalam pergaulan antar-teman sebaya di lingkungan sekolah ditunjukkan dengan cara ....",
+    "p": ["Saling menghormati, bekerja sama tanpa membeda-bedakan teman, dan menjauhi perundungan (bullying)", "Mengejek kekurangan fisik teman", "Memilih-milih teman hanya yang kaya saja", "Mengajak teman berkelahi"],
+    "b": 0,
+    "bahas": "Menghargai perbedaan dan menolak bullying menciptakan lingkungan belajar dan bermain yang sehat."
+  },
+  {
+    "q": "Salah satu ciri lingkungan sekolah yang sehat dan mendukung aktivitas olahraga siswa adalah ....",
+    "p": ["Halaman bersih bebas sampah plastik dan pecahan kaca, serta memiliki ventilasi udara yang baik", "Banyak genangan air keruh dan sampah berserakan di lapangan", "Saluran air tersumbat dan berbau", "Kamar mandi kotor dan tidak berair"],
+    "b": 0,
+    "bahas": "Lapangan yang bersih dari benda tajam dan sampah mencegah cedera serta penyakit."
+  },
+  {
+    "q": "Zat gizi yang berfungsi sebagai sumber energi utama bagi tubuh siswa saat berolahraga adalah ....",
+    "p": ["Karbohidrat (seperti nasi, jagung, roti, dan kentang)", "Vitamin C saja", "Air mineral saja", "Garam dapur"],
+    "b": 0,
+    "bahas": "Karbohidrat diolah tubuh menjadi glukosa sebagai bahan bakar utama aktivitas fisik."
+  },
+  {
+    "q": "Gerakan meroda (cartwheel) pada senam lantai bertumpu secara bergantian pada ....",
+    "p": ["Kedua tangan dan kedua kaki seperti roda yang berputar", "Kepala dan punggung", "Satu siku saja", "Lutut dan dahi"],
+    "b": 0,
+    "bahas": "Gerakan meroda memutar tubuh ke samping dengan tumpuan tangan dan kaki secara bergantian."
+  },
+  {
+    "q": "Dalam permainan bulu tangkis, pukulan pertama untuk memulai permainan dan mengarahkan kok ke bidang permainan lawan disebut ....",
+    "p": ["Servis", "Smash", "Lob", "Dropshot"],
+    "b": 0,
+    "bahas": "Servis adalah pukulan pembuka yang mengawali setiap reli dalam bulu tangkis."
+  },
+  {
+    "q": "Nilai karakter utama yang harus dijunjung tinggi oleh setiap siswa dalam mengikuti pertandingan olahraga antar-kelas adalah ....",
+    "p": ["Sportivitas, kejujuran, kerja sama tim, dan pengendalian emosi", "Ambisi menang dengan menghalalkan segala cara", "Sombong ketika meraih juara", "Mencaci keputusan wasit"],
+    "b": 0,
+    "bahas": "Olahraga pendidikan bertujuan membentuk karakter sportif, jujur, dan tangguh."
+  }
+]);
