@@ -5141,3 +5141,161 @@ window.tambahPaketUjian("3", "pjok", "UAS Semester 2", [
     "bahas": "Pendinginan mengembalikan kondisi tubuh ke keadaan istirahat secara bertahap."
   }
 ]);
+
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("3", "pjok", "UAS Semester 1", [
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><circle cx='48' cy='40' r='14' fill='#fff' stroke='#0f172a' stroke-width='2'/><polygon points='48,33 54,37 52,44 44,44 42,37' fill='#0f172a'/><path d='M70 40 Q105 22 145 40' stroke='#0284c7' fill='none' stroke-width='2.5' stroke-dasharray='4,2'/><text x='110' y='56' font-size='8' font-weight='bold' text-anchor='middle' fill='#0369a1'>OPERAN KAKI BAGIAN DALAM</text></svg>",
+    "q": "Perhatikan ilustrasi di atas! Dalam permainan sepak bola mini, menendang bola menggunakan kaki bagian dalam bertujuan agar bola melaju ....",
+    "p": ["Terarah dan akurat kepada teman seregu", "Melambung tinggi keluar lapangan", "Berputar ke belakang penjaga gawang sendiri", "Pelan di tempat tanpa berpindah"],
+    "b": 0,
+    "bahas": "Kaki bagian dalam memiliki bidang sentuh lebar sehingga paling akurat untuk mengoper bola jarak pendek hingga menengah."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><circle cx='50' cy='40' r='14' fill='#f97316' stroke='#9a3412' stroke-width='2'/><line x1='72' y1='32' x2='118' y2='32' stroke='#d97706' stroke-width='3'/><polygon points='116,28 126,32 116,36' fill='#d97706'/><text x='115' y='52' font-size='8' font-weight='bold' text-anchor='middle' fill='#92400e'>OPERAN DADA (CHEST PASS)</text></svg>",
+    "q": "Perhatikan gambar di atas! Teknik mengoper bola basket dengan cara mendorong bola dari depan dada menggunakan kedua tangan lurus ke arah dada teman disebut ....",
+    "p": ["Chest pass (operan dada)", "Bounce pass (operan pantul)", "Shooting (menembak)", "Dribbling (menggiring)"],
+    "b": 0,
+    "bahas": "Chest pass dilakukan dari depan dada dengan tolakan kedua tangan lurus agar bola meluncur cepat dan datar."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><circle cx='48' cy='40' r='16' fill='#22c55e'/><text x='48' y='44' font-size='9' font-weight='bold' text-anchor='middle' fill='#fff'>ISTIRAHAT</text><text x='118' y='35' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>POLA TIDUR</text><text x='118' y='48' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>SEHAT</text><text x='118' y='60' font-size='7.5' text-anchor='middle' fill='#334155'>8 - 10 Jam Setiap Malam</text></svg>",
+    "q": "Perhatikan poster kesehatan di atas! Istirahat yang paling baik dan berkualitas untuk memulihkan tenaga tubuh serta membantu pertumbuhan anak kelas 3 SD adalah ....",
+    "p": ["Tidur malam yang cukup selama 8–10 jam", "Bermain gim di ponsel sampai tengah malam", "Menonton televisi hingga larut malam", "Begadang tanpa tidur"],
+    "b": 0,
+    "bahas": "Tidur malam yang cukup memulihkan sel otot, menjaga daya tahan tubuh, dan meningkatkan konsentrasi belajar."
+  },
+  {
+    "q": "Kombinasi gerak berjalan, berlari cepat, dan melompati rintangan bilah bambu rendah melatih kekuatan otot ....",
+    "p": ["Tungkai (kaki) dan koordinasi gerak", "Leher dan telinga", "Jari tangan", "Kelopak mata"],
+    "b": 0,
+    "bahas": "Lari dan lompat rintangan melatih daya ledak otot tungkai serta koordinasi langkah kaki."
+  },
+  {
+    "q": "Dalam permainan bola kasti, kombinasi gerak mengayunkan lengan dari atas ke depan untuk melempar bola jarak jauh disebut lemparan ....",
+    "p": ["Melambung", "Mendatar", "Menyusur tanah", "Memantul ke belakang"],
+    "b": 0,
+    "bahas": "Lemparan melambung menghasilkan lintasan parabola tinggi untuk jarak jauh."
+  },
+  {
+    "q": "Saat memukul bola dalam permainan kasti, pandangan mata pemukul harus selalu tertuju pada ....",
+    "p": ["Arah datangnya bola yang dilambungkan pelambung", "Sepatu sendiri", "Penonton di pinggir lapangan", "Tiang hinggap belakang"],
+    "b": 0,
+    "bahas": "Fokus pandangan pada bola membantu ketepatan perkenaan kayu pemukul dengan bola."
+  },
+  {
+    "q": "Gerakan mengayun kedua lengan ke depan dan belakang sambil menekuk dan meluruskan kedua lutut di tempat termasuk kombinasi gerak ....",
+    "p": ["Nonlokomotor", "Lokomotor", "Manipulatif", "Melayang di udara"],
+    "b": 0,
+    "bahas": "Gerakan dilakukan di tempat tanpa berpindah posisi sehingga termasuk kombinasi gerak nonlokomotor."
+  },
+  {
+    "q": "Gerakan memutar kedua lengan ke depan dan ke belakang dengan sumbu pada sendi bahu bertujuan melatih kelenturan otot ....",
+    "p": ["Bahu dan lengan", "Betis dan pergelangan kaki", "Leher bagian bawah", "Perut"],
+    "b": 0,
+    "bahas": "Memutar lengan melemaskan persendian bahu dan otot lengan."
+  },
+  {
+    "q": "Dalam permainan sepak bola mini, gerakan menggiring bola melewati rintangan kerucut menggunakan kaki bagian dalam dan luar secara bergantian merupakan kombinasi gerak lokomotor dan ....",
+    "p": ["Manipulatif", "Nonlokomotor", "Diam di tempat", "Istirahat"],
+    "b": 0,
+    "bahas": "Berlari berpindah tempat (lokomotor) dipadukan dengan mengendalikan bola (manipulatif)."
+  },
+  {
+    "q": "Dalam permainan bola voli mini, gerakan memantulkan bola ke atas menggunakan kedua lengan yang dirapatkan lurus di depan badan disebut ....",
+    "p": ["Passing bawah", "Passing atas", "Smash", "Servis atas"],
+    "b": 0,
+    "bahas": "Passing bawah dilakukan dengan kedua lengan lurus rapat dan perkenaan bola pada pergelangan tangan bagian dalam."
+  },
+  {
+    "q": "Latihan tarik-menarik berpasangan dengan posisi kaki kuda-kuda depan-belakang bermanfaat untuk melatih kekuatan otot ....",
+    "p": ["Lengan, bahu, dan tumpuan tungkai", "Leher dan telinga", "Jari kaki", "Kelopak mata"],
+    "b": 0,
+    "bahas": "Permainan tarik berpasangan melatih kekuatan tarikan otot lengan dan kekokohan kuda-kuda kaki."
+  },
+  {
+    "q": "Latihan berjalan dengan kedua tangan sementara kedua pergelangan kaki dipegang oleh teman (gerobak dorong) melatih kekuatan otot ....",
+    "p": ["Lengan dan bahu", "Betis", "Leher", "Telinga"],
+    "b": 0,
+    "bahas": "Permainan gerobak dorong menumpukan berat badan tubuh bagian atas pada kedua tangan dan lengan."
+  },
+  {
+    "q": "Latihan lompat tali perorangan (skipping) yang dilakukan secara rutin selama beberapa menit melatih daya tahan jantung paru serta kelincahan ....",
+    "p": ["Tungkai dan pergelangan kaki", "Leher", "Telinga", "Gigi"],
+    "b": 0,
+    "bahas": "Skipping melatih daya tahan kardiorespirasi dan kekuatan pegas pergelangan kaki."
+  },
+  {
+    "q": "Gerakan mencium lutut dalam posisi duduk berlunjur dengan kedua kaki lurus rapat ke depan melatih kelenturan otot ....",
+    "p": ["Punggung dan paha bagian belakang", "Lengan atas", "Leher bagian depan", "Jari tangan"],
+    "b": 0,
+    "bahas": "Mencium lutut meregangkan otot punggung dan hamstring (paha belakang)."
+  },
+  {
+    "q": "Sikap awal saat melakukan gerakan berguling ke depan (roll depan) pada senam lantai diawali dengan meletakkan kedua telapak tangan di atas .... selebar bahu.",
+    "p": ["Matras", "Meja kayu", "Lantai keramik keras tanpa alas", "Batu bata"],
+    "b": 0,
+    "bahas": "Matras empuk melindungi tengkuk dan punggung saat berguling."
+  },
+  {
+    "q": "Posisi dagu yang benar ketika melakukan gerakan guling depan (roll depan) adalah ....",
+    "p": ["Ditempelkan rapat ke dada hingga tengkuk menyentuh matras", "Diangkat menengadah ke atas langit-langit", "Dimiringkan ke bahu kiri", "Ditempelkan ke lutut"],
+    "b": 0,
+    "bahas": "Menempelkan dagu ke dada membuat tubuh membulat seperti roda dan melindungi kepala."
+  },
+  {
+    "q": "Unsur utama yang membuat senam irama terlihat indah dan kompak saat dilakukan bersama teman satu kelas adalah ....",
+    "p": ["Keserasian gerak langkah kaki dan ayunan lengan dengan irama musik atau hitungan", "Berlari saling mendahului tanpa hitungan", "Bergerak cepat sesuka hati tanpa mengikuti musik", "Diam berdiri tanpa menggerakkan tangan"],
+    "b": 0,
+    "bahas": "Senam ritmik mengutamakan keselarasan gerakan tubuh dengan irama."
+  },
+  {
+    "q": "Manfaat utama menjaga keseimbangan antara waktu belajar, bermain, berolahraga, dan beristirahat bagi siswa SD adalah ....",
+    "p": ["Tubuh tetap sehat bugar, pikiran segar, dan prestasi belajar meningkat", "Tubuh cepat lelah dan sering sakit", "Menjadi malas mengerjakan tugas sekolah", "Jam tidur menjadi berantakan"],
+    "b": 0,
+    "bahas": "Keseimbangan aktivitas dan istirahat menjaga kesehatan fisik maupun mental anak."
+  },
+  {
+    "q": "Salah satu tanda tubuh membutuhkan istirahat setelah beraktivitas fisik cukup lama adalah ....",
+    "p": ["Napas terengah-engah, otot terasa lelah, dan keluar banyak keringat", "Perut terasa kenyang sekali", "Rambut tumbuh panjang", "Sepatu terasa sempit"],
+    "b": 0,
+    "bahas": "Rasa lelah adalah sinyal alami tubuh agar kita beristirahat dan minum air putih."
+  },
+  {
+    "q": "Pakaian olahraga yang sudah basah oleh keringat setelah pelajaran PJOK harus segera diganti dan dicuci dengan sabun agar tidak menimbulkan penyakit kulit seperti ....",
+    "p": ["Panu, kurap, dan biang keringat", "Sakit gigi", "Rabun jauh", "Keseleo lutut"],
+    "b": 0,
+    "bahas": "Pakaian lembap dan berkeringat menjadi tempat tumbuhnya jamur penyebab panu dan kurap."
+  },
+  {
+    "q": "Kebersihan lingkungan ruang kelas dan halaman sekolah menjadi tanggung jawab bersama seluruh warga sekolah dengan cara melaksanakan ....",
+    "p": ["Piket kebersihan kelas dan membuang sampah pada tempatnya", "Membuang sisa makanan di laci meja", "Mencoret-coret tembok kamar mandi sekolah", "Membiarkan sampah daun menumpuk di lapangan olahraga"],
+    "b": 0,
+    "bahas": "Piket kelas melatih tanggung jawab dan menjaga kebersihan lingkungan belajar."
+  },
+  {
+    "q": "Minuman yang paling tepat dikonsumsi setelah berolahraga untuk mencegah dehidrasi (kekurangan cairan tubuh) adalah ....",
+    "p": ["Air putih bersih yang sudah matang", "Minuman bersoda dingin", "Air mentah langsung dari keran", "Sirup yang sangat manis"],
+    "b": 0,
+    "bahas": "Air putih menggantikan cairan tubuh yang keluar melalui keringat tanpa efek samping."
+  },
+  {
+    "q": "Pemanasan sebelum berolahraga selalu diawali dengan gerakan peregangan otot dari bagian tubuh atas menuju bagian bawah atau sebaliknya secara berurutan agar ....",
+    "p": ["Seluruh sendi dan otot tubuh siap melakukan gerakan inti tanpa cedera", "Waktu olahraga cepat selesai", "Tubuh langsung kelelahan sebelum bermain", "Suhu tubuh turun drastis"],
+    "b": 0,
+    "bahas": "Pemanasan yang sistematis mempersiapkan seluruh kelompok otot secara merata."
+  },
+  {
+    "q": "Dalam permainan olahraga beregu seperti kasti atau sepak bola mini, sikap menghargai teman yang melakukan kesalahan saat bermain adalah ....",
+    "p": ["Memberi semangat dan membantu memperbaiki posisi bermain bersama-sama", "Memarahi dan mengejeknya di depan teman lain", "Mengeluarkannya dari permainan dengan kasar", "Berhenti bermain sambil marah-marah"],
+    "b": 0,
+    "bahas": "Saling menyemangati membangun kekompakan dan kepercayaan diri tim."
+  },
+  {
+    "q": "Pendinginan (cooling down) setelah selesai pelajaran PJOK bertujuan utama untuk ....",
+    "p": ["Menurunkan denyut jantung dan suhu tubuh secara perlahan ke kondisi normal", "Meningkatkan kecepatan lari maksimal", "Membuat otot menjadi tegang", "Memulai pertandingan baru"],
+    "b": 0,
+    "bahas": "Pendinginan menormalkan peredaran darah dan pernapasan setelah beraktivitas."
+  }
+]);
+
