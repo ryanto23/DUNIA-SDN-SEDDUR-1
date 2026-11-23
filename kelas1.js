@@ -361,11 +361,11 @@ window.DATA_SEDDUR[1] = {
 
 window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
 window.DATA_SEDDUR = window.DATA_SEDDUR || {};
-window.DATA_SEDDUR = window.DATA_SEDDUR || {};
-Object.assign(window.DATA_SEDDUR, {
+window.DATA_SEDDUR[1] = window.DATA_SEDDUR[1] || {};
+Object.assign(window.DATA_SEDDUR[1], {
   pjok: [
     {
-      semester: "Semester 1",
+      semester: "Semester 1 (TA 2026/2027)",
       bab: "Bab 1: Gerak Dasar Lokomotor, Nonlokomotor & Manipulatif",
       soal: [
         { ikon: "🏃", tanya: "Gerakan berpindah tempat seperti berjalan, berlari, dan melompat disebut gerak ....", opsi: ["Lokomotor", "Nonlokomotor", "Manipulatif", "Diam"], kunci: 0, bahas: "Gerak lokomotor adalah gerak tubuh yang berpindah tempat dari satu titik ke titik lain." },
@@ -386,7 +386,7 @@ Object.assign(window.DATA_SEDDUR, {
       ]
     },
     {
-      semester: "Semester 2",
+      semester: "Semester 2 (TA 2026/2027)",
       bab: "Bab 2: Keseimbangan, Senam Lantai, Air & Kebersihan Tubuh",
       soal: [
         { ikon: "🦩", tanya: "Berdiri dengan satu kaki menyerupai burung bangau melatih .... tubuh.", opsi: ["Keseimbangan", "Kecepatan lari", "Kekuatan gigi", "Suara nyanyian"], kunci: 0, bahas: "Berdiri satu kaki adalah latihan keseimbangan statis." },
@@ -407,8 +407,7 @@ Object.assign(window.DATA_SEDDUR, {
       ]
     }
   ],
-
-    madura: [
+  madura: [
     {
       semester: "Semester 1 (TA 2026/2027)",
       bab: "Bab 1: Pangennalan Abha' Dhibi' & Angghuta Badhan",
@@ -452,8 +451,7 @@ Object.assign(window.DATA_SEDDUR, {
       ]
     }
   ],
-
-    kesenian: [
+  kesenian: [
     {
       semester: "Semester 1 (TA 2026/2027)",
       bab: "Bab 1: Seni Rupa (Garis, Bentuk, Warna & Tekstur di Sekitar)",
@@ -496,6 +494,6 @@ Object.assign(window.DATA_SEDDUR, {
         { ikon: "🤝", tanya: "Ketika berlatih menari berkelompok bersama teman sekelas, hal terpenting agar tarian terlihat rapi adalah ....", opsi: ["Kekompakan gerakan dan mengikuti hitungan irama bersama", "Bergerak cepat mendahului teman", "Bercanda dan mendorong teman", "Tidak mau mengikuti latihan"], kunci: 0, bahas: "Kekompakan membuat tarian kelompok tampak serasi dan enak dipandang." }
       ]
     }
-  ],
-};
+  ]
+});
 
