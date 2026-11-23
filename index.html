@@ -2,13 +2,14 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-select: none" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>DUNIA SDN SEDDUR 1 - Kurikulum Merdeka 2026/2027</title>
   <link href="https://googleapis.com" rel="stylesheet">
-  <style>
+
+    <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Fredoka', sans-serif; -webkit-tap-highlight-color: transparent; user-select: none; }
     html, body { width: 100%; max-width: 100%; overflow-x: hidden; background: linear-gradient(180deg, #bae6fd 0%, #fef08a 55%, #fed7aa 100%); min-height: 100dvh; color: #1e293b; }
     body.mode-cbt { background: #f1f5f9 !important; }
@@ -18,7 +19,8 @@
     body.mode-cbt header { background: #0f172a; border-bottom: 4px solid #3b82f6; }
     header h1 { font-size: 1.22rem; letter-spacing: 0.5px; text-shadow: 1px 2px 0 rgba(0,0,0,0.2); }
     header p { font-size: 0.76rem; opacity: 0.95; margin-top: 2px; }
-    .container { width: 100%; max-width: 640px; margin: 12px auto; padding: 0 12px; }
+
+          .container { width: 100%; max-width: 640px; margin: 12px auto; padding: 0 12px; }
     .card { width: 100%; background: #ffffff; border-radius: 22px; padding: 16px 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); border: 3px solid #e2e8f0; margin-bottom: 12px; text-align: center; animation: popIn 0.25s ease; }
     .card-cbt { border-radius: 14px; border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; }
     @keyframes popIn { 0% { transform: scale(0.95); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
@@ -27,7 +29,7 @@
     .anim-bounce { display: inline-block; animation: bounce 1.8s infinite; }
     .judul-bergerak { display: inline-block; font-size: 1.24rem; font-weight: 700; animation: gerakJudul 2.4s ease-in-out infinite; margin-top: 4px; }
 
-        .banner-beranda { width: 100%; height: auto; max-height: 75px; object-fit: contain; background: #f8fafc; border-radius: 12px; border: 2px solid #bae6fd; margin: 0 auto 10px; display: block; box-shadow: 0 3px 8px rgba(0,0,0,0.06); }
+          .banner-beranda { width: 100%; height: auto; max-height: 75px; object-fit: contain; background: #f8fafc; border-radius: 12px; border: 2px solid #bae6fd; margin: 0 auto 10px; display: block; box-shadow: 0 3px 8px rgba(0,0,0,0.06); }
     .svg-soal-wrap { margin: 8px auto; display: flex; justify-content: center; align-items: center; max-width: 100%; overflow-x: auto; }
     .svg-opsi-wrap { display: inline-flex; align-items: center; justify-content: center; max-width: 100%; }
     .input-nama, .input-form, .textarea-kode { width: 100%; padding: 11px 13px; border-radius: 14px; border: 2px solid #7dd3fc; font-size: 0.96rem; font-weight: 600; color: #0f172a; outline: none; margin: 6px 0; background: #f0f9ff; user-select: text; }
@@ -35,7 +37,8 @@
     .input-nama:focus, .input-form:focus, .textarea-kode:focus { border-color: #0284c7; background: #ffffff; }
     .textarea-kode { font-family: monospace; font-size: 0.82rem; min-height: 150px; background: #0f172a; color: #38bdf8; border-color: #334155; }
     .label-form { display: block; text-align: left; font-size: 0.84rem; font-weight: 700; color: #334155; margin-top: 8px; }
-    .motivasi-card { background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); border: 3px solid #38bdf8; border-radius: 24px; padding: 22px 16px; margin-top: 8px; text-align: center; box-shadow: 0 10px 24px rgba(2, 132, 199, 0.14); }
+
+          .motivasi-card { background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); border: 3px solid #38bdf8; border-radius: 24px; padding: 22px 16px; margin-top: 8px; text-align: center; box-shadow: 0 10px 24px rgba(2, 132, 199, 0.14); }
     .motivasi-teks { font-size: 1.12rem; font-weight: 700; color: #0f172a; line-height: 1.55; margin: 10px 0; font-style: italic; }
     .motivasi-penulis { display: inline-block; background: #fef08a; color: #854d0e; border: 2px solid #facc15; padding: 5px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; }
     .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; width: 100%; background: #ffffff; border-top: 3px solid #cbd5e1; box-shadow: 0 -4px 16px rgba(0,0,0,0.1); display: flex; justify-content: space-around; align-items: center; padding: 6px 4px; z-index: 50; }
@@ -44,7 +47,7 @@
     .nav-item .nav-ikon { font-size: 1.35rem; line-height: 1; }
     .nav-item.aktif { color: #0284c7; background: #e0f2fe; }
 
-        .kelas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+          .kelas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
     .kelas-btn { border: none; border-radius: 18px; padding: 16px 10px; color: #fff; font-size: 1.12rem; font-weight: 700; cursor: pointer; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; display: flex; flex-direction: column; align-items: center; gap: 4px; }
     .kelas-btn:active { transform: translateY(3px); box-shadow: none; }
     .kelas-sub { font-size: 0.74rem; font-weight: 600; background: rgba(255,255,255,0.25); padding: 2px 8px; border-radius: 8px; }
@@ -54,7 +57,8 @@
     .k4 { background: linear-gradient(135deg, #10b981, #34d399); }
     .k5 { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
     .k6 { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
-    .menu-btn { width: 100%; border: none; border-radius: 18px; padding: 14px 15px; margin-bottom: 10px; color: #fff; font-size: 1.02rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; text-align: left; }
+
+          .menu-btn { width: 100%; border: none; border-radius: 18px; padding: 14px 15px; margin-bottom: 10px; color: #fff; font-size: 1.02rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; text-align: left; }
     .menu-btn:active { transform: translateY(3px); box-shadow: none; }
     .badge-jumlah { background: rgba(255,255,255,0.28); padding: 4px 10px; border-radius: 10px; font-size: 0.76rem; white-space: nowrap; flex-shrink: 0; }
     .m-pancasila { background: linear-gradient(135deg, #e11d48, #fb7185); }
@@ -68,7 +72,7 @@
     .bab-btn { background: #ffffff; color: #1e293b; border: 3px solid #7dd3fc; box-shadow: 0 4px 0 #7dd3fc; }
     .bab-badge { background: #e0f2fe; color: #0369a1; padding: 4px 9px; border-radius: 10px; font-size: 0.76rem; white-space: nowrap; flex-shrink: 0; }
 
-        .top-bar { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+          .top-bar { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
     .bg-kembali { background: #ffffff; color: #475569; border: 2px solid #cbd5e1; padding: 7px 12px; border-radius: 12px; font-size: 0.85rem; font-weight: 700; cursor: pointer; touch-action: manipulation; }
     .progress-wrap { background: #e2e8f0; height: 9px; border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
     .progress-fill { background: linear-gradient(90deg, #38bdf8, #22c55e); height: 100%; width: 0%; transition: width 0.3s ease; }
@@ -79,14 +83,16 @@
     .opsi-btn { width: 100%; background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 12px 8px; font-size: 1rem; font-weight: 700; color: #1e293b; cursor: pointer; box-shadow: 0 4px 0 #cbd5e1; min-height: 56px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.25; }
     .benar { background: #dcfce7 !important; border-color: #22c55e !important; color: #15803d !important; box-shadow: 0 4px 0 #22c55e !important; }
     .salah { background: #fee2e2 !important; border-color: #ef4444 !important; color: #b91c1c !important; box-shadow: 0 4px 0 #ef4444 !important; }
-    .star-bar { font-size: 0.85rem; font-weight: 700; color: #d97706; background: #fef3c7; padding: 6px 10px; border-radius: 12px; border: 2px solid #fde68a; white-space: nowrap; }
+
+          .star-bar { font-size: 0.85rem; font-weight: 700; color: #d97706; background: #fef3c7; padding: 6px 10px; border-radius: 12px; border: 2px solid #fde68a; white-space: nowrap; }
     .combo-badge { display: inline-block; background: #ffedd5; color: #c2410c; border: 2px solid #fdba74; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; }
     .info-bahas { background: #eff6ff; border: 2px solid #93c5fd; color: #1e40af; border-radius: 14px; padding: 10px; margin-top: 10px; font-size: 0.88rem; font-weight: 600; text-align: left; }
     .sertifikat { background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 4px solid #f59e0b; border-radius: 22px; padding: 18px 14px; margin: 10px 0; text-align: center; }
     .btn-aksi { background: linear-gradient(135deg, #0ea5e9, #0284c7); color: #fff; border: none; padding: 12px 18px; border-radius: 14px; font-size: 0.96rem; font-weight: 700; cursor: pointer; margin-top: 8px; box-shadow: 0 4px 0 #0369a1; }
     .btn-sukses { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 0 #047857; }
     .btn-bahaya { background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 4px 0 #b91c1c; }
-    .cbt-header-info { background: #0f172a; color: #fff; padding: 10px 14px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.86rem; }
+
+          .cbt-header-info { background: #0f172a; color: #fff; padding: 10px 14px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.86rem; }
     .timer-box { background: #dc2626; color: #fff; padding: 5px 12px; border-radius: 8px; font-family: monospace; font-size: 1.05rem; font-weight: 700; letter-spacing: 1px; }
     .cbt-soal-teks { font-size: 1.05rem; line-height: 1.55; color: #0f172a; margin: 12px 0 16px; padding: 14px; background: #f8fafc; border-left: 4px solid #2563eb; border-radius: 8px; white-space: pre-line; }
     .cbt-opsi-list { display: flex; flex-direction: column; gap: 10px; }
@@ -95,7 +101,8 @@
     .cbt-opsi-terpilih { background: #dbeafe !important; border-color: #2563eb !important; color: #1e3a8a !important; }
     .cbt-huruf { width: 30px; height: 30px; border-radius: 50%; background: #e2e8f0; color: #334155; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
     .cbt-opsi-terpilih .cbt-huruf { background: #2563eb; color: #fff; }
-    .nav-nomor-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-content: center; }
+
+          .nav-nomor-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-content: center; }
     .nav-nomor-btn { width: 34px; height: 34px; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; font-weight: 700; font-size: 0.84rem; cursor: pointer; color: #334155; }
     .nav-nomor-btn.aktif { border: 2px solid #0f172a; transform: scale(1.08); }
     .nav-nomor-btn.terjawab { background: #2563eb; color: #fff; border-color: #1d4ed8; }
@@ -135,7 +142,7 @@
     </button>
   </nav>
 
-  <script>
+      <script>
     window.DATA_SEDDUR = {};
     window.DATABASE_BAB = {};
     window.DATABASE_SOAL = {};
@@ -144,6 +151,7 @@
       bindo: { "Sesi 1": [], "Sesi 2": [], "Sesi 3": [] },
       mtk: { "Sesi 1": [], "Sesi 2": [], "Sesi 3": [] }
     };
+    window.PASSWORD_ADMIN_DEFAULT = "admin123";
     window.KODE_UJIAN_DEFAULT = {
       "1": "KLS1-2026",
       "2": "KLS2-2026",
@@ -158,7 +166,7 @@
       window.MAPEL_KUSTOM[kode] = { judul: judul, ikon: "📘", kelasCss: "m-ipas" };
     };
 
-    window.tambahPaketUjian = function(kelas, mapel, namaPaketAtauBab, daftarSoalBaru) {
+            window.tambahPaketUjian = function(kelas, mapel, namaPaketAtauBab, daftarSoalBaru) {
       const kls = String(kelas);
       const keyMapel = `${kls}-${mapel}`;
       const isUTS_UAS = ["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(namaPaketAtauBab);
@@ -180,7 +188,7 @@
       window.DATA_TKA[mapel][sesi] = window.DATA_TKA[mapel][sesi].concat(daftarSoalBaru);
     };
 
-        (function() {
+    (function() {
       const versiBaru = Date.now();
       const daftarFile = [
         "kode_ujian.js", "tka.js",
@@ -192,7 +200,8 @@
       });
     })();
   </script>
-  <script>
+
+      <script>
     let audioCtx = null;
     let audioCadangan = new Audio();
     audioCadangan.preload = "auto";
@@ -236,7 +245,7 @@
       }
     }
 
-        function ucapkan(teks) {
+            function ucapkan(teks) {
       if (modeAplikasi === "ujian") return;
       bukaKunciAudio();
       if (!teks) return;
@@ -276,7 +285,7 @@
       return salinan;
     }
 
-    let modeAplikasi = "kuis";
+            let modeAplikasi = "kuis";
     let sedangModeTKA = false;
     let namaSiswa = "Siswa Hebat";
     let kodeUnikPeserta = "-";
@@ -314,7 +323,7 @@
       { kode: "UAS Semester 2", judul: "UAS Semester 2", waktuInfo: "90 Menit Total", ikon: "📕", warna: "m-bing" }
     ];
 
-        function getInfoMapel(kode) {
+            function getInfoMapel(kode) {
       if (daftarNamaMapel[kode]) return daftarNamaMapel[kode];
       if (window.MAPEL_KUSTOM && window.MAPEL_KUSTOM[kode]) return window.MAPEL_KUSTOM[kode];
       const judulRapi = String(kode).replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
@@ -353,7 +362,7 @@
       }
     }
 
-    function formatWaktu(detik) {
+            function formatWaktu(detik) {
       const m = Math.floor(detik / 60);
       const s = detik % 60;
       return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
@@ -368,7 +377,7 @@
     }
 
     function getPasswordAdmin() {
-      try { return localStorage.getItem("seddur_admin_pass") || "admin123"; } catch (e) { return "admin123"; }
+      return String(window.PASSWORD_ADMIN_DEFAULT || "admin123").trim();
     }
 
     function simpanRekapNilai(record) {
@@ -413,7 +422,7 @@
       return hasil;
     }
 
-        function tampilBeranda() {
+            function tampilBeranda() {
       hentikanTimer();
       sedangModeTKA = false;
       document.body.classList.remove("mode-cbt");
@@ -465,7 +474,7 @@
 
     function pilihKelasKuis(kls) { mainkanEfek('klik'); kelasAktif = kls; tampilMenuMapel(); }
 
-    function tampilMenuMapel() {
+            function tampilMenuMapel() {
       const dataKelas = window.DATA_SEDDUR[kelasAktif];
       if (!dataKelas) { alert(`File materi kelas${kelasAktif}.js belum ditemukan di folder yang sama!`); return; }
       const kodeMapelTersedia = Object.keys(dataKelas);
@@ -509,7 +518,7 @@
       tampilPertanyaanKuis();
     }
 
-        function tampilMenuMapelTKA() {
+            function tampilMenuMapelTKA() {
       hentikanTimer();
       document.body.classList.add("mode-cbt");
       setNavAktif("nav-kuis");
@@ -577,7 +586,7 @@
       jalankanMesinCBT(daftarSoal);
     }
 
-        function bukaMenuKelasUjian() {
+            function bukaMenuKelasUjian() {
       hentikanTimer();
       sedangModeTKA = false;
       document.body.classList.add("mode-cbt");
@@ -628,7 +637,7 @@
       tampilKategoriUjian();
     }
 
-        function tampilKategoriUjian() {
+            function tampilKategoriUjian() {
       hentikanTimer();
       document.body.classList.remove("sedang-ujian");
 
@@ -724,7 +733,7 @@
         ${tombolMapel}`;
     }
 
-        function mulaiUjianBabSpesifik(kodeMapel, idxBab) {
+            function mulaiUjianBabSpesifik(kodeMapel, idxBab) {
       const infoMapel = getInfoMapel(kodeMapel);
       const daftarBab = getDaftarBabSinkron(kelasAktif, kodeMapel);
       const targetBab = daftarBab[idxBab];
@@ -832,7 +841,7 @@
       }, 1000);
     }
 
-        function renderSoalUjianCBT() {
+            function renderSoalUjianCBT() {
       const s = soalPermainan[indeksSoal];
       const hurufOpsi = ["A", "B", "C", "D"];
       const isBab = kodeKategoriUjianAktif === "latihan_bab";
@@ -924,7 +933,7 @@
       renderSoalUjianCBT();
     }
 
-        function selesaiDanKumpulkanUjian(otomatis) {
+    function selesaiDanKumpulkanUjian(otomatis) {
       const belumDijawab = jawabanSiswaUjian.filter(j => j === null).length;
       if (!otomatis) {
         const pesanKonfirm = belumDijawab > 0
@@ -1004,7 +1013,7 @@
         </div>`;
     }
 
-        function tampilPertanyaanKuis() {
+            function tampilPertanyaanKuis() {
       if (indeksSoal >= soalPermainan.length) { tampilSertifikatKuis(); return; }
       sudahMenjawab = false;
       const s = soalPermainan[indeksSoal];
@@ -1076,7 +1085,7 @@
         </div>`;
     }
 
-        function tampilLoginAdmin() {
+            function tampilLoginAdmin() {
       hentikanTimer();
       sedangModeTKA = false;
       document.body.classList.remove("mode-cbt");
@@ -1087,32 +1096,36 @@
         <div class="card">
           <div style="font-size:2.5rem;">🛡️</div>
           <h2 style="color:#0f172a; font-size:1.2rem; margin-top:4px;">Login Administrator</h2>
-          <p style="color:#64748b; font-size:0.82rem; margin-bottom:10px;">Masukkan password admin (Default: <strong>admin123</strong>)</p>
+          <p style="color:#64748b; font-size:0.82rem; margin-bottom:10px;">Masukkan password admin sesuai pengaturan pada file <code>kode_ujian.js</code></p>
           <input type="password" id="inputPassAdmin" class="input-nama" placeholder="Masukkan Password Admin..." />
           <button class="btn-aksi" style="width:100%;" onclick="prosesLoginAdmin()">Masuk Dashboard Admin 🔓</button>
         </div>`;
     }
 
     function prosesLoginAdmin() {
-      if (document.getElementById("inputPassAdmin").value === getPasswordAdmin()) { mainkanEfek('benar'); tampilDashboardAdmin(); }
-      else { mainkanEfek('salah'); alert("Password Admin salah!"); }
+      if (document.getElementById("inputPassAdmin").value.trim() === getPasswordAdmin()) {
+        mainkanEfek('benar');
+        tampilDashboardAdmin();
+      } else {
+        mainkanEfek('salah');
+        alert("Password Admin salah!");
+      }
     }
 
     function tampilDashboardAdmin() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Keluar Admin</button><div class="star-bar">⚙️ Panel Admin</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI (8 Mapel + Mapel Baru + TKA) & rekap nilai</p></div>
-        <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI & Kode GitHub</span><span>▶️</span></button>
-        <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>2. 📊 Lihat & Filter Rekap Nilai Siswa</span><span>▶️</span></button>
-        <button class="menu-btn m-pancasila" onclick="adminUbahPassword()"><span>3. 🔑 Ubah Password Admin</span><span>▶️</span></button>`;
+        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI (8 Mapel + Mapel Baru + TKA) &amp; rekap nilai spesifik</p></div>
+        <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI &amp; Kode GitHub</span><span>▶️</span></button>
+        <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>2. 📊 Lihat &amp; Filter Rekap Nilai Siswa</span><span>▶️</span></button>`;
     }
 
-        function adminGeneratorSoal() {
+            function adminGeneratorSoal() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal AI</div></div>
         <div class="card" style="text-align:left;">
-          <h3 style="color:#0284c7; text-align:center;">Generator Soal AI & Kode GitHub</h3>
-          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Mendukung PAI, B. Madura, Kesenian, Mapel Umum, Tambah Mapel Baru & Tes TKA</p>
+          <h3 style="color:#0284c7; text-align:center;">Generator Soal AI &amp; Kode GitHub</h3>
+          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Mendukung PAI, B. Madura, Kesenian, Mapel Umum, Tambah Mapel Baru &amp; Tes TKA</p>
 
           <label class="label-form">1. Pilih Target File:</label>
           <select id="genTargetMode" class="input-form" onchange="ubahModeTargetGenerator()">
@@ -1169,12 +1182,12 @@
           <label class="label-form">5. Topik / Pokok Materi:</label>
           <input type="text" id="genTopik" class="input-form" placeholder="Contoh: Rukun Iman, Basa Enja'-Iya, Seni Rupa, Pecahan..." />
 
-          <label class="label-form">6. Mode Gambar Soal & Jawaban:</label>
+          <label class="label-form">6. Mode Gambar Soal &amp; Jawaban:</label>
           <select id="genModeGambar" class="input-form">
             <option value="Teks Biasa dengan Emoji">Teks Biasa dengan Emoji</option>
             <option value="Soal Bergambar SVG (properti 'svg') dengan Pilihan Teks">Soal Bergambar SVG + Jawaban Teks</option>
             <option value="Soal Teks dengan Pilihan Jawaban Bergambar SVG (properti 'pSvg')">Soal Teks + Jawaban Bergambar SVG</option>
-            <option value="Campuran Soal & Jawaban Bergambar SVG (properti 'svg' & 'pSvg')">Campuran Soal & Jawaban SVG</option>
+            <option value="Campuran Soal & Jawaban Bergambar SVG (properti 'svg' & 'pSvg')">Campuran Soal &amp; Jawaban SVG</option>
           </select>
 
           <label class="label-form">7. Jumlah Soal yang Dibuat:</label>
@@ -1185,9 +1198,9 @@
             <option value="30">30 Soal</option>
           </select>
 
-          <button class="btn-aksi" style="width:100%; margin-top:12px;" onclick="buatKodeSoalGitHub()">⚡ Generate Prompt AI & Kode GitHub</button>
+          <button class="btn-aksi" style="width:100%; margin-top:12px;" onclick="buatKodeSoalGitHub()">⚡ Generate Prompt AI &amp; Kode GitHub</button>
 
-          <label class="label-form" style="margin-top:14px; color:#0284c7;">📋 Hasil 1: Prompt AI (Salin & Tempel ke ChatGPT/Gemini):</label>
+          <label class="label-form" style="margin-top:14px; color:#0284c7;">📋 Hasil 1: Prompt AI (Salin &amp; Tempel ke ChatGPT/Gemini):</label>
           <textarea id="hasilPromptAI" class="textarea-kode" style="min-height:140px; color:#fde047;" readonly placeholder="Klik tombol Generate di atas..."></textarea>
           <button class="btn-aksi" style="width:100%;" onclick="salinTeks('hasilPromptAI')">📋 Salin Prompt AI</button>
 
@@ -1200,7 +1213,7 @@
       togglePilihanBabGenerator();
     }
 
-        function ubahModeTargetGenerator() {
+            function ubahModeTargetGenerator() {
       const target = document.getElementById("genTargetMode").value;
       document.getElementById("blokTargetUjian").style.display = (target === "UJIAN") ? "block" : "none";
       document.getElementById("blokTargetTKA").style.display = (target === "TKA") ? "block" : "none";
@@ -1256,7 +1269,7 @@
       inputBaru.style.display = (val === "__BARU__") ? "block" : "none";
     }
 
-        function buatKodeSoalGitHub() {
+    function buatKodeSoalGitHub() {
       const target = document.getElementById("genTargetMode").value;
       const modeGbr = document.getElementById("genModeGambar").value;
       const jumlah = parseInt(document.getElementById("genJumlah").value, 10);
@@ -1335,38 +1348,42 @@
       alert("✅ Kode berhasil disalin! Silakan tempel di baris paling bawah file GitHub Anda.");
     }
 
-        function adminRekapNilai() {
+            function adminRekapNilai() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar no-print"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">📊 Rekap Nilai Spesifik</div></div>
         <div class="card">
           <h2 style="color:#0284c7; font-size:1.18rem;">Rekap Nilai Ujian SDN Seddur 1</h2>
-          <p style="font-size:0.8rem; color:#64748b;">Pilih Kelas, Mata Pelajaran, Bab/Ujian & Kode Unik secara spesifik agar nilai tidak tercampur</p>
+          <p style="font-size:0.8rem; color:#64748b;">Pilih Kelas, Mata Pelajaran, Bab/Ujian &amp; Kode Unik secara spesifik agar nilai tidak tercampur</p>
 
           <div class="no-print" style="display:grid; grid-template-columns:1fr; gap:6px; margin-top:10px; text-align:left;">
-            <label class="label-form" style="margin-top:2px;">1. Pilih Kelas (Wajib):</label>
+            <label class="label-form" style="margin-top:2px;">1. Pilih Kelas:</label>
             <select id="filterKelas" class="input-form" style="margin:0;" onchange="perbaruiOpsiMapelRekap(); renderTabelNilai();">
-              <option value="1">Kelas 1</option>
-              <option value="2">Kelas 2</option>
-              <option value="3">Kelas 3</option>
-              <option value="4" selected>Kelas 4</option>
-              <option value="5">Kelas 5</option>
-              <option value="6">Kelas 6</option>
+              <option value="ALL">Semua Kelas (1 - 6)</option>
+              <option value="1">Kelas 1 (Spesifik)</option>
+              <option value="2">Kelas 2 (Spesifik)</option>
+              <option value="3">Kelas 3 (Spesifik)</option>
+              <option value="4" selected>Kelas 4 (Spesifik)</option>
+              <option value="5">Kelas 5 (Spesifik)</option>
+              <option value="6">Kelas 6 (Spesifik)</option>
             </select>
 
-            <label class="label-form" style="margin-top:4px;">2. Pilih Mata Pelajaran (Wajib):</label>
+            <label class="label-form" style="margin-top:4px;">2. Pilih Mata Pelajaran:</label>
             <select id="filterMapel" class="input-form" style="margin:0;" onchange="perbaruiOpsiBabRekap(); renderTabelNilai();"></select>
 
             <label class="label-form" style="margin-top:4px;">3. Pilih Jenis Ujian:</label>
             <select id="filterTipeUjian" class="input-form" style="margin:0;" onchange="toggleFilterBabSpesifik(); perbaruiOpsiBabRekap(); renderTabelNilai();">
-              <option value="BAB" selected>Ujian Per Bab (Pilih Bab di Bawah)</option>
-              <option value="UTS Semester 1">UTS Semester 1</option>
-              <option value="UAS Semester 1">UAS Semester 1</option>
-              <option value="UTS Semester 2">UTS Semester 2</option>
-              <option value="UAS Semester 2">UAS Semester 2</option>
+              <option value="ALL" selected>Semua Jenis Ujian (UTS, UAS &amp; Per Bab)</option>
+              <option value="UAS_ALL">Semua UAS (Semester 1 &amp; 2)</option>
+              <option value="UAS Semester 1">UAS Semester 1 (Spesifik)</option>
+              <option value="UAS Semester 2">UAS Semester 2 (Spesifik)</option>
+              <option value="UTS_ALL">Semua UTS (Semester 1 &amp; 2)</option>
+              <option value="UTS Semester 1">UTS Semester 1 (Spesifik)</option>
+              <option value="UTS Semester 2">UTS Semester 2 (Spesifik)</option>
+              <option value="BAB">Ujian Per Bab (Pilih Bab di Bawah)</option>
             </select>
 
-            <div id="wadahFilterBabRekap" style="display:block;">
-              <label class="label-form" style="margin-top:4px; color:#0284c7;">3b. Pilih Bab Spesifik (Sesuai Kelas & Mapel):</label>
+            <div id="wadahFilterBabRekap" style="display:none;">
+              <label class="label-form" style="margin-top:4px; color:#0284c7;">3b. Pilih Bab Spesifik (Sesuai Kelas &amp; Mapel):</label>
               <select id="filterBabSpesifik" class="input-form" style="margin:0; border-color:#0284c7; background:#e0f2fe;" onchange="renderTabelNilai()"></select>
             </div>
 
@@ -1391,14 +1408,16 @@
       renderTabelNilai();
     }
 
-        function perbaruiOpsiMapelRekap() {
-      const fKelas = Number(document.getElementById("filterKelas").value);
+            function perbaruiOpsiMapelRekap() {
+      const fKelasVal = document.getElementById("filterKelas").value;
       const selectMapel = document.getElementById("filterMapel");
-      const daftarKode = getSemuaKodeMapelKelas(fKelas);
-      selectMapel.innerHTML = daftarKode.map(kode => {
-        const info = getInfoMapel(kode);
-        return `<option value="${kode}|${info.judul}">${info.judul}</option>`;
-      }).join("");
+      const klsNum = fKelasVal === "ALL" ? 6 : Number(fKelasVal);
+      const daftarKode = getSemuaKodeMapelKelas(klsNum);
+      selectMapel.innerHTML = `<option value="ALL|Semua Mata Pelajaran">Semua Mata Pelajaran</option>` +
+        daftarKode.map(kode => {
+          const info = getInfoMapel(kode);
+          return `<option value="${kode}|${info.judul}">${info.judul} (Spesifik)</option>`;
+        }).join("");
       perbaruiOpsiBabRekap();
     }
 
@@ -1411,30 +1430,32 @@
     function perbaruiOpsiBabRekap() {
       const selectBab = document.getElementById("filterBabSpesifik");
       if (!selectBab) return;
-      const fKelas = Number(document.getElementById("filterKelas").value);
+      const fKelasVal = document.getElementById("filterKelas").value;
       const mapelParts = document.getElementById("filterMapel").value.split("|");
-      const kodeMapel = mapelParts.shift();
-      const namaMapel = mapelParts.pop();
+      const kodeMapel = mapelParts[0];
+      const namaMapel = mapelParts[1];
 
-      const sinkron = getDaftarBabSinkron(fKelas, kodeMapel);
-      const daftarOpsiBab = sinkron.map(b => b.bab);
+      const daftarOpsiBab = [];
+      if (fKelasVal !== "ALL" && kodeMapel !== "ALL") {
+        const sinkron = getDaftarBabSinkron(Number(fKelasVal), kodeMapel);
+        sinkron.forEach(b => { if (!daftarOpsiBab.includes(b.bab)) daftarOpsiBab.push(b.bab); });
+      }
 
       let semua = [];
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       semua.forEach(item => {
         const isUTS_UAS = ["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(item.kategori);
-        if (!isUTS_UAS && String(item.kelas) === String(fKelas) && (item.mapel || "") === namaMapel) {
+        const cocokKls = (fKelasVal === "ALL") || (String(item.kelas) === String(fKelasVal));
+        const cocokMpl = (kodeMapel === "ALL") || ((item.mapel || "") === namaMapel);
+        if (!isUTS_UAS && cocokKls && cocokMpl) {
           if (item.kategori && !daftarOpsiBab.includes(item.kategori)) {
             daftarOpsiBab.push(item.kategori);
           }
         }
       });
 
-      if (daftarOpsiBab.length === 0) {
-        selectBab.innerHTML = `<option value="__KOSONG__">-- Belum ada Bab pada Mapel ini --</option>`;
-      } else {
-        selectBab.innerHTML = daftarOpsiBab.map(judul => `<option value="${judul}">${judul}</option>`).join("");
-      }
+      selectBab.innerHTML = `<option value="__ALL_BAB__">Semua Bab</option>` +
+        daftarOpsiBab.map(judul => `<option value="${judul}">${judul}</option>`).join("");
     }
 
     function perbaruiOpsiKodeUnikRekap() {
@@ -1447,36 +1468,49 @@
         if (item.kodeUnik && item.kodeUnik !== "-") unikSet.add(item.kodeUnik.toUpperCase());
       });
       selectUnik.innerHTML = `<option value="ALL">Semua Kode Unik Peserta</option>` +
-        Array.from(unikSet).sort().map(k => `<option value="${k}">${k}</option>`).join("");
+        Array.from(unikSet).sort().map(k => `<option value="${k}">${k} (Spesifik)</option>`).join("");
     }
 
-        function getDataTersaring() {
+            function getDataTersaring() {
       let semua = [];
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
       const fKelas = String(document.getElementById("filterKelas").value);
-      const fMapelNama = document.getElementById("filterMapel").value.split("|").pop() || "";
+      const mapelSplit = document.getElementById("filterMapel").value.split("|");
+      const fMapelKode = mapelSplit[0] || "ALL";
+      const fMapelNama = mapelSplit[1] || "";
       const fTipe = document.getElementById("filterTipeUjian").value;
-      const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
+      const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "__ALL_BAB__";
       const fUnik = document.getElementById("filterKodeUnik").value;
 
       return semua.filter(item => {
-        const cocokKelas = String(item.kelas) === fKelas;
-        const cocokMapel = (item.mapel || "").trim().toLowerCase() === fMapelNama.trim().toLowerCase();
+        const cocokKelas = (fKelas === "ALL") || (String(item.kelas) === fKelas);
+        const itemMapelLow = (item.mapel || "").trim().toLowerCase();
+        const filterMapelLow = fMapelNama.trim().toLowerCase();
+        const cocokMapel = (fMapelKode === "ALL") || (itemMapelLow === filterMapelLow) || itemMapelLow.includes(filterMapelLow);
         const unikItem = (item.kodeUnik || "-").toUpperCase();
         const cocokUnik = (fUnik === "ALL") || (unikItem === fUnik);
 
+        const katLow = (item.kategori || "").trim().toLowerCase();
+        const isUTS_UAS = ["uts semester 1", "uas semester 1", "uts semester 2", "uas semester 2"].includes(katLow);
+
         let cocokUjian = false;
-        if (fTipe === "BAB") {
-          cocokUjian = (item.kategori || "").trim().toLowerCase() === fBab.trim().toLowerCase();
+        if (fTipe === "ALL") {
+          cocokUjian = true;
+        } else if (fTipe === "UAS_ALL") {
+          cocokUjian = katLow.includes("uas");
+        } else if (fTipe === "UTS_ALL") {
+          cocokUjian = katLow.includes("uts");
+        } else if (fTipe === "BAB") {
+          cocokUjian = (fBab === "__ALL_BAB__") ? !isUTS_UAS : (katLow === fBab.trim().toLowerCase());
         } else {
-          cocokUjian = (item.kategori || "").trim().toLowerCase() === fTipe.trim().toLowerCase();
+          cocokUjian = katLow === fTipe.trim().toLowerCase();
         }
 
         return cocokKelas && cocokMapel && cocokUjian && cocokUnik;
       });
     }
 
-        function renderTabelNilai() {
+    function renderTabelNilai() {
       const data = getDataTersaring();
       const wadah = document.getElementById("wadahTabelNilai");
       const infoBox = document.getElementById("infoRingkasanFilter");
@@ -1485,12 +1519,13 @@
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
-      const labelMateri = (fTipe === "BAB") ? fBab : fTipe;
+      const labelKelas = fKelas === "ALL" ? "Semua Kelas" : `Kelas ${fKelas}`;
+      const labelMateri = (fTipe === "BAB") ? (fBab === "__ALL_BAB__" ? "Semua Bab" : fBab) : (fTipe === "ALL" ? "Semua Jenis Ujian" : fTipe);
 
-      infoBox.textContent = `Ditemukan ${data.length} Nilai • Kelas ${fKelas} • ${fMapelNama} • ${labelMateri} • Kode: ${fUnik}`;
+      infoBox.textContent = `Ditemukan ${data.length} Nilai • ${labelKelas} • ${fMapelNama} • ${labelMateri} • Kode: ${fUnik}`;
 
       if (data.length === 0) {
-        wadah.innerHTML = `<p style="margin-top:14px; color:#64748b; font-size:0.88rem;">Belum ada siswa yang mengumpulkan nilai untuk <strong>Kelas ${fKelas} • ${fMapelNama} • ${labelMateri}</strong>.</p>`;
+        wadah.innerHTML = `<p style="margin-top:14px; color:#64748b; font-size:0.88rem;">Belum ada siswa yang mengumpulkan nilai untuk <strong>${labelKelas} • ${fMapelNama} • ${labelMateri}</strong>.</p>`;
         return;
       }
 
@@ -1517,7 +1552,7 @@
         </div>`;
     }
 
-        function downloadExcelTerfilter() {
+            function downloadExcelTerfilter() {
       const data = getDataTersaring();
       if (data.length === 0) { alert("Tidak ada data pada filter yang dipilih untuk diunduh!"); return; }
 
@@ -1541,12 +1576,13 @@
       const blob = new Blob(["\uFEFF" + csvContent], { type: "text/csv;charset=utf-8;" });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
+      const labelKelas = fKelas === "ALL" ? "SemuaKelas" : `Kelas${fKelas}`;
       const labelMapel = fMapelNama.replace(/[^a-zA-Z0-9]/g, "_");
       const labelMateri = (fTipe === "BAB" ? fBab : fTipe).slice(0, 25).replace(/[^a-zA-Z0-9]/g, "_");
       const labelUnik = fUnik === "ALL" ? "SemuaKode" : fUnik.replace(/[^a-zA-Z0-9]/g, "_");
 
       link.setAttribute("href", url);
-      link.setAttribute("download", `Rekap_Kelas${fKelas}_${labelMapel}_${labelMateri}_${labelUnik}.csv`);
+      link.setAttribute("download", `Rekap_${labelKelas}_${labelMapel}_${labelMateri}_${labelUnik}.csv`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -1567,31 +1603,8 @@
       alert("✅ Data hasil filter berhasil dihapus!");
     }
 
-        function adminUbahPassword() {
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🔑 Ubah Password</div></div>
-        <div class="card">
-          <h3 style="color:#0284c7;">Ubah Password Admin</h3>
-          <p style="font-size:0.82rem; color:#64748b; margin-bottom:10px;">Gunakan password yang mudah diingat oleh guru/admin</p>
-          <input type="password" id="passLama" class="input-nama" placeholder="Password Lama..." />
-          <input type="password" id="passBaru" class="input-nama" placeholder="Password Baru..." />
-          <input type="password" id="passKonfirm" class="input-nama" placeholder="Ulangi Password Baru..." />
-          <button class="btn-aksi btn-sukses" style="width:100%; margin-top:10px;" onclick="simpanPasswordBaru()">💾 Simpan Password Baru</button>
-        </div>`;
-    }
-
-    function simpanPasswordBaru() {
-      const lama = document.getElementById("passLama").value;
-      const baru = document.getElementById("passBaru").value.trim();
-      const konfirm = document.getElementById("passKonfirm").value.trim();
-      if (lama !== getPasswordAdmin()) { alert("Password lama tidak sesuai!"); return; }
-      if (baru.length < 4) { alert("Password baru minimal 4 karakter!"); return; }
-      if (baru !== konfirm) { alert("Konfirmasi password baru tidak cocok!"); return; }
-      try { localStorage.setItem("seddur_admin_pass", baru); } catch (e) {}
-      mainkanEfek('benar'); alert("✅ Password Admin berhasil diubah!"); tampilDashboardAdmin();
-    }
-
     tampilBeranda();
   </script>
 </body>
 </html>
+
