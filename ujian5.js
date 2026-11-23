@@ -5409,3 +5409,181 @@ window.tambahPaketUjian("5", "pjok", "UAS Semester 2", [
     "bahas": "Menghormati wasit dan menjaga sportivitas adalah nilai utama pendidikan jasmani."
   }
 ]);
+
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("5", "pjok", "UAS Semester 1", [
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><rect x='25' y='46' width='135' height='3' fill='#0369a1'/><line x1='92' y1='25' x2='92' y2='62' stroke='#0f172a' stroke-width='2.5'/><circle cx='55' cy='48' r='8' fill='#facc15' stroke='#ca8a04' stroke-width='1.5'/><path d='M65 44 Q92 16 122 44' stroke='#0284c7' fill='none' stroke-width='2.5' stroke-dasharray='4,2'/><text x='92' y='20' font-size='8.5' font-weight='bold' text-anchor='middle' fill='#0369a1'>SERVIS BAWAH BOLA VOLI</text></svg>",
+    "q": "Perhatikan ilustrasi di atas! Dalam permainan bola voli, perkenaan bola yang benar pada teknik servis bawah agar bola melambung melewati net adalah pada bagian ....",
+    "p": ["Lengan bawah bagian dalam (dekat pergelangan tangan) dengan tangan mengepal", "Ujung jari kelingking", "Siku lengan atas", "Telapak kaki"],
+    "b": 0,
+    "bahas": "Pada servis bawah, lengan diayunkan lurus dari bawah dengan perkenaan pada lengan bawah bagian dalam."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><circle cx='50' cy='38' r='14' fill='#f97316' stroke='#9a3412' stroke-width='2'/><path d='M68 40 L92 56 L124 38' stroke='#d97706' fill='none' stroke-width='3'/><polygon points='121,35 130,36 124,43' fill='#d97706'/><line x1='30' y1='58' x2='155' y2='58' stroke='#92400e' stroke-width='2'/><text x='115' y='24' font-size='8.5' font-weight='bold' text-anchor='middle' fill='#92400e'>BOUNCE PASS BASKET</text></svg>",
+    "q": "Perhatikan diagram lintasan bola basket di atas! Teknik mengoper bola dengan memantulkannya sekitar dua pertiga jarak menuju teman disebut ....",
+    "p": ["Bounce pass (operan pantul)", "Chest pass (operan dada)", "Overhead pass (operan atas kepala)", "Lay-up shoot"],
+    "b": 0,
+    "bahas": "Bounce pass dipantulkan di dua pertiga jarak agar bola memantul tepat setinggi pinggang penerima."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><circle cx='48' cy='28' r='6' fill='#f59e0b'/><line x1='48' y1='34' x2='48' y2='48' stroke='#15803d' stroke-width='3'/><line x1='48' y1='40' x2='72' y2='38' stroke='#15803d' stroke-width='3'/><line x1='48' y1='48' x2='40' y2='60' stroke='#15803d' stroke-width='3'/><line x1='48' y1='48' x2='58' y2='60' stroke='#15803d' stroke-width='3'/><text x='122' y='35' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>TANGKISAN</text><text x='122' y='48' font-size='8.5' text-anchor='middle' fill='#0f172a'>Bela Diri Pencak Silat</text></svg>",
+    "q": "Perhatikan ilustrasi bela diri pencak silat di atas! Teknik pembelaan dengan mengadakan kontak langsung menggunakan lengan atau tungkai untuk menahan serangan lawan disebut ....",
+    "p": ["Tangkisan", "Elakan", "Hindaran", "Pukulan bandul"],
+    "b": 0,
+    "bahas": "Tangkisan mengalihkan atau menahan arah serangan lawan melalui kontak lengan atau tungkai."
+  },
+  {
+    "q": "Dalam permainan sepak bola, kombinasi gerak menendang bola jarak pendek mendatar (passing) yang dilanjutkan dengan berlari mencari ruang kosong (support) bertujuan untuk ....",
+    "p": ["Memudahkan teman mengoper kembali bola dan mematahkan penjagaan lawan", "Membuat permainan berhenti", "Menghindari kerja sama dengan teman", "Mengulur waktu di luar lapangan"],
+    "b": 0,
+    "bahas": "Permainan umpan dan bergerak (give and go / wall pass) sangat efektif menembus pertahanan lawan."
+  },
+  {
+    "q": "Dalam permainan bola voli, kombinasi passing bawah dan passing atas secara berpasangan di tempat maupun bergerak melatih ....",
+    "p": ["Kontrol arah pantulan bola, ketepatan umpan, dan kerja sama", "Kekuatan menendang bola", "Kecepatan lari 100 meter", "Keseimbangan berdiri satu kaki"],
+    "b": 0,
+    "bahas": "Latihan kombinasi passing bawah dan atas melatih akurasi kontrol bola voli."
+  },
+  {
+    "q": "Dalam permainan rounders, jumlah tiang hinggap (base) yang harus dilewati pelari setelah memukul bola sebelum kembali ke ruang bebas (home base) adalah ....",
+    "p": ["4 base (Base I, II, III, IV, lalu kembali ke V / home base)", "1 base saja", "10 base", "Tidak ada base"],
+    "b": 0,
+    "bahas": "Lapangan rounders berbentuk segilima dengan 4 base hinggap dan 1 tempat pemukul/home base."
+  },
+  {
+    "q": "Dalam permainan bulu tangkis, pukulan tinggi jauh ke arah garis belakang lapangan lawan untuk mengembalikan posisi bertahan disebut pukulan ....",
+    "p": ["Lob (clear)", "Smash", "Dropshot", "Netting"],
+    "b": 0,
+    "bahas": "Pukulan lob melambungkan kok tinggi ke bagian belakang lapangan lawan."
+  },
+  {
+    "q": "Pada cabang atletik nomor lari jarak pendek (sprint), posisi badan yang benar saat memasuki garis finis agar lebih cepat menyentuh pita finis adalah ....",
+    "p": ["Mencondongkan dada ke depan tanpa mengurangi kecepatan lari", "Melompat tinggi lalu berhenti mendadak sebelum garis", "Menoleh ke belakang sambil memperlambat lari", "Menurunkan kecepatan sejak 10 meter sebelum garis"],
+    "b": 0,
+    "bahas": "Mencondongkan dada (torso) ke depan mempercepat bagian tubuh sah menyentuh bidang vertikal garis finis."
+  },
+  {
+    "q": "Pada cabang atletik lempar roket atau lempar turbo (modifikasi lempar lembing untuk anak SD), kombinasi gerak yang dilakukan sebelum melempar adalah ....",
+    "p": ["Awalan jalan dan lari berirama, menarik lengan ke belakang, lalu melempar kuat ke depan atas", "Duduk bersila lalu melempar ke belakang", "Melompat mundur lalu menjatuhkan alat", "Berdiri diam tanpa awalan"],
+    "b": 0,
+    "bahas": "Lempar turbo menggabungkan lari awalan, sikap melempar (power position), dan gerak lanjutan."
+  },
+  {
+    "q": "Dalam pencak silat, serangan menggunakan tungkai dengan lintasan melengkung dari samping seperti sabit yang mengarah ke perut atau rusuk lawan disebut tendangan ....",
+    "p": ["Tendangan sabit", "Tendangan lurus depan", "Tendangan T", "Tendangan belakang"],
+    "b": 0,
+    "bahas": "Tendangan sabit memiliki lintasan melengkung dari samping ke dalam dengan perkenaan punggung kaki."
+  },
+  {
+    "q": "Komponen kebugaran jasmani yang berkaitan dengan kemampuan seseorang mengubah posisi dan arah gerak tubuh dengan cepat tanpa kehilangan keseimbangan disebut ....",
+    "p": ["Kelincahan (agility)", "Kekuatan (strength)", "Kelenturan (flexibility)", "Daya tahan otot"],
+    "b": 0,
+    "bahas": "Kelincahan dilatih melalui lari zig-zag, shuttle run, dan lari rintangan."
+  },
+  {
+    "q": "Bentuk latihan lari bolak-balik (shuttle run) dan lari berbelok-belok melewati rintangan kerucut merupakan latihan untuk meningkatkan komponen ....",
+    "p": ["Kelincahan", "Kekuatan otot lengan", "Kelenturan punggung", "Daya apung di air"],
+    "b": 0,
+    "bahas": "Shuttle run menuntut perubahan arah cepat sehingga melatih kelincahan."
+  },
+  {
+    "q": "Latihan naik-turun bangku (bench step) selama 3–5 menit secara teratur melatih daya tahan otot tungkai serta daya tahan ....",
+    "p": ["Jantung dan paru-paru", "Gigi dan gusi", "Leher dan telinga", "Jari tangan"],
+    "b": 0,
+    "bahas": "Naik-turun bangku adalah latihan kardiovaskular untuk daya tahan jantung-paru."
+  },
+  {
+    "q": "Dalam senam lantai, gerakan mengguling ke depan yang diakhiri dengan tolakan kedua tangan dan lecutan kedua kaki sehingga tubuh melenting mendarat berdiri disebut ....",
+    "p": ["Guling lenting (neckspring)", "Sikap lilin", "Kayang", "Handstand"],
+    "b": 0,
+    "bahas": "Guling lenting memadukan gerak guling depan dengan lecutan tungkai dan tolakan tangan."
+  },
+  {
+    "q": "Dalam senam ketangkasan menggunakan peti lompat, tahapan gerakan yang benar pada lompat jongkok atau lompat kangkang adalah ....",
+    "p": [
+      "Awalan lari cepat – tolakan dua kaki – bertumpu tangan di peti – melayang – mendarat dua kaki mengeper",
+      "Berjalan mundur – duduk di peti – berguling ke samping",
+      "Melompat satu kaki – mendarat dengan lutut kaku",
+      "Berlari pelan – berhenti di depan peti – berjalan memutar"
+    ],
+    "b": 0,
+    "bahas": "Rangkaian lompat kangkang meliputi awalan, tolakan, tumpuan tangan, melayang, dan mendarat mengeper."
+  },
+  {
+    "q": "Dalam aktivitas gerak berirama (senam irama), tiga hal pokok yang harus diperhatikan agar gerakan selaras dan indah adalah ....",
+    "p": ["Irama, kelentukan tubuh (fleksibilitas), dan kontinuitas gerakan", "Kecepatan lari maksimal, tenaga angkat beban, dan teriakan", "Kekakuan otot, gerakan terputus-putus, dan tanpa irama", "Diam di tempat, duduk, dan berbaring"],
+    "b": 0,
+    "bahas": "Tiga unsur utama senam irama adalah irama, kelentukan tubuh, dan kontinuitas."
+  },
+  {
+    "q": "Gerakan mengayun satu lengan ke depan dan ke belakang secara bergantian sambil melangkahkan kaki ke depan dalam senam irama melatih ....",
+    "p": ["Koordinasi gerak tangan dan kaki serta keluwesan tubuh", "Kekuatan otot rahang", "Kecepatan berenang gaya dada", "Kekuatan genggaman raket"],
+    "b": 0,
+    "bahas": "Senam irama melatih koordinasi anggota gerak atas dan bawah mengikuti ketukan."
+  },
+  {
+    "q": "Penyakit menular yang dapat dicegah dengan membiasakan mencuci tangan pakai sabun sebelum makan, menutup makanan dari lalat, dan minum air matang adalah ....",
+    "p": ["Diare dan tifus (tipes)", "Rabun jauh", "Keseleo lutut", "Kram otot"],
+    "b": 0,
+    "bahas": "Diare dan tifus menular melalui makanan atau minuman yang terkontaminasi bakteri."
+  },
+  {
+    "q": "Penyakit tidak menular seperti hipertensi (tekanan darah tinggi), diabetes melitus, dan penyakit jantung koroner memiliki ciri utama yaitu ....",
+    "p": [
+      "Tidak menular dari orang ke orang, tetapi dipicu pola hidup tidak sehat seperti kurang gerak dan pola makan tidak seimbang",
+      "Menular melalui jabat tangan atau udara pernapasan",
+      "Disebabkan oleh gigitan nyamuk Aedes aegypti",
+      "Hanya menyerang anak-anak yang rajin berolahraga"
+    ],
+    "b": 0,
+    "bahas": "Penyakit tidak menular (PTM) berkaitan erat dengan gaya hidup, pola makan, dan faktor genetik."
+  },
+  {
+    "q": "Program CERDIK dari Kementerian Kesehatan untuk mencegah penyakit tidak menular sejak dini salah satunya huruf 'R' yang berarti ....",
+    "p": ["Rajin aktivitas fisik (olahraga teratur minimal 30 menit setiap hari)", "Rebahan sepanjang hari", "Rokok dikonsumsi setiap pagi", "Rutin makan makanan manis berlebihan"],
+    "b": 0,
+    "bahas": "CERDIK: Cek kesehatan berkala, Enyahkan asap rokok, Rajin aktivitas fisik, Diet seimbang, Istirahat cukup, Kelola stres."
+  },
+  {
+    "q": "Perokok pasif adalah orang yang tidak merokok tetapi ikut menghirup asap rokok dari perokok di sekitarnya. Bahaya bagi perokok pasif adalah ....",
+    "p": ["Tetap berisiko tinggi mengalami gangguan pernapasan, asma, dan penyakit paru-paru", "Tubuhnya menjadi kebal terhadap asap", "Paru-parunya menjadi lebih sehat", "Tidak terkena dampak apa pun"],
+    "b": 0,
+    "bahas": "Asap rokok sampingan mengandung zat beracun berbahaya bagi siapa saja yang menghirupnya."
+  },
+  {
+    "q": "Kandungan alkohol dalam minuman keras berbahaya bagi remaja dan pelajar karena bersifat memabukkan dan merusak ....",
+    "p": ["Sel-sel otak, fungsi hati (liver), serta menurunkan kesadaran dan kendali diri", "Warna sepatu olahraga", "Kebersihan lapangan", "Kekuatan tali rafia"],
+    "b": 0,
+    "bahas": "Alkohol merusak sistem saraf pusat dan organ hati serta memicu perilaku berisiko."
+  },
+  {
+    "q": "Mengapa pemanasan sebelum berolahraga selalu meningkatkan suhu tubuh dan denyut jantung secara bertahap?",
+    "p": [
+      "Agar aliran darah dan oksigen ke otot meningkat sehingga otot lebih elastis dan siap bekerja maksimal",
+      "Agar tubuh kehabisan tenaga sebelum bertanding",
+      "Agar pembuluh darah menyempit dan kaku",
+      "Agar pernapasan menjadi terhenti"
+    ],
+    "b": 0,
+    "bahas": "Peningkatan suhu otot menurunkan kekakuan otot dan mencegah cedera robekan serabut otot."
+  },
+  {
+    "q": "Saat melakukan latihan kebugaran jasmani di bawah terik matahari, cara mencegah dehidrasi dan kelelahan panas (heat exhaustion) adalah ....",
+    "p": ["Minum air putih yang cukup sebelum, selama jeda istirahat, dan sesudah olahraga serta memakai pakaian yang menyerap keringat", "Menahan haus sampai pelajaran selesai", "Memakai jaket tebal berlapis-lapis", "Minum minuman bersoda panas"],
+    "b": 0,
+    "bahas": "Hidrasi yang cukup menjaga keseimbangan cairan dan pengaturan suhu tubuh."
+  },
+  {
+    "q": "Nilai sportivitas dan kepemimpinan yang dapat dipelajari siswa kelas 5 SD melalui permainan olahraga beregu adalah ....",
+    "p": [
+      "Mampu bekerja sama dalam tim, berkomunikasi dengan santun, menghargai peran setiap teman, dan menerima hasil pertandingan secara sportif",
+      "Menonjolkan diri sendiri tanpa memedulikan teman seregu",
+      "Mencari-cari kesalahan teman ketika tim mengalami kekalahan",
+      "Melanggar peraturan permainan agar tim cepat menang"
+    ],
+    "b": 0,
+    "bahas": "Olahraga beregu melatih kolaborasi, empati, kepemimpinan, dan sikap sportif."
+  }
+]);
+
