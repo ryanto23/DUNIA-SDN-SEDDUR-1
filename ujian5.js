@@ -5217,3 +5217,195 @@ window.tambahPaketUjian("5", "kesenian", "UTS Semester 2", [
     "bahas": "Tanggung jawab menjaga kebersihan ruang kelas adalah bagian penting dari pendidikan karakter."
   }
 ]);
+
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("5", "pjok", "UAS Semester 2", [
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><rect x='25' y='52' width='135' height='10' rx='4' fill='#38bdf8'/><rect x='72' y='34' width='40' height='18' rx='3' fill='#f59e0b' stroke='#b45309' stroke-width='1.5'/><path d='M42 50 Q92 14 142 50' stroke='#0369a1' fill='none' stroke-width='2.5' stroke-dasharray='4,2'/><text x='92' y='24' font-size='9' font-weight='bold' text-anchor='middle' fill='#0369a1'>LOMPAT KANGKANG PETI LOMPAT</text></svg>",
+    "q": "Perhatikan ilustrasi senam ketangkasan di atas! Saat melakukan lompat kangkang melewati peti lompat, posisi kedua tungkai ketika melayang di atas peti adalah ....",
+    "p": [
+      "Dibuka lebar ke samping kiri dan kanan sambil menolakkan kedua tangan pada peti lompat",
+      "Dirapatkan lurus ke depan seperti duduk bersila",
+      "Ditekuk menyilang di bawah perut",
+      "Diangkat satu kaki saja ke belakang"
+    ],
+    "b": 0,
+    "bahas": "Pada lompat kangkang, kedua kaki dibuka lebar ke samping saat melewati peti lompat dan mendarat dengan dua kaki mengeper."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/><path d='M20 46 Q45 38 70 46 T120 46 T165 46' stroke='#2563eb' fill='none' stroke-width='3'/><line x1='45' y1='34' x2='118' y2='34' stroke='#1e3a8a' stroke-width='4'/><path d='M75 34 Q88 20 104 34' stroke='#f59e0b' fill='none' stroke-width='2.5'/><text x='92' y='62' font-size='8' font-weight='bold' text-anchor='middle' fill='#1e3a8a'>RENANG GAYA BEBAS (CRAWL)</text></svg>",
+    "q": "Perhatikan ilustrasi di atas! Gerakan kaki yang benar pada renang gaya bebas (front crawl) adalah ....",
+    "p": [
+      "Digerakkan naik turun secara bergantian dan cepat dengan sumber gerakan dari pangkal paha",
+      "Ditarik ke samping lalu didorong seperti kaki katak",
+      "Ditekuk diam menyilang di belakang",
+      "Hanya menggerakkan ujung jari kaki tanpa menggerakkan tungkai"
+    ],
+    "b": 0,
+    "bahas": "Tendangan kaki renang gaya bebas dilakukan naik-turun bergantian dari pangkal paha (flutter kick)."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#fee2e2' stroke='#dc2626' stroke-width='2'/><circle cx='52' cy='41' r='18' fill='#fff' stroke='#dc2626' stroke-width='3'/><line x1='40' y1='29' x2='64' y2='53' stroke='#dc2626' stroke-width='3'/><text x='52' y='44' font-size='8' font-weight='bold' text-anchor='middle' fill='#991b1b'>ROKOK</text><text x='124' y='34' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>BAHAYA ZAT</text><text x='124' y='46' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>ADIKTIF</text><text x='124' y='58' font-size='7.5' text-anchor='middle' fill='#7f1d1d'>Nikotin • Tar • Karbon Monoksida</text></svg>",
+    "q": "Perhatikan poster kesehatan di atas! Zat beracun dalam asap rokok yang menyebabkan kecanduan (ketagihan) dan merusak kerja jantung serta pembuluh darah adalah ....",
+    "p": ["Nikotin", "Oksigen murni", "Vitamin D", "Zat besi"],
+    "b": 0,
+    "bahas": "Nikotin adalah zat adiktif dalam tembakau rokok yang memicu kecanduan dan menyempitkan pembuluh darah."
+  },
+  {
+    "q": "Dalam permainan sepak bola, kombinasi gerak menggiring bola (dribbling) yang dilanjutkan dengan menendang bola keras ke arah gawang lawan disebut ....",
+    "p": ["Dribbling dan shooting", "Passing dan heading", "Throw-in dan corner kick", "Offside dan penalti"],
+    "b": 0,
+    "bahas": "Shooting adalah tendangan terarah dan bertenaga ke gawang untuk mencetak gol."
+  },
+  {
+    "q": "Dalam permainan bola voli, pukulan keras dan menukik tajam ke daerah lapangan lawan untuk mematikan permainan lawan dan memperoleh poin disebut ....",
+    "p": ["Smash (spike)", "Passing bawah", "Servis bawah", "Blocking"],
+    "b": 0,
+    "bahas": "Smash adalah serangan utama dalam bola voli dengan memukul bola secara keras dari atas net."
+  },
+  {
+    "q": "Dalam permainan bola basket, tembakan yang dilakukan sambil melayang dekat ring basket setelah melangkah dua langkah disebut ....",
+    "p": ["Lay-up shoot", "Free throw", "Three point shoot", "Chest pass"],
+    "b": 0,
+    "bahas": "Lay-up shoot diawali dribel, dua langkah mendekati ring, lalu melompat memasukkan bola ke keranjang."
+  },
+  {
+    "q": "Dalam permainan rounders atau kasti, pukulan bola yang arahnya mendatar dan cepat ke depan bertujuan agar ....",
+    "p": ["Bola sulit ditangkap regu penjaga dan pelari memiliki waktu menuju tiang hinggap (base)", "Bola langsung jatuh di depan pemukul", "Bola melambung keluar garis belakang", "Wasit menghentikan pertandingan"],
+    "b": 0,
+    "bahas": "Pukulan mendatar dan kencang membuat bola melesat cepat melewati penjaga."
+  },
+  {
+    "q": "Pada cabang atletik lari estafet (lari sambung) 4 x 100 meter, alat yang dipindahkan dari pelari pertama hingga pelari keempat adalah ....",
+    "p": ["Tongkat estafet", "Bola kasti", "Bendera start", "Pita garis finis"],
+    "b": 0,
+    "bahas": "Lari estafet menggunakan tongkat estafet yang diserahkan di zona pergantian (wissel zone)."
+  },
+  {
+    "q": "Dalam pencak silat, gerakan membela diri dengan cara mengadakan kontak langsung dengan serangan lawan menggunakan lengan atau tungkai untuk mengalihkan serangan disebut ....",
+    "p": ["Tangkisan", "Elakan", "Pukulan lurus", "Tendangan sabit"],
+    "b": 0,
+    "bahas": "Tangkisan menahan atau mengalihkan arah serangan lawan menggunakan lengan, siku, atau kaki."
+  },
+  {
+    "q": "Gerakan menghindari serangan lawan dalam pencak silat tanpa memindahkan posisi telapak kaki dari tempat semula (misalnya memiringkan atau merendahkan badan) disebut ....",
+    "p": ["Elakan", "Tangkisan", "Tendangan T", "Langkah lompat"],
+    "b": 0,
+    "bahas": "Elakan dilakukan dengan memindahkan sasaran tubuh tanpa berpindah tempat."
+  },
+  {
+    "q": "Latihan lari cepat jarak 30–40 meter (sprint) bertujuan utama untuk meningkatkan komponen kebugaran jasmani berupa ....",
+    "p": ["Kecepatan (speed)", "Kelenturan pinggang", "Keseimbangan statis", "Kekuatan otot perut"],
+    "b": 0,
+    "bahas": "Sprint jarak pendek melatih kecepatan gerak maksimal otot tungkai."
+  },
+  {
+    "q": "Bentuk latihan kebugaran jasmani untuk mengukur dan melatih daya tahan jantung dan paru-paru pada siswa kelas 5 SD adalah ....",
+    "p": ["Lari jarak sedang (600–800 meter) atau jogging teratur", "Berdiri satu kaki selama 10 detik", "Duduk mencium lutut", "Melempar bola kasti satu kali"],
+    "b": 0,
+    "bahas": "Daya tahan kardiorespirasi (jantung-paru) dilatih dengan aktivitas aerobik berdurasi cukup lama."
+  },
+  {
+    "q": "Dalam aktivitas gerak berirama (senam irama), kombinasi gerak langkah kaki dan ayunan lengan yang dilakukan secara terus-menerus tanpa terputus mencerminkan unsur ....",
+    "p": ["Kontinuitas gerakan", "Kekakuan otot", "Kecepatan maksimal", "Kekuatan angkat beban"],
+    "b": 0,
+    "bahas": "Kontinuitas adalah rangkaian gerak senam irama yang mengalir sambung-menyambung sesuai irama."
+  },
+  {
+    "q": "Pada renang gaya bebas, cara pengambilan napas yang benar adalah dengan cara ....",
+    "p": [
+      "Memiringkan kepala ke satu sisi (kanan atau kiri) saat lengan sejajar tubuh untuk menghirup udara lewat mulut",
+      "Mengangkat kepala tegak lurus ke depan tinggi-tinggi",
+      "Menghirup air melalui hidung saat wajah di dalam air",
+      "Berhenti berenang setiap dua kayuhan tangan"
+    ],
+    "b": 0,
+    "bahas": "Memiringkan kepala ke samping menjaga posisi tubuh tetap streamline saat mengambil napas."
+  },
+  {
+    "q": "Gerakan lengan pada renang gaya bebas dilakukan dengan cara ....",
+    "p": [
+      "Mengayunkan kedua lengan ke depan secara bergantian seperti kincir angin lalu menarik air ke belakang",
+      "Mendorong kedua lengan bersamaan ke samping kanan dan kiri",
+      "Menekuk kedua lengan rapat di dada tanpa bergerak",
+      "Memutar kedua lengan ke belakang secara bersamaan"
+    ],
+    "b": 0,
+    "bahas": "Kayuhan lengan gaya bebas bergantian antara tangan kanan dan kiri secara berkesinambungan."
+  },
+  {
+    "q": "Gas beracun tidak berwarna dan tidak berbau dalam asap rokok yang mengikat hemoglobin darah sehingga tubuh kekurangan oksigen adalah ....",
+    "p": ["Karbon monoksida (CO)", "Oksigen (O2)", "Uap air", "Nitrogen murni"],
+    "b": 0,
+    "bahas": "Karbon monoksida mengurangi kadar oksigen dalam darah dan membuat tubuh cepat lelah."
+  },
+  {
+    "q": "Zat karsinogenik berwarna cokelat kehitaman dalam asap rokok yang menempel di paru-paru dan memicu kanker paru-paru adalah ....",
+    "p": ["Tar", "Glukosa", "Kalsium", "Protein"],
+    "b": 0,
+    "bahas": "Tar adalah residu partikel asap rokok yang merusak jaringan paru-paru."
+  },
+  {
+    "q": "Minuman keras (alkohol) dan narkotika berbahaya bagi pelajar karena dapat merusak fungsi .... dan masa depan.",
+    "p": ["Sistem saraf pusat (otak), hati, dan konsentrasi belajar", "Sepatu olahraga saja", "Buku tulis di tas", "Seragam sekolah"],
+    "b": 0,
+    "bahas": "Alkohol dan narkoba merusak sel otak, organ hati, dan menurunkan kesadaran serta prestasi belajar."
+  },
+  {
+    "q": "Penyakit menular yang menyerang saluran pencernaan dengan gejala buang air besar cair berulang kali akibat mengonsumsi makanan/minuman tercemar kuman adalah ....",
+    "p": ["Diare", "Influenza", "Rabun dekat", "Keseleo"],
+    "b": 0,
+    "bahas": "Diare disebabkan infeksi bakteri/virus akibat makanan kotor atau tidak mencuci tangan pakai sabun."
+  },
+  {
+    "q": "Penyakit tidak menular yang sering disebabkan pola makan tinggi gula berlebihan, kurang gerak fisik, dan faktor keturunan adalah ....",
+    "p": ["Diabetes melitus (penyakit gula)", "Demam berdarah", "Influenza", "Cacar air"],
+    "b": 0,
+    "bahas": "Diabetes melitus adalah penyakit tidak menular akibat gangguan kadar gula darah."
+  },
+  {
+    "q": "Cara paling efektif untuk mencegah penyakit tidak menular seperti obesitas (kegemukan) dan penyakit jantung sejak usia sekolah adalah menerapkan pola hidup sehat berupa ....",
+    "p": [
+      "Olahraga teratur minimal 30–60 menit sehari, makan gizi seimbang, dan membatasi gula/garam/lemak berlebih",
+      "Menonton televisi sambil makan camilan manis sepanjang hari",
+      "Tidur larut malam dan melewatkan sarapan pagi",
+      "Menghindari pelajaran olahraga di sekolah"
+    ],
+    "b": 0,
+    "bahas": "Aktivitas fisik rutin dan gizi seimbang menjaga berat badan ideal dan kesehatan pembuluh darah."
+  },
+  {
+    "q": "Denyut nadi normal seseorang saat sedang beristirahat akan meningkat ketika melakukan olahraga karena ....",
+    "p": ["Jantung memompa darah lebih cepat untuk mengalirkan oksigen dan energi ke otot yang bekerja", "Jantung berhenti berdetak sementara", "Paru-paru tidak membutuhkan oksigen", "Tubuh sedang tidur nyenyak"],
+    "b": 0,
+    "bahas": "Saat berolahraga, kebutuhan oksigen otot meningkat sehingga jantung memompa darah lebih cepat."
+  },
+  {
+    "q": "Dalam senam lantai, gerakan guling lenting (neckspring) memadukan gerakan guling depan dengan lecutan kuat dari .... agar tubuh melenting mendarat berdiri.",
+    "p": ["Kedua kaki dan tolakan kedua tangan", "Satu telinga saja", "Ujung hidung", "Lutut yang disilangkan"],
+    "b": 0,
+    "bahas": "Guling lenting membutuhkan lecutan kedua tungkai ke depan-atas disertai tolakan kedua tangan."
+  },
+  {
+    "q": "Tujuan utama melakukan pendinginan (cooling down) setelah latihan kebugaran jasmani intensitas tinggi adalah ....",
+    "p": [
+      "Menurunkan frekuensi denyut nadi secara bertahap dan mencegah penumpukan asam laktat penyebab nyeri otot",
+      "Meningkatkan detak jantung ke batas maksimal",
+      "Membuat otot menjadi kram mendadak",
+      "Menguras seluruh sisa energi tubuh"
+    ],
+    "b": 0,
+    "bahas": "Pendinginan membantu pemulihan otot dan menormalkan sirkulasi darah secara aman."
+  },
+  {
+    "q": "Apabila terjadi perbedaan pendapat mengenai keputusan poin dalam pertandingan olahraga antarkelas, sikap pelajar Pancasila yang sportif adalah ....",
+    "p": [
+      "Menghormati keputusan wasit sebagai pemimpin pertandingan dan tetap menjaga persahabatan antarteman",
+      "Mengajak teman satu tim meninggalkan lapangan dengan marah",
+      "Mendorong wasit dan pemain lawan",
+      "Menghentikan pertandingan secara sepihak"
+    ],
+    "b": 0,
+    "bahas": "Menghormati wasit dan menjaga sportivitas adalah nilai utama pendidikan jasmani."
+  }
+]);
