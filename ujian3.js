@@ -4979,3 +4979,165 @@ window.tambahPaketUjian("3", "kesenian", "UTS Semester 2", [
   }
 ]);
 
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("3", "pjok", "UAS Semester 2", [
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><rect x='25' y='52' width='130' height='10' rx='4' fill='#38bdf8'/><line x1='90' y1='52' x2='90' y2='24' stroke='#0369a1' stroke-width='4'/><line x1='90' y1='24' x2='80' y2='16' stroke='#0369a1' stroke-width='3'/><line x1='90' y1='24' x2='100' y2='16' stroke='#0369a1' stroke-width='3'/><line x1='90' y1='38' x2='76' y2='45' stroke='#0369a1' stroke-width='3'/><line x1='90' y1='38' x2='104' y2='45' stroke='#0369a1' stroke-width='3'/><text x='136' y='35' font-size='9' font-weight='bold' text-anchor='middle' fill='#0369a1'>SIKAP</text><text x='136' y='47' font-size='9' font-weight='bold' text-anchor='middle' fill='#0369a1'>LILIN</text></svg>",
+    "q": "Perhatikan gambar senam lantai di atas! Pada sikap lilin, posisi tubuh tidur telentang lalu mengangkat kedua kaki lurus rapat ke atas dengan pinggang ditopang oleh ....",
+    "p": ["Kedua tangan", "Satu telinga", "Ujung dahi", "Lutut yang ditekuk"],
+    "b": 0,
+    "bahas": "Pada sikap lilin, kedua tangan menopang pinggang dan punggung atas/bahu bertumpu di matras."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><line x1='22' y1='52' x2='85' y2='52' stroke='#92400e' stroke-width='3'/><rect x='88' y='48' width='68' height='10' rx='3' fill='#facc15' stroke='#ca8a04' stroke-width='1.5'/><path d='M55 50 Q85 22 115 47' stroke='#0284c7' fill='none' stroke-width='2.5' stroke-dasharray='4,2'/><text x='90' y='23' font-size='9' font-weight='bold' text-anchor='middle' fill='#9a3412'>AWALAN LARI + TOLAKAN + BAK PASIR</text></svg>",
+    "q": "Perhatikan diagram lintasan di atas! Kombinasi gerak berlari cepat lalu menolak dengan satu kaki dan mendarat dua kaki di bak pasir adalah cabang atletik ....",
+    "p": ["Lompat jauh", "Tolak peluru", "Lempar cakram", "Jalan cepat"],
+    "b": 0,
+    "bahas": "Lompat jauh memadukan gerak awalan lari, tolakan satu kaki, melayang di udara, dan mendarat dua kaki."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><circle cx='50' cy='40' r='18' fill='#22c55e'/><text x='50' y='44' font-size='10' font-weight='bold' text-anchor='middle' fill='#fff'>3M+</text><text x='118' y='34' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>CEGAH DEMAM</text><text x='118' y='47' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>BERDARAH</text><text x='118' y='59' font-size='7.5' text-anchor='middle' fill='#334155'>Kuras • Tutup • Daur Ulang</text></svg>",
+    "q": "Perhatikan poster kesehatan di atas! Gerakan 3M Plus bertujuan memutus perkembangbiakan nyamuk Aedes aegypti penyebab penyakit ....",
+    "p": ["Demam Berdarah Dengue (DBD)", "Sakit gigi berlubang", "Keseleo pergelangan kaki", "Rabun jauh"],
+    "b": 0,
+    "bahas": "Nyamuk Aedes aegypti berkembang biak di genangan air bersih dan menularkan virus DBD."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/><path d='M20 46 Q45 38 70 46 T120 46 T160 46' stroke='#2563eb' fill='none' stroke-width='3'/><line x1='45' y1='34' x2='115' y2='34' stroke='#0f172a' stroke-width='4'/><circle cx='123' cy='34' r='6' fill='#f59e0b'/><polygon points='135,34 146,30 146,38' fill='#dc2626'/><text x='90' y='62' font-size='8' font-weight='bold' text-anchor='middle' fill='#1e3a8a'>GERAK MELUNCUR LURUS DI AIR</text></svg>",
+    "q": "Perhatikan gambar di atas! Saat melakukan gerak meluncur di kolam renang, posisi kedua lengan harus diluruskan rapat di samping telinga agar ....",
+    "p": ["Tubuh meluncur lancar dan hambatan air berkurang", "Tubuh langsung tenggelam ke dasar kolam", "Air masuk ke dalam telinga dengan cepat", "Kaki tidak bisa digerakkan"],
+    "b": 0,
+    "bahas": "Posisi tubuh lurus mendatar (streamline) memperkecil hambatan air saat meluncur."
+  },
+  {
+    "q": "Dalam permainan bola kasti, kombinasi gerak melempar bola lurus setinggi dada kepada teman seregu disebut lemparan ....",
+    "p": ["Mendatar", "Melambung tinggi", "Menyusur tanah", "Memantul ke belakang"],
+    "b": 0,
+    "bahas": "Lemparan mendatar setinggi dada cepat dan akurat untuk operan jarak dekat hingga menengah."
+  },
+  {
+    "q": "Dalam permainan sepak bola, bagian kaki yang paling tepat dan akurat digunakan untuk mengoper bola jarak pendek kepada teman adalah kaki bagian ....",
+    "p": ["Dalam", "Tumit belakang", "Ujung jari kaki", "Lutut"],
+    "b": 0,
+    "bahas": "Kaki bagian dalam memiliki bidang perkenaan yang luas sehingga operan lebih terkontrol."
+  },
+  {
+    "q": "Gerakan memantulkan bola basket ke lantai sambil berjalan atau berlari melewati rintangan termasuk kombinasi gerak lokomotor dan ....",
+    "p": ["Manipulatif", "Nonlokomotor", "Diam di tempat", "Istirahat"],
+    "b": 0,
+    "bahas": "Berjalan/berlari adalah gerak lokomotor, sedangkan memantulkan bola adalah gerak manipulatif."
+  },
+  {
+    "q": "Latihan push-up (tolak angkat badan) dan tarik tambang bermanfaat untuk melatih kekuatan otot ....",
+    "p": ["Lengan, bahu, dan dada", "Leher dan telinga", "Jari kaki", "Kelopak mata"],
+    "b": 0,
+    "bahas": "Push-up melatih otot lengan, bahu, dan dada secara efektif."
+  },
+  {
+    "q": "Latihan sit-up (baring duduk) yang dilakukan secara rutin dengan posisi yang benar melatih kekuatan otot ....",
+    "p": ["Perut", "Betis", "Telapak kaki", "Telinga"],
+    "b": 0,
+    "bahas": "Sit-up berfokus melatih kekuatan dan daya tahan otot perut."
+  },
+  {
+    "q": "Gerakan mencium lutut dalam posisi duduk berlunjur dengan kedua kaki lurus ke depan bertujuan melatih .... tubuh.",
+    "p": ["Kelenturan (fleksibilitas)", "Kecepatan lari", "Kekuatan pukulan", "Keseimbangan satu kaki"],
+    "b": 0,
+    "bahas": "Mencium lutut meregangkan otot punggung dan paha belakang untuk melatih kelenturan."
+  },
+  {
+    "q": "Gerakan melangkahkan kaki ke depan, ke samping, dan mengayunkan kedua lengan mengikuti irama lagu merupakan aktivitas gerak ....",
+    "p": ["Berirama (senam ritmik)", "Atletik tolak peluru", "Renang gaya punggung", "Bela diri judo"],
+    "b": 0,
+    "bahas": "Senam ritmik menekankan keselarasan gerak langkah kaki dan ayunan lengan dengan irama."
+  },
+  {
+    "q": "Cara pengambilan napas yang benar saat berlatih renang di kolam dangkal adalah ....",
+    "p": [
+      "Menghirup udara melalui mulut di atas permukaan air dan membuangnya perlahan di dalam air",
+      "Menghirup air kolam melalui hidung",
+      "Menahan napas terus-menerus hingga keluar kolam",
+      "Membuka mulut lebar di dasar kolam"
+    ],
+    "b": 0,
+    "bahas": "Mengambil napas melalui mulut di atas air mencegah air tersedak masuk ke hidung."
+  },
+  {
+    "q": "Fungsi utama memakai kacamata renang saat berlatih di kolam renang adalah ....",
+    "p": ["Melindungi mata dari iritasi air kolam dan membantu melihat jelas di dalam air", "Menutup hidung dari air", "Membuat tubuh mengapung otomatis", "Melindungi telinga dari suara peluit"],
+    "b": 0,
+    "bahas": "Kacamata renang melindungi mata dari kandungan kaporit air kolam."
+  },
+  {
+    "q": "Kemampuan tubuh untuk melakukan aktivitas belajar dan bermain sehari-hari tanpa merasakan kelelahan yang berlebihan disebut ....",
+    "p": ["Kebugaran jasmani", "Kelelahan kronis", "Kelaparan", "Kemalasan"],
+    "b": 0,
+    "bahas": "Siswa yang memiliki kebugaran jasmani baik tetap bersemangat dan tidak mudah lelah."
+  },
+  {
+    "q": "Lari santai (jogging) mengelilingi lapangan sekolah selama 10 menit bermanfaat melatih daya tahan ....",
+    "p": ["Jantung dan paru-paru", "Gigi dan gusi", "Kuku jari", "Rambut"],
+    "b": 0,
+    "bahas": "Jogging adalah latihan aerobik yang memperkuat kerja jantung dan paru-paru."
+  },
+  {
+    "q": "Makanan bergizi seimbang yang dibutuhkan anak usia sekolah dasar setiap hari harus mengandung zat tenaga (karbohidrat), zat pembangun (protein), dan zat pengatur berupa ....",
+    "p": ["Sayur-sayuran dan buah-buahan", "Permen dan kerupuk pedas", "Minuman bersoda dingin", "Es krim dan cokelat saja"],
+    "b": 0,
+    "bahas": "Sayur dan buah kaya akan vitamin dan mineral sebagai zat pengatur tubuh."
+  },
+  {
+    "q": "Contoh makanan sumber protein yang berfungsi sebagai zat pembangun otot dan sel tubuh anak adalah ....",
+    "p": ["Ikan, telur, tempe, tahu, dan daging ayam", "Gula pasir dan permen", "Kerupuk dan minuman manis", "Air putih saja"],
+    "b": 0,
+    "bahas": "Ikan, telur, tahu, dan tempe merupakan sumber protein hewani dan nabati yang sangat baik."
+  },
+  {
+    "q": "Waktu istirahat di sela-sela jam pelajaran di sekolah sebaiknya dimanfaatkan siswa untuk ....",
+    "p": ["Buang air kecil di toilet, minum air putih, makan bekal sehat, dan meregangkan badan", "Berlari-lari mengejar teman di dalam ruang kelas", "Keluar pagar sekolah bermain di jalan raya", "Membeli jajanan terbuka yang dihinggapi lalat"],
+    "b": 0,
+    "bahas": "Memanfaatkan jam istirahat secara tertib dan sehat memulihkan konsentrasi belajar."
+  },
+  {
+    "q": "Ciri-ciri jajanan sehat di kantin sekolah yang aman dikonsumsi oleh siswa adalah ....",
+    "p": ["Disimpan dalam wadah tertutup rapat, bersih, tidak berwarna mencolok, dan belum kedaluwarsa", "Terbuka di pinggir jalan berdebu", "Berwarna merah menyala seperti pewarna pakaian", "Berbau tengik dan berjamur"],
+    "b": 0,
+    "bahas": "Jajanan higienis melindungi saluran pencernaan dari kuman penyebab diare."
+  },
+  {
+    "q": "Salah satu manfaat mengisi waktu luang di rumah dengan kegiatan positif seperti membantu orang tua menyiram tanaman atau bersepeda santai adalah ....",
+    "p": ["Tubuh tetap aktif bergerak, sehat, dan pikiran menjadi segar", "Tubuh menjadi lemas karena tidur terus", "Mata cepat lelah karena menatap layar ponsel seharian", "Menjadi malas belajar"],
+    "b": 0,
+    "bahas": "Aktivitas fisik ringan di waktu luang menjaga kebugaran tubuh dan mengurangi kejenuhan."
+  },
+  {
+    "q": "Gerakan meloncat melewati peti lompat rendah atau rintangan kardus bertingkat melatih kekuatan otot ....",
+    "p": ["Tungkai (kaki)", "Leher", "Jari tangan", "Telinga"],
+    "b": 0,
+    "bahas": "Tolakan saat melompati rintangan melatih daya ledak otot tungkai."
+  },
+  {
+    "q": "Saat mendarat dari lompatan ketinggian, posisi kedua lutut harus mengeper (sedikit ditekuk) dan badan condong ke depan agar ....",
+    "p": ["Terhindar dari cedera sendi lutut dan tubuh tetap seimbang", "Tubuh terjatuh ke belakang", "Sepatu cepat rusak", "Suara pendaratan terdengar keras"],
+    "b": 0,
+    "bahas": "Gerakan mengeper lutut menyerap gaya benturan saat mendarat."
+  },
+  {
+    "q": "Sebelum memulai aktivitas renang di kolam renang, kita wajib melakukan pemanasan dan peregangan otot agar terhindar dari ....",
+    "p": ["Kram otot saat berenang di air dingin", "Rasa lapar berlebihan", "Rambut basah", "Baju renang kusut"],
+    "b": 0,
+    "bahas": "Kram otot di dalam air sangat berbahaya sehingga pemanasan wajib dilakukan."
+  },
+  {
+    "q": "Sikap sportif dalam pertandingan olahraga beregu ditunjukkan dengan cara ....",
+    "p": ["Mematuhi aturan wasit, bekerja sama dengan tim, dan menerima hasil pertandingan dengan lapang dada", "Menyalahkan teman seregu ketika tim kalah", "Melakukan pelanggaran keras saat wasit lengah", "Protes marah-marah tidak mau bersalaman"],
+    "b": 0,
+    "bahas": "Sportivitas mencerminkan karakter jujur, disiplin, dan saling menghormati."
+  },
+  {
+    "q": "Setelah selesai pelajaran PJOK, siswa wajib melakukan gerakan pendinginan (cooling down) yang bertujuan untuk ....",
+    "p": ["Menormalkan kembali suhu tubuh, denyut jantung, dan melemaskan otot setelah beraktivitas", "Menaikkan suhu tubuh setinggi-tingginya", "Membuat otot menjadi tegang dan kaku", "Memulai pertandingan baru"],
+    "b": 0,
+    "bahas": "Pendinginan mengembalikan kondisi tubuh ke keadaan istirahat secara bertahap."
+  }
+]);
