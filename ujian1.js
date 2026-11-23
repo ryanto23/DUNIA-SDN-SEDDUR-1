@@ -2983,3 +2983,163 @@ window.tambahPaketUjian("1", "kesenian", "UTS Semester 2", [
   }
 ]);
 
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("1", "pjok", "UAS Semester 2", [
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><circle cx='50' cy='28' r='8' fill='#fbbf24'/><line x1='50' y1='36' x2='50' y2='52' stroke='#0284c7' stroke-width='3'/><line x1='50' y1='42' x2='38' y2='36' stroke='#0284c7' stroke-width='3'/><line x1='50' y1='42' x2='62' y2='36' stroke='#0284c7' stroke-width='3'/><line x1='50' y1='52' x2='40' y2='63' stroke='#0284c7' stroke-width='3'/><line x1='50' y1='52' x2='60' y2='63' stroke='#0284c7' stroke-width='3'/><text x='118' y='38' font-size='10' font-weight='bold' text-anchor='middle' fill='#0369a1'>SIKAP</text><text x='118' y='52' font-size='9' text-anchor='middle' fill='#0f172a'>Kapal Terbang</text></svg>",
+    "q": "Perhatikan gambar gerakan di atas! Berdiri dengan satu kaki dan kedua tangan direntangkan ke samping seperti pesawat terbang melatih ....",
+    "p": ["Keseimbangan tubuh", "Kecepatan lari", "Kekuatan gigi", "Suara nyanyian"],
+    "b": 0,
+    "bahas": "Sikap kapal terbang melatih keseimbangan tubuh saat bertumpu pada satu kaki."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><rect x='25' y='52' width='130' height='10' rx='4' fill='#22c55e'/><circle cx='90' cy='38' r='12' fill='#fde047' stroke='#ca8a04' stroke-width='2'/><text x='90' y='22' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>MATRAS SENAM LANTAI</text></svg>",
+    "q": "Perhatikan gambar alas empuk berwarna hijau di atas! Benda tersebut digunakan saat senam lantai agar tubuh tidak sakit saat berguling, namanya adalah ....",
+    "p": ["Matras", "Batu bata", "Papan tulis", "Meja kayu"],
+    "b": 0,
+    "bahas": "Matras adalah kasur senam empuk pelindung tubuh saat melakukan senam lantai."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><circle cx='65' cy='40' r='16' fill='#f97316' stroke='#9a3412' stroke-width='2'/><path d='M53 33 Q65 40 53 47 M77 33 Q65 40 77 47' stroke='#7c2d12' fill='none' stroke-width='1.5'/><text x='125' y='37' font-size='10' font-weight='bold' text-anchor='middle' fill='#9a3412'>BOLA BESAR</text><text x='125' y='51' font-size='8' text-anchor='middle' fill='#78350f'>Dipantulkan ke lantai</text></svg>",
+    "q": "Perhatikan gambar bola di atas! Gerakan memantul-mantulkan bola ke lantai menggunakan satu tangan sambil berjalan disebut ....",
+    "p": ["Menggiring bola", "Menyundul bola", "Menendang bola", "Memukul bola"],
+    "b": 0,
+    "bahas": "Memantulkan bola ke lantai berulang kali disebut menggiring bola (dribbling)."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/><path d='M20 48 Q45 40 70 48 T120 48 T160 48' stroke='#3b82f6' fill='none' stroke-width='3'/><path d='M20 58 Q45 50 70 58 T120 58 T160 58' stroke='#0284c7' fill='none' stroke-width='3'/><ellipse cx='90' cy='30' rx='24' ry='10' fill='#facc15' stroke='#ca8a04' stroke-width='2'/><text x='90' y='33' font-size='8' font-weight='bold' text-anchor='middle' fill='#713f12'>PELAMPUNG</text></svg>",
+    "q": "Perhatikan gambar di atas! Alat bantu yang dipakai anak kelas 1 saat belajar mengapung di kolam renang dangkal adalah ....",
+    "p": ["Ban pelampung", "Batu kali", "Bola besi", "Tas sekolah"],
+    "b": 0,
+    "bahas": "Ban pelampung berisi udara membantu pemula tetap mengapung aman di air."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#fee2e2' stroke='#dc2626' stroke-width='2'/><rect x='30' y='28' width='45' height='24' rx='5' fill='#38bdf8'/><text x='52' y='44' font-size='9' font-weight='bold' text-anchor='middle' fill='#fff'>SABUN</text><path d='M95 25 C105 38 105 52 95 55 C85 52 85 38 95 25 Z' fill='#0ea5e9'/><text x='138' y='38' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>CUCI</text><text x='138' y='50' font-size='9' font-weight='bold' text-anchor='middle' fill='#991b1b'>TANGAN</text></svg>",
+    "q": "Perhatikan gambar di atas! Setelah selesai berolahraga di lapangan, kita wajib mencuci tangan dengan air mengalir dan .... agar kuman hilang.",
+    "p": ["Sabun", "Pasir", "Daun kering", "Minyak goreng"],
+    "b": 0,
+    "bahas": "Sabun membersihkan kuman dan kotoran yang menempel di telapak tangan."
+  },
+  {
+    "svg": "<svg width='180' height='80' xmlns='http://w3.org'><rect x='10' y='10' width='160' height='60' rx='10' fill='#f3e8ff' stroke='#7c3aed' stroke-width='2'/><circle cx='45' cy='40' r='14' fill='#a855f7'/><text x='45' y='44' font-size='12' text-anchor='middle' fill='#fff'>🎵</text><text x='115' y='36' font-size='10' font-weight='bold' text-anchor='middle' fill='#5b21b6'>SENAM IRAMA</text><text x='115' y='50' font-size='8' text-anchor='middle' fill='#334155'>Hitungan 1 - 2 - 3 - 4</text></svg>",
+    "q": "Perhatikan gambar di atas! Senam yang dilakukan dengan mengikuti ketukan lagu atau hitungan 1 sampai 8 disebut senam ....",
+    "p": ["Irama (ritmik)", "Tidur", "Lompat tinggi", "Angkat besi"],
+    "b": 0,
+    "bahas": "Senam irama memadukan gerakan badan dengan musik atau ketukan hitungan."
+  },
+  {
+    "q": "Sebelum memulai kegiatan olahraga di lapangan, kita harus melakukan ... agar otot tidak kaku dan cedera.",
+    "p": ["Pemanasan", "Tidur pulas", "Makan permen", "Duduk diam"],
+    "b": 0,
+    "bahas": "Pemanasan menyiapkan otot dan persendian sebelum bergerak aktif."
+  },
+  {
+    "q": "Gerakan berpindah tempat dari satu garis ke garis lain seperti berjalan, berlari, dan melompat disebut gerak ....",
+    "p": ["Lokomotor", "Nonlokomotor", "Manipulatif", "Diam"],
+    "b": 0,
+    "bahas": "Gerak lokomotor adalah gerak tubuh yang berpindah tempat."
+  },
+  {
+    "q": "Gerakan mengayunkan lengan, membungkuk, dan memutar kepala di tempat tanpa berpindah posisi disebut gerak ....",
+    "p": ["Nonlokomotor", "Lokomotor", "Manipulatif", "Meluncur"],
+    "b": 0,
+    "bahas": "Gerak nonlokomotor dilakukan di tempat tanpa berpindah posisi."
+  },
+  {
+    "q": "Gerakan melempar, menangkap, dan menendang bola menggunakan alat disebut gerak ....",
+    "p": ["Manipulatif", "Lokomotor", "Nonlokomotor", "Istirahat"],
+    "b": 0,
+    "bahas": "Gerak manipulatif adalah gerak memainkan atau mengendalikan alat seperti bola."
+  },
+  {
+    "q": "Saat mendarat setelah melompat ke depan, kedua lutut sebaiknya sedikit ... agar kaki tidak sakit.",
+    "p": ["Ditekuk", "Diluruskan kaku", "Disilangkan", "Diangkat satu"],
+    "b": 0,
+    "bahas": "Menekuk lutut saat mendarat meredam benturan pada persendian kaki."
+  },
+  {
+    "q": "Gerakan berguling ke depan di atas matras disebut juga ....",
+    "p": ["Roll depan", "Lompat jauh", "Lari cepat", "Renang gaya dada"],
+    "b": 0,
+    "bahas": "Berguling ke depan di atas matras disebut roll depan."
+  },
+  {
+    "q": "Saat melakukan gerakan berguling ke depan, dagu harus ditempelkan ke bagian ....",
+    "p": ["Dada", "Langit-langit", "Bahu kiri", "Lutut"],
+    "b": 0,
+    "bahas": "Menempelkan dagu ke dada membuat tengkuk menyentuh matras dengan aman."
+  },
+  {
+    "q": "Gerakan merangkak seperti bayi dilakukan dengan bertumpu pada kedua tangan dan kedua ....",
+    "p": ["Lutut", "Telinga", "Siku", "Kepala"],
+    "b": 0,
+    "bahas": "Merangkak bertumpu pada kedua telapak tangan dan kedua lutut."
+  },
+  {
+    "q": "Gerakan berjalan di atas garis lurus atau balok titian bermanfaat untuk melatih ....",
+    "p": ["Keseimbangan dan konsentrasi", "Kekuatan gigi", "Suara merdu", "Kecepatan menulis"],
+    "b": 0,
+    "bahas": "Berjalan di atas garis lurus melatih keseimbangan dinamis."
+  },
+  {
+    "q": "Sebelum masuk ke dalam kolam renang, kita sebaiknya membasahi tubuh terlebih dahulu di pancuran agar tubuh menyesuaikan .... air.",
+    "p": ["Suhu", "Warna", "Bau", "Berat"],
+    "b": 0,
+    "bahas": "Membilas tubuh membantu menyesuaikan suhu badan dengan suhu air kolam."
+  },
+  {
+    "q": "Saat berlatih di kolam renang, siswa kelas 1 SD harus memilih kolam yang .... dan selalu diawasi guru.",
+    "p": ["Dangkal", "Sangat dalam", "Berarus deras", "Kotor berlumpur"],
+    "b": 0,
+    "bahas": "Kolam dangkal aman untuk latihan pengenalan air bagi pemula."
+  },
+  {
+    "q": "Aturan keselamatan di tepi kolam renang yang wajib dipatuhi siswa adalah ....",
+    "p": ["Tidak berlari-lari di pinggir kolam karena lantainya licin", "Mendorong teman ke dalam kolam", "Berenang sendirian tanpa izin guru", "Makan di dalam air kolam"],
+    "b": 0,
+    "bahas": "Lantai kolam renang basah dan licin sehingga berlari bisa menyebabkan terpeleset."
+  },
+  {
+    "q": "Setelah selesai pelajaran olahraga, kita melakukan gerakan ... supaya tubuh kembali tenang dan segar.",
+    "p": ["Pendinginan", "Pemanasan", "Lari keliling lapangan", "Lompat tali cepat"],
+    "b": 0,
+    "bahas": "Pendinginan dilakukan di akhir olahraga untuk menormalkan detak jantung."
+  },
+  {
+    "q": "Bagian tubuh yang berguna untuk mendengar aba-aba peluit dari guru olahraga adalah ....",
+    "p": ["Telinga", "Hidung", "Mulut", "Lutut"],
+    "b": 0,
+    "bahas": "Telinga adalah indra pendengaran untuk mendengar peluit dan instruksi guru."
+  },
+  {
+    "q": "Hidung adalah anggota tubuh yang berguna untuk mencium bau dan .... udara.",
+    "p": ["Menghirup (bernapas)", "Melihat", "Mendengar", "Mengunyah"],
+    "b": 0,
+    "bahas": "Hidung berfungsi sebagai jalan masuk dan keluarnya udara saat bernapas."
+  },
+  {
+    "q": "Bagian tubuh yang wajib dibersihkan dengan menggosok gigi secara teratur setiap hari adalah ....",
+    "p": ["Gigi dan mulut", "Kuku jari", "Rambut", "Telapak kaki"],
+    "b": 0,
+    "bahas": "Menggosok gigi menjaga gigi tetap bersih, putih, dan bebas dari sakit gigi."
+  },
+  {
+    "q": "Kuku jari tangan dan kaki yang sudah panjang harus segera ... agar tidak menyimpan kotoran.",
+    "p": ["Dipotong rapi", "Digigit", "Dibiarkan panjang", "Dicat hitam"],
+    "b": 0,
+    "bahas": "Memotong kuku seminggu sekali mencegah kuman masuk ke tubuh saat makan."
+  },
+  {
+    "q": "Pakaian yang paling tepat dipakai saat pelajaran olahraga di sekolah adalah ....",
+    "p": ["Kaos olahraga dan sepatu olahraga", "Seragam batik dan sandal jepit", "Baju tidur panjang", "Jaket tebal dan sepatu bot"],
+    "b": 0,
+    "bahas": "Pakaian olahraga menyerap keringat dan memudahkan tubuh bergerak leluasa."
+  },
+  {
+    "q": "Saat bermain olahraga bersama teman, sikap yang baik dan terpuji adalah ....",
+    "p": ["Jujur, rukun, dan mau berbagi giliran", "Curang supaya menang sendiri", "Mengejek teman yang kalah", "Marah saat terjatuh"],
+    "b": 0,
+    "bahas": "Kejujuran dan kerukunan membuat permainan olahraga menyenangkan bagi semua."
+  }
+]);
+
