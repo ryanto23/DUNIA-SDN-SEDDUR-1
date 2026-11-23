@@ -359,4 +359,189 @@ window.DATA_SEDDUR[1] = {
   ]
 };
 
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.DATA_SEDDUR = window.DATA_SEDDUR || {};
+window.DATA_SEDDUR = window.DATA_SEDDUR || {};
+Object.assign(window.DATA_SEDDUR, {
+  pjok: [
+    {
+      semester: "Semester 1",
+      bab: "Bab 1: Gerak Dasar Lokomotor, Nonlokomotor & Manipulatif",
+      soal: [
+        { ikon: "🏃", tanya: "Gerakan berpindah tempat seperti berjalan, berlari, dan melompat disebut gerak ....", opsi: ["Lokomotor", "Nonlokomotor", "Manipulatif", "Diam"], kunci: 0, bahas: "Gerak lokomotor adalah gerak tubuh yang berpindah tempat dari satu titik ke titik lain." },
+        { ikon: "🙆", tanya: "Gerakan mengayun lengan, membungkuk, dan memutar kepala di tempat disebut gerak ....", opsi: ["Nonlokomotor", "Lokomotor", "Manipulatif", "Melompat jauh"], kunci: 0, bahas: "Gerak nonlokomotor adalah gerak anggota tubuh di tempat tanpa berpindah posisi." },
+        { ikon: "⚽", tanya: "Gerakan menendang bola, melempar bola, dan menangkap bola menggunakan alat disebut gerak ....", opsi: ["Manipulatif", "Lokomotor", "Nonlokomotor", "Istirahat"], kunci: 0, bahas: "Gerak manipulatif adalah gerak memainkan atau mengendalikan benda." },
+        { ikon: "🤸", tanya: "Sebelum memulai kegiatan olahraga di lapangan, kita wajib melakukan .... agar tidak cedera.", opsi: ["Pemanasan", "Tidur siang", "Makan permen", "Duduk diam"], kunci: 0, bahas: "Pemanasan melemaskan otot dan sendi sebelum berolahraga." },
+        { ikon: "🦘", tanya: "Saat mendarat setelah melompat ke depan, kedua lutut sebaiknya sedikit ....", opsi: ["Ditekuk", "Diluruskan kaku", "Disilangkan", "Diangkat satu"], kunci: 0, bahas: "Menekuk lutut saat mendarat meredam benturan pada kaki." },
+        { ikon: "👀", tanya: "Saat berjalan lurus ke depan dengan sikap yang benar, pandangan mata harus mengarah ke ....", opsi: ["Depan", "Bawah tanah", "Belakang", "Samping kiri"], kunci: 0, bahas: "Pandangan lurus ke depan menjaga keseimbangan dan arah langkah." },
+        { ikon: "🏀", tanya: "Gerakan memantul-mantulkan bola basket ke lantai menggunakan satu tangan disebut ....", opsi: ["Menggiring bola", "Menyundul bola", "Menendang bola", "Memukul bola"], kunci: 0, bahas: "Memantulkan bola ke lantai berulang kali disebut menggiring bola (dribbling)." },
+        { ikon: "🚶", tanya: "Gerakan berjalan di atas garis lurus atau balok titian bermanfaat untuk melatih ....", opsi: ["Keseimbangan dan konsentrasi", "Kekuatan gigi", "Suara nyanyian", "Kecepatan menulis"], kunci: 0, bahas: "Berjalan di atas garis lurus melatih keseimbangan dinamis." },
+        { ikon: "👟", tanya: "Saat berlari cepat ke depan, ayunan kedua lengan sebaiknya berlawanan dengan langkah ....", opsi: ["Kaki", "Kepala", "Telinga", "Punggung"], kunci: 0, bahas: "Saat kaki kanan melangkah maju, lengan kiri mengayun ke depan untuk menjaga keseimbangan." },
+        { ikon: "🐸", tanya: "Gerakan meloncat ke depan dengan tolakan dua kaki secara bersamaan menirukan hewan ....", opsi: ["Katak", "Ular", "Ikan", "Burung bangau"], kunci: 0, bahas: "Lompat katak menolak dan mendarat menggunakan kedua kaki secara bersamaan." },
+        { ikon: "🙆‍♂️", tanya: "Gerakan memutar kepala secara perlahan ke kiri dan ke kanan di tempat melatih kelenturan otot ....", opsi: ["Leher", "Lutut", "Tumit", "Perut"], kunci: 0, bahas: "Memutar kepala perlahan melemaskan otot-otot di sekitar leher." },
+        { ikon: "🙆‍♀️", tanya: "Gerakan membungkukkan badan untuk menyentuh ujung jari kaki di tempat melatih kelenturan ....", opsi: ["Pinggang dan punggung", "Telinga", "Jari tangan", "Leher bagian atas"], kunci: 0, bahas: "Membungkuk meregangkan otot pinggang, punggung, dan paha belakang." },
+        { ikon: "🥎", tanya: "Saat menangkap bola kecil yang datang dari teman, posisi kedua telapak tangan membentuk ....", opsi: ["Mangkuk terbuka menghadap arah bola", "Kepalan tinju rapat", "Tangan di belakang punggung", "Tangan di atas lutut"], kunci: 0, bahas: "Membentuk mangkuk dengan jari-jari lentur meredam benturan bola saat ditangkap." },
+        { ikon: "🎯", tanya: "Saat melempar bola ke dalam keranjang sasaran, pandangan mata harus tertuju pada ....", opsi: ["Keranjang sasaran", "Tanah di bawah kaki", "Langit di atas awan", "Teman di belakang"], kunci: 0, bahas: "Pandangan mata ke arah sasaran membantu lemparan tepat mengenai target." },
+        { ikon: "🤝", tanya: "Permainan tarik tambang secara beregu melatih kekuatan otot lengan serta sikap ....", opsi: ["Kerja sama tim", "Saling menyalahkan", "Bertengkar", "Curang"], kunci: 0, bahas: "Tarik tambang membutuhkan kekompakan tarikan seluruh anggota regu." }
+      ]
+    },
+    {
+      semester: "Semester 2",
+      bab: "Bab 2: Keseimbangan, Senam Lantai, Air & Kebersihan Tubuh",
+      soal: [
+        { ikon: "🦩", tanya: "Berdiri dengan satu kaki menyerupai burung bangau melatih .... tubuh.", opsi: ["Keseimbangan", "Kecepatan lari", "Kekuatan gigi", "Suara nyanyian"], kunci: 0, bahas: "Berdiri satu kaki adalah latihan keseimbangan statis." },
+        { ikon: "✈️", tanya: "Sikap kapal terbang dilakukan dengan berdiri satu kaki, badan membungkuk ke depan, dan kedua lengan ....", opsi: ["Direntangkan ke samping", "Dilipat di dada", "Dimasukkan ke saku", "Diletakkan di lutut"], kunci: 0, bahas: "Merentangkan kedua lengan seperti sayap pesawat menjaga keseimbangan tubuh." },
+        { ikon: "🟦", tanya: "Alas empuk yang digunakan saat melakukan gerakan berguling ke depan pada senam lantai disebut ....", opsi: ["Matras", "Meja kayu", "Batu bata", "Kertas koran"], kunci: 0, bahas: "Matras melindungi tubuh dari benturan lantai saat senam." },
+        { ikon: "🤸‍♂️", tanya: "Saat melakukan gerakan berguling ke depan (roll depan) di atas matras, dagu ditempelkan ke ....", opsi: ["Dada", "Langit-langit", "Bahu kiri", "Lutut"], kunci: 0, bahas: "Menempelkan dagu ke dada membuat tengkuk menyentuh matras dengan aman." },
+        { ikon: "🎵", tanya: "Senam yang dilakukan bersama-sama mengikuti iringan musik atau hitungan 1 sampai 8 disebut senam ....", opsi: ["Irama (ritmik)", "Tidur", "Lompat tinggi", "Angkat besi"], kunci: 0, bahas: "Senam irama memadukan gerakan badan dengan ketukan lagu." },
+        { ikon: "🏊", tanya: "Alat bantu pelampung yang aman dipakai anak kelas 1 saat belajar mengapung di kolam renang dangkal adalah ....", opsi: ["Ban pelampung", "Batu kali", "Bola besi", "Tas sekolah"], kunci: 0, bahas: "Ban pelampung berisi udara membantu pemula tetap terapung aman di air." },
+        { ikon: "⚠️", tanya: "Aturan keselamatan di tepi kolam renang yang wajib dipatuhi siswa adalah ....", opsi: ["Tidak berlari-lari di pinggir kolam karena licin", "Mendorong teman ke dalam kolam", "Berenang sendirian tanpa izin guru", "Makan di dalam air kolam"], kunci: 0, bahas: "Lantai kolam renang basah dan licin sehingga berlari bisa menyebabkan terpeleset." },
+        { ikon: "🪥", tanya: "Bagian tubuh yang wajib dibersihkan dua kali sehari setelah sarapan dan sebelum tidur adalah ....", opsi: ["Gigi dan mulut", "Kuku kaki", "Rambut", "Sepatu"], kunci: 0, bahas: "Menggosok gigi secara teratur mencegah gigi berlubang." },
+        { ikon: "🧼", tanya: "Mencuci tangan sebelum makan dan sesudah bermain harus menggunakan air mengalir dan ....", opsi: ["Sabun", "Tanah", "Pasir", "Daun kering"], kunci: 0, bahas: "Sabun membunuh kuman yang menempel di telapak tangan." },
+        { ikon: "✂️", tanya: "Kuku jari tangan dan kaki yang sudah panjang harus segera .... agar tidak menyimpan kotoran.", opsi: ["Dipotong rapi", "Digigit", "Dibiarkan panjang", "Dicat hitam"], kunci: 0, bahas: "Memotong kuku seminggu sekali mencegah kuman masuk ke tubuh saat makan." },
+        { ikon: "🚿", tanya: "Mandi membersihkan seluruh tubuh sebaiknya dilakukan minimal .... kali sehari memakai sabun.", opsi: ["Dua (pagi dan sore)", "Satu kali seminggu", "Satu kali sebulan", "Tidak perlu mandi"], kunci: 0, bahas: "Mandi pagi dan sore menjaga kulit tetap bersih dan segar." },
+        { ikon: "👂", tanya: "Bagian tubuh yang berguna untuk mendengar aba-aba peluit dari guru olahraga adalah ....", opsi: ["Telinga", "Hidung", "Mulut", "Lutut"], kunci: 0, bahas: "Telinga adalah indra pendengaran untuk mendengar peluit dan instruksi guru." },
+        { ikon: "👕", tanya: "Pakaian yang paling nyaman dan menyerap keringat saat pelajaran olahraga di sekolah adalah ....", opsi: ["Kaos olahraga dan sepatu olahraga", "Seragam batik dan sandal jepit", "Baju tidur panjang", "Jaket tebal dan sepatu bot"], kunci: 0, bahas: "Pakaian olahraga menyerap keringat dan memudahkan tubuh bergerak leluasa." },
+        { ikon: "🧘", tanya: "Setelah selesai pelajaran olahraga, kita melakukan gerakan .... agar detak jantung kembali tenang.", opsi: ["Pendinginan", "Lari keliling lapangan", "Pemanasan ulang", "Lompat tinggi"], kunci: 0, bahas: "Pendinginan dilakukan di akhir olahraga untuk menormalkan suhu tubuh dan detak jantung." },
+        { ikon: "🏅", tanya: "Saat bermain olahraga bersama teman, sikap yang baik dan terpuji adalah ....", opsi: ["Jujur, rukun, dan mau berbagi giliran", "Curang supaya menang sendiri", "Mengejek teman yang kalah", "Marah saat terjatuh"], kunci: 0, bahas: "Kejujuran dan kerukunan membuat permainan olahraga menyenangkan bagi semua." }
+      ]
+    }
+  ],
+
+    madura: [
+    {
+      semester: "Semester 1 (TA 2026/2027)",
+      bab: "Bab 1: Pangennalan Abha' Dhibi' & Angghuta Badhan",
+      soal: [
+        { ikon: "👋", tanya: "Dalam bahasa Madura (basa enja'-iya), kata 'Saya / Aku' adalah ....", opsi: ["Sengko'", "Ba'na", "Sampeyan", "Kaule"], kunci: 0, bahas: "Dalam tingkatan bahasa Madura enja'-iya, 'Sengko'' artinya saya/aku." },
+        { ikon: "🗣️", tanya: "Dalam bahasa Madura halus (enggi-bunten), kata 'Saya' yang sopan diucapkan kepada guru adalah ....", opsi: ["Kaule / Abdhina", "Sengko'", "Ba'na", "Kake"], kunci: 0, bahas: "Kaule atau abdhina adalah bentuk halus (enggi-bunten) dari kata saya." },
+        { ikon: "👁️", tanya: "Bahasa Madura dari anggota tubuh 'Mata' adalah ....", opsi: ["Mata / Soca", "Kopeng", "Elong", "Soko"], kunci: 0, bahas: "Mata dalam bahasa Madura disebut mata (enja'-iya) atau soca (enggi-bunten)." },
+        { ikon: "👃", tanya: "Kata 'Elong' dalam bahasa Madura berarti anggota tubuh ....", opsi: ["Hidung", "Telinga", "Mulut", "Tangan"], kunci: 0, bahas: "Elong dalam bahasa Madura artinya hidung." },
+        { ikon: "👂", tanya: "Anggota tubuh yang berguna untuk mendengar dalam bahasa Madura disebut ....", opsi: ["Kopeng", "Tanang", "Soko", "Ghighi"], kunci: 0, bahas: "Kopeng artinya telinga (basa halus: karna)." },
+        { ikon: "👄", tanya: "Bahasa Madura dari anggota tubuh 'Mulut' adalah ....", opsi: ["Colo'", "Cethak", "Ghighi", "Alis"], kunci: 0, bahas: "Colo' dalam bahasa Madura berarti mulut." },
+        { ikon: "🦷", tanya: "Kata 'Ghighi' dalam bahasa Madura memiliki arti ....", opsi: ["Gigi", "Lidah", "Bibir", "Pipi"], kunci: 0, bahas: "Ghighi dalam bahasa Madura berarti gigi." },
+        { ikon: "✋", tanya: "Anggota tubuh yang dipakai untuk menulis dan memegang pensil dalam bahasa Madura disebut ....", opsi: ["Tanang", "Soko", "Cethak", "Tabu'"], kunci: 0, bahas: "Tanang dalam bahasa Madura berarti tangan (basa halus: asta)." },
+        { ikon: "🦶", tanya: "Anggota tubuh yang digunakan untuk berjalan dan berlari dalam bahasa Madura disebut ....", opsi: ["Soko", "Tanang", "Kopeng", "Elong"], kunci: 0, bahas: "Soko dalam bahasa Madura berarti kaki (basa halus: sampeyan/padha)." },
+        { ikon: "🧠", tanya: "Kata 'Cethak' (basa enja'-iya) dalam bahasa Madura berarti bagian tubuh ....", opsi: ["Kepala", "Perut", "Punggung", "Leher"], kunci: 0, bahas: "Cethak berarti kepala (basa halus: sera/mustaka)." },
+        { ikon: "🙏", tanya: "Ketika bertemu dengan guru di pagi hari, ucapan salam yang santun dalam bahasa Madura adalah ....", opsi: ["Assalamu'alaikum, salameddheng lagghu Pa'/Bu'", "Sengko' entar mole", "Ba'na sapa nyamana?", "Mara maen bal"], kunci: 0, bahas: "Salam dan sapaan sopan mencerminkan tata krama (andhap asor) masyarakat Madura." },
+        { ikon: "📛", tanya: "Arti dari kalimat bahasa Madura 'Nyamana sengko' Ahmad' adalah ....", opsi: ["Nama saya Ahmad", "Rumah saya jauh", "Umur saya tujuh tahun", "Saya suka membaca"], kunci: 0, bahas: "Nyama berarti nama, sehingga 'Nyamana sengko' Ahmad' artinya nama saya Ahmad." },
+        { ikon: "🔢", tanya: "Bilangan 'Satu, Dua, Tiga' dalam bahasa Madura secara berurutan adalah ....", opsi: ["Settong, Dhuwa', Tello'", "Empa', Lema', Ennem", "Petto', Ballu', Sanga'", "Sapolo, Sabellas, Dhubellas"], kunci: 0, bahas: "Settong (1), dhuwa' (2), tello' (3), empa' (4), lema' (5)." },
+        { ikon: "5️⃣", tanya: "Kata 'Lema'' dalam hitungan angka bahasa Madura berarti ....", opsi: ["Lima (5)", "Empat (4)", "Enam (6)", "Tujuh (7)"], kunci: 0, bahas: "Lema' dalam bahasa Madura artinya lima." },
+        { ikon: "🤝", tanya: "Apabila kita berbuat salah kepada teman atau orang tua, ungkapan permintaan maaf dalam bahasa Madura adalah ....", opsi: ["Saporana / Nyo'on sapora", "Mator sakalangkong", "Sengko' ta' tao", "Kamma ba'na?"], kunci: 0, bahas: "Saporana atau nyo'on sapora artinya mohon maaf." }
+      ]
+    },
+    {
+      semester: "Semester 2 (TA 2026/2027)",
+      bab: "Bab 2: Kalowarga, Kewan & Bu-ombuwan e Sekitar",
+      soal: [
+        { ikon: "👩", tanya: "Sebutan untuk 'Ibu' dalam bahasa Madura adalah ....", opsi: ["Embu' / Ebu", "Eppa' / Rama", "Kaka'", "Alek"], kunci: 0, bahas: "Embu' atau Ebu dalam bahasa Madura berarti ibu." },
+        { ikon: "👨", tanya: "Sebutan untuk 'Ayah / Bapak' dalam bahasa Madura adalah ....", opsi: ["Eppa' / Rama", "Embu'", "Emba", "Bibbi'"], kunci: 0, bahas: "Eppa' atau Rama dalam bahasa Madura berarti ayah." },
+        { ikon: "👦", tanya: "Saudara yang lebih tua dalam keluarga Madura dipanggil ....", opsi: ["Kaka' / Caca'", "Alek", "Ponakan", "Emba"], kunci: 0, bahas: "Kaka' adalah panggilan untuk kakak laki-laki maupun perempuan." },
+        { ikon: "👶", tanya: "Kata 'Alek' dalam keluarga Madura memiliki arti ....", opsi: ["Adik", "Kakak", "Nenek", "Paman"], kunci: 0, bahas: "Alek dalam bahasa Madura berarti adik." },
+        { ikon: "👴", tanya: "Sebutan untuk 'Kakek atau Nenek' dalam bahasa Madura adalah ....", opsi: ["Emba / Kai - Nyae", "Eppa'", "Kaka'", "Alek"], kunci: 0, bahas: "Emba (atau Kai untuk kakek, Nyae untuk nenek) adalah sebutan bagi orang tua dari ayah/ibu." },
+        { ikon: "🐄", tanya: "Hewan khas Pulau Madura yang terkenal dalam tradisi Karapan Sapi adalah ....", opsi: ["Sape (Sapi)", "Koceng (Kucing)", "Ajham (Ayam)", "Embi' (Kambing)"], kunci: 0, bahas: "Sape dalam bahasa Madura berarti sapi." },
+        { ikon: "🐈", tanya: "Hewan peliharaan yang suka mengeong dan menangkap tikus dalam bahasa Madura disebut ....", opsi: ["Koceng", "Pate'", "Etik", "Jhuko'"], kunci: 0, bahas: "Koceng berarti kucing." },
+        { ikon: "🐓", tanya: "Kata 'Ajham' dalam bahasa Madura adalah nama hewan ....", opsi: ["Ayam", "Bebek", "Burung", "Ikan"], kunci: 0, bahas: "Ajham berarti ayam." },
+        { ikon: "🐟", tanya: "Hewan yang hidup di air dan banyak ditangkap nelayan Madura dalam bahasa Madura disebut ....", opsi: ["Jhuko'", "Mano'", "Sape", "Koceng"], kunci: 0, bahas: "Jhuko' dalam bahasa Madura berarti ikan." },
+        { ikon: "🐦", tanya: "Kata 'Mano'' dalam bahasa Madura memiliki arti hewan ....", opsi: ["Burung", "Kambing", "Kelinci", "Kuda"], kunci: 0, bahas: "Mano' berarti burung." },
+        { ikon: "🍌", tanya: "Buah 'Pisang' dalam bahasa Madura disebut ....", opsi: ["Gheddhang", "Pao", "Nangka", "Jherruk"], kunci: 0, bahas: "Gheddhang berarti pisang." },
+        { ikon: "🥭", tanya: "Kata 'Pao' dalam bahasa Madura adalah nama buah ....", opsi: ["Mangga", "Pisang", "Semangka", "Pepaya"], kunci: 0, bahas: "Pao dalam bahasa Madura berarti buah mangga." },
+        { ikon: "🍊", tanya: "Buah 'Jeruk' yang rasanya manis asam dalam bahasa Madura disebut ....", opsi: ["Jherruk", "Salak", "Dhurin", "Nanas"], kunci: 0, bahas: "Jherruk berarti jeruk." },
+        { ikon: "🏠", tanya: "Kata 'Bengko' atau 'Roma' dalam bahasa Madura memiliki arti ....", opsi: ["Rumah", "Sekolah", "Masjid", "Pasar"], kunci: 0, bahas: "Bengko (enja'-iya) dan roma/dhalem (enggi-bunten) berarti rumah." },
+        { ikon: "🙏", tanya: "Ungkapan 'Terima kasih' yang sopan dalam bahasa Madura adalah ....", opsi: ["Mator sakalangkong", "Nyo'on sapora", "Sengko' mole", "Sapa nyamana?"], kunci: 0, bahas: "Mator sakalangkong adalah ungkapan terima kasih dalam bahasa Madura." }
+      ]
+    }
+  ],
+
+    kesenian: [
+    {
+      semester: "Semester 1 (TA 2026/2027)",
+      bab: "Bab 1: Seni Rupa (Garis, Bentuk, Warna & Tekstur di Sekitar)",
+      soal: [
+        { ikon: "✏️", tanya: "Alat utama yang digunakan untuk menggambar sketsa garis di atas kertas adalah ....", opsi: ["Pensil", "Gunting", "Lem kertas", "Penghapus papan"], kunci: 0, bahas: "Pensil memudahkan membuat garis sketsa awal sebelum diwarnai." },
+        { ikon: "🎨", tanya: "Tiga warna dasar (warna primer) dalam seni rupa adalah ....", opsi: ["Merah, Kuning, dan Biru", "Hijau, Ungu, dan Cokelat", "Hitam, Putih, dan Abu-abu", "Merah muda, Oranye, dan Hitam"], kunci: 0, bahas: "Merah, kuning, dan biru adalah warna pokok yang tidak berasal dari campuran warna lain." },
+        { ikon: "🟠", tanya: "Apabila warna merah dicampur dengan warna kuning, maka akan menghasilkan warna baru yaitu ....", opsi: ["Oranye (jingga)", "Hijau", "Ungu", "Hitam"], kunci: 0, bahas: "Merah + kuning menghasilkan warna sekunder oranye (jingga)." },
+        { ikon: "🟢", tanya: "Campuran antara warna biru dan warna kuning akan menghasilkan warna ....", opsi: ["Hijau", "Oranye", "Ungu", "Merah muda"], kunci: 0, bahas: "Biru + kuning menghasilkan warna hijau." },
+        { ikon: "🟣", tanya: "Jika warna merah dicampur dengan warna biru, warna yang terbentuk adalah ....", opsi: ["Ungu", "Hijau", "Kuning", "Putih"], kunci: 0, bahas: "Merah + biru menghasilkan warna ungu." },
+        { ikon: "〰️", tanya: "Garis yang berkelok-kelok menyerupai ombak laut atau jalannya ular disebut garis ....", opsi: ["Lengkung / bergelombang", "Lurus tegak", "Zig-zag tajam", "Putus-putus"], kunci: 0, bahas: "Garis bergelombang memiliki bentuk melengkung berkesinambungan seperti ombak." },
+        { ikon: "⚡", tanya: "Garis yang patah-patah bersudut tajam seperti gambar petir atau gigi gergaji disebut garis ....", opsi: ["Zig-zag", "Lengkung", "Mendatar", "Melingkar"], kunci: 0, bahas: "Garis zig-zag terbentuk dari garis lurus yang berbelok tajam secara bergantian." },
+        { ikon: "🔺", tanya: "Bentuk bangun datar yang memiliki tiga sisi dan tiga sudut seperti atap rumah adalah ....", opsi: ["Segitiga", "Lingkaran", "Persegi panjang", "Oval"], kunci: 0, bahas: "Segitiga memiliki 3 sisi dan 3 titik sudut." },
+        { ikon: "⭕", tanya: "Benda di sekitar kelas yang memiliki bentuk bangun lingkaran adalah ....", opsi: ["Jam dinding bulat dan uang koin", "Papan tulis persegi panjang", "Buku pelajaran", "Penggaris segitiga"], kunci: 0, bahas: "Jam dinding bulat dan roda berbentuk lingkaran." },
+        { ikon: "🖍️", tanya: "Alat mewarnai gambar yang berbentuk batang lilin berwarna dan menghasilkan goresan tebal lembut adalah ....", opsi: ["Krayon (crayon)", "Penggaris besi", "Rautan pensil", "Jangka"], kunci: 0, bahas: "Krayon terbuat dari lilin berwarna yang mudah digoreskan pada kertas gambar." },
+        { ikon: "✋", tanya: "Permukaan benda yang terasa licin atau kasar ketika diraba dengan ujung jari disebut ....", opsi: ["Tekstur", "Irama", "Nada", "Tempo"], kunci: 0, bahas: "Tekstur adalah sifat permukaan benda (halus, licin, kasar, atau bergerigi)." },
+        { ikon: "🪨", tanya: "Contoh benda alam yang memiliki permukaan bertekstur kasar saat diraba adalah ....", opsi: ["Kulit kayu pohon dan batu kali", "Kaca jendela bersih", "Kertas HVS baru", "Piring keramik licin"], kunci: 0, bahas: "Kulit batang pohon dan batu memiliki permukaan tidak rata yang terasa kasar." },
+        { ikon: "✂️", tanya: "Karya seni rupa yang dibuat dengan cara menggunting kertas warna lalu menempelkannya pada pola gambar disebut ....", opsi: ["Kolase / montase", "Patung tanah liat", "Anyaman bambu", "Lukisan cat air"], kunci: 0, bahas: "Kolase menempelkan potongan bahan (kertas, daun kering, biji-bijian) pada bidang gambar." },
+        { ikon: "🍂", tanya: "Bahan alam di sekitar sekolah yang dapat dimanfaatkan untuk menghias karya kolase adalah ....", opsi: ["Daun kering dan biji-bijian", "Pecahan kaca tajam", "Batu baterai bekas", "Kawat berduri"], kunci: 0, bahas: "Daun kering, ranting kecil, dan biji-bijian aman dan indah untuk kerajinan kolase." },
+        { ikon: "🖼️", tanya: "Sikap yang baik ketika melihat hasil gambar teman yang berbeda dengan gambar kita adalah ....", opsi: ["Menghargai dan memujinya dengan sopan", "Mencoret-coret gambar teman", "Mengejek gambar teman", "Menyobek kertas gambar teman"], kunci: 0, bahas: "Menghargai karya teman menumbuhkan rasa percaya diri dan kerukunan di kelas." }
+      ]
+    },
+    {
+      semester: "Semester 2 (TA 2026/2027)",
+      bab: "Bab 2: Seni Musik & Seni Tari (Bunyi, Lagu Anak & Gerak Tari)",
+      soal: [
+        { ikon: "🔔", tanya: "Bunyi yang dihasilkan oleh benda-benda di alam seperti suara angin, hujan, dan petir disebut bunyi ....", opsi: ["Alam", "Buatan", "Musik digital", "Mesin"], kunci: 0, bahas: "Bunyi alam berasal dari peristiwa alam maupun suara hewan tanpa dibuat manusia." },
+        { ikon: "👏", tanya: "Bunyi yang dihasilkan dari tepuk tangan, peluit guru, dan ketukan meja disebut bunyi ....", opsi: ["Buatan", "Alam", "Petir", "Angin"], kunci: 0, bahas: "Bunyi buatan dihasilkan oleh aktivitas manusia atau alat buatan manusia." },
+        { ikon: "🇮🇩", tanya: "Lagu wajib nasional yang dinyanyikan saat upacara bendera setiap hari Senin di sekolah adalah ....", opsi: ["Indonesia Raya", "Balonku Ada Lima", "Cicak-Cicak di Dinding", "Pelangi-Pelangi"], kunci: 0, bahas: "Lagu Indonesia Raya adalah lagu kebangsaan Indonesia ciptaan W.R. Supratman." },
+        { ikon: "🎶", tanya: "Lagu anak-anak 'Balonku Ada Lima' dan 'Pelangi-Pelangi' diciptakan oleh ....", opsi: ["A.T. Mahmud", "W.R. Supratman", "Ibu Sud", "C. Simanjuntak"], kunci: 0, bahas: "A.T. Mahmud adalah pencipta banyak lagu anak populer di Indonesia." },
+        { ikon: "🥁", tanya: "Alat musik yang dimainkan dengan cara dipukul menggunakan stik atau telapak tangan adalah ....", opsi: ["Drum, rebana, dan gendang", "Suling dan pianika", "Gitar dan kecapi", "Biola"], kunci: 0, bahas: "Alat musik ritmis seperti gendang dan rebana dibunyikan dengan cara dipukul." },
+        { ikon: "🪈", tanya: "Alat musik tradisional dari bambu yang dimainkan dengan cara ditiup adalah ....", opsi: ["Seruling (suling)", "Angklung", "Gendang", "Gong"], kunci: 0, bahas: "Seruling menghasilkan nada merdu ketika ditiup dan lubang nadanya ditutup-buka." },
+        { ikon: "🎋", tanya: "Alat musik tradisional dari Jawa Barat yang terbuat dari bambu dan dibunyikan dengan cara digoyangkan adalah ....", opsi: ["Angklung", "Tifa", "Sasando", "Kolintang"], kunci: 0, bahas: "Angklung dibunyikan dengan cara digetarkan atau digoyangkan." },
+        { ikon: "⏱️", tanya: "Cepat atau lambatnya ketukan dalam sebuah lagu disebut ....", opsi: ["Tempo", "Warna", "Tekstur", "Garis"], kunci: 0, bahas: "Tempo mengatur kecepatan lagu (cepat, sedang, atau lambat)." },
+        { ikon: "💃", tanya: "Unsur utama dalam seni tari yang membuat gerakan tubuh terlihat indah mengikuti irama lagu adalah ....", opsi: ["Gerak tubuh (wiraga) dan irama (wirama)", "Suara teriakan keras", "Diam berdiri kaku", "Berlari keluar panggung"], kunci: 0, bahas: "Tari adalah ekspresi jiwa manusia melalui gerak tubuh yang ritmis dan indah." },
+        { ikon: "🦋", tanya: "Gerakan menari dengan merentangkan kedua tangan dan mengepakkannya naik turun menirukan gerakan ....", opsi: ["Kupu-kupu atau burung terbang", "Batu diam", "Pohon tumbang", "Ikan berenang"], kunci: 0, bahas: "Gerak tari anak kelas 1 sering menirukan gerak hewan dan tumbuhan di alam." },
+        { ikon: "🌱", tanya: "Gerakan menari dengan tubuh berdiri tegak dan kedua tangan melambai perlahan ke kiri dan kanan menirukan ....", opsi: ["Pohon tertiup angin sepoi-sepoi", "Harimau berlari", "Katak melompat", "Mobil melaju"], kunci: 0, bahas: "Ayunan lengan lembut menirukan dahan dan daun pohon yang tertiup angin." },
+        { ikon: "🐰", tanya: "Gerakan menari dengan meletakkan kedua tangan di atas kepala seperti telinga panjang sambil melompat kecil menirukan ....", opsi: ["Kelinci", "Gajah", "Ular", "Buaya"], kunci: 0, bahas: "Kelinci bergerak dengan cara melompat lincah." },
+        { ikon: "👣", tanya: "Bagian tubuh yang digerakkan saat menari dengan cara melangkah ke depan, ke samping, dan berjinjit adalah ....", opsi: ["Kaki", "Kepala", "Tangan", "Bahu"], kunci: 0, bahas: "Gerak kaki meliputi melangkah, berjinjit, menghentak, dan melompat kecil." },
+        { ikon: "😊", tanya: "Saat menarikan lagu anak yang gembira seperti 'Menanam Jagung', ekspresi wajah penari sebaiknya ....", opsi: ["Tersenyum ceria dan bersemangat", "Cemberut dan marah", "Menangis sedih", "Menunduk ketakutan"], kunci: 0, bahas: "Ekspresi wajah (wirasa) menyesuaikan suasana lagu yang dibawakan." },
+        { ikon: "🤝", tanya: "Ketika berlatih menari berkelompok bersama teman sekelas, hal terpenting agar tarian terlihat rapi adalah ....", opsi: ["Kekompakan gerakan dan mengikuti hitungan irama bersama", "Bergerak cepat mendahului teman", "Bercanda dan mendorong teman", "Tidak mau mengikuti latihan"], kunci: 0, bahas: "Kekompakan membuat tarian kelompok tampak serasi dan enak dipandang." }
+      ]
+    }
+  ],
+
+    bing: [
+    {
+      semester: "Semester 1 (TA 2026/2027)",
+      bab: "Bab 1: Greetings, Numbers 1–10 & Colors",
+      soal: [
+        { ikon: "🌅", tanya: "Ucapan sapaan 'Selamat pagi' dalam bahasa Inggris adalah ....", opsi: ["Good morning", "Good night", "Good afternoon", "Goodbye"], kunci: 0, bahas: "Good morning artinya selamat pagi." },
+        { ikon: "👋", tanya: "Jika teman menyapa 'How are you?', jawaban yang sopan dalam bahasa Inggris adalah ....", opsi: ["I am fine, thank you", "My name is Budi", "Good night", "I am seven"], kunci: 0, bahas: "'How are you?' berarti apa kabar, dijawab dengan 'I am fine, thank you' (Saya baik, terima kasih)." },
+        { ikon: "📛", tanya: "Arti dari pertanyaan bahasa Inggris 'What is your name?' adalah ....", opsi: ["Siapa namamu?", "Berapa umurmu?", "Di mana rumahmu?", "Apa warnanya?"], kunci: 0, bahas: "'What is your name?' digunakan untuk menanyakan nama seseorang." },
+        { ikon: "1️⃣", tanya: "Angka '1, 2, 3' dalam bahasa Inggris secara berurutan adalah ....", opsi: ["One, Two, Three", "Four, Five, Six", "Seven, Eight, Nine", "Ten, Eleven, Twelve"], kunci: 0, bahas: "One (1), Two (2), Three (3)." },
+        { ikon: "5️⃣", tanya: "Kata bahasa Inggris untuk bilangan 'Lima (5)' adalah ....", opsi: ["Five", "Four", "Six", "Seven"], kunci: 0, bahas: "Four (4), Five (5), Six (6)." },
+        { ikon: "🔟", tanya: "Bilangan 'Sepuluh (10)' dalam bahasa Inggris disebut ....", opsi: ["Ten", "Eight", "Nine", "Seven"], kunci: 0, bahas: "Eight (8), Nine (9), Ten (10)." },
+        { ikon: "🍎", tanya: "Warna buah apel yang matang pada gambar di samping dalam bahasa Inggris adalah ....", opsi: ["Red", "Blue", "Yellow", "Green"], kunci: 0, bahas: "Red berarti merah." },
+        { ikon: "🍌", tanya: "Warna buah pisang yang matang (kuning) dalam bahasa Inggris adalah ....", opsi: ["Yellow", "Black", "White", "Purple"], kunci: 0, bahas: "Yellow berarti kuning." },
+        { ikon: "🌿", tanya: "Warna daun yang segar (hijau) dalam bahasa Inggris disebut ....", opsi: ["Green", "Red", "Orange", "Pink"], kunci: 0, bahas: "Green berarti hijau." },
+        { ikon: "☁️", tanya: "Warna langit cerah (biru) dalam bahasa Inggris adalah ....", opsi: ["Blue", "Brown", "Grey", "Black"], kunci: 0, bahas: "Blue berarti biru." },
+        { ikon: "🥛", tanya: "Warna susu sapi (putih) dalam bahasa Inggris disebut ....", opsi: ["White", "Black", "Yellow", "Green"], kunci: 0, bahas: "White berarti putih, sedangkan black berarti hitam." },
+        { ikon: "✏️", tanya: "Benda di dalam tas sekolah yang berarti 'Pensil' dalam bahasa Inggris adalah ....", opsi: ["Pencil", "Book", "Eraser", "Ruler"], kunci: 0, bahas: "Pencil = pensil, Book = buku, Eraser = penghapus." },
+        { ikon: "📘", tanya: "Kata 'Book' dalam bahasa Indonesia memiliki arti ....", opsi: ["Buku", "Tas", "Meja", "Kursi"], kunci: 0, bahas: "Book artinya buku." },
+        { ikon: "🎒", tanya: "Benda yang dipakai membawa buku ke sekolah dalam bahasa Inggris disebut ....", opsi: ["Bag", "Pen", "Board", "Door"], kunci: 0, bahas: "Bag artinya tas." },
+        { ikon: "🙏", tanya: "Jika seseorang menolong kita, ucapan 'Terima kasih' dalam bahasa Inggris adalah ....", opsi: ["Thank you", "Sorry", "Please", "Hello"], kunci: 0, bahas: "Thank you artinya terima kasih." }
+      ]
+    },
+    {
+      semester: "Semester 2 (TA 2026/2027)",
+      bab: "Bab 2: My Family, Animals & Fruits",
+      soal: [
+        { ikon: "👩", tanya: "Kata bahasa Inggris untuk anggota keluarga 'Ibu' adalah ....", opsi: ["Mother", "Father", "Brother", "Sister"], kunci: 0, bahas: "Mother berarti ibu, sedangkan Father berarti ayah." },
+        { ikon: "👨", tanya: "Kata 'Father' dalam bahasa Indonesia berarti ....", opsi: ["Ayah", "Ibu", "Kakek", "Nenek"], kunci: 0, bahas: "Father artinya ayah." },
+        { ikon: "👦", tanya: "Saudara laki-laki dalam bahasa Inggris disebut ....", opsi: ["Brother", "Sister", "Mother", "Grandmother"], kunci: 0, bahas: "Brother = saudara laki-laki, Sister = saudara perempuan." },
+        { ikon: "👧", tanya: "Kata 'Sister' dalam bahasa Indonesia memiliki arti ....", opsi: ["Saudara perempuan", "Saudara laki-laki", "Ayah", "Paman"], kunci: 0, bahas: "Sister berarti saudara perempuan (kakak/adik perempuan)." },
+        { ikon: "🐈", tanya: "Hewan peliharaan 'Kucing' dalam bahasa Inggris disebut ....", opsi: ["Cat", "Dog", "Bird", "Fish"], kunci: 0, bahas: "Cat berarti kucing." },
+        { ikon: "🐟", tanya: "Hewan yang hidup di air 'Ikan' dalam bahasa Inggris adalah ....", opsi: ["Fish", "Bird", "Rabbit", "Chicken"], kunci: 0, bahas: "Fish berarti ikan." },
+        { ikon: "🐦", tanya: "Hewan yang bisa terbang 'Burung' dalam bahasa Inggris disebut ....", opsi: ["Bird", "Cow", "Goat", "Duck"], kunci: 0, bahas: "Bird berarti burung." },
+        { ikon: "🐄", tanya: "Kata 'Cow' dalam bahasa Indonesia adalah nama hewan ....", opsi: ["Sapi", "Ayam", "Kambing", "Kelinci"], kunci: 0, bahas: "Cow berarti sapi." },
+        { ikon: "🦆", tanya: "Hewan unggas yang suka berenang 'Bebek' dalam bahasa Inggris adalah ....", opsi: ["Duck", "Cat", "Horse", "Tiger"], kunci: 0, bahas: "Duck berarti bebek." },
+        { ikon: "🍉", tanya: "Nama buah 'Semangka' dalam bahasa Inggris adalah ....", opsi: ["Watermelon", "Apple", "Banana", "Orange"], kunci: 0, bahas: "Watermelon artinya semangka." },
+        { ikon: "🍊", tanya: "Kata 'Orange' selain berarti warna jingga juga merupakan nama buah ....", opsi: ["Jeruk", "Mangga", "Pisang", "Anggur"], kunci: 0, bahas: "Orange berarti buah jeruk." },
+        { ikon: "🥭", tanya: "Nama buah 'Mangga' dalam bahasa Inggris adalah ....", opsi: ["Mango", "Papaya", "Melon", "Grape"], kunci: 0, bahas: "Mango berarti mangga." },
+        { ikon: "👁️", tanya: "Bagian tubuh 'Mata' dalam bahasa Inggris disebut ....", opsi: ["Eye", "Nose", "Ear", "Mouth"], kunci: 0, bahas: "Eye = mata, Nose = hidung, Ear = telinga, Mouth = mulut." },
+        { ikon: "👃", tanya: "Kata 'Nose' dalam bahasa Indonesia berarti bagian tubuh ....", opsi: ["Hidung", "Telinga", "Mulut", "Tangan"], kunci: 0, bahas: "Nose artinya hidung." },
+        { ikon: "❤️", tanya: "Arti dari kalimat bahasa Inggris 'I like banana' adalah ....", opsi: ["Saya suka pisang", "Saya punya apel", "Ini adalah mangga", "Saya makan jeruk"], kunci: 0, bahas: "'I like...' artinya saya suka, sehingga 'I like banana' artinya saya suka pisang." }
+      ]
+    }
+  ]
+});
+
 
