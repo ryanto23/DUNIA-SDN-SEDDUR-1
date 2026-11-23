@@ -5350,3 +5350,196 @@ window.tambahPaketUjian("6", "pjok", "UAS Semester 2", [
     "bahas": "PJOK mengembangkan aspek kebugaran fisik, keterampilan gerak, pengetahuan kesehatan, dan karakter sportif."
   }
 ]);
+
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("6", "pjok", "UAS Semester 1", [
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><rect x='25' y='46' width='135' height='3' fill='#0369a1'/><line x1='92' y1='25' x2='92' y2='62' stroke='#0f172a' stroke-width='2.5'/><circle cx='76' cy='26' r='7' fill='#facc15' stroke='#ca8a04' stroke-width='1.5'/><polygon points='78,33 98,42 94,45 106,49 90,46 93,43 76,36' fill='#dc2626'/><text x='92' y='20' font-size='8.5' font-weight='bold' text-anchor='middle' fill='#0369a1'>SMASH BOLA VOLI</text></svg>",
+    "q": "Perhatikan ilustrasi di atas! Dalam permainan bola voli, rangkaian gerak melompat tinggi di dekat net lalu memukul bola menukik tajam ke lapangan lawan disebut ....",
+    "p": ["Smash (spike)", "Passing bawah", "Servis bawah", "Dribbling"],
+    "b": 0,
+    "bahas": "Smash memadukan gerak awalan langkah, tolakan melompat, pukulan keras di atas net, dan pendaratan dua kaki."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#fef3c7' stroke='#d97706' stroke-width='2'/><rect x='132' y='22' width='6' height='36' fill='#92400e'/><ellipse cx='122' cy='32' rx='10' ry='4' fill='none' stroke='#dc2626' stroke-width='2.5'/><circle cx='106' cy='24' r='7' fill='#f97316' stroke='#9a3412' stroke-width='1.5'/><path d='M55 52 L82 46 L102 28' stroke='#d97706' fill='none' stroke-width='2.5' stroke-dasharray='4,2'/><text x='62' y='24' font-size='8.5' font-weight='bold' text-anchor='middle' fill='#92400e'>LAY-UP SHOOT BASKET</text></svg>",
+    "q": "Perhatikan diagram gerakan bola basket di atas! Pada teknik lay-up shoot, urutan gerakan kaki dan tembakan yang benar setelah menggiring bola mendekati ring adalah ....",
+    "p": [
+      "Melangkah dua langkah lebar (kanan–kiri atau kiri–kanan), melompat tinggi, lalu melepaskan bola ke arah ring",
+      "Berlari lima langkah tanpa memantulkan bola lalu melempar ke belakang",
+      "Duduk di bawah ring lalu melemparkan bola ke atas",
+      "Menendang bola ke arah papan pantul"
+    ],
+    "b": 0,
+    "bahas": "Lay-up shoot menggunakan dua langkah tolakan mendekati ring dan tembakan jarak dekat saat melayang."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><circle cx='50' cy='28' r='6' fill='#f59e0b'/><line x1='50' y1='34' x2='50' y2='48' stroke='#15803d' stroke-width='3'/><line x1='50' y1='48' x2='42' y2='60' stroke='#15803d' stroke-width='3'/><line x1='50' y1='48' x2='74' y2='40' stroke='#15803d' stroke-width='3'/><text x='124' y='35' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>TENDANGAN T</text><text x='124' y='48' font-size='8.5' text-anchor='middle' fill='#0f172a'>Bela Diri Pencak Silat</text></svg>",
+    "q": "Perhatikan ilustrasi bela diri pencak silat di atas! Tendangan yang dilakukan dengan posisi tubuh menyamping dan lintasan kaki lurus ke samping dengan perkenaan bagian tumit atau telapak kaki disebut ....",
+    "p": ["Tendangan T (samping)", "Tendangan sabit", "Pukulan bandul", "Tangkisan atas"],
+    "b": 0,
+    "bahas": "Tendangan T membentuk posisi tubuh seperti huruf T dengan dorongan kuat menggunakan tumit/telapak kaki."
+  },
+  {
+    "q": "Dalam permainan sepak bola, variasi dan kombinasi gerak mengontrol bola dengan dada lalu menggiring bola melewati lawan dan mengoper terobosan bertujuan untuk ....",
+    "p": ["Menciptakan peluang serangan cepat ke daerah pertahanan lawan", "Menghentikan permainan secara sengaja", "Membuang bola ke luar lapangan sendiri", "Melanggar aturan offside"],
+    "b": 0,
+    "bahas": "Kontrol bola yang baik mempercepat transisi serangan dalam permainan sepak bola."
+  },
+  {
+    "q": "Dalam permainan bola voli, kerja sama yang paling efektif untuk membangun serangan yang mematikan ke daerah lawan adalah urutan ....",
+    "p": ["Passing bawah (menerima servis) – passing atas (umpan pengumpan) – smash (pukulan serangan)", "Servis bawah – menangkap bola – melempar ke luar lapangan", "Blocking – duduk – passing bawah", "Smash langsung dari luar garis belakang tanpa melompat"],
+    "b": 0,
+    "bahas": "Pola serangan standar bola voli terdiri dari receive (passing bawah), set-up (passing atas), dan spike (smash)."
+  },
+  {
+    "q": "Dalam permainan rounders, apabila regu penjaga berhasil menangkap bola hasil pukulan pemukul secara langsung sebelum bola menyentuh tanah (bola tangkap), maka ....",
+    "p": ["Pemukul langsung dinyatakan mati (out) dan regu penjaga mendapat poin tambahan", "Pemukul mendapat nilai 5 poin penuh", "Pertandingan langsung dihentikan selamanya", "Pelari bebas berjalan tanpa boleh dimatikan"],
+    "b": 0,
+    "bahas": "Tangkap bola langsung (fly out) membuat pemukul gugur tanpa sempat berlari ke base."
+  },
+  {
+    "q": "Dalam permainan bulu tangkis, pukulan pelan yang mengarahkan kok jatuh sedekat mungkin di depan net lapangan lawan disebut ....",
+    "p": ["Dropshot / netting", "Smash keras", "Lob jauh ke belakang", "Drive mendatar"],
+    "b": 0,
+    "bahas": "Netting dan dropshot mengecoh lawan agar berlari cepat ke area depan net."
+  },
+  {
+    "q": "Pada cabang atletik nomor lari estafet (lari sambung), cara menerima tongkat estafet tanpa menoleh ke belakang (non-visual) umumnya digunakan pada nomor lari estafet jarak pendek seperti ....",
+    "p": ["4 x 100 meter", "Lari maraton 42 km", "Jalan santai 5 km", "Lari lintas alam 10 km"],
+    "b": 0,
+    "bahas": "Pada lari estafet 4 x 100 meter, penerima tidak menoleh ke belakang agar kecepatan lari maksimal tidak berkurang."
+  },
+  {
+    "q": "Pada lompat jauh gaya menggantung (hang style) atau gaya jongkok, gerakan yang harus dilakukan pelompat sesaat sebelum kedua tumit menyentuh pasir pendaratan adalah ....",
+    "p": [
+      "Menjulurkan kedua kaki lurus ke depan rapat dan mencondongkan badan serta kedua lengan ke depan agar tidak jatuh ke belakang",
+      "Menjatuhkan badan telentang ke belakang di bak pasir",
+      "Mendarat dengan satu kaki lalu melompat mundur",
+      "Menekuk lutut ke belakang punggung"
+    ],
+    "b": 0,
+    "bahas": "Mendarat dengan kedua kaki dijulurkan ke depan dan badan condong ke depan menghasilkan jarak lompatan terjauh."
+  },
+  {
+    "q": "Dalam bela diri pencak silat, gerakan elakan bawah dilakukan dengan cara ....",
+    "p": ["Merendahkan posisi tubuh dengan menekuk kedua lutut tanpa memindahkan telapak kaki untuk menghindari serangan arah atas", "Melompat tinggi ke atas", "Melangkah mundur 5 langkah ke belakang", "Menahan serangan dengan kedua telapak tangan terbuka"],
+    "b": 0,
+    "bahas": "Elakan bawah merendahkan tubuh di tempat untuk menghindari pukulan atau tendangan tinggi lawan."
+  },
+  {
+    "q": "Latihan kebugaran jasmani yang bertujuan mengukur dan melatih kekuatan serta daya tahan otot lengan dan bahu secara maksimal pada siswa kelas 6 SD adalah ....",
+    "p": ["Push-up dan pull-up (gantung angkat tubuh)", "Lari jarak 800 meter", "Mencium lutut duduk berlunjur", "Berdiri satu kaki menutup mata"],
+    "b": 0,
+    "bahas": "Push-up dan pull-up adalah instrumen tes kekuatan otot lengan dan bahu dalam Tes Kebugaran Jasmani Indonesia (TKJI)."
+  },
+  {
+    "q": "Komponen kebugaran jasmani yang berkaitan dengan kemampuan seseorang mempertahankan posisi tubuh agar tetap stabil baik saat diam maupun bergerak disebut ....",
+    "p": ["Keseimbangan (balance)", "Kecepatan (speed)", "Daya ledak (power)", "Kekuatan maksimal"],
+    "b": 0,
+    "bahas": "Keseimbangan dibagi menjadi keseimbangan statis (diam) dan dinamis (bergerak)."
+  },
+  {
+    "q": "Manfaat utama menjaga tingkat kebugaran jasmani yang baik bagi siswa kelas 6 SD menjelang ujian sekolah adalah ....",
+    "p": [
+      "Meningkatkan aliran oksigen ke otak sehingga daya konsentrasi, daya ingat, dan daya tahan tubuh saat belajar menjadi optimal",
+      "Membuat tubuh cepat mengantuk saat mengerjakan soal",
+      "Mengurangi nafsu makan bergizi",
+      "Membuat otot menjadi kaku"
+    ],
+    "b": 0,
+    "bahas": "Kebugaran jasmani yang prima mendukung kesehatan fisik maupun performa kognitif/konsentrasi belajar."
+  },
+  {
+    "q": "Dalam senam lantai, gerakan guling ke depan yang dilanjutkan langsung dengan guling ke belakang secara berkesinambungan melatih ....",
+    "p": ["Kelenturan tulang belakang, keseimbangan, dan koordinasi rangkaian gerak", "Kecepatan lari jarak pendek", "Kekuatan melempar bola", "Daya tahan menahan napas"],
+    "b": 0,
+    "bahas": "Rangkaian senam lantai melatih kelenturan, kontrol tubuh, dan kelancaran perpindahan gerak."
+  },
+  {
+    "q": "Pada gerakan meroda (cartwheel) dalam senam lantai, posisi kedua lengan dan kedua tungkai saat tubuh berada terbalik di atas (posisi vertikal) adalah ....",
+    "p": ["Lurus terbuka lebar menyerupai jari-jari roda yang berputar", "Ditekuk rapat di dada", "Disilangkan di belakang punggung", "Dirapatkan lurus seperti sikap lilin"],
+    "b": 0,
+    "bahas": "Pada posisi puncak meroda, kedua tangan bertumpu lurus selebar bahu dan kedua kaki terbuka lurus seperti jari-jari roda."
+  },
+  {
+    "q": "Dalam aktivitas gerak berirama (senam irama), langkah silang (kruispas) yang dipadukan dengan ayunan kedua lengan ke samping bermanfaat untuk melatih ....",
+    "p": ["Kelincahan langkah kaki, koordinasi gerak, dan keserasian irama", "Kekuatan angkat beban berat", "Kecepatan renang gaya bebas", "Kekuatan tendangan penalti"],
+    "b": 0,
+    "bahas": "Kombinasi langkah kaki dan ayunan lengan dalam senam ritmik meningkatkan koordinasi dan kebugaran aerobik."
+  },
+  {
+    "q": "Kebersihan alat reproduksi harus dijaga dengan baik oleh anak laki-laki maupun perempuan pada masa pubertas karena pada masa ini ....",
+    "p": ["Kelenjar keringat dan kelenjar minyak di sekitar organ reproduksi mulai aktif berproduksi sehingga mudah lembap", "Tubuh berhenti mengeluarkan keringat", "Kulit menjadi kebal terhadap kuman", "Tidak diperlukan lagi mandi setiap hari"],
+    "b": 0,
+    "bahas": "Kelembapan tinggi memudahkan jamur dan bakteri berkembang biak jika kebersihan tidak dijaga."
+  },
+  {
+    "q": "Cara merawat kebersihan dan kesehatan organ reproduksi yang benar setelah buang air kecil maupun buang air besar adalah ....",
+    "p": [
+      "Membasuh dengan air bersih dari arah depan ke belakang, lalu mengeringkannya dengan handuk bersih atau tisu kering sebelum memakai celana dalam",
+      "Membasuh dari arah belakang ke depan dengan air kotor",
+      "Langsung memakai celana dalam dalam keadaan basah lembap",
+      "Tidak perlu dibersihkan dengan air"
+    ],
+    "b": 0,
+    "bahas": "Membasuh dari depan ke belakang mencegah bakteri dari anus berpindah ke saluran kemih/reproduksi."
+  },
+  {
+    "q": "Penyakit yang dapat timbul akibat kurang menjaga kebersihan alat reproduksi dan memakai pakaian dalam yang lembap terlalu lama adalah ....",
+    "p": ["Infeksi jamur kulit (gatal-gatal/keputihan abnormal) dan infeksi saluran kemih", "Rabun jauh pada mata", "Keseleo pergelangan tangan", "Gigi berlubang"],
+    "b": 0,
+    "bahas": "Area lembap dan kotor memicu pertumbuhan jamur Candida dan bakteri penyebab infeksi."
+  },
+  {
+    "q": "Sikap bijak dan bertanggung jawab dalam pergaulan remaja pada masa pubertas di lingkungan sekolah maupun masyarakat adalah ....",
+    "p": [
+      "Menjaga batasan pergaulan yang sopan sesuai norma agama dan kesusilaan, serta saling menghormati antar-teman",
+      "Mengikuti pergaulan bebas tanpa aturan",
+      "Menonton konten yang tidak pantas di internet",
+      "Merahasiakan masalah kesehatan dari orang tua"
+    ],
+    "b": 0,
+    "bahas": "Pendidikan kesehatan reproduksi membekali siswa menjaga kehormatan diri dan kesehatan masa depan."
+  },
+  {
+    "q": "Pola makan seimbang 'Isi Piringku' yang dianjurkan Kementerian Kesehatan untuk pelajar SD membagi porsi piring makan menjadi ....",
+    "p": ["Setengah piring berisi sayur dan buah, serta setengah piring lagi berisi makanan pokok dan lauk pauk berprotein", "Seluruh piring penuh dengan nasi dan kerupuk saja", "Seluruh piring berisi permen dan kue manis", "Hanya minum air putih tanpa makanan pokok"],
+    "b": 0,
+    "bahas": "Isi Piringku menyeimbangkan karbohidrat, protein, vitamin, mineral, dan serat."
+  },
+  {
+    "q": "Mengapa istirahat tidur malam yang berkualitas selama 8–9 jam sangat dibutuhkan oleh siswa kelas 6 SD yang aktif berolahraga?",
+    "p": ["Karena pada saat tidur nyenyak tubuh memperbaiki jaringan otot yang lelah dan memproduksi hormon pertumbuhan", "Karena tidur malam membuat tubuh kehilangan semua energi", "Karena saat tidur jantung berhenti bekerja", "Karena tidur menggantikan kebutuhan air putih"],
+    "b": 0,
+    "bahas": "Pemulihan sel otot (recovery) dan regenerasi energi terjadi paling optimal saat tidur malam yang cukup."
+  },
+  {
+    "q": "Dalam latihan kebugaran jasmani, prinsip 'overload' (beban berlebih secara bertahap) berarti ....",
+    "p": [
+      "Intensitas atau jumlah ulangan latihan ditingkatkan sedikit demi sedikit secara teratur sesuai kemampuan tubuh",
+      "Langsung mengangkat beban seberat mungkin pada hari pertama latihan",
+      "Berlatih terus-menerus tanpa pernah beristirahat",
+      "Mengurangi gerakan pemanasan sebelum berlatih"
+    ],
+    "b": 0,
+    "bahas": "Peningkatan beban latihan secara bertahap aman dan efektif meningkatkan kebugaran jasmani."
+  },
+  {
+    "q": "Peran pemanasan dinamis (seperti lari kecil, ayunan kaki, dan putaran lengan) sebelum bertanding olahraga adalah ....",
+    "p": ["Meningkatkan suhu inti otot, melumasi persendian, dan mempersiapkan koordinasi saraf-otot", "Menurunkan suhu tubuh hingga menggigil", "Membuat otot menjadi kaku dan tegang", "Menghentikan aliran darah ke tungkai"],
+    "b": 0,
+    "bahas": "Pemanasan dinamis sangat efektif mempersiapkan tubuh melakukan gerakan olahraga yang cepat dan eksplosif."
+  },
+  {
+    "q": "Sikap sportivitas dan kepemimpinan yang matang dari siswa kelas 6 SD sebagai kakak kelas di sekolah ditunjukkan dengan cara ....",
+    "p": [
+      "Menjadi teladan dalam mematuhi peraturan permainan, membantu adik kelas belajar berolahraga dengan aman, dan menjunjung tinggi kejujuran",
+      "Menggunakan keunggulan fisik untuk mengintimidasi adik kelas",
+      "Mengubah aturan permainan demi keuntungan tim sendiri",
+      "Meninggalkan lapangan dengan marah saat timnya kalah"
+    ],
+    "b": 0,
+    "bahas": "Siswa kelas 6 diharapkan menjadi teladan sportivitas, kepedulian, dan kedisiplinan di lingkungan sekolah."
+  }
+]);
+
