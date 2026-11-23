@@ -5149,3 +5149,204 @@ window.tambahPaketUjian("6", "kesenian", "UTS Semester 2", [
   }
 ]);
 
+window.daftarMapelBaru("pjok", "PJOK (Olahraga)");
+window.tambahPaketUjian("6", "pjok", "UAS Semester 2", [
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><rect x='25' y='52' width='135' height='10' rx='4' fill='#38bdf8'/><line x1='92' y1='52' x2='92' y2='24' stroke='#0369a1' stroke-width='4'/><line x1='80' y1='52' x2='92' y2='38' stroke='#0369a1' stroke-width='3'/><line x1='104' y1='52' x2='92' y2='38' stroke='#0369a1' stroke-width='3'/><circle cx='92' cy='46' r='5' fill='#f59e0b'/><text x='92' y='20' font-size='9' font-weight='bold' text-anchor='middle' fill='#0369a1'>HANDSTAND (BERDIRI DENGAN TANGAN)</text></svg>",
+    "q": "Perhatikan ilustrasi senam lantai di atas! Pada gerakan handstand (berdiri dengan kedua tangan), tumpuan utama berat badan berada pada ....",
+    "p": [
+      "Kedua telapak tangan yang dibuka selebar bahu di atas matras dengan lengan lurus kuat",
+      "Ubun-ubun kepala tanpa bantuan tangan",
+      "Punggung bagian tengah",
+      "Satu siku saja"
+    ],
+    "b": 0,
+    "bahas": "Handstand bertumpu penuh pada kedua telapak tangan selebar bahu dengan jari-jari terbuka untuk menjaga keseimbangan."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/><path d='M20 46 Q45 38 70 46 T120 46 T165 46' stroke='#2563eb' fill='none' stroke-width='3'/><line x1='48' y1='35' x2='116' y2='35' stroke='#1e3a8a' stroke-width='4'/><circle cx='123' cy='32' r='6' fill='#f59e0b'/><text x='92' y='22' font-size='9' font-weight='bold' text-anchor='middle' fill='#1e3a8a'>RENANG GAYA PUNGGUNG</text><text x='92' y='63' font-size='8' text-anchor='middle' fill='#1e40af'>Posisi Tubuh Telentang Menghadap Atas</text></svg>",
+    "q": "Perhatikan ilustrasi di atas! Keunggulan utama renang gaya punggung dibandingkan gaya renang lainnya dalam hal pernapasan adalah ....",
+    "p": [
+      "Wajah selalu berada di atas permukaan air sehingga pernapasan dapat dilakukan dengan bebas dan leluasa",
+      "Tidak perlu menggerakkan kaki dan tangan sama sekali",
+      "Wajah harus selalu berada di dasar kolam",
+      "Hanya boleh bernapas setiap 10 kali kayuhan lengan"
+    ],
+    "b": 0,
+    "bahas": "Pada renang gaya punggung, posisi tubuh telentang membuat hidung dan mulut berada di atas permukaan air."
+  },
+  {
+    "svg": "<svg width='185' height='82' xmlns='http://w3.org'><rect x='10' y='10' width='165' height='62' rx='10' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/><rect x='25' y='24' width='45' height='34' rx='6' fill='#16a34a'/><text x='47' y='40' font-size='8' font-weight='bold' text-anchor='middle' fill='#fff'>NAPZA</text><text x='47' y='50' font-size='7' text-anchor='middle' fill='#dcfce7'>TOLAK!</text><text x='124' y='35' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>HIDUP SEHAT</text><text x='124' y='48' font-size='9' font-weight='bold' text-anchor='middle' fill='#15803d'>BERPRESTASI</text><text x='124' y='60' font-size='7.5' text-anchor='middle' fill='#334155'>Olahraga &amp; Lingkungan Positif</text></svg>",
+    "q": "Perhatikan poster di atas! Langkah pencegahan paling tepat bagi siswa kelas 6 SD untuk membentengi diri dari penyalahgunaan NAPZA (Narkotika, Psikotropika, dan Zat Adiktif) adalah ....",
+    "p": [
+      "Memperkuat keimanan, memilih pergaulan yang sehat, berani berkata tidak pada ajakan negatif, dan aktif berolahraga",
+      "Mencoba-coba sedikit karena penasaran",
+      "Menerima pemberian permen atau minuman dari orang asing tanpa bertanya",
+      "Mengurung diri dan menjauhi nasihat orang tua serta guru"
+    ],
+    "b": 0,
+    "bahas": "Ketahanan diri, keimanan, dukungan keluarga, dan aktivitas positif seperti olahraga membentengi remaja dari NAPZA."
+  },
+  {
+    "q": "Dalam permainan sepak bola, variasi dan kombinasi gerak menggiring bola melewati rintangan lalu mengoper bola mendatar (passing) kepada teman yang berdiri bebas bertujuan untuk ....",
+    "p": ["Membangun serangan efektif dan membuka ruang pertahanan lawan", "Membuang bola keluar lapangan", "Melanggar pemain bertahan lawan", "Mengulur waktu di daerah gawang sendiri"],
+    "b": 0,
+    "bahas": "Kombinasi dribel dan passing menciptakan peluang serangan yang terorganisasi."
+  },
+  {
+    "q": "Dalam permainan bola voli, teknik membendung atau menghalangi serangan smash lawan tepat di atas net menggunakan kedua tangan yang dijulurkan lurus ke atas disebut ....",
+    "p": ["Blocking (bendungan)", "Passing atas", "Servis bawah", "Dribbling"],
+    "b": 0,
+    "bahas": "Blocking adalah teknik pertahanan pertama di dekat net untuk meredam pukulan smash lawan."
+  },
+  {
+    "q": "Dalam permainan bola basket, usaha memasukkan bola ke dalam ring lawan dengan melompat menggunakan satu tangan sambil menembak dari jarak dekat setelah dua langkah lari disebut ....",
+    "p": ["Lay-up shoot", "Rebound", "Pivot", "Throw-in"],
+    "b": 0,
+    "bahas": "Lay-up shoot memadukan gerak menggiring, melangkah, melompat, dan menembak bola ke ring."
+  },
+  {
+    "q": "Dalam permainan bulu tangkis, pukulan keras dan menukik tajam ke bidang permainan lawan yang bertujuan mematikan lawan dan meraih angka disebut ....",
+    "p": ["Smash", "Servis pendek", "Netting", "Drive mendatar"],
+    "b": 0,
+    "bahas": "Smash adalah pukulan menyerang utama dalam bulu tangkis."
+  },
+  {
+    "q": "Pada cabang atletik nomor lari jarak pendek (sprint 60 meter), posisi pinggul saat mendengar aba-aba 'Siap!' pada start jongkok adalah ....",
+    "p": [
+      "Diangkat lebih tinggi sedikit dari bahu dengan berat badan bertumpu pada kedua tangan dan kaki depan",
+      "Diturunkan duduk menyentuh tanah di belakang garis start",
+      "Berdiri tegak sambil menoleh ke belakang",
+      "Melompat ke depan sebelum aba-aba 'Ya!'"
+    ],
+    "b": 0,
+    "bahas": "Pada aba-aba 'Siap', lutut kaki belakang terangkat dari tanah dan pinggul sedikit lebih tinggi dari bahu."
+  },
+  {
+    "q": "Dalam pencak silat, kombinasi pola gerak langkah, pukulan, tendangan, tangkisan, dan elakan yang dirangkai secara berkesinambungan disebut ....",
+    "p": ["Jurus (rangkaian gerak bela diri)", "Sikap lilin", "Servis atas", "Passing bawah"],
+    "b": 0,
+    "bahas": "Jurus dalam pencak silat merupakan rangkaian terpadu teknik serangan dan belaan."
+  },
+  {
+    "q": "Gerakan meroda (cartwheel) dan guling lenting pada senam lantai memerlukan komponen kebugaran jasmani utama berupa ....",
+    "p": ["Kekuatan otot lengan/tungkai, kelenturan tubuh, dan koordinasi gerak", "Kemampuan menahan napas di dalam air", "Kecepatan memukul kok bulu tangkis", "Kekuatan menggenggam tongkat estafet"],
+    "b": 0,
+    "bahas": "Senam ketangkasan lantai memadukan kekuatan tumpuan tangan, kelenturan tulang belakang, dan koordinasi."
+  },
+  {
+    "q": "Dalam aktivitas gerak berirama (senam irama), langkah silang ke depan atau ke belakang secara berirama dikenal dengan istilah ....",
+    "p": ["Kruispas", "Looppas", "Bijtrekpas", "Galoppas"],
+    "b": 0,
+    "bahas": "Kruispas adalah gerakan langkah menyilang dalam senam irama."
+  },
+  {
+    "q": "Latihan sirkuit (circuit training) yang terdiri dari beberapa pos latihan seperti lari zig-zag, sit-up, push-up, dan lompat tali bertujuan meningkatkan ....",
+    "p": ["Kebugaran jasmani secara menyeluruh (kelincahan, kekuatan otot, dan daya tahan)", "Rasa lelah berkepanjangan tanpa manfaat", "Kekakuan sendi bahu", "Kelemahan daya tahan tubuh"],
+    "b": 0,
+    "bahas": "Circuit training melatih berbagai komponen kebugaran jasmani secara berurutan dalam satu sesi."
+  },
+  {
+    "q": "Cara mengukur denyut nadi secara mandiri setelah berolahraga adalah dengan meraba pembuluh nadi menggunakan ujung jari telunjuk dan jari tengah pada bagian ....",
+    "p": ["Pergelangan tangan bagian dalam (sejajar ibu jari) atau sisi leher di bawah rahang", "Ujung kuku jari kelingking", "Tempurung lutut", "Tumit kaki"],
+    "b": 0,
+    "bahas": "Arteri radialis di pergelangan tangan dan arteri karotis di leher paling mudah diraba untuk menghitung denyut nadi."
+  },
+  {
+    "q": "Pada renang gaya punggung, gerakan kedua lengan saat mengayuh air dilakukan dengan cara ....",
+    "p": [
+      "Mengayunkan satu lengan lurus ke atas melewati samping telinga masuk ke air di belakang kepala lalu mendorong air ke arah paha secara bergantian",
+      "Mendorong kedua lengan bersamaan ke depan dada seperti gaya dada",
+      "Menekuk kedua siku rapat di perut tanpa bergerak",
+      "Memutar kedua tangan di depan wajah"
+    ],
+    "b": 0,
+    "bahas": "Kayuhan lengan gaya punggung bergantian kanan dan kiri dengan jari kelingking masuk ke air terlebih dahulu."
+  },
+  {
+    "q": "Tindakan penyelamatan diri atau pertolongan pertama saat melihat teman mengalami kram otot kaki di kolam renang dangkal adalah ....",
+    "p": [
+      "Segera membantu membawanya ke tepi kolam, meluruskan kaki yang kram, dan meregangkan telapak kaki ke arah atas secara perlahan",
+      "Membiarkannya berenang sendirian di tengah kolam",
+      "Menarik kepalanya ke dalam air",
+      "Menertawakannya dari pinggir kolam"
+    ],
+    "b": 0,
+    "bahas": "Peregangan perlahan pada otot betis/telapak kaki di tepi kolam membantu meredakan kejang otot."
+  },
+  {
+    "q": "Kebersihan alat reproduksi pada masa pubertas siswa kelas 6 SD wajib dijaga setiap hari dengan cara ....",
+    "p": [
+      "Membasuh dengan air bersih setiap selesai buang air, mengeringkannya dengan handuk/tisu bersih, dan mengganti pakaian dalam minimal dua kali sehari",
+      "Memakai celana dalam yang lembap seharian setelah berolahraga",
+      "Menggunakan pakaian dalam bergantian dengan orang lain",
+      "Jarang mandi dan tidak membersihkan keringat"
+    ],
+    "b": 0,
+    "bahas": "Menjaga kebersihan dan kekeringan area alat reproduksi mencegah infeksi jamur dan bakteri."
+  },
+  {
+    "q": "Pakaian dalam yang paling sehat digunakan saat beraktivitas dan berolahraga adalah yang terbuat dari bahan .... karena mudah menyerap keringat.",
+    "p": ["Katun (kapas)", "Plastik tebal", "Nilon kedap udara", "Kertas karton"],
+    "b": 0,
+    "bahas": "Bahan katun lembut, memiliki sirkulasi udara baik, dan menyerap keringat dengan optimal."
+  },
+  {
+    "q": "Salah satu perubahan fisik dan emosional wajar yang mulai dialami anak pada masa pubertas kelas 6 SD adalah ....",
+    "p": [
+      "Bertambahnya tinggi badan dengan cepat, kelenjar keringat lebih aktif, dan perlunya menjaga kebersihan diri serta pergaulan sehat",
+      "Gigi susu tumbuh kembali seluruhnya",
+      "Berhenti mengalami pertumbuhan tulang",
+      "Tidak membutuhkan istirahat malam"
+    ],
+    "b": 0,
+    "bahas": "Pada masa pubertas kelenjar keringat dan minyak lebih aktif sehingga kebersihan tubuh dan wajah perlu dijaga."
+  },
+  {
+    "q": "Dampak buruk penyalahgunaan narkotika dan obat-obatan terlarang bagi kesehatan jasmani dan rohani pelajar adalah ....",
+    "p": [
+      "Kerusakan permanen sel otak, gangguan jantung/paru-paru, kecanduan berat, dan hancurnya prestasi sekolah",
+      "Meningkatkan kecerdasan dan kebugaran tubuh",
+      "Menyembuhkan semua penyakit menular",
+      "Membuat tubuh kebal terhadap kelelahan"
+    ],
+    "b": 0,
+    "bahas": "NAPZA merusak sistem saraf pusat, organ vital tubuh, serta masa depan generasi muda."
+  },
+  {
+    "q": "Dalam permainan rounders atau kasti, kerja sama antara pelambung (pitcher) dan penjaga base sangat penting agar ....",
+    "p": ["Regu penjaga dapat mematikan pelari lawan sebelum mencapai ruang bebas", "Regu pemukul mudah mencetak poin penuh", "Bola terlempar keluar lapangan", "Pertandingan dihentikan wasit"],
+    "b": 0,
+    "bahas": "Komunikasi dan kerja sama regu penjaga membatasi perolehan nilai regu pemukul."
+  },
+  {
+    "q": "Manfaat melakukan latihan peregangan statis dan dinamis sebelum mengikuti tes kebugaran jasmani adalah ....",
+    "p": ["Meningkatkan aliran darah ke otot, memperluas jangkauan gerak sendi, dan mencegah cedera robekan otot", "Membuat detak jantung berhenti sejenak", "Menurunkan suhu otot hingga kaku", "Menguras seluruh cadangan energi"],
+    "b": 0,
+    "bahas": "Pemanasan dan peregangan mempersiapkan sistem otot, sendi, dan kardiovaskular."
+  },
+  {
+    "q": "Zat gizi yang berfungsi sebagai cadangan energi, pelindung organ vital tubuh, serta membantu penyerapan vitamin A, D, E, dan K adalah ....",
+    "p": ["Lemak sehat (seperti alpukat, kacang-kacangan, dan ikan)", "Garam dapur murni", "Air keran", "Serat kasar saja"],
+    "b": 0,
+    "bahas": "Lemak sehat dibutuhkan tubuh dalam jumlah seimbang untuk cadangan energi dan pelarut vitamin A, D, E, K."
+  },
+  {
+    "q": "Dalam pertandingan bola voli atau sepak bola, apabila seorang pemain melakukan pelanggaran aturan permainan dan wasit meniup peluit, sikap sportif pemain tersebut adalah ....",
+    "p": ["Mengakui kesalahan dengan sportif, meminta maaf kepada lawan, dan mematuhi keputusan wasit", "Memarahi wasit dan menendang bola jauh-jauh", "Menyalahkan teman satu tim dengan keras", "Pura-pura tidak mendengar peluit wasit"],
+    "b": 0,
+    "bahas": "Mengakui pelanggaran dan menghormati keputusan wasit menunjukkan kedewasaan dan sportivitas tinggi."
+  },
+  {
+    "q": "Aktivitas fisik seperti berjalan kaki ke sekolah, bersepeda, senam pagi, dan membantu pekerjaan rumah tangga termasuk dalam penerapan ....",
+    "p": ["Gaya hidup aktif dan sehat (active lifestyle)", "Gaya hidup bermalas-malasan (sedentari)", "Latihan beban ekstrem", "Pertandingan profesional"],
+    "b": 0,
+    "bahas": "Gaya hidup aktif mencegah penyakit tidak menular dan menjaga kebugaran sepanjang hayat."
+  },
+  {
+    "q": "Tujuan akhir dari pembelajaran Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) di Sekolah Dasar adalah membentuk peserta didik yang ....",
+    "p": ["Sehat jasmani dan rohani, bugar, terampil bergerak, sportif, serta berkarakter Profil Pelajar Pancasila", "Hanya mengejar kemenangan dengan segala cara", "Takut bergerak dan menghindari olahraga", "Suka meremehkan kemampuan teman"],
+    "b": 0,
+    "bahas": "PJOK mengembangkan aspek kebugaran fisik, keterampilan gerak, pengetahuan kesehatan, dan karakter sportif."
+  }
+]);
