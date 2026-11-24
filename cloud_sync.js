@@ -1,145 +1,134 @@
-const SUPABASE_URL = "https://supabase.co";
-const SUPABASE_KEY = "sb_publishable_Ch9_hptl9bI7wU9_0NhJUg_JAIBIYYG";
+const FORM_VIEW_URL = "https://google.com";
+const FORM_POST_URL = "https://google.com";
+const SHEET_ID = "1oW6zS4n-BR2niRf3fDWTb3qIEWrBxalnSZN_REyym8Y";
 
-const SB_HEADERS = {
-  "apikey": SUPABASE_KEY,
-  "Authorization": "Bearer " + SUPABASE_KEY,
-  "Content-Type": "application/json"
-};
+let cacheEntryIds = null;
 
-window.simpanRekapNilai = function(record) {
+async function ambilEntryOtomatis() {
+  if (cacheEntryIds && cacheEntryIds.length >= 9) return cacheEntryIds;
+  try {
+    const res = await fetch(FORM_VIEW_URL);
+    const html = await res.text();
+    const m = html.match(/FB_PUBLIC_LOAD_DATA_\s*=\s*(\[[\s\S]*?\]);/);
+    if (m && m) {
+      const parsed = JSON.parse(m);
+      const daftarSoal = parsed;
+      const ids = [];
+      daftarSoal.forEach(item => {
+        if (item && item && item && item) {
+          ids.push("entry." + item);
+        }
+      });
+      if (ids.length >= 9) {
+        cacheEntryIds = ids;
+        return ids;
+      }
+    }
+  } catch (e) {}
+  return null;
+}
+
+function kirimViaFormGoogle(entryIds, nilaiArray) {
+  let iframe = document.getElementById("iframeGForm");
+  if (!iframe) {
+    iframe = document.createElement("iframe");
+    iframe.id = "iframeGForm";
+    iframe.name = "iframeGForm";
+    iframe.style.display = "none";
+    document.body.appendChild(iframe);
+  }
+
+  const form = document.createElement("form");
+  form.method = "POST";
+  form.action = FORM_POST_URL;
+  form.target = "iframeGForm";
+  form.style.display = "none";
+
+  for (let i = 0; i < 9; i++) {
+    const inp = document.createElement("input");
+    inp.type = "hidden";
+    inp.name = entryIds[i];
+    inp.value = String(nilaiArray[i] !== undefined ? nilaiArray[i] : "-");
+    form.appendChild(inp);
+  }
+
+  document.body.appendChild(form);
+  form.submit();
+  setTimeout(() => {
+    if (form.parentNode) form.parentNode.removeChild(form);
+  }, 3000);
+}
+
+window.simpanRekapNilai = async function(record) {
   try {
     const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
     list.push(record);
     localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
   } catch (e) {}
 
-  const payload = {
-    id: String(record.id),
-    tanggal: String(record.tanggal),
-    nama: String(record.nama),
-    kode_unik: String(record.kodeUnik || "-"),
-    kelas: String(record.kelas),
-    mapel: String(record.mapel),
-    kategori: String(record.kategori),
-    benar: String(record.benar),
-    nilai: Number(record.nilai) || 0
-  };
-
-  fetch(`${SUPABASE_URL}/rest/v1/rekap_nilai`, {
-    method: "POST",
-    headers: { ...SB_HEADERS, "Prefer": "return=minimal" },
-    body: JSON.stringify(payload)
-  })
-  .then(res => {
-    const el = document.getElementById("statusSyncUjian");
-    if (res.ok) {
-      if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; tersinkron ke Cloud!</span>`;
-    } else {
-      res.text().then(txt => {
-        if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan (${res.status}): ${txt}</span>`;
-      });
-    }
-  })
-  .catch(err => {
-    const el = document.getElementById("statusSyncUjian");
-    if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal koneksi: ${err.message}</span>`;
-  });
+  const ids = await ambilEntryOtomatis();
+  if (ids && ids.length >= 9) {
+    kirimViaFormGoogle(ids, [
+      record.id,
+      record.tanggal,
+      record.nama,
+      record.kodeUnik || "-",
+      record.kelas,
+      record.mapel,
+      record.kategori,
+      record.benar,
+      record.nilai
+    ]);
+  }
 };
 
-window.muatRekapDariCloud = async function() {
+window.muatRekapDariCloud = function() {
   const infoBox = document.getElementById("infoRingkasanFilter");
-  if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari Cloud...";
+  if (infoBox) infoBox.textContent = "⏳ Menarik rekap nilai dari Google Sheets...";
 
-  try {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/rekap_nilai?select=*&order=id.desc`, {
-      method: "GET",
-      headers: SB_HEADERS
-    });
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    const rows = await res.json();
-    if (Array.isArray(rows)) {
-      const hasil = rows.map(r => ({
-        id: r.id,
-        tanggal: r.tanggal,
-        nama: r.nama,
-        kodeUnik: r.kode_unik || "-",
-        kelas: String(r.kelas),
-        mapel: r.mapel,
-        kategori: r.kategori,
-        benar: r.benar,
-        nilai: Number(r.nilai) || 0
-      }));
+  const cbName = "cb_gsheet_" + Date.now();
+  const script = document.createElement("script");
+
+  window[cbName] = function(resp) {
+    delete window[cbName];
+    if (script.parentNode) script.parentNode.removeChild(script);
+    try {
+      const rows = (resp && resp.table && resp.table.rows) ? resp.table.rows : [];
+      const hasil = [];
+      rows.forEach(r => {
+        const c = r.c || [];
+        const val = (idx) => (c[idx] && c[idx].v !== null && c[idx].v !== undefined) ? String(c[idx].v) : "";
+        const namaSiswa = val(3);
+        if (namaSiswa && namaSiswa !== "nama siswa" && namaSiswa !== "222") {
+          hasil.push({
+            id: val(1) || String(Date.now() + Math.random()),
+            tanggal: val(2) || "-",
+            nama: namaSiswa,
+            kodeUnik: val(4) || "-",
+            kelas: val(5) || "-",
+            mapel: val(6) || "-",
+            kategori: val(7) || "-",
+            benar: val(8) || "-",
+            nilai: Number(val(9)) || 0
+          });
+        }
+      });
       cacheRekapCloud = hasil;
       try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
-    }
-  } catch (err) {
-    if (infoBox) infoBox.textContent = "⚠️ Gagal tarik Cloud (" + err.message + "), memuat data lokal.";
-    try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
-  }
-
-  if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
-  if (typeof perbaruiOpsiBabRekap === "function") perbaruiOpsiBabRekap();
-  if (typeof renderTabelNilai === "function") renderTabelNilai();
-};
-
-window.getDataTersaring = function() {
-  let semua = (typeof cacheRekapCloud !== "undefined" && cacheRekapCloud.length) ? cacheRekapCloud : [];
-  if (!semua.length) {
-    try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-  }
-  const fKelas = String(document.getElementById("filterKelas").value);
-  const mapelSplit = document.getElementById("filterMapel").value.split("|");
-  const fMapelKode = mapelSplit.shift() || "ALL";
-  const fMapelNama = mapelSplit.pop() || "";
-  const fTipe = document.getElementById("filterTipeUjian").value;
-  const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "__ALL_BAB__";
-  const fUnik = document.getElementById("filterKodeUnik").value;
-
-  return semua.filter(item => {
-    const cocokKelas = (fKelas === "ALL") || (String(item.kelas) === fKelas);
-    const itemMapelLow = (item.mapel || "").trim().toLowerCase();
-    const filterMapelLow = fMapelNama.trim().toLowerCase();
-    const cocokMapel = (fMapelKode === "ALL") || (itemMapelLow === filterMapelLow) || itemMapelLow.includes(filterMapelLow);
-    const unikItem = (item.kodeUnik || "-").toUpperCase();
-    const cocokUnik = (fUnik === "ALL") || (unikItem === fUnik);
-
-    const katLow = (item.kategori || "").trim().toLowerCase();
-    const isUTS_UAS = ["uts semester 1", "uas semester 1", "uts semester 2", "uas semester 2"].includes(katLow);
-
-    let cocokUjian = false;
-    if (fTipe === "ALL") cocokUjian = true;
-    else if (fTipe === "UAS_ALL") cocokUjian = katLow.includes("uas");
-    else if (fTipe === "UTS_ALL") cocokUjian = katLow.includes("uts");
-    else if (fTipe === "BAB") cocokUjian = (fBab === "__ALL_BAB__") ? !isUTS_UAS : (katLow === fBab.trim().toLowerCase());
-    else cocokUjian = katLow === fTipe.trim().toLowerCase();
-
-    return cocokKelas && cocokMapel && cocokUjian && cocokUnik;
-  });
-};
-
-window.hapusDataHasilFilter = async function() {
-  const tersaring = getDataTersaring();
-  if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
-  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari Cloud & semua perangkat?`)) return;
-
-  for (const item of tersaring) {
-    try {
-      await fetch(`${SUPABASE_URL}/rest/v1/rekap_nilai?id=eq.${encodeURIComponent(String(item.id))}`, {
-        method: "DELETE",
-        headers: SB_HEADERS
-      });
     } catch (e) {}
-  }
 
-  let semua = [];
-  try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-  const setHapus = new Set(tersaring.map(item => String(item.id)));
-  try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua.filter(item => !setHapus.has(String(item.id))))); } catch (e) {}
-  cacheRekapCloud = (cacheRekapCloud || []).filter(item => !setHapus.has(String(item.id)));
+    if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
+    if (typeof perbaruiOpsiBabRekap === "function") perbaruiOpsiBabRekap();
+    if (typeof renderTabelNilai === "function") renderTabelNilai();
+  };
 
-  if (typeof mainkanEfek === "function") mainkanEfek('salah');
-  if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
-  if (typeof renderTabelNilai === "function") renderTabelNilai();
-  alert("✅ Data berhasil dihapus dari Cloud & semua perangkat!");
+  script.onerror = function() {
+    delete window[cbName];
+    if (script.parentNode) script.parentNode.removeChild(script);
+    try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
+    if (typeof renderTabelNilai === "function") renderTabelNilai();
+  };
+
+  script.src = `https://google.com{SHEET_ID}/gviz/tq?tqx=responseHandler:${cbName}&_t=${Date.now()}`;
+  document.body.appendChild(script);
 };
