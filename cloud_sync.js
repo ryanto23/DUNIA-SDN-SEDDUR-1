@@ -1,17 +1,22 @@
-const GH_TOKEN = "github_pat_11CD5WQEI0j6SJzaWm7umE_" + "CTULbhj2Urv7bbxotEET4s9GOl7lnFCFoXU2eQ78bSIAR5SMID34qHYVJFD";
+const GH_TOKEN = "github_pat_11CD5WQEI03Q49ZDaTCiZm_" + "GgqfypCEbgw8VcjMnDTBo9zPqCco5mPc2jsYPndDIHfNGPU3YVOJE4NypcH";
 const GH_FILE = "nilai_cloud.json";
 
-function getRepoInfoOtomatis() {
+async function deteksiOwnerDanRepo() {
   const host = window.location.hostname;
-  const pathParts = window.location.pathname.split("/").filter(Boolean);
-  let owner = "";
-  let repo = "";
-
+  const parts = window.location.pathname.split("/").filter(Boolean);
   if (host.endsWith(".github.io")) {
-    owner = host.replace(".github.io", "");
-    repo = pathParts.length > 0 ? String(pathParts) : `${owner}.github.io`;
+    const owner = host.replace(".github.io", "");
+    const repo = parts.length > 0 ? parts.shift() : `${owner}.github.io`;
+    return { owner, repo };
   }
-  return { owner, repo };
+  const res = await fetch("https://github.com", {
+    headers: { "Authorization": `Bearer ${GH_TOKEN}`, "Accept": "application/vnd.github+json" }
+  });
+  const list = await res.json();
+  if (Array.isArray(list) && list.length > 0) {
+    return { owner: list.shift().owner.login, repo: list.shift().name };
+  }
+  throw new Error("Repositori tidak ditemukan");
 }
 
 function encodeBase64UTF8(str) {
@@ -23,9 +28,7 @@ function decodeBase64UTF8(b64) {
 }
 
 async function bacaFileNilaiGitHub() {
-  const { owner, repo } = getRepoInfoOtomatis();
-  if (!owner || !repo) throw new Error("Buka aplikasi lewat link *.github.io");
-
+  const { owner, repo } = await deteksiOwnerDanRepo();
   const apiUrl = `https://github.com{owner}/${repo}/contents/${GH_FILE}?_t=${Date.now()}`;
   const res = await fetch(apiUrl, {
     headers: {
@@ -50,7 +53,7 @@ async function bacaFileNilaiGitHub() {
 }
 
 async function tulisFileNilaiGitHub(arrayNilai, shaLama, pesanCommit) {
-  const { owner, repo } = getRepoInfoOtomatis();
+  const { owner, repo } = await deteksiOwnerDanRepo();
   const apiUrl = `https://github.com{owner}/${repo}/contents/${GH_FILE}`;
   const bodyObj = {
     message: pesanCommit || "Update rekap nilai siswa",
@@ -131,8 +134,8 @@ window.getDataTersaring = function() {
   }
   const fKelas = String(document.getElementById("filterKelas").value);
   const mapelSplit = document.getElementById("filterMapel").value.split("|");
-  const fMapelKode = mapelSplit || "ALL";
-  const fMapelNama = mapelSplit || "";
+  const fMapelKode = mapelSplit.shift() || "ALL";
+  const fMapelNama = mapelSplit.pop() || "";
   const fTipe = document.getElementById("filterTipeUjian").value;
   const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "__ALL_BAB__";
   const fUnik = document.getElementById("filterKodeUnik").value;
