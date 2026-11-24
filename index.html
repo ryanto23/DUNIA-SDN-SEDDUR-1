@@ -29,7 +29,7 @@
     .anim-bounce { display: inline-block; animation: bounce 1.8s infinite; }
     .judul-bergerak { display: inline-block; font-size: 1.24rem; font-weight: 700; animation: gerakJudul 2.4s ease-in-out infinite; margin-top: 4px; }
 
-          .banner-beranda { width: 100%; height: auto; max-height: 75px; object-fit: contain; background: #f8fafc; border-radius: 12px; border: 2px solid #bae6fd; margin: 0 auto 10px; display: block; box-shadow: 0 3px 8px rgba(0,0,0,0.06); }
+          .banner-beranda { width: 100%; height: auto; max-height: 75px; object-fit: contain; background: transparent; border-radius: 12px; border: none; margin: 0 auto 10px; display: block; box-shadow: none; }
     .svg-soal-wrap { margin: 8px auto; display: flex; justify-content: center; align-items: center; max-width: 100%; overflow-x: auto; }
     .svg-opsi-wrap { display: inline-flex; align-items: center; justify-content: center; max-width: 100%; }
     .input-nama, .input-form, .textarea-kode { width: 100%; padding: 11px 13px; border-radius: 14px; border: 2px solid #7dd3fc; font-size: 0.96rem; font-weight: 600; color: #0f172a; outline: none; margin: 6px 0; background: #f0f9ff; user-select: text; }
@@ -393,7 +393,21 @@
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(record)
-      }).catch(() => {});
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.name) {
+          const infoEl = document.getElementById("statusSyncUjian");
+          if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; tersinkron ke Cloud Firebase!</span>`;
+        } else if (data && data.error) {
+          const infoEl = document.getElementById("statusSyncUjian");
+          if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Ditolak Firebase: ${data.error}</span>`;
+        }
+      })
+      .catch(err => {
+        const infoEl = document.getElementById("statusSyncUjian");
+        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal kirim Cloud: ${err.message}</span>`;
+      });
     }
 
     function cariSoalDariDatabase(kls, kodeMapel, namaPaketAtauBab) {
@@ -1002,7 +1016,7 @@
         <div class="card card-cbt" style="text-align:center;">
           <div style="font-size:2.6rem;">📋</div>
           <h2 style="color:#0f172a; font-size:1.3rem; margin:6px 0;">Ujian Telah Dikumpulkan</h2>
-          <p style="color:#64748b; font-size:0.86rem; margin-bottom:14px;">Hasil ujian telah tersimpan otomatis ke Firebase Cloud &amp; Rekap Sekolah</p>
+          <p id="statusSyncUjian" style="color:#0284c7; font-size:0.86rem; margin-bottom:14px;">⏳ Mengirim nilai ke Cloud Firebase...</p>
 
           <div style="background:#f8fafc; border-radius:12px; padding:14px; border:1px solid #cbd5e1; font-size:0.92rem; color:#1e293b; text-align:left; line-height:1.7;">
             <div><strong>Sekolah:</strong> SDN Seddur 1</div>
@@ -1424,6 +1438,10 @@
       try {
         const res = await fetch(`${dbBase}/rekap_nilai.json?_t=${Date.now()}`);
         const objData = await res.json();
+        if (objData && objData.error) {
+          alert("⚠️ Firebase menolak akses (" + objData.error + "). Pastikan tab Rules di Firebase sudah true dan klik Publish!");
+          return;
+        }
         const hasil = [];
         if (objData && typeof objData === "object") {
           Object.keys(objData).forEach(fbKey => {
