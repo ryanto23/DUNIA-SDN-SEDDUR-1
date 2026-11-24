@@ -1123,7 +1123,34 @@
       document.getElementById("blokTargetTKA").style.display = (target === "TKA") ? "block" : "none";
     }
 
-            function tampilLoginAdmin() {
+            function simpanRekapNilai(record) {
+      try {
+        const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
+        list.push(record);
+        localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
+      } catch (e) {}
+
+      const dbBase = "https://firebasedatabase.app";
+      fetch(`${dbBase}/rekap_nilai.json`, {
+        method: "POST",
+        body: JSON.stringify(record)
+      })
+      .then(res => res.json())
+      .then(data => {
+        const infoEl = document.getElementById("statusSyncUjian");
+        if (data && data.name) {
+          if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; tersinkron ke Cloud Firebase!</span>`;
+        } else {
+          if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan Cloud: ${JSON.stringify(data)}</span>`;
+        }
+      })
+      .catch(err => {
+        const infoEl = document.getElementById("statusSyncUjian");
+        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Koneksi Cloud gagal: ${err.message}</span>`;
+      });
+    }
+
+    function tampilLoginAdmin() {
       hentikanTimer();
       sedangModeTKA = false;
       document.body.classList.remove("mode-cbt");
@@ -1158,7 +1185,7 @@
         <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>2. 📊 Lihat &amp; Filter Rekap Nilai Siswa</span><span>▶️</span></button>`;
     }
 
-    function adminGeneratorSoal() {
+            function adminGeneratorSoal() {
       document.getElementById("app").innerHTML = `
         <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal AI</div></div>
         <div class="card" style="text-align:left;">
@@ -1250,7 +1277,13 @@
       perbaruiOpsiMapelGenerator();
       togglePilihanBabGenerator();
     }
-        
+
+            function ubahModeTargetGenerator() {
+      const target = document.getElementById("genTargetMode").value;
+      document.getElementById("blokTargetUjian").style.display = (target === "UJIAN") ? "block" : "none";
+      document.getElementById("blokTargetTKA").style.display = (target === "TKA") ? "block" : "none";
+    }
+
     function perbaruiOpsiMapelGenerator() {
       const kls = Number(document.getElementById("genKelas").value);
       const daftarKode = getSemuaKodeMapelKelas(kls);
@@ -1287,7 +1320,7 @@
         return;
       }
 
-      const kodeMapel = mapelVal.split("|").shift();
+      const kodeMapel = mapelVal.split("|");
       const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
       let opsiHTML = daftarBab.map(b => `<option value="${b.bab}">${b.bab}</option>`).join("");
       opsiHTML += `<option value="__BARU__">➕ Buat Judul Bab Baru...</option>`;
@@ -1313,8 +1346,8 @@
 
       if (target === "TKA") {
         const mapelTKAParts = document.getElementById("genMapelTKA").value.split("|");
-        const kodeTKA = mapelTKAParts.shift();
-        const namaTKA = mapelTKAParts.pop();
+        const kodeTKA = mapelTKAParts;
+        const namaTKA = mapelTKAParts;
         const sesiTKA = document.getElementById("genSesiTKA").value;
         topik = topik || `Simulasi TKA ${namaTKA} ${sesiTKA}`;
         fileTujuan = "tka.js";
@@ -1333,8 +1366,8 @@
           barisDaftarMapel = `window.daftarMapelBaru("${kodeMapel}", "${namaMapel}");\n`;
         } else {
           const mapelRaw = mapelVal.split("|");
-          kodeMapel = mapelRaw.shift();
-          namaMapel = mapelRaw.pop();
+          kodeMapel = mapelRaw;
+          namaMapel = mapelRaw;
         }
 
         const kat = document.getElementById("genKategori").value;
@@ -1390,11 +1423,11 @@
           <div class="no-print" style="display:grid; grid-template-columns:1fr; gap:6px; margin-top:10px; text-align:left;">
             <label class="label-form" style="margin-top:2px;">1. Pilih Kelas:</label>
             <select id="filterKelas" class="input-form" style="margin:0;" onchange="perbaruiOpsiMapelRekap(); renderTabelNilai();">
-              <option value="ALL">Semua Kelas (1 - 6)</option>
+              <option value="ALL" selected>Semua Kelas (1 - 6)</option>
               <option value="1">Kelas 1 (Spesifik)</option>
               <option value="2">Kelas 2 (Spesifik)</option>
               <option value="3">Kelas 3 (Spesifik)</option>
-              <option value="4" selected>Kelas 4 (Spesifik)</option>
+              <option value="4">Kelas 4 (Spesifik)</option>
               <option value="5">Kelas 5 (Spesifik)</option>
               <option value="6">Kelas 6 (Spesifik)</option>
             </select>
@@ -1426,13 +1459,13 @@
           </div>
 
           <div class="no-print" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:12px;">
-            <button class="btn-aksi" style="font-size:0.84rem; padding:10px 14px; margin:0; background:#0284c7;" onclick="muatRekapDariCloud()">🔄 Refresh Data Cloud</button>
-            <button class="btn-aksi btn-sukses" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="downloadExcelTerfilter()">📥 Download Excel (.csv)</button>
-            <button class="btn-aksi" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="window.print()">🖨️ Cetak PDF / Print</button>
-            <button class="btn-aksi btn-bahaya" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="hapusDataHasilFilter()">🗑️ Hapus Data Filter</button>
+            <button type="button" class="btn-aksi" style="font-size:0.84rem; padding:10px 14px; margin:0; background:#0284c7;" onclick="muatRekapDariCloud()">🔄 Refresh Data Cloud</button>
+            <button type="button" class="btn-aksi btn-sukses" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="downloadExcelTerfilter()">📥 Download Excel (.csv)</button>
+            <button type="button" class="btn-aksi" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="window.print()">🖨️ Cetak PDF / Print</button>
+            <button type="button" class="btn-aksi btn-bahaya" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="hapusDataHasilFilter()">🗑️ Hapus Data Filter</button>
           </div>
 
-          <div id="infoRingkasanFilter" style="margin-top:10px; font-size:0.82rem; font-weight:700; color:#0f172a; background:#e0f2fe; padding:8px 10px; border-radius:10px;"></div>
+          <div id="infoRingkasanFilter" style="margin-top:10px; font-size:0.82rem; font-weight:700; color:#0f172a; background:#e0f2fe; padding:8px 10px; border-radius:10px;">⏳ Memuat data Cloud...</div>
           <div id="wadahTabelNilai"></div>
         </div>`;
       perbaruiOpsiMapelRekap();
@@ -1440,45 +1473,41 @@
       muatRekapDariCloud();
     }
 
-            function muatRekapDariCloud() {
+    async function muatRekapDariCloud() {
       const infoBox = document.getElementById("infoRingkasanFilter");
-      const db = getFirebaseDB();
-      if (!db) {
-        try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
-        perbaruiOpsiKodeUnikRekap();
-        renderTabelNilai();
-        return;
-      }
+      const dbBase = "https://firebasedatabase.app";
       if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari Firebase Cloud...";
 
-      db.ref("rekap_nilai").once("value")
-        .then(snapshot => {
-          const objData = snapshot.val();
-          const hasil = [];
-          if (objData && typeof objData === "object") {
-            Object.keys(objData).forEach(fbKey => {
-              const item = objData[fbKey];
-              if (item && item.nama) {
-                item._fbKey = fbKey;
-                hasil.push(item);
-              }
-            });
-          }
-          cacheRekapCloud = hasil;
-          try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
-          perbaruiOpsiKodeUnikRekap();
-          perbaruiOpsiBabRekap();
-          renderTabelNilai();
-        })
-        .catch(err => {
-          alert("⚠️ Gagal membaca Firebase: " + err.message);
-          try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
-          perbaruiOpsiKodeUnikRekap();
-          renderTabelNilai();
-        });
+      try {
+        const res = await fetch(`${dbBase}/rekap_nilai.json?_t=${Date.now()}`);
+        const objData = await res.json();
+        if (objData && objData.error) {
+          if (infoBox) infoBox.textContent = "⚠️ Firebase menolak akses: " + objData.error;
+          return;
+        }
+        const hasil = [];
+        if (objData && typeof objData === "object") {
+          Object.keys(objData).forEach(fbKey => {
+            const item = objData[fbKey];
+            if (item && item.nama) {
+              item._fbKey = fbKey;
+              hasil.push(item);
+            }
+          });
+        }
+        cacheRekapCloud = hasil;
+        try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
+      } catch (err) {
+        if (infoBox) infoBox.textContent = "⚠️ Gagal koneksi Cloud (" + err.message + "), menampilkan data lokal.";
+        try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
+      }
+
+      perbaruiOpsiKodeUnikRekap();
+      perbaruiOpsiBabRekap();
+      renderTabelNilai();
     }
 
-    function perbaruiOpsiMapelRekap() {
+            function perbaruiOpsiMapelRekap() {
       const fKelasVal = document.getElementById("filterKelas").value;
       const selectMapel = document.getElementById("filterMapel");
       const klsNum = fKelasVal === "ALL" ? 6 : Number(fKelasVal);
@@ -1502,8 +1531,8 @@
       if (!selectBab) return;
       const fKelasVal = document.getElementById("filterKelas").value;
       const mapelParts = document.getElementById("filterMapel").value.split("|");
-      const kodeMapel = mapelParts[0] || "ALL";
-      const namaMapel = mapelParts[1] || "";
+      const kodeMapel = mapelParts || "ALL";
+      const namaMapel = mapelParts || "";
 
       const daftarOpsiBab = [];
       if (fKelasVal !== "ALL" && kodeMapel !== "ALL") {
@@ -1585,7 +1614,7 @@
       const wadah = document.getElementById("wadahTabelNilai");
       const infoBox = document.getElementById("infoRingkasanFilter");
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|").pop() || "";
+      const fMapelNama = document.getElementById("filterMapel").value.split("|")[1] || "Semua Mapel";
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1622,12 +1651,12 @@
         </div>`;
     }
 
-    function downloadExcelTerfilter() {
+            function downloadExcelTerfilter() {
       const data = getDataTersaring();
       if (data.length === 0) { alert("Tidak ada data pada filter yang dipilih untuk diunduh!"); return; }
 
       const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|").pop() || "Mapel";
+      const fMapelNama = document.getElementById("filterMapel").value.split("|")[1] || "Mapel";
       const fTipe = document.getElementById("filterTipeUjian").value;
       const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
       const fUnik = document.getElementById("filterKodeUnik").value;
@@ -1664,12 +1693,10 @@
       if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
       if (!confirm(`Yakin ingin menghapus ${tersaring.length} data nilai yang tampil pada filter ini dari Firebase Cloud & semua perangkat?`)) return;
 
-      const db = getFirebaseDB();
-      if (db) {
-        for (const item of tersaring) {
-          if (item._fbKey) {
-            try { await db.ref(`rekap_nilai/${item._fbKey}`).remove(); } catch (e) {}
-          }
+      const dbBase = "https://firebasedatabase.app";
+      for (const item of tersaring) {
+        if (item._fbKey) {
+          try { await fetch(`${dbBase}/rekap_nilai/${item._fbKey}.json`, { method: "DELETE" }); } catch (e) {}
         }
       }
 
