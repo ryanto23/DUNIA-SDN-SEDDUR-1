@@ -1,130 +1,116 @@
-const GH_TOKEN = "github_pat_11CD5WQEI03Q49ZDaTCiZm_" + "GgqfypCEbgw8VcjMnDTBo9zPqCco5mPc2jsYPndDIHfNGPU3YVOJE4NypcH";
-const GH_FILE = "nilai_cloud.json";
-
-async function deteksiOwnerDanRepo() {
-  const host = window.location.hostname;
-  const parts = window.location.pathname.split("/").filter(Boolean);
-  if (host.endsWith(".github.io")) {
-    const owner = host.replace(".github.io", "");
-    const repo = parts.length > 0 ? parts.shift() : `${owner}.github.io`;
-    return { owner, repo };
-  }
-  const res = await fetch("https://github.com", {
-    headers: { "Authorization": `Bearer ${GH_TOKEN}`, "Accept": "application/vnd.github+json" }
-  });
-  const list = await res.json();
-  if (Array.isArray(list) && list.length > 0) {
-    return { owner: list.shift().owner.login, repo: list.shift().name };
-  }
-  throw new Error("Repositori tidak ditemukan");
-}
-
-function encodeBase64UTF8(str) {
-  return btoa(unescape(encodeURIComponent(str)));
-}
-
-function decodeBase64UTF8(b64) {
-  return decodeURIComponent(escape(atob(b64.replace(/\s/g, ""))));
-}
-
-async function bacaFileNilaiGitHub() {
-  const { owner, repo } = await deteksiOwnerDanRepo();
-  const apiUrl = `https://github.com{owner}/${repo}/contents/${GH_FILE}?_t=${Date.now()}`;
-  const res = await fetch(apiUrl, {
-    headers: {
-      "Authorization": `Bearer ${GH_TOKEN}`,
-      "Accept": "application/vnd.github+json"
-    }
-  });
-
-  if (res.status === 404) {
-    return { sha: null, data: [] };
-  }
-  if (!res.ok) {
-    const errJson = await res.json().catch(() => ({}));
-    throw new Error(`HTTP ${res.status}: ${errJson.message || "Gagal baca"}`);
-  }
-
-  const json = await res.json();
-  const teks = decodeBase64UTF8(json.content || "");
-  let parsed = [];
-  try { parsed = JSON.parse(teks); } catch (e) { parsed = []; }
-  return { sha: json.sha, data: Array.isArray(parsed) ? parsed : [] };
-}
-
-async function tulisFileNilaiGitHub(arrayNilai, shaLama, pesanCommit) {
-  const { owner, repo } = await deteksiOwnerDanRepo();
-  const apiUrl = `https://github.com{owner}/${repo}/contents/${GH_FILE}`;
-  const bodyObj = {
-    message: pesanCommit || "Update rekap nilai siswa",
-    content: encodeBase64UTF8(JSON.stringify(arrayNilai, null, 2))
-  };
-  if (shaLama) bodyObj.sha = shaLama;
-
-  const res = await fetch(apiUrl, {
-    method: "PUT",
-    headers: {
-      "Authorization": `Bearer ${GH_TOKEN}`,
-      "Accept": "application/vnd.github+json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(bodyObj)
-  });
-
-  if (!res.ok) {
-    const errJson = await res.json().catch(() => ({}));
-    throw new Error(`HTTP ${res.status}: ${errJson.message || "Gagal simpan"}`);
-  }
-  return await res.json();
-}
-
-window.simpanRekapNilai = async function(record) {
+window.simpanRekapNilai = function(record) {
   try {
     const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
     list.push(record);
     localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
   } catch (e) {}
 
-  try {
-    let berhasil = false;
-    for (let percobaan = 1; percobaan <= 3; percobaan++) {
-      try {
-        const { sha, data } = await bacaFileNilaiGitHub();
-        data.push(record);
-        await tulisFileNilaiGitHub(data, sha, `Nilai: ${record.nama} (${record.mapel})`);
-        berhasil = true;
-        break;
-      } catch (e) {
-        if (percobaan === 3) throw e;
-        await new Promise(r => setTimeout(r, 800));
-      }
-    }
-    if (berhasil) {
-      const el = document.getElementById("statusSyncUjian");
-      if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; sinkron ke GitHub Cloud!</span>`;
-    }
-  } catch (err) {
-    const el = document.getElementById("statusSyncUjian");
-    if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal sync GitHub (${err.message})</span>`;
+  const kodeRekap = [
+    "SEDDUR",
+    record.id,
+    record.tanggal,
+    String(record.nama).replace(/#/g, ""),
+    String(record.kodeUnik || "-").replace(/#/g, ""),
+    record.kelas,
+    String(record.mapel).replace(/#/g, ""),
+    String(record.kategori).replace(/#/g, ""),
+    record.benar,
+    record.nilai
+  ].join("#");
+
+  const pesanWA =
+    `📋 *HASIL UJIAN SDN SEDDUR 1*\n` +
+    `• Nama: ${record.nama}\n` +
+    `• Kode/Absen: ${record.kodeUnik}\n` +
+    `• Kelas: ${record.kelas}\n` +
+    `• Mapel: ${record.mapel}\n` +
+    `• Ujian: ${record.kategori}\n` +
+    `• Benar: ${record.benar}\n` +
+    `• *NILAI: ${record.nilai}*\n\n` +
+    `Kode Rekap Admin:\n${kodeRekap}`;
+
+  const el = document.getElementById("statusSyncUjian");
+  if (el) {
+    el.innerHTML = `
+      <div style="background:#dcfce7; border:2px solid #22c55e; border-radius:12px; padding:10px; margin-top:6px;">
+        <div style="color:#15803d; font-weight:700; margin-bottom:6px;">✅ Nilai tersimpan! Kirim hasil ke Guru:</div>
+        <a href="https://wa.me{encodeURIComponent(pesanWA)}" target="_blank"
+           style="display:block; background:#16a34a; color:#fff; text-decoration:none; padding:10px 12px; border-radius:10px; font-weight:700; font-size:0.9rem;">
+          📲 Kirim Nilai ke WhatsApp Guru
+        </a>
+      </div>`;
   }
 };
 
-window.muatRekapDariCloud = async function() {
-  const infoBox = document.getElementById("infoRingkasanFilter");
-  if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari GitHub Cloud...";
-
+window.muatRekapDariCloud = function() {
   try {
-    const { data } = await bacaFileNilaiGitHub();
-    cacheRekapCloud = data;
-    try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(data)); } catch (e) {}
-  } catch (err) {
-    if (infoBox) infoBox.textContent = "⚠️ Gagal tarik Cloud (" + err.message + "), memuat data lokal.";
-    try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
+    cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
+  } catch (e) {
+    cacheRekapCloud = [];
+  }
+
+  const wadahTabel = document.getElementById("wadahTabelNilai");
+  if (wadahTabel && !document.getElementById("kotakImporWA")) {
+    const kotak = document.createElement("div");
+    kotak.id = "kotakImporWA";
+    kotak.className = "no-print";
+    kotak.style.cssText = "background:#f0f9ff; border:2px dashed #0284c7; border-radius:12px; padding:10px; margin-top:12px; text-align:left;";
+    kotak.innerHTML = `
+      <div style="font-size:0.84rem; font-weight:700; color:#0369a1; margin-bottom:4px;">📥 Impor Nilai dari WhatsApp Siswa (Bisa Banyak Sekaligus):</div>
+      <textarea id="inputKodeWA" class="input-form" style="min-height:70px; font-size:0.8rem; margin:4px 0;" placeholder="Tempel pesan/kode SEDDUR#... dari WhatsApp siswa di sini..."></textarea>
+      <button type="button" class="btn-aksi btn-sukses" style="width:100%; margin-top:4px; padding:9px;" onclick="imporDariTeksWA()">➕ Masukkan ke Tabel Rekap</button>
+    `;
+    wadahTabel.parentNode.insertBefore(kotak, wadahTabel);
   }
 
   if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
   if (typeof perbaruiOpsiBabRekap === "function") perbaruiOpsiBabRekap();
   if (typeof renderTabelNilai === "function") renderTabelNilai();
+};
+
+window.imporDariTeksWA = function() {
+  const teks = (document.getElementById("inputKodeWA").value || "").trim();
+  if (!teks) { alert("Tempelkan terlebih dahulu pesan dari WhatsApp siswa!"); return; }
+
+  let semua = [];
+  try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
+  const idSudahAda = new Set(semua.map(x => String(x.id)));
+
+  const baris = teks.split(/\r?\n/);
+  let jumlahMasuk = 0;
+
+  baris.forEach(b => {
+    const idx = b.indexOf("SEDDUR#");
+    if (idx !== -1) {
+      const bagian = b.slice(idx).trim().split("#");
+      if (bagian.length >= 10) {
+        const idRec = String(bagian);
+        if (!idSudahAda.has(idRec)) {
+          semua.push({
+            id: idRec,
+            tanggal: bagian,
+            nama: bagian,
+            kodeUnik: bagian,
+            kelas: String(bagian),
+            mapel: bagian,
+            kategori: bagian,
+            benar: bagian,
+            nilai: Number(bagian) || 0
+          });
+          idSudahAda.add(idRec);
+          jumlahMasuk++;
+        }
+      }
+    }
+  });
+
+  try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua)); } catch (e) {}
+  cacheRekapCloud = semua;
+  document.getElementById("inputKodeWA").value = "";
+  if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
+  if (typeof perbaruiOpsiBabRekap === "function") perbaruiOpsiBabRekap();
+  if (typeof renderTabelNilai === "function") renderTabelNilai();
+  alert(`✅ Berhasil memasukkan ${jumlahMasuk} nilai baru ke tabel rekap!`);
 };
 
 window.getDataTersaring = function() {
@@ -162,27 +148,20 @@ window.getDataTersaring = function() {
   });
 };
 
-window.hapusDataHasilFilter = async function() {
+window.hapusDataHasilFilter = function() {
   const tersaring = getDataTersaring();
   if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
-  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari GitHub Cloud & semua perangkat?`)) return;
-
-  const setHapus = new Set(tersaring.map(item => String(item.id)));
-  try {
-    const { sha, data } = await bacaFileNilaiGitHub();
-    const sisaData = data.filter(item => !setHapus.has(String(item.id)));
-    await tulisFileNilaiGitHub(sisaData, sha, `Hapus ${tersaring.length} data nilai terfilter`);
-    cacheRekapCloud = sisaData;
-  } catch (err) {
-    alert("⚠️ Gagal menghapus di GitHub Cloud: " + err.message);
-  }
+  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari perangkat?`)) return;
 
   let semua = [];
   try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-  try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua.filter(item => !setHapus.has(String(item.id))))); } catch (e) {}
+  const setHapus = new Set(tersaring.map(item => String(item.id)));
+  const sisa = semua.filter(item => !setHapus.has(String(item.id)));
+  try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(sisa)); } catch (e) {}
+  cacheRekapCloud = sisa;
 
   if (typeof mainkanEfek === "function") mainkanEfek('salah');
   if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
   if (typeof renderTabelNilai === "function") renderTabelNilai();
-  alert("✅ Data berhasil dihapus dari GitHub Cloud & semua perangkat!");
+  alert("✅ Data berhasil dihapus!");
 };
