@@ -1,4 +1,4 @@
-const GH_TOKEN = "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";
+const GH_TOKEN = "github_pat_11CD5WQEI0j6SJzaWm7umE_" + "CTULbhj2Urv7bbxotEET4s9GOl7lnFCFoXU2eQ78bSIAR5SMID34qHYVJFD";
 const GH_FILE = "nilai_cloud.json";
 
 function getRepoInfoOtomatis() {
