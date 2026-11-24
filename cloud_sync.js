@@ -9,7 +9,7 @@ function getRepoInfoOtomatis() {
 
   if (host.endsWith(".github.io")) {
     owner = host.replace(".github.io", "");
-    repo = pathParts.length > 0 ? pathParts : `${owner}.github.io`;
+    repo = pathParts.length > 0 ? String(pathParts) : `${owner}.github.io`;
   }
   return { owner, repo };
 }
@@ -24,9 +24,9 @@ function decodeBase64UTF8(b64) {
 
 async function bacaFileNilaiGitHub() {
   const { owner, repo } = getRepoInfoOtomatis();
-  if (!owner || !repo) throw new Error("Buka aplikasi melalui link GitHub Pages (*.github.io)");
+  if (!owner || !repo) throw new Error("Buka aplikasi lewat link *.github.io");
 
-  const apiUrl = `https://github.com{owner}/${repo}/contents/${GH_FILE}?ref=main&_t=${Date.now()}`;
+  const apiUrl = `https://github.com{owner}/${repo}/contents/${GH_FILE}?_t=${Date.now()}`;
   const res = await fetch(apiUrl, {
     headers: {
       "Authorization": `Bearer ${GH_TOKEN}`,
@@ -38,7 +38,8 @@ async function bacaFileNilaiGitHub() {
     return { sha: null, data: [] };
   }
   if (!res.ok) {
-    throw new Error(`GitHub API HTTP ${res.status}`);
+    const errJson = await res.json().catch(() => ({}));
+    throw new Error(`HTTP ${res.status}: ${errJson.message || "Gagal baca"}`);
   }
 
   const json = await res.json();
@@ -68,8 +69,8 @@ async function tulisFileNilaiGitHub(arrayNilai, shaLama, pesanCommit) {
   });
 
   if (!res.ok) {
-    const errTxt = await res.text();
-    throw new Error(`Gagal simpan (${res.status}): ${errTxt}`);
+    const errJson = await res.json().catch(() => ({}));
+    throw new Error(`HTTP ${res.status}: ${errJson.message || "Gagal simpan"}`);
   }
   return await res.json();
 }
@@ -101,7 +102,7 @@ window.simpanRekapNilai = async function(record) {
     }
   } catch (err) {
     const el = document.getElementById("statusSyncUjian");
-    if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal sync GitHub: ${err.message}</span>`;
+    if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal sync GitHub (${err.message})</span>`;
   }
 };
 
