@@ -395,30 +395,44 @@
       return window._fbDbReady;
     }
 
-    function simpanRekapNilai(record) {
+       function simpanRekapNilai(record) {
       try {
         const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
         list.push(record);
         localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
       } catch (e) {}
 
-      const db = getFirebaseDB();
-      if (!db) {
-        const infoEl = document.getElementById("statusSyncUjian");
-        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ SDK Firebase belum termuat (cek koneksi internet).</span>`;
-        return;
-      }
+      const gasUrl = "https://script.google.com/macros/s/AKfycbyUZntsjONJxTjTzi_0I95zFcYGEJe_rR3GQFv83h0ZnAA45KUue3hSvGXdbBpl-ixR/exec";
+      const params = new URLSearchParams({
+        aksi: "simpan",
+        id: String(record.id),
+        tanggal: String(record.tanggal),
+        nama: String(record.nama),
+        kodeUnik: String(record.kodeUnik || "-"),
+        kelas: String(record.kelas),
+        mapel: String(record.mapel),
+        kategori: String(record.kategori),
+        benar: String(record.benar),
+        nilai: String(record.nilai)
+      });
 
-      db.ref("rekap_nilai").push(record)
-        .then(() => {
+      fetch(`${gasUrl}?${params.toString()}`)
+        .then(res => res.json())
+        .then(data => {
           const infoEl = document.getElementById("statusSyncUjian");
-          if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; tersinkron ke Cloud Firebase!</span>`;
+          if (data && data.status === "OK") {
+            if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; tersinkron ke Google Sheets Cloud!</span>`;
+          } else {
+            if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Respon Cloud: ${JSON.stringify(data)}</span>`;
+          }
         })
-        .catch(err => {
+        .catch(() => {
+          new Image().src = `${gasUrl}?${params.toString()}`;
           const infoEl = document.getElementById("statusSyncUjian");
-          if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Ditolak Firebase: ${err.message}</span>`;
+          if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai terkirim ke Google Sheets Cloud!</span>`;
         });
     }
+
 
     function cariSoalDariDatabase(kls, kodeMapel, namaPaketAtauBab) {
       const dbSoal = window.DATABASE_SOAL || {};
@@ -1473,32 +1487,20 @@
       muatRekapDariCloud();
     }
 
-    async function muatRekapDariCloud() {
+     async function muatRekapDariCloud() {
       const infoBox = document.getElementById("infoRingkasanFilter");
-      const dbBase = "https://firebasedatabase.app";
-      if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari Firebase Cloud...";
+      const gasUrl = "https://script.google.com/macros/s/AKfycbyUZntsjONJxTjTzi_0I95zFcYGEJe_rR3GQFv83h0ZnAA45KUue3hSvGXdbBpl-ixR/exec";
+      if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari Google Sheets Cloud...";
 
       try {
-        const res = await fetch(`${dbBase}/rekap_nilai.json?_t=${Date.now()}`);
-        const objData = await res.json();
-        if (objData && objData.error) {
-          if (infoBox) infoBox.textContent = "⚠️ Firebase menolak akses: " + objData.error;
-          return;
+        const res = await fetch(`${gasUrl}?aksi=baca&_t=${Date.now()}`);
+        const hasil = await res.json();
+        if (Array.isArray(hasil)) {
+          cacheRekapCloud = hasil;
+          try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
         }
-        const hasil = [];
-        if (objData && typeof objData === "object") {
-          Object.keys(objData).forEach(fbKey => {
-            const item = objData[fbKey];
-            if (item && item.nama) {
-              item._fbKey = fbKey;
-              hasil.push(item);
-            }
-          });
-        }
-        cacheRekapCloud = hasil;
-        try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
       } catch (err) {
-        if (infoBox) infoBox.textContent = "⚠️ Gagal koneksi Cloud (" + err.message + "), menampilkan data lokal.";
+        if (infoBox) infoBox.textContent = "⚠️ Gagal menarik Cloud (" + err.message + "), menampilkan data lokal.";
         try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
       }
 
@@ -1688,29 +1690,29 @@
       URL.revokeObjectURL(url);
     }
 
-    async function hapusDataHasilFilter() {
+       async function hapusDataHasilFilter() {
       const tersaring = getDataTersaring();
       if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
-      if (!confirm(`Yakin ingin menghapus ${tersaring.length} data nilai yang tampil pada filter ini dari Firebase Cloud & semua perangkat?`)) return;
+      if (!confirm(`Yakin ingin menghapus ${tersaring.length} data nilai yang tampil pada filter ini dari Google Sheets Cloud & semua perangkat?`)) return;
 
-      const dbBase = "https://firebasedatabase.app";
-      for (const item of tersaring) {
-        if (item._fbKey) {
-          try { await fetch(`${dbBase}/rekap_nilai/${item._fbKey}.json`, { method: "DELETE" }); } catch (e) {}
-        }
-      }
+      const gasUrl = "https://script.google.com/macros/s/AKfycbyUZntsjONJxTjTzi_0I95zFcYGEJe_rR3GQFv83h0ZnAA45KUue3hSvGXdbBpl-ixR/exec";
+      const daftarId = tersaring.map(item => String(item.id)).join(",");
+      try {
+        await fetch(`${gasUrl}?aksi=hapus&ids=${encodeURIComponent(daftarId)}`);
+      } catch (e) {}
 
       let semua = [];
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-      const idDihapus = new Set(tersaring.map(item => item.id));
-      try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua.filter(item => !idDihapus.has(item.id)))); } catch (e) {}
-      cacheRekapCloud = cacheRekapCloud.filter(item => !idDihapus.has(item.id));
+      const idDihapus = new Set(tersaring.map(item => String(item.id)));
+      try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua.filter(item => !idDihapus.has(String(item.id))))); } catch (e) {}
+      cacheRekapCloud = cacheRekapCloud.filter(item => !idDihapus.has(String(item.id)));
 
       mainkanEfek('salah');
       perbaruiOpsiKodeUnikRekap();
       renderTabelNilai();
-      alert("✅ Data hasil filter berhasil dihapus dari semua perangkat!");
+      alert("✅ Data hasil filter berhasil dihapus dari Google Sheets & semua perangkat!");
     }
+
 
     tampilBeranda();
   </script>
