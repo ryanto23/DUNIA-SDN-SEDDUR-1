@@ -1,5 +1,37 @@
 const GAS_URL = "https://google.com";
 
+function panggilGAS_JSONP(paramsObj) {
+  return new Promise((resolve, reject) => {
+    const cbName = "cb_seddur_" + Date.now() + "_" + Math.floor(Math.random() * 10000);
+    const params = new URLSearchParams(paramsObj);
+    params.set("callback", cbName);
+
+    const script = document.createElement("script");
+    const timer = setTimeout(() => {
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+      reject(new Error("Waktu tunggu habis (Timeout)"));
+    }, 15000);
+
+    window[cbName] = function(data) {
+      clearTimeout(timer);
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+      resolve(data);
+    };
+
+    script.onerror = function() {
+      clearTimeout(timer);
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+      reject(new Error("Gagal memuat jalur Google Script"));
+    };
+
+    script.src = `${GAS_URL}?${params.toString()}`;
+    document.body.appendChild(script);
+  });
+}
+
 window.simpanRekapNilai = function(record) {
   try {
     const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
@@ -7,7 +39,7 @@ window.simpanRekapNilai = function(record) {
     localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
   } catch (e) {}
 
-  const params = new URLSearchParams({
+  panggilGAS_JSONP({
     aksi: "simpan",
     id: String(record.id),
     tanggal: String(record.tanggal),
@@ -18,20 +50,15 @@ window.simpanRekapNilai = function(record) {
     kategori: String(record.kategori),
     benar: String(record.benar),
     nilai: String(record.nilai)
+  })
+  .then(() => {
+    const el = document.getElementById("statusSyncUjian");
+    if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; sinkron ke Google Sheets!</span>`;
+  })
+  .catch(() => {
+    const el = document.getElementById("statusSyncUjian");
+    if (el) el.innerHTML = `<span style="color:#d97706; font-weight:700;">⚠️ Tersimpan di perangkat (cek jaringan untuk sinkron Cloud).</span>`;
   });
-
-  const urlKirim = `${GAS_URL}?${params.toString()}`;
-  fetch(urlKirim)
-    .then(r => r.json())
-    .then(() => {
-      const el = document.getElementById("statusSyncUjian");
-      if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; sinkron ke Google Sheets!</span>`;
-    })
-    .catch(() => {
-      new Image().src = urlKirim;
-      const el = document.getElementById("statusSyncUjian");
-      if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai terkirim ke Google Sheets!</span>`;
-    });
 };
 
 window.muatRekapDariCloud = async function() {
@@ -39,8 +66,7 @@ window.muatRekapDariCloud = async function() {
   if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai dari Google Sheets...";
 
   try {
-    const res = await fetch(`${GAS_URL}?aksi=baca&_t=${Date.now()}`);
-    const data = await res.json();
+    const data = await panggilGAS_JSONP({ aksi: "baca", _t: String(Date.now()) });
     if (Array.isArray(data)) {
       cacheRekapCloud = data;
       try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(data)); } catch (e) {}
@@ -96,7 +122,7 @@ window.hapusDataHasilFilter = async function() {
   if (!confirm(`Hapus ${tersaring.length} data nilai ini dari Google Sheets & semua perangkat?`)) return;
 
   const ids = tersaring.map(item => String(item.id)).join(",");
-  try { await fetch(`${GAS_URL}?aksi=hapus&ids=${encodeURIComponent(ids)}`); } catch (e) {}
+  try { await panggilGAS_JSONP({ aksi: "hapus", ids: ids }); } catch (e) {}
 
   let semua = [];
   try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
