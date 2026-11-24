@@ -1,78 +1,118 @@
-const SUPABASE_URL = "https://supabase.co";
-const SUPABASE_KEY = "sb_publishable_Ch9_hptl9bI7wU9_0NhJUg_JAIBIYYG";
+const GH_TOKEN = "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";
+const GH_FILE = "nilai_cloud.json";
 
-const SB_HEADERS = {
-  "apikey": SUPABASE_KEY,
-  "Authorization": "Bearer " + SUPABASE_KEY,
-  "Content-Type": "application/json"
-};
+function getRepoInfoOtomatis() {
+  const host = window.location.hostname;
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+  let owner = "";
+  let repo = "";
 
-window.simpanRekapNilai = function(record) {
+  if (host.endsWith(".github.io")) {
+    owner = host.replace(".github.io", "");
+    repo = pathParts.length > 0 ? pathParts : `${owner}.github.io`;
+  }
+  return { owner, repo };
+}
+
+function encodeBase64UTF8(str) {
+  return btoa(unescape(encodeURIComponent(str)));
+}
+
+function decodeBase64UTF8(b64) {
+  return decodeURIComponent(escape(atob(b64.replace(/\s/g, ""))));
+}
+
+async function bacaFileNilaiGitHub() {
+  const { owner, repo } = getRepoInfoOtomatis();
+  if (!owner || !repo) throw new Error("Buka aplikasi melalui link GitHub Pages (*.github.io)");
+
+  const apiUrl = `https://github.com{owner}/${repo}/contents/${GH_FILE}?ref=main&_t=${Date.now()}`;
+  const res = await fetch(apiUrl, {
+    headers: {
+      "Authorization": `Bearer ${GH_TOKEN}`,
+      "Accept": "application/vnd.github+json"
+    }
+  });
+
+  if (res.status === 404) {
+    return { sha: null, data: [] };
+  }
+  if (!res.ok) {
+    throw new Error(`GitHub API HTTP ${res.status}`);
+  }
+
+  const json = await res.json();
+  const teks = decodeBase64UTF8(json.content || "");
+  let parsed = [];
+  try { parsed = JSON.parse(teks); } catch (e) { parsed = []; }
+  return { sha: json.sha, data: Array.isArray(parsed) ? parsed : [] };
+}
+
+async function tulisFileNilaiGitHub(arrayNilai, shaLama, pesanCommit) {
+  const { owner, repo } = getRepoInfoOtomatis();
+  const apiUrl = `https://github.com{owner}/${repo}/contents/${GH_FILE}`;
+  const bodyObj = {
+    message: pesanCommit || "Update rekap nilai siswa",
+    content: encodeBase64UTF8(JSON.stringify(arrayNilai, null, 2))
+  };
+  if (shaLama) bodyObj.sha = shaLama;
+
+  const res = await fetch(apiUrl, {
+    method: "PUT",
+    headers: {
+      "Authorization": `Bearer ${GH_TOKEN}`,
+      "Accept": "application/vnd.github+json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(bodyObj)
+  });
+
+  if (!res.ok) {
+    const errTxt = await res.text();
+    throw new Error(`Gagal simpan (${res.status}): ${errTxt}`);
+  }
+  return await res.json();
+}
+
+window.simpanRekapNilai = async function(record) {
   try {
     const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
     list.push(record);
     localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
   } catch (e) {}
 
-  const payload = {
-    id: String(record.id),
-    tanggal: String(record.tanggal),
-    nama: String(record.nama),
-    kode_unik: String(record.kodeUnik || "-"),
-    kelas: String(record.kelas),
-    mapel: String(record.mapel),
-    kategori: String(record.kategori),
-    benar: String(record.benar),
-    nilai: Number(record.nilai) || 0
-  };
-
-  fetch(`${SUPABASE_URL}/rest/v1/rekap_nilai`, {
-    method: "POST",
-    headers: { ...SB_HEADERS, "Prefer": "return=minimal" },
-    body: JSON.stringify(payload)
-  })
-  .then(res => {
-    const el = document.getElementById("statusSyncUjian");
-    if (res.ok) {
-      if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; sinkron ke Supabase Cloud!</span>`;
-    } else {
-      res.text().then(txt => {
-        if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan Cloud (${res.status}): ${txt}</span>`;
-      });
+  try {
+    let berhasil = false;
+    for (let percobaan = 1; percobaan <= 3; percobaan++) {
+      try {
+        const { sha, data } = await bacaFileNilaiGitHub();
+        data.push(record);
+        await tulisFileNilaiGitHub(data, sha, `Nilai: ${record.nama} (${record.mapel})`);
+        berhasil = true;
+        break;
+      } catch (e) {
+        if (percobaan === 3) throw e;
+        await new Promise(r => setTimeout(r, 800));
+      }
     }
-  })
-  .catch(err => {
+    if (berhasil) {
+      const el = document.getElementById("statusSyncUjian");
+      if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; sinkron ke GitHub Cloud!</span>`;
+    }
+  } catch (err) {
     const el = document.getElementById("statusSyncUjian");
-    if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Koneksi Cloud gagal: ${err.message}</span>`;
-  });
+    if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal sync GitHub: ${err.message}</span>`;
+  }
 };
 
 window.muatRekapDariCloud = async function() {
   const infoBox = document.getElementById("infoRingkasanFilter");
-  if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari Supabase Cloud...";
+  if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari GitHub Cloud...";
 
   try {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/rekap_nilai?select=*&order=id.desc`, {
-      method: "GET",
-      headers: SB_HEADERS
-    });
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    const rows = await res.json();
-    if (Array.isArray(rows)) {
-      const hasil = rows.map(r => ({
-        id: r.id,
-        tanggal: r.tanggal,
-        nama: r.nama,
-        kodeUnik: r.kode_unik || "-",
-        kelas: String(r.kelas),
-        mapel: r.mapel,
-        kategori: r.kategori,
-        benar: r.benar,
-        nilai: Number(r.nilai) || 0
-      }));
-      cacheRekapCloud = hasil;
-      try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
-    }
+    const { data } = await bacaFileNilaiGitHub();
+    cacheRekapCloud = data;
+    try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(data)); } catch (e) {}
   } catch (err) {
     if (infoBox) infoBox.textContent = "⚠️ Gagal tarik Cloud (" + err.message + "), memuat data lokal.";
     try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
@@ -121,25 +161,24 @@ window.getDataTersaring = function() {
 window.hapusDataHasilFilter = async function() {
   const tersaring = getDataTersaring();
   if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
-  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari Supabase Cloud & semua perangkat?`)) return;
+  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari GitHub Cloud & semua perangkat?`)) return;
 
-  for (const item of tersaring) {
-    try {
-      await fetch(`${SUPABASE_URL}/rest/v1/rekap_nilai?id=eq.${encodeURIComponent(String(item.id))}`, {
-        method: "DELETE",
-        headers: SB_HEADERS
-      });
-    } catch (e) {}
+  const setHapus = new Set(tersaring.map(item => String(item.id)));
+  try {
+    const { sha, data } = await bacaFileNilaiGitHub();
+    const sisaData = data.filter(item => !setHapus.has(String(item.id)));
+    await tulisFileNilaiGitHub(sisaData, sha, `Hapus ${tersaring.length} data nilai terfilter`);
+    cacheRekapCloud = sisaData;
+  } catch (err) {
+    alert("⚠️ Gagal menghapus di GitHub Cloud: " + err.message);
   }
 
   let semua = [];
   try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-  const setHapus = new Set(tersaring.map(item => String(item.id)));
   try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua.filter(item => !setHapus.has(String(item.id))))); } catch (e) {}
-  cacheRekapCloud = (cacheRekapCloud || []).filter(item => !setHapus.has(String(item.id)));
 
   if (typeof mainkanEfek === "function") mainkanEfek('salah');
   if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
   if (typeof renderTabelNilai === "function") renderTabelNilai();
-  alert("✅ Data berhasil dihapus dari Supabase Cloud & semua perangkat!");
+  alert("✅ Data berhasil dihapus dari GitHub Cloud & semua perangkat!");
 };
