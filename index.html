@@ -113,6 +113,8 @@
     @media (min-width: 600px) { header h1 { font-size: 1.48rem; } .banner-beranda { max-height: 90px; } .kelas-grid { grid-template-columns: 1fr 1fr 1fr; } .opsi-btn { font-size: 1.12rem; min-height: 62px; } }
     @media print { body { background: #fff !important; padding-bottom: 0; } header, .no-print, .bottom-nav { display: none !important; } .container { max-width: 100%; margin: 0; padding: 0; } .card { border: none; box-shadow: none; } }
   </style>
+  <script src="https://gstatic.com"></script>
+  <script src="https://gstatic.com"></script>
 </head>
 
   <body>
@@ -381,6 +383,18 @@
       return String(window.PASSWORD_ADMIN_DEFAULT || "seddur1").trim();
     }
 
+    function getFirebaseDB() {
+      if (!window._fbDbReady && window.firebase) {
+        if (!firebase.apps.length) {
+          firebase.initializeApp({
+            databaseURL: (window.FIREBASE_DB_URL || "https://firebasedatabase.app").replace(/\/$/, "")
+          });
+        }
+        window._fbDbReady = firebase.database();
+      }
+      return window._fbDbReady;
+    }
+
     function simpanRekapNilai(record) {
       try {
         const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
@@ -388,26 +402,22 @@
         localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
       } catch (e) {}
 
-      const dbBase = (window.FIREBASE_DB_URL || "https://firebasedatabase.app").replace(/\/$/, "");
-      fetch(`${dbBase}/rekap_nilai.json`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(record)
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.name) {
+      const db = getFirebaseDB();
+      if (!db) {
+        const infoEl = document.getElementById("statusSyncUjian");
+        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ SDK Firebase belum termuat (cek koneksi internet).</span>`;
+        return;
+      }
+
+      db.ref("rekap_nilai").push(record)
+        .then(() => {
           const infoEl = document.getElementById("statusSyncUjian");
           if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; tersinkron ke Cloud Firebase!</span>`;
-        } else if (data && data.error) {
+        })
+        .catch(err => {
           const infoEl = document.getElementById("statusSyncUjian");
-          if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Ditolak Firebase: ${data.error}</span>`;
-        }
-      })
-      .catch(err => {
-        const infoEl = document.getElementById("statusSyncUjian");
-        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal kirim Cloud: ${err.message}</span>`;
-      });
+          if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Ditolak Firebase: ${err.message}</span>`;
+        });
     }
 
     function cariSoalDariDatabase(kls, kodeMapel, namaPaketAtauBab) {
@@ -1107,134 +1117,6 @@
         </div>`;
     }
 
-            function tampilLoginAdmin() {
-      hentikanTimer();
-      sedangModeTKA = false;
-      document.body.classList.remove("mode-cbt");
-      setNavAktif("nav-admin");
-      mainkanEfek('klik');
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Home</button><div class="star-bar">🔑 Area Admin</div></div>
-        <div class="card">
-          <div style="font-size:2.5rem;">🛡️</div>
-          <h2 style="color:#0f172a; font-size:1.2rem; margin-top:4px;">Login Administrator</h2>
-          <p style="color:#64748b; font-size:0.82rem; margin-bottom:10px;">Masukkan password admin sesuai pengaturan pada file <code>kode_ujian.js</code></p>
-          <input type="password" id="inputPassAdmin" class="input-nama" placeholder="Masukkan Password Admin..." />
-          <button class="btn-aksi" style="width:100%;" onclick="prosesLoginAdmin()">Masuk Dashboard Admin 🔓</button>
-        </div>`;
-    }
-
-    function prosesLoginAdmin() {
-      if (document.getElementById("inputPassAdmin").value.trim() === getPasswordAdmin()) {
-        mainkanEfek('benar');
-        tampilDashboardAdmin();
-      } else {
-        mainkanEfek('salah');
-        alert("Password Admin salah!");
-      }
-    }
-
-    function tampilDashboardAdmin() {
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Keluar Admin</button><div class="star-bar">⚙️ Panel Admin</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI (8 Mapel + Mapel Baru + TKA) &amp; rekap nilai tersinkron Firebase Cloud</p></div>
-        <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI &amp; Kode GitHub</span><span>▶️</span></button>
-        <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>2. 📊 Lihat &amp; Filter Rekap Nilai Siswa</span><span>▶️</span></button>`;
-    }
-
-    function adminGeneratorSoal() {
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal AI</div></div>
-        <div class="card" style="text-align:left;">
-          <h3 style="color:#0284c7; text-align:center;">Generator Soal AI &amp; Kode GitHub</h3>
-          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Mendukung PAI, B. Madura, Kesenian, Mapel Umum, Tambah Mapel Baru &amp; Tes TKA</p>
-
-          <label class="label-form">1. Pilih Target File:</label>
-          <select id="genTargetMode" class="input-form" onchange="ubahModeTargetGenerator()">
-            <option value="UJIAN">Ujian Kelas (ujian1.js – ujian6.js)</option>
-            <option value="TKA">Simulasi Tes TKA (tka.js)</option>
-          </select>
-
-          <div id="blokTargetUjian">
-            <label class="label-form">2. Pilih Kelas:</label>
-            <select id="genKelas" class="input-form" onchange="perbaruiOpsiMapelGenerator()">
-              <option value="1">Kelas 1 (ujian1.js)</option>
-              <option value="2">Kelas 2 (ujian2.js)</option>
-              <option value="3">Kelas 3 (ujian3.js)</option>
-              <option value="4" selected>Kelas 4 (ujian4.js)</option>
-              <option value="5">Kelas 5 (ujian5.js)</option>
-              <option value="6">Kelas 6 (ujian6.js)</option>
-            </select>
-
-            <label class="label-form">3. Mata Pelajaran:</label>
-            <select id="genMapel" class="input-form" onchange="cekMapelBaruInput(); perbaruiOpsiBabGenerator();"></select>
-            <input type="text" id="genMapelBaruInput" class="input-form" style="display:none; border-color:#f59e0b; background:#fffbeb;" placeholder="Ketik Nama Mata Pelajaran Baru (Contoh: PJOK, Informatika)..." oninput="perbaruiOpsiBabGenerator()" />
-
-            <label class="label-form">4. Jenis Ujian:</label>
-            <select id="genKategori" class="input-form" onchange="togglePilihanBabGenerator()">
-              <option value="BAB">Ujian Per Bab (5 Menit / Soal)</option>
-              <option value="UTS Semester 1">UTS Semester 1 (90 Menit Total)</option>
-              <option value="UAS Semester 1">UAS Semester 1 (90 Menit Total)</option>
-              <option value="UTS Semester 2">UTS Semester 2 (90 Menit Total)</option>
-              <option value="UAS Semester 2">UAS Semester 2 (90 Menit Total)</option>
-            </select>
-
-            <div id="wadahPilihBabGen">
-              <label class="label-form">4b. Pilih Bab dari <code>ujianX.js</code> atau Buat Judul Bab Baru:</label>
-              <select id="genDaftarBab" class="input-form" onchange="cekBabBaruInput()"></select>
-              <input type="text" id="genBabBaruInput" class="input-form" style="display:none; border-color:#10b981; background:#ecfdf5;" placeholder="Ketik Nama Bab Baru..." />
-            </div>
-          </div>
-
-          <div id="blokTargetTKA" style="display:none;">
-            <label class="label-form">2. Mata Pelajaran TKA:</label>
-            <select id="genMapelTKA" class="input-form">
-              <option value="bindo|Bahasa Indonesia">Bahasa Indonesia (Literasi)</option>
-              <option value="mtk|Matematika">Matematika (Numerasi)</option>
-            </select>
-
-            <label class="label-form">3. Pilih Sesi TKA:</label>
-            <select id="genSesiTKA" class="input-form">
-              <option value="Sesi 1">Sesi 1</option>
-              <option value="Sesi 2">Sesi 2</option>
-              <option value="Sesi 3">Sesi 3</option>
-            </select>
-          </div>
-
-          <label class="label-form">5. Topik / Pokok Materi:</label>
-          <input type="text" id="genTopik" class="input-form" placeholder="Contoh: Rukun Iman, Basa Enja'-Iya, Seni Rupa, Pecahan..." />
-
-          <label class="label-form">6. Mode Gambar Soal &amp; Jawaban:</label>
-          <select id="genModeGambar" class="input-form">
-            <option value="Teks Biasa dengan Emoji">Teks Biasa dengan Emoji</option>
-            <option value="Soal Bergambar SVG (properti 'svg') dengan Pilihan Teks">Soal Bergambar SVG + Jawaban Teks</option>
-            <option value="Soal Teks dengan Pilihan Jawaban Bergambar SVG (properti 'pSvg')">Soal Teks + Jawaban Bergambar SVG</option>
-            <option value="Campuran Soal & Jawaban Bergambar SVG (properti 'svg' & 'pSvg')">Campuran Soal &amp; Jawaban SVG</option>
-          </select>
-
-          <label class="label-form">7. Jumlah Soal yang Dibuat:</label>
-          <select id="genJumlah" class="input-form">
-            <option value="5">5 Soal</option>
-            <option value="10" selected>10 Soal</option>
-            <option value="15">15 Soal</option>
-            <option value="30">30 Soal</option>
-          </select>
-
-          <button class="btn-aksi" style="width:100%; margin-top:12px;" onclick="buatKodeSoalGitHub()">⚡ Generate Prompt AI &amp; Kode GitHub</button>
-
-          <label class="label-form" style="margin-top:14px; color:#0284c7;">📋 Hasil 1: Prompt AI (Salin &amp; Tempel ke ChatGPT/Gemini):</label>
-          <textarea id="hasilPromptAI" class="textarea-kode" style="min-height:140px; color:#fde047;" readonly placeholder="Klik tombol Generate di atas..."></textarea>
-          <button class="btn-aksi" style="width:100%;" onclick="salinTeks('hasilPromptAI')">📋 Salin Prompt AI</button>
-
-          <label class="label-form" style="margin-top:14px; color:#059669;">💻 Hasil 2: Template Kode GitHub (Tempel di Baris Paling Bawah File):</label>
-          <textarea id="hasilKodeSoal" class="textarea-kode" style="min-height:170px;" readonly placeholder="Kerangka kode lengkap dengan penutup akan muncul di sini..."></textarea>
-          <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeSoal')">📋 Salin Kode GitHub</button>
-        </div>`;
-      ubahModeTargetGenerator();
-      perbaruiOpsiMapelGenerator();
-      togglePilihanBabGenerator();
-    }
-
             function ubahModeTargetGenerator() {
       const target = document.getElementById("genTargetMode").value;
       document.getElementById("blokTargetUjian").style.display = (target === "UJIAN") ? "block" : "none";
@@ -1430,37 +1312,42 @@
       muatRekapDariCloud();
     }
 
-            async function muatRekapDariCloud() {
+            function muatRekapDariCloud() {
       const infoBox = document.getElementById("infoRingkasanFilter");
-      const dbBase = (window.FIREBASE_DB_URL || "https://firebasedatabase.app").replace(/\/$/, "");
+      const db = getFirebaseDB();
+      if (!db) {
+        try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
+        perbaruiOpsiKodeUnikRekap();
+        renderTabelNilai();
+        return;
+      }
       if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari Firebase Cloud...";
 
-      try {
-        const res = await fetch(`${dbBase}/rekap_nilai.json?_t=${Date.now()}`);
-        const objData = await res.json();
-        if (objData && objData.error) {
-          alert("⚠️ Firebase menolak akses (" + objData.error + "). Pastikan tab Rules di Firebase sudah true dan klik Publish!");
-          return;
-        }
-        const hasil = [];
-        if (objData && typeof objData === "object") {
-          Object.keys(objData).forEach(fbKey => {
-            const item = objData[fbKey];
-            if (item && item.nama) {
-              item._fbKey = fbKey;
-              hasil.push(item);
-            }
-          });
-        }
-        cacheRekapCloud = hasil;
-        try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
-      } catch (err) {
-        try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
-      }
-
-      perbaruiOpsiKodeUnikRekap();
-      perbaruiOpsiBabRekap();
-      renderTabelNilai();
+      db.ref("rekap_nilai").once("value")
+        .then(snapshot => {
+          const objData = snapshot.val();
+          const hasil = [];
+          if (objData && typeof objData === "object") {
+            Object.keys(objData).forEach(fbKey => {
+              const item = objData[fbKey];
+              if (item && item.nama) {
+                item._fbKey = fbKey;
+                hasil.push(item);
+              }
+            });
+          }
+          cacheRekapCloud = hasil;
+          try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
+          perbaruiOpsiKodeUnikRekap();
+          perbaruiOpsiBabRekap();
+          renderTabelNilai();
+        })
+        .catch(err => {
+          alert("⚠️ Gagal membaca Firebase: " + err.message);
+          try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
+          perbaruiOpsiKodeUnikRekap();
+          renderTabelNilai();
+        });
     }
 
     function perbaruiOpsiMapelRekap() {
@@ -1487,8 +1374,8 @@
       if (!selectBab) return;
       const fKelasVal = document.getElementById("filterKelas").value;
       const mapelParts = document.getElementById("filterMapel").value.split("|");
-      const kodeMapel = mapelParts[0];
-      const namaMapel = mapelParts[1];
+      const kodeMapel = mapelParts[0] || "ALL";
+      const namaMapel = mapelParts[1] || "";
 
       const daftarOpsiBab = [];
       if (fKelasVal !== "ALL" && kodeMapel !== "ALL") {
@@ -1649,10 +1536,12 @@
       if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
       if (!confirm(`Yakin ingin menghapus ${tersaring.length} data nilai yang tampil pada filter ini dari Firebase Cloud & semua perangkat?`)) return;
 
-      const dbBase = (window.FIREBASE_DB_URL || "https://firebasedatabase.app").replace(/\/$/, "");
-      for (const item of tersaring) {
-        if (item._fbKey) {
-          try { await fetch(`${dbBase}/rekap_nilai/${item._fbKey}.json`, { method: "DELETE" }); } catch (e) {}
+      const db = getFirebaseDB();
+      if (db) {
+        for (const item of tersaring) {
+          if (item._fbKey) {
+            try { await db.ref(`rekap_nilai/${item._fbKey}`).remove(); } catch (e) {}
+          }
         }
       }
 
