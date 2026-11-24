@@ -5,7 +5,7 @@ window.simpanRekapNilai = function(record) {
     localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
   } catch (e) {}
 
-  const kodeRekap = [
+  const bagian = [
     "SEDDUR",
     record.id,
     record.tanggal,
@@ -16,7 +16,8 @@ window.simpanRekapNilai = function(record) {
     String(record.kategori).replace(/#/g, ""),
     record.benar,
     record.nilai
-  ].join("#");
+  ];
+  const kodeRekap = bagian.join("#");
 
   const pesanWA =
     `📋 *HASIL UJIAN SDN SEDDUR 1*\n` +
@@ -56,7 +57,7 @@ window.muatRekapDariCloud = function() {
     kotak.className = "no-print";
     kotak.style.cssText = "background:#f0f9ff; border:2px dashed #0284c7; border-radius:12px; padding:10px; margin-top:12px; text-align:left;";
     kotak.innerHTML = `
-      <div style="font-size:0.84rem; font-weight:700; color:#0369a1; margin-bottom:4px;">📥 Impor Nilai dari WhatsApp Siswa (Bisa Banyak Sekaligus):</div>
+      <div style="font-size:0.84rem; font-weight:700; color:#0369a1; margin-bottom:4px;">📥 Impor Nilai dari WhatsApp Siswa:</div>
       <textarea id="inputKodeWA" class="input-form" style="min-height:70px; font-size:0.8rem; margin:4px 0;" placeholder="Tempel pesan/kode SEDDUR#... dari WhatsApp siswa di sini..."></textarea>
       <button type="button" class="btn-aksi btn-sukses" style="width:100%; margin-top:4px; padding:9px;" onclick="imporDariTeksWA()">➕ Masukkan ke Tabel Rekap</button>
     `;
@@ -82,20 +83,21 @@ window.imporDariTeksWA = function() {
   baris.forEach(b => {
     const idx = b.indexOf("SEDDUR#");
     if (idx !== -1) {
-      const bagian = b.slice(idx).trim().split("#");
-      if (bagian.length >= 10) {
-        const idRec = String(bagian);
+      const p = b.slice(idx).trim().split("#");
+      if (p.length >= 10) {
+        p.shift();
+        const idRec = String(p.shift());
         if (!idSudahAda.has(idRec)) {
           semua.push({
             id: idRec,
-            tanggal: bagian,
-            nama: bagian,
-            kodeUnik: bagian,
-            kelas: String(bagian),
-            mapel: bagian,
-            kategori: bagian,
-            benar: bagian,
-            nilai: Number(bagian) || 0
+            tanggal: p.shift(),
+            nama: p.shift(),
+            kodeUnik: p.shift(),
+            kelas: String(p.shift()),
+            mapel: p.shift(),
+            kategori: p.shift(),
+            benar: p.shift(),
+            nilai: Number(p.shift()) || 0
           });
           idSudahAda.add(idRec);
           jumlahMasuk++;
@@ -113,45 +115,10 @@ window.imporDariTeksWA = function() {
   alert(`✅ Berhasil memasukkan ${jumlahMasuk} nilai baru ke tabel rekap!`);
 };
 
-window.getDataTersaring = function() {
-  let semua = (typeof cacheRekapCloud !== "undefined" && cacheRekapCloud.length) ? cacheRekapCloud : [];
-  if (!semua.length) {
-    try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-  }
-  const fKelas = String(document.getElementById("filterKelas").value);
-  const mapelSplit = document.getElementById("filterMapel").value.split("|");
-  const fMapelKode = mapelSplit.shift() || "ALL";
-  const fMapelNama = mapelSplit.pop() || "";
-  const fTipe = document.getElementById("filterTipeUjian").value;
-  const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "__ALL_BAB__";
-  const fUnik = document.getElementById("filterKodeUnik").value;
-
-  return semua.filter(item => {
-    const cocokKelas = (fKelas === "ALL") || (String(item.kelas) === fKelas);
-    const itemMapelLow = (item.mapel || "").trim().toLowerCase();
-    const filterMapelLow = fMapelNama.trim().toLowerCase();
-    const cocokMapel = (fMapelKode === "ALL") || (itemMapelLow === filterMapelLow) || itemMapelLow.includes(filterMapelLow);
-    const unikItem = (item.kodeUnik || "-").toUpperCase();
-    const cocokUnik = (fUnik === "ALL") || (unikItem === fUnik);
-
-    const katLow = (item.kategori || "").trim().toLowerCase();
-    const isUTS_UAS = ["uts semester 1", "uas semester 1", "uts semester 2", "uas semester 2"].includes(katLow);
-
-    let cocokUjian = false;
-    if (fTipe === "ALL") cocokUjian = true;
-    else if (fTipe === "UAS_ALL") cocokUjian = katLow.includes("uas");
-    else if (fTipe === "UTS_ALL") cocokUjian = katLow.includes("uts");
-    else if (fTipe === "BAB") cocokUjian = (fBab === "__ALL_BAB__") ? !isUTS_UAS : (katLow === fBab.trim().toLowerCase());
-    else cocokUjian = katLow === fTipe.trim().toLowerCase();
-
-    return cocokKelas && cocokMapel && cocokUjian && cocokUnik;
-  });
-};
-
 window.hapusDataHasilFilter = function() {
   const tersaring = getDataTersaring();
   if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
-  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari perangkat?`)) return;
+  if (!confirm(`Hapus ${tersaring.length} data nilai ini?`)) return;
 
   let semua = [];
   try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
