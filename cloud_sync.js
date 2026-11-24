@@ -1,36 +1,11 @@
-const GAS_URL = "https://google.com";
+const SUPABASE_URL = "https://supabase.co";
+const SUPABASE_KEY = "sb_publishable_Ch9_hptl9bI7wU9_0NhJUg_JAIBIYYG";
 
-function panggilGAS_JSONP(paramsObj) {
-  return new Promise((resolve, reject) => {
-    const cbName = "cb_seddur_" + Date.now() + "_" + Math.floor(Math.random() * 10000);
-    const params = new URLSearchParams(paramsObj);
-    params.set("callback", cbName);
-
-    const script = document.createElement("script");
-    const timer = setTimeout(() => {
-      delete window[cbName];
-      if (script.parentNode) script.parentNode.removeChild(script);
-      reject(new Error("Waktu tunggu habis (Timeout)"));
-    }, 15000);
-
-    window[cbName] = function(data) {
-      clearTimeout(timer);
-      delete window[cbName];
-      if (script.parentNode) script.parentNode.removeChild(script);
-      resolve(data);
-    };
-
-    script.onerror = function() {
-      clearTimeout(timer);
-      delete window[cbName];
-      if (script.parentNode) script.parentNode.removeChild(script);
-      reject(new Error("Gagal memuat jalur Google Script"));
-    };
-
-    script.src = `${GAS_URL}?${params.toString()}`;
-    document.body.appendChild(script);
-  });
-}
+const SB_HEADERS = {
+  "apikey": SUPABASE_KEY,
+  "Authorization": "Bearer " + SUPABASE_KEY,
+  "Content-Type": "application/json"
+};
 
 window.simpanRekapNilai = function(record) {
   try {
@@ -39,37 +14,64 @@ window.simpanRekapNilai = function(record) {
     localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
   } catch (e) {}
 
-  panggilGAS_JSONP({
-    aksi: "simpan",
+  const payload = {
     id: String(record.id),
     tanggal: String(record.tanggal),
     nama: String(record.nama),
-    kodeUnik: String(record.kodeUnik || "-"),
+    kode_unik: String(record.kodeUnik || "-"),
     kelas: String(record.kelas),
     mapel: String(record.mapel),
     kategori: String(record.kategori),
     benar: String(record.benar),
-    nilai: String(record.nilai)
+    nilai: Number(record.nilai) || 0
+  };
+
+  fetch(`${SUPABASE_URL}/rest/v1/rekap_nilai`, {
+    method: "POST",
+    headers: { ...SB_HEADERS, "Prefer": "return=minimal" },
+    body: JSON.stringify(payload)
   })
-  .then(() => {
+  .then(res => {
     const el = document.getElementById("statusSyncUjian");
-    if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; sinkron ke Google Sheets!</span>`;
+    if (res.ok) {
+      if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; sinkron ke Supabase Cloud!</span>`;
+    } else {
+      res.text().then(txt => {
+        if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan Cloud (${res.status}): ${txt}</span>`;
+      });
+    }
   })
-  .catch(() => {
+  .catch(err => {
     const el = document.getElementById("statusSyncUjian");
-    if (el) el.innerHTML = `<span style="color:#d97706; font-weight:700;">⚠️ Tersimpan di perangkat (cek jaringan untuk sinkron Cloud).</span>`;
+    if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Koneksi Cloud gagal: ${err.message}</span>`;
   });
 };
 
 window.muatRekapDariCloud = async function() {
   const infoBox = document.getElementById("infoRingkasanFilter");
-  if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai dari Google Sheets...";
+  if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari Supabase Cloud...";
 
   try {
-    const data = await panggilGAS_JSONP({ aksi: "baca", _t: String(Date.now()) });
-    if (Array.isArray(data)) {
-      cacheRekapCloud = data;
-      try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(data)); } catch (e) {}
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/rekap_nilai?select=*&order=id.desc`, {
+      method: "GET",
+      headers: SB_HEADERS
+    });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const rows = await res.json();
+    if (Array.isArray(rows)) {
+      const hasil = rows.map(r => ({
+        id: r.id,
+        tanggal: r.tanggal,
+        nama: r.nama,
+        kodeUnik: r.kode_unik || "-",
+        kelas: String(r.kelas),
+        mapel: r.mapel,
+        kategori: r.kategori,
+        benar: r.benar,
+        nilai: Number(r.nilai) || 0
+      }));
+      cacheRekapCloud = hasil;
+      try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
     }
   } catch (err) {
     if (infoBox) infoBox.textContent = "⚠️ Gagal tarik Cloud (" + err.message + "), memuat data lokal.";
@@ -119,10 +121,16 @@ window.getDataTersaring = function() {
 window.hapusDataHasilFilter = async function() {
   const tersaring = getDataTersaring();
   if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
-  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari Google Sheets & semua perangkat?`)) return;
+  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari Supabase Cloud & semua perangkat?`)) return;
 
-  const ids = tersaring.map(item => String(item.id)).join(",");
-  try { await panggilGAS_JSONP({ aksi: "hapus", ids: ids }); } catch (e) {}
+  for (const item of tersaring) {
+    try {
+      await fetch(`${SUPABASE_URL}/rest/v1/rekap_nilai?id=eq.${encodeURIComponent(String(item.id))}`, {
+        method: "DELETE",
+        headers: SB_HEADERS
+      });
+    } catch (e) {}
+  }
 
   let semua = [];
   try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
@@ -133,5 +141,5 @@ window.hapusDataHasilFilter = async function() {
   if (typeof mainkanEfek === "function") mainkanEfek('salah');
   if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
   if (typeof renderTabelNilai === "function") renderTabelNilai();
-  alert("✅ Data berhasil dihapus dari Google Sheets & semua perangkat!");
+  alert("✅ Data berhasil dihapus dari Supabase Cloud & semua perangkat!");
 };
