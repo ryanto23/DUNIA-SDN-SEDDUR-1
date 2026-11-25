@@ -1,4 +1,11 @@
-const GAS_EXEC_URL = "https://script.google.com/macros/s/AKfycbyIhgT65qAwf-ULZytlLyRqSj4xWy0LBXmT-3oHqEm2vO2cjA_SVd_MbD0ZGVo56hjlJQ/exec";
+const SB_ENDPOINT = "https://supabase.co";
+const SB_ANON_JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
+
+const SB_REQ_HEADERS = {
+  "apikey": SB_ANON_JWT,
+  "Authorization": "Bearer " + SB_ANON_JWT,
+  "Content-Type": "application/json"
+};
 
 window.simpanRekapNilai = async function(record) {
   try {
@@ -7,86 +14,91 @@ window.simpanRekapNilai = async function(record) {
     localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
   } catch (e) {}
 
-  const formBody = new URLSearchParams({
-    aksi: "simpan",
+  const dataKirim = {
     id: String(record.id),
     tanggal: String(record.tanggal),
     nama: String(record.nama),
-    kodeUnik: String(record.kodeUnik || "-"),
+    kode_unik: String(record.kodeUnik || "-"),
     kelas: String(record.kelas),
     mapel: String(record.mapel),
     kategori: String(record.kategori),
     benar: String(record.benar),
-    nilai: String(record.nilai)
-  });
+    nilai: Number(record.nilai) || 0
+  };
 
   try {
-    await fetch(GAS_EXEC_URL, {
+    const res = await fetch(SB_ENDPOINT, {
       method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-      },
-      body: formBody.toString()
+      keepalive: true,
+      headers: { ...SB_REQ_HEADERS, "Prefer": "return=minimal" },
+      body: JSON.stringify(dataKirim)
     });
-    const el = document.getElementById("statusSyncUjian");
-    if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai otomatis terkirim ke Google Sheets Admin!</span>`;
+
+    setTimeout(async () => {
+      const el = document.getElementById("statusSyncUjian");
+      if (res.ok) {
+        if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; masuk ke Rekap Admin!</span>`;
+      } else {
+        const errText = await res.text().catch(() => "");
+        if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Server menolak (${res.status}): ${errText}</span>`;
+      }
+    }, 300);
   } catch (err) {
-    const el = document.getElementById("statusSyncUjian");
-    if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal kirim: ${err.message}</span>`;
+    setTimeout(() => {
+      const el = document.getElementById("statusSyncUjian");
+      if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal jaringan: ${err.message}</span>`;
+    }, 300);
   }
 };
 
-window.muatRekapDariCloud = function() {
+window.muatRekapDariCloud = async function() {
   const infoBox = document.getElementById("infoRingkasanFilter");
-  if (infoBox) infoBox.textContent = "⏳ Sedang menarik semua nilai dari Google Sheets...";
+  if (infoBox) infoBox.textContent = "⏳ Menarik seluruh nilai siswa dari Cloud...";
 
-  const cbName = "cb_seddur_" + Date.now();
-  const script = document.createElement("script");
-
-  window[cbName] = function(data) {
-    delete window[cbName];
-    if (script.parentNode) script.parentNode.removeChild(script);
-    if (Array.isArray(data)) {
-      cacheRekapCloud = data;
-      try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(data)); } catch (e) {}
+  try {
+    const res = await fetch(`${SB_ENDPOINT}?select=*&order=id.desc`, {
+      method: "GET",
+      headers: SB_REQ_HEADERS
+    });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const rows = await res.json();
+    if (Array.isArray(rows)) {
+      cacheRekapCloud = rows.map(r => ({
+        id: r.id,
+        tanggal: r.tanggal,
+        nama: r.nama,
+        kodeUnik: r.kode_unik || "-",
+        kelas: String(r.kelas),
+        mapel: r.mapel,
+        kategori: r.kategori,
+        benar: r.benar,
+        nilai: Number(r.nilai) || 0
+      }));
+      try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(cacheRekapCloud)); } catch (e) {}
     }
-    if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
-    if (typeof perbaruiOpsiBabRekap === "function") perbaruiOpsiBabRekap();
-    if (typeof renderTabelNilai === "function") renderTabelNilai();
-  };
-
-  script.onerror = function() {
-    delete window[cbName];
-    if (script.parentNode) script.parentNode.removeChild(script);
+  } catch (err) {
+    if (infoBox) infoBox.textContent = "⚠️ Gagal tarik Cloud (" + err.message + "), tampil data perangkat ini.";
     try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
-    if (typeof renderTabelNilai === "function") renderTabelNilai();
-  };
+  }
 
-  script.src = `${GAS_EXEC_URL}?callback=${cbName}&_t=${Date.now()}`;
-  document.body.appendChild(script);
+  if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
+  if (typeof perbaruiOpsiBabRekap === "function") perbaruiOpsiBabRekap();
+  if (typeof renderTabelNilai === "function") renderTabelNilai();
 };
 
 window.hapusDataHasilFilter = async function() {
   const tersaring = getDataTersaring();
   if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
-  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari Google Sheets & semua perangkat?`)) return;
+  if (!confirm(`Hapus ${tersaring.length} data nilai ini dari Cloud & semua perangkat?`)) return;
 
-  const formBody = new URLSearchParams({
-    aksi: "hapus",
-    ids: tersaring.map(item => String(item.id)).join(",")
-  });
-
-  try {
-    await fetch(GAS_EXEC_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-      },
-      body: formBody.toString()
-    });
-  } catch (e) {}
+  for (const item of tersaring) {
+    try {
+      await fetch(`${SB_ENDPOINT}?id=eq.${encodeURIComponent(String(item.id))}`, {
+        method: "DELETE",
+        headers: SB_REQ_HEADERS
+      });
+    } catch (e) {}
+  }
 
   let semua = [];
   try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
@@ -98,5 +110,5 @@ window.hapusDataHasilFilter = async function() {
   if (typeof mainkanEfek === "function") mainkanEfek('salah');
   if (typeof perbaruiOpsiKodeUnikRekap === "function") perbaruiOpsiKodeUnikRekap();
   if (typeof renderTabelNilai === "function") renderTabelNilai();
-  alert("✅ Data berhasil dihapus dari Google Sheets & semua perangkat!");
+  alert("✅ Data berhasil dihapus dari Cloud & semua perangkat!");
 };
