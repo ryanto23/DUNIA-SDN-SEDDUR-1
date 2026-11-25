@@ -1140,7 +1140,10 @@
             const SB_URL = "https://supabase.co";
     const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
 
-    function simpanRekapNilai(record) {
+         function simpanRekapNilai(record) {
+      const SB_URL = "https://supabase.co";
+      const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
+
       try {
         const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
         list.push(record);
@@ -1180,6 +1183,7 @@
         if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Koneksi gagal: ${err.message}</span>`;
       });
     }
+
 
     function tampilLoginAdmin() {
       hentikanTimer();
@@ -1504,7 +1508,10 @@
       muatRekapDariCloud();
     }
 
-        async function muatRekapDariCloud() {
+          async function muatRekapDariCloud() {
+      const SB_URL = "https://supabase.co";
+      const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
+
       const infoBox = document.getElementById("infoRingkasanFilter");
       if (infoBox) infoBox.textContent = "⏳ Sedang menarik rekap nilai semua siswa...";
 
@@ -1535,6 +1542,7 @@
       perbaruiOpsiBabRekap();
       renderTabelNilai();
     }
+
 
 
             function perbaruiOpsiMapelRekap() {
@@ -1718,7 +1726,10 @@
       URL.revokeObjectURL(url);
     }
 
-         async function hapusDataHasilFilter() {
+          async function hapusDataHasilFilter() {
+      const SB_URL = "https://supabase.co";
+      const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
+
       const tersaring = getDataTersaring();
       if (tersaring.length === 0) {
         alert("Tidak ada data pada filter ini untuk dihapus.");
