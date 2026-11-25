@@ -1137,30 +1137,47 @@
       document.getElementById("blokTargetTKA").style.display = (target === "TKA") ? "block" : "none";
     }
 
-            function simpanRekapNilai(record) {
+            const SB_URL = "https://supabase.co";
+    const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
+
+    function simpanRekapNilai(record) {
       try {
         const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
         list.push(record);
         localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
       } catch (e) {}
 
-      const dbBase = "https://firebasedatabase.app";
-      fetch(`${dbBase}/rekap_nilai.json`, {
+      fetch(`${SB_URL}?apikey=${SB_KEY}`, {
         method: "POST",
-        body: JSON.stringify(record)
+        headers: {
+          "Content-Type": "application/json",
+          "Prefer": "return=minimal"
+        },
+        body: JSON.stringify({
+          id: String(record.id),
+          tanggal: String(record.tanggal),
+          nama: String(record.nama),
+          kode_unik: String(record.kodeUnik || "-"),
+          kelas: String(record.kelas),
+          mapel: String(record.mapel),
+          kategori: String(record.kategori),
+          benar: String(record.benar),
+          nilai: Number(record.nilai) || 0
+        })
       })
-      .then(res => res.json())
-      .then(data => {
+      .then(res => {
         const infoEl = document.getElementById("statusSyncUjian");
-        if (data && data.name) {
-          if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; tersinkron ke Cloud Firebase!</span>`;
+        if (res.ok) {
+          if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; masuk ke Rekap Admin!</span>`;
         } else {
-          if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan Cloud: ${JSON.stringify(data)}</span>`;
+          res.text().then(txt => {
+            if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan (${res.status}): ${txt}</span>`;
+          });
         }
       })
       .catch(err => {
         const infoEl = document.getElementById("statusSyncUjian");
-        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Koneksi Cloud gagal: ${err.message}</span>`;
+        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Koneksi gagal: ${err.message}</span>`;
       });
     }
 
@@ -1487,20 +1504,30 @@
       muatRekapDariCloud();
     }
 
-     async function muatRekapDariCloud() {
+        async function muatRekapDariCloud() {
       const infoBox = document.getElementById("infoRingkasanFilter");
-      const gasUrl = "https://script.google.com/macros/s/AKfycbyUZntsjONJxTjTzi_0I95zFcYGEJe_rR3GQFv83h0ZnAA45KUue3hSvGXdbBpl-ixR/exec";
-      if (infoBox) infoBox.textContent = "⏳ Sedang menarik nilai terbaru dari Google Sheets Cloud...";
+      if (infoBox) infoBox.textContent = "⏳ Sedang menarik rekap nilai semua siswa...";
 
       try {
-        const res = await fetch(`${gasUrl}?aksi=baca&_t=${Date.now()}`);
-        const hasil = await res.json();
-        if (Array.isArray(hasil)) {
-          cacheRekapCloud = hasil;
-          try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(hasil)); } catch (e) {}
+        const res = await fetch(`${SB_URL}?select=*&order=id.desc&apikey=${SB_KEY}`);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const rows = await res.json();
+        if (Array.isArray(rows)) {
+          cacheRekapCloud = rows.map(r => ({
+            id: r.id,
+            tanggal: r.tanggal,
+            nama: r.nama,
+            kodeUnik: r.kode_unik || "-",
+            kelas: String(r.kelas),
+            mapel: r.mapel,
+            kategori: r.kategori,
+            benar: r.benar,
+            nilai: Number(r.nilai) || 0
+          }));
+          localStorage.setItem("seddur_rekap_nilai", JSON.stringify(cacheRekapCloud));
         }
       } catch (err) {
-        if (infoBox) infoBox.textContent = "⚠️ Gagal menarik Cloud (" + err.message + "), menampilkan data lokal.";
+        if (infoBox) infoBox.textContent = "⚠️ Gagal tarik Cloud (" + err.message + "), tampil data perangkat ini.";
         try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
       }
 
@@ -1508,6 +1535,7 @@
       perbaruiOpsiBabRekap();
       renderTabelNilai();
     }
+
 
             function perbaruiOpsiMapelRekap() {
       const fKelasVal = document.getElementById("filterKelas").value;
@@ -1690,32 +1718,39 @@
       URL.revokeObjectURL(url);
     }
 
-       async function hapusDataHasilFilter() {
+         async function hapusDataHasilFilter() {
       const tersaring = getDataTersaring();
-      if (tersaring.length === 0) { alert("Tidak ada data pada filter ini untuk dihapus."); return; }
-      if (!confirm(`Yakin ingin menghapus ${tersaring.length} data nilai yang tampil pada filter ini dari Google Sheets Cloud & semua perangkat?`)) return;
+      if (tersaring.length === 0) {
+        alert("Tidak ada data pada filter ini untuk dihapus.");
+        return;
+      }
+      if (!confirm(`Hapus ${tersaring.length} data nilai ini dari Cloud & semua perangkat?`)) return;
 
-      const gasUrl = "https://script.google.com/macros/s/AKfycbyUZntsjONJxTjTzi_0I95zFcYGEJe_rR3GQFv83h0ZnAA45KUue3hSvGXdbBpl-ixR/exec";
-      const daftarId = tersaring.map(item => String(item.id)).join(",");
-      try {
-        await fetch(`${gasUrl}?aksi=hapus&ids=${encodeURIComponent(daftarId)}`);
-      } catch (e) {}
+      for (const item of tersaring) {
+        try {
+          await fetch(`${SB_URL}?id=eq.${encodeURIComponent(String(item.id))}&apikey=${SB_KEY}`, {
+            method: "DELETE"
+          });
+        } catch (e) {}
+      }
 
       let semua = [];
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-      const idDihapus = new Set(tersaring.map(item => String(item.id)));
-      try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(semua.filter(item => !idDihapus.has(String(item.id))))); } catch (e) {}
-      cacheRekapCloud = cacheRekapCloud.filter(item => !idDihapus.has(String(item.id)));
+      const setHapus = new Set(tersaring.map(item => String(item.id)));
+      const sisa = semua.filter(item => !setHapus.has(String(item.id)));
+      try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(sisa)); } catch (e) {}
+      cacheRekapCloud = sisa;
 
       mainkanEfek('salah');
       perbaruiOpsiKodeUnikRekap();
       renderTabelNilai();
-      alert("✅ Data hasil filter berhasil dihapus dari Google Sheets & semua perangkat!");
+      alert("✅ Data berhasil dihapus dari Cloud & semua perangkat!");
     }
+
 
                tampilBeranda();
   </script>
-  <script src="cloud_sync.js?v=51"></script>
+
 </body>
 </html>
 
