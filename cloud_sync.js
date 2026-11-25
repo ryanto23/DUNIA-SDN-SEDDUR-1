@@ -1,11 +1,5 @@
-const SB_ENDPOINT = "https://supabase.co";
-const SB_ANON_JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
-
-const SB_REQ_HEADERS = {
-  "apikey": SB_ANON_JWT,
-  "Authorization": "Bearer " + SB_ANON_JWT,
-  "Content-Type": "application/json"
-};
+const SB_BASE = "https://supabase.co";
+const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
 
 window.simpanRekapNilai = async function(record) {
   try {
@@ -14,7 +8,7 @@ window.simpanRekapNilai = async function(record) {
     localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
   } catch (e) {}
 
-  const dataKirim = {
+  const payload = {
     id: String(record.id),
     tanggal: String(record.tanggal),
     nama: String(record.nama),
@@ -27,27 +21,25 @@ window.simpanRekapNilai = async function(record) {
   };
 
   try {
-    const res = await fetch(SB_ENDPOINT, {
+    const res = await fetch(`${SB_BASE}?apikey=${SB_KEY}`, {
       method: "POST",
-      keepalive: true,
-      headers: { ...SB_REQ_HEADERS, "Prefer": "return=minimal" },
-      body: JSON.stringify(dataKirim)
+      headers: {
+        "Content-Type": "application/json",
+        "Prefer": "return=minimal"
+      },
+      body: JSON.stringify(payload)
     });
 
-    setTimeout(async () => {
-      const el = document.getElementById("statusSyncUjian");
-      if (res.ok) {
-        if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; masuk ke Rekap Admin!</span>`;
-      } else {
-        const errText = await res.text().catch(() => "");
-        if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Server menolak (${res.status}): ${errText}</span>`;
-      }
-    }, 300);
+    const el = document.getElementById("statusSyncUjian");
+    if (res.ok) {
+      if (el) el.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; masuk ke Rekap Admin!</span>`;
+    } else {
+      const errTxt = await res.text().catch(() => "");
+      if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Server menolak (${res.status}): ${errTxt}</span>`;
+    }
   } catch (err) {
-    setTimeout(() => {
-      const el = document.getElementById("statusSyncUjian");
-      if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal jaringan: ${err.message}</span>`;
-    }, 300);
+    const el = document.getElementById("statusSyncUjian");
+    if (el) el.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal: ${err.message}</span>`;
   }
 };
 
@@ -56,10 +48,7 @@ window.muatRekapDariCloud = async function() {
   if (infoBox) infoBox.textContent = "⏳ Menarik seluruh nilai siswa dari Cloud...";
 
   try {
-    const res = await fetch(`${SB_ENDPOINT}?select=*&order=id.desc`, {
-      method: "GET",
-      headers: SB_REQ_HEADERS
-    });
+    const res = await fetch(`${SB_BASE}?select=*&order=id.desc&apikey=${SB_KEY}`);
     if (!res.ok) throw new Error("HTTP " + res.status);
     const rows = await res.json();
     if (Array.isArray(rows)) {
@@ -93,9 +82,8 @@ window.hapusDataHasilFilter = async function() {
 
   for (const item of tersaring) {
     try {
-      await fetch(`${SB_ENDPOINT}?id=eq.${encodeURIComponent(String(item.id))}`, {
-        method: "DELETE",
-        headers: SB_REQ_HEADERS
+      await fetch(`${SB_BASE}?id=eq.${encodeURIComponent(String(item.id))}&apikey=${SB_KEY}`, {
+        method: "DELETE"
       });
     } catch (e) {}
   }
