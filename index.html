@@ -1,362 +1,126 @@
 <!DOCTYPE html>
 <html lang="id">
-  <script src="https://jsdelivr.net"></script>
-  <head>
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-select: none" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <title>DUNIA SDN SEDDUR 1 - Kurikulum Merdeka 2026/2027</title>
-  <link href="https://googleapis.com" rel="stylesheet">
-
-    <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Fredoka', sans-serif; -webkit-tap-highlight-color: transparent; user-select: none; }
-    html, body { width: 100%; max-width: 100%; overflow-x: hidden; background: linear-gradient(180deg, #bae6fd 0%, #fef08a 55%, #fed7aa 100%); min-height: 100dvh; color: #1e293b; }
-    body.mode-cbt { background: #f1f5f9 !important; }
-    body { padding-bottom: 92px; display: flex; flex-direction: column; align-items: center; }
-    body.sedang-ujian { padding-bottom: 24px; }
-    header { width: 100%; background: linear-gradient(90deg, #0284c7, #0ea5e9); padding: 12px 14px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.12); border-bottom: 4px solid #facc15; position: sticky; top: 0; z-index: 20; color: #fff; }
-    body.mode-cbt header { background: #0f172a; border-bottom: 4px solid #3b82f6; }
-    header h1 { font-size: 1.22rem; letter-spacing: 0.5px; text-shadow: 1px 2px 0 rgba(0,0,0,0.2); }
-    header p { font-size: 0.76rem; opacity: 0.95; margin-top: 2px; }
-
-          .container { width: 100%; max-width: 640px; margin: 12px auto; padding: 0 12px; }
-    .card { width: 100%; background: #ffffff; border-radius: 22px; padding: 16px 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); border: 3px solid #e2e8f0; margin-bottom: 12px; text-align: center; animation: popIn 0.25s ease; }
-    .card-cbt { border-radius: 14px; border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; }
-    @keyframes popIn { 0% { transform: scale(0.95); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
-    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-    @keyframes gerakJudul { 0%, 100% { transform: translateY(0) scale(1); color: #0284c7; } 50% { transform: translateY(-4px) scale(1.03); color: #ea580c; } }
-    .anim-bounce { display: inline-block; animation: bounce 1.8s infinite; }
-    .judul-bergerak { display: inline-block; font-size: 1.24rem; font-weight: 700; animation: gerakJudul 2.4s ease-in-out infinite; margin-top: 4px; }
-
-          .banner-beranda { width: 100%; height: auto; max-height: 75px; object-fit: contain; background: transparent; border-radius: 12px; border: none; margin: 0 auto 10px; display: block; box-shadow: none; }
-    .svg-soal-wrap { margin: 8px auto; display: flex; justify-content: center; align-items: center; max-width: 100%; overflow-x: auto; }
-    .svg-opsi-wrap { display: inline-flex; align-items: center; justify-content: center; max-width: 100%; }
-    .input-nama, .input-form, .textarea-kode { width: 100%; padding: 11px 13px; border-radius: 14px; border: 2px solid #7dd3fc; font-size: 0.96rem; font-weight: 600; color: #0f172a; outline: none; margin: 6px 0; background: #f0f9ff; user-select: text; }
-    .input-nama { text-align: center; font-size: 1.05rem; border-width: 3px; }
-    .input-nama:focus, .input-form:focus, .textarea-kode:focus { border-color: #0284c7; background: #ffffff; }
-    .textarea-kode { font-family: monospace; font-size: 0.82rem; min-height: 150px; background: #0f172a; color: #38bdf8; border-color: #334155; }
-    .label-form { display: block; text-align: left; font-size: 0.84rem; font-weight: 700; color: #334155; margin-top: 8px; }
-
-          .motivasi-card { background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); border: 3px solid #38bdf8; border-radius: 24px; padding: 22px 16px; margin-top: 8px; text-align: center; box-shadow: 0 10px 24px rgba(2, 132, 199, 0.14); }
-    .motivasi-teks { font-size: 1.12rem; font-weight: 700; color: #0f172a; line-height: 1.55; margin: 10px 0; font-style: italic; }
-    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; width: 100%; background: #ffffff; border-top: 3px solid #cbd5e1; box-shadow: 0 -4px 16px rgba(0,0,0,0.1); display: flex; justify-content: space-around; align-items: center; padding: 6px 4px; z-index: 50; }
-    body.sedang-ujian .bottom-nav { display: none !important; }
-    .nav-item { flex: 1; background: transparent; border: none; padding: 6px 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; cursor: pointer; color: #64748b; font-size: 0.72rem; font-weight: 700; border-radius: 12px; transition: all 0.15s; }
-    .nav-item .nav-ikon { font-size: 1.35rem; line-height: 1; }
-    .nav-item.aktif { color: #0284c7; background: #e0f2fe; }
-
-          .kelas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
-    .kelas-btn { border: none; border-radius: 18px; padding: 16px 10px; color: #fff; font-size: 1.12rem; font-weight: 700; cursor: pointer; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-    .kelas-btn:active { transform: translateY(3px); box-shadow: none; }
-    .kelas-sub { font-size: 0.74rem; font-weight: 600; background: rgba(255,255,255,0.25); padding: 2px 8px; border-radius: 8px; }
-    .k1 { background: linear-gradient(135deg, #f43f5e, #fb7185); }
-    .k2 { background: linear-gradient(135deg, #f97316, #fb923c); }
-    .k3 { background: linear-gradient(135deg, #eab308, #facc15); color: #713f12; }
-    .k4 { background: linear-gradient(135deg, #10b981, #34d399); }
-    .k5 { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
-    .k6 { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
-
-          .menu-btn { width: 100%; border: none; border-radius: 18px; padding: 14px 15px; margin-bottom: 10px; color: #fff; font-size: 1.02rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 5px 0 rgba(0,0,0,0.18); touch-action: manipulation; text-align: left; }
-    .menu-btn:active { transform: translateY(3px); box-shadow: none; }
-    .badge-jumlah { background: rgba(255,255,255,0.28); padding: 4px 10px; border-radius: 10px; font-size: 0.76rem; white-space: nowrap; flex-shrink: 0; }
-    .m-pancasila { background: linear-gradient(135deg, #e11d48, #fb7185); }
-    .m-bindo { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
-    .m-mtk { background: linear-gradient(135deg, #059669, #34d399); }
-    .m-ipas { background: linear-gradient(135deg, #0284c7, #38bdf8); }
-    .m-bing { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
-    .m-pai { background: linear-gradient(135deg, #16a34a, #4ade80); }
-    .m-madura { background: linear-gradient(135deg, #dc2626, #f87171); }
-    .m-kesenian { background: linear-gradient(135deg, #db2777, #f472b6); }
-    .bab-btn { background: #ffffff; color: #1e293b; border: 3px solid #7dd3fc; box-shadow: 0 4px 0 #7dd3fc; }
-    .bab-badge { background: #e0f2fe; color: #0369a1; padding: 4px 9px; border-radius: 10px; font-size: 0.76rem; white-space: nowrap; flex-shrink: 0; }
-
-          .top-bar { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
-    .bg-kembali { background: #ffffff; color: #475569; border: 2px solid #cbd5e1; padding: 7px 12px; border-radius: 12px; font-size: 0.85rem; font-weight: 700; cursor: pointer; touch-action: manipulation; }
-    .progress-wrap { background: #e2e8f0; height: 9px; border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
-    .progress-fill { background: linear-gradient(90deg, #38bdf8, #22c55e); height: 100%; width: 0%; transition: width 0.3s ease; }
-    .btn-suara { background: #fef08a; color: #854d0e; border: 2px solid #facc15; padding: 8px 15px; border-radius: 50px; font-size: 0.88rem; font-weight: 700; cursor: pointer; margin: 6px 0 10px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 3px 0 #eab308; }
-    .visual-box { width: 100%; background: #f8fafc; border: 2px dashed #7dd3fc; border-radius: 18px; padding: 14px 10px; margin: 6px 0 12px; font-size: 1.15rem; font-weight: 700; line-height: 1.45; color: #0f172a; text-align: center; }
-    .visual-ikon { font-size: 2.5rem; display: block; margin-bottom: 6px; }
-    .opsi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 8px; width: 100%; }
-    .opsi-btn { width: 100%; background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 12px 8px; font-size: 1rem; font-weight: 700; color: #1e293b; cursor: pointer; box-shadow: 0 4px 0 #cbd5e1; min-height: 56px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.25; }
-    .benar { background: #dcfce7 !important; border-color: #22c55e !important; color: #15803d !important; box-shadow: 0 4px 0 #22c55e !important; }
-    .salah { background: #fee2e2 !important; border-color: #ef4444 !important; color: #b91c1c !important; box-shadow: 0 4px 0 #ef4444 !important; }
-
-          .star-bar { font-size: 0.85rem; font-weight: 700; color: #d97706; background: #fef3c7; padding: 6px 10px; border-radius: 12px; border: 2px solid #fde68a; white-space: nowrap; }
-    .combo-badge { display: inline-block; background: #ffedd5; color: #c2410c; border: 2px solid #fdba74; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; }
-    .info-bahas { background: #eff6ff; border: 2px solid #93c5fd; color: #1e40af; border-radius: 14px; padding: 10px; margin-top: 10px; font-size: 0.88rem; font-weight: 600; text-align: left; }
-    .sertifikat { background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 4px solid #f59e0b; border-radius: 22px; padding: 18px 14px; margin: 10px 0; text-align: center; }
-    .btn-aksi { background: linear-gradient(135deg, #0ea5e9, #0284c7); color: #fff; border: none; padding: 12px 18px; border-radius: 14px; font-size: 0.96rem; font-weight: 700; cursor: pointer; margin-top: 8px; box-shadow: 0 4px 0 #0369a1; }
-    .btn-sukses { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 0 #047857; }
-    .btn-bahaya { background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 4px 0 #b91c1c; }
-
-          .cbt-header-info { background: #0f172a; color: #fff; padding: 10px 14px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.86rem; }
-    .timer-box { background: #dc2626; color: #fff; padding: 5px 12px; border-radius: 8px; font-family: monospace; font-size: 1.05rem; font-weight: 700; letter-spacing: 1px; }
-    .cbt-soal-teks { font-size: 1.05rem; line-height: 1.55; color: #0f172a; margin: 12px 0 16px; padding: 14px; background: #f8fafc; border-left: 4px solid #2563eb; border-radius: 8px; white-space: pre-line; }
-    .cbt-opsi-list { display: flex; flex-direction: column; gap: 10px; }
-    .cbt-opsi-item { width: 100%; background: #ffffff; border: 2px solid #cbd5e1; border-radius: 10px; padding: 12px 14px; text-align: left; font-size: 0.96rem; font-weight: 600; color: #1e293b; cursor: pointer; display: flex; align-items: center; gap: 12px; transition: all 0.15s; flex-wrap: wrap; }
-    .cbt-opsi-item:hover { border-color: #3b82f6; background: #eff6ff; }
-    .cbt-opsi-terpilih { background: #dbeafe !important; border-color: #2563eb !important; color: #1e3a8a !important; }
-    .cbt-huruf { width: 30px; height: 30px; border-radius: 50%; background: #e2e8f0; color: #334155; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
-    .cbt-opsi-terpilih .cbt-huruf { background: #2563eb; color: #fff; }
-
-          .nav-nomor-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-content: center; }
-    .nav-nomor-btn { width: 34px; height: 34px; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; font-weight: 700; font-size: 0.84rem; cursor: pointer; color: #334155; }
-    .nav-nomor-btn.aktif { border: 2px solid #0f172a; transform: scale(1.08); }
-    .nav-nomor-btn.terjawab { background: #2563eb; color: #fff; border-color: #1d4ed8; }
-    .table-wrap { width: 100%; overflow-x: auto; margin-top: 10px; border-radius: 12px; border: 2px solid #cbd5e1; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left; background: #fff; }
-    th, td { padding: 8px 9px; border-bottom: 1px solid #e2e8f0; }
-    th { background: #0284c7; color: #fff; font-weight: 700; }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBT Ujian Online - SDN Seddur 1</title>
+  <script src="https://jsdelivr.net"></script>
+  <style>
+    * { box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    body { margin: 0; background: #f1f5f9; color: #0f172a; }
+    .container { max-width: 720px; margin: 0 auto; padding: 14px; }
+    .header-sekolah {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      color: #ffffff; padding: 16px; border-radius: 16px; text-align: center;
+      margin-bottom: 14px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    }
+    .header-sekolah h1 { margin: 0; font-size: 1.22rem; letter-spacing: 0.4px; }
+    .header-sekolah p { margin: 4px 0 0; font-size: 0.84rem; color: #cbd5e1; }
+    .card {
+      background: #ffffff; border-radius: 16px; padding: 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06); margin-bottom: 14px; border: 1px solid #e2e8f0;
+    }
+    .card-cbt { border-top: 4px solid #2563eb; }
+    .btn-aksi {
+      display: inline-block; background: #2563eb; color: #ffffff; border: none;
+      padding: 12px 16px; border-radius: 12px; font-weight: 700; font-size: 0.94rem;
+      cursor: pointer; text-align: center; transition: 0.15s;
+    }
+    .btn-aksi:active { transform: scale(0.98); }
+    .btn-sukses { background: #16a34a; }
+    .btn-bahaya { background: #dc2626; }
+    .btn-kuning { background: #d97706; }
+    .grid-kelas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px; }
+    .input-form {
+      width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 10px;
+      font-size: 0.94rem; margin: 5px 0 12px; background: #f8fafc;
+    }
+    .label-form { font-weight: 700; font-size: 0.86rem; color: #334155; display: block; }
+    .opsi-btn {
+      display: block; width: 100%; text-align: left; padding: 12px 14px; margin: 8px 0;
+      border: 2px solid #e2e8f0; border-radius: 12px; background: #ffffff;
+      font-size: 0.95rem; cursor: pointer; font-weight: 500; color: #1e293b;
+    }
+    .opsi-btn.terpilih { border-color: #2563eb; background: #eff6ff; font-weight: 700; color: #1d4ed8; }
+    .nav-soal { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; justify-content: center; }
+    .nomor-btn {
+      width: 34px; height: 34px; border-radius: 8px; border: 1.5px solid #cbd5e1;
+      background: #f8fafc; font-weight: 700; font-size: 0.82rem; cursor: pointer;
+    }
+    .nomor-btn.sudah { background: #16a34a; color: #fff; border-color: #15803d; }
+    .nomor-btn.aktif { border: 2.5px solid #2563eb; background: #dbeafe; color: #1e40af; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 10px; }
+    th, td { border: 1px solid #cbd5e1; padding: 7px 6px; text-align: left; }
+    th { background: #1e3a8a; color: #fff; }
     tr:nth-child(even) { background: #f8fafc; }
-    @media (min-width: 600px) { header h1 { font-size: 1.48rem; } .banner-beranda { max-height: 90px; } .kelas-grid { grid-template-columns: 1fr 1fr 1fr; } .opsi-btn { font-size: 1.12rem; min-height: 62px; } }
-    @media print { body { background: #fff !important; padding-bottom: 0; } header, .no-print, .bottom-nav { display: none !important; } .container { max-width: 100%; margin: 0; padding: 0; } .card { border: none; box-shadow: none; } }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #fff; }
+      .card { box-shadow: none; border: none; padding: 0; }
+    }
   </style>
-  <script src="https://gstatic.com"></script>
-  <script src="https://gstatic.com"></script>
 </head>
+<body>
+  <div class="container">
+    <div class="header-sekolah no-print">
+      <h1>🏫 CBT UJIAN ONLINE — SDN SEDDUR 1</h1>
+      <p>Sistem Asesmen Digital &amp; Rekap Nilai Otomatis</p>
+    </div>
+    <div id="app"></div>
+  </div>
 
-  <body>
-  <header>
-    <h1>🏫 DUNIA SDN SEDDUR 1</h1>
-    <p>Kurikulum Merdeka • Tahun Ajaran 2026/2027</p>
-  </header>
-  <div class="container" id="app"></div>
+  <script>
+    const PIN_ADMIN = "1234";
+    const SB_URL = "https://supabase.co";
+    const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
 
-  <nav class="bottom-nav no-print" id="bottomNav">
-    <button class="nav-item aktif" id="nav-home" onclick="tampilBeranda()">
-      <span class="nav-ikon">🏠</span>
-      <span>Home</span>
-    </button>
-    <button class="nav-item" id="nav-kuis" onclick="bukaMenuKelasKuis()">
-      <span class="nav-ikon">🎮</span>
-      <span>Menu Kuis</span>
-    </button>
-    <button class="nav-item" id="nav-ujian" onclick="bukaMenuKelasUjian()">
-      <span class="nav-ikon">📝</span>
-      <span>Ujian (CBT)</span>
-    </button>
-    <button class="nav-item" id="nav-admin" onclick="tampilLoginAdmin()">
-      <span class="nav-ikon">⚙️</span>
-      <span>Admin</span>
-    </button>
-  </nav>
+    const DAFTAR_MAPEL = [
+      "Pendidikan Agama Islam",
+      "Pendidikan Pancasila",
+      "Bahasa Indonesia",
+      "Matematika",
+      "IPAS",
+      "PJOK",
+      "Seni Budaya",
+      "Bahasa Inggris",
+      "Bahasa Madura"
+    ];
 
-      <script>
-    window.DATA_SEDDUR = {};
-    window.DATABASE_BAB = {};
-    window.DATABASE_SOAL = {};
-    window.MAPEL_KUSTOM = {};
-    window.DATA_TKA = {
-      bindo: { "Sesi 1": [], "Sesi 2": [], "Sesi 3": [] },
-      mtk: { "Sesi 1": [], "Sesi 2": [], "Sesi 3": [] }
-    };
-    window.PASSWORD_ADMIN_DEFAULT = "seddur1";
-    window.FIREBASE_DB_URL = "https://firebasedatabase.app";
-    window.KODE_UJIAN_DEFAULT = {
-      "1": "KLS1",
-      "2": "KLS2",
-      "3": "KLS3",
-      "4": "KLS4",
-      "5": "KLS5",
-      "6": "KLS6"
-    };
+    const DAFTAR_KATEGORI = [
+      "UTS Semester 1",
+      "UAS Semester 1",
+      "UTS Semester 2",
+      "UAS Semester 2",
+      "Bab 1",
+      "Bab 2",
+      "Bab 3",
+      "Bab 4",
+      "Bab 5"
+    ];
 
-    window.daftarMapelBaru = function(kode, judul) {
-      if (!kode || !judul) return;
-      window.MAPEL_KUSTOM[kode] = { judul: judul, ikon: "📘", kelasCss: "m-ipas" };
-    };
-
-            window.tambahPaketUjian = function(kelas, mapel, namaPaketAtauBab, daftarSoalBaru) {
-      const kls = String(kelas);
-      const keyMapel = `${kls}-${mapel}`;
-      const isUTS_UAS = ["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(namaPaketAtauBab);
-
-      if (!isUTS_UAS) {
-        if (!window.DATABASE_BAB[keyMapel]) window.DATABASE_BAB[keyMapel] = [];
-        const sudahAda = window.DATABASE_BAB[keyMapel].some(b => b.trim().toLowerCase() === namaPaketAtauBab.trim().toLowerCase());
-        if (!sudahAda) window.DATABASE_BAB[keyMapel].push(namaPaketAtauBab);
-      }
-
-      const keySoal = `${kls}-${mapel}-${namaPaketAtauBab}`;
-      if (!window.DATABASE_SOAL[keySoal]) window.DATABASE_SOAL[keySoal] = [];
-      window.DATABASE_SOAL[keySoal] = window.DATABASE_SOAL[keySoal].concat(daftarSoalBaru);
-    };
-
-    window.tambahSoalTKA = function(mapel, sesi, daftarSoalBaru) {
-      if (!window.DATA_TKA[mapel]) window.DATA_TKA[mapel] = {};
-      if (!window.DATA_TKA[mapel][sesi]) window.DATA_TKA[mapel][sesi] = [];
-      window.DATA_TKA[mapel][sesi] = window.DATA_TKA[mapel][sesi].concat(daftarSoalBaru);
-    };
-
-    (function() {
-      const versiBaru = Date.now();
-      const daftarFile = [
-        "kode_ujian.js", "tka.js",
-        "kelas1.js", "kelas2.js", "kelas3.js", "kelas4.js", "kelas5.js", "kelas6.js",
-        "ujian1.js", "ujian2.js", "ujian3.js", "ujian4.js", "ujian5.js", "ujian6.js"
-      ];
-      daftarFile.forEach(namaFile => {
-        document.write(`<script src="${namaFile}?v=${versiBaru}"><\/script>`);
-      });
-    })();
-  </script>
-
-      <script>
-    let audioCtx = null;
-    let audioCadangan = new Audio();
-    audioCadangan.preload = "auto";
-    function bukaKunciAudio() {
-      if (!audioCtx) {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (AudioContext) audioCtx = new AudioContext();
-      }
-      if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
-    }
-    function mainkanEfek(jenis) {
-      if (modeAplikasi === "ujian") return;
-      bukaKunciAudio();
-      if (!audioCtx) return;
-      const now = audioCtx.currentTime;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.connect(gain); gain.connect(audioCtx.destination);
-      if (jenis === 'benar') {
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(523.25, now);
-        osc.frequency.setValueAtTime(659.25, now + 0.1);
-        osc.frequency.setValueAtTime(783.99, now + 0.2);
-        osc.frequency.setValueAtTime(1046.50, now + 0.3);
-        gain.gain.setValueAtTime(0.28, now);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.55);
-        osc.start(now); osc.stop(now + 0.55);
-      } else if (jenis === 'salah') {
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(220, now);
-        osc.frequency.linearRampToValueAtTime(150, now + 0.3);
-        gain.gain.setValueAtTime(0.2, now);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
-        osc.start(now); osc.stop(now + 0.35);
-      } else if (jenis === 'klik') {
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(620, now);
-        gain.gain.setValueAtTime(0.14, now);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
-        osc.start(now); osc.stop(now + 0.08);
-      }
-    }
-
-            function ucapkan(teks) {
-      if (modeAplikasi === "ujian") return;
-      bukaKunciAudio();
-      if (!teks) return;
-      try { audioCadangan.pause(); } catch (e) {}
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      if ("speechSynthesis" in window) {
-        try {
-          window.speechSynthesis.cancel();
-          const daftarSuara = window.speechSynthesis.getVoices();
-          const suaraIndo = daftarSuara.find(v => v.lang.toLowerCase().includes('id') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Gadis'))) || daftarSuara.find(v => v.lang.toLowerCase().includes('id'));
-          if (!isMobile || suaraIndo) {
-            const u = new SpeechSynthesisUtterance(teks);
-            u.lang = "id-ID";
-            if (suaraIndo) u.voice = suaraIndo;
-            u.rate = 0.97; u.pitch = 1.05; u.volume = 1.0;
-            u.onerror = () => putarSuaraOnline(teks);
-            window.speechSynthesis.speak(u);
-            return;
-          }
-        } catch (err) {}
-      }
-      putarSuaraOnline(teks);
-    }
-    function putarSuaraOnline(teks) {
-      try {
-        const bersih = teks.replace(/[^\w\s.,?!-]/gi, '').slice(0, 180);
-        audioCadangan.src = `https://google.com{encodeURIComponent(bersih)}`;
-        audioCadangan.play().catch(() => {});
-      } catch (e) {}
-    }
-    function acakArray(arr) {
-      const salinan = [...arr];
-      for (let i = salinan.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [salinan[i], salinan[j]] = [salinan[j], salinan[i]];
-      }
-      return salinan;
-    }
-
-            let modeAplikasi = "kuis";
-    let sedangModeTKA = false;
-    let namaSiswa = "Siswa Hebat";
-    let kodeUnikPeserta = "-";
-    let kelasAktif = 1;
-    let mapelAktif = "";
-    let babAktif = 0;
-    let kodeKategoriUjianAktif = "";
-    let kategoriUjianAktif = "";
+    let kelasAktif = "1";
     let mapelUjianAktif = "";
+    let kategoriUjianAktif = "";
+    let namaSiswa = "";
+    let kodeUnikPeserta = "";
     let soalPermainan = [];
-    let jawabanSiswaUjian = [];
     let indeksSoal = 0;
-    let skorTotal = 0;
-    let jumlahBenar = 0;
-    let comboBenar = 0;
-    let sudahMenjawab = false;
+    let jawabanSiswaUjian = [];
     let timerInterval = null;
     let sisaDetik = 0;
     let cacheRekapCloud = [];
 
-    const daftarNamaMapel = {
-      pai: { judul: "PAI & Budi Pekerti", ikon: "🕌", kelasCss: "m-pai" },
-      pancasila: { judul: "Pendidikan Pancasila", ikon: "🦅", kelasCss: "m-pancasila" },
-      bindo: { judul: "Bahasa Indonesia", ikon: "📚", kelasCss: "m-bindo" },
-      mtk: { judul: "Matematika", ikon: "🔢", kelasCss: "m-mtk" },
-      ipas: { judul: "IPAS (Alam & Sosial)", ikon: "🌍", kelasCss: "m-ipas" },
-      bing: { judul: "Bahasa Inggris", ikon: "🔤", kelasCss: "m-bing" },
-      madura: { judul: "Bahasa Madura", ikon: "🏝️", kelasCss: "m-madura" },
-      kesenian: { judul: "Seni & Budaya (Kesenian)", ikon: "🎨", kelasCss: "m-kesenian" }
-    };
-
-    const daftarKategoriUjian = [
-      { kode: "UTS Semester 1", judul: "UTS Semester 1", waktuInfo: "90 Menit Total", ikon: "📘", warna: "m-bindo" },
-      { kode: "UAS Semester 1", judul: "UAS Semester 1", waktuInfo: "90 Menit Total", ikon: "📙", warna: "m-pancasila" },
-      { kode: "UTS Semester 2", judul: "UTS Semester 2", waktuInfo: "90 Menit Total", ikon: "📗", warna: "m-mtk" },
-      { kode: "UAS Semester 2", judul: "UAS Semester 2", waktuInfo: "90 Menit Total", ikon: "📕", warna: "m-bing" }
-    ];
-
-            function getInfoMapel(kode) {
-      if (daftarNamaMapel[kode]) return daftarNamaMapel[kode];
-      if (window.MAPEL_KUSTOM && window.MAPEL_KUSTOM[kode]) return window.MAPEL_KUSTOM[kode];
-      const judulRapi = String(kode).replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-      return { judul: judulRapi, ikon: "📘", kelasCss: "m-ipas" };
+    function getKlienSupabase() {
+      return window.supabase.createClient(SB_URL, SB_KEY);
     }
 
-    function getSemuaKodeMapelKelas(kls) {
-      const setKode = new Set(Object.keys(daftarNamaMapel));
-      Object.keys(window.MAPEL_KUSTOM || {}).forEach(k => setKode.add(k));
-      const prefix = `${kls}-`;
-      Object.keys(window.DATABASE_BAB || {}).forEach(k => {
-        if (k.startsWith(prefix)) setKode.add(k.slice(prefix.length));
-      });
-      Object.keys(window.DATABASE_SOAL || {}).forEach(k => {
-        if (k.startsWith(prefix)) {
-          const sisa = k.slice(prefix.length);
-          const idxStrip = sisa.indexOf("-");
-          if (idxStrip > 0) setKode.add(sisa.slice(0, idxStrip));
-        }
-      });
-      return Array.from(setKode);
+    function getBankSoal() {
+      try { return JSON.parse(localStorage.getItem("seddur_bank_soal") || "[]"); }
+      catch (e) { return []; }
     }
 
-    function setNavAktif(idMenu) {
-      document.body.classList.remove("sedang-ujian");
-      ["nav-home", "nav-kuis", "nav-ujian", "nav-admin"].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.classList.toggle("aktif", id === idMenu);
-      });
+    function simpanBankSoal(arr) {
+      localStorage.setItem("seddur_bank_soal", JSON.stringify(arr));
     }
 
     function hentikanTimer() {
@@ -366,618 +130,149 @@
       }
     }
 
-            function formatWaktu(detik) {
-      const m = Math.floor(detik / 60);
-      const s = detik % 60;
-      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-    }
-
-    function getKodeUjianKelas(kls) {
-      const key = String(kls);
-      if (window.KODE_UJIAN_DEFAULT && window.KODE_UJIAN_DEFAULT[key]) {
-        return String(window.KODE_UJIAN_DEFAULT[key]).trim().toUpperCase();
-      }
-      return `KLS${kls}-2026`;
-    }
-
-    function getPasswordAdmin() {
-      return String(window.PASSWORD_ADMIN_DEFAULT || "seddur1").trim();
-    }
-
-    function getFirebaseDB() {
-      if (!window._fbDbReady && window.firebase) {
-        if (!firebase.apps.length) {
-          firebase.initializeApp({
-            databaseURL: (window.FIREBASE_DB_URL || "https://firebasedatabase.app").replace(/\/$/, "")
-          });
-        }
-        window._fbDbReady = firebase.database();
-      }
-      return window._fbDbReady;
-    }
-
-       function simpanRekapNilai(record) {
-      try {
-        const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
-        list.push(record);
-        localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
-      } catch (e) {}
-
-      const gasUrl = "https://script.google.com/macros/s/AKfycbyUZntsjONJxTjTzi_0I95zFcYGEJe_rR3GQFv83h0ZnAA45KUue3hSvGXdbBpl-ixR/exec";
-      const params = new URLSearchParams({
-        aksi: "simpan",
-        id: String(record.id),
-        tanggal: String(record.tanggal),
-        nama: String(record.nama),
-        kodeUnik: String(record.kodeUnik || "-"),
-        kelas: String(record.kelas),
-        mapel: String(record.mapel),
-        kategori: String(record.kategori),
-        benar: String(record.benar),
-        nilai: String(record.nilai)
-      });
-
-      fetch(`${gasUrl}?${params.toString()}`)
-        .then(res => res.json())
-        .then(data => {
-          const infoEl = document.getElementById("statusSyncUjian");
-          if (data && data.status === "OK") {
-            if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; tersinkron ke Google Sheets Cloud!</span>`;
-          } else {
-            if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Respon Cloud: ${JSON.stringify(data)}</span>`;
-          }
-        })
-        .catch(() => {
-          new Image().src = `${gasUrl}?${params.toString()}`;
-          const infoEl = document.getElementById("statusSyncUjian");
-          if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai terkirim ke Google Sheets Cloud!</span>`;
-        });
-    }
-
-
-    function cariSoalDariDatabase(kls, kodeMapel, namaPaketAtauBab) {
-      const dbSoal = window.DATABASE_SOAL || {};
-      const infoMapel = getInfoMapel(kodeMapel);
-      const namaMapel = infoMapel ? infoMapel.judul : kodeMapel;
-      const kandidatKunci = [
-        `${kls}-${kodeMapel}-${namaPaketAtauBab}`,
-        `sd-Kelas ${kls}-${namaMapel}-${namaPaketAtauBab}`,
-        `${kls}-${namaMapel}-${namaPaketAtauBab}`
-      ];
-      for (const k of kandidatKunci) {
-        if (Array.isArray(dbSoal[k])) return dbSoal[k];
-      }
-      return [];
-    }
-
-    function getDaftarBabSinkron(kls, kodeMapel) {
-      const dbBab = window.DATABASE_BAB || {};
-      const infoMapel = getInfoMapel(kodeMapel);
-      const namaMapel = infoMapel ? infoMapel.judul : kodeMapel;
-
-      const listBabMentah = dbBab[`${kls}-${kodeMapel}`] || dbBab[`sd-Kelas ${kls}-${namaMapel}`] || [];
-      const hasil = [];
-
-      listBabMentah.forEach(judulBab => {
-        const soalCocok = cariSoalDariDatabase(kls, kodeMapel, judulBab);
-        hasil.push({
-          bab: judulBab,
-          soalUjian: soalCocok
-        });
-      });
-
-      return hasil;
-    }
-
-            function tampilBeranda() {
+    function tampilBeranda() {
       hentikanTimer();
-      sedangModeTKA = false;
-      document.body.classList.remove("mode-cbt");
-      setNavAktif("nav-home");
-      try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
-
+      const daftarKelas = ["1", "2", "3", "4", "5", "6"];
       document.getElementById("app").innerHTML = `
-        <div class="card">
-          <img class="banner-beranda" src="foto1.jpeg" alt="SDN Seddur 1" onerror="this.style.display='none'" />
-          <h2 class="judul-bergerak">Selamat Datang di Dunia SDN Seddur 1</h2>
-          <p style="color:#64748b; font-size:0.84rem; margin-top:4px;">Gunakan menu navigasi di bawah layar untuk memulai</p>
-        </div>
-
-        <div class="motivasi-card">
-          <div style="font-size:2.3rem;">💡✨📖</div>
-          <div class="motivasi-teks">
-            "Jangan pernah berhenti belajar, karena hidup tak pernah berhenti mengajarkan hal baru."
+        <div class="card card-cbt">
+          <h2 style="margin-top:0; font-size:1.12rem; color:#0f172a;">Pilih Kelas Peserta Ujian</h2>
+          <div class="grid-kelas">
+            ${daftarKelas.map(k => `<button class="btn-aksi" onclick="pilihKelas('${k}')">🎓 Kelas ${k}</button>`).join("")}
           </div>
+          <hr style="margin:18px 0; border:none; border-top:1px dashed #cbd5e1;" />
+          <button class="btn-aksi" style="width:100%; background:#0f172a;" onclick="loginAdmin()">🔐 Masuk Menu Guru / Admin</button>
         </div>`;
     }
 
-    function bukaMenuKelasKuis() {
-      hentikanTimer();
-      sedangModeTKA = false;
-      document.body.classList.remove("mode-cbt");
-      setNavAktif("nav-kuis");
-      mainkanEfek('klik');
-      modeAplikasi = "kuis";
-      namaSiswa = "Siswa Hebat";
+    function pilihKelas(k) {
+      kelasAktif = String(k);
       document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Home</button><div class="star-bar">🎮 Mode Kuis</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Pilih Kelas (Menu Kuis)</h2><p style="color:#64748b; font-size:0.84rem;">Materi Per Bab & Simulasi Tes TKA</p></div>
-        <div class="kelas-grid">
-          <button class="kelas-btn k1" onclick="pilihKelasKuis(1)"><span>🎈 Kelas 1</span><span class="kelas-sub">Fase A</span></button>
-          <button class="kelas-btn k2" onclick="pilihKelasKuis(2)"><span>🚀 Kelas 2</span><span class="kelas-sub">Fase A</span></button>
-          <button class="kelas-btn k3" onclick="pilihKelasKuis(3)"><span>🌟 Kelas 3</span><span class="kelas-sub">Fase B</span></button>
-          <button class="kelas-btn k4" onclick="pilihKelasKuis(4)"><span>🧭 Kelas 4</span><span class="kelas-sub">Fase B</span></button>
-          <button class="kelas-btn k5" onclick="pilihKelasKuis(5)"><span>⚡ Kelas 5</span><span class="kelas-sub">Fase C</span></button>
-          <button class="kelas-btn k6" onclick="pilihKelasKuis(6)"><span>🏆 Kelas 6</span><span class="kelas-sub">Fase C</span></button>
-        </div>
-        <button class="menu-btn m-bing" style="margin-top:12px;" onclick="tampilMenuMapelTKA()">
-          <div>
-            <div>🎯 Tes TKA (Simulasi Literasi & Numerasi)</div>
-            <div style="font-size:0.75rem; font-weight:400; opacity:0.95;">Bahasa Indonesia & Matematika • Sesi 1, 2, 3 (90 Menit)</div>
-          </div>
-          <span class="badge-jumlah">Mulai ▶️</span>
-        </button>`;
+        <div class="card card-cbt">
+          <h2 style="margin-top:0; font-size:1.12rem;">Identitas Peserta — Kelas ${kelasAktif}</h2>
+          <label class="label-form">Nama Lengkap Siswa:</label>
+          <input type="text" id="inpNamaSiswa" class="input-form" placeholder="Contoh: Ahmad Fauzi" />
+
+          <label class="label-form">Kode Unik / Nomor Absen / Sesi:</label>
+          <input type="text" id="inpKodeUnik" class="input-form" placeholder="Contoh: 05 atau SESI1" />
+
+          <label class="label-form">Mata Pelajaran:</label>
+          <select id="selMapelSiswa" class="input-form">
+            ${DAFTAR_MAPEL.map(m => `<option value="${m}">${m}</option>`).join("")}
+          </select>
+
+          <label class="label-form">Jenis / Materi Ujian:</label>
+          <select id="selKategoriSiswa" class="input-form">
+            ${DAFTAR_KATEGORI.map(kat => `<option value="${kat}">${kat}</option>`).join("")}
+          </select>
+
+          <button class="btn-aksi btn-sukses" style="width:100%;" onclick="mulaiUjianSiswa()">▶️ Mulai Kerjakan Ujian</button>
+          <button class="btn-aksi" style="width:100%; margin-top:8px; background:#64748b;" onclick="tampilBeranda()">⬅️ Kembali</button>
+        </div>`;
     }
 
-    function pilihKelasKuis(kls) { mainkanEfek('klik'); kelasAktif = kls; tampilMenuMapel(); }
+        function mulaiUjianSiswa() {
+      namaSiswa = (document.getElementById("inpNamaSiswa").value || "").trim();
+      kodeUnikPeserta = (document.getElementById("inpKodeUnik").value || "-").trim().toUpperCase();
+      mapelUjianAktif = document.getElementById("selMapelSiswa").value;
+      kategoriUjianAktif = document.getElementById("selKategoriSiswa").value;
 
-            function tampilMenuMapel() {
-      const dataKelas = window.DATA_SEDDUR[kelasAktif];
-      if (!dataKelas) { alert(`File materi kelas${kelasAktif}.js belum ditemukan di folder yang sama!`); return; }
-      const kodeMapelTersedia = Object.keys(dataKelas);
-      ucapkan(`Pilih mata pelajaran Kelas ${kelasAktif}!`);
-      let tombolMapelHTML = kodeMapelTersedia.map(kode => {
-        const info = getInfoMapel(kode);
-        const jmlBab = dataKelas[kode].length;
-        return `<button class="menu-btn ${info.kelasCss}" onclick="tampilMenuBab('${kode}')"><span>${info.ikon} ${info.judul}</span><span class="badge-jumlah">${jmlBab} Bab ▶️</span></button>`;
-      }).join("");
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasKuis()">⬅️ Ganti Kelas</button><div class="star-bar">🎮 Kuis • Kelas ${kelasAktif}</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.22rem; margin-bottom:4px;">Mata Pelajaran Kelas ${kelasAktif}</h2><p style="color:#64748b; font-size:0.85rem;">Pilih mata pelajaran untuk melihat daftar Bab</p></div>
-        ${tombolMapelHTML}`;
-    }
+      if (!namaSiswa) {
+        alert("Harap isi Nama Lengkap Siswa terlebih dahulu!");
+        return;
+      }
 
-    function tampilMenuBab(kodeMapel) {
-      mainkanEfek('klik'); mapelAktif = kodeMapel;
-      const daftarBab = window.DATA_SEDDUR[kelasAktif][kodeMapel];
-      const infoMapel = getInfoMapel(kodeMapel);
-      ucapkan(`Pilih Bab pada pelajaran ${infoMapel.judul}`);
-      let tombolBabHTML = daftarBab.map((babObj, idx) => `
-        <button class="menu-btn bab-btn" onclick="mulaiBab(${idx})">
-          <div><div style="font-size:0.75rem; color:#0284c7;">${babObj.semester}</div><div>${babObj.bab}</div></div>
-          <span class="bab-badge">${babObj.soal.length} Soal ▶️</span>
-        </button>`).join("");
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilMenuMapel()">⬅️ Mapel</button><div class="star-bar">Kelas ${kelasAktif} • ${infoMapel.judul}</div></div>
-        <div class="card"><div style="font-size:2.4rem; margin-bottom:4px;">${infoMapel.ikon}</div><h2 style="color:#0284c7; font-size:1.18rem;">Daftar Bab ${infoMapel.judul}</h2><p style="color:#64748b; font-size:0.84rem;">Kurikulum Merdeka Tahun Ajaran 2026/2027</p></div>
-        ${tombolBabHTML}`;
-    }
+      const semuaSoal = getBankSoal();
+      soalPermainan = semuaSoal.filter(s =>
+        String(s.kelas) === String(kelasAktif) &&
+        s.mapel === mapelUjianAktif &&
+        s.kategori === kategoriUjianAktif
+      );
 
-    function mulaiBab(idxBab) {
-      mainkanEfek('klik'); modeAplikasi = "kuis"; babAktif = idxBab;
-      const babObj = window.DATA_SEDDUR[kelasAktif][mapelAktif][idxBab];
-      soalPermainan = acakArray(babObj.soal).map(item => {
-        const jawabanBenar = item.opsi[item.kunci];
-        const opsiAcak = acakArray(item.opsi);
-        return { ikon: item.ikon, tanya: item.tanya, opsi: opsiAcak, kunci: opsiAcak.indexOf(jawabanBenar), bahas: item.bahas };
-      });
-      indeksSoal = 0; skorTotal = 0; jumlahBenar = 0; comboBenar = 0;
+      if (soalPermainan.length === 0) {
+        alert(`Belum ada soal untuk Kelas ${kelasAktif} - ${mapelUjianAktif} (${kategoriUjianAktif}). Silakan isi soal di Menu Guru / Admin terlebih dahulu.`);
+        return;
+      }
+
+      indeksSoal = 0;
+      jawabanSiswaUjian = new Array(soalPermainan.length).fill(null);
+      sisaDetik = soalPermainan.length * 60;
+
+      jalankanTimer();
       tampilPertanyaanKuis();
     }
 
-            function tampilMenuMapelTKA() {
+    function jalankanTimer() {
       hentikanTimer();
-      document.body.classList.add("mode-cbt");
-      setNavAktif("nav-kuis");
-      const jmlBindo = Object.values((window.DATA_TKA && window.DATA_TKA.bindo) || {}).reduce((a, b) => a + b.length, 0);
-      const jmlMtk = Object.values((window.DATA_TKA && window.DATA_TKA.mtk) || {}).reduce((a, b) => a + b.length, 0);
-
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasKuis()">⬅️ Menu Kuis</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">🎯 Simulasi Tes TKA</div></div>
-        <div class="card card-cbt" style="text-align:center;">
-          <h2 style="color:#0f172a; font-size:1.2rem;">Pilih Mata Pelajaran Tes TKA</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Waktu pengerjaan 90 menit per sesi • Nilai langsung tampil di akhir</p>
-        </div>
-        <button class="menu-btn m-bindo" onclick="tampilSesiTKA('bindo')">
-          <span>📚 Bahasa Indonesia (Literasi)</span>
-          <span class="badge-jumlah">${jmlBindo} Soal ▶️</span>
-        </button>
-        <button class="menu-btn m-mtk" onclick="tampilSesiTKA('mtk')">
-          <span>🔢 Matematika (Numerasi)</span>
-          <span class="badge-jumlah">${jmlMtk} Soal ▶️</span>
-        </button>`;
-    }
-
-    function tampilSesiTKA(kodeMapel) {
-      const namaMapel = kodeMapel === "bindo" ? "Bahasa Indonesia" : "Matematika";
-      const dataMapel = (window.DATA_TKA && window.DATA_TKA[kodeMapel]) || {};
-      const daftarSesi = ["Sesi 1", "Sesi 2", "Sesi 3"];
-
-      let tombolSesi = daftarSesi.map(sesi => {
-        const soalSesi = dataMapel[sesi] || [];
-        return `<button class="menu-btn bab-btn" onclick="mulaiTesTKA('${kodeMapel}', '${sesi}')">
-          <div>
-            <div style="font-size:0.75rem; color:#0284c7;">Simulasi TKA • ${namaMapel}</div>
-            <div>📝 ${sesi} (Target 30 Soal • 90 Menit)</div>
-          </div>
-          <span class="bab-badge">${soalSesi.length} Soal ▶️</span>
-        </button>`;
-      }).join("");
-
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilMenuMapelTKA()">⬅️ Ganti Mapel</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">${namaMapel}</div></div>
-        <div class="card card-cbt" style="text-align:center;">
-          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Sesi Tes TKA • ${namaMapel}</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Setiap sesi berdurasi 90 menit</p>
-        </div>
-        ${tombolSesi}`;
-    }
-
-    function mulaiTesTKA(kodeMapel, sesi) {
-      const namaMapel = kodeMapel === "bindo" ? "Bahasa Indonesia" : "Matematika";
-      const daftarSoal = (window.DATA_TKA && window.DATA_TKA[kodeMapel] && window.DATA_TKA[kodeMapel][sesi]) || [];
-      if (daftarSoal.length === 0) {
-        alert(`Belum ada soal pada ${namaMapel} - ${sesi} di file tka.js!`);
-        return;
-      }
-      if (!confirm(`Mulai Simulasi Tes TKA sekarang?\n• Mata Pelajaran: ${namaMapel}\n• Sesi: ${sesi}\n• Jumlah Soal: ${daftarSoal.length} soal\n• Waktu: 90 Menit`)) return;
-
-      sedangModeTKA = true;
-      modeAplikasi = "ujian";
-      namaSiswa = "Peserta TKA";
-      kodeUnikPeserta = "TKA";
-      kodeKategoriUjianAktif = "TKA";
-      mapelUjianAktif = `Tes TKA • ${namaMapel}`;
-      kategoriUjianAktif = sesi;
-
-      jalankanMesinCBT(daftarSoal);
-    }
-
-            function bukaMenuKelasUjian() {
-      hentikanTimer();
-      sedangModeTKA = false;
-      document.body.classList.add("mode-cbt");
-      setNavAktif("nav-ujian");
-      modeAplikasi = "ujian";
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Home</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">📝 Ujian Resmi CBT</div></div>
-        <div class="card card-cbt" style="text-align:center;">
-          <h2 style="color:#0f172a; font-size:1.2rem;">Pilih Kelas Peserta Ujian</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Ujian menggunakan timer otomatis & kode akses dari pengawas</p>
-        </div>
-        <div class="kelas-grid">
-          <button class="kelas-btn k1" onclick="tampilGerbangKodeUjian(1)"><span>Kelas 1</span><span class="kelas-sub">Ujian Fase A</span></button>
-          <button class="kelas-btn k2" onclick="tampilGerbangKodeUjian(2)"><span>Kelas 2</span><span class="kelas-sub">Ujian Fase A</span></button>
-          <button class="kelas-btn k3" onclick="tampilGerbangKodeUjian(3)"><span>Kelas 3</span><span class="kelas-sub">Ujian Fase B</span></button>
-          <button class="kelas-btn k4" onclick="tampilGerbangKodeUjian(4)"><span>Kelas 4</span><span class="kelas-sub">Ujian Fase B</span></button>
-          <button class="kelas-btn k5" onclick="tampilGerbangKodeUjian(5)"><span>Kelas 5</span><span class="kelas-sub">Ujian Fase C</span></button>
-          <button class="kelas-btn k6" onclick="tampilGerbangKodeUjian(6)"><span>Kelas 6</span><span class="kelas-sub">Ujian Fase C</span></button>
-        </div>`;
-    }
-
-    function tampilGerbangKodeUjian(kls) {
-      kelasAktif = kls;
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasUjian()">⬅️ Pilih Kelas</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">🔐 Ruang Ujian Kelas ${kls}</div></div>
-        <div class="card card-cbt" style="text-align:center;">
-          <h2 style="color:#0f172a; font-size:1.2rem; margin-top:4px;">Login Peserta Ujian Kelas ${kls}</h2>
-          <p style="color:#64748b; font-size:0.84rem; margin-bottom:10px;">Lengkapi data diri, kode unik/absen, dan kode ujian kelas</p>
-          <input type="text" id="inputNamaUjian" class="input-nama" placeholder="1. Ketik Nama Lengkap Siswa..." maxlength="35" />
-          <input type="text" id="inputKodeUnik" class="input-nama" placeholder="2. Kode Unik / No. Absen / Sesi (Bebas)..." style="text-transform:uppercase; border-color:#10b981; background:#ecfdf5;" maxlength="20" autocapitalize="characters" autocomplete="off" />
-          <input type="text" id="inputKodeUjian" class="input-nama" placeholder="3. Ketik Kode Ujian Kelas ${kls}..." style="text-transform:uppercase; border-color:#3b82f6; background:#eff6ff;" maxlength="20" autocapitalize="characters" autocomplete="off" />
-          <button class="btn-aksi" style="width:100%; margin-top:10px; background:#0f172a; box-shadow:none;" onclick="verifikasiMasukUjian()">Masuk Ruang Ujian ➡️</button>
-        </div>`;
-    }
-
-    function verifikasiMasukUjian() {
-      const namaInput = document.getElementById("inputNamaUjian").value.trim();
-      const unikInput = document.getElementById("inputKodeUnik").value.trim().toUpperCase();
-      const kodeInput = document.getElementById("inputKodeUjian").value.replace(/\s+/g, "").toUpperCase();
-      const kodeSah = getKodeUjianKelas(kelasAktif).replace(/\s+/g, "").toUpperCase();
-
-      if (!namaInput) { alert("Silakan isi Nama Lengkap Siswa terlebih dahulu!"); return; }
-      if (!unikInput) { alert("Silakan isi Kode Unik / No. Absen / Sesi terlebih dahulu!"); return; }
-      if (kodeInput !== kodeSah) { alert("Kode Ujian Kelas salah! Silakan periksa kembali kode dari pengawas."); return; }
-
-      namaSiswa = namaInput;
-      kodeUnikPeserta = unikInput;
-      tampilKategoriUjian();
-    }
-
-            function tampilKategoriUjian() {
-      hentikanTimer();
-      document.body.classList.remove("sedang-ujian");
-
-      let tombolUTS_UAS = daftarKategoriUjian.map(kat => {
-        return `<button class="menu-btn ${kat.warna}" onclick="tampilMapelUTS_UAS('${kat.kode}', '${kat.judul}')">
-          <div>
-            <div>${kat.ikon} ${kat.judul}</div>
-            <div style="font-size:0.75rem; font-weight:400; opacity:0.95;">⏱️ 90 Menit • Pilih Mata Pelajaran</div>
-          </div>
-          <span class="badge-jumlah">Pilih Mapel ▶️</span>
-        </button>`;
-      }).join("");
-
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="bukaMenuKelasUjian()">⬅️ Keluar</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">👤 ${namaSiswa} [${kodeUnikPeserta}]</div></div>
-        <div class="card card-cbt" style="text-align:center;">
-          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Jenis Ujian Kelas ${kelasAktif}</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Pilih Ujian Per Bab atau Ujian Tengah/Akhir Semester (UTS/UAS)</p>
-        </div>
-        <button class="menu-btn m-ipas" onclick="tampilMapelUjianBab()">
-          <div>
-            <div>📚 Ujian Bab (Pilih Mata Pelajaran)</div>
-            <div style="font-size:0.75rem; font-weight:400; opacity:0.95;">⏱️ Waktu: 5 Menit / Soal</div>
-          </div>
-          <span class="badge-jumlah">Pilih Mapel ▶️</span>
-        </button>
-        ${tombolUTS_UAS}`;
-    }
-
-    function tampilMapelUjianBab() {
-      const daftarKodeMapel = getSemuaKodeMapelKelas(kelasAktif);
-      let tombolMapel = daftarKodeMapel.map(kode => {
-        const info = getInfoMapel(kode);
-        const daftarBab = getDaftarBabSinkron(kelasAktif, kode);
-        if (daftarBab.length === 0) return "";
-        return `<button class="menu-btn ${info.kelasCss}" onclick="tampilBabUjian('${kode}')">
-          <span>${info.ikon} ${info.judul}</span>
-          <span class="badge-jumlah">${daftarBab.length} Bab ▶️</span>
-        </button>`;
-      }).join("");
-
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilKategoriUjian()">⬅️ Jenis Ujian</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">Kelas ${kelasAktif} [${kodeUnikPeserta}]</div></div>
-        <div class="card card-cbt" style="text-align:center;">
-          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Mata Pelajaran (Ujian Bab)</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Kelas ${kelasAktif}</p>
-        </div>
-        ${tombolMapel || `<div class="card card-cbt" style="text-align:center;">Belum ada soal Ujian Bab di file <code>ujian${kelasAktif}.js</code>.</div>`}`;
-    }
-
-    function tampilBabUjian(kodeMapel) {
-      mapelAktif = kodeMapel;
-      const infoMapel = getInfoMapel(kodeMapel);
-      const daftarBab = getDaftarBabSinkron(kelasAktif, kodeMapel);
-
-      let tombolBabHTML = daftarBab.map((b, idx) => `
-        <button class="menu-btn bab-btn" onclick="mulaiUjianBabSpesifik('${kodeMapel}', ${idx})">
-          <div style="font-size:0.92rem;">${b.bab}</div>
-          <span class="bab-badge">${b.soalUjian.length} Soal ▶️</span>
-        </button>`).join("");
-
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilMapelUjianBab()">⬅️ Ganti Mapel</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">${infoMapel.judul}</div></div>
-        <div class="card card-cbt" style="text-align:center;">
-          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Bab Ujian • ${infoMapel.judul}</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Kelas ${kelasAktif} • Waktu 5 menit per soal</p>
-        </div>
-        ${tombolBabHTML}`;
-    }
-
-    function tampilMapelUTS_UAS(kodeKat, judulKat) {
-      kodeKategoriUjianAktif = kodeKat;
-      kategoriUjianAktif = judulKat;
-      const daftarKodeMapel = getSemuaKodeMapelKelas(kelasAktif);
-
-      let tombolMapel = daftarKodeMapel.map(kode => {
-        const info = getInfoMapel(kode);
-        const daftarBab = getDaftarBabSinkron(kelasAktif, kode);
-        const daftarSoal = cariSoalDariDatabase(kelasAktif, kode, kodeKat);
-        if (daftarBab.length === 0 && daftarSoal.length === 0) return "";
-        return `<button class="menu-btn ${info.kelasCss}" onclick="mulaiUjianUTS_UAS_Mapel('${kode}')">
-          <span>${info.ikon} ${info.judul}</span>
-          <span class="badge-jumlah">${daftarSoal.length} Soal ▶️</span>
-        </button>`;
-      }).join("");
-
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilKategoriUjian()">⬅️ Jenis Ujian</button><div class="star-bar" style="background:#e2e8f0; color:#0f172a; border-color:#cbd5e1;">${judulKat}</div></div>
-        <div class="card card-cbt" style="text-align:center;">
-          <h2 style="color:#0f172a; font-size:1.18rem;">Pilih Mata Pelajaran • ${judulKat}</h2>
-          <p style="color:#64748b; font-size:0.84rem;">Kelas ${kelasAktif} • Klik mata pelajaran untuk langsung memulai ujian</p>
-        </div>
-        ${tombolMapel}`;
-    }
-
-            function mulaiUjianBabSpesifik(kodeMapel, idxBab) {
-      const infoMapel = getInfoMapel(kodeMapel);
-      const daftarBab = getDaftarBabSinkron(kelasAktif, kodeMapel);
-      const targetBab = daftarBab[idxBab];
-
-      if (!targetBab || !targetBab.soalUjian || targetBab.soalUjian.length === 0) {
-        alert(`Belum ada soal ujian untuk "${targetBab ? targetBab.bab : 'Bab ini'}" pada file ujian${kelasAktif}.js!`);
-        return;
-      }
-
-      if (!confirm(`Mulai Ujian Bab sekarang?\n• Peserta: ${namaSiswa} (${kodeUnikPeserta})\n• Mapel: ${infoMapel.judul}\n• Materi: ${targetBab.bab}\n• Jumlah Soal: ${targetBab.soalUjian.length} soal\n• Batas Waktu: 5 menit per soal`)) return;
-
-      sedangModeTKA = false;
-      modeAplikasi = "ujian";
-      kodeKategoriUjianAktif = "latihan_bab";
-      mapelUjianAktif = infoMapel.judul;
-      kategoriUjianAktif = targetBab.bab;
-
-      jalankanMesinCBT(targetBab.soalUjian);
-    }
-
-    function mulaiUjianUTS_UAS_Mapel(kodeMapel) {
-      const infoMapel = getInfoMapel(kodeMapel);
-      const daftarSoal = cariSoalDariDatabase(kelasAktif, kodeMapel, kodeKategoriUjianAktif);
-
-      if (!daftarSoal || daftarSoal.length === 0) {
-        alert(`Belum ada soal ${kategoriUjianAktif} untuk mata pelajaran ${infoMapel.judul} pada file ujian${kelasAktif}.js!`);
-        return;
-      }
-
-      if (!confirm(`Mulai ${kategoriUjianAktif} sekarang?\n• Peserta: ${namaSiswa} (${kodeUnikPeserta})\n• Mapel: ${infoMapel.judul}\n• Jumlah Soal: ${daftarSoal.length} soal\n• Batas Waktu: 90 menit total`)) return;
-
-      sedangModeTKA = false;
-      modeAplikasi = "ujian";
-      mapelUjianAktif = infoMapel.judul;
-
-      jalankanMesinCBT(daftarSoal);
-    }
-
-    function jalankanMesinCBT(daftarSoalMentah) {
-      document.body.classList.add("sedang-ujian");
-      soalPermainan = acakArray(daftarSoalMentah).map(item => {
-        const teksSoal = item.q || item.tanya || "";
-        const daftarOpsi = item.p || item.opsi || [];
-        const daftarOpsiSvg = item.pSvg || [];
-        const idxKunciAsli = (typeof item.b === "number") ? item.b : (item.kunci || 0);
-
-        const paketOpsi = daftarOpsi.map((teks, i) => ({
-          teks: teks,
-          svg: daftarOpsiSvg[i] || "",
-          benar: i === idxKunciAsli
-        }));
-        const opsiAcak = acakArray(paketOpsi);
-
-        return {
-          ikon: item.ikon || "",
-          svg: item.svg || "",
-          tanya: teksSoal,
-          opsi: opsiAcak.map(o => o.teks),
-          opsiSvg: opsiAcak.map(o => o.svg),
-          kunci: opsiAcak.findIndex(o => o.benar)
-        };
-      });
-
-      jawabanSiswaUjian = new Array(soalPermainan.length).fill(null);
-      indeksSoal = 0;
-
-      hentikanTimer();
-      if (kodeKategoriUjianAktif === "latihan_bab") {
-        mulaiTimerPerSoalBab();
-      } else {
-        sisaDetik = 90 * 60;
-        timerInterval = setInterval(() => {
-          sisaDetik--;
-          const elTimer = document.getElementById("tampilanTimer");
-          if (elTimer) elTimer.textContent = formatWaktu(sisaDetik);
-          if (sisaDetik <= 0) {
-            hentikanTimer();
-            alert("⏰ Waktu 90 menit telah habis! Jawaban Anda otomatis dikumpulkan.");
-            selesaiDanKumpulkanUjian(true);
-          }
-        }, 1000);
-      }
-
-      renderSoalUjianCBT();
-    }
-
-    function mulaiTimerPerSoalBab() {
-      hentikanTimer();
-      sisaDetik = 5 * 60;
       timerInterval = setInterval(() => {
         sisaDetik--;
         const elTimer = document.getElementById("tampilanTimer");
-        if (elTimer) elTimer.textContent = formatWaktu(sisaDetik);
+        if (elTimer) {
+          const menit = Math.floor(sisaDetik / 60);
+          const detik = sisaDetik % 60;
+          elTimer.textContent = `⏱️ ${String(menit).padStart(2, "0")}:${String(detik).padStart(2, "0")}`;
+        }
         if (sisaDetik <= 0) {
           hentikanTimer();
-          if (indeksSoal < soalPermainan.length - 1) {
-            indeksSoal++;
-            mulaiTimerPerSoalBab();
-            renderSoalUjianCBT();
-          } else {
-            alert("⏰ Waktu soal terakhir telah habis! Ujian selesai.");
-            selesaiDanKumpulkanUjian(true);
-          }
+          alert("Waktu ujian telah habis! Jawaban dikumpulkan otomatis.");
+          selesaiDanKumpulkanUjian(true);
         }
       }, 1000);
     }
 
-            function renderSoalUjianCBT() {
-      const s = soalPermainan[indeksSoal];
+    function tampilPertanyaanKuis() {
+      const soal = soalPermainan[indeksSoal];
+      const total = soalPermainan.length;
+      const menit = Math.floor(sisaDetik / 60);
+      const detik = sisaDetik % 60;
       const hurufOpsi = ["A", "B", "C", "D"];
-      const isBab = kodeKategoriUjianAktif === "latihan_bab";
-
-      let navNomorHTML = soalPermainan.map((_, idx) => {
-        const clsAktif = idx === indeksSoal ? "aktif" : "";
-        const clsTerjawab = jawabanSiswaUjian[idx] !== null ? "terjawab" : "";
-        const onclickAttr = isBab ? "" : `onclick="pindahNomorUjian(${idx})"`;
-        const styleLocked = isBab && idx !== indeksSoal ? "opacity:0.55; cursor:not-allowed;" : "";
-        return `<button class="nav-nomor-btn ${clsAktif} ${clsTerjawab}" ${onclickAttr} style="${styleLocked}">${idx + 1}</button>`;
-      }).join("");
-
-      let opsiHTML = s.opsi.map((teks, idx) => {
-        const terpilih = jawabanSiswaUjian[indeksSoal] === idx ? "cbt-opsi-terpilih" : "";
-        const svgOpsi = (s.opsiSvg && s.opsiSvg[idx]) ? `<span class="svg-opsi-wrap">${s.opsiSvg[idx]}</span>` : "";
-        return `
-          <button class="cbt-opsi-item ${terpilih}" onclick="pilihJawabanUjian(${idx})">
-            <span class="cbt-huruf">${hurufOpsi[idx]}</span>
-            ${svgOpsi}
-            <span>${teks}</span>
-          </button>`;
-      }).join("");
-
-      const tombolSebelumnya = (!isBab && indeksSoal > 0)
-        ? `<button class="bg-kembali" onclick="pindahNomorUjian(${indeksSoal - 1})">⬅️ Sebelumnya</button>`
-        : `<div></div>`;
-
-      const tombolBerikutnya = (indeksSoal < soalPermainan.length - 1)
-        ? `<button class="btn-aksi" style="margin:0; background:#2563eb; box-shadow:none;" onclick="lanjutNomorUjian()">Soal Berikutnya ➡️</button>`
-        : `<button class="btn-aksi btn-sukses" style="margin:0; box-shadow:none;" onclick="selesaiDanKumpulkanUjian(false)">✅ Selesai & Kumpulkan</button>`;
-
-      const subHeaderInfo = sedangModeTKA
-        ? `Simulasi Tes TKA • SDN Seddur 1`
-        : `${namaSiswa} • Kode: ${kodeUnikPeserta} (Kls ${kelasAktif})`;
 
       document.getElementById("app").innerHTML = `
-        <div class="cbt-header-info">
-          <div>
-            <div style="font-weight:700;">${mapelUjianAktif} • ${kategoriUjianAktif}</div>
-            <div style="font-size:0.75rem; opacity:0.85;">${subHeaderInfo}</div>
-          </div>
-          <div class="timer-box" id="tampilanTimer">${formatWaktu(sisaDetik)}</div>
-        </div>
-
-        <div class="nav-nomor-grid">${navNomorHTML}</div>
-
         <div class="card card-cbt">
-          <div style="display:flex; justify-content:space-between; font-size:0.84rem; font-weight:700; color:#475569;">
-            <span>SOAL NOMOR ${indeksSoal + 1} DARI ${soalPermainan.length}</span>
-            <span>${jawabanSiswaUjian[indeksSoal] !== null ? '✅ Terjawab' : '⬜ Belum dijawab'}</span>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:0.86rem; font-weight:700;">
+            <span style="color:#1e3a8a;">Soal ${indeksSoal + 1} dari ${total}</span>
+            <span id="tampilanTimer" style="background:#fef3c7; color:#b45309; padding:4px 10px; border-radius:8px;">
+              ⏱️ ${String(menit).padStart(2, "0")}:${String(detik).padStart(2, "0")}
+            </span>
           </div>
 
-          <div class="cbt-soal-teks">
-            ${s.ikon ? `<div style="font-size:2rem; margin-bottom:6px;">${s.ikon}</div>` : ''}
-            ${s.svg ? `<div class="svg-soal-wrap">${s.svg}</div>` : ''}
-            <div>${s.tanya}</div>
+          <div style="background:#f8fafc; padding:14px; border-radius:12px; border:1px solid #cbd5e1; font-size:1rem; line-height:1.5; margin-bottom:12px;">
+            ${soal.tanya}
           </div>
 
-          <div class="cbt-opsi-list">${opsiHTML}</div>
+          <div>
+            ${soal.opsi.map((teksOpsi, idx) => `
+              <button class="opsi-btn ${jawabanSiswaUjian[indeksSoal] === idx ? "terpilih" : ""}" onclick="pilihJawaban(${idx})">
+                <strong>${hurufOpsi[idx]}.</strong> ${teksOpsi}
+              </button>
+            `).join("")}
+          </div>
 
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:18px; padding-top:12px; border-top:1px solid #e2e8f0;">
-            ${tombolSebelumnya}
-            ${tombolBerikutnya}
+          <div style="display:flex; gap:8px; margin-top:14px;">
+            <button class="btn-aksi" style="flex:1; background:#64748b;" ${indeksSoal === 0 ? "disabled" : ""} onclick="pindahSoal(${indeksSoal - 1})">⬅️ Sebelumnya</button>
+            ${indeksSoal < total - 1
+              ? `<button class="btn-aksi" style="flex:1;" onclick="pindahSoal(${indeksSoal + 1})">Selanjutnya ➡️</button>`
+              : `<button class="btn-aksi btn-sukses" style="flex:1;" onclick="selesaiDanKumpulkanUjian(false)">✅ Selesai &amp; Kumpulkan</button>`
+            }
+          </div>
+
+          <div class="nav-soal">
+            ${soalPermainan.map((_, i) => `
+              <button class="nomor-btn ${i === indeksSoal ? "aktif" : ""} ${jawabanSiswaUjian[i] !== null ? "sudah" : ""}" onclick="pindahSoal(${i})">${i + 1}</button>
+            `).join("")}
           </div>
         </div>`;
     }
 
-    function pilihJawabanUjian(idxOpsi) {
-      jawabanSiswaUjian[indeksSoal] = idxOpsi;
-      renderSoalUjianCBT();
+    function pilihJawaban(idx) {
+      jawabanSiswaUjian[indeksSoal] = idx;
+      tampilPertanyaanKuis();
     }
 
-    function pindahNomorUjian(idxTujuan) {
-      if (kodeKategoriUjianAktif === "latihan_bab") return;
-      indeksSoal = idxTujuan;
-      renderSoalUjianCBT();
-    }
-
-    function lanjutNomorUjian() {
-      if (kodeKategoriUjianAktif === "latihan_bab") {
-        if (jawabanSiswaUjian[indeksSoal] === null) {
-          if (!confirm("Soal ini belum dijawab dan tidak bisa kembali ke nomor sebelumnya. Lanjut ke soal berikutnya?")) return;
-        }
-        indeksSoal++;
-        mulaiTimerPerSoalBab();
-      } else {
-        indeksSoal++;
+    function pindahSoal(idxBaru) {
+      if (idxBaru >= 0 && idxBaru < soalPermainan.length) {
+        indeksSoal = idxBaru;
+        tampilPertanyaanKuis();
       }
-      renderSoalUjianCBT();
     }
 
     function selesaiDanKumpulkanUjian(otomatis) {
@@ -990,58 +285,37 @@
       }
 
       hentikanTimer();
-      document.body.classList.remove("sedang-ujian");
-      jumlahBenar = 0;
+      let jumlahBenar = 0;
       soalPermainan.forEach((soal, idx) => {
         if (jawabanSiswaUjian[idx] === soal.kunci) jumlahBenar++;
       });
 
       const totalSoal = soalPermainan.length;
       const nilaiAkhir = Math.round((jumlahBenar / totalSoal) * 100);
+      const idRec = String(Date.now());
+      const tglRec = new Date().toLocaleDateString("id-ID", {
+        day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit"
+      });
 
-      if (sedangModeTKA) {
-        document.getElementById("app").innerHTML = `
-          <div class="card card-cbt" style="text-align:center;">
-            <div style="font-size:2.6rem;">🎯</div>
-            <h2 style="color:#0f172a; font-size:1.3rem; margin:6px 0;">Hasil Simulasi Tes TKA</h2>
-            <p style="color:#64748b; font-size:0.86rem; margin-bottom:14px;">Latihan simulasi selesai (skor ini tidak disimpan ke rekap ujian)</p>
-
-            <div style="background:#f8fafc; border-radius:12px; padding:14px; border:1px solid #cbd5e1; font-size:0.92rem; color:#1e293b; text-align:left; line-height:1.7;">
-              <div><strong>Sekolah:</strong> SDN Seddur 1</div>
-              <div><strong>Mata Pelajaran:</strong> ${mapelUjianAktif}</div>
-              <div><strong>Sesi Latihan:</strong> ${kategoriUjianAktif}</div>
-              <div><strong>Jumlah Benar:</strong> ${jumlahBenar} dari ${totalSoal} Soal</div>
-              <div style="font-size:1.35rem; font-weight:700; color:#059669; margin-top:8px; padding-top:8px; border-top:1px dashed #cbd5e1; text-align:center;">
-                NILAI SIMULASI TKA: ${nilaiAkhir}
-              </div>
-            </div>
-
-            <button class="btn-aksi btn-sukses" style="width:100%; margin-top:14px; box-shadow:none;" onclick="tampilMenuMapelTKA()">🔄 Pilih Sesi / Mapel TKA Lain</button>
-            <button class="btn-aksi" style="width:100%; margin-top:8px; background:#0f172a; box-shadow:none;" onclick="tampilBeranda()">🏠 Kembali ke Home</button>
-          </div>`;
-        sedangModeTKA = false;
-        return;
-      }
-
-      const tipeUjianSimpan = (kodeKategoriUjianAktif === "latihan_bab") ? "BAB" : "UTS_UAS";
-      simpanRekapNilai({
-        id: Date.now(),
-        tanggal: new Date().toLocaleDateString('id-ID', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
+      const recordBaru = {
+        id: idRec,
+        tanggal: tglRec,
         nama: namaSiswa,
-        kodeUnik: kodeUnikPeserta,
+        kodeUnik: kodeUnikPeserta || "-",
         kelas: String(kelasAktif),
         mapel: mapelUjianAktif,
-        tipeUjian: tipeUjianSimpan,
         kategori: kategoriUjianAktif,
         benar: `${jumlahBenar}/${totalSoal}`,
         nilai: nilaiAkhir
-      });
+      };
 
       document.getElementById("app").innerHTML = `
         <div class="card card-cbt" style="text-align:center;">
           <div style="font-size:2.6rem;">📋</div>
           <h2 style="color:#0f172a; font-size:1.3rem; margin:6px 0;">Ujian Telah Dikumpulkan</h2>
-          <p id="statusSyncUjian" style="color:#0284c7; font-size:0.86rem; margin-bottom:14px;">⏳ Mengirim nilai ke Cloud Firebase...</p>
+          <div id="statusSyncUjian" style="font-size:0.86rem; margin-bottom:12px; color:#0284c7; font-weight:700;">
+            ⏳ Mengirim nilai otomatis ke Rekap Admin...
+          </div>
 
           <div style="background:#f8fafc; border-radius:12px; padding:14px; border:1px solid #cbd5e1; font-size:0.92rem; color:#1e293b; text-align:left; line-height:1.7;">
             <div><strong>Sekolah:</strong> SDN Seddur 1</div>
@@ -1056,464 +330,10 @@
             </div>
           </div>
 
-          <button class="btn-aksi" style="width:100%; margin-top:14px; background:#0f172a; box-shadow:none;" onclick="tampilBeranda()">🏠 Kembali ke Home</button>
+          <button class="btn-aksi" style="width:100%; margin-top:14px; background:#0f172a;" onclick="tampilBeranda()">🏠 Kembali ke Home</button>
         </div>`;
-    }
 
-            function tampilPertanyaanKuis() {
-      if (indeksSoal >= soalPermainan.length) { tampilSertifikatKuis(); return; }
-      sudahMenjawab = false;
-      const s = soalPermainan[indeksSoal];
-      const persen = Math.round((indeksSoal / soalPermainan.length) * 100);
-      const babObj = window.DATA_SEDDUR[kelasAktif][mapelAktif][babAktif];
-      if (kelasAktif <= 3) ucapkan(s.tanya);
-      let opsiHTML = s.opsi.map((teks, idx) => `<button class="opsi-btn" id="pilihan-${idx}" onclick="periksaJawabanKuis(${idx})">${teks}</button>`).join("");
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilMenuBab('${mapelAktif}')">⬅️ Bab</button><div class="star-bar">⭐ ${skorTotal} | ${indeksSoal + 1}/${soalPermainan.length}</div></div>
-        <div class="progress-wrap"><div class="progress-fill" style="width:${persen}%"></div></div>
-        <div class="card">
-          <div style="font-size:0.8rem; font-weight:700; color:#0284c7; margin-bottom:4px;">Kelas ${kelasAktif} • ${babObj.bab}</div>
-          ${comboBenar >= 2 ? `<div class="combo-badge">🔥 Combo Benar ${comboBenar}x! (+Bonus)</div>` : ''}
-          <div class="visual-box"><span class="visual-ikon anim-bounce">${s.ikon}</span>${s.tanya}</div>
-          <button class="btn-suara" onclick="ucapkan('${s.tanya.replace(/'/g, "")}')">🔊 Dengarkan Soal</button>
-          <div class="opsi-grid">${opsiHTML}</div>
-          <div id="areaPembahasan"></div>
-        </div>`;
-    }
-
-    function periksaJawabanKuis(pilihan) {
-      if (sudahMenjawab) return;
-      sudahMenjawab = true;
-      const s = soalPermainan[indeksSoal];
-      const btnPilih = document.getElementById("pilihan-" + pilihan);
-      const btnBenar = document.getElementById("pilihan-" + s.kunci);
-      if (pilihan === s.kunci) {
-        btnPilih.classList.add("benar"); jumlahBenar++; comboBenar++;
-        const bonus = comboBenar >= 3 ? 20 : (comboBenar === 2 ? 10 : 0);
-        skorTotal += (100 + bonus); mainkanEfek('benar'); ucapkan(`Hebat! Jawabanmu benar!`);
-        setTimeout(() => { indeksSoal++; tampilPertanyaanKuis(); }, 1250);
-      } else {
-        btnPilih.classList.add("salah"); btnBenar.classList.add("benar"); comboBenar = 0; mainkanEfek('salah');
-        ucapkan("Kurang tepat, yuk baca pembahasannya!");
-        document.getElementById("areaPembahasan").innerHTML = `<div class="info-bahas">💡 <strong>Pembahasan:</strong> ${s.bahas}</div><button class="btn-aksi" onclick="lanjutSoalKuis()">Soal Berikutnya ➡️</button>`;
-      }
-    }
-
-    function lanjutSoalKuis() { mainkanEfek('klik'); indeksSoal++; tampilPertanyaanKuis(); }
-
-    function tampilSertifikatKuis() {
-      mainkanEfek('benar');
-      const totalSoal = soalPermainan.length;
-      const nilaiAkhir = Math.round((jumlahBenar / totalSoal) * 100);
-      const infoMapel = getInfoMapel(mapelAktif);
-      const babObj = window.DATA_SEDDUR[kelasAktif][mapelAktif][babAktif];
-      let gelar = "Pejuang Tangguh SDN Seddur 1", ikonGelar = "💪😊", ucapanSkor = `Semangat terus! Nilai kamu ${nilaiAkhir}.`;
-      if (nilaiAkhir >= 85) { gelar = "Profesor Cilik SDN Seddur 1"; ikonGelar = "🏆👑"; ucapanSkor = `Luar biasa! Kamu meraih nilai ${nilaiAkhir} dan mendapatkan gelar Profesor Cilik SDN Seddur 1!`; }
-      else if (nilaiAkhir >= 65) { gelar = "Jagoan Hebat SDN Seddur 1"; ikonGelar = "🌟🎖️"; ucapanSkor = `Mantap sekali! Nilai kamu ${nilaiAkhir}. Sedikit lagi menuju nilai sempurna!`; }
-      ucapkan(ucapanSkor);
-      document.getElementById("app").innerHTML = `
-        <div class="card">
-          <div class="sertifikat">
-            <div style="font-size:3.5rem;" class="anim-bounce">${ikonGelar}</div>
-            <div style="font-size:0.82rem; font-weight:700; color:#b45309; letter-spacing:1px; margin-top:4px;">SERTIFIKAT KUIS BELAJAR (TA 2026/2027)</div>
-            <h2 style="color:#0284c7; font-size:1.35rem; margin:6px 0;">${namaSiswa}</h2>
-            <p style="font-size:0.95rem; font-weight:700; color:#15803d; margin-bottom:8px;">🏅 ${gelar}</p>
-            <div style="background:#ffffff; border-radius:14px; padding:10px; border:2px solid #fde68a; font-size:0.9rem; color:#334155; text-align:left;">
-              <div><strong>Sekolah:</strong> SDN Seddur 1</div>
-              <div><strong>Kelas / Mapel:</strong> Kelas ${kelasAktif} • ${infoMapel.judul}</div>
-              <div><strong>Materi:</strong> ${babObj.bab}</div>
-              <div><strong>Jawaban Benar:</strong> ${jumlahBenar} dari ${totalSoal} Soal</div>
-              <div style="font-size:1.25rem; font-weight:700; color:#d97706; margin-top:6px; text-align:center;">Nilai Akhir: ${nilaiAkhir} (Skor: ${skorTotal})</div>
-            </div>
-          </div>
-          <button class="btn-aksi" onclick="mulaiBab(${babAktif})">🔄 Ulangi Bab Ini (Acak Soal)</button><br><br>
-          <button class="bg-kembali" onclick="tampilMenuBab('${mapelAktif}')">📖 Pilih Bab Lain</button>
-          <button class="bg-kembali" onclick="tampilMenuMapel()">📚 Ganti Mapel</button>
-        </div>`;
-    }
-
-            function ubahModeTargetGenerator() {
-      const target = document.getElementById("genTargetMode").value;
-      document.getElementById("blokTargetUjian").style.display = (target === "UJIAN") ? "block" : "none";
-      document.getElementById("blokTargetTKA").style.display = (target === "TKA") ? "block" : "none";
-    }
-
-            const SB_URL = "https://supabase.co";
-    const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
-
-         function simpanRekapNilai(record) {
-      const SB_URL = "https://supabase.co";
-      const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
-
-      try {
-        const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
-        list.push(record);
-        localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
-      } catch (e) {}
-
-      fetch(`${SB_URL}?apikey=${SB_KEY}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Prefer": "return=minimal"
-        },
-        body: JSON.stringify({
-          id: String(record.id),
-          tanggal: String(record.tanggal),
-          nama: String(record.nama),
-          kode_unik: String(record.kodeUnik || "-"),
-          kelas: String(record.kelas),
-          mapel: String(record.mapel),
-          kategori: String(record.kategori),
-          benar: String(record.benar),
-          nilai: Number(record.nilai) || 0
-        })
-      })
-      .then(res => {
-        const infoEl = document.getElementById("statusSyncUjian");
-        if (res.ok) {
-          if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% terkirim &amp; masuk ke Rekap Admin!</span>`;
-        } else {
-          res.text().then(txt => {
-            if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan (${res.status}): ${txt}</span>`;
-          });
-        }
-      })
-      .catch(err => {
-        const infoEl = document.getElementById("statusSyncUjian");
-        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Koneksi gagal: ${err.message}</span>`;
-      });
-    }
-
-
-    function tampilLoginAdmin() {
-      hentikanTimer();
-      sedangModeTKA = false;
-      document.body.classList.remove("mode-cbt");
-      setNavAktif("nav-admin");
-      mainkanEfek('klik');
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Home</button><div class="star-bar">🔑 Area Admin</div></div>
-        <div class="card">
-          <div style="font-size:2.5rem;">🛡️</div>
-          <h2 style="color:#0f172a; font-size:1.2rem; margin-top:4px;">Login Administrator</h2>
-          <p style="color:#64748b; font-size:0.82rem; margin-bottom:10px;">Masukkan password admin sesuai pengaturan pada file <code>kode_ujian.js</code></p>
-          <input type="password" id="inputPassAdmin" class="input-nama" placeholder="Masukkan Password Admin..." />
-          <button class="btn-aksi" style="width:100%;" onclick="prosesLoginAdmin()">Masuk Dashboard Admin 🔓</button>
-        </div>`;
-    }
-
-    function prosesLoginAdmin() {
-      if (document.getElementById("inputPassAdmin").value.trim() === getPasswordAdmin()) {
-        mainkanEfek('benar');
-        tampilDashboardAdmin();
-      } else {
-        mainkanEfek('salah');
-        alert("Password Admin salah!");
-      }
-    }
-
-    function tampilDashboardAdmin() {
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilBeranda()">⬅️ Keluar Admin</button><div class="star-bar">⚙️ Panel Admin</div></div>
-        <div class="card"><h2 style="color:#0284c7; font-size:1.2rem;">Dashboard Admin SDN Seddur 1</h2><p style="color:#64748b; font-size:0.84rem;">Generator soal AI (8 Mapel + Mapel Baru + TKA) &amp; rekap nilai tersinkron Firebase Cloud</p></div>
-        <button class="menu-btn m-ipas" onclick="adminGeneratorSoal()"><span>1. 🤖 Generator Soal AI &amp; Kode GitHub</span><span>▶️</span></button>
-        <button class="menu-btn m-bing" onclick="adminRekapNilai()"><span>2. 📊 Lihat &amp; Filter Rekap Nilai Siswa</span><span>▶️</span></button>`;
-    }
-
-            function adminGeneratorSoal() {
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">🤖 Generator Soal AI</div></div>
-        <div class="card" style="text-align:left;">
-          <h3 style="color:#0284c7; text-align:center;">Generator Soal AI &amp; Kode GitHub</h3>
-          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-bottom:10px;">Mendukung PAI, B. Madura, Kesenian, Mapel Umum, Tambah Mapel Baru &amp; Tes TKA</p>
-
-          <label class="label-form">1. Pilih Target File:</label>
-          <select id="genTargetMode" class="input-form" onchange="ubahModeTargetGenerator()">
-            <option value="UJIAN">Ujian Kelas (ujian1.js – ujian6.js)</option>
-            <option value="TKA">Simulasi Tes TKA (tka.js)</option>
-          </select>
-
-          <div id="blokTargetUjian">
-            <label class="label-form">2. Pilih Kelas:</label>
-            <select id="genKelas" class="input-form" onchange="perbaruiOpsiMapelGenerator()">
-              <option value="1">Kelas 1 (ujian1.js)</option>
-              <option value="2">Kelas 2 (ujian2.js)</option>
-              <option value="3">Kelas 3 (ujian3.js)</option>
-              <option value="4" selected>Kelas 4 (ujian4.js)</option>
-              <option value="5">Kelas 5 (ujian5.js)</option>
-              <option value="6">Kelas 6 (ujian6.js)</option>
-            </select>
-
-            <label class="label-form">3. Mata Pelajaran:</label>
-            <select id="genMapel" class="input-form" onchange="cekMapelBaruInput(); perbaruiOpsiBabGenerator();"></select>
-            <input type="text" id="genMapelBaruInput" class="input-form" style="display:none; border-color:#f59e0b; background:#fffbeb;" placeholder="Ketik Nama Mata Pelajaran Baru (Contoh: PJOK, Informatika)..." oninput="perbaruiOpsiBabGenerator()" />
-
-            <label class="label-form">4. Jenis Ujian:</label>
-            <select id="genKategori" class="input-form" onchange="togglePilihanBabGenerator()">
-              <option value="BAB">Ujian Per Bab (5 Menit / Soal)</option>
-              <option value="UTS Semester 1">UTS Semester 1 (90 Menit Total)</option>
-              <option value="UAS Semester 1">UAS Semester 1 (90 Menit Total)</option>
-              <option value="UTS Semester 2">UTS Semester 2 (90 Menit Total)</option>
-              <option value="UAS Semester 2">UAS Semester 2 (90 Menit Total)</option>
-            </select>
-
-            <div id="wadahPilihBabGen">
-              <label class="label-form">4b. Pilih Bab dari <code>ujianX.js</code> atau Buat Judul Bab Baru:</label>
-              <select id="genDaftarBab" class="input-form" onchange="cekBabBaruInput()"></select>
-              <input type="text" id="genBabBaruInput" class="input-form" style="display:none; border-color:#10b981; background:#ecfdf5;" placeholder="Ketik Nama Bab Baru..." />
-            </div>
-          </div>
-
-          <div id="blokTargetTKA" style="display:none;">
-            <label class="label-form">2. Mata Pelajaran TKA:</label>
-            <select id="genMapelTKA" class="input-form">
-              <option value="bindo|Bahasa Indonesia">Bahasa Indonesia (Literasi)</option>
-              <option value="mtk|Matematika">Matematika (Numerasi)</option>
-            </select>
-
-            <label class="label-form">3. Pilih Sesi TKA:</label>
-            <select id="genSesiTKA" class="input-form">
-              <option value="Sesi 1">Sesi 1</option>
-              <option value="Sesi 2">Sesi 2</option>
-              <option value="Sesi 3">Sesi 3</option>
-            </select>
-          </div>
-
-          <label class="label-form">5. Topik / Pokok Materi:</label>
-          <input type="text" id="genTopik" class="input-form" placeholder="Contoh: Rukun Iman, Basa Enja'-Iya, Seni Rupa, Pecahan..." />
-
-          <label class="label-form">6. Mode Gambar Soal &amp; Jawaban:</label>
-          <select id="genModeGambar" class="input-form">
-            <option value="Teks Biasa dengan Emoji">Teks Biasa dengan Emoji</option>
-            <option value="Soal Bergambar SVG (properti 'svg') dengan Pilihan Teks">Soal Bergambar SVG + Jawaban Teks</option>
-            <option value="Soal Teks dengan Pilihan Jawaban Bergambar SVG (properti 'pSvg')">Soal Teks + Jawaban Bergambar SVG</option>
-            <option value="Campuran Soal & Jawaban Bergambar SVG (properti 'svg' & 'pSvg')">Campuran Soal &amp; Jawaban SVG</option>
-          </select>
-
-          <label class="label-form">7. Jumlah Soal yang Dibuat:</label>
-          <select id="genJumlah" class="input-form">
-            <option value="5">5 Soal</option>
-            <option value="10" selected>10 Soal</option>
-            <option value="15">15 Soal</option>
-            <option value="30">30 Soal</option>
-          </select>
-
-          <button class="btn-aksi" style="width:100%; margin-top:12px;" onclick="buatKodeSoalGitHub()">⚡ Generate Prompt AI &amp; Kode GitHub</button>
-
-          <label class="label-form" style="margin-top:14px; color:#0284c7;">📋 Hasil 1: Prompt AI (Salin &amp; Tempel ke ChatGPT/Gemini):</label>
-          <textarea id="hasilPromptAI" class="textarea-kode" style="min-height:140px; color:#fde047;" readonly placeholder="Klik tombol Generate di atas..."></textarea>
-          <button class="btn-aksi" style="width:100%;" onclick="salinTeks('hasilPromptAI')">📋 Salin Prompt AI</button>
-
-          <label class="label-form" style="margin-top:14px; color:#059669;">💻 Hasil 2: Template Kode GitHub (Tempel di Baris Paling Bawah File):</label>
-          <textarea id="hasilKodeSoal" class="textarea-kode" style="min-height:170px;" readonly placeholder="Kerangka kode lengkap dengan penutup akan muncul di sini..."></textarea>
-          <button class="btn-aksi btn-sukses" style="width:100%;" onclick="salinTeks('hasilKodeSoal')">📋 Salin Kode GitHub</button>
-        </div>`;
-      ubahModeTargetGenerator();
-      perbaruiOpsiMapelGenerator();
-      togglePilihanBabGenerator();
-    }
-
-            function ubahModeTargetGenerator() {
-      const target = document.getElementById("genTargetMode").value;
-      document.getElementById("blokTargetUjian").style.display = (target === "UJIAN") ? "block" : "none";
-      document.getElementById("blokTargetTKA").style.display = (target === "TKA") ? "block" : "none";
-    }
-
-    function perbaruiOpsiMapelGenerator() {
-      const kls = Number(document.getElementById("genKelas").value);
-      const daftarKode = getSemuaKodeMapelKelas(kls);
-      const selectMapel = document.getElementById("genMapel");
-      let opsiHTML = daftarKode.map(kode => {
-        const info = getInfoMapel(kode);
-        return `<option value="${kode}|${info.judul}">${info.judul}</option>`;
-      }).join("");
-      opsiHTML += `<option value="__MAPEL_BARU__">➕ Buat Mata Pelajaran Baru...</option>`;
-      selectMapel.innerHTML = opsiHTML;
-      cekMapelBaruInput();
-      perbaruiOpsiBabGenerator();
-    }
-
-    function cekMapelBaruInput() {
-      const val = document.getElementById("genMapel").value;
-      const inputBaru = document.getElementById("genMapelBaruInput");
-      inputBaru.style.display = (val === "__MAPEL_BARU__") ? "block" : "none";
-    }
-
-    function togglePilihanBabGenerator() {
-      const kat = document.getElementById("genKategori").value;
-      document.getElementById("wadahPilihBabGen").style.display = (kat === "BAB") ? "block" : "none";
-    }
-
-    function perbaruiOpsiBabGenerator() {
-      const kls = Number(document.getElementById("genKelas").value);
-      const mapelVal = document.getElementById("genMapel").value;
-      const selectBab = document.getElementById("genDaftarBab");
-
-      if (mapelVal === "__MAPEL_BARU__") {
-        selectBab.innerHTML = `<option value="__BARU__">➕ Buat Judul Bab Baru...</option>`;
-        cekBabBaruInput();
-        return;
-      }
-
-      const kodeMapel = mapelVal.split("|");
-      const daftarBab = getDaftarBabSinkron(kls, kodeMapel);
-      let opsiHTML = daftarBab.map(b => `<option value="${b.bab}">${b.bab}</option>`).join("");
-      opsiHTML += `<option value="__BARU__">➕ Buat Judul Bab Baru...</option>`;
-      selectBab.innerHTML = opsiHTML;
-      cekBabBaruInput();
-    }
-
-    function cekBabBaruInput() {
-      const val = document.getElementById("genDaftarBab").value;
-      const inputBaru = document.getElementById("genBabBaruInput");
-      inputBaru.style.display = (val === "__BARU__") ? "block" : "none";
-    }
-
-    function buatKodeSoalGitHub() {
-      const target = document.getElementById("genTargetMode").value;
-      const modeGbr = document.getElementById("genModeGambar").value;
-      const jumlah = parseInt(document.getElementById("genJumlah").value, 10);
-
-      let fileTujuan = "";
-      let pembuka = "";
-      let ketTarget = "";
-      let topik = document.getElementById("genTopik").value.trim();
-
-      if (target === "TKA") {
-        const mapelTKAParts = document.getElementById("genMapelTKA").value.split("|");
-        const kodeTKA = mapelTKAParts;
-        const namaTKA = mapelTKAParts;
-        const sesiTKA = document.getElementById("genSesiTKA").value;
-        topik = topik || `Simulasi TKA ${namaTKA} ${sesiTKA}`;
-        fileTujuan = "tka.js";
-        pembuka = `window.tambahSoalTKA("${kodeTKA}", "${sesiTKA}", [`;
-        ketTarget = `Simulasi Tes TKA SD • Mata Pelajaran: ${namaTKA} • ${sesiTKA}`;
-      } else {
-        const kls = document.getElementById("genKelas").value;
-        const mapelVal = document.getElementById("genMapel").value;
-        let kodeMapel = "";
-        let namaMapel = "";
-        let barisDaftarMapel = "";
-
-        if (mapelVal === "__MAPEL_BARU__") {
-          namaMapel = document.getElementById("genMapelBaruInput").value.trim() || "Mapel Baru";
-          kodeMapel = namaMapel.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "") || "mapel_baru";
-          barisDaftarMapel = `window.daftarMapelBaru("${kodeMapel}", "${namaMapel}");\n`;
-        } else {
-          const mapelRaw = mapelVal.split("|");
-          kodeMapel = mapelRaw;
-          namaMapel = mapelRaw;
-        }
-
-        const kat = document.getElementById("genKategori").value;
-        let namaPaketAtauBab = kat;
-        if (kat === "BAB") {
-          namaPaketAtauBab = document.getElementById("genDaftarBab").value;
-          if (namaPaketAtauBab === "__BARU__") {
-            namaPaketAtauBab = document.getElementById("genBabBaruInput").value.trim() || "Bab Baru";
-          }
-        }
-        topik = topik || namaPaketAtauBab;
-        fileTujuan = `ujian${kls}.js`;
-        pembuka = `${barisDaftarMapel}window.tambahPaketUjian("${kls}", "${kodeMapel}", "${namaPaketAtauBab}", [`;
-        ketTarget = `SD Kelas ${kls} • Mata Pelajaran: ${namaMapel} • ${namaPaketAtauBab}`;
-      }
-
-      const penutup = `]);`;
-      let contohItem = `  {\n    "q": "Pertanyaan...",\n    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],\n    "b": 0,\n    "bahas": "Pembahasan."\n  }`;
-      if (modeGbr.includes("pSvg")) {
-        contohItem = `  {\n    "q": "Pertanyaan...",\n    "p": ["Gambar A", "Gambar B", "Gambar C", "Gambar D"],\n    "pSvg": ["<svg width='80' height='40' xmlns='http://w3.org'><rect width='80' height='40' fill='#dcfce7'/></svg>", "<svg width='80' height='40' xmlns='http://w3.org'><rect width='80' height='40' fill='#fee2e2'/></svg>", "<svg width='80' height='40' xmlns='http://w3.org'><rect width='80' height='40' fill='#fef3c7'/></svg>", "<svg width='80' height='40' xmlns='http://w3.org'><rect width='80' height='40' fill='#e0e7ff'/></svg>"],\n    "b": 0,\n    "bahas": "Pembahasan."\n  }`;
-      } else if (modeGbr.includes("svg")) {
-        contohItem = `  {\n    "svg": "<svg width='160' height='60' xmlns='http://w3.org'><rect x='10' y='10' width='140' height='40' rx='8' fill='#e0f2fe' stroke='#0284c7'/></svg>",\n    "q": "Perhatikan gambar di atas! ...",\n    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],\n    "b": 0,\n    "bahas": "Pembahasan."\n  }`;
-      }
-
-      const promptAI = `Buatkan ${jumlah} soal pilihan ganda Kurikulum Merdeka Tahun Ajaran 2026/2027.\n- Target: ${ketTarget}\n- Topik Materi: ${topik}\n- Format Visual: ${modeGbr}\n\nATURAN WAJIB FORMAT OUTPUT:\nTuliskan HANYA dalam bentuk kode JavaScript utuh lengkap dengan pembuka dan penutup "]);" di bagian akhir agar bisa langsung ditempel di BARIS PALING BAWAH file ${fileTujuan}:\n\n${pembuka}\n${contohItem}\n${penutup}\n\nPastikan seluruh ${jumlah} soal berada di dalam array tersebut, indeks "b" (0=A, 1=B, 2=C, 3=D) akurat, gunakan kutip tunggal (') di dalam kode SVG jika memakai SVG, dan akhiri dengan penutup ]);`;
-
-      let daftarTemplate = [];
-      for (let i = 1; i <= jumlah; i++) {
-        daftarTemplate.push(`  {\n    "q": "Soal nomor ${i} (${topik})...",\n    "p": ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],\n    "b": 0,\n    "bahas": "Pembahasan soal nomor ${i}."\n  }`);
-      }
-
-      const kodeGitHub = `// Tempelkan di BARIS PALING BAWAH file ${fileTujuan}\n${pembuka}\n${daftarTemplate.join(",\n")}\n${penutup}`;
-
-      document.getElementById("hasilPromptAI").value = promptAI;
-      document.getElementById("hasilKodeSoal").value = kodeGitHub;
-      mainkanEfek('benar');
-    }
-
-    function salinTeks(idEl) {
-      const el = document.getElementById(idEl);
-      el.select();
-      document.execCommand("copy");
-      alert("✅ Kode berhasil disalin! Silakan tempel di baris paling bawah file GitHub Anda.");
-    }
-
-            function adminRekapNilai() {
-      document.getElementById("app").innerHTML = `
-        <div class="top-bar no-print"><button class="bg-kembali" onclick="tampilDashboardAdmin()">⬅️ Dashboard</button><div class="star-bar">📊 Rekap Nilai Cloud</div></div>
-        <div class="card">
-          <h2 style="color:#0284c7; font-size:1.18rem;">Rekap Nilai Ujian SDN Seddur 1</h2>
-          <p style="font-size:0.8rem; color:#64748b;">Tersinkron real-time dari semua HP &amp; Laptop via Firebase Cloud</p>
-
-          <div class="no-print" style="display:grid; grid-template-columns:1fr; gap:6px; margin-top:10px; text-align:left;">
-            <label class="label-form" style="margin-top:2px;">1. Pilih Kelas:</label>
-            <select id="filterKelas" class="input-form" style="margin:0;" onchange="perbaruiOpsiMapelRekap(); renderTabelNilai();">
-              <option value="ALL" selected>Semua Kelas (1 - 6)</option>
-              <option value="1">Kelas 1 (Spesifik)</option>
-              <option value="2">Kelas 2 (Spesifik)</option>
-              <option value="3">Kelas 3 (Spesifik)</option>
-              <option value="4">Kelas 4 (Spesifik)</option>
-              <option value="5">Kelas 5 (Spesifik)</option>
-              <option value="6">Kelas 6 (Spesifik)</option>
-            </select>
-
-            <label class="label-form" style="margin-top:4px;">2. Pilih Mata Pelajaran:</label>
-            <select id="filterMapel" class="input-form" style="margin:0;" onchange="perbaruiOpsiBabRekap(); renderTabelNilai();"></select>
-
-            <label class="label-form" style="margin-top:4px;">3. Pilih Jenis Ujian:</label>
-            <select id="filterTipeUjian" class="input-form" style="margin:0;" onchange="toggleFilterBabSpesifik(); perbaruiOpsiBabRekap(); renderTabelNilai();">
-              <option value="ALL" selected>Semua Jenis Ujian (UTS, UAS &amp; Per Bab)</option>
-              <option value="UAS_ALL">Semua UAS (Semester 1 &amp; 2)</option>
-              <option value="UAS Semester 1">UAS Semester 1 (Spesifik)</option>
-              <option value="UAS Semester 2">UAS Semester 2 (Spesifik)</option>
-              <option value="UTS_ALL">Semua UTS (Semester 1 &amp; 2)</option>
-              <option value="UTS Semester 1">UTS Semester 1 (Spesifik)</option>
-              <option value="UTS Semester 2">UTS Semester 2 (Spesifik)</option>
-              <option value="BAB">Ujian Per Bab (Pilih Bab di Bawah)</option>
-            </select>
-
-            <div id="wadahFilterBabRekap" style="display:none;">
-              <label class="label-form" style="margin-top:4px; color:#0284c7;">3b. Pilih Bab Spesifik (Sesuai Kelas &amp; Mapel):</label>
-              <select id="filterBabSpesifik" class="input-form" style="margin:0; border-color:#0284c7; background:#e0f2fe;" onchange="renderTabelNilai()"></select>
-            </div>
-
-            <label class="label-form" style="margin-top:4px;">4. Filter Kode Unik / Sesi Peserta:</label>
-            <select id="filterKodeUnik" class="input-form" style="margin:0;" onchange="renderTabelNilai()">
-              <option value="ALL">Semua Kode Unik Peserta</option>
-            </select>
-          </div>
-
-          <div class="no-print" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:12px;">
-            <button type="button" class="btn-aksi" style="font-size:0.84rem; padding:10px 14px; margin:0; background:#0284c7;" onclick="muatRekapDariCloud()">🔄 Refresh Data Cloud</button>
-            <button type="button" class="btn-aksi btn-sukses" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="downloadExcelTerfilter()">📥 Download Excel (.csv)</button>
-            <button type="button" class="btn-aksi" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="window.print()">🖨️ Cetak PDF / Print</button>
-            <button type="button" class="btn-aksi btn-bahaya" style="font-size:0.84rem; padding:10px 14px; margin:0;" onclick="hapusDataHasilFilter()">🗑️ Hapus Data Filter</button>
-          </div>
-
-          <div id="infoRingkasanFilter" style="margin-top:10px; font-size:0.82rem; font-weight:700; color:#0f172a; background:#e0f2fe; padding:8px 10px; border-radius:10px;">⏳ Memuat data Cloud...</div>
-          <div id="wadahTabelNilai"></div>
-        </div>`;
-      perbaruiOpsiMapelRekap();
-      toggleFilterBabSpesifik();
-      muatRekapDariCloud();
-    }
-
-           function getKlienSupabase() {
-      return window.supabase.createClient(
-        "https://supabase.co",
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU"
-      );
+      simpanRekapNilai(recordBaru);
     }
 
     async function simpanRekapNilai(record) {
@@ -1541,196 +361,329 @@
         if (!error) {
           if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; masuk ke Rekap Admin!</span>`;
         } else {
-          if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan: ${error.message}</span>`;
+          if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan Cloud: ${error.message}</span>`;
         }
       } catch (err) {
         const infoEl = document.getElementById("statusSyncUjian");
-        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Error sistem: ${err.message}</span>`;
+        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Koneksi gagal: ${err.message}</span>`;
       }
     }
 
-            function perbaruiOpsiMapelRekap() {
-      const fKelasVal = document.getElementById("filterKelas").value;
-      const selectMapel = document.getElementById("filterMapel");
-      const klsNum = fKelasVal === "ALL" ? 6 : Number(fKelasVal);
-      const daftarKode = getSemuaKodeMapelKelas(klsNum);
-      selectMapel.innerHTML = `<option value="ALL|Semua Mata Pelajaran">Semua Mata Pelajaran</option>` +
-        daftarKode.map(kode => {
-          const info = getInfoMapel(kode);
-          return `<option value="${kode}|${info.judul}">${info.judul} (Spesifik)</option>`;
-        }).join("");
-      perbaruiOpsiBabRekap();
+        function loginAdmin() {
+      const pin = prompt("Masukkan PIN Guru / Admin (Default: 1234):");
+      if (pin === null) return;
+      if (pin !== PIN_ADMIN) {
+        alert("PIN salah!");
+        return;
+      }
+      tampilMenuAdmin();
     }
 
-    function toggleFilterBabSpesifik() {
-      const tipe = document.getElementById("filterTipeUjian").value;
-      const wadah = document.getElementById("wadahFilterBabRekap");
-      if (wadah) wadah.style.display = (tipe === "BAB") ? "block" : "none";
+    function tampilMenuAdmin() {
+      document.getElementById("app").innerHTML = `
+        <div class="card card-cbt">
+          <h2 style="margin-top:0; font-size:1.15rem;">Panel Guru / Admin — SDN Seddur 1</h2>
+          <button class="btn-aksi btn-sukses" style="width:100%; margin-bottom:10px;" onclick="adminRekapNilai()">📊 Buka Rekap Nilai Siswa (Cloud)</button>
+          <button class="btn-aksi" style="width:100%; margin-bottom:10px;" onclick="adminKelolaSoal()">📝 Kelola Bank Soal Ujian</button>
+          <button class="btn-aksi" style="width:100%; background:#64748b;" onclick="tampilBeranda()">🏠 Keluar ke Beranda</button>
+        </div>`;
     }
 
-    function perbaruiOpsiBabRekap() {
-      const selectBab = document.getElementById("filterBabSpesifik");
-      if (!selectBab) return;
-      const fKelasVal = document.getElementById("filterKelas").value;
-      const mapelParts = document.getElementById("filterMapel").value.split("|");
-      const kodeMapel = mapelParts || "ALL";
-      const namaMapel = mapelParts || "";
+    function adminKelolaSoal() {
+      const daftarKelas = ["1", "2", "3", "4", "5", "6"];
+      document.getElementById("app").innerHTML = `
+        <div class="card card-cbt">
+          <h2 style="margin-top:0; font-size:1.1rem;">Tambah Soal Baru</h2>
+          <label class="label-form">Kelas:</label>
+          <select id="admKelas" class="input-form" onchange="renderDaftarSoalAdmin()">
+            ${daftarKelas.map(k => `<option value="${k}">Kelas ${k}</option>`).join("")}
+          </select>
 
-      const daftarOpsiBab = [];
-      if (fKelasVal !== "ALL" && kodeMapel !== "ALL") {
-        const sinkron = getDaftarBabSinkron(Number(fKelasVal), kodeMapel);
-        sinkron.forEach(b => { if (!daftarOpsiBab.includes(b.bab)) daftarOpsiBab.push(b.bab); });
+          <label class="label-form">Mata Pelajaran:</label>
+          <select id="admMapel" class="input-form" onchange="renderDaftarSoalAdmin()">
+            ${DAFTAR_MAPEL.map(m => `<option value="${m}">${m}</option>`).join("")}
+          </select>
+
+          <label class="label-form">Jenis / Materi Ujian:</label>
+          <select id="admKategori" class="input-form" onchange="renderDaftarSoalAdmin()">
+            ${DAFTAR_KATEGORI.map(kat => `<option value="${kat}">${kat}</option>`).join("")}
+          </select>
+
+          <label class="label-form">Pertanyaan:</label>
+          <textarea id="admTanya" class="input-form" rows="3" placeholder="Tulis pertanyaan di sini..."></textarea>
+
+          <label class="label-form">Pilihan Jawaban:</label>
+          <input type="text" id="admOpsi0" class="input-form" placeholder="Pilihan A" />
+          <input type="text" id="admOpsi1" class="input-form" placeholder="Pilihan B" />
+          <input type="text" id="admOpsi2" class="input-form" placeholder="Pilihan C" />
+          <input type="text" id="admOpsi3" class="input-form" placeholder="Pilihan D" />
+
+          <label class="label-form">Kunci Jawaban Benar:</label>
+          <select id="admKunci" class="input-form">
+            <option value="0">A</option>
+            <option value="1">B</option>
+            <option value="2">C</option>
+            <option value="3">D</option>
+          </select>
+
+          <button class="btn-aksi btn-sukses" style="width:100%;" onclick="simpanSoalBaru()">💾 Simpan Soal</button>
+          <button class="btn-aksi" style="width:100%; margin-top:8px; background:#64748b;" onclick="tampilMenuAdmin()">⬅️ Kembali ke Menu Admin</button>
+
+          <hr style="margin:16px 0; border:none; border-top:1px dashed #cbd5e1;" />
+          <div id="wadahDaftarSoalAdmin"></div>
+        </div>`;
+      renderDaftarSoalAdmin();
+    }
+
+    function simpanSoalBaru() {
+      const kelas = document.getElementById("admKelas").value;
+      const mapel = document.getElementById("admMapel").value;
+      const kategori = document.getElementById("admKategori").value;
+      const tanya = (document.getElementById("admTanya").value || "").trim();
+      const opsi = [
+        (document.getElementById("admOpsi0").value || "").trim(),
+        (document.getElementById("admOpsi1").value || "").trim(),
+        (document.getElementById("admOpsi2").value || "").trim(),
+        (document.getElementById("admOpsi3").value || "").trim()
+      ];
+      const kunci = Number(document.getElementById("admKunci").value);
+
+      if (!tanya || opsi.some(o => !o)) {
+        alert("Pertanyaan dan semua pilihan A, B, C, D wajib diisi!");
+        return;
       }
 
-      const semua = cacheRekapCloud.length ? cacheRekapCloud : [];
-      semua.forEach(item => {
-        const isUTS_UAS = ["UTS Semester 1", "UAS Semester 1", "UTS Semester 2", "UAS Semester 2"].includes(item.kategori);
-        const cocokKls = (fKelasVal === "ALL") || (String(item.kelas) === String(fKelasVal));
-        const cocokMpl = (kodeMapel === "ALL") || ((item.mapel || "") === namaMapel);
-        if (!isUTS_UAS && cocokKls && cocokMpl) {
-          if (item.kategori && !daftarOpsiBab.includes(item.kategori)) {
-            daftarOpsiBab.push(item.kategori);
-          }
+      const bank = getBankSoal();
+      bank.push({ id: String(Date.now()), kelas, mapel, kategori, tanya, opsi, kunci });
+      simpanBankSoal(bank);
+
+      document.getElementById("admTanya").value = "";
+      document.getElementById("admOpsi0").value = "";
+      document.getElementById("admOpsi1").value = "";
+      document.getElementById("admOpsi2").value = "";
+      document.getElementById("admOpsi3").value = "";
+      renderDaftarSoalAdmin();
+      alert("✅ Soal berhasil disimpan!");
+    }
+
+    function renderDaftarSoalAdmin() {
+      const kelas = document.getElementById("admKelas").value;
+      const mapel = document.getElementById("admMapel").value;
+      const kategori = document.getElementById("admKategori").value;
+      const huruf = ["A", "B", "C", "D"];
+      const cocok = getBankSoal().filter(s => s.kelas === kelas && s.mapel === mapel && s.kategori === kategori);
+
+      const el = document.getElementById("wadahDaftarSoalAdmin");
+      if (!el) return;
+      if (cocok.length === 0) {
+        el.innerHTML = `<p style="color:#64748b; font-size:0.86rem;">Belum ada soal untuk filter ini.</p>`;
+        return;
+      }
+      el.innerHTML = `
+        <h3 style="font-size:0.95rem; margin:0 0 8px;">Daftar Soal (${cocok.length} Soal)</h3>
+        ${cocok.map((s, idx) => `
+          <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:10px; padding:10px; margin-bottom:8px; font-size:0.85rem;">
+            <div><strong>${idx + 1}. ${s.tanya}</strong></div>
+            <div style="color:#15803d; margin-top:4px;">Kunci: ${huruf[s.kunci]} (${s.opsi[s.kunci]})</div>
+            <button class="btn-aksi btn-bahaya" style="padding:5px 10px; font-size:0.78rem; margin-top:6px;" onclick="hapusSoalId('${s.id}')">🗑️ Hapus</button>
+          </div>
+        `).join("")}`;
+    }
+
+    function hapusSoalId(idSoal) {
+      if (!confirm("Hapus soal ini?")) return;
+      const sisa = getBankSoal().filter(s => String(s.id) !== String(idSoal));
+      simpanBankSoal(sisa);
+      renderDaftarSoalAdmin();
+    }
+
+        function adminRekapNilai() {
+      const daftarKelas = ["1", "2", "3", "4", "5", "6"];
+      document.getElementById("app").innerHTML = `
+        <div class="card card-cbt">
+          <div class="no-print" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+            <h2 style="margin:0; font-size:1.1rem;">📊 Rekap Nilai Siswa</h2>
+            <button class="btn-aksi" style="padding:8px 12px; font-size:0.82rem; background:#0284c7;" onclick="muatRekapDariCloud()">🔄 Refresh Cloud</button>
+          </div>
+
+          <div class="no-print" style="background:#f8fafc; padding:10px; border-radius:12px; border:1px solid #cbd5e1;">
+            <label class="label-form">Filter Kelas:</label>
+            <select id="filterKelas" class="input-form" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Kelas</option>
+              ${daftarKelas.map(k => `<option value="${k}">Kelas ${k}</option>`).join("")}
+            </select>
+
+            <label class="label-form">Filter Mata Pelajaran:</label>
+            <select id="filterMapel" class="input-form" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Mata Pelajaran</option>
+              ${DAFTAR_MAPEL.map(m => `<option value="${m}">${m}</option>`).join("")}
+            </select>
+
+            <label class="label-form">Filter Materi / Jenis Ujian:</label>
+            <select id="filterKategori" class="input-form" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Materi / Ujian</option>
+              ${DAFTAR_KATEGORI.map(kat => `<option value="${kat}">${kat}</option>`).join("")}
+            </select>
+
+            <label class="label-form">Filter Kode Unik / Sesi:</label>
+            <select id="filterKodeUnik" class="input-form" onchange="renderTabelNilai()">
+              <option value="ALL">Semua Kode Unik</option>
+            </select>
+          </div>
+
+          <div id="infoRingkasanFilter" style="font-size:0.84rem; font-weight:700; color:#1e3a8a; margin:10px 0;">
+            ⏳ Memuat data...
+          </div>
+
+          <div style="overflow-x:auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Siswa</th>
+                  <th>Kode</th>
+                  <th>Kls</th>
+                  <th>Mapel</th>
+                  <th>Materi</th>
+                  <th>Benar</th>
+                  <th>Nilai</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyRekapNilai"></tbody>
+            </table>
+          </div>
+
+          <div class="no-print" style="display:flex; flex-direction:column; gap:8px; margin-top:14px;">
+            <button class="btn-aksi btn-sukses" onclick="downloadCSVNilai()">📥 Download Excel (.CSV)</button>
+            <button class="btn-aksi btn-kuning" onclick="window.print()">🖨️ Cetak / Simpan PDF</button>
+            <button class="btn-aksi btn-bahaya" onclick="hapusDataHasilFilter()">🗑️ Hapus Data Hasil Filter</button>
+            <button class="btn-aksi" style="background:#64748b;" onclick="tampilMenuAdmin()">⬅️ Kembali ke Menu Admin</button>
+          </div>
+        </div>`;
+
+      muatRekapDariCloud();
+    }
+
+    async function muatRekapDariCloud() {
+      const infoBox = document.getElementById("infoRingkasanFilter");
+      if (infoBox) infoBox.textContent = "⏳ Sedang menarik rekap nilai semua siswa dari Cloud...";
+
+      try {
+        const sb = getKlienSupabase();
+        const { data, error } = await sb.from("rekap_nilai").select("*").order("id", { ascending: false });
+        if (error) throw error;
+        if (Array.isArray(data)) {
+          cacheRekapCloud = data.map(r => ({
+            id: r.id,
+            tanggal: r.tanggal,
+            nama: r.nama,
+            kodeUnik: r.kode_unik || "-",
+            kelas: String(r.kelas),
+            mapel: r.mapel,
+            kategori: r.kategori,
+            benar: r.benar,
+            nilai: Number(r.nilai) || 0
+          }));
+          localStorage.setItem("seddur_rekap_nilai", JSON.stringify(cacheRekapCloud));
         }
-      });
+      } catch (err) {
+        if (infoBox) infoBox.textContent = "⚠️ Gagal tarik Cloud (" + err.message + "), tampil data lokal.";
+        try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
+      }
 
-      selectBab.innerHTML = `<option value="__ALL_BAB__">Semua Bab</option>` +
-        daftarOpsiBab.map(judul => `<option value="${judul}">${judul}</option>`).join("");
+      perbaruiOpsiKodeUnikRekap();
+      renderTabelNilai();
     }
 
     function perbaruiOpsiKodeUnikRekap() {
-      const selectUnik = document.getElementById("filterKodeUnik");
-      if (!selectUnik) return;
-      const semua = cacheRekapCloud.length ? cacheRekapCloud : [];
+      const sel = document.getElementById("filterKodeUnik");
+      if (!sel) return;
+      const lama = sel.value;
       const unikSet = new Set();
-      semua.forEach(item => {
+      cacheRekapCloud.forEach(item => {
         if (item.kodeUnik && item.kodeUnik !== "-") unikSet.add(String(item.kodeUnik).toUpperCase());
       });
-      selectUnik.innerHTML = `<option value="ALL">Semua Kode Unik Peserta</option>` +
-        Array.from(unikSet).sort().map(k => `<option value="${k}">${k} (Spesifik)</option>`).join("");
+      sel.innerHTML = `<option value="ALL">Semua Kode Unik</option>` +
+        Array.from(unikSet).sort().map(u => `<option value="${u}">${u}</option>`).join("");
+      if (Array.from(unikSet).includes(lama)) sel.value = lama;
     }
 
-            function getDataTersaring() {
-      let semua = cacheRekapCloud.length ? cacheRekapCloud : [];
-      if (!semua.length) {
-        try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
-      }
-      const fKelas = String(document.getElementById("filterKelas").value);
-      const mapelSplit = document.getElementById("filterMapel").value.split("|");
-      const fMapelKode = mapelSplit[0] || "ALL";
-      const fMapelNama = mapelSplit[1] || "";
-      const fTipe = document.getElementById("filterTipeUjian").value;
-      const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "__ALL_BAB__";
+    function getDataTersaring() {
+      const fKelas = document.getElementById("filterKelas").value;
+      const fMapel = document.getElementById("filterMapel").value;
+      const fKat = document.getElementById("filterKategori").value;
       const fUnik = document.getElementById("filterKodeUnik").value;
 
-      return semua.filter(item => {
-        const cocokKelas = (fKelas === "ALL") || (String(item.kelas) === fKelas);
-        const itemMapelLow = (item.mapel || "").trim().toLowerCase();
-        const filterMapelLow = fMapelNama.trim().toLowerCase();
-        const cocokMapel = (fMapelKode === "ALL") || (itemMapelLow === filterMapelLow) || itemMapelLow.includes(filterMapelLow);
-        const unikItem = (item.kodeUnik || "-").toUpperCase();
-        const cocokUnik = (fUnik === "ALL") || (unikItem === fUnik);
-
-        const katLow = (item.kategori || "").trim().toLowerCase();
-        const isUTS_UAS = ["uts semester 1", "uas semester 1", "uts semester 2", "uas semester 2"].includes(katLow);
-
-        let cocokUjian = false;
-        if (fTipe === "ALL") {
-          cocokUjian = true;
-        } else if (fTipe === "UAS_ALL") {
-          cocokUjian = katLow.includes("uas");
-        } else if (fTipe === "UTS_ALL") {
-          cocokUjian = katLow.includes("uts");
-        } else if (fTipe === "BAB") {
-          cocokUjian = (fBab === "__ALL_BAB__") ? !isUTS_UAS : (katLow === fBab.trim().toLowerCase());
-        } else {
-          cocokUjian = katLow === fTipe.trim().toLowerCase();
-        }
-
-        return cocokKelas && cocokMapel && cocokUjian && cocokUnik;
+      return cacheRekapCloud.filter(item => {
+        const okKelas = (fKelas === "ALL") || (String(item.kelas) === String(fKelas));
+        const okMapel = (fMapel === "ALL") || (item.mapel === fMapel);
+        const okKat = (fKat === "ALL") || (item.kategori === fKat);
+        const okUnik = (fUnik === "ALL") || (String(item.kodeUnik || "-").toUpperCase() === fUnik);
+        return okKelas && okMapel && okKat && okUnik;
       });
     }
 
     function renderTabelNilai() {
-      const data = getDataTersaring();
-      const wadah = document.getElementById("wadahTabelNilai");
+      const tersaring = getDataTersaring();
       const infoBox = document.getElementById("infoRingkasanFilter");
-      const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|")[1] || "Semua Mapel";
-      const fTipe = document.getElementById("filterTipeUjian").value;
-      const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
-      const fUnik = document.getElementById("filterKodeUnik").value;
-      const labelKelas = fKelas === "ALL" ? "Semua Kelas" : `Kelas ${fKelas}`;
-      const labelMateri = (fTipe === "BAB") ? (fBab === "__ALL_BAB__" ? "Semua Bab" : fBab) : (fTipe === "ALL" ? "Semua Jenis Ujian" : fTipe);
+      const tbody = document.getElementById("tbodyRekapNilai");
+      if (!tbody) return;
 
-      infoBox.textContent = `Ditemukan ${data.length} Nilai • ${labelKelas} • ${fMapelNama} • ${labelMateri} • Kode: ${fUnik}`;
+      if (infoBox) {
+        const rata = tersaring.length
+          ? Math.round(tersaring.reduce((acc, x) => acc + (Number(x.nilai) || 0), 0) / tersaring.length)
+          : 0;
+        infoBox.textContent = `Menampilkan ${tersaring.length} peserta | Rata-rata Nilai: ${rata}`;
+      }
 
-      if (data.length === 0) {
-        wadah.innerHTML = `<p style="margin-top:14px; color:#64748b; font-size:0.88rem;">Belum ada siswa yang mengumpulkan nilai untuk <strong>${labelKelas} • ${fMapelNama} • ${labelMateri}</strong>.</p>`;
+      if (tersaring.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align:center; color:#64748b;">Belum ada data nilai pada filter ini.</td></tr>`;
         return;
       }
 
-      let rows = data.map((d, i) => `
+      tbody.innerHTML = tersaring.map((item, idx) => `
         <tr>
-          <td>${i + 1}</td>
-          <td><strong>${d.nama}</strong><br><span style="font-size:0.7rem; color:#64748b;">${d.tanggal}</span></td>
-          <td><span style="background:#dcfce7; color:#15803d; padding:2px 6px; border-radius:6px; font-weight:700;">${d.kodeUnik || '-'}</span></td>
-          <td>Kls ${d.kelas}</td>
-          <td>${d.mapel}</td>
-          <td>${d.kategori}</td>
-          <td>${d.benar}</td>
-          <td><strong style="color:#0284c7;">${d.nilai}</strong></td>
-        </tr>`).join("");
-
-      wadah.innerHTML = `
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>No</th><th>Nama Siswa</th><th>Kode Unik</th><th>Kls</th><th>Mapel</th><th>Materi / Ujian</th><th>Benar</th><th>Nilai</th></tr>
-            </thead>
-            <tbody>${rows}</tbody>
-          </table>
-        </div>`;
+          <td>${idx + 1}</td>
+          <td><strong>${item.nama}</strong><br><span style="font-size:0.72rem; color:#64748b;">${item.tanggal}</span></td>
+          <td>${item.kodeUnik || "-"}</td>
+          <td>${item.kelas}</td>
+          <td>${item.mapel}</td>
+          <td>${item.kategori}</td>
+          <td>${item.benar}</td>
+          <td><strong>${item.nilai}</strong></td>
+        </tr>
+      `).join("");
     }
 
-            function downloadExcelTerfilter() {
-      const data = getDataTersaring();
-      if (data.length === 0) { alert("Tidak ada data pada filter yang dipilih untuk diunduh!"); return; }
+    function downloadCSVNilai() {
+      const tersaring = getDataTersaring();
+      if (tersaring.length === 0) {
+        alert("Tidak ada data untuk diunduh!");
+        return;
+      }
+      const header = ["No", "Tanggal", "Nama Siswa", "Kode Unik", "Kelas", "Mata Pelajaran", "Materi Ujian", "Benar", "Nilai"];
+      const baris = tersaring.map((item, idx) => [
+        idx + 1,
+        `"${item.tanggal}"`,
+        `"${item.nama}"`,
+        `"${item.kodeUnik || "-"}"`,
+        item.kelas,
+        `"${item.mapel}"`,
+        `"${item.kategori}"`,
+        `"${item.benar}"`,
+        item.nilai
+      ].join(","));
 
-      const fKelas = document.getElementById("filterKelas").value;
-      const fMapelNama = document.getElementById("filterMapel").value.split("|")[1] || "Mapel";
-      const fTipe = document.getElementById("filterTipeUjian").value;
-      const fBab = document.getElementById("filterBabSpesifik") ? document.getElementById("filterBabSpesifik").value : "";
-      const fUnik = document.getElementById("filterKodeUnik").value;
-
-      let csvContent = "No,Tanggal,Nama Siswa,Kode Unik,Kelas,Mata Pelajaran,Materi / Jenis Ujian,Jawaban Benar,Nilai Akhir\n";
-      data.forEach((d, idx) => {
-        const namaAman = `"${String(d.nama).replace(/"/g, '""')}"`;
-        const unikAman = `"${String(d.kodeUnik || '-').replace(/"/g, '""')}"`;
-        const tglAman = `"${String(d.tanggal).replace(/"/g, '""')}"`;
-        const mapelAman = `"${String(d.mapel || 'Umum').replace(/"/g, '""')}"`;
-        const katAman = `"${String(d.kategori).replace(/"/g, '""')}"`;
-        const benarAman = `"${String(d.benar)}"`;
-        csvContent += `${idx + 1},${tglAman},${namaAman},${unikAman},Kelas ${d.kelas},${mapelAman},${katAman},${benarAman},${d.nilai}\n`;
-      });
-
-      const blob = new Blob(["\uFEFF" + csvContent], { type: "text/csv;charset=utf-8;" });
-      const url = URL.createObjectURL(blob);
+      const csvContent = "data:text/csv;charset=utf-8," + [header.join(","), ...baris].join("\n");
       const link = document.createElement("a");
-      const labelKelas = fKelas === "ALL" ? "SemuaKelas" : `Kelas${fKelas}`;
-      const labelMapel = fMapelNama.replace(/[^a-zA-Z0-9]/g, "_");
-      const labelMateri = (fTipe === "BAB" ? fBab : fTipe).slice(0, 25).replace(/[^a-zA-Z0-9]/g, "_");
-      const labelUnik = fUnik === "ALL" ? "SemuaKode" : fUnik.replace(/[^a-zA-Z0-9]/g, "_");
-
-      link.setAttribute("href", url);
-      link.setAttribute("download", `Rekap_${labelKelas}_${labelMapel}_${labelMateri}_${labelUnik}.csv`);
+      link.setAttribute("href", encodeURI(csvContent));
+      link.setAttribute("download", `Rekap_Nilai_SDN_Seddur_1_${Date.now()}.csv`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      URL.revokeObjectURL(url);
     }
 
-            async function hapusDataHasilFilter() {
+    async function hapusDataHasilFilter() {
       const tersaring = getDataTersaring();
       if (tersaring.length === 0) {
         alert("Tidak ada data pada filter ini untuk dihapus.");
@@ -1749,18 +702,14 @@
       const setHapus = new Set(tersaring.map(item => String(item.id)));
       const sisa = semua.filter(item => !setHapus.has(String(item.id)));
       try { localStorage.setItem("seddur_rekap_nilai", JSON.stringify(sisa)); } catch (e) {}
-      cacheRekapCloud = sisa;
+      cacheRekapCloud = cacheRekapCloud.filter(item => !setHapus.has(String(item.id)));
 
-      mainkanEfek('salah');
       perbaruiOpsiKodeUnikRekap();
       renderTabelNilai();
       alert("✅ Data berhasil dihapus dari Cloud & semua perangkat!");
     }
 
-
-               tampilBeranda();
+    tampilBeranda();
   </script>
-
 </body>
 </html>
-
