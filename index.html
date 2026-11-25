@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
+  <script src="https://jsdelivr.net"></script>
+  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-select: none" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -1508,42 +1509,45 @@
       muatRekapDariCloud();
     }
 
-          async function muatRekapDariCloud() {
-      const SB_URL = "https://supabase.co";
-      const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
-
-      const infoBox = document.getElementById("infoRingkasanFilter");
-      if (infoBox) infoBox.textContent = "⏳ Sedang menarik rekap nilai semua siswa...";
-
-      try {
-        const res = await fetch(`${SB_URL}?select=*&order=id.desc&apikey=${SB_KEY}`);
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const rows = await res.json();
-        if (Array.isArray(rows)) {
-          cacheRekapCloud = rows.map(r => ({
-            id: r.id,
-            tanggal: r.tanggal,
-            nama: r.nama,
-            kodeUnik: r.kode_unik || "-",
-            kelas: String(r.kelas),
-            mapel: r.mapel,
-            kategori: r.kategori,
-            benar: r.benar,
-            nilai: Number(r.nilai) || 0
-          }));
-          localStorage.setItem("seddur_rekap_nilai", JSON.stringify(cacheRekapCloud));
-        }
-      } catch (err) {
-        if (infoBox) infoBox.textContent = "⚠️ Gagal tarik Cloud (" + err.message + "), tampil data perangkat ini.";
-        try { cacheRekapCloud = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) { cacheRekapCloud = []; }
-      }
-
-      perbaruiOpsiKodeUnikRekap();
-      perbaruiOpsiBabRekap();
-      renderTabelNilai();
+           function getKlienSupabase() {
+      return window.supabase.createClient(
+        "https://supabase.co",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU"
+      );
     }
 
+    async function simpanRekapNilai(record) {
+      try {
+        const list = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]");
+        list.push(record);
+        localStorage.setItem("seddur_rekap_nilai", JSON.stringify(list));
+      } catch (e) {}
 
+      try {
+        const sb = getKlienSupabase();
+        const { error } = await sb.from("rekap_nilai").insert([{
+          id: String(record.id),
+          tanggal: String(record.tanggal),
+          nama: String(record.nama),
+          kode_unik: String(record.kodeUnik || "-"),
+          kelas: String(record.kelas),
+          mapel: String(record.mapel),
+          kategori: String(record.kategori),
+          benar: String(record.benar),
+          nilai: Number(record.nilai) || 0
+        }]);
+
+        const infoEl = document.getElementById("statusSyncUjian");
+        if (!error) {
+          if (infoEl) infoEl.innerHTML = `<span style="color:#15803d; font-weight:700;">✅ Nilai 100% tersimpan &amp; masuk ke Rekap Admin!</span>`;
+        } else {
+          if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Gagal simpan: ${error.message}</span>`;
+        }
+      } catch (err) {
+        const infoEl = document.getElementById("statusSyncUjian");
+        if (infoEl) infoEl.innerHTML = `<span style="color:#dc2626; font-weight:700;">⚠️ Error sistem: ${err.message}</span>`;
+      }
+    }
 
             function perbaruiOpsiMapelRekap() {
       const fKelasVal = document.getElementById("filterKelas").value;
@@ -1726,10 +1730,7 @@
       URL.revokeObjectURL(url);
     }
 
-          async function hapusDataHasilFilter() {
-      const SB_URL = "https://supabase.co";
-      const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdHVoeHR6dWV5Y2FsZXRpcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0ODQ5OTgsImV4cCI6MjExMTA2MDk5OH0.SxxmxzjW3DekEyOUoISYXVVkuPm4hebtN1xmhbPHwUU";
-
+            async function hapusDataHasilFilter() {
       const tersaring = getDataTersaring();
       if (tersaring.length === 0) {
         alert("Tidak ada data pada filter ini untuk dihapus.");
@@ -1737,13 +1738,11 @@
       }
       if (!confirm(`Hapus ${tersaring.length} data nilai ini dari Cloud & semua perangkat?`)) return;
 
-      for (const item of tersaring) {
-        try {
-          await fetch(`${SB_URL}?id=eq.${encodeURIComponent(String(item.id))}&apikey=${SB_KEY}`, {
-            method: "DELETE"
-          });
-        } catch (e) {}
-      }
+      try {
+        const sb = getKlienSupabase();
+        const daftarId = tersaring.map(item => String(item.id));
+        await sb.from("rekap_nilai").delete().in("id", daftarId);
+      } catch (e) {}
 
       let semua = [];
       try { semua = JSON.parse(localStorage.getItem("seddur_rekap_nilai") || "[]"); } catch (e) {}
