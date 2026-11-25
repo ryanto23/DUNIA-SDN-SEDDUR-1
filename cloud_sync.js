@@ -1,4 +1,4 @@
-const GAS_EXEC_URL = "https://google.com";
+const GAS_EXEC_URL = "https://script.google.com/macros/s/AKfycbyIhgT65qAwf-ULZytlLyRqSj4xWy0LBXmT-3oHqEm2vO2cjA_SVd_MbD0ZGVo56hjlJQ/exec";
 
 window.simpanRekapNilai = async function(record) {
   try {
